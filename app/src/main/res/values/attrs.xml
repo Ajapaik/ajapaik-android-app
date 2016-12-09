@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FixedAspectRatioLayout">
+        <attr name="aspectRatioWidth" format="float" />
+        <attr name="aspectRatioHeight" format="float" />
+    </declare-styleable>
+    <declare-styleable name="StaggeredGridView">
+        <attr name="cellSpacing" format="dimension" />
+        <attr name="rowHeight" format="dimension" />
+        <attr name="rowHeightMaxDeviation" format="fraction" />
+    </declare-styleable>
+</resources>

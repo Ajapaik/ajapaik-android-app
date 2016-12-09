@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".CameraActivity">
+
+    <item
+        android:id="@+id/action_flip"
+        android:title="@string/action_flip"
+        android:icon="@drawable/ic_flip_white_36dp"
+        app:showAsAction="always" />
+
+</menu>

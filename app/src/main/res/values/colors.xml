@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <color name="none">#FFFFFFFF</color>
+    <color name="tint">#FF639BE8</color>
+
+    <!-- Albums -->
+    <color name="albums_background">#000000</color>
+    <color name="albums_placeholder_title">#666666</color>
+    <color name="albums_item_overlay">#66000000</color>
+    <color name="albums_item_separator">#999999</color>
+    <color name="albums_item_subtitle">#FFFFFF</color>
+    <color name="albums_item_title">#FFFFFF</color>
+
+    <!-- Album -->
+    <color name="album_background">#000000</color>
+    <color name="album_placeholder_title">#666666</color>
+    <color name="album_item_background">#FFFFFF</color>
+    <color name="album_item_title">#000000</color>
+    <color name="album_item_title_shadow">#FFFFFF</color>
+
+    <!-- Photo -->
+    <color name="photo_background">#000000</color>
+    <color name="photo_info_background">#66000000</color>
+    <color name="photo_info_subtitle">#FFFFFF</color>
+    <color name="photo_info_title">#FFFFFF</color>
+    <color name="photo_overlay_title">#000000</color>
+    <color name="photo_overlay_title_shadow">#FFFFFF</color>
+
+    <!-- Camera -->
+    <color name="camera_action_title">#FFFFFF</color>
+    <color name="camera_background">#000000</color>
+
+    <!-- Upload -->
+    <color name="upload_action_title">#FFFFFF</color>
+    <color name="upload_background">#000000</color>
+
+    <!-- Profile -->
+    <color name="profile_header">#000000</color>
+    <color name="profile_hint">#666666</color>
+    <color name="profile_item_separator">#CCCCCC</color>
+    <color name="profile_item_subtitle">#333333</color>
+    <color name="profile_item_title">#000000</color>
+    <color name="profile_separator">#999999</color>
+    <color name="profile_subtitle">#333333</color>
+    <color name="profile_title">#000000</color>
+
+</resources>

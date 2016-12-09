@@ -1,0 +1,260 @@
+<resources>
+
+    <!-- Activities -->
+    <style name="AppTheme" parent="Theme.AppCompat" />
+
+    <style name="AppThemeFullscreen" parent="Theme.AppCompat">
+        <item name="actionBarStyle">@style/AppThemeFullscreen.ActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppThemeFullscreen.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <style name="AppThemeTranslucent" parent="Theme.AppCompat">
+        <item name="actionBarStyle">@style/AppThemeTranslucent.ActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppThemeTranslucent.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#FFFFFFFF</item>
+    </style>
+
+    <!-- Dialogs -->
+    <style name="AppDialog" parent="@android:style/Theme.DeviceDefault.Dialog" />
+
+    <!-- Albums -->
+    <style name="AlbumsFragment">
+        <item name="android:background">@color/albums_background</item>
+    </style>
+
+    <style name="AlbumsListView" parent="@android:style/Widget.ListView">
+        <item name="android:divider">@color/albums_item_separator</item>
+    </style>
+
+    <style name="AlbumsPlaceholderTitleText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/albums_placeholder_title</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
+    <style name="AlbumsItemOverlay">
+        <item name="android:background">@color/albums_item_overlay</item>
+    </style>
+
+    <style name="AlbumsItemTitleText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/albums_item_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/albums_item_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/albums_item_vertical_margin</item>
+        <item name="android:textColor">@color/albums_item_title</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
+    <style name="AlbumsItemSubtitleText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/albums_item_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/albums_item_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/albums_item_vertical_margin</item>
+        <item name="android:textColor">@color/albums_item_subtitle</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <!-- Album -->
+    <style name="AlbumFragment">
+        <item name="android:background">@color/album_background</item>
+    </style>
+
+    <style name="AlbumPlaceholderTitleText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/album_placeholder_title</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
+    <style name="AlbumGridView">
+    </style>
+
+    <style name="AlbumPhotoItem">
+        <item name="android:background">@color/album_item_background</item>
+    </style>
+
+    <style name="AlbumPhotoItemButton">
+        <item name="android:background">@drawable/transparent</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">@color/album_item_title</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:shadowColor">@color/album_item_title_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:paddingRight">@dimen/album_item_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/album_item_vertical_margin</item>
+    </style>
+
+    <style name="AlbumPhotoItemText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/album_item_title</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:shadowColor">@color/album_item_title_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:paddingLeft">@dimen/album_item_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/album_item_vertical_margin</item>
+    </style>
+
+    <!-- Photo -->
+    <style name="PhotoFragment">
+        <item name="android:background">@color/photo_background</item>
+    </style>
+
+    <style name="PhotoOverlay">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/photo_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/photo_vertical_margin</item>
+    </style>
+
+    <style name="PhotoOverlayButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/photo_overlay_title</item>
+    </style>
+
+    <style name="AlbumOverlayRephotoButton" parent="@style/AlbumPhotoItemButton">
+    </style>
+
+    <style name="PhotoOverlayText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/photo_overlay_title</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:shadowColor">@color/photo_overlay_title_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:paddingLeft">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/photo_vertical_margin</item>
+    </style>
+
+    <style name="PhotoInfo">
+        <item name="android:background">@color/photo_info_background</item>
+        <item name="android:paddingLeft">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/photo_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/photo_vertical_margin</item>
+    </style>
+
+    <style name="PhotoInfoActions">
+        <item name="android:paddingLeft">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/photo_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/photo_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/photo_vertical_margin</item>
+    </style>
+
+    <style name="PhotoInfoTitleText" parent="@android:style/TextAppearance">
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textColor">@color/photo_info_title</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="PhotoInfoSubtitleText" parent="@android:style/TextAppearance">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textColor">@color/photo_info_subtitle</item>
+        <item name="android:textColorLink">@color/photo_info_subtitle</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <!-- Camera -->
+    <style name="CameraFragment">
+        <item name="android:background">@color/camera_background</item>
+    </style>
+
+    <style name="CameraActions">
+        <item name="android:paddingLeft">@dimen/camera_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/camera_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/camera_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/camera_vertical_margin</item>
+    </style>
+
+    <style name="CameraActionButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/camera_action_title</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!-- Upload -->
+    <style name="UploadFragment">
+        <item name="android:background">@color/upload_background</item>
+    </style>
+
+    <style name="UploadActions">
+        <item name="android:paddingLeft">@dimen/upload_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/upload_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/upload_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/upload_vertical_margin</item>
+    </style>
+
+    <style name="UploadActionButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/upload_action_title</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!-- Profile -->
+    <style name="ProfileListView" parent="@android:style/Widget.ListView">
+        <item name="android:divider">@color/profile_item_separator</item>
+        <item name="android:dividerHeight">@dimen/profile_item_divider</item>
+    </style>
+
+    <style name="ProfileSeparator">
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:background">@color/profile_separator</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="ProfileLinkText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/profile_subtitle</item>
+        <item name="android:textColorLink">@color/profile_subtitle</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <style name="ProfileTitleText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
+    <style name="ProfileSubtitleText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/profile_subtitle</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <style name="ProfileHintText" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/profile_hint</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <style name="ProfileButton" parent="@android:style/TextAppearance">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="ProfileSpinner">
+    </style>
+
+</resources>
