@@ -1,20 +1,27 @@
 package ee.ajapaik.android;
 
 import android.content.ComponentName;
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.IBinder;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.content.ContextCompat;
 import android.view.Menu;
-
 import ee.ajapaik.android.fragment.AlbumFragment;
 import ee.ajapaik.android.fragment.NearestFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
+import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Settings;
 
-import ee.ajapaik.android.test.R;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class NearestActivity extends AlbumActivity {
     private static final int DIALOG_ERROR_LOCATION_DISABLED = 1;
+    private static final int ACCESS_FINE_LOCATION_PERMISSION = 123;
 
     private static final int MIN_DISTANCE_IN_METERS = 1;
 
@@ -38,8 +45,14 @@ public class NearestActivity extends AlbumActivity {
         public void onServiceConnected(ComponentName name, IBinder service) {
             super.onServiceConnected(name, service);
 
-            if(!isEnabled()) {
-                showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (!isEnabled() && checkSelfPermission(ACCESS_FINE_LOCATION) == PERMISSION_GRANTED) {
+                    showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+                }
+            } else {
+                if (!isEnabled()) {
+                    showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+                }
             }
         }
     };
@@ -52,6 +65,24 @@ public class NearestActivity extends AlbumActivity {
     protected void onStart() {
         super.onStart();
         m_connection.connect(this);
+        if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_PERMISSION);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case ACCESS_FINE_LOCATION_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                   if (!((LocationManager)getSystemService(LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                       showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+                   }
+                } else {
+                    AlbumsActivity.start(this);
+                }
+            }
+        }
     }
 
     @Override
