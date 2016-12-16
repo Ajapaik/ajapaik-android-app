@@ -104,6 +104,14 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     public void signOut() {
+        if(m_googleApiClient == null) {
+            m_googleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(Plus.API)
+                    .addScope(new Scope(Scopes.PROFILE))
+                    .build();
+        }
         if(m_googleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(m_googleApiClient);
             m_googleApiClient.disconnect();
