@@ -4,15 +4,17 @@ import android.accounts.Account;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
-
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -26,14 +28,16 @@ import com.google.android.gms.common.Scopes;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
-
-import java.io.IOException;
-import java.util.Arrays;
-
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
+
+import java.io.IOException;
+import java.util.Arrays;
+
+import static android.Manifest.permission.GET_ACCOUNTS;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class WebActivity extends ActionBarActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "WebActivity";
@@ -46,6 +50,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     private static final int FACEBOOK_SIGN_IN_RESOLUTION_REQUEST = 9001;
     private static final int GOOGLE_SIGN_IN_RESOLUTION_REQUEST = 9002;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9003;
+    private static final int GET_ACCOUNTS_PERMISSION = 6001;
 
     private static final String SERVER_ID = "";
     private static final String SENDER_ID = "";
@@ -87,6 +92,14 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     public void signInWithGoogle() {
+        if (ContextCompat.checkSelfPermission(this, GET_ACCOUNTS) != PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{GET_ACCOUNTS}, GET_ACCOUNTS_PERMISSION);
+        } else {
+            connectToGoogleApi();
+        }
+    }
+
+    private void connectToGoogleApi() {
         if(m_googleApiClient == null) {
             m_googleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
@@ -101,6 +114,17 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
         // Show a message to the user that we are signing in.
         //mStatusTextView.setText(R.string.signing_in);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case GET_ACCOUNTS_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    connectToGoogleApi();
+                }
+            }
+        }
     }
 
     public void signOut() {
