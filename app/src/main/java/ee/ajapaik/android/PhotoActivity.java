@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
-
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.fragment.PhotoFragment;
@@ -104,5 +103,10 @@ public class PhotoActivity extends WebActivity {
 
     protected PhotoFragment getFragment() {
         return (PhotoFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        getFragment().onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

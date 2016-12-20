@@ -3,22 +3,18 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-
-import java.util.Date;
-
+import android.widget.*;
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
@@ -26,21 +22,23 @@ import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.test.R;
-import ee.ajapaik.android.util.Images;
-import ee.ajapaik.android.util.Locations;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.Strings;
-import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.util.*;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnPanTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
+import java.util.Date;
+
+import static android.Manifest.permission.CAMERA;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+
 public class PhotoFragment extends WebFragment {
     private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
+    private static final int CAMERA_PERMISSION = 6002;
 
     private static final float DEFAULT_SCALE = 1.0F;
 
@@ -241,7 +239,11 @@ public class PhotoFragment extends WebFragment {
         getRephotoButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
+                if (ContextCompat.checkSelfPermission(getActivity(), CAMERA) != PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{CAMERA}, CAMERA_PERMISSION);
+                } else {
+                    startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
+                }
             }
         });
 
@@ -249,6 +251,17 @@ public class PhotoFragment extends WebFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case CAMERA_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
+                }
+            }
+        }
     }
 
     @Override
