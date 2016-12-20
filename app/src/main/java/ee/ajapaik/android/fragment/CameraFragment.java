@@ -7,19 +7,10 @@ import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-
-import java.io.IOException;
-
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Photo;
@@ -32,6 +23,8 @@ import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
+
+import java.io.IOException;
 
 public class CameraFragment extends WebFragment implements SurfaceHolder.Callback, Camera.ShutterCallback, Camera.PictureCallback {
     private static final String TAG = "CameraFragment";
@@ -439,7 +432,7 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
                 }
 
                 m_camera.setParameters(parameters);
-                m_camera.setDisplayOrientation((m_photo.isLandscape()) ? ((reverse) ? 180 : 0) : ((reverse) ? 270 : 90));
+                m_camera.setDisplayOrientation((m_photo.isLandscape()) ? ((reverse) ? 0 : 180) : ((reverse) ? 90 : 270));
                 m_camera.setPreviewDisplay(getSurfaceView().getHolder());
                 m_camera.startPreview();
 
