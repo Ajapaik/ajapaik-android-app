@@ -22,7 +22,6 @@ import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
-import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
 import java.io.IOException;
 
@@ -41,7 +40,7 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
 
     private static final int THUMBNAIL_SIZE = 800;
     private static final float OPACITY_LIMIT = 0.1F;
-    private static final float OPACITY_FACTOR = 1.5F;
+    private static final float OPACITY_FACTOR = 0.0001F;
 
     private static final int CAMERA_MIN_RESOLUTON = 1024;
     private static final int CAMERA_MAX_RESOLUTION = 1920;
@@ -51,6 +50,8 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
     private float m_scale = DEFAULT_SCALE;
     private float m_opacity = DEFAULT_OPACITY;
     private Photo m_photo;
+
+    private float dragStart, dragEnd;
 
     public Photo getPhoto() {
         Bundle arguments = getArguments();
@@ -134,31 +135,23 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
                         m_scale = imageView.getScale();
                     }
                 },
-                new OnSwipeTouchListener(getActivity()) {
-                    @Override
-                    public void onSwipeLeft() {
-                        m_opacity /= OPACITY_FACTOR;
 
-                        if(m_opacity < OPACITY_LIMIT) {
-                            m_opacity = OPACITY_LIMIT;
+                new OnCompositeTouchListener(getActivity()) {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        switch (event.getAction()) {
+                            case MotionEvent.ACTION_DOWN:
+                                dragStart = event.getX();
+                                break;
+                            case MotionEvent.ACTION_MOVE:
+                                dragEnd = event.getX();
+                                changeOpacity();
+                                break;
+                            case MotionEvent.ACTION_UP:
+                                dragStart = 0;
+                                dragEnd = 0;
                         }
-
-                        getImageView().setAlpha(m_opacity);
-                    }
-
-                    @Override
-                    public void onSwipeRight() {
-                        m_opacity *= OPACITY_FACTOR;
-
-                        if(m_opacity > 1.0F - OPACITY_LIMIT) {
-                            m_opacity = 1.0F - OPACITY_LIMIT;
-                        }
-
-                        getImageView().setAlpha(m_opacity);
-                    }
-
-                    @Override
-                    public void onSingleTap() {
+                        return true;
                     }
                 }
         }));
@@ -171,6 +164,14 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
         });
 
         getSurfaceView().getHolder().addCallback(this);
+    }
+
+    private void changeOpacity() {
+        m_opacity += (OPACITY_FACTOR * (dragEnd - dragStart));
+        if (m_opacity < OPACITY_LIMIT) {
+            m_opacity = OPACITY_LIMIT;
+        }
+        getImageView().setAlpha(m_opacity);
     }
 
     @Override
