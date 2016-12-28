@@ -3,7 +3,6 @@ package ee.ajapaik.android.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.provider.Settings;
-
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -77,7 +76,7 @@ public class Authorization {
         m_token = ((primitive = attributes.getAsJsonPrimitive(KEY_TOKEN)) != null && primitive.isString()) ? primitive.getAsString() : null;
     }
 
-    protected Authorization(Type type, String username, String password) {
+    public Authorization(Type type, String username, String password) {
         m_type = type;
         m_username = username;
         m_password = password;
@@ -155,6 +154,7 @@ public class Authorization {
         ANONYMOUS(0, "auto"),
         FACEBOOK(1, "fb"),
         GOOGLE(2, "google"),
+        USERNAME_PASSWORD(3, "ajapaik"),
         UNKNOWN(-1, null);
 
         private final int m_code;

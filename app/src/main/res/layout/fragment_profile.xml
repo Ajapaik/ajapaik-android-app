@@ -71,6 +71,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/profile_login_hint" />
 
+            <Button style="@style/ProfileButton" android:id="@+id/button_action_login" android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:text="@string/profile_login"
+                    android:layout_marginBottom="76dp" android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+
         </LinearLayout>
 
     </ScrollView>

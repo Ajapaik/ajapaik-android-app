@@ -29,6 +29,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
 import ee.ajapaik.android.WebService;
+import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
@@ -89,6 +90,19 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         }
 
         LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
+    }
+
+    public void signInWithUsername() {
+        Authorization authorization = getSettings().getAuthorization();
+        getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
+            @Override
+            public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
+                if(session != null) {
+                    m_settings.setSession(session);
+                    getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
+                }
+            }
+        });
     }
 
     public void signInWithGoogle() {

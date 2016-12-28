@@ -2,4 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_username" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="60dp" android:inputType="textEmailAddress"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/input_password" android:layout_below="@+id/input_username"
+            android:layout_alignStart="@+id/input_username"
+            android:layout_alignEnd="@+id/input_username"
+            android:layout_marginTop="31dp"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_login"
+            android:id="@+id/button_action_start_login" android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/input_username"
+            android:layout_alignStart="@+id/input_username"/>
 </RelativeLayout>

@@ -9,10 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
-
+import ee.ajapaik.android.LoginActivity;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.util.Status;
@@ -62,6 +61,13 @@ public class ProfileFragment extends WebFragment {
             @Override
             public void onClick(View v) {
                 signOut();
+            }
+        });
+
+        getLoginButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginActivity.start(getContext());
             }
         });
 
@@ -205,6 +211,9 @@ public class ProfileFragment extends WebFragment {
 
     private Button getLogoutButton() {
         return (Button)getView().findViewById(R.id.button_action_logout);
+    }
+    private Button getLoginButton() {
+        return (Button)getView().findViewById(R.id.button_action_login);
     }
 
     private TextView getLoginHintView() {

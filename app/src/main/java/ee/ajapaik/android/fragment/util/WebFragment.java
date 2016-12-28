@@ -3,7 +3,6 @@ package ee.ajapaik.android.fragment.util;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
-
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
@@ -47,6 +46,10 @@ public abstract class WebFragment extends Fragment {
 
     protected void signInWithGoogle() {
         ((WebActivity)getActivity()).signInWithGoogle();
+    }
+
+    protected void signInWithUsername() {
+        ((WebActivity)getActivity()).signInWithUsername();
     }
 
     protected void signOut() {
