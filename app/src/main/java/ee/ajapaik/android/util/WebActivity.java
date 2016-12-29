@@ -94,6 +94,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
     public void signInWithUsername() {
         Authorization authorization = getSettings().getAuthorization();
+//        todo login instead of register?
         getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
@@ -155,7 +156,17 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             m_googleApiClient.disconnect();
         }
 
-        getSettings().setAuthorization(Authorization.getAnonymous(this));
+        Authorization authorization = Authorization.getAnonymous(this);
+        getSettings().setAuthorization(authorization);
+
+        getConnection().enqueue(WebActivity.this, Session.createLogoutAction(WebActivity.this), new WebAction.ResultHandler<Session>() {
+            @Override
+            public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
+//         TODO maybe session explicitly must be null
+                m_settings.setSession(null);
+                getSettings().setProfile(new Profile());
+            }
+        });
         invalidateAuthorization();
     }
 

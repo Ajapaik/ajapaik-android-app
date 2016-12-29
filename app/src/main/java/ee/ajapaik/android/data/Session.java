@@ -1,18 +1,16 @@
 package ee.ajapaik.android.data;
 
 import android.content.Context;
-
 import com.google.gson.JsonObject;
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.util.Authorization;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.WebAction;
 
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Locale;
 import java.util.Map;
-
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.util.Authorization;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.WebAction;
 
 public class Session extends Model {
     private static final String KEY_EXPIRES = "expires.abs";
@@ -73,10 +71,6 @@ public class Session extends Model {
             m_expires = new Date().getTime() + ((expires > 0) ? expires : DEFAULT_SESSION_LENGTH_IN_SECONDS) * 1000;
         } else {
             m_expires = expires;
-        }
-
-        if(m_user == null || m_token == null) {
-            throw new IllegalArgumentException();
         }
     }
 
