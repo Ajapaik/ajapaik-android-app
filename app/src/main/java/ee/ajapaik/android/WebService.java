@@ -10,23 +10,16 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
+import ee.ajapaik.android.data.Session;
+import ee.ajapaik.android.data.util.Status;
+import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.util.*;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import ee.ajapaik.android.data.Session;
-import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.util.Authorization;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.Settings;
-import ee.ajapaik.android.util.WebAction;
-import ee.ajapaik.android.util.WebImage;
-import ee.ajapaik.android.util.WebOperation;
-
-import ee.ajapaik.android.test.BuildConfig;
 
 public class WebService extends Service {
     private static final String TAG = "WebService";
@@ -91,15 +84,10 @@ public class WebService extends Service {
             @Override
             public void run() {
                 boolean isSecure = operation.isSecure();
-
-                if(isSecure && (m_session == null || m_session.isExpired())) {
-                    runSilentLogin();
-                }
-
                 operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null);
 
+                runSilentLogin();
                 if(operation.shouldRetry()) {
-                    runSilentLogin();
 
                     if(m_session != null) {
                         operation.performRequest(API_URL, m_session.getWebParameters());
