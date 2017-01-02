@@ -3,7 +3,6 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.location.Location;
@@ -29,16 +28,19 @@ import ee.ajapaik.android.widget.util.OnPanTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class PhotoFragment extends WebFragment {
     private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
-    private static final int CAMERA_PERMISSION = 6002;
+    private static final int CAMERA_AND_STORAGE_PERMISSION = 6002;
 
     private static final float DEFAULT_SCALE = 1.0F;
 
@@ -239,8 +241,10 @@ public class PhotoFragment extends WebFragment {
         getRephotoButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ContextCompat.checkSelfPermission(getActivity(), CAMERA) != PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(getActivity(), new String[]{CAMERA}, CAMERA_PERMISSION);
+                List<String> permissionsNeeded = permissionsNeeded();
+
+                if (!permissionsNeeded.isEmpty()) {
+                    ActivityCompat.requestPermissions(getActivity(), permissionsNeeded.toArray(new String[permissionsNeeded.size()]), CAMERA_AND_STORAGE_PERMISSION);
                 } else {
                     startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
                 }
@@ -256,12 +260,27 @@ public class PhotoFragment extends WebFragment {
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case CAMERA_PERMISSION: {
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            case CAMERA_AND_STORAGE_PERMISSION: {
+                if (grantResults.length > 0 && areAllNeededPermissionsGranted()) {
                     startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
                 }
             }
         }
+    }
+
+    private List<String> permissionsNeeded() {
+        List<String> permissionsNeeded = new ArrayList<>();
+        if (ContextCompat.checkSelfPermission(getActivity(), CAMERA) != PERMISSION_GRANTED) {
+            permissionsNeeded.add(CAMERA);
+        }
+        if (ContextCompat.checkSelfPermission(getActivity(), WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
+            permissionsNeeded.add(WRITE_EXTERNAL_STORAGE);
+        }
+        return permissionsNeeded;
+    }
+
+    private boolean areAllNeededPermissionsGranted() {
+        return permissionsNeeded().isEmpty();
     }
 
     @Override
