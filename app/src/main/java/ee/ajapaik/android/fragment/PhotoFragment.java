@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import ee.ajapaik.android.CameraActivity;
+import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
@@ -440,6 +441,8 @@ public class PhotoFragment extends WebFragment {
             getImageView().setFlipped(m_flippedMode);
 
             return true;
+        } else if (id == R.id.action_profile) {
+            ProfileActivity.start(getContext());
         }
 
         return super.onOptionsItemSelected(item);
