@@ -3,11 +3,10 @@ package ee.ajapaik.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.MenuItem;
 import ee.ajapaik.android.fragment.ProfileFragment;
-import ee.ajapaik.android.util.WebActivity;
-
 import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.util.WebActivity;
 
 public class ProfileActivity extends WebActivity {
     public static void start(Context context) {
@@ -24,5 +23,13 @@ public class ProfileActivity extends WebActivity {
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new ProfileFragment()).commit();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            this.startActivity(new Intent(this, NearestActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
