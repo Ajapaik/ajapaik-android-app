@@ -9,8 +9,19 @@ import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebActivity;
 
 public class ProfileActivity extends WebActivity {
+
+    private static String LAST_ACTIVITY = "lastActivity";
+
     public static void start(Context context) {
-        context.startActivity(new Intent(context, ProfileActivity.class));
+        start(context, null);
+    }
+
+    public static void start(Context context, String lastActivity) {
+        Intent intent = new Intent(context, ProfileActivity.class);
+        if (lastActivity != null) {
+            intent.putExtra(LAST_ACTIVITY, lastActivity);
+        }
+        context.startActivity(intent);
     }
 
     @Override
@@ -27,9 +38,13 @@ public class ProfileActivity extends WebActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
+        if (item.getItemId() == android.R.id.home && isFromLoginActivity()) {
             this.startActivity(new Intent(this, NearestActivity.class));
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private boolean isFromLoginActivity() {
+        return "login".equals(getIntent().getStringExtra(LAST_ACTIVITY));
     }
 }

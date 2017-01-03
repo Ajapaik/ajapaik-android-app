@@ -32,7 +32,7 @@ public class LoginFragment extends WebFragment {
                 );
                 getSettings().setAuthorization(authorization);
                 signInWithUsername();
-                ProfileActivity.start(getContext());
+                ProfileActivity.start(getContext(), "login");
             }
         });
     }
