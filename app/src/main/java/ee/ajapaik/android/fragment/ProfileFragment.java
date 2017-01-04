@@ -21,6 +21,9 @@ import ee.ajapaik.android.util.Authorization;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 public class ProfileFragment extends WebFragment {
     private static final String KEY_PROFILE = "profile";
 
@@ -40,7 +43,7 @@ public class ProfileFragment extends WebFragment {
         if(savedInstanceState != null) {
             profile = savedInstanceState.getParcelable(KEY_PROFILE);
         } else {
-            getMainLayout().setVisibility(View.GONE);
+            getMainLayout().setVisibility(GONE);
         }
 
         getFacebookButton().setOnClickListener(new View.OnClickListener() {
@@ -116,7 +119,7 @@ public class ProfileFragment extends WebFragment {
 
                 getNameView().setText((m_profile.getName() != null) ? m_profile.getName() : "");
 
-                layout.setVisibility(View.VISIBLE);
+                layout.setVisibility(VISIBLE);
                 getTitleView().setText(Html.fromHtml(summary));
 
                 if(m_profile.getMessage() != null) {
@@ -126,10 +129,10 @@ public class ProfileFragment extends WebFragment {
                 if(link != null) {
                     getLinkView().setText(link.toHtml());
                 } else {
-                    getLinkView().setVisibility(View.GONE);
+                    getLinkView().setVisibility(GONE);
                 }
             } else {
-                layout.setVisibility(View.GONE);
+                layout.setVisibility(GONE);
             }
         }
     }
@@ -138,14 +141,14 @@ public class ProfileFragment extends WebFragment {
         Context context = getActivity();
 
         if(m_profile == null) {
-            getProgressBar().setVisibility(View.VISIBLE);
+            getProgressBar().setVisibility(VISIBLE);
         }
 
         getConnection().enqueue(context, Profile.createAction(context, (m_profile != null) ? m_profile : getSettings().getProfile()), new WebAction.ResultHandler<Profile>() {
             @Override
             public void onActionResult(Status status, Profile profile) {
                 if(m_profile == null) {
-                    getProgressBar().setVisibility(View.GONE);
+                    getProgressBar().setVisibility(GONE);
                 }
 
                 if(profile != null) {
@@ -171,11 +174,11 @@ public class ProfileFragment extends WebFragment {
     }
 
     private void toggleLoginButtons(boolean isLoggedIn) {
-        getLogoutButton().setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
-        getFacebookButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
-        getGoogleButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
-        getLoginHintView().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
-        getUsernameLoginButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
+        getLogoutButton().setVisibility(isLoggedIn ? VISIBLE : GONE);
+        getFacebookButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
+        getGoogleButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
+        getLoginHintView().setVisibility(isLoggedIn ? GONE : VISIBLE);
+        getUsernameLoginButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
     }
 
     private View getMainLayout() {
