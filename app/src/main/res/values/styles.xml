@@ -229,7 +229,7 @@
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
-        <item name="android:textColor">@color/profile_title</item>
+        <item name="android:textColor">@android:color/primary_text_dark</item>
         <item name="android:textSize">@dimen/font_size_huge</item>
     </style>
 
