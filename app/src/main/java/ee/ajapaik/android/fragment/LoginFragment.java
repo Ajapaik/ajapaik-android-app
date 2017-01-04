@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Authorization;
@@ -32,7 +31,6 @@ public class LoginFragment extends WebFragment {
                 );
                 getSettings().setAuthorization(authorization);
                 signInWithUsername();
-                ProfileActivity.start(getContext(), "login");
             }
         });
     }

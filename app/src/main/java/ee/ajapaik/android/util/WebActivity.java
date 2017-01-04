@@ -15,6 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -28,11 +29,13 @@ import com.google.android.gms.common.Scopes;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
+import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
+import ee.ajapaik.android.test.R;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -97,9 +100,12 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
-                if(session != null) {
+                if (session != null) {
                     m_settings.setSession(session);
                     getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
+                    ProfileActivity.start(WebActivity.this, "login");
+                } else {
+                    findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
                 }
             }
         });

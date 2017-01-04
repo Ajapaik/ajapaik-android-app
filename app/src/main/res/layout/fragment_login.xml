@@ -27,4 +27,22 @@
             android:id="@+id/button_action_start_login" android:layout_below="@+id/input_password"
             android:layout_alignEnd="@+id/input_username"
             android:layout_alignStart="@+id/input_username"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_unsuccessful" android:layout_alignParentTop="false"
+            android:text="Login unsuccessful"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@+id/button_action_start_login" android:layout_centerInParent="true"
+            android:textColor="#980c0c"
+            android:textSize="@dimen/font_size_medium" android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="10dp" android:visibility="invisible" android:paddingBottom="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/button_action_start_login" android:layout_marginBottom="107dp"/>
 </RelativeLayout>
