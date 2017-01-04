@@ -64,7 +64,7 @@ public class ProfileFragment extends WebFragment {
             }
         });
 
-        getLoginButton().setOnClickListener(new View.OnClickListener() {
+        getUsernameLoginButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginActivity.start(getContext());
@@ -163,18 +163,19 @@ public class ProfileFragment extends WebFragment {
 
     private void invalidateLogin() {
         Authorization authorization = getSettings().getAuthorization();
+        toggleLoginButtons(isLoggedIn(authorization));
+    }
 
-        if(authorization != null && authorization.getType() != Authorization.Type.ANONYMOUS) {
-            getFacebookButton().setVisibility(View.GONE);
-            getGoogleButton().setVisibility(View.GONE);
-            getLogoutButton().setVisibility(View.VISIBLE);
-            getLoginHintView().setVisibility(View.GONE);
-        } else {
-            getFacebookButton().setVisibility(View.VISIBLE);
-            getGoogleButton().setVisibility(View.VISIBLE);
-            getLogoutButton().setVisibility(View.GONE);
-            getLoginHintView().setVisibility(View.VISIBLE);
-        }
+    private boolean isLoggedIn(Authorization authorization) {
+        return authorization != null && authorization.getType() != Authorization.Type.ANONYMOUS;
+    }
+
+    private void toggleLoginButtons(boolean isLoggedIn) {
+        getLogoutButton().setVisibility(isLoggedIn ? View.VISIBLE : View.GONE);
+        getFacebookButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
+        getGoogleButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
+        getLoginHintView().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
+        getUsernameLoginButton().setVisibility(isLoggedIn ? View.GONE : View.VISIBLE);
     }
 
     private View getMainLayout() {
@@ -212,7 +213,7 @@ public class ProfileFragment extends WebFragment {
     private Button getLogoutButton() {
         return (Button)getView().findViewById(R.id.button_action_logout);
     }
-    private Button getLoginButton() {
+    private Button getUsernameLoginButton() {
         return (Button)getView().findViewById(R.id.button_action_login);
     }
 
