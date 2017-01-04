@@ -16,6 +16,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -106,6 +107,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
                     ProfileActivity.start(WebActivity.this, "login");
                 } else {
                     findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
+                    ((TextView)findViewById(R.id.input_password)).setText("");
                 }
             }
         });
