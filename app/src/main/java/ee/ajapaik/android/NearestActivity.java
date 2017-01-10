@@ -78,11 +78,20 @@ public class NearestActivity extends AlbumActivity {
                    if (!((LocationManager)getSystemService(LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                        showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
                    }
+                } else if (isDoNotAskAgainChecked()) {
+                    showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
                 } else {
                     AlbumsActivity.start(this);
                 }
             }
         }
+    }
+
+    private boolean isDoNotAskAgainChecked() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return !shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION);
+        }
+        return false;
     }
 
     @Override
