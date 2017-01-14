@@ -139,6 +139,8 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
                 new OnCompositeTouchListener(getActivity()) {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
+                        int pointerCount = event.getPointerCount();
+                        if (pointerCount > 1) return false;
                         switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
                                 dragStart = event.getX();
