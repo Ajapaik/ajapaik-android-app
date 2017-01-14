@@ -414,7 +414,6 @@ public class CameraFragment extends WebFragment implements SurfaceHolder.Callbac
 
                 parameters = m_camera.getParameters();
                 parameters.setJpegQuality(90);
-                parameters.setPictureSize(pictureSize.width, pictureSize.height);
 
                 if(parameters.getPictureFormat() != ImageFormat.JPEG) {
                     for(int i : parameters.getSupportedPictureFormats()) {
