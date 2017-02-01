@@ -6,11 +6,10 @@ import android.content.pm.ActivityInfo;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.Surface;
-import android.view.WindowManager;
-
 import ee.ajapaik.android.data.Photo;
+import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.CameraFragment;
+import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
@@ -53,17 +52,10 @@ public class CameraActivity extends WebActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null) {
-            int orientation = ((WindowManager)getSystemService(WINDOW_SERVICE)).getDefaultDisplay().getRotation();
             Photo photo = getIntent().getParcelableExtra(EXTRA_PHOTO);
             CameraFragment fragment = new CameraFragment();
 
             fragment.setPhoto(photo);
-
-            if(photo.isLandscape()) {
-                setRequestedOrientation((orientation == Surface.ROTATION_270) ? ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE : ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            } else {
-                setRequestedOrientation((orientation == Surface.ROTATION_180) ? ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            }
 
             getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, TAG_FRAGMENT).commit();
         }
@@ -86,6 +78,24 @@ public class CameraActivity extends WebActivity {
         getMenuInflater().inflate(R.menu.menu_camera, menu);
 
         return true;
+    }
+
+
+    public void showUploadPreview(final Upload upload) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                setContentView(R.layout.activity_upload);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+                UploadFragment fragment = new UploadFragment();
+
+                fragment.setUpload(upload);
+
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, TAG_FRAGMENT).commit();
+            }
+        });
     }
 
     public float[] getOrientation() {

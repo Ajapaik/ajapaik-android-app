@@ -1,19 +1,22 @@
 package ee.ajapaik.android.data;
 
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
-
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.util.Bitmaps;
+import ee.ajapaik.android.util.Dates;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.WebAction;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,12 +25,6 @@ import java.io.StringReader;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
-
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.util.Bitmaps;
-import ee.ajapaik.android.util.Dates;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.WebAction;
 
 public class Upload extends Model {
     private static final String TAG = "Upload";
@@ -178,7 +175,7 @@ public class Upload extends Model {
         return Uri.fromFile(new File(m_path));
     }
 
-    public boolean save(byte[] data, int orientation) {
+    public boolean save(byte[] data, boolean isLandscape) {
         FileOutputStream stream = null;
         File file = new File(m_path);
 
@@ -192,10 +189,8 @@ public class Upload extends Model {
 
             Log.d(TAG, "Image written to " + m_path);
 
-            if(orientation != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
-                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path),
-                        ((orientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT) ? 270.0F :
-                                (orientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE) ? 180.0F : 90.0F));
+                if(isLandscape) {
+                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path), 90.0F);
 
                 stream = new FileOutputStream(m_path);
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 90, stream);

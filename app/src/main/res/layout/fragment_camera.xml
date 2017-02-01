@@ -10,34 +10,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/layout_surface"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <SurfaceView
-                android:id="@+id/surface"
-                android:layout_centerInParent="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
-        </FrameLayout>
+
+
+        <ee.ajapaik.android.fragment.util.AutoFitTextureView
+                android:id="@+id/texture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
 
         <ee.ajapaik.android.widget.FixedAspectRatioLayout
-            android:id="@+id/layout_image"
-            android:layout_centerInParent="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:id="@+id/layout_image"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <ee.ajapaik.android.widget.WebImageView
-                android:id="@+id/image"
-                android:adjustViewBounds="true"
-                android:layout_alignParentTop="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/none"
-                android:src="@drawable/transparent"
-                android:scaleType="matrix" />
+                    android:id="@+id/image"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/none"
+                    android:src="@drawable/transparent"
+                    android:scaleType="matrix" />
 
         </ee.ajapaik.android.widget.FixedAspectRatioLayout>
 
