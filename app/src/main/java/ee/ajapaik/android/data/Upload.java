@@ -190,7 +190,7 @@ public class Upload extends Model {
             Log.d(TAG, "Image written to " + m_path);
 
                 if(isLandscape) {
-                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path), 90.0F);
+                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path), 270.0F);
 
                 stream = new FileOutputStream(m_path);
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 90, stream);
