@@ -66,10 +66,6 @@
             android:name="ee.ajapaik.android.LoginActivity"
             android:label="@string/login_title">
         </activity>
-        <activity
-            android:name="ee.ajapaik.android.UploadActivity"
-            android:label="@string/upload_title">
-        </activity>
         <service
             android:name="ee.ajapaik.android.WebService">
         </service>
