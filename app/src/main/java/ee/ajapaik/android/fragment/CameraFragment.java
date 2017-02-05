@@ -71,6 +71,9 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture texture, int width, int height) {
             openCamera(width, height);
+            if (!m_photo.isLandscape()) {
+                getImageLayout().setAspectRatioHeight((float) mTextureView.getmRatioHeight() / (float) mTextureView.getmRatioWidth());
+            }
         }
 
         @Override
@@ -776,7 +779,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         getImageView().setScale(m_scale);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         if (m_photo.isLandscape()) {
-            getImageView().setRotation(90);
+            getImageLayout().setRotation(90);
         }
         getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override

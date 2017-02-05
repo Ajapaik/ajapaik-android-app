@@ -73,4 +73,11 @@ public class AutoFitTextureView extends TextureView {
         }
     }
 
+    public int getmRatioWidth() {
+        return mRatioWidth;
+    }
+
+    public int getmRatioHeight() {
+        return mRatioHeight;
+    }
 }

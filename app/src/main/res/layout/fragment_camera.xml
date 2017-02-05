@@ -23,6 +23,7 @@
 
         <ee.ajapaik.android.widget.FixedAspectRatioLayout
                 android:id="@+id/layout_image"
+                android:layout_alignParentTop="true"
                 android:layout_centerInParent="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -30,7 +31,6 @@
             <ee.ajapaik.android.widget.WebImageView
                     android:id="@+id/image"
                     android:adjustViewBounds="true"
-                    android:layout_alignParentTop="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/none"
