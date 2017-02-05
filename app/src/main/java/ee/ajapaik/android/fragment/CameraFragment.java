@@ -75,15 +75,17 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
 
             int cameraPreviewHeight = mTextureView.getmRatioHeight();
             int cameraPreviewWidth = mTextureView.getmRatioWidth();
-            if (!m_photo.isLandscape()) {
-                getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
-            } else {
-                getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
-                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(cameraPreviewHeight, cameraPreviewWidth);
-                int margin = Math.abs(cameraPreviewHeight - cameraPreviewWidth) / 2;
-                layoutParams.setMargins(-1 * margin, margin, 0, 0);
-                getImageView().setLayoutParams(layoutParams);
+            getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
+            if (m_photo.isLandscape()) {
+                rotateAndFitPhotoPreview(cameraPreviewHeight, cameraPreviewWidth);
             }
+        }
+
+        private void rotateAndFitPhotoPreview(int cameraPreviewHeight, int cameraPreviewWidth) {
+            int margin = Math.abs(cameraPreviewHeight - cameraPreviewWidth) / 2;
+            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(cameraPreviewHeight, cameraPreviewWidth);
+            layoutParams.setMargins(-1 * margin, margin, 0, 0);
+            getImageView().setLayoutParams(layoutParams);
         }
 
         @Override
