@@ -20,6 +20,7 @@ import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.*;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import ee.ajapaik.android.CameraActivity;
@@ -71,8 +72,17 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture texture, int width, int height) {
             openCamera(width, height);
+
+            int cameraPreviewHeight = mTextureView.getmRatioHeight();
+            int cameraPreviewWidth = mTextureView.getmRatioWidth();
             if (!m_photo.isLandscape()) {
-                getImageLayout().setAspectRatioHeight((float) mTextureView.getmRatioHeight() / (float) mTextureView.getmRatioWidth());
+                getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
+            } else {
+                getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(cameraPreviewHeight, cameraPreviewWidth);
+                int margin = Math.abs(cameraPreviewHeight - cameraPreviewWidth) / 2;
+                layoutParams.setMargins(-1 * margin, margin, 0, 0);
+                getImageView().setLayoutParams(layoutParams);
             }
         }
 
@@ -779,7 +789,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         getImageView().setScale(m_scale);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         if (m_photo.isLandscape()) {
-            getImageLayout().setRotation(90);
+            getImageView().setRotation(90);
         }
         getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
