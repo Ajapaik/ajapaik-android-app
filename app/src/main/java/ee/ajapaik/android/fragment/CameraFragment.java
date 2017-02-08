@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.*;
-import android.hardware.Camera;
 import android.hardware.camera2.*;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.ImageReader;
@@ -724,10 +723,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
     private static final float OPACITY_LIMIT = 0.1F;
     private static final float OPACITY_FACTOR = 0.0001F;
 
-    private static final int CAMERA_MIN_RESOLUTON = 1024;
-    private static final int CAMERA_MAX_RESOLUTION = 1920;
-
-    private Camera m_camera;
     private boolean m_flippedMode = false;
     private float m_scale = DEFAULT_SCALE;
     private float m_opacity = DEFAULT_OPACITY;
