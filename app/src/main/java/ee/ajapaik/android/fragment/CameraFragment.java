@@ -785,6 +785,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         getImageView().setFlipped(m_flippedMode);
         getImageView().setScale(m_scale);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+        getImageView().setAlpha(0.5F);
         if (m_photo.isLandscape()) {
             getImageView().setRotation(90);
         }
