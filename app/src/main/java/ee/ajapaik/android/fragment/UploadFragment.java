@@ -2,6 +2,8 @@ package ee.ajapaik.android.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -9,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
-
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.AlertFragment;
@@ -35,7 +36,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     public Upload getUpload() {
         Bundle arguments = getArguments();
 
-        if(arguments != null) {
+        if (arguments != null) {
             return arguments.getParcelable(KEY_UPLOAD);
         }
 
@@ -45,11 +46,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     public void setUpload(Upload upload) {
         Bundle arguments = getArguments();
 
-        if(arguments == null) {
+        if (arguments == null) {
             arguments = new Bundle();
         }
 
-        if(upload != null) {
+        if (upload != null) {
             arguments.putParcelable(KEY_UPLOAD, upload);
         } else {
             arguments.remove(KEY_UPLOAD);
@@ -67,11 +68,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             m_upload = savedInstanceState.getParcelable(KEY_UPLOAD);
         }
 
-        if(m_upload == null) {
+        if (m_upload == null) {
             m_upload = getUpload();
         }
 
@@ -95,8 +96,19 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         });
 
-        getNewImageView().setScale(m_upload.getScale());
-        getNewImageView().setImageURI(m_upload.getLocalUri());
+        Bitmap unscaledCameraImage = BitmapFactory.decodeFile(m_upload.getPath());
+        int unscaledImageWidth = unscaledCameraImage.getWidth();
+        int unscaledImageHeight = unscaledCameraImage.getHeight();
+        float scaledImageWidth = unscaledImageWidth * m_upload.getScale();
+        float scaledImageHeight = unscaledImageHeight * m_upload.getScale();
+        float heightDifference = unscaledImageHeight - scaledImageHeight;
+        float widthDifference = unscaledImageWidth - scaledImageWidth;
+        getNewImageView().setImageBitmap(Bitmap.createBitmap(
+                unscaledCameraImage,
+                (int) (widthDifference / 2),
+                (int) (heightDifference / 2),
+                (int) (unscaledImageWidth - widthDifference),
+                (int) (unscaledImageHeight - heightDifference)));
 
         getDeclineButton().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,23 +137,23 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     @Override
     public DialogFragment createDialogFragment(int requestCode) {
-        if(requestCode == DIALOG_PROGRESS) {
+        if (requestCode == DIALOG_PROGRESS) {
             return ProgressFragment.create(
                     getString(R.string.upload_dialog_process_title),
                     getString(R.string.upload_dialog_process_message));
-        } else if(requestCode == DIALOG_ERROR_NO_CONNECTION) {
+        } else if (requestCode == DIALOG_ERROR_NO_CONNECTION) {
             return AlertFragment.create(
                     getString(R.string.upload_dialog_error_connection_title),
                     getString(R.string.upload_dialog_error_connection_message),
                     getString(R.string.upload_dialog_error_connection_ok),
                     getString(R.string.upload_dialog_error_connection_retry));
-        } else if(requestCode == DIALOG_ERROR_UNKNOWN) {
+        } else if (requestCode == DIALOG_ERROR_UNKNOWN) {
             return AlertFragment.create(
                     getString(R.string.upload_dialog_error_unknown_title),
                     getString(R.string.upload_dialog_error_unknown_message),
                     getString(R.string.upload_dialog_error_unknown_ok),
                     getString(R.string.upload_dialog_error_unknown_retry));
-        } else if(requestCode == DIALOG_SUCCESS) {
+        } else if (requestCode == DIALOG_SUCCESS) {
             return AlertFragment.create(
                     getString(R.string.upload_dialog_success_title),
                     getString(R.string.upload_dialog_success_message),
@@ -153,26 +165,26 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     @Override
     public void onDialogFragmentDismissed(DialogFragment fragment, int requestCode, int resultCode) {
-        if(requestCode == DIALOG_PROGRESS) {
+        if (requestCode == DIALOG_PROGRESS) {
             onDialogFragmentCancelled(fragment, requestCode);
-        } else if(requestCode == DIALOG_ERROR_NO_CONNECTION ||
-                  requestCode == DIALOG_ERROR_UNKNOWN) {
-            if(resultCode != AlertFragment.RESULT_NEGATIVE) {
+        } else if (requestCode == DIALOG_ERROR_NO_CONNECTION ||
+                requestCode == DIALOG_ERROR_UNKNOWN) {
+            if (resultCode != AlertFragment.RESULT_NEGATIVE) {
                 uploadPhoto();
             }
-        } else if(requestCode == DIALOG_SUCCESS) {
+        } else if (requestCode == DIALOG_SUCCESS) {
             success();
         }
     }
 
     @Override
     public void onDialogFragmentCancelled(DialogFragment fragment, int requestCode) {
-        if(requestCode == DIALOG_PROGRESS) {
+        if (requestCode == DIALOG_PROGRESS) {
             getConnection().dequeueAll(getActivity());
-        } else if(requestCode == DIALOG_SUCCESS) {
+        } else if (requestCode == DIALOG_SUCCESS) {
             success();
-        } else if(requestCode == DIALOG_ERROR_NO_CONNECTION ||
-                  requestCode == DIALOG_ERROR_UNKNOWN) {
+        } else if (requestCode == DIALOG_ERROR_NO_CONNECTION ||
+                requestCode == DIALOG_ERROR_UNKNOWN) {
             // Do nothing
         }
     }
@@ -188,9 +200,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             public void onActionResult(Status status, Upload upload) {
                 hideDialog(DIALOG_PROGRESS);
 
-                if(status.isGood()) {
+                if (status.isGood()) {
                     showDialog(DIALOG_SUCCESS);
-                } else if(status.isNetworkProblem()) {
+                } else if (status.isNetworkProblem()) {
                     showDialog(DIALOG_ERROR_NO_CONNECTION);
                 } else {
                     showDialog(DIALOG_ERROR_UNKNOWN);
@@ -211,22 +223,22 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private WebImageView getOldImageView() {
-        return (WebImageView)getView().findViewById(R.id.image_old);
+        return (WebImageView) getView().findViewById(R.id.image_old);
     }
 
     private WebImageView getNewImageView() {
-        return (WebImageView)getView().findViewById(R.id.image_new);
+        return (WebImageView) getView().findViewById(R.id.image_new);
     }
 
     private ProgressBar getProgressBar() {
-        return (ProgressBar)getView().findViewById(R.id.progress_bar);
+        return (ProgressBar) getView().findViewById(R.id.progress_bar);
     }
 
     private Button getDeclineButton() {
-        return (Button)getView().findViewById(R.id.button_action_decline);
+        return (Button) getView().findViewById(R.id.button_action_decline);
     }
 
     private Button getConfirmButton() {
-        return (Button)getView().findViewById(R.id.button_action_confirm);
+        return (Button) getView().findViewById(R.id.button_action_confirm);
     }
 }

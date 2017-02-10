@@ -875,17 +875,12 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         CameraActivity activity = (CameraActivity) getActivity();
         Settings settings = getSettings();
         Upload upload = settings.getUpload();
-//        float cameraRatio = (m_photo.isLandscape()) ?
-//                (float) m_camera.getParameters().getPictureSize().width / (float) m_camera.getParameters().getPictureSize().height :
-//                (float) m_camera.getParameters().getPictureSize().height / (float) m_camera.getParameters().getPictureSize().width;
-//        float photoRatio = (float) m_photo.getWidth() / (float) m_photo.getHeight();
 
         if (upload != null) {
             settings.setUpload(null);
         }
 
-        //TODO scale
-        upload = new Upload(m_photo, m_flippedMode, 1, null, getSettings().getLocation(), activity.getOrientation());
+        upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
         if (upload.save(data, m_photo.isLandscape())) {
             settings.setUpload(upload);
