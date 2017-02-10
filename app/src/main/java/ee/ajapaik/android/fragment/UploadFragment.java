@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.AlertFragment;
@@ -96,19 +97,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         });
 
-        Bitmap unscaledCameraImage = BitmapFactory.decodeFile(m_upload.getPath());
-        int unscaledImageWidth = unscaledCameraImage.getWidth();
-        int unscaledImageHeight = unscaledCameraImage.getHeight();
-        float scaledImageWidth = unscaledImageWidth * m_upload.getScale();
-        float scaledImageHeight = unscaledImageHeight * m_upload.getScale();
-        float heightDifference = unscaledImageHeight - scaledImageHeight;
-        float widthDifference = unscaledImageWidth - scaledImageWidth;
-        getNewImageView().setImageBitmap(Bitmap.createBitmap(
-                unscaledCameraImage,
-                (int) (widthDifference / 2),
-                (int) (heightDifference / 2),
-                (int) (unscaledImageWidth - widthDifference),
-                (int) (unscaledImageHeight - heightDifference)));
+        getNewImageView().setImageBitmap(scaleRephoto());
 
         getDeclineButton().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,6 +115,34 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 uploadPhoto();
             }
         });
+    }
+
+    private Bitmap scaleRephoto() {
+        Bitmap unscaledCameraImage = BitmapFactory.decodeFile(m_upload.getPath());
+        float unscaledImageWidth = unscaledCameraImage.getWidth();
+        float unscaledImageHeight = unscaledCameraImage.getHeight();
+
+        float heightScale = 1.0F;
+        float widthScale = 1.0F;
+        Photo oldPhoto = m_upload.getPhoto();
+        if (oldPhoto.isLandscape()) {
+            float scale = unscaledImageWidth / oldPhoto.getWidth();
+            heightScale = (oldPhoto.getHeight() * scale) / unscaledImageHeight;
+        } else {
+            float scale = unscaledImageHeight / oldPhoto.getHeight();
+            widthScale = (oldPhoto.getWidth() * scale) / unscaledImageWidth;
+        }
+
+        float scaledImageWidth = unscaledImageWidth * widthScale * m_upload.getScale();
+        float scaledImageHeight = unscaledImageHeight * heightScale * m_upload.getScale();
+        float heightDifference = unscaledImageHeight - scaledImageHeight;
+        float widthDifference = unscaledImageWidth - scaledImageWidth;
+        return Bitmap.createBitmap(
+                unscaledCameraImage,
+                (int) (widthDifference / 2),
+                (int) (heightDifference / 2),
+                (int) (unscaledImageWidth - widthDifference),
+                (int) (unscaledImageHeight - heightDifference));
     }
 
     @Override
