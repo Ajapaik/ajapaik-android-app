@@ -39,6 +39,8 @@ import java.util.*;
 import java.util.concurrent.Semaphore;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class CameraFragment extends WebFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -818,6 +820,8 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                 },
 
                 new OnCompositeTouchListener(getActivity()) {
+                    boolean isClick;
+
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
                         int pointerCount = event.getPointerCount();
@@ -825,19 +829,30 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                         switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
                                 dragStart = event.getX();
+                                isClick = true;
                                 break;
                             case MotionEvent.ACTION_MOVE:
                                 dragEnd = event.getX();
                                 changeOpacity();
+                                isClick = false;
                                 break;
                             case MotionEvent.ACTION_UP:
                                 dragStart = 0;
                                 dragEnd = 0;
+                                if (isClick) {
+                                    getImageView().setVisibility(INVISIBLE);
+                                }
                         }
                         return true;
                     }
                 }
         }));
+        getMainLayout().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getImageView().setVisibility(getImageView().getVisibility() == VISIBLE ? INVISIBLE : VISIBLE);
+            }
+        });
     }
 
     private void changeOpacity() {
