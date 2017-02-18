@@ -922,7 +922,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         return super.onOptionsItemSelected(item);
     }
 
-    public void onPictureTaken(byte[] data) {
+    private void onPictureTaken(byte[] data) {
         CameraActivity activity = (CameraActivity) getActivity();
         Settings settings = getSettings();
         Upload upload = settings.getUpload();
