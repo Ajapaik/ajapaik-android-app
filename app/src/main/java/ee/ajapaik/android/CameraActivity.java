@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.CameraFragment;
@@ -86,6 +87,7 @@ public class CameraActivity extends WebActivity {
             @Override
             public void run() {
                 setContentView(R.layout.activity_upload);
+                findViewById(R.id.action_flip).setVisibility(View.INVISIBLE);
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
                 UploadFragment fragment = new UploadFragment();
