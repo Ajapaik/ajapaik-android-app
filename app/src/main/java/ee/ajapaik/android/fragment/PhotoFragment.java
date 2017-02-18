@@ -190,12 +190,6 @@ public class PhotoFragment extends WebFragment {
                 },
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
-                    public void onSwipeLeft() { }
-
-                    @Override
-                    public void onSwipeRight() { }
-
-                    @Override
                     public void onSingleTap() {
                         setImmersiveMode(!m_immersiveMode);
                     }

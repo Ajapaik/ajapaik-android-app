@@ -885,12 +885,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
 
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
-                    public void onSwipeLeft() { }
-
-                    @Override
-                    public void onSwipeRight() { }
-
-                    @Override
                     public void onSingleTap() {
                         getImageView().setVisibility(INVISIBLE);
                     }

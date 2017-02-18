@@ -35,8 +35,6 @@ public abstract class OnSwipeTouchListener implements View.OnTouchListener {
         return (m_enabled) ? m_gestureDetector.onTouchEvent(event) : false;
     }
 
-    public abstract void onSwipeLeft();
-    public abstract void onSwipeRight();
     public void onSingleTap() { }
 
     private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
@@ -51,26 +49,6 @@ public abstract class OnSwipeTouchListener implements View.OnTouchListener {
         @Override
         public boolean onDown(MotionEvent e) {
             return true;
-        }
-
-        @Override
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            float distanceX = e2.getX() - e1.getX();
-            float distanceY = e2.getY() - e1.getY();
-
-            if(Math.abs(distanceX) > Math.abs(distanceY) &&
-                    Math.abs(distanceX) > m_distanceThreshold &&
-                    Math.abs(velocityX) > m_velocityThreshold) {
-                if(distanceX > 0.0F) {
-                    onSwipeRight();
-                } else {
-                    onSwipeLeft();
-                }
-
-                return true;
-            }
-
-            return false;
         }
 
         @Override
