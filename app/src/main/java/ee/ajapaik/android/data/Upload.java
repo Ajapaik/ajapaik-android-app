@@ -190,22 +190,17 @@ public class Upload extends Model {
             Log.d(TAG, "Image written to " + m_path);
 
             if(isLandscape) {
-                System.out.println("Start rotating");
                 Bitmap src = BitmapFactory.decodeFile(m_path); //0.8 s
-                System.out.println("decoded from file");
 
                 //1.6 s
                 JniBitmapHolder jniBitmapHolder = new JniBitmapHolder();
                 jniBitmapHolder.storeBitmap(src);
                 jniBitmapHolder.rotateBitmapCcw90();
                 jniBitmapHolder.freeBitmap();
-                System.out.println("Rotated");
 
                 //2 s
                 stream = new FileOutputStream(m_path);
-                System.out.println("stream re-inited");
                 src.compress(Bitmap.CompressFormat.JPEG, 90, stream);
-                System.out.println("compressed");
                 src.recycle();
             }
 
