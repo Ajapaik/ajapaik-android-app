@@ -675,20 +675,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         return (ORIENTATIONS.get(rotation) + mSensorOrientation + 270) % 360;
     }
 
-    private void unlockFocus() {
-        try {
-            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_TRIGGER,
-                    CameraMetadata.CONTROL_AF_TRIGGER_CANCEL);
-            mCaptureSession.capture(mPreviewRequestBuilder.build(), mCaptureCallback,
-                    mBackgroundHandler);
-            mState = STATE_PREVIEW;
-            mCaptureSession.setRepeatingRequest(mPreviewRequest, mCaptureCallback,
-                    mBackgroundHandler);
-        } catch (CameraAccessException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -709,7 +695,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         }
     }
 
-
     private static final String TAG = "CameraFragment";
 
     private static final int REQUEST_UPLOAD = 5000;
@@ -723,15 +708,11 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
     private static final float DEFAULT_SCALE = 1.0F;
 
     private static final int THUMBNAIL_SIZE = 800;
-    private static final float OPACITY_LIMIT = 0.1F;
-    private static final float OPACITY_FACTOR = 0.0001F;
 
     private boolean m_flippedMode = false;
     private float m_scale = DEFAULT_SCALE;
     private float m_opacity = DEFAULT_OPACITY;
     private Photo m_photo;
-
-    private float dragStart, dragEnd;
 
     public Photo getPhoto() {
         Bundle arguments = getArguments();
