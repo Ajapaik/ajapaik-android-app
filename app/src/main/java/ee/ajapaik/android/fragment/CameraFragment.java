@@ -649,7 +649,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    showToast("Picture taken");
+                    showToast("Picture taken, processing image. Please wait...");
 //                    unlockFocus();
                 }
             };
