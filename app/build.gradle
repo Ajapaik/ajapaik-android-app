@@ -10,6 +10,10 @@ android {
         targetSdkVersion 23
         versionCode 6
         versionName "1.0"
+        ndk {
+            moduleName "JniBitmapOperationsLibrary"
+            ldLibs "log",  "jnigraphics"
+        }
     }
     buildTypes {
         release {
