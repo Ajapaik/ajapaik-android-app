@@ -33,6 +33,7 @@ import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
+import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
 import java.nio.ByteBuffer;
 import java.util.*;
@@ -880,7 +881,19 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                     private float clamp(float value, float min, float max) {
                         return Math.min(Math.max(min, value), max);
                     }
+                },
 
+                new OnSwipeTouchListener(getActivity()) {
+                    @Override
+                    public void onSwipeLeft() { }
+
+                    @Override
+                    public void onSwipeRight() { }
+
+                    @Override
+                    public void onSingleTap() {
+                        getImageView().setVisibility(INVISIBLE);
+                    }
                 }
         }));
         getMainLayout().setOnClickListener(new View.OnClickListener() {
