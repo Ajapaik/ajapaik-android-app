@@ -820,31 +820,67 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                 },
 
                 new OnCompositeTouchListener(getActivity()) {
-                    boolean isClick;
 
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
-                        int pointerCount = event.getPointerCount();
-                        if (pointerCount > 1) return false;
+                        return changeOpacity(v, event);
+                    }
+
+                    static final int NONE = 0;
+                    static final int DRAG = 1;
+                    int mode = NONE;
+
+                    PointF last = new PointF();
+                    PointF start = new PointF();
+
+                    private float alpha = 0.5f;
+                    private float newAlpha = 0.5f;
+
+                    private boolean changeOpacity(View v, MotionEvent event) {
                         switch (event.getAction()) {
                             case MotionEvent.ACTION_DOWN:
-                                dragStart = event.getX();
-                                isClick = true;
+                                last.set(event.getX(), event.getY());
+                                start.set(last);
+                                mode = DRAG;
                                 break;
                             case MotionEvent.ACTION_MOVE:
-                                dragEnd = event.getX();
-                                changeOpacity();
-                                isClick = false;
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                dragStart = 0;
-                                dragEnd = 0;
-                                if (isClick) {
-                                    getImageView().setVisibility(INVISIBLE);
+                                if (mode == DRAG) {
+                                    getNewOpacity(v, event);
+                                    getImageView().setAlpha(newAlpha);
                                 }
+                                break;
+
+                            case MotionEvent.ACTION_UP:
+                                mode = NONE;
+                                alpha = newAlpha;
+                                break;
+
+                            case MotionEvent.ACTION_POINTER_UP:
+                                mode = NONE;
+                                break;
                         }
                         return true;
                     }
+
+                    private void getNewOpacity(View v, MotionEvent event) {
+                        float startVal;
+                        float curVal;
+                        if (m_photo.isLandscape()) {
+                            startVal = (start.x / (float) (v.getWidth()));
+                            curVal = (event.getX() / (float) (v.getWidth()));
+                        } else {
+                            startVal = (start.y / (float) (v.getHeight()));
+                            curVal = (event.getY() / (float) (v.getHeight()));
+                        }
+                        float diff = curVal - startVal;
+                        newAlpha = alpha + diff;
+                        newAlpha = clamp(newAlpha, 0.0f, 1.0f);
+                    }
+
+                    private float clamp(float value, float min, float max) {
+                        return Math.min(Math.max(min, value), max);
+                    }
+
                 }
         }));
         getMainLayout().setOnClickListener(new View.OnClickListener() {
@@ -853,14 +889,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                 getImageView().setVisibility(getImageView().getVisibility() == VISIBLE ? INVISIBLE : VISIBLE);
             }
         });
-    }
-
-    private void changeOpacity() {
-        m_opacity += (OPACITY_FACTOR * (dragEnd - dragStart));
-        if (m_opacity < OPACITY_LIMIT) {
-            m_opacity = OPACITY_LIMIT;
-        }
-        getImageView().setAlpha(m_opacity);
     }
 
     @Override
