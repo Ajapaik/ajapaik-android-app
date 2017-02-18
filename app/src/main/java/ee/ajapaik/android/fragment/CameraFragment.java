@@ -2,6 +2,7 @@ package ee.ajapaik.android.fragment;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -642,20 +643,8 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
             int rotation = activity.getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, getOrientation(rotation));
 
-            CameraCaptureSession.CaptureCallback CaptureCallback
-                    = new CameraCaptureSession.CaptureCallback() {
-
-                @Override
-                public void onCaptureCompleted(@NonNull CameraCaptureSession session,
-                                               @NonNull CaptureRequest request,
-                                               @NonNull TotalCaptureResult result) {
-                    showToast("Picture taken, processing image. Please wait...");
-//                    unlockFocus();
-                }
-            };
-
             mCaptureSession.stopRepeating();
-            mCaptureSession.capture(captureBuilder.build(), CaptureCallback, null);
+            mCaptureSession.capture(captureBuilder.build(), null, null);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -675,10 +664,13 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         return (ORIENTATIONS.get(rotation) + mSensorOrientation + 270) % 360;
     }
 
+    private ProgressDialog progressDialog;
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_action_camera: {
+                progressDialog = ProgressDialog.show(getActivity(), "Processing image", "Please wait...");
                 takePicture();
                 break;
             }
@@ -917,6 +909,9 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         if (upload.save(data, m_photo.isLandscape())) {
             settings.setUpload(upload);
             activity.showUploadPreview(upload);
+            if (progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
         }
     }
 
