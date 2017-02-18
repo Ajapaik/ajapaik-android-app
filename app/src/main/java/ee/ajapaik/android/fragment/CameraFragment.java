@@ -457,7 +457,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                 throw new RuntimeException("Time out waiting to lock camera opening.");
             }
             if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PERMISSION_GRANTED) {
-                //TODO Permission
                 return;
             }
             manager.openCamera(mCameraId, mStateCallback, mBackgroundHandler);
