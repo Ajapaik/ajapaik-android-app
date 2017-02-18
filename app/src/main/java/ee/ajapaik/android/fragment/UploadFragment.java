@@ -125,7 +125,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         float heightScale = 1.0F;
         float widthScale = 1.0F;
         Photo oldPhoto = m_upload.getPhoto();
-        if (oldPhoto.isLandscape()) {
+
+        if (needsHeightScaling(unscaledImageWidth, unscaledImageHeight, oldPhoto)) {
             float scale = unscaledImageWidth / oldPhoto.getWidth();
             heightScale = (oldPhoto.getHeight() * scale) / unscaledImageHeight;
         } else {
@@ -143,6 +144,12 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 (int) (heightDifference / 2),
                 (int) (unscaledImageWidth - widthDifference),
                 (int) (unscaledImageHeight - heightDifference));
+    }
+
+    private boolean needsHeightScaling(float unscaledImageWidth, float unscaledImageHeight, Photo oldPhoto) {
+        float heightScale = unscaledImageHeight / oldPhoto.getHeight();
+        float widthScale = unscaledImageWidth / oldPhoto.getWidth();
+        return widthScale < heightScale;
     }
 
     @Override
