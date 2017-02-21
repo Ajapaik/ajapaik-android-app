@@ -12,8 +12,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
-import com.jni.bitmap_operations.JniBitmapHolder;
 import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.util.Bitmaps;
 import ee.ajapaik.android.util.Dates;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
@@ -190,18 +190,11 @@ public class Upload extends Model {
             Log.d(TAG, "Image written to " + m_path);
 
             if(isLandscape) {
-                Bitmap src = BitmapFactory.decodeFile(m_path); //0.8 s
+                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path), 270.0F);
 
-                //1.6 s
-                JniBitmapHolder jniBitmapHolder = new JniBitmapHolder();
-                jniBitmapHolder.storeBitmap(src);
-                jniBitmapHolder.rotateBitmapCcw90();
-                jniBitmapHolder.freeBitmap();
-
-                //2 s
                 stream = new FileOutputStream(m_path);
-                src.compress(Bitmap.CompressFormat.JPEG, 90, stream);
-                src.recycle();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, stream);
+                bitmap.recycle();
             }
 
             return true;
