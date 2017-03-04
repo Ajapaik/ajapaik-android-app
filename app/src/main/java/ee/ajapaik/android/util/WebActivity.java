@@ -43,6 +43,7 @@ import java.util.Arrays;
 
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 
 public class WebActivity extends ActionBarActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "WebActivity";
@@ -52,7 +53,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     private WebService.Connection m_connection = new WebService.Connection();
     protected Settings m_settings;
 
-    private static final int FACEBOOK_SIGN_IN_RESOLUTION_REQUEST = 9001;
+    public static final int FACEBOOK_SIGN_IN_RESOLUTION_REQUEST = 9001;
     private static final int GOOGLE_SIGN_IN_RESOLUTION_REQUEST = 9002;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9003;
     private static final int GET_ACCOUNTS_PERMISSION = 6001;
@@ -78,7 +79,17 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             LoginManager.getInstance().registerCallback(m_facebookCallback, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
+                    Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
+                    getSettings().setAuthorization(authorization);
 
+                    getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
+                        @Override
+                        public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
+                            if(session != null) {
+                                login(session);
+                            }
+                        }
+                    });
                 }
 
                 @Override
@@ -102,15 +113,19 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                 if (session != null) {
-                    m_settings.setSession(session);
-                    getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
-                    ProfileActivity.start(WebActivity.this, "login");
+                    login(session);
                 } else {
                     findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
                     ((TextView)findViewById(R.id.input_password)).setText("");
                 }
             }
         });
+    }
+
+    private void login(Session session) {
+        m_settings.setSession(session);
+        getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
+        ProfileActivity.start(WebActivity.this, "login");
     }
 
     public void signInWithGoogle() {

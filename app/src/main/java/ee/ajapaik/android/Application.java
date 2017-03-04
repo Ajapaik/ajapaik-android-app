@@ -1,14 +1,14 @@
 package ee.ajapaik.android;
 
 import com.facebook.FacebookSdk;
-
+import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.util.WebImage;
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
 
-import ee.ajapaik.android.util.WebImage;
-import ee.ajapaik.android.test.BuildConfig;
-import ee.ajapaik.android.test.R;
+import static ee.ajapaik.android.util.WebActivity.FACEBOOK_SIGN_IN_RESOLUTION_REQUEST;
 
 @ReportsCrashes(formKey="",
         mode = ReportingInteractionMode.DIALOG,
@@ -26,7 +26,7 @@ public class Application extends android.app.Application {
             ACRA.init(this);
         }
 
-        FacebookSdk.sdkInitialize(this);
+        FacebookSdk.sdkInitialize(this, FACEBOOK_SIGN_IN_RESOLUTION_REQUEST);
         WebImage.invalidate(this);
     }
 }
