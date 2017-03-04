@@ -1,9 +1,6 @@
 Ajapaik API v1.0
 =======
 
-FACEBOOK key hash
-C:\Program Files\Java\jdk1.8.0_102\bin>keytool.exe -exportcert -alias androiddebugkey -keystore ~\.android\debug.keystore | D:\Tools\openssl\bin\openssl.exe sha1 -binary |  D:\Tools\openssl\bin\openssl.exe base64
-
 Every API call returns a JSON response.
 
 # Data Types
