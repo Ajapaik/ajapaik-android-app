@@ -17,9 +17,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
+import com.facebook.*;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.GoogleAuthException;
@@ -44,6 +42,7 @@ import java.util.Arrays;
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
+import static ee.ajapaik.android.util.Authorization.Type.GOOGLE;
 
 public class WebActivity extends ActionBarActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "WebActivity";
@@ -74,7 +73,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     public void signInWithFacebook() {
-        if(m_facebookCallback == null) {
+        if (m_facebookCallback == null) {
             m_facebookCallback = CallbackManager.Factory.create();
             LoginManager.getInstance().registerCallback(m_facebookCallback, new FacebookCallback<LoginResult>() {
                 @Override
@@ -85,7 +84,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
                     getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
                         @Override
                         public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
-                            if(session != null) {
+                            if (session != null) {
                                 login(session);
                             }
                         }
@@ -116,7 +115,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
                     login(session);
                 } else {
                     findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
-                    ((TextView)findViewById(R.id.input_password)).setText("");
+                    ((TextView) findViewById(R.id.input_password)).setText("");
                 }
             }
         });
@@ -137,7 +136,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     private void connectToGoogleApi() {
-        if(m_googleApiClient == null) {
+        if (m_googleApiClient == null) {
             m_googleApiClient = new GoogleApiClient.Builder(this)
                     .addConnectionCallbacks(this)
                     .addOnConnectionFailedListener(this)
@@ -165,26 +164,24 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     public void signOut() {
-        if(m_googleApiClient == null) {
-            m_googleApiClient = new GoogleApiClient.Builder(this)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .addApi(Plus.API)
-                    .addScope(new Scope(Scopes.PROFILE))
-                    .build();
-        }
-        if(m_googleApiClient.isConnected()) {
-            Plus.AccountApi.clearDefaultAccount(m_googleApiClient);
-            m_googleApiClient.disconnect();
+        Authorization loggedInAuthorization = m_settings.getAuthorization();
+        if (FACEBOOK == loggedInAuthorization.getType()) {
+            new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, new GraphRequest.Callback() {
+                @Override
+                public void onCompleted(GraphResponse graphResponse) {
+                    LoginManager.getInstance().logOut();
+                }
+            }).executeAsync();
+        } else if (GOOGLE == loggedInAuthorization.getType()) {
+            logoutFromGoogle();
         }
 
-        Authorization authorization = Authorization.getAnonymous(this);
-        getSettings().setAuthorization(authorization);
+        Authorization anonymous = Authorization.getAnonymous(this);
+        getSettings().setAuthorization(anonymous);
 
         getConnection().enqueue(WebActivity.this, Session.createLogoutAction(WebActivity.this), new WebAction.ResultHandler<Session>() {
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
-//         TODO maybe session explicitly must be null
                 m_settings.setSession(null);
                 getSettings().setProfile(new Profile());
             }
@@ -192,15 +189,30 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         invalidateAuthorization();
     }
 
+    private void logoutFromGoogle() {
+        if (m_googleApiClient == null) {
+            m_googleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(Plus.API)
+                    .addScope(new Scope(Scopes.PROFILE))
+                    .build();
+        }
+        if (m_googleApiClient.isConnected()) {
+            Plus.AccountApi.clearDefaultAccount(m_googleApiClient);
+            m_googleApiClient.disconnect();
+        }
+    }
+
     public boolean checkPlayServices(boolean ui) {
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
 
-        if(resultCode == ConnectionResult.SUCCESS) {
+        if (resultCode == ConnectionResult.SUCCESS) {
             return true;
         }
 
-        if(GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
-            if(ui) {
+        if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+            if (ui) {
                 GooglePlayServicesUtil.getErrorDialog(resultCode, this, PLAY_SERVICES_RESOLUTION_REQUEST).show();
             }
         } else {
@@ -220,7 +232,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == android.R.id.home) {
+        if (id == android.R.id.home) {
             onBackPressed();
 
             return true;
@@ -247,14 +259,14 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     protected void onStart() {
         super.onStart();
 
-        if(m_googleApiClient != null) {
+        if (m_googleApiClient != null) {
             m_googleApiClient.connect();
         }
     }
 
     @Override
     protected void onStop() {
-        if(m_googleApiClient != null) {
+        if (m_googleApiClient != null) {
             m_googleApiClient.disconnect();
         }
 
@@ -265,9 +277,9 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     public void onDialogFragmentDismissed(DialogFragment fragment, int requestCode, int resultCode) {
         Object[] fragments = getSupportFragmentManager().getFragments().toArray();
 
-        for(Object f : fragments) {
-            if(f != fragment && f instanceof DialogInterface) {
-                ((DialogInterface)f).onDialogFragmentDismissed(fragment, requestCode, resultCode);
+        for (Object f : fragments) {
+            if (f != fragment && f instanceof DialogInterface) {
+                ((DialogInterface) f).onDialogFragmentDismissed(fragment, requestCode, resultCode);
             }
         }
     }
@@ -276,19 +288,19 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     public void onDialogFragmentCancelled(DialogFragment fragment, int requestCode) {
         Object[] fragments = getSupportFragmentManager().getFragments().toArray();
 
-        for(Object f : fragments) {
-            if(f != fragment && f instanceof DialogInterface) {
-                ((DialogInterface)f).onDialogFragmentCancelled(fragment, requestCode);
+        for (Object f : fragments) {
+            if (f != fragment && f instanceof DialogInterface) {
+                ((DialogInterface) f).onDialogFragmentCancelled(fragment, requestCode);
             }
         }
     }
 
-    protected void invalidateAuthorization() {
+    private void invalidateAuthorization() {
         Object[] fragments = getSupportFragmentManager().getFragments().toArray();
 
-        for(Object fragment : fragments) {
-            if(fragment instanceof WebFragment) {
-                ((WebFragment)fragment).onAuthorizationChanged();
+        for (Object fragment : fragments) {
+            if (fragment instanceof WebFragment) {
+                ((WebFragment) fragment).onAuthorizationChanged();
             }
         }
     }
@@ -296,11 +308,11 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     protected DialogFragment createDialogFragment(int requestCode) {
         Object[] fragments = getSupportFragmentManager().getFragments().toArray();
 
-        for(Object fragment : fragments) {
-            if(fragment instanceof WebFragment) {
-                DialogFragment f = ((WebFragment)fragment).createDialogFragment(requestCode);
+        for (Object fragment : fragments) {
+            if (fragment instanceof WebFragment) {
+                DialogFragment f = ((WebFragment) fragment).createDialogFragment(requestCode);
 
-                if(f != null) {
+                if (f != null) {
                     return f;
                 }
             }
@@ -325,11 +337,9 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
                 try {
                     return GoogleAuthUtil.getToken(getApplicationContext(), new Account(m_accountName, GoogleAuthUtil.GOOGLE_ACCOUNT_TYPE), scopes);
-                }
-                catch(IOException e) {
+                } catch (IOException e) {
                     Log.e(TAG, "Error retrieving ID token.", e);
-                }
-                catch(GoogleAuthException e) {
+                } catch (GoogleAuthException e) {
                     Log.e(TAG, "Error retrieving ID token.", e);
                 }
 
@@ -340,7 +350,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             protected void onPostExecute(String token) {
                 Log.i(TAG, "ID token: " + token);
 
-                if(token != null) {
+                if (token != null) {
                     Authorization authorization = new Authorization(Authorization.Type.GOOGLE, m_accountName, token);
 
                     getSettings().setAuthorization(authorization);
@@ -348,7 +358,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
                     getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
                         @Override
                         public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
-                            if(session != null) {
+                            if (session != null) {
                                 m_settings.setSession(session);
                             }
 
@@ -371,13 +381,12 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         // ConnectionResult to see possible error codes.
         Log.d(TAG, "onConnectionFailed:" + connectionResult);
 
-        if(!m_isResolving && m_shouldResolve) {
-            if(connectionResult.hasResolution()) {
+        if (!m_isResolving && m_shouldResolve) {
+            if (connectionResult.hasResolution()) {
                 try {
                     connectionResult.startResolutionForResult(this, PLAY_SERVICES_RESOLUTION_REQUEST);
                     m_isResolving = true;
-                }
-                catch(IntentSender.SendIntentException e) {
+                } catch (IntentSender.SendIntentException e) {
                     Log.e(TAG, "Could not resolve ConnectionResult.", e);
 
                     m_isResolving = false;
@@ -399,10 +408,10 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == FACEBOOK_SIGN_IN_RESOLUTION_REQUEST) {
+        if (requestCode == FACEBOOK_SIGN_IN_RESOLUTION_REQUEST) {
             m_facebookCallback.onActivityResult(requestCode, resultCode, data);
-        } else if(requestCode == GOOGLE_SIGN_IN_RESOLUTION_REQUEST) {
-            if(resultCode != Activity.RESULT_OK) {
+        } else if (requestCode == GOOGLE_SIGN_IN_RESOLUTION_REQUEST) {
+            if (resultCode != Activity.RESULT_OK) {
                 m_shouldResolve = false;
             }
 
@@ -426,28 +435,28 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     protected void showDialogFragment(int requestCode, DialogFragment dialog, Fragment fragment) {
-        if(dialog != null) {
+        if (dialog != null) {
             String tag = DIALOG_PREFIX + Integer.toString(requestCode);
             FragmentManager manager = getSupportFragmentManager();
 
-            if(fragment == null) {
+            if (fragment == null) {
                 String rootTag = getDialogFragmentRootTag();
 
-                if(rootTag != null) {
+                if (rootTag != null) {
                     fragment = manager.findFragmentByTag(rootTag);
                 } else {
                     Object[] fragments = getSupportFragmentManager().getFragments().toArray();
 
-                    for(Object f : fragments) {
-                        if(f instanceof WebFragment) {
-                            fragment = (WebFragment)f;
+                    for (Object f : fragments) {
+                        if (f instanceof WebFragment) {
+                            fragment = (WebFragment) f;
                             break;
                         }
                     }
                 }
             }
 
-            if(fragment != null && manager.findFragmentByTag(tag) == null) {
+            if (fragment != null && manager.findFragmentByTag(tag) == null) {
                 dialog.setTargetFragment(fragment, requestCode);
                 dialog.show(manager, tag);
             }
@@ -459,8 +468,8 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         String tag = DIALOG_PREFIX + Integer.toString(requestCode);
         Fragment fragment = manager.findFragmentByTag(tag);
 
-        if(fragment != null) {
-            ((DialogFragment)fragment).dismiss();
+        if (fragment != null) {
+            ((DialogFragment) fragment).dismiss();
         }
     }
 
