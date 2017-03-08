@@ -177,7 +177,6 @@ public class ProfileFragment extends WebFragment {
         getLogoutButton().setVisibility(isLoggedIn ? VISIBLE : GONE);
         getFacebookButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
         getGoogleButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
-        getLoginHintView().setVisibility(isLoggedIn ? GONE : VISIBLE);
         getUsernameLoginButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
     }
 
@@ -210,17 +209,15 @@ public class ProfileFragment extends WebFragment {
     }
 
     private SignInButton getGoogleButton() {
-        return (SignInButton)getView().findViewById(R.id.button_action_google);
+        return (SignInButton) getView().findViewById(R.id.button_action_google);
     }
 
     private Button getLogoutButton() {
         return (Button)getView().findViewById(R.id.button_action_logout);
     }
+
     private Button getUsernameLoginButton() {
         return (Button)getView().findViewById(R.id.button_action_login);
     }
 
-    private TextView getLoginHintView() {
-        return (TextView)getView().findViewById(R.id.login_hint);
-    }
 }

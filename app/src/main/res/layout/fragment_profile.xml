@@ -64,12 +64,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/login_hint"
-                style="@style/ProfileHintText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_login_hint" />
 
             <Button style="@style/ProfileButton" android:id="@+id/button_action_login" android:layout_width="fill_parent"
                     android:layout_height="wrap_content" android:text="@string/profile_login"
