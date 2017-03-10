@@ -2,6 +2,7 @@ package ee.ajapaik.android.util;
 
 import android.accounts.Account;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
@@ -64,6 +65,8 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     private boolean m_isResolving = false;
     private boolean m_shouldResolve = false;
 
+    private ProgressDialog progressDialog;
+
     public WebService.Connection getConnection() {
         return m_connection;
     }
@@ -78,6 +81,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             LoginManager.getInstance().registerCallback(m_facebookCallback, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
+                    progressDialog = ProgressDialog.show(WebActivity.this, "Logging in...", "Please wait...");
                     Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
                     getSettings().setAuthorization(authorization);
 
@@ -124,7 +128,10 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     private void login(Session session) {
         m_settings.setSession(session);
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
+        finish();
         ProfileActivity.start(WebActivity.this, "login");
+        this.overridePendingTransition(0, 0);
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
     }
 
     public void signInWithGoogle() {
