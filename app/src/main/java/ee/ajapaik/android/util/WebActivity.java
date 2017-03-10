@@ -81,7 +81,9 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             LoginManager.getInstance().registerCallback(m_facebookCallback, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    progressDialog = ProgressDialog.show(WebActivity.this, "Logging in...", "Please wait...");
+                    if (getSettings().getAuthorization().getType() != FACEBOOK) {
+                        progressDialog = ProgressDialog.show(WebActivity.this, "Logging in...", "Please wait...");
+                    }
                     Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
                     getSettings().setAuthorization(authorization);
 
@@ -126,12 +128,12 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     private void login(Session session) {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
         m_settings.setSession(session);
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
         finish();
         ProfileActivity.start(WebActivity.this, "login");
         this.overridePendingTransition(0, 0);
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
     }
 
     public void signInWithGoogle() {
@@ -261,6 +263,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
     @Override
     protected void onDestroy() {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
         m_connection.dequeueAll(this);
 
         super.onDestroy();
@@ -277,11 +280,18 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
 
     @Override
     protected void onStop() {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
         if (m_googleApiClient != null) {
             m_googleApiClient.disconnect();
         }
 
         super.onStop();
+    }
+
+    @Override
+    protected void onPause() {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        super.onPause();
     }
 
     @Override
