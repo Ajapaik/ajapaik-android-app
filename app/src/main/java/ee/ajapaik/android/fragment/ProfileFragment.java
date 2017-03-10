@@ -110,27 +110,29 @@ public class ProfileFragment extends WebFragment {
             m_profile = profile;
 
             if(m_profile != null) {
-                Hyperlink link = m_profile.getLink();
-                String summary = context.getResources().getQuantityString(R.plurals.profile_rephotos, m_profile.getRephotosCount(), m_profile.getRephotosCount());
+                if (!getSettings().getAuthorization().isAnonymous()) {
+                    Hyperlink link = m_profile.getLink();
+                    String summary = context.getResources().getQuantityString(R.plurals.profile_rephotos, m_profile.getRephotosCount(), m_profile.getRephotosCount());
 
-                if(m_profile.getRank() != 0) {
-                    summary = summary + " " + context.getResources().getString(R.string.profile_rank, m_profile.getRank());
+                    if (m_profile.getRank() != 0) {
+                        summary = summary + " " + context.getResources().getString(R.string.profile_rank, m_profile.getRank());
+                    }
+
+                    getNameView().setText((m_profile.getName() != null) ? m_profile.getName() : "");
+
+                    getTitleView().setText(Html.fromHtml(summary));
+
+                    if (m_profile.getMessage() != null) {
+                        getSubtitleView().setText(m_profile.getMessage());
+                    }
+
+                    if (link != null) {
+                        getLinkView().setText(link.toHtml());
+                    } else {
+                        getLinkView().setVisibility(GONE);
+                    }
                 }
-
-                getNameView().setText((m_profile.getName() != null) ? m_profile.getName() : "");
-
                 layout.setVisibility(VISIBLE);
-                getTitleView().setText(Html.fromHtml(summary));
-
-                if(m_profile.getMessage() != null) {
-                    getSubtitleView().setText(m_profile.getMessage());
-                }
-
-                if(link != null) {
-                    getLinkView().setText(link.toHtml());
-                } else {
-                    getLinkView().setVisibility(GONE);
-                }
             } else {
                 layout.setVisibility(GONE);
             }

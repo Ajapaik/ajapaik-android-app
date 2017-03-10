@@ -12,6 +12,8 @@ import com.google.gson.stream.JsonReader;
 import java.io.StringReader;
 import java.util.UUID;
 
+import static ee.ajapaik.android.util.Authorization.Type.ANONYMOUS;
+
 public class Authorization {
     private static final String SHARED_PREFS = "prefs";
     private static final String KEY_UNIQUE_ID = "user.id";
@@ -42,7 +44,7 @@ public class Authorization {
     public static Authorization getAnonymous(Context context) {
         String password = SHA256.encode(getUniqueIdentifier(context));
 
-        return new Authorization(Type.ANONYMOUS, SHA1.encode(password), password);
+        return new Authorization(ANONYMOUS, SHA1.encode(password), password);
     }
 
     public static Authorization parse(String str) {
@@ -124,6 +126,10 @@ public class Authorization {
 
     public String getToken() {
         return m_token;
+    }
+
+    public boolean isAnonymous() {
+        return ANONYMOUS.equals(m_type);
     }
 
     @Override
