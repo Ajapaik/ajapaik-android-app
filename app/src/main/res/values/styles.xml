@@ -208,14 +208,6 @@
         <item name="android:dividerHeight">@dimen/profile_item_divider</item>
     </style>
 
-    <style name="ProfileSeparator">
-        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
-        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
-        <item name="android:background">@color/profile_separator</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">1dp</item>
-    </style>
-
     <style name="ProfileLinkText" parent="@android:style/TextAppearance">
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>

@@ -42,8 +42,6 @@
                 android:autoLink="all"
                 android:text="" />
 
-            <View style="@style/ProfileSeparator" />
-
             <Button
                 android:id="@+id/button_action_logout"
                 style="@style/ProfileButton"
