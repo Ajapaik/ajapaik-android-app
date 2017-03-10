@@ -171,6 +171,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
     }
 
     public void signOut() {
+        progressDialog = ProgressDialog.show(WebActivity.this, "Logging out...", "Please wait...");
         Authorization loggedInAuthorization = m_settings.getAuthorization();
         if (FACEBOOK == loggedInAuthorization.getType()) {
             new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, new GraphRequest.Callback() {
@@ -191,6 +192,9 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                 m_settings.setSession(null);
                 getSettings().setProfile(new Profile());
+                if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+                finish();
+                ProfileActivity.start(WebActivity.this, "login");
             }
         });
         invalidateAuthorization();
