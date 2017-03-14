@@ -206,9 +206,9 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                 logout();
+                invalidateAuthorization();
             }
         });
-        invalidateAuthorization();
     }
 
     private void logoutFromGoogle() {
