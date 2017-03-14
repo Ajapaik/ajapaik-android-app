@@ -140,6 +140,15 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         }
     }
 
+    private void logout() {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        m_settings.setSession(null);
+        getSettings().setProfile(new Profile());
+        finish();
+        ProfileActivity.start(WebActivity.this, "login");
+        this.overridePendingTransition(0, 0);
+    }
+
     public void signInWithGoogle() {
         if (ContextCompat.checkSelfPermission(this, GET_ACCOUNTS) != PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{GET_ACCOUNTS}, GET_ACCOUNTS_PERMISSION);
@@ -196,11 +205,7 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         getConnection().enqueue(WebActivity.this, Session.createLogoutAction(WebActivity.this), new WebAction.ResultHandler<Session>() {
             @Override
             public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
-                m_settings.setSession(null);
-                getSettings().setProfile(new Profile());
-                if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
-                finish();
-                ProfileActivity.start(WebActivity.this, "login");
+                logout();
             }
         });
         invalidateAuthorization();
