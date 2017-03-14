@@ -84,9 +84,9 @@ public class WebService extends Service {
             @Override
             public void run() {
                 boolean isSecure = operation.isSecure();
+                runSilentLogin();
                 operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null);
 
-                runSilentLogin();
                 if(operation.shouldRetry()) {
 
                     if(m_session != null) {
