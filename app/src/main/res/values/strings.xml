@@ -72,6 +72,9 @@
     <string name="upload_dialog_success_title">Upload Successful</string>
     <string name="upload_dialog_success_message">The photo was uploaded successfully!</string>
     <string name="upload_dialog_success_ok">OK</string>
+    <string name="upload_dialog_not_authenticated_title">Must be logged in to upload</string>
+    <string name="upload_dialog_not_authenticated_message">Redirect to profile page</string>
+    <string name="upload_dialog_not_authenticated_ok">OK</string>
 
     <!-- ACRA -->
     <string name="acra_dialog_title">Sift.pics has crashed</string>

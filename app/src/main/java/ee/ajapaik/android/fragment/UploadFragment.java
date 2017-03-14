@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
@@ -29,6 +30,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private static final int DIALOG_ERROR_UNKNOWN = 2;
     private static final int DIALOG_PROGRESS = 3;
     private static final int DIALOG_SUCCESS = 4;
+    private static final int DIALOG_NOT_AUTHENTICATED = 5;
 
     private static final int THUMBNAIL_SIZE = 400;
 
@@ -182,6 +184,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     getString(R.string.upload_dialog_success_title),
                     getString(R.string.upload_dialog_success_message),
                     getString(R.string.upload_dialog_success_ok));
+        } else if (requestCode == DIALOG_NOT_AUTHENTICATED) {
+            return AlertFragment.create(
+                    getString(R.string.upload_dialog_not_authenticated_title),
+                    getString(R.string.upload_dialog_not_authenticated_message),
+                    getString(R.string.upload_dialog_not_authenticated_ok));
         }
 
         return super.createDialogFragment(requestCode);
@@ -198,6 +205,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         } else if (requestCode == DIALOG_SUCCESS) {
             success();
+        } else if (requestCode == DIALOG_NOT_AUTHENTICATED) {
+            ProfileActivity.start(getContext(), "upload");
         }
     }
 
@@ -214,25 +223,29 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private void uploadPhoto() {
-        Context context = getActivity();
-        WebAction<Upload> action = Upload.createAction(context, m_upload);
+        if (getSettings().getAuthorization().isAnonymous()) {
+            showDialog(DIALOG_NOT_AUTHENTICATED);
+        } else {
+            Context context = getActivity();
+            WebAction<Upload> action = Upload.createAction(context, m_upload);
 
-        showDialog(DIALOG_PROGRESS);
+            showDialog(DIALOG_PROGRESS);
 
-        getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
-            @Override
-            public void onActionResult(Status status, Upload upload) {
-                hideDialog(DIALOG_PROGRESS);
+            getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
+                @Override
+                public void onActionResult(Status status, Upload upload) {
+                    hideDialog(DIALOG_PROGRESS);
 
-                if (status.isGood()) {
-                    showDialog(DIALOG_SUCCESS);
-                } else if (status.isNetworkProblem()) {
-                    showDialog(DIALOG_ERROR_NO_CONNECTION);
-                } else {
-                    showDialog(DIALOG_ERROR_UNKNOWN);
+                    if (status.isGood()) {
+                        showDialog(DIALOG_SUCCESS);
+                    } else if (status.isNetworkProblem()) {
+                        showDialog(DIALOG_ERROR_NO_CONNECTION);
+                    } else {
+                        showDialog(DIALOG_ERROR_UNKNOWN);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     private void success() {

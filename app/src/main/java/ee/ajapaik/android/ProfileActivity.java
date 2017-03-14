@@ -10,7 +10,7 @@ import ee.ajapaik.android.util.WebActivity;
 
 public class ProfileActivity extends WebActivity {
 
-    private static String LAST_ACTIVITY = "lastActivity";
+    public static String LAST_ACTIVITY = "lastActivity";
 
     public static void start(Context context) {
         start(context, null);

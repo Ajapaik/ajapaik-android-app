@@ -42,6 +42,7 @@ import java.util.Arrays;
 
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static ee.ajapaik.android.ProfileActivity.LAST_ACTIVITY;
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 import static ee.ajapaik.android.util.Authorization.Type.GOOGLE;
 
@@ -131,9 +132,12 @@ public class WebActivity extends ActionBarActivity implements DialogInterface, G
         if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
         m_settings.setSession(session);
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
+        String lastActivity = getIntent().getStringExtra(LAST_ACTIVITY);
         finish();
-        ProfileActivity.start(WebActivity.this, "login");
-        this.overridePendingTransition(0, 0);
+        if (!"upload".equals(lastActivity)) {
+            ProfileActivity.start(WebActivity.this, "login");
+            this.overridePendingTransition(0, 0);
+        }
     }
 
     public void signInWithGoogle() {
