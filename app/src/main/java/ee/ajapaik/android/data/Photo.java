@@ -3,17 +3,15 @@ package ee.ajapaik.android.data;
 import android.content.Context;
 import android.location.Location;
 import android.net.Uri;
-
 import com.google.gson.JsonObject;
-
-import java.util.Date;
-import java.util.Hashtable;
-import java.util.Map;
-
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.Size;
 import ee.ajapaik.android.util.WebAction;
+
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class Photo extends Model {
     private static final String TAG = "Photo";
@@ -191,7 +189,7 @@ public class Photo extends Model {
     }
 
     public boolean isLandscape() {
-        return (m_width > m_height) ? true : false;
+        return m_width > m_height;
     }
 
     @Override
