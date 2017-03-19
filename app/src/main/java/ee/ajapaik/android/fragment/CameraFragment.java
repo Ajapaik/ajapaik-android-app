@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.*;
 import android.hardware.camera2.*;
@@ -80,15 +81,18 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
             int cameraPreviewWidth = mTextureView.getmRatioWidth();
             getImageLayout().setAspectRatioHeight((float) cameraPreviewHeight / (float) cameraPreviewWidth);
             if (m_photo.isLandscape()) {
-                rotateAndFitPhotoPreview(cameraPreviewHeight, cameraPreviewWidth);
+                fitPhotoPreview(cameraPreviewHeight, cameraPreviewWidth, height);
             }
         }
 
-        private void rotateAndFitPhotoPreview(int cameraPreviewHeight, int cameraPreviewWidth) {
-            int margin = Math.abs(cameraPreviewHeight - cameraPreviewWidth) / 2;
-            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(cameraPreviewHeight, cameraPreviewWidth);
-            layoutParams.setMargins(-1 * margin, margin, 0, 0);
+        private void fitPhotoPreview(int cameraPreviewHeight, int cameraPreviewWidth, int height) {
+            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(calculatePreviewWidth(cameraPreviewHeight, cameraPreviewWidth, height), height);
             getImageView().setLayoutParams(layoutParams);
+        }
+
+        private int calculatePreviewWidth(int cameraPreviewHeight, int cameraPreviewWidth, int height) {
+            int percentageOfScalingNeeded = 100 * height / cameraPreviewHeight;
+            return cameraPreviewWidth * percentageOfScalingNeeded / 100;
         }
 
         @Override
@@ -761,9 +765,12 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         getImageView().setScale(m_scale);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setAlpha(0.5F);
-        if (m_photo.isLandscape()) {
-            getImageView().setRotation(90);
-        }
+        getActivity().setRequestedOrientation(
+                m_photo.isLandscape()
+                        ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+                        : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        );
+
         getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
@@ -905,7 +912,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
 
         upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
-        if (upload.save(data, m_photo.isLandscape())) {
+        if (upload.save(data)) {
             settings.setUpload(upload);
             activity.showUploadPreview(upload);
             if (progressDialog.isShowing()) {

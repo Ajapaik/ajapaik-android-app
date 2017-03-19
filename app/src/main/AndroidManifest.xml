@@ -55,7 +55,6 @@
         <activity
             android:name="ee.ajapaik.android.CameraActivity"
             android:theme="@style/AppThemeFullscreen"
-            android:screenOrientation="portrait"
             android:label="@string/camera_title">
         </activity>
         <activity

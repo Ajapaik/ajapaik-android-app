@@ -2,6 +2,7 @@ package ee.ajapaik.android.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -81,6 +82,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
         getOldImageView().setFlipped(m_upload.isFlipped());
         getOldImageView().setImageURI(m_upload.getPhoto().getThumbnail(THUMBNAIL_SIZE));
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {

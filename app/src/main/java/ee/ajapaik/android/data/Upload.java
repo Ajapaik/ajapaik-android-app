@@ -1,8 +1,6 @@
 package ee.ajapaik.android.data;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Environment;
@@ -13,7 +11,6 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
 import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.util.Bitmaps;
 import ee.ajapaik.android.util.Dates;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
@@ -175,7 +172,7 @@ public class Upload extends Model {
         return Uri.fromFile(new File(m_path));
     }
 
-    public boolean save(byte[] data, boolean isLandscape) {
+    public boolean save(byte[] data) {
         FileOutputStream stream = null;
         File file = new File(m_path);
 
@@ -186,17 +183,7 @@ public class Upload extends Model {
         try {
             stream = new FileOutputStream(m_path);
             stream.write(data);
-
             Log.d(TAG, "Image written to " + m_path);
-
-            if(isLandscape) {
-                Bitmap bitmap = Bitmaps.rotate(BitmapFactory.decodeFile(m_path), 270.0F);
-
-                stream = new FileOutputStream(m_path);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 90, stream);
-                bitmap.recycle();
-            }
-
             return true;
         }
         catch(Exception e) {
@@ -212,7 +199,6 @@ public class Upload extends Model {
                 }
             }
         }
-
         return false;
     }
 

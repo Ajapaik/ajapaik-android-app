@@ -2,7 +2,6 @@ package ee.ajapaik.android;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
@@ -94,7 +93,6 @@ public class CameraActivity extends WebActivity {
 
                 fragment.setUpload(upload);
 
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, TAG_FRAGMENT).commit();
             }
         });
