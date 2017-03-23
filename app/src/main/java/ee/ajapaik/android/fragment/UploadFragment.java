@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +26,8 @@ import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
+
+import java.io.IOException;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String KEY_UPLOAD = "upload";
@@ -122,7 +127,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private Bitmap scaleRephoto() {
-        Bitmap unscaledCameraImage = BitmapFactory.decodeFile(m_upload.getPath());
+        Bitmap unscaledCameraImage = loadAndRotateRephotoPreview(m_upload.getPath());
         float unscaledImageWidth = unscaledCameraImage.getWidth();
         float unscaledImageHeight = unscaledCameraImage.getHeight();
 
@@ -148,6 +153,61 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 (int) (heightDifference / 2),
                 (int) (unscaledImageWidth - widthDifference),
                 (int) (unscaledImageHeight - heightDifference));
+    }
+
+    /**
+     * This is needed as some devices (e.g. Samsung Galaxy S5) store rotation data in meta info and actual image is not rotated
+     *
+     * @return Matrix with proper rotation
+     * @param path to bitmap needing rotation
+     */
+    private Bitmap loadAndRotateRephotoPreview(String path) {
+        Matrix matrix = new Matrix();
+        try {
+            ExifInterface exif = new ExifInterface(path);
+            int rotation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+
+            switch (rotation) {
+                case ExifInterface.ORIENTATION_FLIP_HORIZONTAL:
+                    matrix.setScale(-1, 1);
+                    break;
+
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    matrix.setRotate(180);
+                    break;
+
+                case ExifInterface.ORIENTATION_FLIP_VERTICAL:
+                    matrix.setRotate(180);
+                    matrix.postScale(-1, 1);
+                    break;
+
+                case ExifInterface.ORIENTATION_TRANSPOSE:
+                    matrix.setRotate(90);
+                    matrix.postScale(-1, 1);
+                    break;
+
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    matrix.setRotate(90);
+                    break;
+
+                case ExifInterface.ORIENTATION_TRANSVERSE:
+                    matrix.setRotate(-90);
+                    matrix.postScale(-1, 1);
+                    break;
+
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    matrix.setRotate(-90);
+                    break;
+
+                case ExifInterface.ORIENTATION_NORMAL:
+                default:
+                    break;
+            }
+        } catch (IOException e) {
+            Log.e("Rephoto preview", "Failed to set rotation for rephoto preview", e);
+        }
+        Bitmap bitmap = BitmapFactory.decodeFile(m_upload.getPath());
+        return Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
     private boolean needsHeightScaling(float unscaledImageWidth, float unscaledImageHeight, Photo oldPhoto) {
