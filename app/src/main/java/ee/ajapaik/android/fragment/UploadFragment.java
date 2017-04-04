@@ -149,10 +149,10 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         float widthDifference = unscaledImageWidth - scaledImageWidth;
         return Bitmap.createBitmap(
                 unscaledCameraImage,
-                (int) (widthDifference / 2),
-                (int) (heightDifference / 2),
-                (int) (unscaledImageWidth - widthDifference),
-                (int) (unscaledImageHeight - heightDifference));
+                (int) (Math.max(widthDifference / 2, 0)),
+                (int) (Math.max(heightDifference / 2, 0)),
+                (int) (Math.min(unscaledImageWidth, unscaledImageWidth - widthDifference)),
+                (int) (Math.min(unscaledImageHeight, unscaledImageHeight - heightDifference)));
     }
 
     /**
