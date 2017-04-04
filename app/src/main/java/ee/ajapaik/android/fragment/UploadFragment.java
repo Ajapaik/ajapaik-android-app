@@ -151,8 +151,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 unscaledCameraImage,
                 (int) (Math.max(widthDifference / 2, 0)),
                 (int) (Math.max(heightDifference / 2, 0)),
-                (int) (Math.min(unscaledImageWidth, unscaledImageWidth - widthDifference)),
-                (int) (Math.min(unscaledImageHeight, unscaledImageHeight - heightDifference)));
+                (int) (Math.min(unscaledImageWidth, scaledImageWidth)),
+                (int) (Math.min(unscaledImageHeight, scaledImageHeight)));
     }
 
     /**
