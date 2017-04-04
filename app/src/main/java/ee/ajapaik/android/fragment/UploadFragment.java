@@ -86,6 +86,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         }
 
         getOldImageView().setFlipped(m_upload.isFlipped());
+        if (m_upload.getScale() > 1.0f) getOldImageView().setScale(m_upload.getScale());
         getOldImageView().setImageURI(m_upload.getPhoto().getThumbnail(THUMBNAIL_SIZE));
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
