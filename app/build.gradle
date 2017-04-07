@@ -10,10 +10,6 @@ android {
         targetSdkVersion 25
         versionCode 7
         versionName "1.0"
-        ndk {
-            moduleName "JniBitmapOperationsLibrary"
-            ldLibs "log",  "jnigraphics"
-        }
     }
     buildTypes {
         release {
