@@ -1,4 +1,3 @@
-<!--Default language is Estonian-->
 <resources>
 
     <!-- Global -->
@@ -8,13 +7,13 @@
     <string name="unit_m">m</string>
 
     <!-- Menu -->
-    <string name="action_albums">Albumid</string>
+    <string name="action_albums">Albums</string>
     <string name="action_flip">Flip</string>
     <string name="action_login">Login</string>
     <string name="action_logout">Logout</string>
-    <string name="action_profile">Profiil</string>
-    <string name="action_refresh">Värskenda</string>
-    <string name="action_settings">Seaded</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
 
     <!-- Nearest -->
     <string name="nearest_title">Photos nearby</string>
