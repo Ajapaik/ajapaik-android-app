@@ -10,10 +10,12 @@ import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.data.Photo;
@@ -85,13 +87,17 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             m_upload = getUpload();
         }
 
+        final Bitmap scaledRephoto = scaleRephoto();
         getOldImageView().setFlipped(m_upload.isFlipped());
-        if (m_upload.getScale() > 1.0f) getOldImageView().setScale(m_upload.getScale());
         getOldImageView().setImageURI(m_upload.getPhoto().getThumbnail(THUMBNAIL_SIZE));
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
+                if (m_upload.getScale() > 1.0f) {
+                    scaleOldPhoto(scaledRephoto);
+                    getOldImageView().setScale(m_upload.getScale());
+                }
                 getProgressBar().setVisibility(View.GONE);
                 getMainLayout().setVisibility(View.VISIBLE);
             }
@@ -107,7 +113,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         });
 
-        getNewImageView().setImageBitmap(scaleRephoto());
+        getNewImageView().setImageBitmap(scaledRephoto);
 
         getDeclineButton().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +131,20 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 uploadPhoto();
             }
         });
+    }
+
+    private void scaleOldPhoto(Bitmap scaledRephoto) {
+        int scaledImageWidth = (int) (m_upload.getPhoto().getHeight() / getOldImageAspectRatio(scaledRephoto));
+        double scale = (double) getOldImageView().getHeight() / m_upload.getPhoto().getHeight();
+        int scaledWidth = (int) (scaledImageWidth * scale);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(scaledWidth, getOldImageView().getHeight());
+        params.gravity = Gravity.CENTER;
+        getOldImageView().setLayoutParams(params);
+        getNewImageView().setLayoutParams(params);
+    }
+
+    private double getOldImageAspectRatio(Bitmap scaledRephoto) {
+        return (double) scaledRephoto.getHeight() / scaledRephoto.getWidth();
     }
 
     private Bitmap scaleRephoto() {
