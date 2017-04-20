@@ -137,7 +137,7 @@ public class NearestActivity extends AlbumActivity {
     @Override
     public void onDialogFragmentCancelled(DialogFragment fragment, int requestCode) {
         if(requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
-            return;
+            AlbumsActivity.start(this);
         }
 
         super.onDialogFragmentCancelled(fragment, requestCode);
