@@ -23,7 +23,7 @@ public class NearestActivity extends AlbumActivity {
     private static final int DIALOG_ERROR_LOCATION_DISABLED = 1;
     private static final int ACCESS_FINE_LOCATION_PERMISSION = 6000;
 
-    private static final int MIN_DISTANCE_IN_METERS = 1;
+    private static final int MIN_DISTANCE_IN_METERS = 100;
 
     private final LocationService.Connection m_connection = new LocationService.Connection() {
         public void onLocationChanged(Location newLocation) {
