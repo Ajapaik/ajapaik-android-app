@@ -78,13 +78,14 @@ public class WebService extends Service {
     }
 
     private void runOperation(final Task task, final WebOperation operation) {
-        ExecutorService queue = (operation instanceof WebImage) ? m_imageQueue : m_actionQueue;
+        final boolean isImageRequest = operation instanceof WebImage;
+        ExecutorService queue = isImageRequest ? m_imageQueue : m_actionQueue;
 
         queue.execute(new Runnable() {
             @Override
             public void run() {
                 boolean isSecure = operation.isSecure();
-                runSilentLogin();
+                if (!isImageRequest) runSilentLogin();
                 operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null);
 
                 if(operation.shouldRetry()) {
