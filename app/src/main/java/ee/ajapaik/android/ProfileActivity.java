@@ -3,6 +3,10 @@ package ee.ajapaik.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import ee.ajapaik.android.fragment.ProfileFragment;
 import ee.ajapaik.android.test.R;
@@ -11,6 +15,11 @@ import ee.ajapaik.android.util.WebActivity;
 public class ProfileActivity extends WebActivity {
 
     public static String LAST_ACTIVITY = "lastActivity";
+
+    private DrawerLayout mDrawer;
+    private Toolbar toolbar;
+    private NavigationView nvDrawer;
+    private ActionBarDrawerToggle drawerToggle;
 
     public static void start(Context context) {
         start(context, null);
@@ -29,7 +38,9 @@ public class ProfileActivity extends WebActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_profile);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new ProfileFragment()).commit();

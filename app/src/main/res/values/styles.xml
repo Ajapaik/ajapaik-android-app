@@ -1,11 +1,17 @@
 <resources>
 
     <!-- Activities -->
-    <style name="AppTheme" parent="Theme.AppCompat" />
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/albums_background</item>
+        <item name="colorPrimaryDark">@color/albums_background</item>
+        <item name="colorAccent">@color/albums_background</item>
+    </style>
 
-    <style name="AppThemeFullscreen" parent="Theme.AppCompat">
-        <item name="actionBarStyle">@style/AppThemeFullscreen.ActionBar</item>
+    <style name="AppThemeFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/albums_background</item>
+        <item name="colorPrimaryDark">@color/albums_background</item>
+        <item name="colorAccent">@color/albums_background</item>
     </style>
 
     <style name="AppThemeFullscreen.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">

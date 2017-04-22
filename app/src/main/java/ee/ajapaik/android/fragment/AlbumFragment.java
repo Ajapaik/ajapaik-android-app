@@ -3,13 +3,13 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.ProfileActivity;
@@ -130,8 +130,8 @@ public class AlbumFragment extends WebFragment {
 
             m_album = album;
 
-            if(m_album != null && m_album.getTitle() != null) {
-                getActionBar().setTitle(m_album.getTitle());
+            if(m_album != null) {
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(m_album.getTitle() != null ? m_album.getTitle() : getString(R.string.nearest_title));
             }
 
             if(state == null) {

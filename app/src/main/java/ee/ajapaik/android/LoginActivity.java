@@ -16,7 +16,6 @@ public class LoginActivity extends WebActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new LoginFragment()).commit();
