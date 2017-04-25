@@ -9,7 +9,6 @@ import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
-import android.view.Menu;
 import ee.ajapaik.android.fragment.AlbumFragment;
 import ee.ajapaik.android.fragment.NearestFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
@@ -98,13 +97,6 @@ public class NearestActivity extends AlbumActivity {
     protected void onStop() {
         m_connection.disconnect(this);
         super.onStop();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_nearest, menu);
-
-        return true;
     }
 
     @Override

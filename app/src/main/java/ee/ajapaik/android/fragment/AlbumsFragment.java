@@ -4,14 +4,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.adapter.AlbumAdapter;
 import ee.ajapaik.android.data.Feed;
 import ee.ajapaik.android.data.util.Status;
@@ -53,23 +50,6 @@ public class AlbumsFragment extends WebFragment {
                 getListView().onRestoreInstanceState(m_list);
             }
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if(id == R.id.action_refresh) {
-            onRefresh(true);
-
-            return true;
-        } else if(id == R.id.action_profile) {
-            ProfileActivity.start(getActivity());
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

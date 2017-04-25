@@ -85,5 +85,7 @@
 
     <!-- Facebook -->
     <string name="facebook_app_id">1234</string>
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
 
 </resources>

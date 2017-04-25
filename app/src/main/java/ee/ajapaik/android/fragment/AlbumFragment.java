@@ -5,14 +5,11 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
-import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
@@ -80,27 +77,6 @@ public class AlbumFragment extends WebFragment {
 
             setAlbum(album, layout);
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if(id == R.id.action_refresh) {
-            onRefresh(true);
-
-            return true;
-        } else if(id == R.id.action_profile) {
-            ProfileActivity.start(getActivity());
-
-            return true;
-        } else if(id == R.id.action_albums) {
-            AlbumsActivity.start(getActivity());
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
