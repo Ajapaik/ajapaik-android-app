@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -50,6 +51,15 @@ public class AlbumsFragment extends WebFragment {
                 getListView().onRestoreInstanceState(m_list);
             }
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.action_refresh) {
+            onRefresh(true);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

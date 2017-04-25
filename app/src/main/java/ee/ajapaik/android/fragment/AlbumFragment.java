@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
@@ -77,6 +78,15 @@ public class AlbumFragment extends WebFragment {
 
             setAlbum(album, layout);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.action_refresh) {
+            onRefresh(true);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

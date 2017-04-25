@@ -3,6 +3,7 @@ package ee.ajapaik.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import ee.ajapaik.android.fragment.AlbumsFragment;
 import ee.ajapaik.android.test.R;
 
@@ -24,4 +25,11 @@ public class AlbumsActivity extends NavigationDrawerActivity {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new AlbumsFragment()).commit();
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_albums, menu);
+        return true;
+    }
+
 }
