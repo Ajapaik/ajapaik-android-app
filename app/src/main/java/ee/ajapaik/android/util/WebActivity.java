@@ -13,7 +13,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,7 +46,7 @@ import static ee.ajapaik.android.ProfileActivity.LAST_ACTIVITY;
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 import static ee.ajapaik.android.util.Authorization.Type.GOOGLE;
 
-public class WebActivity extends ActionBarActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class WebActivity extends AppCompatActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "WebActivity";
 
     private static final String DIALOG_PREFIX = "dialog_";
