@@ -10,16 +10,4 @@
         android:icon="@drawable/ic_autorenew_white_36dp"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/action_albums"
-        android:title="@string/action_albums"
-        android:icon="@drawable/ic_autorenew_white_36dp"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_profile"
-        android:title="@string/action_profile"
-        android:icon="@drawable/ic_account_circle_white_36dp"
-        app:showAsAction="never" />
-
 </menu>

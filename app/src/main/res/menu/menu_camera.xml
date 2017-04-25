@@ -5,9 +5,9 @@
       tools:context=".CameraActivity">
 
     <item
-        android:id="@+id/action_flip"
-        android:title="@string/action_flip"
-        android:icon="@drawable/ic_flip_white_36dp"
-        app:showAsAction="always" />
+            android:id="@+id/action_flip"
+            android:title="@string/action_flip"
+            android:icon="@drawable/ic_flip_white_36dp"
+            app:showAsAction="always"/>
 
 </menu>
