@@ -38,13 +38,15 @@ public class NavigationDrawerActivity extends WebActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.nearest:
                         if (context instanceof NearestActivity) break;
+                        Intent intent = new Intent(context, NearestActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
                         finish();
-                        context.startActivity(new Intent(context, NearestActivity.class));
                         break;
                     case R.id.albums:
                         if (context instanceof AlbumsActivity) break;
-                        finish();
                         AlbumsActivity.start(context);
+                        finish();
                         break;
                     case R.id.profile:
                         if (context instanceof ProfileActivity) break;

@@ -16,6 +16,7 @@ public class AlbumActivity extends NavigationDrawerActivity {
 
     public static Intent getStartIntent(Context context, String albumId, String title) {
         Intent intent = new Intent(context, AlbumActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
         intent.putExtra(EXTRA_ALBUM_ID, albumId);
         intent.putExtra(EXTRA_TITLE, title);

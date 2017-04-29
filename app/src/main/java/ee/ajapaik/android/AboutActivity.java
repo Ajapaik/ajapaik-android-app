@@ -10,10 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 import ee.ajapaik.android.test.R;
 
+import static android.content.Intent.FLAG_ACTIVITY_NO_HISTORY;
+
 public class AboutActivity extends NavigationDrawerActivity implements View.OnClickListener {
 
     public static void start(Context context) {
         Intent intent = new Intent(context, AboutActivity.class);
+        intent.setFlags(FLAG_ACTIVITY_NO_HISTORY);
         context.startActivity(intent);
     }
 
