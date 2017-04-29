@@ -3,9 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -52,25 +50,6 @@ public class AlbumsFragment extends WebFragment {
                 getListView().onRestoreInstanceState(m_list);
             }
         }
-
-        getSwipeRefreshLayout().setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        refresh(true);
-                    }
-                }
-        );
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_refresh) {
-            getSwipeRefreshLayout().setRefreshing(true);
-            refresh(true);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -128,7 +107,6 @@ public class AlbumsFragment extends WebFragment {
                 } else if(m_feed == null || animated) {
                     // TODO: Show error alert
                 }
-                getSwipeRefreshLayout().setRefreshing(false);
             }
         });
     }
@@ -143,9 +121,5 @@ public class AlbumsFragment extends WebFragment {
 
     private ProgressBar getProgressBar() {
         return (ProgressBar)getView().findViewById(R.id.progress_bar);
-    }
-
-    private SwipeRefreshLayout getSwipeRefreshLayout() {
-        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }
