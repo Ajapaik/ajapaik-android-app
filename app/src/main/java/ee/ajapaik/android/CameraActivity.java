@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
@@ -89,7 +90,9 @@ public class CameraActivity extends WebActivity {
 
                 fragment.setUpload(upload);
 
-                getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, TAG_FRAGMENT).commit();
+                FragmentManager supportFragmentManager = getSupportFragmentManager();
+                supportFragmentManager.beginTransaction().replace(R.id.container, fragment, TAG_FRAGMENT).commit();
+                supportFragmentManager.executePendingTransactions();
             }
         });
     }
