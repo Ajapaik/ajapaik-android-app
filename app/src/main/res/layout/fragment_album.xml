@@ -5,33 +5,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <ee.ajapaik.android.widget.StaggeredGridView
-        android:id="@+id/grid"
-        style="@style/AlbumGridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:rowHeight="140dp"
-        app:cellSpacing="4dp"
-        app:rowHeightMaxDeviation="20%">
-    </ee.ajapaik.android.widget.StaggeredGridView>
+    <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ee.ajapaik.android.widget.StaggeredGridView
+                android:id="@+id/grid"
+                style="@style/AlbumGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:rowHeight="140dp"
+                app:cellSpacing="4dp"
+                app:rowHeightMaxDeviation="20%">
+        </ee.ajapaik.android.widget.StaggeredGridView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <TextView
-        android:id="@+id/empty"
-        style="@style/AlbumPlaceholderTitleText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:text="" />
+            android:id="@+id/empty"
+            style="@style/AlbumPlaceholderTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text=""/>
 
     <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone" />
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
 
 </RelativeLayout>

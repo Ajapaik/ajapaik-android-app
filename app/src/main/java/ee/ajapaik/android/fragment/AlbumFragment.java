@@ -3,6 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -31,7 +32,7 @@ public class AlbumFragment extends WebFragment {
 
     public void invalidate(boolean force) {
         if(m_album == null || force) {
-            onRefresh(false);
+            refresh(false);
         }
     }
 
@@ -78,12 +79,21 @@ public class AlbumFragment extends WebFragment {
 
             setAlbum(album, layout);
         }
+
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        refresh(true);
+                    }
+                }
+        );
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_refresh) {
-            onRefresh(true);
+            refresh(true);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -99,7 +109,7 @@ public class AlbumFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
-        onRefresh(false);
+        refresh(false);
     }
 
     public Album getAlbum() {
@@ -143,7 +153,7 @@ public class AlbumFragment extends WebFragment {
         }
     }
 
-    protected void onRefresh(final boolean animated) {
+    protected void refresh(final boolean animated) {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
 
@@ -164,6 +174,7 @@ public class AlbumFragment extends WebFragment {
                     } else if(m_album == null || animated) {
                         // TODO: Show error alert
                     }
+                    getSwipeRefreshLayout().setRefreshing(false);
                 }
             });
         }
@@ -191,5 +202,9 @@ public class AlbumFragment extends WebFragment {
 
     private ProgressBar getProgressBar() {
         return (ProgressBar)getView().findViewById(R.id.progress_bar);
+    }
+
+    private SwipeRefreshLayout getSwipeRefreshLayout() {
+        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }
