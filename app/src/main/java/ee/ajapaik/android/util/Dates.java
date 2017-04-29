@@ -8,7 +8,7 @@ import java.util.TimeZone;
 public class Dates {
     private static final SimpleDateFormat ISO_8601 = new UTCDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ROOT);
     private static final SimpleDateFormat DDMMYYYY = new UTCDateFormat("dd-MM-yyyy", Locale.ROOT);
-    private static final SimpleDateFormat DDMM_KKMMSS = new SimpleDateFormat("ddMM_kkmmss");
+    private static final SimpleDateFormat YYYYMMDD_KKMMSS = new SimpleDateFormat("yyyy-MM-dd_kk-mm-ss");
 
     public static Date parse(String str) {
         if(str != null && str.endsWith("Z")) {
@@ -24,7 +24,7 @@ public class Dates {
     }
 
     public static String toFilename(Date date) {
-        return (date != null) ? DDMM_KKMMSS.format(date) : null;
+        return (date != null) ? YYYYMMDD_KKMMSS.format(date) : null;
     }
 
     public static String toString(Date date) {

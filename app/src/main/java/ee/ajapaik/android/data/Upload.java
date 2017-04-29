@@ -125,7 +125,7 @@ public class Upload extends Model {
             File folder = Upload.getFolder();
 
             folder.mkdirs();
-            path = folder.getAbsolutePath() + File.separator + Dates.toFilename(new Date()) + ".jpg";
+            path = folder.getAbsolutePath() + File.separator + "Ajapaik-rephoto-" + Dates.toFilename(new Date()) + ".jpg";
         }
 
         m_date = new Date();
