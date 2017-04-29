@@ -28,7 +28,7 @@ public class Upload extends Model {
 
     private static final String API_PATH = "/photo/upload/";
 
-    private static final String FOLDER_NAME = "ajapaik";
+    private static final String FOLDER_NAME = "Ajapaik-rephotos";
 
     private static final String KEY_PATH = "path";
     private static final String KEY_LATITUDE = "latitude";
