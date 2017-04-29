@@ -37,17 +37,21 @@ public class NavigationDrawerActivity extends WebActivity {
                 Context context = NavigationDrawerActivity.this;
                 switch (menuItem.getItemId()) {
                     case R.id.nearest:
+                        if (context instanceof NearestActivity) break;
                         finish();
                         context.startActivity(new Intent(context, NearestActivity.class));
                         break;
                     case R.id.albums:
+                        if (context instanceof AlbumsActivity) break;
                         finish();
                         AlbumsActivity.start(context);
                         break;
                     case R.id.profile:
+                        if (context instanceof ProfileActivity) break;
                         ProfileActivity.start(context);
                         break;
                     case R.id.about:
+                        if (context instanceof AboutActivity) break;
                         AboutActivity.start(context);
                         break;
                 }
