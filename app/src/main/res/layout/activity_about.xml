@@ -69,6 +69,8 @@
                         style="@style/AboutElementKey"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/privacy_policy"
+                        android:onClick="onClick"
+                        android:clickable="true"
                         android:id="@+id/privacy_policy"/>
             </LinearLayout>
         </FrameLayout>
