@@ -3,6 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -51,12 +52,21 @@ public class AlbumsFragment extends WebFragment {
                 getListView().onRestoreInstanceState(m_list);
             }
         }
+
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        refresh(true);
+                    }
+                }
+        );
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_refresh) {
-            onRefresh(true);
+            refresh(true);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -75,7 +85,7 @@ public class AlbumsFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
-        onRefresh(false);
+        refresh(false);
     }
 
     public Feed getFeed() {
@@ -102,7 +112,7 @@ public class AlbumsFragment extends WebFragment {
         }
     }
 
-    protected void onRefresh(final boolean animated) {
+    protected void refresh(final boolean animated) {
         Context context = getActivity();
 
         if(m_feed == null) {
@@ -121,6 +131,7 @@ public class AlbumsFragment extends WebFragment {
                 } else if(m_feed == null || animated) {
                     // TODO: Show error alert
                 }
+                getSwipeRefreshLayout().setRefreshing(false);
             }
         });
     }
@@ -135,5 +146,9 @@ public class AlbumsFragment extends WebFragment {
 
     private ProgressBar getProgressBar() {
         return (ProgressBar)getView().findViewById(R.id.progress_bar);
+    }
+
+    private SwipeRefreshLayout getSwipeRefreshLayout() {
+        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }
