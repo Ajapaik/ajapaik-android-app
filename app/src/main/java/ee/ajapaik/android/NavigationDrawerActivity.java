@@ -1,5 +1,6 @@
 package ee.ajapaik.android;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -33,17 +34,18 @@ public class NavigationDrawerActivity extends WebActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+                Context context = NavigationDrawerActivity.this;
                 switch (menuItem.getItemId()) {
                     case R.id.nearest:
                         finish();
-                        getApplicationContext().startActivity(new Intent(getApplicationContext(), NearestActivity.class));
+                        context.startActivity(new Intent(context, NearestActivity.class));
                         break;
                     case R.id.albums:
                         finish();
-                        AlbumsActivity.start(getApplicationContext());
+                        AlbumsActivity.start(context);
                         break;
                     case R.id.profile:
-                        ProfileActivity.start(getApplicationContext());
+                        ProfileActivity.start(context);
                         break;
                 }
                 mDrawer.closeDrawer(GravityCompat.START, true);
