@@ -85,6 +85,13 @@
 
     <!-- Facebook -->
     <string name="facebook_app_id">1234</string>
+
+    <!-- About -->
+    <string name="about_title">About</string>
+    <string name="version">Version</string>
+    <string name="contact">Contact</string>
+    <string name="privacy_policy">Privacy</string>
+
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
 

@@ -84,6 +84,13 @@
 
     <!-- Facebook -->
     <string name="facebook_app_id">1234</string>
+
+    <!-- About -->
+    <string name="about_title">Abi</string>
+    <string name="version">Versioon</string>
+    <string name="contact">Kontakt</string>
+    <string name="privacy_policy">Privaatsus</string>
+
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
 
