@@ -88,10 +88,6 @@ public class AlbumsFragment extends WebFragment {
         refresh(false);
     }
 
-    public Feed getFeed() {
-        return m_feed;
-    }
-
     public void setFeed(Feed feed) {
         if(!Objects.match(m_feed, feed)) {
             ListView listView = getListView();
