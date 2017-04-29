@@ -33,7 +33,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/AboutElementKey"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/version"
                         android:id="@+id/version"/>
                 <TextView
@@ -49,7 +48,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/AboutElementKey"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/contact"
                         android:id="@+id/contact"/>
                 <TextView
@@ -66,7 +64,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/AboutElementKey"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/privacy_policy"
                         android:onClick="onClick"
                         android:clickable="true"
