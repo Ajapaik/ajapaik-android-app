@@ -66,6 +66,7 @@ public class AlbumsFragment extends WebFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_refresh) {
+            getSwipeRefreshLayout().setRefreshing(true);
             refresh(true);
             return true;
         }
