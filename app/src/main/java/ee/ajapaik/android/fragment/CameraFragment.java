@@ -22,13 +22,11 @@ import android.util.SparseIntArray;
 import android.view.*;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 import ee.ajapaik.android.CameraActivity;
-import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
-import ee.ajapaik.android.fragment.util.WebFragment;
+import ee.ajapaik.android.fragment.util.ImageFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.widget.FixedAspectRatioLayout;
@@ -46,7 +44,7 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
-public class CameraFragment extends WebFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
+public class CameraFragment extends ImageFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
     /**
      * Conversion from screen rotation to JPEG orientation.
      */
@@ -694,46 +692,11 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
 
     private static final int REQUEST_UPLOAD = 5000;
 
-    private static final String KEY_FLIPPED_MODE = "flipped_mode";
     private static final String KEY_OPACITY = "opacity";
-    private static final String KEY_PHOTO = "photo";
-    private static final String KEY_SCALE = "scale";
 
     private static final float DEFAULT_OPACITY = 0.5F;
-    private static final float DEFAULT_SCALE = 1.0F;
-
     private static final int THUMBNAIL_SIZE = 800;
-
-    private boolean m_flippedMode = false;
-    private float m_scale = DEFAULT_SCALE;
     private float m_opacity = DEFAULT_OPACITY;
-    private Photo m_photo;
-
-    public Photo getPhoto() {
-        Bundle arguments = getArguments();
-
-        if (arguments != null) {
-            return arguments.getParcelable(KEY_PHOTO);
-        }
-
-        return null;
-    }
-
-    public void setPhoto(Photo photo) {
-        Bundle arguments = getArguments();
-
-        if (arguments == null) {
-            arguments = new Bundle();
-        }
-
-        if (photo != null) {
-            arguments.putParcelable(KEY_PHOTO, photo);
-        } else {
-            arguments.remove(KEY_PHOTO);
-        }
-
-        setArguments(arguments);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -771,23 +734,7 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
                         : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         );
 
-        getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
-            @Override
-            public void onImageLoaded() {
-                getProgressBar().setVisibility(View.GONE);
-                getMainLayout().setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onImageUnloaded() {
-                getProgressBar().setVisibility(View.VISIBLE);
-                getMainLayout().setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onImageFailed() {
-            }
-        });
+        getImageView().setOnLoadListener(imageLoadListener());
         getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new View.OnTouchListener[]{
                 new OnScaleTouchListener(getActivity()) {
                     @Override
@@ -887,20 +834,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         savedInstanceState.putFloat(KEY_SCALE, m_scale);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_flip) {
-            m_flippedMode = !m_flippedMode;
-            getImageView().setFlipped(m_flippedMode);
-            item.setIcon(m_flippedMode ? R.drawable.ic_flip_white_36dp_selected : R.drawable.ic_flip_white_36dp);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     private void onPictureTaken(byte[] data) {
         CameraActivity activity = (CameraActivity) getActivity();
         Settings settings = getSettings();
@@ -935,20 +868,8 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         }
     }
 
-    private View getMainLayout() {
-        return getView().findViewById(R.id.layout_main);
-    }
-
     private FixedAspectRatioLayout getImageLayout() {
         return (FixedAspectRatioLayout) getView().findViewById(R.id.layout_image);
-    }
-
-    private WebImageView getImageView() {
-        return (WebImageView) getView().findViewById(R.id.image);
-    }
-
-    private ProgressBar getProgressBar() {
-        return (ProgressBar) getView().findViewById(R.id.progress_bar);
     }
 
     private Button getCameraButton() {

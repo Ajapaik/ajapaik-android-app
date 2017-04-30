@@ -10,16 +10,18 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.fragment.util.WebFragment;
+import ee.ajapaik.android.fragment.util.ImageFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.*;
 import ee.ajapaik.android.widget.WebImageView;
@@ -36,31 +38,23 @@ import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
-public class PhotoFragment extends WebFragment {
+public class PhotoFragment extends ImageFragment {
     private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
     private static final int CAMERA_AND_STORAGE_PERMISSION = 6002;
 
-    private static final float DEFAULT_SCALE = 1.0F;
-
     private static final String KEY_ALBUM = "album";
     private static final String KEY_AZIMUTH = "azimuth";
-    private static final String KEY_FLIPPED_MODE = "flipped_mode";
     private static final String KEY_IMMERSIVE_MODE = "immersive_mode";
     private static final String KEY_LOCATION = "location";
-    private static final String KEY_PHOTO = "photo";
     private static final String KEY_OFFSET = "offset";
-    private static final String KEY_SCALE = "scale";
 
     private int m_azimuth;
     private boolean m_immersiveMode;
     private Location m_location;
     private Album m_album;
-    private Photo m_photo;
-    private float m_scale = DEFAULT_SCALE;
     private PointF m_offset = null;
-    private boolean m_flippedMode;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -88,41 +82,9 @@ public class PhotoFragment extends WebFragment {
         setArguments(arguments);
     }
 
-    public Photo getPhoto() {
-        Bundle arguments = getArguments();
-
-        if(arguments != null) {
-            return arguments.getParcelable(KEY_PHOTO);
-        }
-
-        return null;
-    }
-
-    public void setPhoto(Photo photo) {
-        Bundle arguments = getArguments();
-
-        if(arguments == null) {
-            arguments = new Bundle();
-        }
-
-        if(photo != null) {
-            arguments.putParcelable(KEY_PHOTO, photo);
-        } else {
-            arguments.remove(KEY_PHOTO);
-        }
-
-        setArguments(arguments);
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_photo, container, false);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
     }
 
     @Override
@@ -198,23 +160,7 @@ public class PhotoFragment extends WebFragment {
         getImageView().setScale(m_scale);
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-        getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
-            @Override
-            public void onImageLoaded() {
-                getProgressBar().setVisibility(View.GONE);
-                getMainLayout().setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onImageUnloaded() {
-                getProgressBar().setVisibility(View.VISIBLE);
-                getMainLayout().setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onImageFailed() {
-            }
-        });
+        getImageView().setOnLoadListener(imageLoadListener());
 
         getSubtitleView().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -326,7 +272,7 @@ public class PhotoFragment extends WebFragment {
         }
     }
 
-    protected void setImmersiveMode(boolean flag) {
+    private void setImmersiveMode(boolean flag) {
         m_immersiveMode = flag;
 
         if(m_immersiveMode) {
@@ -425,24 +371,6 @@ public class PhotoFragment extends WebFragment {
         getDistanceView().setText(Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if(id == R.id.action_flip) {
-            m_flippedMode = !m_flippedMode;
-            getImageView().setFlipped(m_flippedMode);
-            item.setIcon(m_flippedMode ? R.drawable.ic_flip_white_36dp_selected : R.drawable.ic_flip_white_36dp);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private View getMainLayout() {
-        return getView().findViewById(R.id.layout_main);
-    }
-
     private View getInfoLayout() {
         return getView().findViewById(R.id.layout_info);
     }
@@ -459,10 +387,6 @@ public class PhotoFragment extends WebFragment {
         return (Button)getView().findViewById(R.id.button_action_rephoto);
     }
 
-    private WebImageView getImageView() {
-        return (WebImageView)getView().findViewById(R.id.image);
-    }
-
     private TextView getDistanceView() {
         return (TextView)getView().findViewById(R.id.text_distance);
     }
@@ -477,9 +401,5 @@ public class PhotoFragment extends WebFragment {
 
     private Button getSubtitleView() {
         return (Button)getView().findViewById(R.id.button_subtitle);
-    }
-
-    private ProgressBar getProgressBar() {
-        return (ProgressBar)getView().findViewById(R.id.progress_bar);
     }
 }
