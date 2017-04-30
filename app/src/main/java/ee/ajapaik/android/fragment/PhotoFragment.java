@@ -432,6 +432,7 @@ public class PhotoFragment extends WebFragment {
         if(id == R.id.action_flip) {
             m_flippedMode = !m_flippedMode;
             getImageView().setFlipped(m_flippedMode);
+            item.setIcon(m_flippedMode ? R.drawable.ic_flip_white_36dp_selected : R.drawable.ic_flip_white_36dp);
             return true;
         }
 
