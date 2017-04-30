@@ -88,7 +88,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                     Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
                     getSettings().setAuthorization(authorization);
 
-                    getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
+                    getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
                         @Override
                         public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                             if (session != null) {
