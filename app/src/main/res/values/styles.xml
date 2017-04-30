@@ -26,6 +26,7 @@
     </style>
 
     <style name="AppThemeCameraScreen" parent="Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/AppThemeFullscreen.ActionBar</item>
         <item name="windowActionBarOverlay">true</item>
         <item name="colorPrimary">@color/albums_background</item>
         <item name="colorPrimaryDark">@color/albums_background</item>
