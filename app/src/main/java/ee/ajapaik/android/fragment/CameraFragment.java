@@ -894,7 +894,6 @@ public class CameraFragment extends WebFragment implements View.OnClickListener,
         if (id == R.id.action_flip) {
             m_flippedMode = !m_flippedMode;
             getImageView().setFlipped(m_flippedMode);
-
             return true;
         }
 

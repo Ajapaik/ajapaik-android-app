@@ -25,6 +25,13 @@
         <item name="colorAccent">@color/albums_background</item>
     </style>
 
+    <style name="AppThemeCameraScreen" parent="Theme.AppCompat.Light">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@color/albums_background</item>
+        <item name="colorPrimaryDark">@color/albums_background</item>
+        <item name="colorAccent">@color/albums_background</item>
+    </style>
+
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>

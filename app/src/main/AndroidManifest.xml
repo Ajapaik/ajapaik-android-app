@@ -60,7 +60,7 @@
         <activity
                 android:name="ee.ajapaik.android.CameraActivity"
                 android:label="@string/camera_title"
-                android:theme="@style/AppThemeFullscreen">
+                android:theme="@style/AppThemeCameraScreen">
         </activity>
         <activity
                 android:name="ee.ajapaik.android.ProfileActivity"

@@ -75,7 +75,6 @@ public class CameraActivity extends WebActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_camera, menu);
-
         return true;
     }
 
