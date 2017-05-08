@@ -598,6 +598,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
 
     private void takePicture() {
+        progressDialog = ProgressDialog.show(getActivity(), "Processing image", "Please wait...");
         lockFocus();
     }
 
@@ -671,7 +672,6 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button_action_camera: {
-                progressDialog = ProgressDialog.show(getActivity(), "Processing image", "Please wait...");
                 takePicture();
                 break;
             }
@@ -814,12 +814,25 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                     public void onSingleTap() {
                         getImageView().setVisibility(INVISIBLE);
                     }
+
+                    @Override
+                    public void onLongHold() {
+                        takePicture();
+                    }
                 }
         }));
         getMainLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getImageView().setVisibility(getImageView().getVisibility() == VISIBLE ? INVISIBLE : VISIBLE);
+            }
+        });
+
+        getMainLayout().setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                takePicture();
+                return true;
             }
         });
     }

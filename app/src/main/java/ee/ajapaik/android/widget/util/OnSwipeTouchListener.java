@@ -30,6 +30,7 @@ public abstract class OnSwipeTouchListener implements View.OnTouchListener {
     }
 
     public void onSingleTap() { }
+    public void onLongHold() { }
 
     private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -45,6 +46,12 @@ public abstract class OnSwipeTouchListener implements View.OnTouchListener {
             onSingleTap();
 
             return super.onSingleTapUp(e);
+        }
+
+        @Override
+        public void onLongPress(MotionEvent e) {
+            onLongHold();
+            super.onLongPress(e);
         }
     }
 }
