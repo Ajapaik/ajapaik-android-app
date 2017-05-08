@@ -2,9 +2,8 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.location.Location;
-
-import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.data.Album;
+import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebAction;
 
 public class NearestFragment extends AlbumFragment {
@@ -20,5 +19,10 @@ public class NearestFragment extends AlbumFragment {
     @Override
     protected String getPlaceholderString() {
         return getString(R.string.nearest_label_no_data);
+    }
+
+    @Override
+    protected boolean isNearestFragment() {
+        return true;
     }
 }

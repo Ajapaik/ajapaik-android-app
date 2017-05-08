@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
@@ -145,6 +147,16 @@ public class AlbumFragment extends WebFragment {
                 }));
             } else {
                 getEmptyView().setText(getPlaceholderString());
+                if (isNearestFragment()) {
+                    getNoDataButton().setVisibility(View.VISIBLE);
+                    getNoDataButton().setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            AlbumsActivity.start(getActivity());
+                            getActivity().finish();
+                        }
+                    });
+                }
                 gridView.setAdapter(null);
             }
 
@@ -154,7 +166,7 @@ public class AlbumFragment extends WebFragment {
         }
     }
 
-    protected void refresh(final boolean animated) {
+    private void refresh(final boolean animated) {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
 
@@ -185,6 +197,10 @@ public class AlbumFragment extends WebFragment {
         return getString(R.string.albums_label_no_data);
     }
 
+    protected boolean isNearestFragment() {
+        return false;
+    }
+
     protected WebAction<Album> createAction(Context context) {
         return (m_album != null) ? Album.createStateAction(context, m_album) : Album.createStateAction(context, getAlbumIdentifier());
     }
@@ -203,6 +219,10 @@ public class AlbumFragment extends WebFragment {
 
     private ProgressBar getProgressBar() {
         return (ProgressBar)getView().findViewById(R.id.progress_bar);
+    }
+
+    private Button getNoDataButton() {
+        return (Button)getView().findViewById(R.id.nearest_no_data_action);
     }
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {

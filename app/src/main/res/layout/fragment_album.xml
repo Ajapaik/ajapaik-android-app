@@ -28,10 +28,17 @@
             style="@style/AlbumPlaceholderTitleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentTop="true"
             android:gravity="center"
+            android:layout_centerVertical="true"
             android:text=""/>
+
+    <Button android:id="@+id/nearest_no_data_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:text="@string/nearest_label_no_data_button"/>
 
     <ProgressBar
             android:id="@+id/progress_bar"

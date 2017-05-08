@@ -32,6 +32,7 @@
     <string name="nearest_dialog_error_location_disabled_close">Close</string>
     <string name="nearest_dialog_error_location_disabled_open">Open Settings</string>
     <string name="nearest_label_no_data">No photos nearby</string>
+    <string name="nearest_label_no_data_button">See albums to browse all images</string>
 
     <!-- Photo -->
     <string name="photo_title">Photo Details</string>
