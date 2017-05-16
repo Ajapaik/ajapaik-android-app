@@ -816,8 +816,10 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                     }
 
                     @Override
-                    public void onLongHold() {
-                        takePicture();
+                    public void onLongHold(MotionEvent e) {
+                        if (e.getPointerCount() == 1) {
+                            takePicture();
+                        }
                     }
                 }
         }));
