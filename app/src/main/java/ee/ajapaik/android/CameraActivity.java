@@ -13,6 +13,9 @@ import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
+import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
+import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 public class CameraActivity extends WebActivity {
     private static final String EXTRA_PHOTO = "photo";
@@ -64,6 +67,57 @@ public class CameraActivity extends WebActivity {
     protected void onStart() {
         super.onStart();
         m_connection.connect(this);
+        tutorial();
+    }
+
+    private void tutorial() {
+        ShowcaseConfig config = new ShowcaseConfig();
+        config.setDelay(500); // half second between each showcase view
+
+        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
+
+        sequence.setConfig(config);
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.image))
+                .setTitleText("Hide old photo")
+                .setContentText("Tap on old photo")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .setFadeDuration(500)
+                .setShapePadding(-500)
+                .build());
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.image))
+                .setTitleText("Show old photo")
+                .setContentText("Tap on old photo")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .setShapePadding(-500)
+                .setFadeDuration(500)
+                .build());
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.image))
+                .setTitleText("Change transparency")
+                .setContentText("Swipe left or right to change old photo opacity")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .setFadeDuration(2000)
+                .setShapePadding(-350)
+                .withRectangleShape()
+                .build());
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.button_action_camera))
+                .setTitleText("Take rephoto")
+                .setContentText("Tap this icon to take rephoto. Alternatively you can hold your finger anywhere on the screen to take rephoto")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .build());
+
+        sequence.start();
     }
 
     @Override
