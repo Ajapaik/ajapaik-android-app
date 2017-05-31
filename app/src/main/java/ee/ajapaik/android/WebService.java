@@ -74,6 +74,9 @@ public class WebService extends Service {
         if(action.getStatus() == Status.NONE) {
             m_session = action.getObject();
             m_settings.setSession(m_session);
+        } else if (action.getStatus() == Status.ACCESS_DENIED) {
+            m_settings.setAuthorization(Authorization.getAnonymous(this));
+            runSilentLogin();
         }
     }
 
