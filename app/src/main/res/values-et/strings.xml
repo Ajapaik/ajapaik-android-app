@@ -95,4 +95,19 @@
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
 
+    <!-- Tutorial -->
+    <string name="tutorial_hide_title">Hide old photo</string>
+    <string name="tutorial_hide_content">Tap on old photo</string>
+    <string name="tutorial_show_title">Show old photo</string>
+    <string name="tutorial_show_content">Tap on old photo</string>
+    <string name="tutorial_opacity_title">Change transparency</string>
+    <string name="tutorial_opacity_content">Swipe left or right to change old photo opacity</string>
+    <string name="tutorial_zoom_title">Zoom</string>
+    <string name="tutorial_zoom_content">Pinch to zoom</string>
+    <string name="tutorial_flip_title">Flip</string>
+    <string name="tutorial_flip_content">Tap this icon to flip old photo</string>
+    <string name="tutorial_take_picture_title">Take rephoto</string>
+    <string name="tutorial_take_picture_content">Tap this icon to take rephoto. Alternatively you can hold your finger anywhere on the screen to take rephoto</string>
+    <string name="tutorial_dismiss">Got it</string>
+
 </resources>
