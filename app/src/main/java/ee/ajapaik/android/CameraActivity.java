@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import ee.ajapaik.android.data.Photo;
@@ -67,15 +68,14 @@ public class CameraActivity extends WebActivity {
     protected void onStart() {
         super.onStart();
         m_connection.connect(this);
-        tutorial();
     }
 
     private void tutorial() {
+        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
+        if (sequence.hasFired()) return;
+
         ShowcaseConfig config = new ShowcaseConfig();
         config.setDelay(500); // half second between each showcase view
-
-        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
-
         sequence.setConfig(config);
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
@@ -104,9 +104,31 @@ public class CameraActivity extends WebActivity {
                 .setContentText("Swipe left or right to change old photo opacity")
                 .setDismissText("Got it")
                 .setTargetTouchable(true)
-                .setFadeDuration(2000)
-                .setShapePadding(-350)
+                .setFadeDuration(500)
+                .setShapePadding(-250)
                 .withRectangleShape()
+                .setHideTimeout(2000)
+                .build());
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.image))
+                .setTitleText("Zoom")
+                .setContentText("Pinch to zoom")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .setFadeDuration(500)
+                .setShapePadding(-250)
+                .withRectangleShape()
+                .setHideTimeout(2000)
+                .build());
+
+        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
+                .setTarget(findViewById(R.id.action_flip))
+                .setTitleText("Flip")
+                .setContentText("Tap this icon to flip old photo")
+                .setDismissText("Got it")
+                .setTargetTouchable(true)
+                .setFadeDuration(500)
                 .build());
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
@@ -115,6 +137,7 @@ public class CameraActivity extends WebActivity {
                 .setContentText("Tap this icon to take rephoto. Alternatively you can hold your finger anywhere on the screen to take rephoto")
                 .setDismissText("Got it")
                 .setTargetTouchable(true)
+                .setFadeDuration(500)
                 .build());
 
         sequence.start();
@@ -129,7 +152,17 @@ public class CameraActivity extends WebActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_camera, menu);
+        waitForMenuToBeCreatedAndShowTutorial();
         return true;
+    }
+
+    private void waitForMenuToBeCreatedAndShowTutorial() {
+        Handler myHandler = new Handler();
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tutorial();            }
+        }, 100);
     }
 
 
