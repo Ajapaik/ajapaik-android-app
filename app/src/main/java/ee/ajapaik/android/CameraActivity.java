@@ -70,6 +70,19 @@ public class CameraActivity extends WebActivity {
         m_connection.connect(this);
     }
 
+    @Override
+    protected void onStop() {
+        m_connection.disconnect(this);
+        super.onStop();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_camera, menu);
+        waitForMenuToBeCreatedAndShowTutorial();
+        return true;
+    }
+
     private void tutorial() {
         MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
         if (sequence.hasFired()) return;
@@ -141,19 +154,6 @@ public class CameraActivity extends WebActivity {
                 .build());
 
         sequence.start();
-    }
-
-    @Override
-    protected void onStop() {
-        m_connection.disconnect(this);
-        super.onStop();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_camera, menu);
-        waitForMenuToBeCreatedAndShowTutorial();
-        return true;
     }
 
     private void waitForMenuToBeCreatedAndShowTutorial() {
