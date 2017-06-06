@@ -26,65 +26,33 @@ public class TutorialActivity extends WebActivity {
         sequence.setConfig(config);
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.image))
-                .setTitleText(R.string.tutorial_hide_title)
-                .setContentText(R.string.tutorial_hide_content)
+                .setTarget(findViewById(R.id.tutorial_layout_up))
+                .setContentText(R.string.tutorial_opacity_zoom)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
+                .setDismissOnTargetTouch(false)
                 .setFadeDuration(500)
-                .setShapePadding(-500)
-                .build());
-
-        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.image))
-                .setTitleText(R.string.tutorial_show_title)
-                .setContentText(R.string.tutorial_show_content)
-                .setDismissText(R.string.tutorial_dismiss)
-                .setTargetTouchable(true)
-                .setShapePadding(-500)
-                .setFadeDuration(500)
-                .build());
-
-        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.image))
-                .setTitleText(R.string.tutorial_opacity_title)
-                .setContentText(R.string.tutorial_opacity_content)
-                .setDismissText(R.string.tutorial_dismiss)
-                .setTargetTouchable(true)
-                .setFadeDuration(500)
-                .setShapePadding(-250)
                 .withRectangleShape()
-                .setHideTimeout(2000)
                 .build());
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.image))
-                .setTitleText(R.string.tutorial_zoom_title)
-                .setContentText(R.string.tutorial_zoom_content)
+                .setTarget(findViewById(R.id.tutorial_layout_up))
+                .setContentText(R.string.tutorial_hide_show_flip)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
+                .setDismissOnTargetTouch(false)
                 .setFadeDuration(500)
-                .setShapePadding(-250)
                 .withRectangleShape()
-                .setHideTimeout(2000)
                 .build());
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.action_flip))
-                .setTitleText(R.string.tutorial_flip_title)
-                .setContentText(R.string.tutorial_flip_content)
+                .setTarget(findViewById(R.id.tutorial_layout_down))
+                .setContentText(R.string.tutorial_take_picture)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
+                .setDismissOnTargetTouch(false)
                 .setFadeDuration(500)
-                .build());
-
-        sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.button_action_camera))
-                .setTitleText(R.string.tutorial_take_picture_title)
-                .setContentText(R.string.tutorial_take_picture_content)
-                .setDismissText(R.string.tutorial_dismiss)
-                .setTargetTouchable(true)
-                .setFadeDuration(500)
+                .withRectangleShape()
                 .build());
 
         sequence.start();
