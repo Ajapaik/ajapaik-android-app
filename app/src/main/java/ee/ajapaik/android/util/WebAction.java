@@ -2,22 +2,20 @@ package ee.ajapaik.android.util;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.data.util.Status;
+import ee.ajapaik.android.test.BuildConfig;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Map;
-
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.test.BuildConfig;
 
 public class WebAction<T> extends WebOperation {
     private static final String TAG = "WebAction";
@@ -94,9 +92,6 @@ public class WebAction<T> extends WebOperation {
                         }
                     } else {
                         m_status = Status.NONE;
-                    }
-
-                    if(m_status == Status.NONE) {
                         m_object = parseObject(attributes);
                     }
                 }
