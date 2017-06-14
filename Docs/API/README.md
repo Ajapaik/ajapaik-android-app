@@ -28,6 +28,8 @@ List of possible error codes:
     7 - session is invalid
     8 - user exists in the DB already
     9 - application version is not supported
+    10 - user does not exist
+    11 - wrong password for existing user
 
 # Hyperlinks
 
