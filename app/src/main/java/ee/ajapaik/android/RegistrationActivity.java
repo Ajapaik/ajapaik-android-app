@@ -8,8 +8,17 @@ import ee.ajapaik.android.test.R;
 
 public class RegistrationActivity extends NavigationDrawerActivity {
     public static void start(Context context) {
-        context.startActivity(new Intent(context, RegistrationActivity.class));
+        start(context, null);
     }
+
+    public static void start(Context context, String returnActivity) {
+        Intent intent = new Intent(context, RegistrationActivity.class);
+        if (returnActivity != null) {
+            intent.putExtra(ProfileActivity.RETURN_ACTIVITY, returnActivity);
+        }
+        context.startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

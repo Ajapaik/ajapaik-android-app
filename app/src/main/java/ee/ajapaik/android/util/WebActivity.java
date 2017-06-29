@@ -42,7 +42,7 @@ import java.util.Arrays;
 
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static ee.ajapaik.android.ProfileActivity.LAST_ACTIVITY;
+import static ee.ajapaik.android.ProfileActivity.RETURN_ACTIVITY;
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 import static ee.ajapaik.android.util.Authorization.Type.GOOGLE;
 
@@ -151,9 +151,9 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         dismissProgressDialog();
         m_settings.setSession(session);
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
-        String lastActivity = getIntent().getStringExtra(LAST_ACTIVITY);
+        String returnActivity = getIntent().getStringExtra(RETURN_ACTIVITY);
         finish();
-        if (!"upload".equals(lastActivity)) {
+        if (!"upload".equals(returnActivity)) {
             ProfileActivity.start(WebActivity.this, "login");
             this.overridePendingTransition(0, 0);
         }

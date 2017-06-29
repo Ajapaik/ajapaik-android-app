@@ -11,16 +11,16 @@ import static android.content.Intent.FLAG_ACTIVITY_NO_HISTORY;
 
 public class ProfileActivity extends NavigationDrawerActivity {
 
-    public static String LAST_ACTIVITY = "lastActivity";
+    public static String RETURN_ACTIVITY = "lastActivity";
 
     public static void start(Context context) {
         start(context, null);
     }
 
-    public static void start(Context context, String lastActivity) {
+    public static void start(Context context, String returnActivity) {
         Intent intent = new Intent(context, ProfileActivity.class);
-        if (lastActivity != null) {
-            intent.putExtra(LAST_ACTIVITY, lastActivity);
+        if (returnActivity != null) {
+            intent.putExtra(RETURN_ACTIVITY, returnActivity);
         }
         intent.setFlags(FLAG_ACTIVITY_NO_HISTORY);
         context.startActivity(intent);
@@ -48,6 +48,6 @@ public class ProfileActivity extends NavigationDrawerActivity {
     }
 
     private boolean isFromLoginActivity() {
-        return "login".equals(getIntent().getStringExtra(LAST_ACTIVITY));
+        return "login".equals(getIntent().getStringExtra(RETURN_ACTIVITY));
     }
 }

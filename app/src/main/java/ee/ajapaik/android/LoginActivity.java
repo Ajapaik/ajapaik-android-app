@@ -9,7 +9,15 @@ import ee.ajapaik.android.util.WebActivity;
 
 public class LoginActivity extends WebActivity {
     public static void start(Context context) {
-        context.startActivity(new Intent(context, LoginActivity.class));
+        start(context, null);
+    }
+
+    public static void start(Context context, String returnActivity) {
+        Intent intent = new Intent(context, LoginActivity.class);
+        if (returnActivity != null) {
+            intent.putExtra(ProfileActivity.RETURN_ACTIVITY, returnActivity);
+        }
+        context.startActivity(intent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {

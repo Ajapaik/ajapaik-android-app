@@ -24,6 +24,7 @@ import ee.ajapaik.android.util.WebAction;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+import static ee.ajapaik.android.ProfileActivity.RETURN_ACTIVITY;
 
 public class ProfileFragment extends WebFragment {
     private static final String KEY_PROFILE = "profile";
@@ -71,14 +72,16 @@ public class ProfileFragment extends WebFragment {
         getUsernameLoginButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginActivity.start(getContext());
+                String returnActivity = getActivity().getIntent().getStringExtra(RETURN_ACTIVITY);
+                LoginActivity.start(getContext(), returnActivity);
             }
         });
 
         getUsernameRegistrationButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RegistrationActivity.start(getContext());
+                String returnActivity = getActivity().getIntent().getStringExtra(RETURN_ACTIVITY);
+                RegistrationActivity.start(getContext(), returnActivity);
             }
         });
 
