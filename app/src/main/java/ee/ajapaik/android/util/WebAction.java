@@ -92,6 +92,8 @@ public class WebAction<T> extends WebOperation {
                         }
                     } else {
                         m_status = Status.NONE;
+                    }
+                    if (m_status == Status.NONE) {
                         m_object = parseObject(attributes);
                     }
                 }
