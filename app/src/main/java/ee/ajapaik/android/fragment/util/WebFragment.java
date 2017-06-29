@@ -48,6 +48,10 @@ public abstract class WebFragment extends Fragment {
         ((WebActivity)getActivity()).signInWithGoogle();
     }
 
+    protected void registerWithUsername() {
+        ((WebActivity)getActivity()).registerWithUsername();
+    }
+
     protected void signInWithUsername() {
         ((WebActivity)getActivity()).signInWithUsername();
     }

@@ -70,8 +70,12 @@
                 android:name="ee.ajapaik.android.LoginActivity"
                 android:label="@string/login_title">
         </activity>
-
-        <service android:name="ee.ajapaik.android.WebService">
+        <activity
+            android:name="ee.ajapaik.android.RegistrationActivity"
+            android:label="@string/registration_title">
+        </activity>
+        <service
+            android:name="ee.ajapaik.android.WebService">
         </service>
         <service android:name="ee.ajapaik.android.LocationService">
         </service>

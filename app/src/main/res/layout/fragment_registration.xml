@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_username" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="60dp" android:inputType="textEmailAddress"
+            android:hint="@string/input_username_hint"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/input_password" android:layout_below="@+id/input_username"
+            android:layout_alignStart="@+id/input_username"
+            android:layout_alignEnd="@+id/input_username"
+            android:hint="@string/input_password_hint"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_register"
+            android:id="@+id/button_action_start_register" android:layout_below="@+id/input_password"
+            android:layout_alignEnd="@+id/input_username"
+            android:layout_alignStart="@+id/input_username"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_already_exists" android:layout_alignParentTop="false"
+            android:text="@string/user_already_exists"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_below="@+id/button_action_start_login" android:layout_centerInParent="true"
+            android:textColor="#980c0c"
+            android:textSize="@dimen/font_size_medium" android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="10dp" android:visibility="invisible" android:paddingBottom="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/button_action_start_login" android:layout_marginBottom="107dp"/>
+</RelativeLayout>

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
 import ee.ajapaik.android.LoginActivity;
+import ee.ajapaik.android.RegistrationActivity;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.util.Status;
@@ -71,6 +72,13 @@ public class ProfileFragment extends WebFragment {
             @Override
             public void onClick(View v) {
                 LoginActivity.start(getContext());
+            }
+        });
+
+        getUsernameRegistrationButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RegistrationActivity.start(getContext());
             }
         });
 
@@ -180,6 +188,7 @@ public class ProfileFragment extends WebFragment {
         getFacebookButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
         getGoogleButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
         getUsernameLoginButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
+        getUsernameRegistrationButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
     }
 
     private View getMainLayout() {
@@ -220,6 +229,10 @@ public class ProfileFragment extends WebFragment {
 
     private Button getUsernameLoginButton() {
         return (Button)getView().findViewById(R.id.button_action_login);
+    }
+
+    private Button getUsernameRegistrationButton() {
+        return (Button)getView().findViewById(R.id.button_action_register);
     }
 
 }

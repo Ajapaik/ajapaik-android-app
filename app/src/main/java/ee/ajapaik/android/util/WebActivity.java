@@ -123,7 +123,24 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 if (session != null) {
                     login(session);
                 } else {
+                    getSettings().setAuthorization(null);
                     findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
+                    ((TextView) findViewById(R.id.input_password)).setText("");
+                }
+            }
+        });
+    }
+
+    public void registerWithUsername() {
+        Authorization authorization = getSettings().getAuthorization();
+        getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
+            @Override
+            public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
+                if (session != null) {
+                    login(session);
+                } else {
+                    getSettings().setAuthorization(null);
+                    findViewById(R.id.user_already_exists).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(R.id.input_password)).setText("");
                 }
             }
