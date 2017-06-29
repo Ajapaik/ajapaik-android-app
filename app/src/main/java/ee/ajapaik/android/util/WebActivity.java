@@ -93,6 +93,8 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                         public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                             if (session != null) {
                                 login(session);
+                            } else {
+                                dismissProgressDialog();
                             }
                         }
                     });
@@ -129,7 +131,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     private void login(Session session) {
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        dismissProgressDialog();
         m_settings.setSession(session);
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
         String lastActivity = getIntent().getStringExtra(LAST_ACTIVITY);
@@ -141,7 +143,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     private void logout() {
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        dismissProgressDialog();
         m_settings.setSession(null);
         getSettings().setProfile(new Profile());
         finish();
@@ -272,7 +274,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
     @Override
     protected void onDestroy() {
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        dismissProgressDialog();
         m_connection.dequeueAll(this);
 
         super.onDestroy();
@@ -289,7 +291,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
     @Override
     protected void onStop() {
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        dismissProgressDialog();
         if (m_googleApiClient != null) {
             m_googleApiClient.disconnect();
         }
@@ -297,9 +299,13 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         super.onStop();
     }
 
+    private void dismissProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+    }
+
     @Override
     protected void onPause() {
-        if (progressDialog != null && progressDialog.isShowing()) progressDialog.dismiss();
+        dismissProgressDialog();
         super.onPause();
     }
 
