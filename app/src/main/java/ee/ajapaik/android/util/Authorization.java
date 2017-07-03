@@ -158,7 +158,7 @@ public class Authorization {
 
     public static enum Type {
         ANONYMOUS(0, "auto"),
-        FACEBOOK(1, "facebook"),
+        FACEBOOK(1, "fb"),
         GOOGLE(2, "google"),
         USERNAME_PASSWORD(3, "ajapaik"),
         UNKNOWN(-1, null);
