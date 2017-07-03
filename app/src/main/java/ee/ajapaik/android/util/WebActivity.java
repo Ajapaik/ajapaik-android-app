@@ -28,9 +28,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.Scopes;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.WebService;
@@ -183,7 +181,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         }
     }
 
-    private void connectToGoogleApi() {
+    private void initGoogleAPI() {
         if (m_googleApiClient == null) {
 
             GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -197,7 +195,9 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                     .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                     .build();
         }
+    }
 
+    private void connectToGoogleApi() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(m_googleApiClient);
         startActivityForResult(signInIntent, GOOGLE_SIGN_IN_RESOLUTION_REQUEST);
     }
@@ -262,17 +262,8 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     private void logoutFromGoogle() {
-        if (m_googleApiClient == null) {
-            m_googleApiClient = new GoogleApiClient.Builder(this)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .addApi(Plus.API)
-                    .addScope(new Scope(Scopes.PROFILE))
-                    .build();
-        }
         if (m_googleApiClient.isConnected()) {
-            Plus.AccountApi.clearDefaultAccount(m_googleApiClient);
-            m_googleApiClient.disconnect();
+            Auth.GoogleSignInApi.signOut(m_googleApiClient);
         }
     }
 
@@ -318,6 +309,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         super.onCreate(savedInstanceState);
 
         m_settings = new Settings(this);
+        initGoogleAPI();
     }
 
     @Override
