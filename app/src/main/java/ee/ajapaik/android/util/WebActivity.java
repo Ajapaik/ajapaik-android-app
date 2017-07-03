@@ -86,7 +86,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     if (getSettings().getAuthorization().getType() != FACEBOOK) {
-                        progressDialog = ProgressDialog.show(WebActivity.this, "Logging in...", "Please wait...");
+                        showProgressDialog("Logging in...");
                     }
                     Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
                     getSettings().setAuthorization(authorization);
@@ -116,6 +116,10 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         }
 
         LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
+    }
+
+    private void showProgressDialog(String title) {
+        progressDialog = ProgressDialog.show(WebActivity.this, title, "Please wait...");
     }
 
     public void signInWithUsername() {
@@ -196,15 +200,12 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(m_googleApiClient);
         startActivityForResult(signInIntent, GOOGLE_SIGN_IN_RESOLUTION_REQUEST);
-
-        // Show a message to the user that we are signing in.
-        //mStatusTextView.setText(R.string.signing_in);
     }
-
-
 
     private void handleGoogleLoginResult(GoogleSignInResult result) {
         if (result.isSuccess()) {
+            showProgressDialog("Logging in...");
+
             GoogleSignInAccount account = result.getSignInAccount();
             if (account == null) return;
             Authorization authorization = new Authorization(GOOGLE, account.getEmail(), account.getIdToken());
@@ -215,6 +216,8 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
                     if (session != null) {
                         login(session);
+                    } else {
+                        dismissProgressDialog();
                     }
                 }
             });
@@ -233,7 +236,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     public void signOut() {
-        progressDialog = ProgressDialog.show(WebActivity.this, "Logging out...", "Please wait...");
+        showProgressDialog("Logging out...");
         Authorization loggedInAuthorization = m_settings.getAuthorization();
         if (FACEBOOK == loggedInAuthorization.getType()) {
             new GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, new GraphRequest.Callback() {
