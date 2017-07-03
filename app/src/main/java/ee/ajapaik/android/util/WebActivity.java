@@ -1,7 +1,6 @@
 package ee.ajapaik.android.util;
 
 import android.accounts.Account;
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -23,6 +22,10 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.GoogleAuthException;
 import com.google.android.gms.auth.GoogleAuthUtil;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.Scopes;
@@ -178,19 +181,44 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
     private void connectToGoogleApi() {
         if (m_googleApiClient == null) {
+
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestServerAuthCode(SERVER_ID)
+                    .requestIdToken(getString(R.string.default_web_client_id))
+                    .requestEmail()
+                    .build();
+
             m_googleApiClient = new GoogleApiClient.Builder(this)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .addApi(Plus.API)
-                    .addScope(new Scope(Scopes.PROFILE))
+                    .enableAutoManage(this, this)
+                    .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                     .build();
         }
 
-        m_shouldResolve = true;
-        m_googleApiClient.connect();
+        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(m_googleApiClient);
+        startActivityForResult(signInIntent, GOOGLE_SIGN_IN_RESOLUTION_REQUEST);
 
         // Show a message to the user that we are signing in.
         //mStatusTextView.setText(R.string.signing_in);
+    }
+
+
+
+    private void handleGoogleLoginResult(GoogleSignInResult result) {
+        if (result.isSuccess()) {
+            GoogleSignInAccount account = result.getSignInAccount();
+            if (account == null) return;
+            Authorization authorization = new Authorization(GOOGLE, account.getEmail(), account.getIdToken());
+            getSettings().setAuthorization(authorization);
+
+            getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
+                @Override
+                public void onActionResult(ee.ajapaik.android.data.util.Status status, Session session) {
+                    if (session != null) {
+                        login(session);
+                    }
+                }
+            });
+        }
     }
 
     @Override
@@ -464,12 +492,8 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         if (requestCode == FACEBOOK_SIGN_IN_RESOLUTION_REQUEST) {
             m_facebookCallback.onActivityResult(requestCode, resultCode, data);
         } else if (requestCode == GOOGLE_SIGN_IN_RESOLUTION_REQUEST) {
-            if (resultCode != Activity.RESULT_OK) {
-                m_shouldResolve = false;
-            }
-
-            m_isResolving = false;
-            m_googleApiClient.connect();
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleGoogleLoginResult(result);
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
