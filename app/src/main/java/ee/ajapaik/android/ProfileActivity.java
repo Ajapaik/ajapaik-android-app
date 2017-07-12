@@ -6,8 +6,6 @@ import android.os.Bundle;
 import ee.ajapaik.android.fragment.ProfileFragment;
 import ee.ajapaik.android.test.R;
 
-import static android.content.Intent.FLAG_ACTIVITY_NO_HISTORY;
-
 public class ProfileActivity extends NavigationDrawerActivity {
 
     public static String RETURN_ACTIVITY = "lastActivity";
@@ -21,7 +19,6 @@ public class ProfileActivity extends NavigationDrawerActivity {
         if (returnActivity != null) {
             intent.putExtra(RETURN_ACTIVITY, returnActivity);
         }
-        intent.setFlags(FLAG_ACTIVITY_NO_HISTORY);
         context.startActivity(intent);
     }
 
