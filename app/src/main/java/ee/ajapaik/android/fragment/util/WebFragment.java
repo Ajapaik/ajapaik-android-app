@@ -20,18 +20,6 @@ public abstract class WebFragment extends Fragment {
         return ((WebActivity)getActivity()).getSettings();
     }
 
-    protected boolean checkPlayServices(boolean ui) {
-        return ((WebActivity)getActivity()).checkPlayServices(ui);
-    }
-
-    protected void registerDevice(boolean ui) {
-        ((WebActivity)getActivity()).registerDevice(ui);
-    }
-
-    protected void unregisterDevice() {
-        ((WebActivity)getActivity()).unregisterDevice();
-    }
-
     protected void showDialog(int dialogId) {
         ((WebActivity)getActivity()).showDialogFragment(dialogId);
     }
