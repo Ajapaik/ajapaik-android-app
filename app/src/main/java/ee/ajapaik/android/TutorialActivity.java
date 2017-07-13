@@ -1,6 +1,7 @@
 package ee.ajapaik.android;
 
 import android.os.Handler;
+import android.view.View;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebActivity;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
@@ -25,8 +26,13 @@ public class TutorialActivity extends WebActivity {
         config.setDelay(500); // half second between each showcase view
         sequence.setConfig(config);
 
+        View upperTutorialLayout = findViewById(R.id.tutorial_layout_up);
+        View bottomTutorialLayout = findViewById(R.id.tutorial_layout_down);
+
+        if (upperTutorialLayout == null || bottomTutorialLayout == null) return;
+
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.tutorial_layout_up))
+                .setTarget(upperTutorialLayout)
                 .setContentText(R.string.tutorial_opacity_zoom)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
@@ -36,7 +42,7 @@ public class TutorialActivity extends WebActivity {
                 .build());
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.tutorial_layout_up))
+                .setTarget(upperTutorialLayout)
                 .setContentText(R.string.tutorial_hide_show_flip)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
@@ -46,7 +52,7 @@ public class TutorialActivity extends WebActivity {
                 .build());
 
         sequence.addSequenceItem(new MaterialShowcaseView.Builder(this)
-                .setTarget(findViewById(R.id.tutorial_layout_down))
+                .setTarget(bottomTutorialLayout)
                 .setContentText(R.string.tutorial_take_picture)
                 .setDismissText(R.string.tutorial_dismiss)
                 .setTargetTouchable(true)
