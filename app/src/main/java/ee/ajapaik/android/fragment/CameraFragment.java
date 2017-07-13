@@ -598,6 +598,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
 
     private void takePicture() {
+        if (!((CameraActivity) getActivity()).isTutorialCompleted()) return;
         progressDialog = ProgressDialog.show(getActivity(), "Processing image", "Please wait...");
         lockFocus();
     }

@@ -9,6 +9,13 @@ import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 public class TutorialActivity extends WebActivity {
+
+    private MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
+
+    public boolean isTutorialCompleted() {
+        return sequence.hasFired();
+    }
+
     void waitForMenuToBeCreatedAndShowTutorial() {
         Handler myHandler = new Handler();
         myHandler.postDelayed(new Runnable() {
@@ -19,7 +26,6 @@ public class TutorialActivity extends WebActivity {
     }
 
     private void tutorial() {
-        MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
         if (sequence.hasFired()) return;
 
         ShowcaseConfig config = new ShowcaseConfig();
