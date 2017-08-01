@@ -63,4 +63,13 @@ public class NavigationDrawerActivity extends WebActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
+            mDrawer.closeDrawer(GravityCompat.START, true);
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
