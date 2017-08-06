@@ -55,7 +55,7 @@
         <activity
                 android:name="ee.ajapaik.android.PhotoActivity"
                 android:label="@string/photo_title"
-                android:theme="@style/AppThemeFullscreen">
+                android:theme="@style/AppThemeTranslucent">
         </activity>
         <activity
                 android:name="ee.ajapaik.android.CameraActivity"

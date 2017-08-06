@@ -10,8 +10,9 @@ import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.fragment.PhotoFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.Settings;
+import ee.ajapaik.android.util.WebActivity;
 
-public class PhotoActivity extends NavigationDrawerActivity {
+public class PhotoActivity extends WebActivity {
     private static final String EXTRA_ALBUM = "album";
     private static final String EXTRA_PHOTO = "photo";
 
@@ -67,9 +68,7 @@ public class PhotoActivity extends NavigationDrawerActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_photo);
-        configureNavigationDrawer();
-        configureToolbar();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if(savedInstanceState == null) {
             Photo photo = getIntent().getParcelableExtra(EXTRA_PHOTO);
             Album album = getIntent().getParcelableExtra(EXTRA_ALBUM);
