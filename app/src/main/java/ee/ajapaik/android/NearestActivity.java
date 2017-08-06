@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
@@ -91,6 +92,12 @@ public class NearestActivity extends AlbumActivity {
             return !shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION);
         }
         return false;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSettings().setLocation(null);
     }
 
     @Override
