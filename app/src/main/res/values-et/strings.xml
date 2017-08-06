@@ -59,6 +59,7 @@
 
     <!-- Login -->
     <string name="login_title">Login</string>
+    <string name="login_failed">Sisselogimine ebaõnnestus</string>
     <!-- Registration -->
     <string name="registration_title">Register</string>
     <string name="user_already_exists">Username already exists</string>

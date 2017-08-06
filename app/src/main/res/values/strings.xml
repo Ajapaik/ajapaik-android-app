@@ -60,6 +60,7 @@
 
     <!-- Login -->
     <string name="login_title">Login</string>
+    <string name="login_failed">Login unsuccessful</string>
     <!-- Registration -->
     <string name="registration_title">Register</string>
     <string name="user_already_exists">Username already exists</string>
