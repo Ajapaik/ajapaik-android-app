@@ -8,7 +8,8 @@
             android:id="@+id/input_username" android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_marginStart="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginEnd="40dp"
+            android:textColor="#bcbcbc"
             android:layout_marginTop="60dp" android:inputType="textEmailAddress"
             android:hint="@string/input_username_hint"/>
     <EditText
@@ -19,6 +20,7 @@
             android:id="@+id/input_password" android:layout_below="@+id/input_username"
             android:layout_alignStart="@+id/input_username"
             android:layout_alignEnd="@+id/input_username"
+            android:textColor="#bcbcbc"
             android:hint="@string/input_password_hint"/>
     <Button
             android:layout_width="match_parent"
