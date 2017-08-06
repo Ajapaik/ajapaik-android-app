@@ -24,6 +24,8 @@ import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
+import static android.view.View.*;
+
 public class AlbumFragment extends WebFragment {
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
 
@@ -140,6 +142,7 @@ public class AlbumFragment extends WebFragment {
 
             if(m_album != null && m_album.getPhotos().size() > 0) {
                 getEmptyView().setText("");
+                getNoDataButton().setVisibility(GONE);
                 gridView.setAdapter(new PhotoAdapter(gridView.getContext(), m_album.getPhotos(), getSettings().getLocation(), new PhotoAdapter.OnPhotoSelectionListener() {
                     @Override
                     public void onSelect(Photo photo) {
@@ -149,8 +152,8 @@ public class AlbumFragment extends WebFragment {
             } else {
                 getEmptyView().setText(getPlaceholderString());
                 if (isNearestFragment()) {
-                    getNoDataButton().setVisibility(View.VISIBLE);
-                    getNoDataButton().setOnClickListener(new View.OnClickListener() {
+                    getNoDataButton().setVisibility(VISIBLE);
+                    getNoDataButton().setOnClickListener(new OnClickListener() {
                         @Override
                         public void onClick(View view) {
                             AlbumsActivity.start(getActivity());
@@ -172,7 +175,7 @@ public class AlbumFragment extends WebFragment {
         WebAction<Album> action = createAction(context);
 
         if(m_album == null) {
-            getProgressBar().setVisibility(View.VISIBLE);
+            getProgressBar().setVisibility(VISIBLE);
         }
 
         if(action != null) {
@@ -180,7 +183,7 @@ public class AlbumFragment extends WebFragment {
                 @Override
                 public void onActionResult(Status status, Album album) {
                     if(m_album == null) {
-                        getProgressBar().setVisibility(View.GONE);
+                        getProgressBar().setVisibility(GONE);
                     }
 
                     if(album != null) {
