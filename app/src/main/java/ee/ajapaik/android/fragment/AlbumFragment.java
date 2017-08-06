@@ -112,6 +112,7 @@ public class AlbumFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
+        getSwipeRefreshLayout().setRefreshing(true);
         refresh(false);
     }
 
