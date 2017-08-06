@@ -7,7 +7,7 @@ import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebAction;
 
 public class NearestFragment extends AlbumFragment {
-    private static final int DEFAULT_RANGE = 1000;
+    private static final int DEFAULT_RANGE = 10000;
 
     @Override
     protected WebAction<Album> createAction(Context context) {
