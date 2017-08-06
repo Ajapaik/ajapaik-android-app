@@ -68,11 +68,13 @@
         </activity>
         <activity
                 android:name="ee.ajapaik.android.LoginActivity"
-                android:label="@string/login_title">
+                android:label="@string/login_title"
+                android:theme="@style/AppThemeTranslucent">
         </activity>
         <activity
             android:name="ee.ajapaik.android.RegistrationActivity"
-            android:label="@string/registration_title">
+            android:label="@string/registration_title"
+            android:theme="@style/AppThemeTranslucent">
         </activity>
         <service
             android:name="ee.ajapaik.android.WebService">

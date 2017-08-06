@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import ee.ajapaik.android.fragment.RegistrationFragment;
 import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.util.WebActivity;
 
-public class RegistrationActivity extends NavigationDrawerActivity {
+public class RegistrationActivity extends WebActivity {
     public static void start(Context context) {
         start(context, null);
     }
@@ -24,8 +25,7 @@ public class RegistrationActivity extends NavigationDrawerActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_registration);
-        configureNavigationDrawer();
-        configureToolbar();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new RegistrationFragment()).commit();
