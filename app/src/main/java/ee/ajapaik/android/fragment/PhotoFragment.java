@@ -330,29 +330,22 @@ public class PhotoFragment extends ImageFragment {
             date = null;
         }
 
-        if(title == null) {
-            title = "";
+        if(title != null) {
+            getTitleView().setText(title);
         }
 
-        if(author != null || date != null) {
-            if(title.length() > 0) {
-                title += "\n";
-            }
+        if(author != null) {
+            getAuthorView().setText(author);
+        }
 
+        if(date != null) {
+            String dateString = Strings.toLocalizedDate(getActivity(), date);
             if(author != null) {
-                title += author;
+                dateString = ", " + dateString;
             }
-
-            if(date != null) {
-                if(!title.endsWith("\n")) {
-                    title += ", ";
-                }
-
-                title += Strings.toLocalizedDate(getActivity(), date);
-            }
+            getDateView().setText(dateString);
         }
 
-        getTitleView().setText(title);
         invalidateLocation();
     }
 
@@ -393,6 +386,14 @@ public class PhotoFragment extends ImageFragment {
 
     private TextView getTitleView() {
         return (TextView)getView().findViewById(R.id.text_title);
+    }
+
+    private TextView getAuthorView() {
+        return (TextView)getView().findViewById(R.id.text_author);
+    }
+
+    private TextView getDateView() {
+        return (TextView)getView().findViewById(R.id.text_date);
     }
 
     private ImageView getRephotosCountImageView() {
