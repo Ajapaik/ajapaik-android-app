@@ -148,6 +148,7 @@ public class PhotoFragment extends ImageFragment {
                             }
 
                             m_offset = new PointF(m_offset.x - distanceX, m_offset.y - distanceY);
+                            avoidScrollingOutOfViewport(imageView);
                             imageView.setOffset(m_offset);
                         }
                     }
@@ -198,6 +199,15 @@ public class PhotoFragment extends ImageFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+    }
+
+    private void avoidScrollingOutOfViewport(WebImageView imageView) {
+        float xScrollBuffer = ((imageView.getScale() * imageView.getWidth()) - imageView.getWidth()) / 2;
+        if (m_offset.x > xScrollBuffer) {
+            m_offset.x = xScrollBuffer;
+        } else if (m_offset.x < -xScrollBuffer) {
+            m_offset.x = -xScrollBuffer;
+        }
     }
 
     @Override
