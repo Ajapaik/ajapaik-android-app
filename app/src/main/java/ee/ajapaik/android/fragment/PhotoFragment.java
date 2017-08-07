@@ -322,12 +322,6 @@ public class PhotoFragment extends ImageFragment {
 
         if(m_photo.getSource() != null) {
             getSubtitleView().setText(m_photo.getSource().toHtml());
-        } else if(author != null) {
-            getSubtitleView().setText(author);
-            author = null;
-        } else if(date != null) {
-            getSubtitleView().setText(Strings.toLocalizedDate(getActivity(), date));
-            date = null;
         }
 
         if(title != null) {
