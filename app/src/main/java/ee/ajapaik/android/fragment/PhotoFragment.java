@@ -126,8 +126,11 @@ public class PhotoFragment extends ImageFragment {
                     public void onScale(float scale) {
                         if(m_immersiveMode) {
                             WebImageView imageView = getImageView();
-
-                            imageView.setScale(imageView.getScale() * scale);
+                            float newScale = imageView.getScale() * scale;
+                            if (newScale < 1.0f) {
+                                newScale = 1.0f;
+                            };
+                            imageView.setScale(newScale);
                             m_scale = imageView.getScale();
                         }
                     }
