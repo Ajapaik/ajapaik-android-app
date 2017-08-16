@@ -9,6 +9,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -202,12 +203,35 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
-        float xScrollBuffer = ((imageView.getScale() * imageView.getWidth()) - imageView.getWidth()) / 2;
+        int viewWidth = getMainLayout().getWidth();
+        float xScrollBuffer = ((imageView.getScale() * viewWidth) - viewWidth) / 2;
         if (m_offset.x > xScrollBuffer) {
             m_offset.x = xScrollBuffer;
         } else if (m_offset.x < -xScrollBuffer) {
             m_offset.x = -xScrollBuffer;
         }
+
+        float imageViewDrawableRatio = viewWidth / imageView.getDrawable().getIntrinsicWidth();
+
+        int actionBarHeight = getActionBarHeight();
+        int imageHeight = imageView.getDrawable().getIntrinsicHeight();
+        float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
+        float yScrollBuffer = (getMainLayout().getHeight() - scaledImageHeight) / 2;
+        if (m_offset.y > yScrollBuffer - actionBarHeight) {
+            m_offset.y = yScrollBuffer - actionBarHeight;
+        } else if (m_offset.y < -yScrollBuffer) {
+            m_offset.y = -yScrollBuffer;
+        }
+    }
+
+    private int getActionBarHeight() {
+        TypedValue tv = new TypedValue();
+        int actionBarHeight = 0;
+        if (getActivity().getTheme().resolveAttribute(R.attr.actionBarSize, tv, true))
+        {
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+        }
+        return actionBarHeight;
     }
 
     @Override

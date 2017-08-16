@@ -14,11 +14,11 @@
             android:adjustViewBounds="true"
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingTop="?android:attr/actionBarSize"
             android:contentDescription="@string/none"
             android:src="@drawable/transparent"
-            android:scaleType="matrix" />
+            android:scaleType="fitStart" />
 
         <RelativeLayout
             android:id="@+id/layout_info"
