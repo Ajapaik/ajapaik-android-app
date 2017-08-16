@@ -216,11 +216,20 @@ public class PhotoFragment extends ImageFragment {
         int actionBarHeight = getActionBarHeight();
         int imageHeight = imageView.getDrawable().getIntrinsicHeight();
         float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
-        float yScrollBuffer = (getMainLayout().getHeight() - scaledImageHeight) / 2;
-        if (m_offset.y > yScrollBuffer - actionBarHeight) {
-            m_offset.y = yScrollBuffer - actionBarHeight;
-        } else if (m_offset.y < -yScrollBuffer) {
-            m_offset.y = -yScrollBuffer;
+        int viewHeight = getMainLayout().getHeight();
+        float yScrollBuffer = (viewHeight - scaledImageHeight) / 2;
+        if (scaledImageHeight < viewHeight) {
+            if (m_offset.y > yScrollBuffer - actionBarHeight) {
+                m_offset.y = yScrollBuffer - actionBarHeight;
+            } else if (m_offset.y < -yScrollBuffer) {
+                m_offset.y = -yScrollBuffer;
+            }
+        } else {
+            if(m_offset.y > -yScrollBuffer) {
+                m_offset.y = -yScrollBuffer;
+            } else if (m_offset.y < yScrollBuffer - actionBarHeight) {
+                m_offset.y = yScrollBuffer - actionBarHeight;
+            }
         }
     }
 
