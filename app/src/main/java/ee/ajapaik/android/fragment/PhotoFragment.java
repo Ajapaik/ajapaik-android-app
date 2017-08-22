@@ -126,8 +126,11 @@ public class PhotoFragment extends ImageFragment {
                     public void onScale(float scale) {
                         if(m_immersiveMode) {
                             WebImageView imageView = getImageView();
-
-                            imageView.setScale(imageView.getScale() * scale);
+                            float newScale = imageView.getScale() * scale;
+                            if (newScale < 1.0f) {
+                                newScale = 1.0f;
+                            };
+                            imageView.setScale(newScale);
                             m_scale = imageView.getScale();
                         }
                     }
@@ -145,6 +148,7 @@ public class PhotoFragment extends ImageFragment {
                             }
 
                             m_offset = new PointF(m_offset.x - distanceX, m_offset.y - distanceY);
+                            avoidScrollingOutOfViewport(imageView);
                             imageView.setOffset(m_offset);
                         }
                     }
@@ -195,6 +199,53 @@ public class PhotoFragment extends ImageFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+    }
+
+    private void avoidScrollingOutOfViewport(WebImageView imageView) {
+        int viewWidth = getMainLayout().getWidth();
+        int viewHeight = getMainLayout().getHeight();
+        float imageViewDrawableRatio = isFullWidth(imageView) ?
+                (float) viewWidth / imageView.getDrawable().getIntrinsicWidth() :
+                (float) viewHeight / imageView.getDrawable().getIntrinsicHeight();
+
+        avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
+        avoidScrollingOutOfViewportOnYAxle(imageView, viewHeight, imageViewDrawableRatio);
+    }
+
+    private void avoidScrollingOutOfViewportOnYAxle(WebImageView imageView, int viewHeight, float imageViewDrawableRatio) {
+        int imageHeight = imageView.getDrawable().getIntrinsicHeight();
+        m_offset.y = getPosition(m_offset.y, viewHeight, imageHeight, imageViewDrawableRatio, imageView.getScale());
+    }
+
+    private void avoidScrollingOutOfViewportOnXAxle(WebImageView imageView, int viewWidth, float imageViewDrawableRatio) {
+        int imageWidth = imageView.getDrawable().getIntrinsicWidth();
+        m_offset.x = getPosition(m_offset.x, viewWidth, imageWidth, imageViewDrawableRatio, imageView.getScale());
+    }
+
+    private float getPosition(float currentPosition, int viewLength, float imageLength, float imageViewDrawableRatio, float scale) {
+        float scaledImageLength = imageLength * imageViewDrawableRatio * scale;
+        float positiveEdge = (viewLength - scaledImageLength) / 2;
+        float negativeEdge = -positiveEdge;
+        if (scaledImageLength < viewLength) {
+            return avoidScrollingOutOfViewport(currentPosition, positiveEdge, negativeEdge);
+        } else {
+            return avoidScrollingOutOfViewport(currentPosition, negativeEdge, positiveEdge);
+        }
+    }
+
+    private float avoidScrollingOutOfViewport(float currentPosition, float positiveEdge, float negativeEdge) {
+        if (currentPosition > positiveEdge) {
+            return positiveEdge;
+        } else if (currentPosition < negativeEdge) {
+            return negativeEdge;
+        }
+        return currentPosition;
+    }
+
+    private boolean isFullWidth(WebImageView imageView) {
+        int i = getMainLayout().getWidth() / getMainLayout().getHeight();
+        int j = imageView.getDrawable().getIntrinsicWidth() / imageView.getDrawable().getIntrinsicHeight();
+        return i < j;
     }
 
     @Override
@@ -322,37 +373,24 @@ public class PhotoFragment extends ImageFragment {
 
         if(m_photo.getSource() != null) {
             getSubtitleView().setText(m_photo.getSource().toHtml());
-        } else if(author != null) {
-            getSubtitleView().setText(author);
-            author = null;
-        } else if(date != null) {
-            getSubtitleView().setText(Strings.toLocalizedDate(getActivity(), date));
-            date = null;
         }
 
-        if(title == null) {
-            title = "";
+        if(title != null) {
+            getTitleView().setText(title);
         }
 
-        if(author != null || date != null) {
-            if(title.length() > 0) {
-                title += "\n";
-            }
+        if(author != null) {
+            getAuthorView().setText(author);
+        }
 
+        if(date != null) {
+            String dateString = Strings.toLocalizedDate(getActivity(), date);
             if(author != null) {
-                title += author;
+                dateString = ", " + dateString;
             }
-
-            if(date != null) {
-                if(!title.endsWith("\n")) {
-                    title += ", ";
-                }
-
-                title += Strings.toLocalizedDate(getActivity(), date);
-            }
+            getDateView().setText(dateString);
         }
 
-        getTitleView().setText(title);
         invalidateLocation();
     }
 
@@ -393,6 +431,14 @@ public class PhotoFragment extends ImageFragment {
 
     private TextView getTitleView() {
         return (TextView)getView().findViewById(R.id.text_title);
+    }
+
+    private TextView getAuthorView() {
+        return (TextView)getView().findViewById(R.id.text_author);
+    }
+
+    private TextView getDateView() {
+        return (TextView)getView().findViewById(R.id.text_date);
     }
 
     private ImageView getRephotosCountImageView() {

@@ -7,7 +7,8 @@
     <RelativeLayout
         android:id="@+id/layout_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize">
 
         <ee.ajapaik.android.widget.WebImageView
             android:id="@+id/image"
@@ -17,7 +18,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/none"
             android:src="@drawable/transparent"
-            android:scaleType="matrix" />
+            android:scaleType="fitStart" />
 
         <RelativeLayout
             android:id="@+id/layout_info"
@@ -38,6 +39,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView
+                            android:id="@+id/text_author"
+                            style="@style/PhotoInfoTitleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="" />
+                    <TextView
+                            android:id="@+id/text_date"
+                            style="@style/PhotoInfoTitleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/button_subtitle"
@@ -45,6 +61,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <ImageButton
+                            android:id="@+id/button_action_azimuth"
+                            style="@style/PhotoOverlayButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_navigation_white_36dp" />
+
+                    <TextView
+                            style="@style/PhotoOverlayText"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/albums_item_title"
+                            android:id="@+id/text_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+
+                </LinearLayout>
 
                 <RelativeLayout
                     android:id="@+id/layout_details_actions"
@@ -85,14 +121,6 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/layout_info">
 
-            <ImageButton
-                android:id="@+id/button_action_azimuth"
-                style="@style/PhotoOverlayButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_navigation_white_36dp" />
 
             <ImageView
                 style="@style/AlbumOverlayRephotoButton"
@@ -102,15 +130,6 @@
                 android:id="@+id/image_rephoto"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true" />
-
-            <TextView
-                style="@style/PhotoOverlayText"
-                android:id="@+id/text_distance"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:layout_toLeftOf="@id/image_rephoto"
-                android:layout_alignParentBottom="true" />
 
         </RelativeLayout>
 
