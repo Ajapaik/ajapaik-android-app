@@ -9,7 +9,6 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -203,44 +202,73 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
-        int viewWidth = getMainLayout().getWidth();
-        float xScrollBuffer = ((imageView.getScale() * viewWidth) - viewWidth) / 2;
-        if (m_offset.x > xScrollBuffer) {
-            m_offset.x = xScrollBuffer;
-        } else if (m_offset.x < -xScrollBuffer) {
-            m_offset.x = -xScrollBuffer;
-        }
+        if (isFullWidth(imageView)) {
+            int viewWidth = getMainLayout().getWidth();
+            float rightEdge = ((imageView.getScale() * viewWidth) - viewWidth) / 2;
+            float leftEdge = -rightEdge;
+            if (m_offset.x > rightEdge) {
+                m_offset.x = rightEdge;
+            } else if (m_offset.x < leftEdge) {
+                m_offset.x = leftEdge;
+            }
 
-        float imageViewDrawableRatio = viewWidth / imageView.getDrawable().getIntrinsicWidth();
+            float imageViewDrawableRatio = viewWidth / imageView.getDrawable().getIntrinsicWidth();
 
-        int actionBarHeight = getActionBarHeight();
-        int imageHeight = imageView.getDrawable().getIntrinsicHeight();
-        float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
-        int viewHeight = getMainLayout().getHeight();
-        float yScrollBuffer = (viewHeight - scaledImageHeight) / 2;
-        if (scaledImageHeight < viewHeight) {
-            if (m_offset.y > yScrollBuffer - actionBarHeight) {
-                m_offset.y = yScrollBuffer - actionBarHeight;
-            } else if (m_offset.y < -yScrollBuffer) {
-                m_offset.y = -yScrollBuffer;
+            int viewHeight = getMainLayout().getHeight();
+            int imageHeight = imageView.getDrawable().getIntrinsicHeight();
+            float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
+            float topEdge = (viewHeight - scaledImageHeight) / 2;
+            float bottomEdge = -topEdge;
+            if (scaledImageHeight < viewHeight) {
+                if (m_offset.y > topEdge) {
+                    m_offset.y = topEdge;
+                } else if (m_offset.y < bottomEdge) {
+                    m_offset.y = bottomEdge;
+                }
+            } else {
+                if (m_offset.y > bottomEdge) {
+                    m_offset.y = bottomEdge;
+                } else if (m_offset.y < topEdge) {
+                    m_offset.y = topEdge;
+                }
             }
         } else {
-            if(m_offset.y > -yScrollBuffer) {
-                m_offset.y = -yScrollBuffer;
-            } else if (m_offset.y < yScrollBuffer - actionBarHeight) {
-                m_offset.y = yScrollBuffer - actionBarHeight;
+            int viewHeight = getMainLayout().getHeight();
+            float topEdge = ((imageView.getScale() * viewHeight) - viewHeight) / 2;
+            float bottomEdge = -topEdge;
+            if (m_offset.y > topEdge) {
+                m_offset.y = topEdge;
+            } else if (m_offset.y < bottomEdge) {
+                m_offset.y = bottomEdge;
+            }
+
+            float imageViewDrawableRatio = viewHeight / imageView.getDrawable().getIntrinsicHeight();
+
+            int viewWidth = getMainLayout().getWidth();
+            int imageWidth = imageView.getDrawable().getIntrinsicWidth();
+            float scaledImageWidth = imageWidth * imageViewDrawableRatio * imageView.getScale();
+            float rightEdge = (viewWidth - scaledImageWidth) / 2;
+            float leftEdge = -rightEdge;
+            if (scaledImageWidth < viewWidth) {
+                if (m_offset.x > rightEdge) {
+                    m_offset.x = rightEdge;
+                } else if (m_offset.x < leftEdge) {
+                    m_offset.x = leftEdge;
+                }
+            } else {
+                if (m_offset.x > leftEdge) {
+                    m_offset.x = leftEdge;
+                } else if (m_offset.x < rightEdge) {
+                    m_offset.x = rightEdge;
+                }
             }
         }
     }
 
-    private int getActionBarHeight() {
-        TypedValue tv = new TypedValue();
-        int actionBarHeight = 0;
-        if (getActivity().getTheme().resolveAttribute(R.attr.actionBarSize, tv, true))
-        {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
-        }
-        return actionBarHeight;
+    private boolean isFullWidth(WebImageView imageView) {
+        int i = getMainLayout().getWidth() / getMainLayout().getHeight();
+        int j = imageView.getDrawable().getIntrinsicWidth() / imageView.getDrawable().getIntrinsicHeight();
+        return i < j;
     }
 
     @Override
