@@ -214,42 +214,32 @@ public class PhotoFragment extends ImageFragment {
 
     private void avoidScrollingOutOfViewportOnYAxle(WebImageView imageView, int viewHeight, float imageViewDrawableRatio) {
         int imageHeight = imageView.getDrawable().getIntrinsicHeight();
-        float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
-        float topEdge = (viewHeight - scaledImageHeight) / 2;
-        float bottomEdge = -topEdge;
-        if (scaledImageHeight < viewHeight) {
-            if (m_offset.y > topEdge) {
-                m_offset.y = topEdge;
-            } else if (m_offset.y < bottomEdge) {
-                m_offset.y = bottomEdge;
-            }
-        } else {
-            if (m_offset.y > bottomEdge) {
-                m_offset.y = bottomEdge;
-            } else if (m_offset.y < topEdge) {
-                m_offset.y = topEdge;
-            }
-        }
+        m_offset.y = getPosition(m_offset.y, viewHeight, imageHeight, imageViewDrawableRatio, imageView.getScale());
     }
 
     private void avoidScrollingOutOfViewportOnXAxle(WebImageView imageView, int viewWidth, float imageViewDrawableRatio) {
         int imageWidth = imageView.getDrawable().getIntrinsicWidth();
-        float scaledImageWidth = imageWidth * imageViewDrawableRatio * imageView.getScale();
-        float rightEdge = (viewWidth - scaledImageWidth) / 2;
-        float leftEdge = -rightEdge;
-        if (scaledImageWidth < viewWidth) {
-            if (m_offset.x > rightEdge) {
-                m_offset.x = rightEdge;
-            } else if (m_offset.x < leftEdge) {
-                m_offset.x = leftEdge;
-            }
+        m_offset.x = getPosition(m_offset.x, viewWidth, imageWidth, imageViewDrawableRatio, imageView.getScale());
+    }
+
+    private float getPosition(float currentPosition, int viewLength, float imageLength, float imageViewDrawableRatio, float scale) {
+        float scaledImageLength = imageLength * imageViewDrawableRatio * scale;
+        float positiveEdge = (viewLength - scaledImageLength) / 2;
+        float negativeEdge = -positiveEdge;
+        if (scaledImageLength < viewLength) {
+            return avoidScrollingOutOfViewport(currentPosition, positiveEdge, negativeEdge);
         } else {
-            if (m_offset.x > leftEdge) {
-                m_offset.x = leftEdge;
-            } else if (m_offset.x < rightEdge) {
-                m_offset.x = rightEdge;
-            }
+            return avoidScrollingOutOfViewport(currentPosition, negativeEdge, positiveEdge);
         }
+    }
+
+    private float avoidScrollingOutOfViewport(float currentPosition, float positiveEdge, float negativeEdge) {
+        if (currentPosition > positiveEdge) {
+            return positiveEdge;
+        } else if (currentPosition < negativeEdge) {
+            return negativeEdge;
+        }
+        return currentPosition;
     }
 
     private boolean isFullWidth(WebImageView imageView) {
