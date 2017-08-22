@@ -202,65 +202,52 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
-        if (isFullWidth(imageView)) {
-            int viewWidth = getMainLayout().getWidth();
-            float rightEdge = ((imageView.getScale() * viewWidth) - viewWidth) / 2;
-            float leftEdge = -rightEdge;
-            if (m_offset.x > rightEdge) {
-                m_offset.x = rightEdge;
-            } else if (m_offset.x < leftEdge) {
-                m_offset.x = leftEdge;
-            }
+        int viewWidth = getMainLayout().getWidth();
+        int viewHeight = getMainLayout().getHeight();
+        float imageViewDrawableRatio = isFullWidth(imageView) ?
+                (float) viewWidth / imageView.getDrawable().getIntrinsicWidth() :
+                (float) viewHeight / imageView.getDrawable().getIntrinsicHeight();
 
-            float imageViewDrawableRatio = viewWidth / imageView.getDrawable().getIntrinsicWidth();
+        avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
+        avoidScrollingOutOfViewportOnYAxle(imageView, viewHeight, imageViewDrawableRatio);
+    }
 
-            int viewHeight = getMainLayout().getHeight();
-            int imageHeight = imageView.getDrawable().getIntrinsicHeight();
-            float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
-            float topEdge = (viewHeight - scaledImageHeight) / 2;
-            float bottomEdge = -topEdge;
-            if (scaledImageHeight < viewHeight) {
-                if (m_offset.y > topEdge) {
-                    m_offset.y = topEdge;
-                } else if (m_offset.y < bottomEdge) {
-                    m_offset.y = bottomEdge;
-                }
-            } else {
-                if (m_offset.y > bottomEdge) {
-                    m_offset.y = bottomEdge;
-                } else if (m_offset.y < topEdge) {
-                    m_offset.y = topEdge;
-                }
-            }
-        } else {
-            int viewHeight = getMainLayout().getHeight();
-            float topEdge = ((imageView.getScale() * viewHeight) - viewHeight) / 2;
-            float bottomEdge = -topEdge;
+    private void avoidScrollingOutOfViewportOnYAxle(WebImageView imageView, int viewHeight, float imageViewDrawableRatio) {
+        int imageHeight = imageView.getDrawable().getIntrinsicHeight();
+        float scaledImageHeight = imageHeight * imageViewDrawableRatio * imageView.getScale();
+        float topEdge = (viewHeight - scaledImageHeight) / 2;
+        float bottomEdge = -topEdge;
+        if (scaledImageHeight < viewHeight) {
             if (m_offset.y > topEdge) {
                 m_offset.y = topEdge;
             } else if (m_offset.y < bottomEdge) {
                 m_offset.y = bottomEdge;
             }
+        } else {
+            if (m_offset.y > bottomEdge) {
+                m_offset.y = bottomEdge;
+            } else if (m_offset.y < topEdge) {
+                m_offset.y = topEdge;
+            }
+        }
+    }
 
-            float imageViewDrawableRatio = viewHeight / imageView.getDrawable().getIntrinsicHeight();
-
-            int viewWidth = getMainLayout().getWidth();
-            int imageWidth = imageView.getDrawable().getIntrinsicWidth();
-            float scaledImageWidth = imageWidth * imageViewDrawableRatio * imageView.getScale();
-            float rightEdge = (viewWidth - scaledImageWidth) / 2;
-            float leftEdge = -rightEdge;
-            if (scaledImageWidth < viewWidth) {
-                if (m_offset.x > rightEdge) {
-                    m_offset.x = rightEdge;
-                } else if (m_offset.x < leftEdge) {
-                    m_offset.x = leftEdge;
-                }
-            } else {
-                if (m_offset.x > leftEdge) {
-                    m_offset.x = leftEdge;
-                } else if (m_offset.x < rightEdge) {
-                    m_offset.x = rightEdge;
-                }
+    private void avoidScrollingOutOfViewportOnXAxle(WebImageView imageView, int viewWidth, float imageViewDrawableRatio) {
+        int imageWidth = imageView.getDrawable().getIntrinsicWidth();
+        float scaledImageWidth = imageWidth * imageViewDrawableRatio * imageView.getScale();
+        float rightEdge = (viewWidth - scaledImageWidth) / 2;
+        float leftEdge = -rightEdge;
+        if (scaledImageWidth < viewWidth) {
+            if (m_offset.x > rightEdge) {
+                m_offset.x = rightEdge;
+            } else if (m_offset.x < leftEdge) {
+                m_offset.x = leftEdge;
+            }
+        } else {
+            if (m_offset.x > leftEdge) {
+                m_offset.x = leftEdge;
+            } else if (m_offset.x < rightEdge) {
+                m_offset.x = rightEdge;
             }
         }
     }
