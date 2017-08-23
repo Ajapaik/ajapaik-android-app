@@ -31,8 +31,6 @@ import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.test.R;
 
-import java.util.Arrays;
-
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static ee.ajapaik.android.ProfileActivity.RETURN_ACTIVITY;
@@ -100,8 +98,6 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 }
             });
         }
-
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "user_friends"));
     }
 
     private void showProgressDialog(String title) {
