@@ -49,25 +49,62 @@
                 android:layout_height="wrap_content"
                 android:text="@string/profile_logout" />
 
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/button_action_facebook"
-                style="@style/com_facebook_loginview_default_style"
-                android:layout_width="fill_parent"
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp" />
+                android:id="@+id/button_fb_login"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableStart="@drawable/facebook"
+                android:textSize="15sp"
+                android:background="@drawable/com_facebook_button_background"
+                android:text="@string/profile_facebook_login"
+                android:textColor="@android:color/white"/>
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/button_action_google"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_google_login"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableStart="@drawable/google"
+                android:textSize="15sp"
+                android:background="#dd4b39"
+                android:text="@string/profile_google_login"
+                android:textColor="@android:color/white"/>
 
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-            <Button style="@style/ProfileButton" android:id="@+id/button_action_login" android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" android:text="@string/profile_login"/>
+                <Button style="@style/ProfileButton"
+                        android:id="@+id/button_action_login"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_login"/>
 
-            <Button style="@style/ProfileButton" android:id="@+id/button_action_register" android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" android:text="@string/profile_register"/>
+                <Button style="@style/ProfileButton"
+                        android:id="@+id/button_action_register"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/profile_register"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

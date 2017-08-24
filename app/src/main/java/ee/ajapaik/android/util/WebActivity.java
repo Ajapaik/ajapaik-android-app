@@ -36,6 +36,7 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static ee.ajapaik.android.ProfileActivity.RETURN_ACTIVITY;
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 import static ee.ajapaik.android.util.Authorization.Type.GOOGLE;
+import static java.util.Arrays.asList;
 
 public class WebActivity extends AppCompatActivity implements DialogInterface, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG = "WebActivity";
@@ -98,6 +99,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 }
             });
         }
+        LoginManager.getInstance().logInWithReadPermissions(this, asList("public_profile", "user_friends"));
     }
 
     private void showProgressDialog(String title) {

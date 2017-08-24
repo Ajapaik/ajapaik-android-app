@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.facebook.login.widget.LoginButton;
-import com.google.android.gms.common.SignInButton;
 import ee.ajapaik.android.LoginActivity;
 import ee.ajapaik.android.RegistrationActivity;
 import ee.ajapaik.android.data.Hyperlink;
@@ -218,12 +216,12 @@ public class ProfileFragment extends WebFragment {
         return (TextView)getView().findViewById(R.id.text_link);
     }
 
-    private LoginButton getFacebookButton() {
-        return (LoginButton)getView().findViewById(R.id.button_action_facebook);
+    private Button getFacebookButton() {
+        return (Button)getView().findViewById(R.id.button_fb_login);
     }
 
-    private SignInButton getGoogleButton() {
-        return (SignInButton) getView().findViewById(R.id.button_action_google);
+    private Button getGoogleButton() {
+        return (Button) getView().findViewById(R.id.button_google_login);
     }
 
     private Button getLogoutButton() {

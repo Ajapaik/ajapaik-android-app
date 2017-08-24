@@ -43,12 +43,11 @@
 
     <!-- Profile -->
     <string name="profile_title">Profile</string>
-    <string name="profile_facebook">Facebook</string>
-    <string name="profile_google">G+</string>
-    <string name="profile_login_hint">Login with G+ or Facebook</string>
+    <string name="profile_facebook_login">Sign in with Facebook</string>
+    <string name="profile_google_login">Sign in with Google</string>
     <string name="profile_logout">Logout</string>
-    <string name="profile_login">Login using username and password</string>
-    <string name="profile_register">Register using username and password</string>
+    <string name="profile_login">Sign in</string>
+    <string name="profile_register">Create account</string>
     <string name="input_username_hint">Email</string>
     <string name="input_password_hint">Password</string>
     <string name="profile_rank">Rank: %1$d</string>
