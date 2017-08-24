@@ -123,10 +123,6 @@ public class ProfileFragment extends WebFragment {
                     Hyperlink link = m_profile.getLink();
                     String summary = context.getResources().getQuantityString(R.plurals.profile_rephotos, m_profile.getRephotosCount(), m_profile.getRephotosCount());
 
-                    if (m_profile.getRank() != 0) {
-                        summary = summary + " " + context.getResources().getString(R.string.profile_rank, m_profile.getRank());
-                    }
-
                     getNameView().setText((m_profile.getName() != null) ? m_profile.getName() : "");
 
                     getTitleView().setText(Html.fromHtml(summary));

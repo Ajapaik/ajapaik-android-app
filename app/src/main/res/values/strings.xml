@@ -50,11 +50,10 @@
     <string name="profile_register">Create account</string>
     <string name="input_username_hint">Email</string>
     <string name="input_password_hint">Password</string>
-    <string name="profile_rank">Rank: %1$d</string>
     <plurals name="profile_rephotos">
-        <item quantity="zero">You haven\'t made any rephotos yet.</item>
-        <item quantity="one">&lt;b>1&lt;/b> rephoto.</item>
-        <item quantity="other">&lt;b>%1$d&lt;/b> rephotos.</item>
+        <item quantity="zero">You haven\'t made any rephotos yet</item>
+        <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
+        <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
     </plurals>
 
     <!-- Login -->

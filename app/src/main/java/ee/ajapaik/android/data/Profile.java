@@ -1,15 +1,13 @@
 package ee.ajapaik.android.data;
 
 import android.content.Context;
-
 import com.google.gson.JsonObject;
-
-import java.util.Hashtable;
-import java.util.Map;
-
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
+
+import java.util.Hashtable;
+import java.util.Map;
 
 public class Profile extends Model {
     private static final String API_PATH = "/user/me/";
@@ -19,7 +17,6 @@ public class Profile extends Model {
     private static final String KEY_MESSAGE = "message";
     private static final String KEY_STATE = "state";
     private static final String KEY_REPHOTOS = "rephotos";
-    private static final String KEY_RANK = "rank";
 
     public static WebAction<Profile> createAction(Context context, Profile profile) {
         Map<String, String> parameters = new Hashtable<String, String>();
@@ -39,12 +36,10 @@ public class Profile extends Model {
     private Hyperlink m_avatar;
     private String m_message;
     private Hyperlink m_link;
-    private int m_rank;
     private String m_state;
     private int m_rephotos;
 
     public Profile() {
-        m_rank = -1;
         m_rephotos = -1;
     }
 
@@ -57,13 +52,8 @@ public class Profile extends Model {
         m_name = readString(attributes, KEY_NAME);
         m_avatar = readHyperlink(attributes, KEY_AVATAR);
         m_message = readString(attributes, KEY_MESSAGE);
-        m_rank = readInteger(attributes, KEY_RANK);
         m_rephotos = readInteger(attributes, KEY_REPHOTOS);
         m_state = readString(attributes, KEY_STATE);
-    }
-
-    public boolean isObsolete() {
-        return (m_rank < 0 || m_rephotos < 0) ? true : false;
     }
 
     @Override
@@ -75,7 +65,6 @@ public class Profile extends Model {
         write(attributes, KEY_AVATAR, m_avatar);
         write(attributes, KEY_MESSAGE, m_message);
         write(attributes, KEY_STATE, m_state);
-        write(attributes, KEY_RANK, m_rank);
         write(attributes, KEY_REPHOTOS, m_rephotos);
 
         return attributes;
@@ -101,10 +90,6 @@ public class Profile extends Model {
         return m_state;
     }
 
-    public int getRank() {
-        return m_rank;
-    }
-
     public int getRephotosCount() {
         return m_rephotos;
     }
@@ -119,7 +104,6 @@ public class Profile extends Model {
 
         if(profile == null ||
                 profile.getRephotosCount() != m_rephotos ||
-                profile.getRank() != m_rank ||
                 !Objects.match(profile.getLink(), m_link) ||
                 !Objects.match(profile.getMessage(), m_message) ||
                 !Objects.match(profile.getAvatar(), m_avatar) ||
