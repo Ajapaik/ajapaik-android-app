@@ -43,13 +43,6 @@
                 android:text="" />
 
             <Button
-                android:id="@+id/button_action_logout"
-                style="@style/ProfileButton"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/profile_logout" />
-
-            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button_fb_login"
@@ -105,10 +98,20 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+            android:id="@+id/button_action_logout"
+            style="@style/ProfileButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/profile_logout"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"
