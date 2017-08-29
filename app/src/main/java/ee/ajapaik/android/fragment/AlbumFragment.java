@@ -36,6 +36,7 @@ public class AlbumFragment extends WebFragment {
 
     public void invalidate(boolean force) {
         if(m_album == null || force) {
+            getSwipeRefreshLayout().setRefreshing(true);
             refresh(false);
         }
     }
@@ -115,7 +116,9 @@ public class AlbumFragment extends WebFragment {
     public void onStart() {
         super.onStart();
         getSwipeRefreshLayout().setRefreshing(true);
-        refresh(false);
+        if (!isNearestFragment()) {
+            refresh(false);
+        }
     }
 
     public Album getAlbum() {
