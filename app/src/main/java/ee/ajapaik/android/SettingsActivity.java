@@ -33,7 +33,7 @@ public class SettingsActivity extends NavigationDrawerActivity {
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-
+            getPreferenceManager().setSharedPreferencesName("defaultPreferences");
             addPreferencesFromResource(R.xml.preferences);
         }
     }

@@ -8,6 +8,8 @@ import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
+import java.util.Date;
+
 public class TutorialActivity extends WebActivity {
 
     private MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
@@ -26,7 +28,13 @@ public class TutorialActivity extends WebActivity {
     }
 
     private void tutorial() {
-        if (sequence.hasFired()) return;
+        if (sequence.hasFired()) {
+            if (showTutorial()) {
+                sequence = new MaterialShowcaseSequence(this, new Date().toString());
+            }else {
+                return;
+            }
+        }
 
         ShowcaseConfig config = new ShowcaseConfig();
         config.setDelay(500); // half second between each showcase view
@@ -68,5 +76,9 @@ public class TutorialActivity extends WebActivity {
                 .build());
 
         sequence.start();
+    }
+
+    private boolean showTutorial() {
+        return getSharedPreferences("defaultPreferences", MODE_PRIVATE).getBoolean("showTutorial", false);
     }
 }
