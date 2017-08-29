@@ -1,7 +1,10 @@
 package ee.ajapaik.android;
 
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.support.v4.app.DialogFragment;
 import android.view.View;
+import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebActivity;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
@@ -12,7 +15,9 @@ import java.util.Date;
 
 public class TutorialActivity extends WebActivity {
 
+    public static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorial";
     private MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
+    private static final int DIALOG_SHOW_TUTORIAL_AGAIN = 12;
 
     public boolean isTutorialCompleted() {
         return sequence.hasFired();
@@ -30,12 +35,15 @@ public class TutorialActivity extends WebActivity {
     private void tutorial() {
         if (sequence.hasFired()) {
             if (showTutorial()) {
-                sequence = new MaterialShowcaseSequence(this, new Date().toString());
-            }else {
+                showDialogFragment(DIALOG_SHOW_TUTORIAL_AGAIN);
+            } else {
                 return;
             }
         }
+        setUpAndStartTutorial();
+    }
 
+    private void setUpAndStartTutorial() {
         ShowcaseConfig config = new ShowcaseConfig();
         config.setDelay(500); // half second between each showcase view
         sequence.setConfig(config);
@@ -79,6 +87,41 @@ public class TutorialActivity extends WebActivity {
     }
 
     private boolean showTutorial() {
-        return getSharedPreferences("defaultPreferences", MODE_PRIVATE).getBoolean("showTutorial", false);
+        return getPreferences().getBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, false);
+    }
+
+    private SharedPreferences getPreferences() {
+        return getSharedPreferences("defaultPreferences", MODE_PRIVATE);
+    }
+
+    @Override
+    protected DialogFragment createDialogFragment(int requestCode) {
+        if(requestCode == DIALOG_SHOW_TUTORIAL_AGAIN) {
+            return AlertFragment.create(
+                    getString(R.string.tutorial_dialog_show_again_title),
+                    getString(R.string.tutorial_dialog_show_again_message),
+                    getString(R.string.tutorial_dialog_show_again_no),
+                    getString(R.string.tutorial_dialog_show_again_yes));
+        }
+
+        return super.createDialogFragment(requestCode);
+    }
+
+    @Override
+    public void onDialogFragmentDismissed(DialogFragment fragment, int requestCode, int resultCode) {
+        if(requestCode == DIALOG_SHOW_TUTORIAL_AGAIN) {
+            SharedPreferences.Editor editor = getPreferences().edit();
+            if(resultCode == AlertFragment.RESULT_POSITIVE) {
+                editor.putBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, true);
+                sequence = new MaterialShowcaseSequence(this, new Date().toString());
+                setUpAndStartTutorial();
+            } else {
+                editor.putBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, false);
+            }
+            editor.apply();
+            return;
+        }
+
+        super.onDialogFragmentDismissed(fragment, requestCode, resultCode);
     }
 }

@@ -109,4 +109,8 @@
     <string name="tutorial_take_picture">Press shutter button or long tap anywhere on screen to take the rephoto.</string>
     <string name="tutorial_dismiss">Got it!</string>
 
+    <string name="tutorial_dialog_show_again_title">Show tutorial again?</string>
+    <string name="tutorial_dialog_show_again_message">You can turn tutorial on again from settings later</string>
+    <string name="tutorial_dialog_show_again_no">No</string>
+    <string name="tutorial_dialog_show_again_yes">Yes</string>
 </resources>
