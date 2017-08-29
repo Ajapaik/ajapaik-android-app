@@ -36,6 +36,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.0.0'
     compile 'com.google.android.gms:play-services:9.4.0'
     compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:preference-v7:25.3.1'
     compile 'com.facebook.android:facebook-android-sdk:4.18.0'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.google.firebase:firebase-core:9.4.0'

@@ -72,9 +72,9 @@
                 android:theme="@style/AppThemeTranslucent">
         </activity>
         <activity
-            android:name="ee.ajapaik.android.RegistrationActivity"
-            android:label="@string/registration_title"
-            android:theme="@style/AppThemeTranslucent">
+                android:name="ee.ajapaik.android.RegistrationActivity"
+                android:label="@string/registration_title"
+                android:theme="@style/AppThemeTranslucent">
         </activity>
         <service
             android:name="ee.ajapaik.android.WebService">
@@ -95,6 +95,10 @@
         <activity
                 android:name="ee.ajapaik.android.AboutActivity"
                 android:label="@string/about_title">
+        </activity>
+        <activity
+                android:name="ee.ajapaik.android.SettingsActivity"
+                android:label="@string/action_settings">
         </activity>
     </application>
 

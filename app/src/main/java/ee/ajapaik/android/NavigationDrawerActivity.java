@@ -57,6 +57,11 @@ public class NavigationDrawerActivity extends WebActivity {
                         AboutActivity.start(context);
                         if (context instanceof ProfileActivity) finish();
                         break;
+                    case R.id.settings:
+                        if (context instanceof SettingsActivity) break;
+                        SettingsActivity.start(context);
+                        if (context instanceof ProfileActivity) finish();
+                        break;
                 }
                 mDrawer.closeDrawer(GravityCompat.START, true);
                 return false;

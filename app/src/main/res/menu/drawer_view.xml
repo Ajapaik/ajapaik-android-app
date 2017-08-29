@@ -17,5 +17,9 @@
                 android:id="@+id/about"
                 android:icon="@drawable/ic_info_black_24dp"
                 android:title="@string/about_title" />
+        <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_setting_dark"
+                android:title="@string/action_settings" />
     </group>
 </menu>

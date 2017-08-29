@@ -99,6 +99,9 @@
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
 
+    <!-- Settings -->
+    <string name="settings_show_tutorial">Show tutorial in rephoto mode</string>
+
     <!-- Tutorial -->
     <string name="tutorial_hide_show_flip">Tap to hide/show image.\nUse flip icon in upper right corner to flip old image.</string>
     <string name="tutorial_opacity_zoom">Slide to adjust transparency of old image.\nPinch zoom to zoom old image.</string>
