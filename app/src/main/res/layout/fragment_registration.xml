@@ -10,7 +10,8 @@
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:textColor="#bcbcbc"
-            android:layout_marginTop="60dp" android:inputType="textEmailAddress"
+            android:layout_marginTop="60dp"
+            android:inputType="textEmailAddress"
             android:hint="@string/input_username_hint"/>
     <EditText
             android:layout_width="match_parent"
@@ -22,11 +23,33 @@
             android:layout_alignEnd="@+id/input_username"
             android:textColor="#bcbcbc"
             android:hint="@string/input_password_hint"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/input_firstname"
+            android:layout_below="@+id/input_password"
+            android:layout_alignStart="@+id/input_password"
+            android:layout_alignEnd="@+id/input_password"
+            android:textColor="#bcbcbc"
+            android:hint="@string/input_firstname_hint"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/input_lastname"
+            android:layout_below="@+id/input_firstname"
+            android:layout_alignStart="@+id/input_firstname"
+            android:layout_alignEnd="@+id/input_firstname"
+            android:textColor="#bcbcbc"
+            android:hint="@string/input_lastname_hint"/>
     <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/action_register"
-            android:id="@+id/button_action_start_register" android:layout_below="@+id/input_password"
+            android:id="@+id/button_action_start_register" android:layout_below="@+id/input_lastname"
             android:layout_alignEnd="@+id/input_username"
             android:layout_alignStart="@+id/input_username"/>
 

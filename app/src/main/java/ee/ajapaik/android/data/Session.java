@@ -32,6 +32,8 @@ public class Session extends Model {
         parameters.put("type", authorization.getType().getName());
         parameters.put("username", authorization.getUsername());
         parameters.put("password", authorization.getPassword());
+        parameters.put("firstname", authorization.getFirstname());
+        parameters.put("lastname", authorization.getLastname());
 
         return new WebAction<Session>(context, "/register/", parameters, CREATOR);
     }

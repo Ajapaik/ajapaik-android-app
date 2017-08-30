@@ -111,6 +111,8 @@ Registers a new account and allows to convert automatic accounts into regular, F
         STRING password [R] - Password
         INTEGER length [O=0] - Session length in seconds. 0 - automatic
         STRING os [O=android] - Platform
+        STRING firstname [R] - Firstname
+        STRING lastname [R] - Lastname
     
     Returns:
         See /login

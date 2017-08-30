@@ -27,7 +27,9 @@ public class RegistrationFragment extends WebFragment {
                 Authorization authorization = new Authorization(
                         USERNAME_PASSWORD,
                         getUsernameInput().getText().toString(),
-                        getPasswordInput().getText().toString()
+                        getPasswordInput().getText().toString(),
+                        getFirstnameInput().getText().toString(),
+                        getLastnameInput().getText().toString()
                 );
                 getSettings().setAuthorization(authorization);
                 registerWithUsername();
@@ -45,6 +47,14 @@ public class RegistrationFragment extends WebFragment {
 
     private EditText getPasswordInput() {
         return (EditText) getView().findViewById(R.id.input_password);
+    }
+
+    private EditText getFirstnameInput() {
+        return (EditText) getView().findViewById(R.id.input_firstname);
+    }
+
+    private EditText getLastnameInput() {
+        return (EditText) getView().findViewById(R.id.input_lastname);
     }
 
 }
