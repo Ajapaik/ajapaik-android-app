@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
+import ee.ajapaik.android.fragment.CameraFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.test.R;
 import ee.ajapaik.android.util.WebActivity;
@@ -15,7 +16,8 @@ import java.util.Date;
 
 public class TutorialActivity extends WebActivity {
 
-    public static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorial";
+    private static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorial";
+    private static final String TAG_FRAGMENT = "fragment";
     private MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
     private static final int DIALOG_SHOW_TUTORIAL_AGAIN = 12;
 
@@ -33,6 +35,8 @@ public class TutorialActivity extends WebActivity {
     }
 
     private void tutorial() {
+        if (!(getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT) instanceof CameraFragment)) return;
+
         if (sequence.hasFired()) {
             if (showTutorial()) {
                 showDialogFragment(DIALOG_SHOW_TUTORIAL_AGAIN);
