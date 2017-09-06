@@ -16,7 +16,8 @@ import java.util.Date;
 
 public class TutorialActivity extends WebActivity {
 
-    private static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorial";
+    private static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorialPreference";
+    private static final String SHOW_TUTORIAL_WITHOUT_ASKING_PREFERENCE_KEY = "showTutorialWithoutAsking";
     private static final String TAG_FRAGMENT = "fragment";
     private MaterialShowcaseSequence sequence = new MaterialShowcaseSequence(this, "ThisValueIsStoredAndTutorialIsContinuedWhereLeftPreviousTime");
     private static final int DIALOG_SHOW_TUTORIAL_AGAIN = 12;
@@ -38,10 +39,14 @@ public class TutorialActivity extends WebActivity {
         if (!(getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT) instanceof CameraFragment)) return;
 
         if (sequence.hasFired()) {
-            if (showTutorial()) {
-                showDialogFragment(DIALOG_SHOW_TUTORIAL_AGAIN);
+            if (!showTutorial()) return;
+            if (showTutorialWithoutAsking()) {
+                sequence = new MaterialShowcaseSequence(this, new Date().toString());
+                SharedPreferences.Editor editor = getPreferences().edit();
+                editor.putBoolean(SHOW_TUTORIAL_WITHOUT_ASKING_PREFERENCE_KEY, false);
+                editor.apply();
             } else {
-                return;
+                showDialogFragment(DIALOG_SHOW_TUTORIAL_AGAIN);
             }
         }
         setUpAndStartTutorial();
@@ -92,6 +97,10 @@ public class TutorialActivity extends WebActivity {
 
     private boolean showTutorial() {
         return getPreferences().getBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, false);
+    }
+
+    private boolean showTutorialWithoutAsking() {
+        return getPreferences().getBoolean(SHOW_TUTORIAL_WITHOUT_ASKING_PREFERENCE_KEY, true);
     }
 
     private SharedPreferences getPreferences() {
