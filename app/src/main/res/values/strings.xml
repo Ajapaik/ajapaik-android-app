@@ -83,6 +83,9 @@
     <string name="upload_dialog_not_authenticated_title">Must be logged in to upload</string>
     <string name="upload_dialog_not_authenticated_message">Redirect to profile page</string>
     <string name="upload_dialog_not_authenticated_ok">OK</string>
+    <string name="upload_dialog_not_agreed_to_terms">I agree to publishing rephotographs under the CC BY 4.0 licence.</string>
+    <string name="upload_dialog_agree_to_terms">Yes!</string>
+    <string name="upload_dialog_decline_terms">No</string>
 
     <!-- ACRA -->
     <string name="acra_dialog_title">Sift.pics has crashed</string>
@@ -104,6 +107,7 @@
 
     <!-- Settings -->
     <string name="settings_show_tutorial">Show tutorial in rephoto mode</string>
+    <string name="settings_agree_to_license_terms">I agree to publishing rephotographs on Ajapaik.ee under CC BY 4.0 licence.</string>
 
     <!-- Tutorial -->
     <string name="tutorial_hide_show_flip">Tap to hide/show image.\nUse flip icon in upper right corner to flip old image.</string>

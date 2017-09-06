@@ -5,4 +5,9 @@
                         android:key="showTutorialPreference"
                         android:widgetLayout="@layout/checkbox_layout"
                         android:layout="@layout/preference_layout"/>
+    <CheckBoxPreference android:title="@string/settings_agree_to_license_terms"
+                        android:defaultValue="true"
+                        android:key="agreeToLicenseTerms"
+                        android:widgetLayout="@layout/checkbox_layout"
+                        android:layout="@layout/preference_layout"/>
 </PreferenceScreen>

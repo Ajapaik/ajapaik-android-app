@@ -2,6 +2,7 @@ package ee.ajapaik.android.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,6 +32,9 @@ import ee.ajapaik.android.widget.WebImageView;
 
 import java.io.IOException;
 
+import static android.content.Context.MODE_PRIVATE;
+import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
+
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String KEY_UPLOAD = "upload";
 
@@ -39,6 +43,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private static final int DIALOG_PROGRESS = 3;
     private static final int DIALOG_SUCCESS = 4;
     private static final int DIALOG_NOT_AUTHENTICATED = 5;
+    private static final int DIALOG_NOT_AGREED_TO_TERMS = 6;
 
     private static final int THUMBNAIL_SIZE = 400;
 
@@ -228,7 +233,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             Log.e("Rephoto preview", "Failed to set rotation for rephoto preview", e);
         }
         Bitmap bitmap = BitmapFactory.decodeFile(m_upload.getPath());
-        return Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
     private boolean needsHeightScaling(float unscaledImageWidth, float unscaledImageHeight, Photo oldPhoto) {
@@ -272,6 +277,12 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     getString(R.string.upload_dialog_not_authenticated_title),
                     getString(R.string.upload_dialog_not_authenticated_message),
                     getString(R.string.upload_dialog_not_authenticated_ok));
+        } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
+            return AlertFragment.create(
+                    getString(R.string.upload_dialog_not_agreed_to_terms),
+                    "",
+                    getString(R.string.upload_dialog_decline_terms),
+                    getString(R.string.upload_dialog_agree_to_terms));
         }
 
         return super.createDialogFragment(requestCode);
@@ -290,6 +301,13 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             success();
         } else if (requestCode == DIALOG_NOT_AUTHENTICATED) {
             ProfileActivity.start(getContext(), "upload");
+        } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
+            if(resultCode == AlertFragment.RESULT_POSITIVE) {
+                SharedPreferences.Editor editor = getSharedPreferences().edit();
+                editor.putBoolean("agreeToLicenseTerms", true);
+                editor.apply();
+                uploadPhoto();
+            }
         }
     }
 
@@ -301,13 +319,14 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             success();
         } else if (requestCode == DIALOG_ERROR_NO_CONNECTION ||
                 requestCode == DIALOG_ERROR_UNKNOWN) {
-            // Do nothing
         }
     }
 
     private void uploadPhoto() {
         if (getSettings().getAuthorization().isAnonymous()) {
             showDialog(DIALOG_NOT_AUTHENTICATED);
+        } else if (!isAgreedToTerms()) {
+            showDialog(DIALOG_NOT_AGREED_TO_TERMS);
         } else {
             Context context = getActivity();
             WebAction<Upload> action = Upload.createAction(context, m_upload);
@@ -329,6 +348,14 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 }
             });
         }
+    }
+
+    private boolean isAgreedToTerms() {
+        return getSharedPreferences().getBoolean("agreeToLicenseTerms", true);
+    }
+
+    private SharedPreferences getSharedPreferences() {
+        return getActivity().getSharedPreferences(DEFAULT_PREFERENCES_KEY, MODE_PRIVATE);
     }
 
     private void success() {

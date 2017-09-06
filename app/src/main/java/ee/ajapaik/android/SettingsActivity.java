@@ -11,6 +11,7 @@ import ee.ajapaik.android.test.R;
 public class SettingsActivity extends NavigationDrawerActivity {
 
     private static final String TAG_FRAGMENT = "fragment";
+    public static final String DEFAULT_PREFERENCES_KEY = "defaultPreferences";
 
     public static void start(Context context) {
         Intent intent = new Intent(context, SettingsActivity.class);
@@ -35,7 +36,7 @@ public class SettingsActivity extends NavigationDrawerActivity {
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            getPreferenceManager().setSharedPreferencesName("defaultPreferences");
+            getPreferenceManager().setSharedPreferencesName(DEFAULT_PREFERENCES_KEY);
             addPreferencesFromResource(R.xml.preferences);
         }
 

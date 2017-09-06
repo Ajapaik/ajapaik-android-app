@@ -14,6 +14,8 @@ import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 import java.util.Date;
 
+import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
+
 public class TutorialActivity extends WebActivity {
 
     private static final String SHOW_TUTORIAL_PREFERENCE_KEY = "showTutorialPreference";
@@ -104,7 +106,7 @@ public class TutorialActivity extends WebActivity {
     }
 
     private SharedPreferences getPreferences() {
-        return getSharedPreferences("defaultPreferences", MODE_PRIVATE);
+        return getSharedPreferences(DEFAULT_PREFERENCES_KEY, MODE_PRIVATE);
     }
 
     @Override
