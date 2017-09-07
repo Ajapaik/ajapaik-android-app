@@ -279,8 +279,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     getString(R.string.upload_dialog_not_authenticated_ok));
         } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
             return AlertFragment.create(
-                    getString(R.string.upload_dialog_not_agreed_to_terms),
                     "",
+                    getString(R.string.upload_dialog_not_agreed_to_terms),
                     getString(R.string.upload_dialog_decline_terms),
                     getString(R.string.upload_dialog_agree_to_terms));
         }
