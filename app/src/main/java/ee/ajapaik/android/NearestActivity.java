@@ -30,9 +30,8 @@ public class NearestActivity extends AlbumActivity {
             Settings settings = getSettings();
             Location oldLocation = settings.getLocation();
 
-            if(oldLocation == null || oldLocation.distanceTo(newLocation) > MIN_DISTANCE_IN_METERS) {
-                AlbumFragment fragment = getFragment();
-
+            AlbumFragment fragment = getFragment();
+            if (shouldLoadNearestPhotos(newLocation, oldLocation, fragment)) {
                 settings.setLocation(newLocation);
 
                 if(fragment != null) {
@@ -56,6 +55,11 @@ public class NearestActivity extends AlbumActivity {
             }
         }
     };
+
+    private boolean shouldLoadNearestPhotos(Location newLocation, Location oldLocation, AlbumFragment fragment) {
+        return oldLocation == null || oldLocation.distanceTo(newLocation) > MIN_DISTANCE_IN_METERS
+                || fragment == null || fragment.getAlbum() == null;
+    }
 
     protected AlbumFragment createFragment() {
         return new NearestFragment();
