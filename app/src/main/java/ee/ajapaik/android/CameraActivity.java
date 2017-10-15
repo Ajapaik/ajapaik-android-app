@@ -73,7 +73,9 @@ public class CameraActivity extends TutorialActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_camera, menu);
+        if (!isUploadPreview()) {
+            getMenuInflater().inflate(R.menu.menu_camera, menu);
+        }
         waitForMenuToBeCreatedAndShowTutorial();
         return true;
     }
@@ -101,5 +103,9 @@ public class CameraActivity extends TutorialActivity {
 
     protected CameraFragment getFragment() {
         return (CameraFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
+    }
+
+    public boolean isUploadPreview() {
+        return getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT) instanceof UploadFragment;
     }
 }
