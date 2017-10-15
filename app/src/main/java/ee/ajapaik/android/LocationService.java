@@ -50,7 +50,7 @@ public class LocationService extends Service implements LocationListener, Sensor
     }
 
     private void invalidate() {
-        boolean hasLocation = (m_location != null) ? true : false;
+        boolean hasLocation = m_location != null;
 
         try {
             SensorManager sm = (SensorManager) getSystemService(SENSOR_SERVICE);
