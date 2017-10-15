@@ -60,8 +60,6 @@ public class LocationService extends Service implements LocationListener, Sensor
 
             if (m_manager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    System.out.println("no permission");
-//                    TODO Handle permission rejection properly
                     return;
                 }
                 m_manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_UPDATE_IN_SECONDS * 1000, MIN_DISTANCE_IN_METERS, this);
