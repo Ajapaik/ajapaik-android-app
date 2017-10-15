@@ -1,8 +1,9 @@
 .gradle
 /local.properties
-/.idea
+.idea
 .DS_Store
 /build
+*.iml
 
 Release.jks
 app-release.apk
