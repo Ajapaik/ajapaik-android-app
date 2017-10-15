@@ -97,7 +97,6 @@ public class NearestActivity extends AlbumActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSettings().setLocation(null);
     }
 
     @Override
