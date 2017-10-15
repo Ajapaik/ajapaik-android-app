@@ -101,10 +101,6 @@ public class CameraActivity extends TutorialActivity {
         return m_connection.getOrientation();
     }
 
-    protected CameraFragment getFragment() {
-        return (CameraFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
-    }
-
     public boolean isUploadPreview() {
         return getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT) instanceof UploadFragment;
     }
