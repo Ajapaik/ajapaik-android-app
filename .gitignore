@@ -6,6 +6,4 @@
 
 Release.jks
 app-release.apk
-/app/app.iml
 /.idea/
-/app/google-services.json
