@@ -1,9 +1,11 @@
 .gradle
 /local.properties
-.idea
 .DS_Store
 /build
 *.iml
 
 Release.jks
 app-release.apk
+/app/app.iml
+/.idea/
+/app/google-services.json
