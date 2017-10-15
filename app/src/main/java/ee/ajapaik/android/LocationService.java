@@ -1,10 +1,12 @@
 package ee.ajapaik.android;
 
+import android.Manifest;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -16,6 +18,7 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -50,12 +53,17 @@ public class LocationService extends Service implements LocationListener, Sensor
         boolean hasLocation = (m_location != null) ? true : false;
 
         try {
-            SensorManager sm = (SensorManager)getSystemService(SENSOR_SERVICE);
+            SensorManager sm = (SensorManager) getSystemService(SENSOR_SERVICE);
 
             m_enabled = false;
-            m_manager = (LocationManager)getSystemService(LOCATION_SERVICE);
+            m_manager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
-            if(m_manager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+            if (m_manager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    System.out.println("no permission");
+//                    TODO Handle permission rejection properly
+                    return;
+                }
                 m_manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_UPDATE_IN_SECONDS * 1000, MIN_DISTANCE_IN_METERS, this);
                 m_enabled = true;
 
