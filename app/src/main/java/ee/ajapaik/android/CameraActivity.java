@@ -10,7 +10,7 @@ import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.CameraFragment;
 import ee.ajapaik.android.fragment.UploadFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 
 public class CameraActivity extends TutorialActivity {

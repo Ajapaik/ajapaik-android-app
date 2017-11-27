@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.fragment.AlbumFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class AlbumActivity extends NavigationDrawerActivity {
     private static final String TAG_FRAGMENT = "fragment";

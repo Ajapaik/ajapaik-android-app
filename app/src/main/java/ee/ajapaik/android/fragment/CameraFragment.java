@@ -27,7 +27,7 @@ import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
 import ee.ajapaik.android.fragment.util.ImageFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;

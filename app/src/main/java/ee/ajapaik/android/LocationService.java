@@ -24,7 +24,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 
 public class LocationService extends Service implements LocationListener, SensorEventListener {
     private static final String TAG = "LocationService";

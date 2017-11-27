@@ -8,7 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebActivity;
 
 public class NavigationDrawerActivity extends WebActivity {

@@ -22,7 +22,7 @@ import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.ImageFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.*;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;

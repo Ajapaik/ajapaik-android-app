@@ -6,7 +6,7 @@ import android.text.format.DateFormat;
 
 import java.util.Date;
 
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class Strings {
     public static String toBase16(byte b) {

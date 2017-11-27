@@ -13,7 +13,7 @@ import android.support.v4.content.ContextCompat;
 import ee.ajapaik.android.fragment.AlbumFragment;
 import ee.ajapaik.android.fragment.NearestFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;

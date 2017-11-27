@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ee.ajapaik.android.data.Photo;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Images;
 import ee.ajapaik.android.util.Size;
 import ee.ajapaik.android.util.Strings;

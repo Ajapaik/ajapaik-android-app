@@ -8,7 +8,7 @@ import android.view.Menu;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.fragment.PhotoFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
 

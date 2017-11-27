@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import ee.ajapaik.android.fragment.AlbumsFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class AlbumsActivity extends NavigationDrawerActivity {
 

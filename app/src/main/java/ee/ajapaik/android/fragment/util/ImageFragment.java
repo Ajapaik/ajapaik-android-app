@@ -6,7 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import ee.ajapaik.android.data.Photo;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.widget.WebImageView;
 
 public abstract class ImageFragment extends WebFragment {

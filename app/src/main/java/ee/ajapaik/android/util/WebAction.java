@@ -9,7 +9,7 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 
 import java.io.File;
 import java.io.IOException;

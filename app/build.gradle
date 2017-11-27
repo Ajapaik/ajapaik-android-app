@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
-        applicationId "ee.ajapaik.android.test"
+        applicationId "ee.ajapaik.android"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 7

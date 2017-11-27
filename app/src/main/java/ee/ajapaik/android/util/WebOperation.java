@@ -47,7 +47,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 
 public abstract class WebOperation {
     private static final String TAG = "WebOperation";

@@ -9,7 +9,7 @@ import android.os.Parcelable;
 import android.support.v4.app.DialogFragment;
 import android.view.KeyEvent;
 
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 
 public class AlertFragment extends DialogFragment {
     public static final int RESULT_NEGATIVE = -1;

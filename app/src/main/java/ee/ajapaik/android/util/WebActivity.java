@@ -29,7 +29,7 @@ import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -50,7 +50,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private static final int GOOGLE_SIGN_IN_RESOLUTION_REQUEST = 9002;
     private static final int GET_ACCOUNTS_PERMISSION = 6001;
 
-    private static final String SERVER_ID = "";
+    private static final String SERVER_ID = "980492713158-bubgsk3qr693pcekcilu1k5dt2elac9e.apps.googleusercontent.com";
     private CallbackManager m_facebookCallback = null;
     private GoogleApiClient m_googleApiClient = null;
 

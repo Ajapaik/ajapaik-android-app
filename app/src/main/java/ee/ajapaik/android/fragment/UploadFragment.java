@@ -26,7 +26,7 @@ import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.ProgressFragment;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
 

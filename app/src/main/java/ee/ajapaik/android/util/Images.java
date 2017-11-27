@@ -1,6 +1,6 @@
 package ee.ajapaik.android.util;
 
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class Images {
     public static int toRephotoCountDrawableId(int rephotos) {

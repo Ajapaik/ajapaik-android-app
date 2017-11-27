@@ -19,7 +19,7 @@ import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;

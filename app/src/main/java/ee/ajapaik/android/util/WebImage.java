@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 
 public class WebImage extends WebOperation {
     private static final String TAG = "WebImage";

@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class FixedAspectRatioLayout extends FrameLayout {
     private float m_aspectRatioWidth = 1.0F;

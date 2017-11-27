@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import ee.ajapaik.android.fragment.ProfileFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class ProfileActivity extends NavigationDrawerActivity {
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Authorization;
 
 import static ee.ajapaik.android.util.Authorization.Type.USERNAME_PASSWORD;

@@ -13,7 +13,7 @@ import java.util.List;
 
 import ee.ajapaik.android.AlbumActivity;
 import ee.ajapaik.android.data.Album;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 
 public class AlbumAdapter extends ArrayAdapter<Album> {
     private static final int THUMBNAIL_SIZE = 250;

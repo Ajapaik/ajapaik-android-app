@@ -1,8 +1,8 @@
 package ee.ajapaik.android;
 
 import com.facebook.FacebookSdk;
-import ee.ajapaik.android.test.BuildConfig;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.BuildConfig;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebImage;
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;

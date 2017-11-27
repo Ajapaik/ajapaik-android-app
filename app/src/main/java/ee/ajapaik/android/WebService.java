@@ -12,7 +12,7 @@ import android.os.Looper;
 import android.util.Log;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.test.BuildConfig;
+import ee.ajapaik.android.BuildConfig;
 import ee.ajapaik.android.util.*;
 
 import java.lang.ref.WeakReference;

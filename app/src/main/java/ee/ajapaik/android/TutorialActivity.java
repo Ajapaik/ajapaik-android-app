@@ -6,7 +6,7 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import ee.ajapaik.android.fragment.CameraFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebActivity;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;

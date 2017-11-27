@@ -3,7 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.location.Location;
 import ee.ajapaik.android.data.Album;
-import ee.ajapaik.android.test.R;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebAction;
 
 public class NearestFragment extends AlbumFragment {
