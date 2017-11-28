@@ -37,7 +37,7 @@ public class AboutActivity extends NavigationDrawerActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.privacy_policy) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ajapaik.ee"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Ajapaik/Android-app/wiki/Ajapaik-Android-app-Privacy-Policy"));
             startActivity(intent);
         }
     }
