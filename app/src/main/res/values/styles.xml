@@ -17,6 +17,7 @@
 
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
     </style>
 
     <style name="AppThemeFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
@@ -32,6 +33,9 @@
         <item name="colorPrimary">@color/albums_background</item>
         <item name="colorPrimaryDark">@color/albums_background</item>
         <item name="colorAccent">@color/albums_background</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="android:Theme.Material.Light.Dialog.Alert">
     </style>
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
