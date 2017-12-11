@@ -72,6 +72,7 @@ public class NearestActivity extends AlbumActivity {
         if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_PERMISSION);
         }
+        this.setTitle(getResources().getString(R.string.nearest_title));
     }
 
     @Override

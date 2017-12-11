@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Global -->
-    <string name="app_name">Ajapaik</string>
+    <string name="app_name">Ajapaik rephoto</string>
     <string name="none"></string>
     <string name="unit_km">km</string>
     <string name="unit_m">m</string>

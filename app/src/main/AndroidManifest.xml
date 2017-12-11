@@ -28,9 +28,8 @@
                 android:value="@string/facebook_app_id"/>
 
         <activity
-                android:name="ee.ajapaik.android.NearestActivity"
-                android:label="@string/nearest_title">
-            <intent-filter android:label="@string/app_name">
+                android:name="ee.ajapaik.android.NearestActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
