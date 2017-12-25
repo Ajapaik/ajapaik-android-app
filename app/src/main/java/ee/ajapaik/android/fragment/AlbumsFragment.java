@@ -40,6 +40,8 @@ public class AlbumsFragment extends WebFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        refresh(false);
+
         if(savedInstanceState != null) {
             Feed feed = savedInstanceState.getParcelable(KEY_FEED);
 
@@ -61,12 +63,6 @@ public class AlbumsFragment extends WebFragment {
 
         savedInstanceState.putParcelable(KEY_FEED, m_feed);
         savedInstanceState.putParcelable(KEY_LIST, m_list);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        refresh(false);
     }
 
     public void setFeed(Feed feed) {
