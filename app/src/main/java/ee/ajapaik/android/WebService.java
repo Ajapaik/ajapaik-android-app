@@ -10,6 +10,9 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
+
+import com.facebook.AccessToken;
+
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.BuildConfig;
@@ -20,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 
 public class WebService extends Service {
     private static final String TAG = "WebService";
@@ -64,8 +69,11 @@ public class WebService extends Service {
         WebAction<Session> action;
 
         if(authorization == null) {
-            authorization = Authorization.getAnonymous(WebService.this);
-            m_settings.setAuthorization(authorization);
+            authorization = setAuthorizationToAnonymous();
+        } else if (FACEBOOK.equals(authorization.getType())) {
+            if (AccessToken.getCurrentAccessToken() == null) {
+                setAuthorizationToAnonymous();
+            }
         }
 
         action = Session.createLoginAction(this, authorization);
@@ -78,6 +86,13 @@ public class WebService extends Service {
             m_settings.setAuthorization(Authorization.getAnonymous(this));
             runSilentLogin();
         }
+    }
+
+    private Authorization setAuthorizationToAnonymous() {
+        Authorization authorization;
+        authorization = Authorization.getAnonymous(WebService.this);
+        m_settings.setAuthorization(authorization);
+        return authorization;
     }
 
     private void runOperation(final Task task, final WebOperation operation) {
