@@ -93,6 +93,11 @@ public class AlbumFragment extends WebFragment {
                     }
                 }
         );
+
+        getSwipeRefreshLayout().setRefreshing(true);
+        if (!isNearestFragment()) {
+            refresh(false);
+        }
     }
 
     @Override
@@ -110,15 +115,6 @@ public class AlbumFragment extends WebFragment {
         super.onSaveInstanceState(savedInstanceState);
 
         savedInstanceState.putParcelable(KEY_ALBUM, m_album);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        getSwipeRefreshLayout().setRefreshing(true);
-        if (!isNearestFragment()) {
-            refresh(false);
-        }
     }
 
     public Album getAlbum() {
