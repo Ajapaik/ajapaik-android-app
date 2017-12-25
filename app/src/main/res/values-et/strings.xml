@@ -60,6 +60,8 @@
     <!-- Login -->
     <string name="login_title">Login</string>
     <string name="login_failed">Sisselogimine ebaõnnestus</string>
+    <string name="wrong_password">Vale parool!</string>
+
     <!-- Registration -->
     <string name="registration_title">Register</string>
     <string name="user_already_exists">Username already exists</string>

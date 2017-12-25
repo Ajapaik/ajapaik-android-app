@@ -14,6 +14,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.facebook.*;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -27,6 +29,7 @@ import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
+import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.R;
@@ -82,7 +85,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                             if (session != null) {
                                 login(session);
                             } else {
-                                dismissProgressDialog();
+                                handleLoginFail(status);
                             }
                         }
                     });
@@ -100,6 +103,21 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
             });
         }
         LoginManager.getInstance().logInWithReadPermissions(this, asList("public_profile", "user_friends"));
+    }
+
+    private void handleLoginFail(Status status) {
+        showErrorMessage(status);
+        dismissProgressDialog();
+        getSettings().setAuthorization(null);
+    }
+
+    private void showErrorMessage(Status status) {
+        int message = R.string.login_failed;
+        switch (status) {
+            case WRONG_PASSWORD:
+                message = R.string.wrong_password;
+        }
+        Toast.makeText(WebActivity.this, getResources().getString(message), Toast.LENGTH_LONG).show();
     }
 
     private void showProgressDialog(String title) {
@@ -203,7 +221,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                     if (session != null) {
                         login(session);
                     } else {
-                        dismissProgressDialog();
+                        handleLoginFail(status);
                     }
                 }
             });
