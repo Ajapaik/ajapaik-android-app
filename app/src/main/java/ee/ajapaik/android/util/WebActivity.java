@@ -53,7 +53,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private static final int GOOGLE_SIGN_IN_RESOLUTION_REQUEST = 9002;
     private static final int GET_ACCOUNTS_PERMISSION = 6001;
 
-    private static final String SERVER_ID = "980492713158-bubgsk3qr693pcekcilu1k5dt2elac9e.apps.googleusercontent.com";
+    private static final String SERVER_ID = "980492713158-sjro4lhu1veo19d1el3bvi81cmdbn3p8.apps.googleusercontent.com";
     private CallbackManager m_facebookCallback = null;
     private GoogleApiClient m_googleApiClient = null;
 

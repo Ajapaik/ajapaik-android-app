@@ -8,7 +8,7 @@ android {
         applicationId "ee.ajapaik.android"
         minSdkVersion 21
         targetSdkVersion 25
-        versionCode 7
+        versionCode 1007
         versionName "2.0"
         multiDexEnabled true
     }
@@ -32,13 +32,13 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.google.android.gms:play-services:9.4.0'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:preference-v7:25.3.1'
     compile 'com.facebook.android:facebook-android-sdk:4.18.0'
-    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.google.code.gson:gson:2.7'
     compile 'com.google.firebase:firebase-core:9.4.0'
     compile 'com.github.Ajapaik:MaterialShowcaseView:1.1.1'
     compile files('libs/httpcore-4.3.3.jar')
