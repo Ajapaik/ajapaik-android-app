@@ -3,6 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,6 +90,7 @@ public class AlbumsFragment extends WebFragment {
     }
 
     protected void refresh(final boolean animated) {
+        getSwipeRefreshLayout().setRefreshing(true);
         Context context = getActivity();
 
         if(m_feed == null) {
@@ -104,6 +106,7 @@ public class AlbumsFragment extends WebFragment {
 
                 if(feed != null) {
                     setFeed(feed);
+                    getSwipeRefreshLayout().setRefreshing(false);
                 } else if(m_feed == null || animated) {
                     // TODO: Show error alert
                 }
@@ -121,5 +124,9 @@ public class AlbumsFragment extends WebFragment {
 
     private ProgressBar getProgressBar() {
         return (ProgressBar)getView().findViewById(R.id.progress_bar);
+    }
+
+    private SwipeRefreshLayout getSwipeRefreshLayout() {
+        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }
