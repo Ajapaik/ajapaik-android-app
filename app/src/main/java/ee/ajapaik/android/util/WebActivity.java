@@ -73,7 +73,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
             LoginManager.getInstance().registerCallback(m_facebookCallback, new FacebookCallback<LoginResult>() {
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    if (getSettings().getAuthorization() == null || getSettings().getAuthorization().getType() != FACEBOOK) {
+                    if (getSettings().getAuthorization().getType() != FACEBOOK) {
                         showProgressDialog("Logging in...");
                     }
                     Authorization authorization = new Authorization(FACEBOOK, loginResult.getAccessToken().getUserId(), loginResult.getAccessToken().getToken());
@@ -108,7 +108,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private void handleLoginFail(Status status) {
         showErrorMessage(status);
         dismissProgressDialog();
-        getSettings().setAuthorization(null);
+        getSettings().setAuthorization(Authorization.getAnonymous(this));
     }
 
     private void showErrorMessage(Status status) {
