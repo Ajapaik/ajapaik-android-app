@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import ee.ajapaik.android.adapter.AlbumAdapter;
 import ee.ajapaik.android.data.Feed;
 import ee.ajapaik.android.data.util.Status;
@@ -113,7 +115,7 @@ public class AlbumsFragment extends WebFragment {
                     setFeed(feed);
                     getSwipeRefreshLayout().setRefreshing(false);
                 } else if(m_feed == null) {
-                    // TODO: Show error alert
+                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
             }
         });
