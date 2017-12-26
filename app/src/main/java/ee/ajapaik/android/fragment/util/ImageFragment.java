@@ -50,13 +50,11 @@ public abstract class ImageFragment extends WebFragment {
         return new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
-                getProgressBar().setVisibility(View.GONE);
                 getMainLayout().setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onImageUnloaded() {
-                getProgressBar().setVisibility(View.VISIBLE);
                 getMainLayout().setVisibility(View.GONE);
             }
 
@@ -89,9 +87,5 @@ public abstract class ImageFragment extends WebFragment {
 
     protected WebImageView getImageView() {
         return (WebImageView) getView().findViewById(R.id.image);
-    }
-
-    protected ProgressBar getProgressBar() {
-        return (ProgressBar) getView().findViewById(R.id.progress_bar);
     }
 }
