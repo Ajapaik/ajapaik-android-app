@@ -53,6 +53,15 @@ public class AlbumsFragment extends WebFragment {
                 getListView().onRestoreInstanceState(m_list);
             }
         }
+
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        refresh();
+                    }
+                }
+        );
     }
 
     @Override
