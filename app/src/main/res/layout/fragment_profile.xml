@@ -3,106 +3,113 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/layout_main"
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/layout_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/text_name"
-                style="@style/ProfileTitleText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/text_title"
-                style="@style/ProfileTitleText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/text_subtitle"
-                style="@style/ProfileSubtitleText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/text_link"
-                style="@style/ProfileLinkText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="all"
-                android:text="" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_fb_login"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:drawableStart="@drawable/facebook"
-                android:textSize="15sp"
-                android:background="@drawable/com_facebook_button_background"
-                android:text="@string/profile_facebook_login"
-                android:textColor="@android:color/white"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_google_login"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:drawableStart="@drawable/google"
-                android:textSize="15sp"
-                android:background="#dd4b39"
-                android:text="@string/profile_google_login"
-                android:textColor="@android:color/white"/>
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    style="@style/ProfileTitleText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:text="" />
 
-                <Button style="@style/ProfileButton"
-                        android:id="@+id/button_action_login"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@android:color/black"
-                        android:text="@string/profile_login"/>
+                <TextView
+                    android:id="@+id/text_title"
+                    style="@style/ProfileTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
-                <Button style="@style/ProfileButton"
-                        android:id="@+id/button_action_register"
-                        android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/text_subtitle"
+                    style="@style/ProfileSubtitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/text_link"
+                    style="@style/ProfileLinkText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:text="" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_fb_login"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/facebook"
+                    android:textSize="15sp"
+                    android:background="@drawable/com_facebook_button_background"
+                    android:text="@string/profile_facebook_login"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_google_login"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/google"
+                    android:textSize="15sp"
+                    android:background="#dd4b39"
+                    android:text="@string/profile_google_login"
+                    android:textColor="@android:color/white"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@android:color/black"
-                        android:text="@string/profile_register"/>
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                    <Button style="@style/ProfileButton"
+                            android:id="@+id/button_action_login"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:text="@string/profile_login"/>
+
+                    <Button style="@style/ProfileButton"
+                            android:id="@+id/button_action_register"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@android:color/black"
+                            android:text="@string/profile_register"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
-
-    </ScrollView>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <Button
             android:id="@+id/button_action_logout"
@@ -115,13 +122,5 @@
             android:layout_alignParentBottom="true"
             android:textColor="@android:color/black"
             android:text="@string/profile_logout"/>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone" />
 
 </RelativeLayout>

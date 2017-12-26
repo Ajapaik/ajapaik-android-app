@@ -2,6 +2,7 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -148,14 +149,14 @@ public class ProfileFragment extends WebFragment {
         Context context = getActivity();
 
         if(m_profile == null) {
-            getProgressBar().setVisibility(VISIBLE);
+            getSwipeRefreshLayout().setRefreshing(true);
         }
 
         getConnection().enqueue(context, Profile.createAction(context, (m_profile != null) ? m_profile : getSettings().getProfile()), new WebAction.ResultHandler<Profile>() {
             @Override
             public void onActionResult(Status status, Profile profile) {
-                if(m_profile == null) {
-                    getProgressBar().setVisibility(GONE);
+                if(getSwipeRefreshLayout().isRefreshing()) {
+                    getSwipeRefreshLayout().setRefreshing(false);
                 }
 
                 if(profile != null) {
@@ -192,8 +193,8 @@ public class ProfileFragment extends WebFragment {
         return getView().findViewById(R.id.layout_main);
     }
 
-    private ProgressBar getProgressBar() {
-        return (ProgressBar)getView().findViewById(R.id.progress_bar);
+    private SwipeRefreshLayout getSwipeRefreshLayout() {
+        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 
     private TextView getNameView() {
