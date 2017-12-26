@@ -100,11 +100,6 @@ public class NearestActivity extends AlbumActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     protected void onStop() {
         m_connection.disconnect(this);
         super.onStop();
