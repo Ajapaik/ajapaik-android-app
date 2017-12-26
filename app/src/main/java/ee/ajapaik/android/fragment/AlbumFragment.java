@@ -15,17 +15,19 @@ import android.widget.Toast;
 
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
-import static android.view.View.*;
+import static android.view.View.GONE;
+import static android.view.View.OnClickListener;
+import static android.view.View.VISIBLE;
 
 public class AlbumFragment extends WebFragment {
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
@@ -35,11 +37,9 @@ public class AlbumFragment extends WebFragment {
 
     private Album m_album;
 
-    public void invalidate(boolean force) {
-        if(m_album == null || force) {
-            getSwipeRefreshLayout().setRefreshing(true);
-            refresh();
-        }
+    public void invalidate() {
+        getSwipeRefreshLayout().setRefreshing(true);
+        refresh();
     }
 
     public String getAlbumIdentifier() {

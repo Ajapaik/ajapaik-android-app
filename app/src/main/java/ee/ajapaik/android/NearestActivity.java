@@ -5,15 +5,14 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
+
 import ee.ajapaik.android.fragment.AlbumFragment;
 import ee.ajapaik.android.fragment.NearestFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -35,7 +34,7 @@ public class NearestActivity extends AlbumActivity {
                 settings.setLocation(newLocation);
 
                 if(fragment != null) {
-                    fragment.invalidate(true);
+                    fragment.invalidate();
                 }
             }
         }
