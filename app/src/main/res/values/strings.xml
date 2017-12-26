@@ -6,6 +6,7 @@
     <string name="none"></string>
     <string name="unit_km">km</string>
     <string name="unit_m">m</string>
+    <string name="something_went_wrong">Something went wrong</string>
 
     <!-- Menu -->
     <string name="action_albums">Albums</string>

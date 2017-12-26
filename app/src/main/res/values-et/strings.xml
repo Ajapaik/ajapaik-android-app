@@ -5,6 +5,7 @@
     <string name="none"></string>
     <string name="unit_km">km</string>
     <string name="unit_m">m</string>
+    <string name="something_went_wrong">Midagi läks valesti</string>
 
     <!-- Menu -->
     <string name="action_albums">Albumid</string>

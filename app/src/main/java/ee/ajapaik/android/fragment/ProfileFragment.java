@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import ee.ajapaik.android.LoginActivity;
 import ee.ajapaik.android.RegistrationActivity;
 import ee.ajapaik.android.data.Hyperlink;
@@ -20,6 +22,7 @@ import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Authorization;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.util.WebActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -166,7 +169,7 @@ public class ProfileFragment extends WebFragment {
 
                     setProfile(profile);
                 } else if(m_profile == null || animated) {
-                    // TODO: Show error alert
+                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
             }
         });
