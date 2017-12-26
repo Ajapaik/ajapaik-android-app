@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.adapter.PhotoAdapter;
@@ -181,7 +183,7 @@ public class AlbumFragment extends WebFragment {
                     if(album != null) {
                         setAlbum(album);
                     } else if(m_album == null || animated) {
-                        // TODO: Show error alert
+                        Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                     }
                     getSwipeRefreshLayout().setRefreshing(false);
                 }
