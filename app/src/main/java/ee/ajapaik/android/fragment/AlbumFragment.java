@@ -173,17 +173,10 @@ public class AlbumFragment extends WebFragment {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
 
-        if(m_album == null) {
-            getProgressBar().setVisibility(VISIBLE);
-        }
-
         if(action != null) {
             getConnection().enqueue(context, action, new WebAction.ResultHandler<Album>() {
                 @Override
                 public void onActionResult(Status status, Album album) {
-                    if(m_album == null) {
-                        getProgressBar().setVisibility(GONE);
-                    }
 
                     if(album != null) {
                         setAlbum(album);
@@ -218,10 +211,6 @@ public class AlbumFragment extends WebFragment {
 
     private StaggeredGridView getGridView(View view) {
         return (StaggeredGridView)view.findViewById(R.id.grid);
-    }
-
-    private ProgressBar getProgressBar() {
-        return (ProgressBar)getView().findViewById(R.id.progress_bar);
     }
 
     private Button getNoDataButton() {
