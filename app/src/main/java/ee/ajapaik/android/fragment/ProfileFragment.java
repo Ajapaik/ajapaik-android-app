@@ -102,6 +102,8 @@ public class ProfileFragment extends WebFragment {
         super.onAuthorizationChanged();
 
         invalidateLogin();
+
+        getSwipeRefreshLayout().setRefreshing(true);
         refresh();
     }
 
@@ -115,6 +117,8 @@ public class ProfileFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
+
+        getSwipeRefreshLayout().setRefreshing(true);
         refresh();
     }
 
@@ -157,10 +161,6 @@ public class ProfileFragment extends WebFragment {
 
     protected void refresh() {
         Context context = getActivity();
-
-        if(m_profile == null) {
-            getSwipeRefreshLayout().setRefreshing(true);
-        }
 
         getConnection().enqueue(context, Profile.createAction(context, (m_profile != null) ? m_profile : getSettings().getProfile()), new WebAction.ResultHandler<Profile>() {
             @Override

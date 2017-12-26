@@ -42,6 +42,7 @@ public class AlbumsFragment extends WebFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getSwipeRefreshLayout().setRefreshing(true);
         refresh();
 
         if(savedInstanceState != null) {
@@ -97,7 +98,6 @@ public class AlbumsFragment extends WebFragment {
     }
 
     protected void refresh() {
-        getSwipeRefreshLayout().setRefreshing(true);
         Context context = getActivity();
 
         getConnection().enqueue(context, Feed.createAction(context), new WebAction.ResultHandler<Feed>() {
