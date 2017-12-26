@@ -165,10 +165,6 @@ public class ProfileFragment extends WebFragment {
         getConnection().enqueue(context, Profile.createAction(context, (m_profile != null) ? m_profile : getSettings().getProfile()), new WebAction.ResultHandler<Profile>() {
             @Override
             public void onActionResult(Status status, Profile profile) {
-                if(getSwipeRefreshLayout().isRefreshing()) {
-                    getSwipeRefreshLayout().setRefreshing(false);
-                }
-
                 if(profile != null) {
                     if(!Objects.match(m_profile, profile)) {
                         getSettings().setProfile(profile);
@@ -178,6 +174,7 @@ public class ProfileFragment extends WebFragment {
                 } else if(m_profile == null) {
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
+                getSwipeRefreshLayout().setRefreshing(false);
             }
         });
     }
