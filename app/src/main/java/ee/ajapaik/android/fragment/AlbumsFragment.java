@@ -40,7 +40,7 @@ public class AlbumsFragment extends WebFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        refresh(false);
+        refresh();
 
         if(savedInstanceState != null) {
             Feed feed = savedInstanceState.getParcelable(KEY_FEED);
@@ -85,7 +85,7 @@ public class AlbumsFragment extends WebFragment {
         }
     }
 
-    protected void refresh(final boolean animated) {
+    protected void refresh() {
         getSwipeRefreshLayout().setRefreshing(true);
         Context context = getActivity();
 
@@ -103,7 +103,7 @@ public class AlbumsFragment extends WebFragment {
                 if(feed != null) {
                     setFeed(feed);
                     getSwipeRefreshLayout().setRefreshing(false);
-                } else if(m_feed == null || animated) {
+                } else if(m_feed == null) {
                     // TODO: Show error alert
                 }
             }
