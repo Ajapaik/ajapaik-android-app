@@ -89,7 +89,7 @@ public class ProfileFragment extends WebFragment {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        refresh(false);
+                        refresh();
                     }
                 }
         );
@@ -102,7 +102,7 @@ public class ProfileFragment extends WebFragment {
         super.onAuthorizationChanged();
 
         invalidateLogin();
-        refresh(false);
+        refresh();
     }
 
     @Override
@@ -115,7 +115,7 @@ public class ProfileFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
-        refresh(false);
+        refresh();
     }
 
     public Profile getProfile() {
@@ -155,7 +155,7 @@ public class ProfileFragment extends WebFragment {
         }
     }
 
-    protected void refresh(final boolean animated) {
+    protected void refresh() {
         Context context = getActivity();
 
         if(m_profile == null) {
@@ -175,7 +175,7 @@ public class ProfileFragment extends WebFragment {
                     }
 
                     setProfile(profile);
-                } else if(m_profile == null || animated) {
+                } else if(m_profile == null) {
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
             }
