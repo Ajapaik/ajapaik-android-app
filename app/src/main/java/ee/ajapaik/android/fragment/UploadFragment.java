@@ -18,6 +18,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+
+import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
@@ -126,6 +128,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 Activity activity = getActivity();
 
                 activity.setResult(Activity.RESULT_FIRST_USER);
+                CameraActivity.start(activity, m_upload.getPhoto());
                 activity.finish();
             }
         });
