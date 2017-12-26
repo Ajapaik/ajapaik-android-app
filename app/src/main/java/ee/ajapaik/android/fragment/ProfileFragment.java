@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +21,6 @@ import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Authorization;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
-import ee.ajapaik.android.util.WebActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -87,6 +85,15 @@ public class ProfileFragment extends WebFragment {
             }
         });
 
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        refresh(false);
+                    }
+                }
+        );
+
         setProfile(profile);
         invalidateLogin();
     }
@@ -95,7 +102,7 @@ public class ProfileFragment extends WebFragment {
         super.onAuthorizationChanged();
 
         invalidateLogin();
-        onRefresh(false);
+        refresh(false);
     }
 
     @Override
@@ -108,7 +115,7 @@ public class ProfileFragment extends WebFragment {
     @Override
     public void onStart() {
         super.onStart();
-        onRefresh(false);
+        refresh(false);
     }
 
     public Profile getProfile() {
@@ -148,7 +155,7 @@ public class ProfileFragment extends WebFragment {
         }
     }
 
-    protected void onRefresh(final boolean animated) {
+    protected void refresh(final boolean animated) {
         Context context = getActivity();
 
         if(m_profile == null) {
