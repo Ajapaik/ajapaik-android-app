@@ -105,13 +105,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     scaleOldPhoto(scaledRephoto);
                     getOldImageView().setScale(m_upload.getScale());
                 }
-                getProgressBar().setVisibility(View.GONE);
                 getMainLayout().setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onImageUnloaded() {
-                getProgressBar().setVisibility(View.VISIBLE);
                 getMainLayout().setVisibility(View.GONE);
             }
 
@@ -378,10 +376,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     private WebImageView getNewImageView() {
         return (WebImageView) getView().findViewById(R.id.image_new);
-    }
-
-    private ProgressBar getProgressBar() {
-        return (ProgressBar) getView().findViewById(R.id.progress_bar);
     }
 
     private Button getDeclineButton() {
