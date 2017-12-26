@@ -93,10 +93,7 @@ public class NearestActivity extends AlbumActivity {
     }
 
     private boolean isDoNotAskAgainChecked() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return !shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION);
-        }
-        return false;
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !shouldShowRequestPermissionRationale(ACCESS_FINE_LOCATION);
     }
 
     @Override
