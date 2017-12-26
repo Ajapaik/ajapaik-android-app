@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +38,7 @@ public class AlbumFragment extends WebFragment {
     public void invalidate(boolean force) {
         if(m_album == null || force) {
             getSwipeRefreshLayout().setRefreshing(true);
-            refresh(false);
+            refresh();
         }
     }
 
@@ -91,14 +90,14 @@ public class AlbumFragment extends WebFragment {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        refresh(true);
+                        refresh();
                     }
                 }
         );
 
         getSwipeRefreshLayout().setRefreshing(true);
         if (!isNearestFragment()) {
-            refresh(false);
+            refresh();
         }
     }
 
@@ -106,7 +105,7 @@ public class AlbumFragment extends WebFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_refresh) {
             getSwipeRefreshLayout().setRefreshing(true);
-            refresh(true);
+            refresh();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -171,7 +170,7 @@ public class AlbumFragment extends WebFragment {
         }
     }
 
-    private void refresh(final boolean animated) {
+    private void refresh() {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
 
@@ -182,7 +181,7 @@ public class AlbumFragment extends WebFragment {
 
                     if(album != null) {
                         setAlbum(album);
-                    } else if(m_album == null || animated) {
+                    } else if(m_album == null) {
                         Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                     }
                     getSwipeRefreshLayout().setRefreshing(false);
