@@ -100,16 +100,9 @@ public class AlbumsFragment extends WebFragment {
         getSwipeRefreshLayout().setRefreshing(true);
         Context context = getActivity();
 
-        if(m_feed == null) {
-            getProgressBar().setVisibility(View.VISIBLE);
-        }
-
         getConnection().enqueue(context, Feed.createAction(context), new WebAction.ResultHandler<Feed>() {
             @Override
             public void onActionResult(Status status, Feed feed) {
-                if(m_feed == null) {
-                    getProgressBar().setVisibility(View.GONE);
-                }
 
                 if(feed != null) {
                     setFeed(feed);
@@ -127,10 +120,6 @@ public class AlbumsFragment extends WebFragment {
 
     private ListView getListView() {
         return (ListView)getView().findViewById(R.id.list);
-    }
-
-    private ProgressBar getProgressBar() {
-        return (ProgressBar)getView().findViewById(R.id.progress_bar);
     }
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {
