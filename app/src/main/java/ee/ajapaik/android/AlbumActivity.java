@@ -4,9 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.fragment.AlbumFragment;
-import ee.ajapaik.android.R;
+import ee.ajapaik.android.fragment.PhotosFragment;
 
 public class AlbumActivity extends NavigationDrawerActivity {
     private static final String TAG_FRAGMENT = "fragment";
@@ -47,7 +48,7 @@ public class AlbumActivity extends NavigationDrawerActivity {
         return true;
     }
 
-    protected AlbumFragment createFragment() {
+    protected PhotosFragment createFragment() {
         AlbumFragment fragment = new AlbumFragment();
 
         fragment.setAlbumIdentifier(getIntent().getStringExtra(EXTRA_ALBUM_ID));
@@ -55,7 +56,7 @@ public class AlbumActivity extends NavigationDrawerActivity {
         return fragment;
     }
 
-    protected AlbumFragment getFragment() {
-        return (AlbumFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
+    protected PhotosFragment getFragment() {
+        return (PhotosFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
     }
 }

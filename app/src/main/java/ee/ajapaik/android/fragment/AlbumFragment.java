@@ -3,14 +3,9 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import ee.ajapaik.android.AlbumsActivity;
@@ -20,7 +15,6 @@ import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
@@ -29,7 +23,7 @@ import static android.view.View.GONE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
 
-public class AlbumFragment extends WebFragment {
+public class AlbumFragment extends PhotosFragment {
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
 
     private static final String KEY_ALBUM = "album";
@@ -65,17 +59,6 @@ public class AlbumFragment extends WebFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_album, container, false);
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -86,29 +69,9 @@ public class AlbumFragment extends WebFragment {
             setAlbum(album, layout);
         }
 
-        getSwipeRefreshLayout().setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        refresh();
-                    }
-                }
-        );
-
-        getSwipeRefreshLayout().setRefreshing(true);
         if (!isNearestFragment()) {
             refresh();
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_refresh) {
-            getSwipeRefreshLayout().setRefreshing(true);
-            refresh();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -170,7 +133,8 @@ public class AlbumFragment extends WebFragment {
         }
     }
 
-    private void refresh() {
+    @Override
+    protected void refresh() {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
 
@@ -202,23 +166,7 @@ public class AlbumFragment extends WebFragment {
         return (m_album != null) ? Album.createStateAction(context, m_album) : Album.createStateAction(context, getAlbumIdentifier());
     }
 
-    private TextView getEmptyView() {
-        return (TextView)getView().findViewById(R.id.empty);
-    }
-
-    private StaggeredGridView getGridView() {
-        return getGridView(getView());
-    }
-
-    private StaggeredGridView getGridView(View view) {
-        return (StaggeredGridView)view.findViewById(R.id.grid);
-    }
-
     private Button getNoDataButton() {
         return (Button)getView().findViewById(R.id.nearest_no_data_action);
-    }
-
-    private SwipeRefreshLayout getSwipeRefreshLayout() {
-        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }

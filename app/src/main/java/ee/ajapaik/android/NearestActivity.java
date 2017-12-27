@@ -29,7 +29,7 @@ public class NearestActivity extends AlbumActivity {
             Settings settings = getSettings();
             Location oldLocation = settings.getLocation();
 
-            AlbumFragment fragment = getFragment();
+            AlbumFragment fragment = (AlbumFragment) getFragment();
             if (shouldLoadNearestPhotos(newLocation, oldLocation, fragment)) {
                 settings.setLocation(newLocation);
 
