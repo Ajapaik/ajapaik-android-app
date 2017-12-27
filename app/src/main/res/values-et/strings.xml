@@ -123,4 +123,6 @@
     <string name="tutorial_dialog_show_again_message">You can turn tutorial on again from settings later</string>
     <string name="tutorial_dialog_show_again_no">No</string>
     <string name="tutorial_dialog_show_again_yes">Yes</string>
+
+    <string name="local_rephotos">Ülepildistused seadmes</string>
 </resources>

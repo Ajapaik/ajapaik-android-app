@@ -8,7 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import ee.ajapaik.android.R;
+
 import ee.ajapaik.android.util.WebActivity;
 
 public class NavigationDrawerActivity extends WebActivity {
@@ -51,6 +51,11 @@ public class NavigationDrawerActivity extends WebActivity {
                     case R.id.profile:
                         if (context instanceof ProfileActivity) break;
                         ProfileActivity.start(context);
+                        break;
+                    case R.id.local_rephotos:
+                        if (context instanceof LocalRephotosActivity) break;
+                        LocalRephotosActivity.start(context);
+                        finish();
                         break;
                     case R.id.about:
                         if (context instanceof AboutActivity) break;

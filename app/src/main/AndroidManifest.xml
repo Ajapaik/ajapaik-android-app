@@ -52,6 +52,10 @@
                     android:value="ee.ajapaik.android.AlbumsActivity"/>
         </activity>
         <activity
+                android:name="ee.ajapaik.android.LocalRephotosActivity"
+                android:label="@string/local_rephotos">
+        </activity>
+        <activity
                 android:name="ee.ajapaik.android.PhotoActivity"
                 android:label="@string/photo_title"
                 android:theme="@style/AppThemeTranslucent">

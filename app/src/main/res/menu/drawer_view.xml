@@ -14,6 +14,10 @@
                 android:icon="@drawable/ic_account_circle_white_36dp"
                 android:title="@string/profile_title" />
         <item
+                android:id="@+id/local_rephotos"
+                android:icon="@drawable/ic_photo_library_white_36dp"
+                android:title="@string/local_rephotos" />
+        <item
                 android:id="@+id/about"
                 android:icon="@drawable/ic_info_black_24dp"
                 android:title="@string/about_title" />
