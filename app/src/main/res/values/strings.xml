@@ -126,4 +126,5 @@
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
     <string name="local_rephotos">Local rephotos</string>
+    <string name="no_local_rephotos">No local rephotos</string>
 </resources>

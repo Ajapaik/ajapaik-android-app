@@ -125,4 +125,5 @@
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
     <string name="local_rephotos">Ülepildistused seadmes</string>
+    <string name="no_local_rephotos">Selles seadmes puuduvad ülepildistused</string>
 </resources>

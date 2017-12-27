@@ -100,6 +100,12 @@ public class Album extends Model {
         this(attributes, null, null);
     }
 
+    public Album(List<Photo> photos, String identifier) {
+        m_identifier = identifier;
+        m_photos = photos;
+        m_state = String.valueOf(System.currentTimeMillis());
+    }
+
     public Album(JsonObject attributes, Album baseAlbum, String baseIdentifier) {
         JsonObject stats = readObject(attributes, KEY_STATS);
         JsonElement element = attributes.get(KEY_PHOTOS);
