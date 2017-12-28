@@ -30,6 +30,7 @@ public class Upload extends Model {
 
     private static final String API_PATH = "/photo/upload/";
 
+    public static final String INTERNAL_STORAGE_FILE_SUFFIX = "Ajapaik-rephoto-";
     private static final String FOLDER_NAME = "Ajapaik-rephotos";
     private static final String IMAGE_FILE_EXTENSION = ".jpg";
     private static final String DATA_FILE_EXTENSION = ".txt";
@@ -154,7 +155,7 @@ public class Upload extends Model {
     }
 
     private String getFileName() {
-        return "Ajapaik-rephoto-" + Dates.toFilename(m_date);
+        return INTERNAL_STORAGE_FILE_SUFFIX + Dates.toFilename(m_date);
     }
 
     public boolean isFlipped() {
