@@ -5,15 +5,12 @@ import android.location.Location;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.util.Dates;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.WebAction;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,12 +20,19 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.util.Dates;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.WebAction;
+
 public class Upload extends Model {
     private static final String TAG = "Upload";
 
     private static final String API_PATH = "/photo/upload/";
 
     private static final String FOLDER_NAME = "Ajapaik-rephotos";
+    private static final String IMAGE_FILE_EXTENSION = ".jpg";
+    private static final String DATA_FILE_EXTENSION = ".txt";
 
     private static final String KEY_PATH = "path";
     private static final String KEY_LATITUDE = "latitude";
@@ -121,14 +125,15 @@ public class Upload extends Model {
     }
 
     public Upload(Photo photo, boolean flip, float scale, String path, Location location, float[] orientation) {
+        m_date = new Date();
+
         if(path == null) {
             File folder = Upload.getFolder();
 
             folder.mkdirs();
-            path = folder.getAbsolutePath() + File.separator + "Ajapaik-rephoto-" + Dates.toFilename(new Date()) + ".jpg";
+            path = folder.getAbsolutePath() + File.separator + getFileName() + IMAGE_FILE_EXTENSION;
         }
 
-        m_date = new Date();
         m_path = path;
         m_photo = photo;
         m_flip = flip;
@@ -146,6 +151,10 @@ public class Upload extends Model {
             m_pitch = orientation[1];
             m_roll = orientation[2];
         }
+    }
+
+    private String getFileName() {
+        return "Ajapaik-rephoto-" + Dates.toFilename(m_date);
     }
 
     public boolean isFlipped() {
@@ -172,14 +181,29 @@ public class Upload extends Model {
         return Uri.fromFile(new File(m_path));
     }
 
-    public boolean save(byte[] data) {
-        FileOutputStream stream = null;
-        File file = new File(m_path);
+    public boolean save(Context context, byte[] data) {
+        File imageFile = new File(m_path);
 
-        if(file.exists()) {
-            Log.w(TAG, "Going to overwrite picture at " + file.getName());
+        if(imageFile.exists()) {
+            Log.w(TAG, "Going to overwrite picture at " + imageFile.getName());
         }
 
+        saveUploadData(context);
+        return saveRephotoImage(data);
+    }
+
+    private void saveUploadData(Context context) {
+        try {
+            FileOutputStream outputStream = context.openFileOutput(getFileName() + DATA_FILE_EXTENSION, Context.MODE_PRIVATE);
+            outputStream.write(this.toString().getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean saveRephotoImage(byte[] data) {
+        FileOutputStream stream = null;
         try {
             stream = new FileOutputStream(m_path);
             stream.write(data);

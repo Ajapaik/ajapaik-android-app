@@ -7,8 +7,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.graphics.*;
-import android.hardware.camera2.*;
+import android.graphics.ImageFormat;
+import android.graphics.Matrix;
+import android.graphics.Point;
+import android.graphics.PointF;
+import android.graphics.RectF;
+import android.graphics.SurfaceTexture;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCaptureSession;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraDevice;
+import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.CameraMetadata;
+import android.hardware.camera2.CaptureRequest;
+import android.hardware.camera2.CaptureResult;
+import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.ImageReader;
 import android.os.Bundle;
@@ -19,25 +32,35 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.Surface;
+import android.view.TextureView;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.concurrent.Semaphore;
+
 import ee.ajapaik.android.CameraActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
 import ee.ajapaik.android.fragment.util.ImageFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
-
-import java.nio.ByteBuffer;
-import java.util.*;
-import java.util.concurrent.Semaphore;
 
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
@@ -861,7 +884,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
-        if (upload.save(data)) {
+        if (upload.save(getActivity(), data)) {
             settings.setUpload(upload);
             activity.showUploadPreview(upload);
             if (progressDialog.isShowing()) {
