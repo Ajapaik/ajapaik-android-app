@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import ee.ajapaik.android.AlbumsActivity;
+import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
+import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
@@ -103,7 +106,12 @@ public class AlbumFragment extends PhotosFragment {
             if(m_album != null && m_album.getPhotos().size() > 0) {
                 getEmptyView().setText("");
                 getNoDataButton().setVisibility(GONE);
-                setPhotoAdapter(gridView, m_album);
+                setPhotoAdapter(gridView, m_album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+                    @Override
+                    public void onSelect(Photo photo) {
+                        PhotoActivity.start(getActivity(), photo, m_album);
+                    }
+                });
             } else {
                 initializeEmptyGridView(gridView);
                 if (isNearestFragment()) {

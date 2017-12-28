@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import ee.ajapaik.android.PhotoActivity;
+import java.util.List;
+
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
-import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.fragment.util.WebFragment;
 import ee.ajapaik.android.widget.StaggeredGridView;
@@ -58,13 +58,8 @@ public abstract class PhotosFragment extends WebFragment {
         return super.onOptionsItemSelected(item);
     }
 
-    protected void setPhotoAdapter(StaggeredGridView gridView, final Album album) {
-        gridView.setAdapter(new PhotoAdapter(gridView.getContext(), album.getPhotos(), getSettings().getLocation(), new PhotoAdapter.OnPhotoSelectionListener() {
-            @Override
-            public void onSelect(Photo photo) {
-                PhotoActivity.start(getActivity(), photo, album);
-            }
-        }));
+    protected void setPhotoAdapter(StaggeredGridView gridView, List<Photo> photos, PhotoAdapter.OnPhotoSelectionListener selectionListener) {
+        gridView.setAdapter(new PhotoAdapter(gridView.getContext(), photos, getSettings().getLocation(), selectionListener));
     }
 
     protected void initializeEmptyGridView(StaggeredGridView gridView) {

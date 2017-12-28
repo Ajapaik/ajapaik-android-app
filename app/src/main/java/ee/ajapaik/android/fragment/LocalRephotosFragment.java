@@ -16,9 +16,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.UploadActivity;
+import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
@@ -45,17 +49,25 @@ public class LocalRephotosFragment extends PhotosFragment {
         });
 
         List<Photo> photos = new ArrayList<>();
+        final Map<Photo, Upload> uploadsByPhoto = new HashMap<>();
+
         for (String fileName : UploadFiles) {
             Upload upload = getUpload(fileName);
             if (upload == null) continue;
             photos.add(upload.getPhoto());
+            uploadsByPhoto.put(upload.getPhoto(), upload);
         }
 
         if (photos.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
             Album album = new Album(photos, "local-rephotos");
-            setPhotoAdapter(getGridView(), album);
+            setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+                @Override
+                public void onSelect(Photo photo) {
+                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo));
+                }
+            });
         }
         getSwipeRefreshLayout().setRefreshing(false);
     }
