@@ -17,10 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
+
+import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.ProfileActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
@@ -28,11 +30,8 @@ import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.ProgressFragment;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
-
-import java.io.IOException;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;

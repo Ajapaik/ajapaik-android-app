@@ -66,6 +66,10 @@
                 android:theme="@style/AppThemeCameraScreen">
         </activity>
         <activity
+                android:name="ee.ajapaik.android.UploadActivity"
+                android:label="@string/upload_title">
+        </activity>
+        <activity
                 android:name="ee.ajapaik.android.ProfileActivity"
                 android:label="@string/profile_title">
         </activity>

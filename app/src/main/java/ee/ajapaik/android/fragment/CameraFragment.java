@@ -52,6 +52,7 @@ import java.util.concurrent.Semaphore;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
 import ee.ajapaik.android.fragment.util.ImageFragment;
@@ -880,7 +881,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(getActivity(), data)) {
             settings.setUpload(upload);
-            activity.showUploadPreview(upload);
+            UploadActivity.start(getActivity(), upload);
+            getActivity().finish();
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();
             }

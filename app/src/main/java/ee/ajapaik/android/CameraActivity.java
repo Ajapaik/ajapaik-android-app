@@ -4,13 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.view.Menu;
+
 import ee.ajapaik.android.data.Photo;
-import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.CameraFragment;
-import ee.ajapaik.android.fragment.UploadFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 
 public class CameraActivity extends TutorialActivity {
@@ -73,35 +70,12 @@ public class CameraActivity extends TutorialActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (!isUploadPreview()) {
-            getMenuInflater().inflate(R.menu.menu_camera, menu);
-        }
+        getMenuInflater().inflate(R.menu.menu_camera, menu);
         waitForMenuToBeCreatedAndShowTutorial();
         return true;
     }
 
-    public void showUploadPreview(final Upload upload) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                setContentView(R.layout.activity_upload);
-
-                UploadFragment fragment = new UploadFragment();
-
-                fragment.setUpload(upload);
-
-                FragmentManager supportFragmentManager = getSupportFragmentManager();
-                supportFragmentManager.beginTransaction().replace(R.id.container, fragment, TAG_FRAGMENT).commit();
-                supportFragmentManager.executePendingTransactions();
-            }
-        });
-    }
-
     public float[] getOrientation() {
         return m_connection.getOrientation();
-    }
-
-    public boolean isUploadPreview() {
-        return getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT) instanceof UploadFragment;
     }
 }
