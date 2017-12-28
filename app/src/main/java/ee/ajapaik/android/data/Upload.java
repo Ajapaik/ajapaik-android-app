@@ -22,6 +22,7 @@ import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.util.Dates;
+import ee.ajapaik.android.util.InternalStorage;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 
@@ -154,7 +155,11 @@ public class Upload extends Model {
         }
     }
 
-    public String getFileName() {
+    public String getDataFilename() {
+        return getFileName() + DATA_FILE_EXTENSION;
+    }
+
+    private String getFileName() {
         return INTERNAL_STORAGE_FILE_SUFFIX + Dates.toFilename(m_date);
     }
 
@@ -194,13 +199,7 @@ public class Upload extends Model {
     }
 
     private void saveUploadData(Context context) {
-        try {
-            FileOutputStream outputStream = context.openFileOutput(getFileName() + DATA_FILE_EXTENSION, Context.MODE_PRIVATE);
-            outputStream.write(this.toString().getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        InternalStorage.saveFile(context, getDataFilename(), this.toString().getBytes());
     }
 
     private boolean saveRephotoImage(byte[] data) {

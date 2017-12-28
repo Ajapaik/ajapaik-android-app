@@ -36,7 +36,6 @@ import ee.ajapaik.android.widget.WebImageView;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
-import static ee.ajapaik.android.data.Upload.DATA_FILE_EXTENSION;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String KEY_UPLOAD = "upload";
@@ -342,7 +341,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
                     if (status.isGood()) {
                         showDialog(DIALOG_SUCCESS);
-                        InternalStorage.deleteFile(getContext(), upload.getFileName() + DATA_FILE_EXTENSION);
+                        InternalStorage.deleteFile(getContext(), upload.getDataFilename());
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
                     } else {
