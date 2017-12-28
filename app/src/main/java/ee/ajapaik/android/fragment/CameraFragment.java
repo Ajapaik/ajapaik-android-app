@@ -876,13 +876,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     private void onPictureTaken(byte[] data) {
         CameraActivity activity = (CameraActivity) getActivity();
         Settings settings = getSettings();
-        Upload upload = settings.getUpload();
-
-        if (upload != null) {
-            settings.setUpload(null);
-        }
-
-        upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
+        Upload upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
         if (upload.save(getActivity(), data)) {
             settings.setUpload(upload);
