@@ -54,6 +54,10 @@ public class LocalRephotosFragment extends PhotosFragment {
         for (String fileName : UploadFiles) {
             Upload upload = getUpload(fileName);
             if (upload == null) continue;
+            if (isLocalRephotoDeleted(upload)) {
+                deleteUploadData(fileName);
+                continue;
+            }
             photos.add(upload.getPhoto());
             uploadsByPhoto.put(upload.getPhoto(), upload);
         }
@@ -70,6 +74,14 @@ public class LocalRephotosFragment extends PhotosFragment {
             });
         }
         getSwipeRefreshLayout().setRefreshing(false);
+    }
+
+    private boolean isLocalRephotoDeleted(Upload upload) {
+        return !new File(upload.getPath()).exists();
+    }
+
+    private void deleteUploadData(String fileName) {
+        new File(getContext().getFilesDir().getAbsolutePath() + "/" + fileName).delete();
     }
 
     private Upload getUpload(String fileName) {
