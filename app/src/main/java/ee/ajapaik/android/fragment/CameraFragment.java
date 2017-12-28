@@ -66,6 +66,7 @@ import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
+import static ee.ajapaik.android.UploadActivity.CreatedFrom.CAMERA;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class CameraFragment extends ImageFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -881,7 +882,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(getActivity(), data)) {
             settings.setUpload(upload);
-            UploadActivity.start(getActivity(), upload);
+            UploadActivity.start(getActivity(), upload, CAMERA);
             getActivity().finish();
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();

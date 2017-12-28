@@ -21,8 +21,10 @@ import android.widget.LinearLayout;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
+import ee.ajapaik.android.LocalRephotosActivity;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
@@ -123,10 +125,14 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         getDeclineButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Activity activity = getActivity();
+                UploadActivity activity = (UploadActivity) getActivity();
 
                 activity.setResult(Activity.RESULT_FIRST_USER);
-                CameraActivity.start(activity, m_upload.getPhoto());
+                if (activity.isFromCameraActivity()) {
+                    CameraActivity.start(activity, m_upload.getPhoto());
+                } else {
+                    LocalRephotosActivity.start(activity);
+                }
                 activity.finish();
             }
         });

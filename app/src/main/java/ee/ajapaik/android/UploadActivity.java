@@ -8,10 +8,18 @@ import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.util.WebActivity;
 
+import static ee.ajapaik.android.UploadActivity.CreatedFrom.CAMERA;
+
 public class UploadActivity extends WebActivity {
     private static final String EXTRA_UPLOAD = "upload";
 
     private static final String TAG_FRAGMENT = "fragment";
+
+    private static CreatedFrom createdFrom;
+
+    public enum CreatedFrom {
+        CAMERA, LOCAL_REPHOTOS
+    }
 
     public static Intent getStartIntent(Context context, Upload upload) {
         Intent intent = new Intent(context, UploadActivity.class);
@@ -21,7 +29,8 @@ public class UploadActivity extends WebActivity {
         return intent;
     }
 
-    public static void start(Context context, Upload upload) {
+    public static void start(Context context, Upload upload, CreatedFrom from) {
+        createdFrom = from;
         context.startActivity(getStartIntent(context, upload));
     }
 
@@ -46,6 +55,14 @@ public class UploadActivity extends WebActivity {
         super.onBackPressed();
         Upload upload = getIntent().getParcelableExtra(EXTRA_UPLOAD);
 
-        CameraActivity.start(this, upload.getPhoto());
+        if (isFromCameraActivity()) {
+            CameraActivity.start(this, upload.getPhoto());
+        } else {
+            LocalRephotosActivity.start(this);
+        }
+    }
+
+    public boolean isFromCameraActivity() {
+        return CAMERA.equals(createdFrom);
     }
 }
