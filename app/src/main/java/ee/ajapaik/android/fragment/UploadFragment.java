@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.io.File;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
@@ -35,6 +36,7 @@ import ee.ajapaik.android.widget.WebImageView;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
+import static ee.ajapaik.android.data.Upload.DATA_FILE_EXTENSION;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String KEY_UPLOAD = "upload";
@@ -340,6 +342,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
                     if (status.isGood()) {
                         showDialog(DIALOG_SUCCESS);
+                        deleteUploadDataFile(upload, getContext());
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
                     } else {
@@ -348,6 +351,10 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 }
             });
         }
+    }
+
+    private void deleteUploadDataFile(Upload upload, Context context) {
+        new File(context.getFilesDir().getAbsolutePath() + "/" + upload.getFileName() + DATA_FILE_EXTENSION).delete();
     }
 
     private boolean isAgreedToTerms() {

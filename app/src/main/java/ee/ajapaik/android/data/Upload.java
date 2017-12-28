@@ -31,9 +31,9 @@ public class Upload extends Model {
     private static final String API_PATH = "/photo/upload/";
 
     public static final String INTERNAL_STORAGE_FILE_SUFFIX = "Ajapaik-rephoto-";
-    private static final String FOLDER_NAME = "Ajapaik-rephotos";
+    public static final String DATA_FILE_EXTENSION = ".txt";
     private static final String IMAGE_FILE_EXTENSION = ".jpg";
-    private static final String DATA_FILE_EXTENSION = ".txt";
+    private static final String FOLDER_NAME = "Ajapaik-rephotos";
 
     private static final String KEY_PATH = "path";
     private static final String KEY_LATITUDE = "latitude";
@@ -154,7 +154,7 @@ public class Upload extends Model {
         }
     }
 
-    private String getFileName() {
+    public String getFileName() {
         return INTERNAL_STORAGE_FILE_SUFFIX + Dates.toFilename(m_date);
     }
 
