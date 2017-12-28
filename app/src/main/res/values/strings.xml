@@ -79,7 +79,7 @@
     <string name="upload_dialog_error_unknown_title">Unknown Error</string>
     <string name="upload_dialog_error_unknown_message">Unable to upload the photo. Try again?</string>
     <string name="upload_dialog_error_unknown_retry">Retry</string>
-    <string name="upload_dialog_error_unknown_ok">OK</string>
+    <string name="upload_dialog_error_unknown_ok">Cancel</string>
     <string name="upload_dialog_process_title">Uploading the photo</string>
     <string name="upload_dialog_process_message">Please wait&#8230;</string>
     <string name="upload_dialog_success_title">Upload Successful</string>
