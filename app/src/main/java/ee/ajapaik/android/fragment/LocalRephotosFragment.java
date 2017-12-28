@@ -26,6 +26,7 @@ import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
+import ee.ajapaik.android.util.InternalStorage;
 
 import static org.apache.http.util.TextUtils.isBlank;
 
@@ -55,7 +56,7 @@ public class LocalRephotosFragment extends PhotosFragment {
             Upload upload = getUpload(fileName);
             if (upload == null) continue;
             if (isLocalRephotoDeleted(upload)) {
-                deleteUploadData(fileName);
+                InternalStorage.deleteFile(getContext(), fileName);
                 continue;
             }
             photos.add(upload.getPhoto());
@@ -78,10 +79,6 @@ public class LocalRephotosFragment extends PhotosFragment {
 
     private boolean isLocalRephotoDeleted(Upload upload) {
         return !new File(upload.getPath()).exists();
-    }
-
-    private void deleteUploadData(String fileName) {
-        new File(getContext().getFilesDir().getAbsolutePath() + "/" + fileName).delete();
     }
 
     private Upload getUpload(String fileName) {
