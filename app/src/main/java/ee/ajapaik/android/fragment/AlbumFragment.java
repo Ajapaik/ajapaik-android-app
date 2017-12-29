@@ -57,6 +57,7 @@ public class AlbumFragment extends PhotosFragment {
 
             @Override
             public boolean onQueryTextSubmit(String query) {
+                getSwipeRefreshLayout().setRefreshing(true);
                 m_searchView.clearFocus();
                 m_search.search(query);
                 return true;
@@ -106,7 +107,6 @@ public class AlbumFragment extends PhotosFragment {
         m_search = (new Search() {
             @Override
             public void search(String query) {
-                getSwipeRefreshLayout().setRefreshing(true);
                 performAction(getActivity(), createSearchAction(query));
             }
         });
