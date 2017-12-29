@@ -5,19 +5,21 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.AlbumAdapter;
 import ee.ajapaik.android.data.Feed;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.SearchService;
 import ee.ajapaik.android.util.WebAction;
 
 public class AlbumsFragment extends WebFragment {
@@ -26,6 +28,7 @@ public class AlbumsFragment extends WebFragment {
 
     private Feed m_feed;
     private Parcelable m_list;
+    private SearchService m_searchService;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,20 @@ public class AlbumsFragment extends WebFragment {
             }
         }
 
+        m_searchService = new SearchService(new SearchService.Search() {
+            @Override
+            public void search(String query) {
+                getSwipeRefreshLayout().setRefreshing(true);
+                performAction(getActivity(), createSearchAction(query));
+            }
+
+            @Override
+            public void clearSearch() {
+                getSwipeRefreshLayout().setRefreshing(true);
+                refresh();
+            }
+        });
+
         getSwipeRefreshLayout().setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
@@ -65,6 +82,15 @@ public class AlbumsFragment extends WebFragment {
                     }
                 }
         );
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        m_searchService.initializeSearch(menu, inflater);
+    }
+
+    private WebAction<Feed> createSearchAction(String query) {
+        return Feed.createSearchAction(getActivity(), query);
     }
 
     @Override
@@ -99,8 +125,12 @@ public class AlbumsFragment extends WebFragment {
 
     protected void refresh() {
         Context context = getActivity();
+        WebAction<Feed> action = Feed.createAction(context);
+        performAction(context, action);
+    }
 
-        getConnection().enqueue(context, Feed.createAction(context), new WebAction.ResultHandler<Feed>() {
+    private void performAction(Context context, WebAction<Feed> action) {
+        getConnection().enqueue(context, action, new WebAction.ResultHandler<Feed>() {
             @Override
             public void onActionResult(Status status, Feed feed) {
 

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -19,7 +18,7 @@ import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.Search;
+import ee.ajapaik.android.util.SearchService;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
@@ -35,8 +34,7 @@ public class AlbumFragment extends PhotosFragment {
 
     private Album m_album;
 
-    private Search m_search;
-    private SearchView m_searchView;
+    private SearchService m_searchService;
 
     public void invalidate() {
         getSwipeRefreshLayout().setRefreshing(true);
@@ -51,31 +49,8 @@ public class AlbumFragment extends PhotosFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_album, menu);
-        m_searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
-        m_searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                getSwipeRefreshLayout().setRefreshing(true);
-                m_searchView.clearFocus();
-                m_search.search(query);
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String query) {
-                return true;
-            }
-        });
-        m_searchView.setOnCloseListener(new SearchView.OnCloseListener() {
-            @Override
-            public boolean onClose() {
-                clearSearch();
-                return false;
-            }
-        });
+        m_searchService.initializeSearch(menu, inflater);
     }
-
 
     public void setAlbumIdentifier(String albumIdentifier) {
         Bundle arguments = getArguments();
@@ -104,10 +79,17 @@ public class AlbumFragment extends PhotosFragment {
             setAlbum(album, layout);
         }
 
-        m_search = (new Search() {
+        m_searchService = new SearchService(new SearchService.Search() {
             @Override
             public void search(String query) {
+                getSwipeRefreshLayout().setRefreshing(true);
                 performAction(getActivity(), createSearchAction(query));
+            }
+
+            @Override
+            public void clearSearch() {
+                getSwipeRefreshLayout().setRefreshing(true);
+                refresh();
             }
         });
 
@@ -200,11 +182,6 @@ public class AlbumFragment extends PhotosFragment {
                 }
             });
         }
-    }
-
-    public void clearSearch() {
-        getSwipeRefreshLayout().setRefreshing(true);
-        refresh();
     }
 
     @Override
