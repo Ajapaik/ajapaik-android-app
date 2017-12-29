@@ -150,6 +150,22 @@ Returns all the albums.
 	Errors:
 	    [standard]
 
+## Albums search
+
+Returns all  albums matching criteria.
+
+	/albums/search
+
+	Parameters:
+	    [session]
+	    STRING query [R] - Query to search albums
+
+	Returns:
+	   See /albums
+
+	Errors:
+	    [standard]
+
 ## Nearest
 
 Returns a dynamically generated album with the nearest photos to the specified coordinate
