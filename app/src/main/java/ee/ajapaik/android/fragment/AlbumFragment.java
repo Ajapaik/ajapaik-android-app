@@ -4,11 +4,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import ee.ajapaik.android.AlbumActivity;
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
@@ -33,6 +35,9 @@ public class AlbumFragment extends PhotosFragment {
 
     private Album m_album;
 
+    private Search m_search;
+    private SearchView m_searchView;
+
     public void invalidate() {
         getSwipeRefreshLayout().setRefreshing(true);
         refresh();
@@ -43,6 +48,33 @@ public class AlbumFragment extends PhotosFragment {
 
         return (arguments != null) ? arguments.getString(KEY_ALBUM_IDENTIFIER) : null;
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_album, menu);
+        m_searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        m_searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                m_searchView.clearFocus();
+                m_search.search(query);
+                return true;
+            }
+            @Override
+            public boolean onQueryTextChange(String query) {
+                return true;
+            }
+        });
+        m_searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                clearSearch();
+                return false;
+            }
+        });
+    }
+
 
     public void setAlbumIdentifier(String albumIdentifier) {
         Bundle arguments = getArguments();
@@ -71,7 +103,7 @@ public class AlbumFragment extends PhotosFragment {
             setAlbum(album, layout);
         }
 
-        ((AlbumActivity) getActivity()).setSearch(new Search() {
+        m_search = (new Search() {
             @Override
             public void search(String query) {
                 getSwipeRefreshLayout().setRefreshing(true);
