@@ -32,4 +32,14 @@ public class ExifService {
                     ", value=" + value, e);
         }
     }
+
+    public static void deleteField(File file, String tag) {
+        try {
+            ExifInterface exifInterface = new ExifInterface(file.getAbsolutePath());
+            exifInterface.setAttribute(tag, null);
+            exifInterface.saveAttributes();
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to set value to null in exif! File=" + file.getName() + ", tag=" + tag, e);
+        }
+    }
 }

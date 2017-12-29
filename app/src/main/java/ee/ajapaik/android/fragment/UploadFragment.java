@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.io.File;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
@@ -32,11 +33,13 @@ import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.ProgressFragment;
 import ee.ajapaik.android.fragment.util.WebFragment;
+import ee.ajapaik.android.util.ExifService;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
+import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String KEY_UPLOAD = "upload";
@@ -345,8 +348,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     hideDialog(DIALOG_PROGRESS);
 
                     if (status.isGood()) {
+                        ExifService.deleteField(new File(m_upload.getPath()), USER_COMMENT);
                         showDialog(DIALOG_SUCCESS);
-                        //TODO Add attribute to picture exif about being successfully uploaded
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
                     } else {
