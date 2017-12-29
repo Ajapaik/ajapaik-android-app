@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import java.io.File;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
@@ -348,7 +347,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     hideDialog(DIALOG_PROGRESS);
 
                     if (status.isGood()) {
-                        ExifService.deleteField(new File(m_upload.getPath()), USER_COMMENT);
+                        ExifService.deleteField(m_upload.getPath(), USER_COMMENT);
                         showDialog(DIALOG_SUCCESS);
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
