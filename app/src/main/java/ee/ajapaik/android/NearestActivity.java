@@ -19,7 +19,7 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class NearestActivity extends AlbumActivity {
-    private static final int DIALOG_ERROR_LOCATION_DISABLED = 1;
+    private static final int DIALOG_ERROR_LOCATION_DISABLED = 2;
     private static final int ACCESS_FINE_LOCATION_PERMISSION = 6000;
 
     private static final int MIN_DISTANCE_IN_METERS = 100;

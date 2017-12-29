@@ -1,9 +1,6 @@
 package ee.ajapaik.android.fragment;
 
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
 import com.google.gson.JsonObject;
@@ -17,7 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ee.ajapaik.android.NearestActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.adapter.PhotoAdapter;
@@ -35,20 +31,18 @@ import static org.apache.http.util.TextUtils.isBlank;
 public class LocalRephotosFragment extends PhotosFragment {
 
     private static final String TAG = "LocalRephotosFragment";
-    private static final int WRITE_EXTERNAL_STORAGE_PERMISSION = 6003;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (ContextCompat.checkSelfPermission(getActivity(), WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{WRITE_EXTERNAL_STORAGE}, WRITE_EXTERNAL_STORAGE_PERMISSION);
-        } else {
-            refresh();
-        }
+        refresh();
     }
 
     @Override
-    protected void refresh() {
+    public void refresh() {
+        if (ContextCompat.checkSelfPermission(getActivity(), WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
+            return;
+
         File[] images = Upload.getFolder().listFiles();
 
         List<Photo> photos = new ArrayList<>();
@@ -90,19 +84,5 @@ public class LocalRephotosFragment extends PhotosFragment {
 
     private String getUploadData(File file) {
         return ExifService.readField(file, USER_COMMENT);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        switch (requestCode) {
-            case WRITE_EXTERNAL_STORAGE_PERMISSION: {
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    refresh();
-                } else {
-                    this.startActivity(new Intent(getActivity(), NearestActivity.class));
-                }
-            }
-        }
     }
 }
