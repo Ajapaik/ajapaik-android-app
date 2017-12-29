@@ -74,7 +74,8 @@ public class AlbumFragment extends PhotosFragment {
         ((AlbumActivity) getActivity()).setSearch(new Search() {
             @Override
             public void search(String query) {
-                performSearch(query);
+                getSwipeRefreshLayout().setRefreshing(true);
+                performAction(getActivity(), createSearchAction(query));
             }
         });
 
@@ -83,8 +84,8 @@ public class AlbumFragment extends PhotosFragment {
         }
     }
 
-    protected void performSearch(String query) {
-        System.out.println("Searching by " + query + "and album is " + getAlbum().getTitle());
+    protected WebAction<Album> createSearchAction(String query) {
+        return Album.createSearchAction(getActivity(), getAlbum(), query);
     }
 
     @Override
@@ -149,7 +150,10 @@ public class AlbumFragment extends PhotosFragment {
     protected void refresh() {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
+        performAction(context, action);
+    }
 
+    private void performAction(Context context, WebAction<Album> action) {
         if(action != null) {
             getConnection().enqueue(context, action, new WebAction.ResultHandler<Album>() {
                 @Override

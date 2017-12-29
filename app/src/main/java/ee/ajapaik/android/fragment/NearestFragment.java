@@ -18,8 +18,8 @@ public class NearestFragment extends AlbumFragment {
     }
 
     @Override
-    protected void performSearch(String query) {
-        System.out.println("Searching by " + query);
+    protected WebAction<Album> createSearchAction(String query) {
+        return Album.createSearchAction(getActivity(), query);
     }
 
     @Override

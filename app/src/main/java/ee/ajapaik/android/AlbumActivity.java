@@ -18,6 +18,7 @@ public class AlbumActivity extends NavigationDrawerActivity {
     private static final String EXTRA_TITLE = "title";
 
     private Search m_search;
+    private SearchView m_searchView;
 
     public static Intent getStartIntent(Context context, String albumId, String title) {
         Intent intent = new Intent(context, AlbumActivity.class);
@@ -53,11 +54,12 @@ public class AlbumActivity extends NavigationDrawerActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_album, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        m_searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        m_searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
             @Override
             public boolean onQueryTextSubmit(String query) {
+                m_searchView.clearFocus();
                 m_search.search(query);
                 return true;
             }
