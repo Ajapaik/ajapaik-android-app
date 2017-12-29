@@ -187,7 +187,7 @@ public class Upload extends Model {
         return Uri.fromFile(new File(m_path));
     }
 
-    public boolean save(Context context, byte[] data) {
+    public boolean save(byte[] data) {
         File imageFile = new File(m_path);
 
         if(imageFile.exists()) {

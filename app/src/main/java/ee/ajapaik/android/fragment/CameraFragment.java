@@ -880,7 +880,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
         Settings settings = getSettings();
         Upload upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
-        if (upload.save(getActivity(), data)) {
+        if (upload.save(data)) {
             settings.setUpload(upload);
             UploadActivity.start(getActivity(), upload, CAMERA);
             getActivity().finish();
