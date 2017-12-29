@@ -2,6 +2,7 @@ package ee.ajapaik.android;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,11 +12,30 @@ import android.view.MenuItem;
 
 import ee.ajapaik.android.util.WebActivity;
 
-public class NavigationDrawerActivity extends WebActivity {
+public abstract class NavigationDrawerActivity extends WebActivity {
 
     private DrawerLayout mDrawer;
 
-    void configureToolbar() {
+    protected abstract void setContentView();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView();
+        configureNavigationDrawer();
+        configureToolbar();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
+            mDrawer.closeDrawer(GravityCompat.START, true);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    private void configureToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -29,7 +49,7 @@ public class NavigationDrawerActivity extends WebActivity {
         mDrawerToggle.syncState();
     }
 
-    void configureNavigationDrawer() {
+    private void configureNavigationDrawer() {
         NavigationView navView = (NavigationView) findViewById(R.id.nvView);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -72,14 +92,5 @@ public class NavigationDrawerActivity extends WebActivity {
                 return false;
             }
         });
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
-            mDrawer.closeDrawer(GravityCompat.START, true);
-        } else {
-            super.onBackPressed();
-        }
     }
 }

@@ -3,8 +3,8 @@ package ee.ajapaik.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import ee.ajapaik.android.fragment.ProfileFragment;
-import ee.ajapaik.android.R;
 
 public class ProfileActivity extends NavigationDrawerActivity {
 
@@ -23,12 +23,13 @@ public class ProfileActivity extends NavigationDrawerActivity {
     }
 
     @Override
+    protected void setContentView() {
+        setContentView(R.layout.activity_profile);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_profile);
-        configureNavigationDrawer();
-        configureToolbar();
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new ProfileFragment()).commit();

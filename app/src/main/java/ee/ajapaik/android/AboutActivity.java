@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import ee.ajapaik.android.R;
 
 import static android.content.Intent.FLAG_ACTIVITY_NO_HISTORY;
 
@@ -21,11 +20,14 @@ public class AboutActivity extends NavigationDrawerActivity implements View.OnCl
     }
 
     @Override
+    protected void setContentView() {
+        setContentView(R.layout.activity_about);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        configureNavigationDrawer();
-        configureToolbar();
+
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             ((TextView)findViewById(R.id.version_value)).setText(pInfo.versionName);

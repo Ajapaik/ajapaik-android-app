@@ -3,8 +3,8 @@ package ee.ajapaik.android;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import ee.ajapaik.android.fragment.AlbumsFragment;
-import ee.ajapaik.android.R;
 
 public class AlbumsActivity extends NavigationDrawerActivity {
 
@@ -15,12 +15,13 @@ public class AlbumsActivity extends NavigationDrawerActivity {
     }
 
     @Override
+    protected void setContentView() {
+        setContentView(R.layout.activity_albums);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_albums);
-        configureNavigationDrawer();
-        configureToolbar();
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new AlbumsFragment()).commit();

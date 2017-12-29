@@ -30,12 +30,14 @@ public class AlbumActivity extends NavigationDrawerActivity {
     }
 
     @Override
+    protected void setContentView() {
+        setContentView(R.layout.activity_album);
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_album);
-        configureNavigationDrawer();
-        configureToolbar();
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, createFragment(), TAG_FRAGMENT).commit();

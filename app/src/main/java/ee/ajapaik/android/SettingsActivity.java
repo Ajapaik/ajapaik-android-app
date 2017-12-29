@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
-import ee.ajapaik.android.R;
 
 public class SettingsActivity extends NavigationDrawerActivity {
 
@@ -19,11 +18,13 @@ public class SettingsActivity extends NavigationDrawerActivity {
     }
 
     @Override
+    protected void setContentView() {
+        setContentView(R.layout.activity_settings);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        configureNavigationDrawer();
-        configureToolbar();
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, new SettingsFragment(), TAG_FRAGMENT).commit();
