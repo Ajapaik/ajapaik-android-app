@@ -1,16 +1,13 @@
 package ee.ajapaik.android.fragment;
 
 
-import android.media.ExifInterface;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +20,10 @@ import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
+import ee.ajapaik.android.util.ExifService;
 
 import static ee.ajapaik.android.UploadActivity.CreatedFrom.LOCAL_REPHOTOS;
+import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 import static org.apache.http.util.TextUtils.isBlank;
 
 public class LocalRephotosFragment extends PhotosFragment {
@@ -79,11 +78,6 @@ public class LocalRephotosFragment extends PhotosFragment {
     }
 
     private String getUploadData(File file) {
-        try {
-            return new ExifInterface(file.getAbsolutePath()).getAttribute("UserComment");
-        }catch (IOException e) {
-            Log.e(TAG, "Failed to read upload data from image exif", e);
-            return null;
-        }
+        return ExifService.readField(file, USER_COMMENT);
     }
 }

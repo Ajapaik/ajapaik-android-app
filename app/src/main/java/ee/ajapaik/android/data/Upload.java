@@ -2,7 +2,6 @@ package ee.ajapaik.android.data;
 
 import android.content.Context;
 import android.location.Location;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
@@ -23,8 +22,11 @@ import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.util.Dates;
+import ee.ajapaik.android.util.ExifService;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
+
+import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 
 public class Upload extends Model {
     private static final String TAG = "Upload";
@@ -196,13 +198,7 @@ public class Upload extends Model {
     }
 
     private void saveUploadData(File imageFile) {
-        try {
-            ExifInterface exifInterface = new ExifInterface(imageFile.getAbsolutePath());
-            exifInterface.setAttribute("UserComment", this.toString());
-            exifInterface.saveAttributes();
-        } catch (IOException e) {
-            Log.e(TAG, "Failed to add upload data to image exif", e);
-        }
+        ExifService.writeField(imageFile, USER_COMMENT, this.toString());
     }
 
     private boolean saveRephotoImage(byte[] data) {
