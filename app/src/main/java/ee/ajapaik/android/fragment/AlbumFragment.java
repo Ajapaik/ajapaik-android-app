@@ -170,6 +170,11 @@ public class AlbumFragment extends PhotosFragment {
         }
     }
 
+    public void clearSearch() {
+        getSwipeRefreshLayout().setRefreshing(true);
+        refresh();
+    }
+
     @Override
     protected String getPlaceholderString() {
         return getString(R.string.albums_label_no_data);

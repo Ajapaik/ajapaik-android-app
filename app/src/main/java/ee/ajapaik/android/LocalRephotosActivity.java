@@ -31,6 +31,7 @@ public class LocalRephotosActivity extends AlbumActivity {
         return new LocalRephotosFragment();
     }
 
+    @Override
     protected LocalRephotosFragment getFragment() {
         return (LocalRephotosFragment) getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
     }

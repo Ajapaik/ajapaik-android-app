@@ -68,6 +68,13 @@ public class AlbumActivity extends NavigationDrawerActivity {
                 return true;
             }
         });
+        m_searchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                ((AlbumFragment)getFragment()).clearSearch();
+                return false;
+            }
+        });
         return true;
     }
 
