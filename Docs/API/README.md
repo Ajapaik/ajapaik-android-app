@@ -271,6 +271,23 @@ Returns the current state for an album
     Errors:
         [standard]
 
+## Photo search
+
+Returns photos matching search criteria
+
+    /album/search
+
+    Parameters:
+        [session]
+        INTEGER albumId [O] - Album ID, if specified only photos matching query in this album are returned
+        STRING query [R] - Query to search photos
+
+    Returns:
+        See /album/nearest
+
+    Errors:
+        [standard]
+
 # User calls
 
 ## Profile info
