@@ -4,9 +4,10 @@
       tools:context=".AlbumActivity">
 
     <item
-        android:id="@+id/action_refresh"
-        android:title="@string/action_refresh"
-        android:icon="@drawable/ic_autorenew_white_36dp"
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:icon="@drawable/ic_search_white_36dp"
         app:showAsAction="always" />
 
 </menu>

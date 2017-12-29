@@ -3,7 +3,6 @@ package ee.ajapaik.android.fragment;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -46,16 +45,6 @@ public abstract class PhotosFragment extends WebFragment {
         );
 
         getSwipeRefreshLayout().setRefreshing(true);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_refresh) {
-            getSwipeRefreshLayout().setRefreshing(true);
-            refresh();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     protected void setPhotoAdapter(StaggeredGridView gridView, List<Photo> photos, PhotoAdapter.OnPhotoSelectionListener selectionListener) {

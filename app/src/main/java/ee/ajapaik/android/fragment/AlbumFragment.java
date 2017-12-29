@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import ee.ajapaik.android.AlbumActivity;
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
@@ -16,6 +17,7 @@ import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.Search;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
@@ -69,9 +71,20 @@ public class AlbumFragment extends PhotosFragment {
             setAlbum(album, layout);
         }
 
+        ((AlbumActivity) getActivity()).setSearch(new Search() {
+            @Override
+            public void search(String query) {
+                performSearch(query);
+            }
+        });
+
         if (!isNearestFragment()) {
             refresh();
         }
+    }
+
+    protected void performSearch(String query) {
+        System.out.println("Searching by " + query + "and album is " + getAlbum().getTitle());
     }
 
     @Override
