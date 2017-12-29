@@ -32,7 +32,6 @@ import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.ProgressFragment;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.util.InternalStorage;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
 
@@ -347,7 +346,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
                     if (status.isGood()) {
                         showDialog(DIALOG_SUCCESS);
-                        InternalStorage.deleteFile(getContext(), upload.getDataFilename());
+                        //TODO Add attribute to picture exif about being successfully uploaded
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
                     } else {
