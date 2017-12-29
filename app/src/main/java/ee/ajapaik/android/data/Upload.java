@@ -155,10 +155,6 @@ public class Upload extends Model {
         }
     }
 
-    public String getDataFilename() {
-        return getFileName() + DATA_FILE_EXTENSION;
-    }
-
     private String getFileName() {
         return INTERNAL_STORAGE_FILE_SUFFIX + Dates.toFilename(m_date);
     }
