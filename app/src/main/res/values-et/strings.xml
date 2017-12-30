@@ -124,7 +124,7 @@
     <string name="tutorial_dialog_show_again_no">No</string>
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
-    <string name="rephotos">Ülepildistused</string>
+    <string name="rephotos">Minu ülepildistused</string>
     <string name="no_rephotos">Selles seadmes puuduvad ülepildistused</string>
     <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
     <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
