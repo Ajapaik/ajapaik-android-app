@@ -135,5 +135,6 @@
     <!-- Favorites -->
     <string name="favorites">Minu lemmikud</string>
     <string name="no_favorites">Lemmikud puuduvad</string>
+    <string name="action_favorite">Lisa lemmikuks</string>
 
 </resources>

@@ -5,6 +5,12 @@
       tools:context=".PhotoActivity">
 
     <item
+            android:id="@+id/action_favorite"
+            android:title="@string/action_favorite"
+            android:icon="@drawable/ic_favorite_border_white_36dp"
+            app:showAsAction="always"/>
+
+    <item
             android:id="@+id/action_flip"
             android:title="@string/action_flip"
             android:icon="@drawable/ic_flip_white_36dp"

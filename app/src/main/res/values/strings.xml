@@ -136,5 +136,7 @@
     <!-- Favorites -->
     <string name="favorites">My favorites</string>
     <string name="no_favorites">No favorites</string>
+    <string name="action_favorite">Favorite</string>
+
 
 </resources>
