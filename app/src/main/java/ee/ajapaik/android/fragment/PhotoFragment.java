@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -212,11 +213,25 @@ public class PhotoFragment extends ImageFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_favorite) {
             m_favorited = !m_favorited;
-            item.setIcon(m_favorited ? R.drawable.ic_favorite_white_36dp : R.drawable.ic_favorite_border_white_36dp);
-//            TODO Send new status over API
+            sendFavoriteUpdate(item);
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void sendFavoriteUpdate(final MenuItem item) {
+        WebAction<Photo> action = Photo.createFavoritingAction(getActivity(), m_photo.getIdentifier(), m_favorited);
+
+        getConnection().enqueue(getActivity(), action, new WebAction.ResultHandler<Photo>() {
+            @Override
+            public void onActionResult(Status status, Photo data) {
+                if (status.isGood()) {
+                    item.setIcon(m_favorited ? R.drawable.ic_favorite_white_36dp : R.drawable.ic_favorite_border_white_36dp);
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {

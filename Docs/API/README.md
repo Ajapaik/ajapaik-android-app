@@ -229,6 +229,23 @@ Returns the current state for a photo.
     Errors:
         [standard]
 
+## Photo favorite status update
+
+Updates photo favorited status
+
+    /photo/favorite
+
+    Parameters:
+        [session]
+        INTEGER id [R] - Photo ID
+        STRING favorited [R] - "true" if new status is favorited
+
+    Returns:
+        { "error": 0 }
+
+    Errors:
+        [standard]
+
 ## Photo upload
 
 Uploads a new photo (re-photo). The request is in MULTIPART encoding that includes a JPEG image named 'original'.

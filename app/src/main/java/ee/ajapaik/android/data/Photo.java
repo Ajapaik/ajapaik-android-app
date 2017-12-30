@@ -19,6 +19,7 @@ public class Photo extends Model {
     private static final String TAG = "Photo";
 
     private static final String API_STATE_PATH = "/photo/state/";
+    private static final String API_FAVORITE_PATH = "/photo/favorite/";
 
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
@@ -44,6 +45,15 @@ public class Photo extends Model {
         parameters.put("id", photoIdentifier);
 
         return new Action(context, API_STATE_PATH, parameters, photoIdentifier);
+    }
+
+    public static WebAction<Photo> createFavoritingAction(Context context, String photoIdentifier, boolean favorited) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+
+        parameters.put("id", photoIdentifier);
+        parameters.put("favorited", String.valueOf(favorited));
+
+        return new Action(context, API_FAVORITE_PATH, parameters, photoIdentifier + "|favorite-" + favorited);
     }
 
     public static Photo parse(String str) {
