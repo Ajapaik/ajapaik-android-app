@@ -7,7 +7,7 @@
                 android:title="@string/nearest_title" />
         <item
                 android:id="@+id/albums"
-                android:icon="@drawable/ic_collections_bookmark_white_48dp"
+                android:icon="@drawable/ic_photo_library_white_36dp"
                 android:title="@string/albums_title" />
         <item
                 android:id="@+id/profile"
@@ -15,8 +15,12 @@
                 android:title="@string/profile_title" />
         <item
                 android:id="@+id/rephotos"
-                android:icon="@drawable/ic_photo_library_white_36dp"
+                android:icon="@drawable/ic_photo_album_white_36dp"
                 android:title="@string/rephotos" />
+        <item
+                android:id="@+id/favorites"
+                android:icon="@drawable/ic_collections_bookmark_white_48dp"
+                android:title="@string/favorites" />
         <item
                 android:id="@+id/about"
                 android:icon="@drawable/ic_info_black_24dp"

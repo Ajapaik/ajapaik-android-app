@@ -10,6 +10,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,7 @@ import ee.ajapaik.android.util.WebAction;
 
 public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
+    private static final String API_FAVORITES_PATH = "/album/favorites/";
     private static final String API_STATE_PATH = "/album/state/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
@@ -49,6 +51,10 @@ public class Album extends Model {
         return new Action(context, API_NEAREST_PATH, parameters, null,
                 latitude_.substring(0, Math.min(latitude_.length(), 9)) + "," +
                 longitude_.substring(0, Math.min(longitude_.length(), 9)));
+    }
+
+    public static WebAction<Album> createFavoritesAction(Context context) {
+        return new Action(context, API_FAVORITES_PATH, new HashMap<String, String>(), null, "favorites");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {
