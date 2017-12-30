@@ -271,6 +271,21 @@ Returns the current state for an album
     Errors:
         [standard]
 
+## Favorites
+
+Returns user's favorited photos
+
+    /album/favorites
+
+    Parameters:
+        [session]
+
+    Returns:
+        See /album/nearest
+
+    Errors:
+        [standard]
+
 # User calls
 
 ## Profile info
