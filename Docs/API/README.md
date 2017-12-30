@@ -297,6 +297,7 @@ Returns photos matching search criteria
         [session]
         INTEGER albumId [O] - Album ID, if specified only photos matching query in this album are returned
         STRING query [R] - Query to search photos
+        STRING rephotosOnly [O] - "true" if should search only from user rephotos
 
     Returns:
         See /album/nearest
