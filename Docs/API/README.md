@@ -183,6 +183,7 @@ Returns a dynamically generated album with the nearest photos to the specified c
 	        		"longitude": 24.7307741, /* Photo coordinate (longitude) */
 	        		"rephotos": 2, /* Number of rephotos */
 	        		"uploads": 0 /* Number of my uploads */
+	        		"favorited": true /* true if user has favorited this photo */
 	        	}
 	        ],
 	        "photos+": [
