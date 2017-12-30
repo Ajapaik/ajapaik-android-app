@@ -72,7 +72,7 @@ public abstract class NavigationDrawerActivity extends WebActivity {
                         if (context instanceof ProfileActivity) break;
                         ProfileActivity.start(context);
                         break;
-                    case R.id.local_rephotos:
+                    case R.id.rephotos:
                         if (context instanceof LocalRephotosActivity) break;
                         LocalRephotosActivity.start(context);
                         finish();

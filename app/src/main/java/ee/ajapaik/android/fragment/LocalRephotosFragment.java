@@ -79,7 +79,7 @@ public class LocalRephotosFragment extends PhotosFragment {
 
     @Override
     protected String getPlaceholderString() {
-        return getString(R.string.no_local_rephotos);
+        return getString(R.string.no_rephotos);
     }
 
     private String getUploadData(File file) {

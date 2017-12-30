@@ -53,7 +53,7 @@
         </activity>
         <activity
                 android:name="ee.ajapaik.android.LocalRephotosActivity"
-                android:label="@string/local_rephotos">
+                android:label="@string/rephotos">
         </activity>
         <activity
                 android:name="ee.ajapaik.android.PhotoActivity"

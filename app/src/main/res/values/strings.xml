@@ -125,8 +125,8 @@
     <string name="tutorial_dialog_show_again_no">No</string>
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
-    <string name="local_rephotos">Local rephotos</string>
-    <string name="no_local_rephotos">No local rephotos</string>
+    <string name="rephotos">Rephotos</string>
+    <string name="no_rephotos">No rephotos</string>
     <string name="storage_not_permitted_title">Storage not permitted</string>
     <string name="storage_not_permitted_message">Not permitting this app to use storage stops You from accessing some features, for example taking and uploading rephotos. Please consider allowing storage usage</string>
     <string name="storage_not_permitted_cancel">Cancel</string>
