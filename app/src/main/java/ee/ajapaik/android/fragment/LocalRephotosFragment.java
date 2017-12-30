@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.adapter.PhotoAdapter;
@@ -21,6 +22,9 @@ import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.util.ExifService;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.widget.StaggeredGridView;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -36,6 +40,11 @@ public class LocalRephotosFragment extends PhotosFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         refresh();
+    }
+
+    @Override
+    protected WebAction createSearchAction(String query) {
+        return Album.createSearchAction(getActivity(), query);
     }
 
     @Override
@@ -80,6 +89,27 @@ public class LocalRephotosFragment extends PhotosFragment {
     @Override
     protected String getPlaceholderString() {
         return getString(R.string.no_local_rephotos);
+    }
+
+    @Override
+    public void setAlbum(Album album) {
+        if(!Objects.match(m_album, album)) {
+            StaggeredGridView gridView = getGridView();
+
+            m_album = album;
+
+            if(m_album != null && m_album.getPhotos().size() > 0) {
+                getEmptyView().setText("");
+                setPhotoAdapter(gridView, m_album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+                    @Override
+                    public void onSelect(Photo photo) {
+                        PhotoActivity.start(getActivity(), photo, m_album);
+                    }
+                });
+            } else {
+                initializeEmptyGridView(gridView);
+            }
+        }
     }
 
     private String getUploadData(File file) {

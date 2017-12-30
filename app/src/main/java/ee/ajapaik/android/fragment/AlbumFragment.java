@@ -4,11 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
@@ -16,9 +13,7 @@ import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
-import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.SearchService;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
@@ -32,10 +27,6 @@ public class AlbumFragment extends PhotosFragment {
     private static final String KEY_ALBUM = "album";
     private static final String KEY_LAYOUT = "layout";
 
-    private Album m_album;
-
-    private SearchService m_searchService;
-
     public void invalidate() {
         getSwipeRefreshLayout().setRefreshing(true);
         refresh();
@@ -45,11 +36,6 @@ public class AlbumFragment extends PhotosFragment {
         Bundle arguments = getArguments();
 
         return (arguments != null) ? arguments.getString(KEY_ALBUM_IDENTIFIER) : null;
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        m_searchService.initializeSearch(menu, inflater);
     }
 
     public void setAlbumIdentifier(String albumIdentifier) {
@@ -79,25 +65,12 @@ public class AlbumFragment extends PhotosFragment {
             setAlbum(album, layout);
         }
 
-        m_searchService = new SearchService(new SearchService.Search() {
-            @Override
-            public void search(String query) {
-                getSwipeRefreshLayout().setRefreshing(true);
-                performAction(getActivity(), createSearchAction(query));
-            }
-
-            @Override
-            public void clearSearch() {
-                getSwipeRefreshLayout().setRefreshing(true);
-                refresh();
-            }
-        });
-
         if (!isNearestFragment()) {
             refresh();
         }
     }
 
+    @Override
     protected WebAction<Album> createSearchAction(String query) {
         return Album.createSearchAction(getActivity(), getAlbum(), query);
     }
@@ -113,6 +86,7 @@ public class AlbumFragment extends PhotosFragment {
         return m_album;
     }
 
+    @Override
     public void setAlbum(Album album) {
         setAlbum(album, null);
     }
@@ -165,23 +139,6 @@ public class AlbumFragment extends PhotosFragment {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
         performAction(context, action);
-    }
-
-    private void performAction(Context context, WebAction<Album> action) {
-        if(action != null) {
-            getConnection().enqueue(context, action, new WebAction.ResultHandler<Album>() {
-                @Override
-                public void onActionResult(Status status, Album album) {
-
-                    if(album != null) {
-                        setAlbum(album);
-                    } else if(m_album == null) {
-                        Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
-                    }
-                    getSwipeRefreshLayout().setRefreshing(false);
-                }
-            });
-        }
     }
 
     @Override
