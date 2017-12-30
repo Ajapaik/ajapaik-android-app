@@ -64,19 +64,34 @@ public class Album extends Model {
         return new Action(context, API_STATE_PATH, parameters, album, album.getIdentifier());
     }
 
+    public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
+        return createSearchAction(context, null, query, true);
+    }
+
     public static WebAction<Album> createSearchAction(Context context, String query) {
-        return createSearchAction(context, null, query);
+        return createSearchAction(context, null, query, false);
     }
 
     public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
+        return createSearchAction(context, album, query, false);
+    }
+
+    private static WebAction<Album> createSearchAction(Context context, Album album, String query, boolean isRephotosOnly) {
         Map<String, String> parameters = new Hashtable<String, String>();
+
+        String baseIdentifier = (album != null ? album.getIdentifier() : "all-albums") + "|" + query.replaceAll(" ", "-");
 
         if (album != null) {
             parameters.put("albumId", album.getIdentifier());
         }
+
+        if (isRephotosOnly) {
+            parameters.put("rephotosOnly", "true");
+            baseIdentifier += "|rephotos-only";
+        }
+
         parameters.put("query", query);
 
-        String baseIdentifier = (album != null ? album.getIdentifier() : "all-albums") + "|" + query.replaceAll(" ", "-");
         return new Action(context, API_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 

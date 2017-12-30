@@ -44,7 +44,7 @@ public class LocalRephotosFragment extends PhotosFragment {
 
     @Override
     protected WebAction createSearchAction(String query) {
-        return Album.createSearchAction(getActivity(), query);
+        return Album.createRephotoSearchAction(getActivity(), query);
     }
 
     @Override
