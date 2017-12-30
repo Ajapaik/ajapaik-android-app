@@ -3,15 +3,17 @@ package ee.ajapaik.android.data;
 import android.content.Context;
 import android.location.Location;
 import android.net.Uri;
+
 import com.google.gson.JsonObject;
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.util.Objects;
-import ee.ajapaik.android.util.Size;
-import ee.ajapaik.android.util.WebAction;
 
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
+
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.Size;
+import ee.ajapaik.android.util.WebAction;
 
 public class Photo extends Model {
     private static final String TAG = "Photo";
@@ -30,6 +32,7 @@ public class Photo extends Model {
     private static final String KEY_LONGITUDE = "longitude";
     private static final String KEY_REPHOTOS = "rephotos";
     private static final String KEY_UPLOADS = "uploads";
+    private static final String KEY_FAVORITED = "favorited";
 
     public static WebAction<Photo> createStateAction(Context context, Photo photo) {
         return createStateAction(context, photo.getIdentifier());
@@ -83,6 +86,7 @@ public class Photo extends Model {
     private Location m_location;
     private int m_rephotos;
     private int m_uploads;
+    private boolean m_favorited;
 
     public Photo(JsonObject attributes) {
         this(attributes, null);
@@ -106,6 +110,7 @@ public class Photo extends Model {
 
         m_rephotos = readInteger(attributes, KEY_REPHOTOS);
         m_uploads = readInteger(attributes, KEY_UPLOADS);
+        m_favorited = readBoolean(attributes, KEY_FAVORITED);
 
         if(m_identifier == null || m_image == null || m_width == 0 || m_height == 0) {
             throw new IllegalArgumentException();
@@ -132,6 +137,7 @@ public class Photo extends Model {
 
         write(attributes, KEY_REPHOTOS, m_rephotos);
         write(attributes, KEY_UPLOADS, m_uploads);
+        write(attributes, KEY_FAVORITED, m_favorited);
 
         return attributes;
     }
@@ -186,6 +192,10 @@ public class Photo extends Model {
 
     public int getUploadsCount() {
         return m_uploads;
+    }
+
+    public boolean isFavorited() {
+        return m_favorited;
     }
 
     public boolean isLandscape() {

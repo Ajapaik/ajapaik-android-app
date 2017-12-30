@@ -10,29 +10,35 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import ee.ajapaik.android.CameraActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.ImageFragment;
-import ee.ajapaik.android.R;
-import ee.ajapaik.android.util.*;
+import ee.ajapaik.android.util.Images;
+import ee.ajapaik.android.util.Locations;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.Strings;
+import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
 import ee.ajapaik.android.widget.util.OnPanTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -52,6 +58,7 @@ public class PhotoFragment extends ImageFragment {
 
     private int m_azimuth;
     private boolean m_immersiveMode;
+    protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
     private PointF m_offset = null;
@@ -199,6 +206,17 @@ public class PhotoFragment extends ImageFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_favorite) {
+            m_favorited = !m_favorited;
+            item.setIcon(m_favorited ? R.drawable.ic_favorite_white_36dp : R.drawable.ic_favorite_border_white_36dp);
+//            TODO Send new status over API
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
@@ -357,6 +375,7 @@ public class PhotoFragment extends ImageFragment {
         String title = m_photo.getTitle();
         String author = m_photo.getAuthor();
         Date date = m_photo.getDate();
+        m_favorited = m_photo.isFavorited();
 
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getRephotosCountImageView().setImageResource(Images.toRephotoCountDrawableId(m_photo.getRephotosCount()));

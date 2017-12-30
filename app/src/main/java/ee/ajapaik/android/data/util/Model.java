@@ -253,6 +253,12 @@ public abstract class Model implements Parcelable {
         }
     }
 
+    protected static void write(JsonObject obj, String key, boolean value) {
+        if(value) {
+            obj.addProperty(key, value);
+        }
+    }
+
     public abstract JsonObject getAttributes();
 
     @Override
