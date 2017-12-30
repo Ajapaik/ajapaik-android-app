@@ -18,7 +18,7 @@ public class UploadActivity extends WebActivity {
     private static CreatedFrom createdFrom;
 
     public enum CreatedFrom {
-        CAMERA, LOCAL_REPHOTOS
+        CAMERA, REPHOTOS
     }
 
     public static Intent getStartIntent(Context context, Upload upload) {

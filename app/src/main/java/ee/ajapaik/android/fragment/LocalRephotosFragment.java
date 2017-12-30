@@ -24,7 +24,7 @@ import ee.ajapaik.android.util.ExifService;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static ee.ajapaik.android.UploadActivity.CreatedFrom.LOCAL_REPHOTOS;
+import static ee.ajapaik.android.UploadActivity.CreatedFrom.REPHOTOS;
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 import static org.apache.http.util.TextUtils.isBlank;
 
@@ -62,7 +62,7 @@ public class LocalRephotosFragment extends PhotosFragment {
             setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
                 @Override
                 public void onSelect(Photo photo) {
-                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo), LOCAL_REPHOTOS);
+                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo), REPHOTOS);
                 }
             });
         }
