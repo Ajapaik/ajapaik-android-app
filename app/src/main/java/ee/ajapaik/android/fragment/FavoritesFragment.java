@@ -10,7 +10,7 @@ public class FavoritesFragment extends AlbumFragment {
 
     @Override
     protected WebAction<Album> createAction(Context context) {
-        return Album.createFavoritesAction(context);
+        return Album.createFavoritesAction(context, getSettings().getLocation());
     }
 
     @Override

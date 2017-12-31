@@ -291,12 +291,14 @@ Returns the current state for an album
 
 ## Favorites
 
-Returns user's favorited photos
+Returns user's favorited photos sorted by proximity (if user has permitted access to location)
 
     /album/favorites
 
     Parameters:
         [session]
+        NUMBER latitude [O] - User coordinate (latitude)
+        NUMBER longitude [O] - User coordinate (longitude)
 
     Returns:
         See /album/nearest

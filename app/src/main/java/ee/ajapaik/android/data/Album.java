@@ -10,7 +10,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -53,8 +52,17 @@ public class Album extends Model {
                 longitude_.substring(0, Math.min(longitude_.length(), 9)));
     }
 
-    public static WebAction<Album> createFavoritesAction(Context context) {
-        return new Action(context, API_FAVORITES_PATH, new HashMap<String, String>(), null, "favorites");
+    public static WebAction<Album> createFavoritesAction(Context context, Location location) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+        if (location != null) {
+            String latitude = Double.toString(location.getLatitude());
+            String longitude = Double.toString(location.getLongitude());
+
+            parameters.put("latitude", latitude);
+            parameters.put("longitude", longitude);
+        }
+
+        return new Action(context, API_FAVORITES_PATH, parameters, null, "favorites");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {
