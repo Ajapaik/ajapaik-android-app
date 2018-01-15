@@ -19,7 +19,7 @@ public class Photo extends Model {
     private static final String TAG = "Photo";
 
     private static final String API_STATE_PATH = "/photo/state/";
-    private static final String API_FAVORITE_PATH = "/photo/favorite/";
+    private static final String API_FAVORITE_PATH = "/photo/favorite/set/";
 
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
