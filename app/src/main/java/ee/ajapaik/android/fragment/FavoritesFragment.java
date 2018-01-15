@@ -15,6 +15,8 @@ import static android.view.View.VISIBLE;
 
 public class FavoritesFragment extends AlbumFragment {
 
+    public static final String RETURN_ACTIVITY_NAME = "favorites";
+
     @Override
     protected WebAction<Album> createAction(Context context) {
         return Album.createFavoritesAction(context, getSettings().getLocation());
@@ -42,7 +44,7 @@ public class FavoritesFragment extends AlbumFragment {
             getNotLoggedInButton().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ProfileActivity.start(getActivity());
+                    ProfileActivity.start(getActivity(), RETURN_ACTIVITY_NAME);
                 }
             });
             getSwipeRefreshLayout().setRefreshing(false);

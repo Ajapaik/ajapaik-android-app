@@ -16,7 +16,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.*;
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.Auth;
@@ -25,14 +31,20 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import ee.ajapaik.android.ProfileActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.data.util.Status;
+import ee.ajapaik.android.fragment.FavoritesFragment;
+import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 
 import static android.Manifest.permission.GET_ACCOUNTS;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -58,6 +70,11 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private GoogleApiClient m_googleApiClient = null;
 
     private ProgressDialog progressDialog;
+
+    private static final List<String> returnActivities = new ArrayList<String>(){{
+            add(UploadFragment.RETURN_ACTIVITY_NAME);
+            add(FavoritesFragment.RETURN_ACTIVITY_NAME);
+    }};
 
     public WebService.Connection getConnection() {
         return m_connection;
@@ -162,9 +179,8 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         getSettings().setProfile(new Profile(getSettings().getSession().getAttributes()));
         String returnActivity = getIntent().getStringExtra(RETURN_ACTIVITY);
         finish();
-        if (!"upload".equals(returnActivity)) {
-            ProfileActivity.start(WebActivity.this, "login");
-            this.overridePendingTransition(0, 0);
+        if (!returnActivities.contains(returnActivity)) {
+            startLoginActivity();
         }
     }
 
@@ -173,6 +189,10 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         m_settings.setSession(null);
         getSettings().setProfile(new Profile());
         finish();
+        startLoginActivity();
+    }
+
+    private void startLoginActivity() {
         ProfileActivity.start(WebActivity.this, "login");
         this.overridePendingTransition(0, 0);
     }
