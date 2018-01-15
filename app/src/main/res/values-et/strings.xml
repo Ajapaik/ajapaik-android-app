@@ -136,5 +136,7 @@
     <string name="favorites">Minu lemmikud</string>
     <string name="no_favorites">Lemmikud puuduvad</string>
     <string name="action_favorite">Lisa lemmikuks</string>
+    <string name="favorites_label_not_logged_in_button">Sisse logima</string>
+    <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
 
 </resources>

@@ -40,4 +40,13 @@
             android:visibility="gone"
             android:text="@string/nearest_label_no_data_button"/>
 
+    <Button android:id="@+id/favorites_not_logged_in_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            android:text="@string/favorites_label_not_logged_in_button"/>
+
 </RelativeLayout>

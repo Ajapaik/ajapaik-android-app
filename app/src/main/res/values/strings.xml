@@ -137,6 +137,7 @@
     <string name="favorites">My favorites</string>
     <string name="no_favorites">No favorites</string>
     <string name="action_favorite">Favorite</string>
-
+    <string name="favorites_label_not_logged_in_button">Sign in</string>
+    <string name="favorites_label_not_logged_in_text">Please log in to see your favorites</string>
 
 </resources>
