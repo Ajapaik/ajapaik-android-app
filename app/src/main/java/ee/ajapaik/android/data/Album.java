@@ -20,7 +20,7 @@ import ee.ajapaik.android.util.WebAction;
 
 public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
-    private static final String API_FAVORITES_PATH = "/album/favorites/";
+    private static final String API_FAVORITES_PATH = "/photo/favorite/order-by-distance-to-location/";
     private static final String API_STATE_PATH = "/album/state/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
