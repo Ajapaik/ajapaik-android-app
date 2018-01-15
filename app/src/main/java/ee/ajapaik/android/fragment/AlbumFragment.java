@@ -85,6 +85,10 @@ public class AlbumFragment extends PhotosFragment {
         return m_album;
     }
 
+    public String getAlbumTitle() {
+        return m_album.getTitle();
+    }
+
     public void setAlbum(Album album) {
         setAlbum(album, null);
     }
@@ -96,7 +100,7 @@ public class AlbumFragment extends PhotosFragment {
             m_album = album;
 
             if(m_album != null) {
-                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(m_album.getTitle() != null ? m_album.getTitle() : getString(R.string.nearest_title));
+                ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getAlbumTitle());
             }
 
             if(state == null) {

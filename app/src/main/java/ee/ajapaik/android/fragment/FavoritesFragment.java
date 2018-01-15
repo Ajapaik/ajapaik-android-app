@@ -17,4 +17,9 @@ public class FavoritesFragment extends AlbumFragment {
     protected String getPlaceholderString() {
         return getString(R.string.no_favorites);
     }
+
+    @Override
+    public String getAlbumTitle() {
+        return getString(R.string.favorites);
+    }
 }
