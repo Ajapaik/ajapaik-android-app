@@ -2,6 +2,8 @@ package ee.ajapaik.android.fragment;
 
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -114,5 +116,10 @@ public class LocalRephotosFragment extends PhotosFragment {
 
     private String getUploadData(File file) {
         return ExifService.readField(file, USER_COMMENT);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        TODO: Remove this method to enable searching user rephotos
     }
 }
