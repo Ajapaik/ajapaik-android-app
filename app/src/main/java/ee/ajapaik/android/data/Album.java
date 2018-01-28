@@ -22,6 +22,7 @@ public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
     private static final String API_STATE_PATH = "/album/state/";
     private static final String API_SEARCH_PATH = "/photos/search/";
+    private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_TITLE = "title";
@@ -65,25 +66,29 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
-        return createSearchAction(context, null, query, true);
+        return createSearchAction(context, query, true);
     }
 
     public static WebAction<Album> createSearchAction(Context context, String query) {
-        return createSearchAction(context, null, query, false);
+        return createSearchAction(context, query, false);
     }
 
     public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
-        return createSearchAction(context, album, query, false);
+        if (album == null) return createSearchAction(context, query, false);
+
+        String baseIdentifier = album.getIdentifier() + "|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("albumId", album.getIdentifier());
+        parameters.put("query", query);
+
+        return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 
-    private static WebAction<Album> createSearchAction(Context context, Album album, String query, boolean isRephotosOnly) {
+    private static WebAction<Album> createSearchAction(Context context, String query, boolean isRephotosOnly) {
         Map<String, String> parameters = new Hashtable<String, String>();
 
-        String baseIdentifier = (album != null ? album.getIdentifier() : "all-albums") + "|" + query.replaceAll(" ", "-");
-
-        if (album != null) {
-            parameters.put("albumId", album.getIdentifier());
-        }
+        String baseIdentifier = "all-albums|" + query.replaceAll(" ", "-");
 
         if (isRephotosOnly) {
             parameters.put("rephotosOnly", "true");
