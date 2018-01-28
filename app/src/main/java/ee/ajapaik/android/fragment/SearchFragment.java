@@ -17,6 +17,7 @@ public abstract class SearchFragment extends WebFragment {
     protected abstract WebAction createSearchAction(String query);
     protected abstract void refresh();
 
+    private boolean isSearchVisible;
     private SearchService m_searchService;
 
     @Override
@@ -40,10 +41,18 @@ public abstract class SearchFragment extends WebFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        m_searchService.initializeSearch(menu, inflater);
+        if (isSearchVisible) m_searchService.initializeSearch(menu, inflater);
     }
 
     public SwipeRefreshLayout getSwipeRefreshLayout() {
-        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
+        return (SwipeRefreshLayout) getView().findViewById(R.id.swiperefresh);
+    }
+
+    void handleLoadingFinished() {
+        getSwipeRefreshLayout().setRefreshing(false);
+        if (!isSearchVisible) {
+            isSearchVisible = true;
+            getActivity().invalidateOptionsMenu();
+        }
     }
 }

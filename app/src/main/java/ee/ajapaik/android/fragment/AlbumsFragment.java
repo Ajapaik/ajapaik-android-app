@@ -118,7 +118,7 @@ public class AlbumsFragment extends SearchFragment {
                 } else if(m_feed == null) {
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
-                getSwipeRefreshLayout().setRefreshing(false);
+                handleLoadingFinished();
             }
         });
     }
