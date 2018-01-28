@@ -8,19 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.AlbumAdapter;
 import ee.ajapaik.android.data.Feed;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 
-public class AlbumsFragment extends WebFragment {
+public class AlbumsFragment extends SearchFragment {
     private static final String KEY_FEED = "feed";
     private static final String KEY_LIST = "list";
 
@@ -68,6 +66,11 @@ public class AlbumsFragment extends WebFragment {
     }
 
     @Override
+    public WebAction<Feed> createSearchAction(String query) {
+        return Feed.createSearchAction(getActivity(), query);
+    }
+
+    @Override
     public void onSaveInstanceState(final Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
@@ -97,10 +100,16 @@ public class AlbumsFragment extends WebFragment {
         }
     }
 
+    @Override
     protected void refresh() {
         Context context = getActivity();
+        WebAction<Feed> action = Feed.createAction(context);
+        performAction(context, action);
+    }
 
-        getConnection().enqueue(context, Feed.createAction(context), new WebAction.ResultHandler<Feed>() {
+    @Override
+    public void performAction(Context context, WebAction action) {
+        getConnection().enqueue(context, action, new WebAction.ResultHandler<Feed>() {
             @Override
             public void onActionResult(Status status, Feed feed) {
 
@@ -122,7 +131,4 @@ public class AlbumsFragment extends WebFragment {
         return (ListView)getView().findViewById(R.id.list);
     }
 
-    private SwipeRefreshLayout getSwipeRefreshLayout() {
-        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
-    }
 }

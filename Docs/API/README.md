@@ -150,6 +150,22 @@ Returns all the albums.
 	Errors:
 	    [standard]
 
+## Albums search
+
+Returns all  albums matching criteria.
+
+	/albums/search
+
+	Parameters:
+	    [session]
+	    STRING query [R] - Query to search albums
+
+	Returns:
+	   See /albums
+
+	Errors:
+	    [standard]
+
 ## Nearest
 
 Returns a dynamically generated album with the nearest photos to the specified coordinate
@@ -268,6 +284,24 @@ Returns the current state for an album
     Returns:
         See /album/nearest
     
+    Errors:
+        [standard]
+
+## Photo search
+
+Returns photos matching search criteria
+
+    /album/search
+
+    Parameters:
+        [session]
+        STRING query [R] - Query to search photos
+        INTEGER albumId [O] - Album ID, if specified only photos matching query in this album are returned
+        STRING rephotosOnly [O] - "true" if should search only from user rephotos
+
+    Returns:
+        See /album/nearest
+
     Errors:
         [standard]
 

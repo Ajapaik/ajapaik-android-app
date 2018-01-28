@@ -131,4 +131,6 @@
     <string name="storage_not_permitted_message">Not permitting this app to use storage stops You from accessing some features, for example taking and uploading rephotos. Please consider allowing storage usage</string>
     <string name="storage_not_permitted_cancel">Cancel</string>
     <string name="storage_not_permitted_open_settings">Open settings</string>
+
+    <string name="action_search">Search</string>
 </resources>

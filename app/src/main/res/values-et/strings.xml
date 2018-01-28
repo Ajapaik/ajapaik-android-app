@@ -130,4 +130,6 @@
     <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
     <string name="storage_not_permitted_cancel">Loobu</string>
     <string name="storage_not_permitted_open_settings">Ava seaded</string>
+
+    <string name="action_search">Otsing</string>
 </resources>

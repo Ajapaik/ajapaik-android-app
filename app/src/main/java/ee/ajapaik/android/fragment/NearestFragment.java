@@ -2,8 +2,9 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.location.Location;
-import ee.ajapaik.android.data.Album;
+
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.util.WebAction;
 
 public class NearestFragment extends AlbumFragment {
@@ -14,6 +15,11 @@ public class NearestFragment extends AlbumFragment {
         Location location = getSettings().getLocation();
 
         return (location != null) ? Album.createNearestAction(context, location, null, DEFAULT_RANGE) : null;
+    }
+
+    @Override
+    protected WebAction<Album> createSearchAction(String query) {
+        return Album.createSearchAction(getActivity(), query);
     }
 
     @Override

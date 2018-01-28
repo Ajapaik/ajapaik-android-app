@@ -6,7 +6,6 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import ee.ajapaik.android.AlbumsActivity;
 import ee.ajapaik.android.PhotoActivity;
@@ -14,7 +13,6 @@ import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
-import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
@@ -28,8 +26,6 @@ public class AlbumFragment extends PhotosFragment {
 
     private static final String KEY_ALBUM = "album";
     private static final String KEY_LAYOUT = "layout";
-
-    private Album m_album;
 
     public void invalidate() {
         getSwipeRefreshLayout().setRefreshing(true);
@@ -75,6 +71,11 @@ public class AlbumFragment extends PhotosFragment {
     }
 
     @Override
+    protected WebAction<Album> createSearchAction(String query) {
+        return Album.createSearchAction(getActivity(), getAlbum(), query);
+    }
+
+    @Override
     public void onSaveInstanceState(final Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
@@ -85,6 +86,7 @@ public class AlbumFragment extends PhotosFragment {
         return m_album;
     }
 
+    @Override
     public void setAlbum(Album album) {
         setAlbum(album, null);
     }
@@ -136,21 +138,7 @@ public class AlbumFragment extends PhotosFragment {
     protected void refresh() {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
-
-        if(action != null) {
-            getConnection().enqueue(context, action, new WebAction.ResultHandler<Album>() {
-                @Override
-                public void onActionResult(Status status, Album album) {
-
-                    if(album != null) {
-                        setAlbum(album);
-                    } else if(m_album == null) {
-                        Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
-                    }
-                    getSwipeRefreshLayout().setRefreshing(false);
-                }
-            });
-        }
+        performAction(context, action);
     }
 
     @Override

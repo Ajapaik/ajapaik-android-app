@@ -21,6 +21,9 @@ import ee.ajapaik.android.util.WebAction;
 public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
     private static final String API_STATE_PATH = "/album/state/";
+    private static final String API_SEARCH_PATH = "/photos/search/";
+    private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
+    private static final String API_USER_REPHOTOS_SEARCH_PATH = "/photos/search/user-rephotos/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_TITLE = "title";
@@ -61,6 +64,37 @@ public class Album extends Model {
         }
 
         return new Action(context, API_STATE_PATH, parameters, album, album.getIdentifier());
+    }
+
+    public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
+        String baseIdentifier = "rephotos|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("rephotosOnly", "true");
+        parameters.put("query", query);
+
+        return new Action(context, API_USER_REPHOTOS_SEARCH_PATH, parameters, null, baseIdentifier);
+    }
+
+    public static WebAction<Album> createSearchAction(Context context, String query) {
+        String baseIdentifier = "all-albums|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("query", query);
+
+        return new Action(context, API_SEARCH_PATH, parameters, null, baseIdentifier);
+    }
+
+    public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
+        if (album == null) return createSearchAction(context, query);
+
+        String baseIdentifier = album.getIdentifier() + "|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("albumId", album.getIdentifier());
+        parameters.put("query", query);
+
+        return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 
     public static WebAction<Album> createStateAction(Context context, String albumIdentifier) {

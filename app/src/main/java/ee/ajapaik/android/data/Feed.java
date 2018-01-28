@@ -7,6 +7,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
@@ -16,10 +17,17 @@ import ee.ajapaik.android.util.WebAction;
 
 public class Feed extends Model {
     private static final String API_PATH = "/albums/";
+    private static final String API_SEARCH_PATH = "/albums/search/";
     private static final String KEY_ALBUMS = "albums";
 
     public static WebAction<Feed> createAction(Context context) {
         return new Action(context, API_PATH, null);
+    }
+
+    public static WebAction<Feed> createSearchAction(Context context, String query) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("query", query);
+        return new Action(context, API_SEARCH_PATH, parameters);
     }
 
     public static Feed parse(String str) {
