@@ -21,7 +21,7 @@ import ee.ajapaik.android.util.WebAction;
 public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
     private static final String API_STATE_PATH = "/album/state/";
-    private static final String API_SEARCH_PATH = "/album/search/";
+    private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_TITLE = "title";
