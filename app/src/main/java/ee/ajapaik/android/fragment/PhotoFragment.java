@@ -9,6 +9,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -220,6 +221,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void sendFavoriteUpdate(final MenuItem item) {
+        getSwipeRefreshLayout().setRefreshing(true);
         WebAction<Photo> action = Photo.createFavoritingAction(getActivity(), m_photo.getIdentifier(), m_favorited);
 
         getConnection().enqueue(getActivity(), action, new WebAction.ResultHandler<Photo>() {
@@ -230,6 +232,7 @@ public class PhotoFragment extends ImageFragment {
                 } else {
                     Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
                 }
+                getSwipeRefreshLayout().setRefreshing(false);
             }
         });
     }
@@ -481,5 +484,9 @@ public class PhotoFragment extends ImageFragment {
 
     private Button getSubtitleView() {
         return (Button)getView().findViewById(R.id.button_subtitle);
+    }
+
+    private SwipeRefreshLayout getSwipeRefreshLayout() {
+        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
     }
 }
