@@ -297,7 +297,39 @@ Returns photos matching search criteria
         [session]
         STRING query [R] - Query to search photos
         INTEGER albumId [O] - Album ID, if specified only photos matching query in this album are returned
-        STRING rephotosOnly [O] - "true" if should search only from user rephotos
+
+    Returns:
+        See /album/nearest
+
+    Errors:
+        [standard]
+
+## Photos in album search
+
+Returns photos matching search criteria
+
+    /album/photos/search/
+
+    Parameters:
+        [session]
+        STRING query [R] - Query to search photos
+        INTEGER albumId [O] - Album ID, if specified only photos matching query in this album are returned
+
+    Returns:
+        See /album/nearest
+
+    Errors:
+        [standard]
+
+## User rephoto search
+
+Returns rephotos matching search criteria
+
+    /photos/search/user-rephotos/
+
+    Parameters:
+        [session]
+        STRING query [R] - Query to search photos
 
     Returns:
         See /album/nearest
