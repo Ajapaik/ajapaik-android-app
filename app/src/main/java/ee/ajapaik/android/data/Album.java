@@ -23,6 +23,7 @@ public class Album extends Model {
     private static final String API_STATE_PATH = "/album/state/";
     private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
+    private static final String API_USER_REPHOTOS_SEARCH_PATH = "/photos/search/user-rephotos/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_TITLE = "title";
@@ -66,15 +67,26 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
-        return createSearchAction(context, query, true);
+        String baseIdentifier = "rephotos|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("rephotosOnly", "true");
+        parameters.put("query", query);
+
+        return new Action(context, API_USER_REPHOTOS_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 
     public static WebAction<Album> createSearchAction(Context context, String query) {
-        return createSearchAction(context, query, false);
+        String baseIdentifier = "all-albums|" + query.replaceAll(" ", "-");
+
+        Map<String, String> parameters = new Hashtable<String, String>();
+        parameters.put("query", query);
+
+        return new Action(context, API_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 
     public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
-        if (album == null) return createSearchAction(context, query, false);
+        if (album == null) return createSearchAction(context, query);
 
         String baseIdentifier = album.getIdentifier() + "|" + query.replaceAll(" ", "-");
 
@@ -83,21 +95,6 @@ public class Album extends Model {
         parameters.put("query", query);
 
         return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
-    }
-
-    private static WebAction<Album> createSearchAction(Context context, String query, boolean isRephotosOnly) {
-        Map<String, String> parameters = new Hashtable<String, String>();
-
-        String baseIdentifier = "all-albums|" + query.replaceAll(" ", "-");
-
-        if (isRephotosOnly) {
-            parameters.put("rephotosOnly", "true");
-            baseIdentifier += "|rephotos-only";
-        }
-
-        parameters.put("query", query);
-
-        return new Action(context, API_SEARCH_PATH, parameters, null, baseIdentifier);
     }
 
     public static WebAction<Album> createStateAction(Context context, String albumIdentifier) {
