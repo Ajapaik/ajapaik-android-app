@@ -124,12 +124,20 @@
     <string name="tutorial_dialog_show_again_no">No</string>
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
+    <!-- Rephotos -->
     <string name="rephotos">Minu ülepildistused</string>
-    <string name="no_rephotos">Selles seadmes puuduvad ülepildistused</string>
+    <string name="no_rephotos">Ülepildistused puuduvad</string>
     <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
     <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
     <string name="storage_not_permitted_cancel">Loobu</string>
     <string name="storage_not_permitted_open_settings">Ava seaded</string>
 
     <string name="action_search">Otsing</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Minu lemmikud</string>
+    <string name="no_favorites">Lemmikud puuduvad</string>
+    <string name="action_favorite">Lisa lemmikuks</string>
+    <string name="favorites_label_not_logged_in_button">Sisse logima</string>
+    <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
 </resources>

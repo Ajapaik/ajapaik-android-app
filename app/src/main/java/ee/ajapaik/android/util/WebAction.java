@@ -2,20 +2,22 @@ package ee.ajapaik.android.util;
 
 import android.content.Context;
 import android.util.Log;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.stream.JsonReader;
-import ee.ajapaik.android.data.util.Model;
-import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.BuildConfig;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Map;
+
+import ee.ajapaik.android.BuildConfig;
+import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.data.util.Status;
 
 public class WebAction<T> extends WebOperation {
     private static final String TAG = "WebAction";
@@ -74,6 +76,8 @@ public class WebAction<T> extends WebOperation {
             Log.d(TAG, "statusCode=" + statusCode + ", stream=" + ((stream != null) ? "YES" : "NONE"));
         }
 
+        boolean isParsableObject = false;
+
         if((statusCode == HTTP_STATUS_OK || statusCode == HTTP_STATUS_FORBIDDEN || statusCode == HTTP_STATUS_INTERNAL_SERVER_ERROR) && stream != null) {
             try {
                 JsonElement element = new JsonParser().parse(new JsonReader(new InputStreamReader(stream, "UTF-8")));
@@ -93,7 +97,8 @@ public class WebAction<T> extends WebOperation {
                     } else {
                         m_status = Status.NONE;
                     }
-                    if (m_status == Status.NONE) {
+                    isParsableObject = isParsableObject(attributes);
+                    if (m_status == Status.NONE && isParsableObject) {
                         m_object = parseObject(attributes);
                     }
                 }
@@ -113,9 +118,13 @@ public class WebAction<T> extends WebOperation {
             }
         }
 
-        if(m_status == Status.NONE && m_object == null && m_creator != null) {
+        if(m_status == Status.NONE && m_object == null && m_creator != null && isParsableObject) {
             m_status = Status.INVALID_DATA;
         }
+    }
+
+    private boolean isParsableObject(JsonObject attributes) {
+        return attributes.size() > (attributes.has(KEY_ERROR) ? 1 : 0);
     }
 
     public interface ResultHandler<T> {

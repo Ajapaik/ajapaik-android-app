@@ -31,4 +31,9 @@ public class NearestFragment extends AlbumFragment {
     protected boolean isNearestFragment() {
         return true;
     }
+
+    @Override
+    public String getAlbumTitle() {
+        return getString(R.string.nearest_title);
+    }
 }

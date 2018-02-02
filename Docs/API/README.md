@@ -199,6 +199,7 @@ Returns a dynamically generated album with the nearest photos to the specified c
 	        		"longitude": 24.7307741, /* Photo coordinate (longitude) */
 	        		"rephotos": 2, /* Number of rephotos */
 	        		"uploads": 0 /* Number of my uploads */
+	        		"favorited": true /* true if user has favorited this photo */
 	        	}
 	        ],
 	        "photos+": [
@@ -244,6 +245,23 @@ Returns the current state for a photo.
     Errors:
         [standard]
 
+## Photo favorite status update
+
+Updates photo favorited status
+
+    /photo/favorite
+
+    Parameters:
+        [session]
+        INTEGER id [R] - Photo ID
+        STRING favorited [R] - "true" if new status is favorited
+
+    Returns:
+        { "error": 0 }
+
+    Errors:
+        [standard]
+
 ## Photo upload
 
 Uploads a new photo (re-photo). The request is in MULTIPART encoding that includes a JPEG image named 'original'.
@@ -283,7 +301,24 @@ Returns the current state for an album
     
     Returns:
         See /album/nearest
-    
+
+    Errors:
+        [standard]
+
+## Favorites
+
+Returns user's favorited photos sorted by proximity (if user has permitted access to location)
+
+    /album/favorites
+
+    Parameters:
+        [session]
+        NUMBER latitude [O] - User coordinate (latitude)
+        NUMBER longitude [O] - User coordinate (longitude)
+
+    Returns:
+        See /album/nearest
+
     Errors:
         [standard]
 

@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
+
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.fragment.PhotoFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
 
@@ -96,7 +96,17 @@ public class PhotoActivity extends WebActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_photo, menu);
+        setFavoritedIcon(menu);
         return true;
+    }
+
+    private void setFavoritedIcon(Menu menu) {
+        Photo photo = getIntent().getParcelableExtra(EXTRA_PHOTO);
+        menu.findItem(R.id.action_favorite).setIcon(
+                photo.isFavorited()
+                ? R.drawable.ic_favorite_white_36dp
+                : R.drawable.ic_favorite_border_white_36dp
+        );
     }
 
     protected PhotoFragment getFragment() {

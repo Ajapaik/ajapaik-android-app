@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.util.Images;
 import ee.ajapaik.android.util.Size;
 import ee.ajapaik.android.util.Strings;
@@ -56,6 +56,12 @@ public class PhotoAdapter extends StaggeredGridView.Adapter {
             imageView.setColorFilter(view.getContext().getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             imageView.setColorFilter(view.getContext().getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
+        }
+
+        if (photo.isFavorited()) {
+            imageView = (ImageView) view.findViewById(R.id.image_favorited);
+            imageView.setImageResource(R.drawable.ic_favorite_white_36dp);
+            imageView.setColorFilter(view.getContext().getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         }
 
         button.setOnClickListener(new View.OnClickListener() {

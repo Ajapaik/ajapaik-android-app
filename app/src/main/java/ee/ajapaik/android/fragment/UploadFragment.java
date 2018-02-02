@@ -53,6 +53,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private static final int THUMBNAIL_SIZE = 400;
 
     private Upload m_upload;
+    public static final String RETURN_ACTIVITY_NAME = "upload";
 
     public Upload getUpload() {
         Bundle arguments = getArguments();
@@ -308,7 +309,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         } else if (requestCode == DIALOG_SUCCESS) {
             success();
         } else if (requestCode == DIALOG_NOT_AUTHENTICATED) {
-            ProfileActivity.start(getContext(), "upload");
+            ProfileActivity.start(getContext(), RETURN_ACTIVITY_NAME);
         } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
             if(resultCode == AlertFragment.RESULT_POSITIVE) {
                 SharedPreferences.Editor editor = getSharedPreferences().edit();

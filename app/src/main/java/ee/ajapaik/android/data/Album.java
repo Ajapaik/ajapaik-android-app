@@ -20,6 +20,7 @@ import ee.ajapaik.android.util.WebAction;
 
 public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
+    private static final String API_FAVORITES_PATH = "/photos/favorite/order-by-distance-to-location/";
     private static final String API_STATE_PATH = "/album/state/";
     private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
@@ -52,6 +53,19 @@ public class Album extends Model {
         return new Action(context, API_NEAREST_PATH, parameters, null,
                 latitude_.substring(0, Math.min(latitude_.length(), 9)) + "," +
                 longitude_.substring(0, Math.min(longitude_.length(), 9)));
+    }
+
+    public static WebAction<Album> createFavoritesAction(Context context, Location location) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+        if (location != null) {
+            String latitude = Double.toString(location.getLatitude());
+            String longitude = Double.toString(location.getLongitude());
+
+            parameters.put("latitude", latitude);
+            parameters.put("longitude", longitude);
+        }
+
+        return new Action(context, API_FAVORITES_PATH, parameters, null, "favorites");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {

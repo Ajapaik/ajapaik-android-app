@@ -125,6 +125,7 @@
     <string name="tutorial_dialog_show_again_no">No</string>
     <string name="tutorial_dialog_show_again_yes">Yes</string>
 
+    <!-- Rephotos -->
     <string name="rephotos">My rephotos</string>
     <string name="no_rephotos">No rephotos</string>
     <string name="storage_not_permitted_title">Storage not permitted</string>
@@ -133,4 +134,12 @@
     <string name="storage_not_permitted_open_settings">Open settings</string>
 
     <string name="action_search">Search</string>
+
+    <!-- Favorites -->
+    <string name="favorites">My favorites</string>
+    <string name="no_favorites">No favorites</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="favorites_label_not_logged_in_button">Sign in</string>
+    <string name="favorites_label_not_logged_in_text">Please log in to see your favorites</string>
+
 </resources>
