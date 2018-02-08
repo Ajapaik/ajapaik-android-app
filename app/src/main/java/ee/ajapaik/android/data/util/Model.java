@@ -52,11 +52,11 @@ public abstract class Model implements Parcelable {
         return defaultValue;
     }
 
-    protected static Date readDate(JsonObject obj, String key) {
-        return readDate(obj, key, null);
+    protected static Date readDateTime(JsonObject obj, String key) {
+        return readDateTime(obj, key, null);
     }
 
-    protected static Date readDate(JsonObject obj, String key, Date defaultValue) {
+    private static Date readDateTime(JsonObject obj, String key, Date defaultValue) {
         JsonElement element = obj.get(key);
 
         if(element != null && element.isJsonPrimitive()) {
@@ -72,6 +72,17 @@ public abstract class Model implements Parcelable {
         }
 
         return defaultValue;
+    }
+
+    protected static Date readDate(JsonObject obj, String key) {
+        JsonElement element = obj.get(key);
+        if(element != null && element.isJsonPrimitive()) {
+            JsonPrimitive primitive = element.getAsJsonPrimitive();
+            if(primitive.isString()) {
+                return Dates.parseDate(primitive.getAsString());
+            }
+        }
+        return null;
     }
 
     protected static Hyperlink readHyperlink(JsonObject obj, String key) {
@@ -250,6 +261,18 @@ public abstract class Model implements Parcelable {
     protected static void write(JsonObject obj, String key, Date value) {
         if(value != null) {
             obj.addProperty(key, Dates.toString(value));
+        }
+    }
+
+    protected static void write(JsonObject obj, String key, JsonArray value) {
+        if(value != null) {
+            obj.add(key, value);
+        }
+    }
+
+    protected static void writeDDMMYYYYDate(JsonObject obj, String key, Date value) {
+        if(value != null) {
+            obj.addProperty(key, Dates.toDDMMYYYYString(value));
         }
     }
 

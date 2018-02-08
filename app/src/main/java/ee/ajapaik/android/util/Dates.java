@@ -1,11 +1,15 @@
 package ee.ajapaik.android.util;
 
+import android.util.Log;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
 public class Dates {
+    private static final String TAG = "Dates";
     private static final SimpleDateFormat ISO_8601 = new UTCDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ROOT);
     private static final SimpleDateFormat DDMMYYYY = new UTCDateFormat("dd-MM-yyyy", Locale.ROOT);
     private static final SimpleDateFormat YYYYMMDD_KKMMSS = new SimpleDateFormat("yyyy-MM-dd_kk-mm-ss");
@@ -21,6 +25,16 @@ public class Dates {
         }
 
         return null;
+    }
+
+    public static Date parseDate(String date) {
+        if (date == null) return null;
+        try {
+            return DDMMYYYY.parse(date);
+        } catch (ParseException e) {
+            Log.e(TAG, "Failed to parse date " + date);
+            return null;
+        }
     }
 
     public static String toFilename(Date date) {

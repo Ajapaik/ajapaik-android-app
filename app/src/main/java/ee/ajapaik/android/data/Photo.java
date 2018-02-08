@@ -4,10 +4,14 @@ import android.content.Context;
 import android.location.Location;
 import android.net.Uri;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
@@ -32,6 +36,7 @@ public class Photo extends Model {
     private static final String KEY_LATITUDE = "latitude";
     private static final String KEY_LONGITUDE = "longitude";
     private static final String KEY_REPHOTOS = "rephotos";
+    private static final String KEY_REPHOTOS_COUNT = "rephotosCount";
     private static final String KEY_UPLOADS = "uploads";
     private static final String KEY_FAVORITED = "favorited";
 
@@ -76,11 +81,11 @@ public class Photo extends Model {
         return uri;
     }
 
-    public static Photo update(Photo photo, int rephotos, int uploads) {
+    public static Photo update(Photo photo, int rephotosCount, int uploads) {
         Photo copy = new Photo(photo.getAttributes());
 
-        copy.m_rephotos = rephotos;
-        copy.m_uploads = uploads;
+        copy.m_rephotosCount = rephotosCount;
+        copy.m_uploadsCount = uploads;
 
         return copy;
     }
@@ -94,8 +99,9 @@ public class Photo extends Model {
     private String m_author;
     private Hyperlink m_source;
     private Location m_location;
-    private int m_rephotos;
-    private int m_uploads;
+    private List<Rephoto> m_rephotos;
+    private int m_rephotosCount;
+    private int m_uploadsCount;
     private boolean m_favorited;
 
     public Photo(JsonObject attributes) {
@@ -109,7 +115,7 @@ public class Photo extends Model {
         m_height = readInteger(attributes, KEY_HEIGHT);
         m_title = readString(attributes, KEY_TITLE, (basePhoto != null) ? basePhoto.getTitle() : null);
         m_author = readString(attributes, KEY_AUTHOR, (basePhoto != null) ? basePhoto.getAuthor() : null);
-        m_date = readDate(attributes, KEY_DATE);
+        m_date = readDateTime(attributes, KEY_DATE);
         m_source = readHyperlink(attributes, KEY_SOURCE, (basePhoto != null) ? basePhoto.getSource() : null);
 
         if(canRead(attributes, KEY_LATITUDE) && canRead(attributes, KEY_LONGITUDE)) {
@@ -118,13 +124,31 @@ public class Photo extends Model {
             m_location.setLongitude(readNumber(attributes, KEY_LONGITUDE));
         }
 
-        m_rephotos = readInteger(attributes, KEY_REPHOTOS);
-        m_uploads = readInteger(attributes, KEY_UPLOADS);
+        m_rephotos = parseRephotos(attributes);
+        m_rephotosCount = m_rephotos.size();
+        m_uploadsCount = getUserUploadsCount();
         m_favorited = readBoolean(attributes, KEY_FAVORITED);
 
         if(m_identifier == null || m_image == null || m_width == 0 || m_height == 0) {
             throw new IllegalArgumentException();
         }
+    }
+
+    private List<Rephoto> parseRephotos(JsonObject attributes) {
+        JsonArray rephotos = readArray(attributes, KEY_REPHOTOS);
+        List<Rephoto> result = new ArrayList<>();
+        for (JsonElement rephoto : rephotos) {
+            result.add(new Rephoto(rephoto.getAsJsonObject()));
+        }
+        return result;
+    }
+
+    private int getUserUploadsCount() {
+        int userUploadsCount = 0;
+        for (Rephoto rephoto : m_rephotos) {
+            if (rephoto.isUploadedByCurrentUser()) userUploadsCount++;
+        }
+        return userUploadsCount;
     }
 
     @Override
@@ -140,13 +164,14 @@ public class Photo extends Model {
         write(attributes, KEY_DATE, m_date);
         write(attributes, KEY_SOURCE, m_source);
 
-        if(m_location != null) {
+        if (m_location != null) {
             write(attributes, KEY_LATITUDE, m_location.getLatitude());
             write(attributes, KEY_LONGITUDE, m_location.getLongitude());
         }
 
-        write(attributes, KEY_REPHOTOS, m_rephotos);
-        write(attributes, KEY_UPLOADS, m_uploads);
+        write(attributes, KEY_REPHOTOS_COUNT, m_rephotosCount);
+        write(attributes, KEY_REPHOTOS, getRephotosAsAttribute());
+        write(attributes, KEY_UPLOADS, m_uploadsCount);
         write(attributes, KEY_FAVORITED, m_favorited);
 
         return attributes;
@@ -197,11 +222,15 @@ public class Photo extends Model {
     }
 
     public int getRephotosCount() {
+        return m_rephotosCount;
+    }
+
+    public List<Rephoto> getRephotos() {
         return m_rephotos;
     }
 
     public int getUploadsCount() {
-        return m_uploads;
+        return m_uploadsCount;
     }
 
     public boolean isFavorited() {
@@ -230,12 +259,20 @@ public class Photo extends Model {
                 !Objects.match(photo.getDate(), m_date) ||
                 !Objects.match(photo.getSource(), m_source) ||
                 !Objects.match(photo.getLocation(), m_location) ||
-                photo.getRephotosCount() != m_rephotos ||
-                photo.getUploadsCount() != m_uploads) {
+                photo.getRephotos() != m_rephotos ||
+                photo.getUploadsCount() != m_uploadsCount) {
             return false;
         }
 
         return true;
+    }
+
+    private JsonArray getRephotosAsAttribute() {
+        JsonArray elements = new JsonArray();
+        for (Rephoto rephoto : m_rephotos) {
+            elements.add(rephoto.getAttributes());
+        }
+        return elements;
     }
 
     private static class Action extends WebAction<Photo> {
