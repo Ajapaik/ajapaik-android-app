@@ -204,6 +204,20 @@ public class PhotoFragment extends ImageFragment {
             }
         });
 
+        getRephotosCountImageView().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getImageView().setVisibility(View.INVISIBLE);
+                getInfoLayout().setVisibility(View.INVISIBLE);
+                getOverlayLayout().setVisibility(View.INVISIBLE);
+                getActionBar().hide();
+                getOriginalPhotoContainer().setVisibility(View.VISIBLE);
+                getRephotoContainer().setVisibility(View.VISIBLE);
+                getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+                getRephotoContainer().setImageURI(m_photo.getRephotos().get(0).getThumbnail(THUMBNAIL_SIZE));
+            }
+        });
+
         invalidateAzimuth();
         invalidatePhoto();
 
@@ -488,5 +502,13 @@ public class PhotoFragment extends ImageFragment {
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {
         return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
+    }
+
+    protected WebImageView getOriginalPhotoContainer() {
+        return (WebImageView) getView().findViewById(R.id.rephotos_original);
+    }
+
+    protected WebImageView getRephotoContainer() {
+        return (WebImageView) getView().findViewById(R.id.rephotos_container);
     }
 }
