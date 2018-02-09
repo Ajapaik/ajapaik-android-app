@@ -170,6 +170,24 @@ public class PhotoFragment extends ImageFragment {
                 }
         }));
 
+        getRephotoContainer().setOnLoadListener(new WebImageView.OnLoadListener() {
+            @Override
+            public void onImageLoaded() {
+                getSwipeRefreshLayout().setRefreshing(false);
+            }
+
+            @Override
+            public void onImageUnloaded() {
+            }
+
+            @Override
+            public void onImageFailed() {
+                getSwipeRefreshLayout().setRefreshing(false);
+//                TODO Extract toast showing to method to superclass (WebFragment maybe) and reuse it everywhere
+                Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+            }
+        });
+
         getImageView().setScale(m_scale);
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
@@ -207,6 +225,7 @@ public class PhotoFragment extends ImageFragment {
         getRephotosCountImageView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getSwipeRefreshLayout().setRefreshing(true);
                 getImageView().setVisibility(View.INVISIBLE);
                 getInfoLayout().setVisibility(View.INVISIBLE);
                 getOverlayLayout().setVisibility(View.INVISIBLE);
