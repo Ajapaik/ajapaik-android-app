@@ -9,6 +9,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ import java.util.List;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.adapter.ImagePagerAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
@@ -170,24 +172,6 @@ public class PhotoFragment extends ImageFragment {
                 }
         }));
 
-        getRephotoContainer().setOnLoadListener(new WebImageView.OnLoadListener() {
-            @Override
-            public void onImageLoaded() {
-                getSwipeRefreshLayout().setRefreshing(false);
-            }
-
-            @Override
-            public void onImageUnloaded() {
-            }
-
-            @Override
-            public void onImageFailed() {
-                getSwipeRefreshLayout().setRefreshing(false);
-//                TODO Extract toast showing to method to superclass (WebFragment maybe) and reuse it everywhere
-                Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
-            }
-        });
-
         getImageView().setScale(m_scale);
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
@@ -225,15 +209,14 @@ public class PhotoFragment extends ImageFragment {
         getRephotosCountImageView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getSwipeRefreshLayout().setRefreshing(true);
                 getImageView().setVisibility(View.INVISIBLE);
                 getInfoLayout().setVisibility(View.INVISIBLE);
                 getOverlayLayout().setVisibility(View.INVISIBLE);
                 getActionBar().hide();
                 getOriginalPhotoContainer().setVisibility(View.VISIBLE);
-                getRephotoContainer().setVisibility(View.VISIBLE);
                 getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-                getRephotoContainer().setImageURI(m_photo.getRephotos().get(0).getThumbnail(THUMBNAIL_SIZE));
+                ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
+                getViewPager().setAdapter(adapter);
             }
         });
 
@@ -527,7 +510,8 @@ public class PhotoFragment extends ImageFragment {
         return (WebImageView) getView().findViewById(R.id.rephotos_original);
     }
 
-    protected WebImageView getRephotoContainer() {
-        return (WebImageView) getView().findViewById(R.id.rephotos_container);
+    protected ViewPager getViewPager() {
+        return (ViewPager) getView().findViewById(R.id.pager);
     }
+
 }
