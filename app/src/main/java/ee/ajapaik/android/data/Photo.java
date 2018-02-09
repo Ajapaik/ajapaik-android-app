@@ -15,11 +15,12 @@ import java.util.List;
 import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
+import ee.ajapaik.android.data.util.PhotoModel;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.Size;
 import ee.ajapaik.android.util.WebAction;
 
-public class Photo extends Model {
+public class Photo extends PhotoModel {
     private static final String TAG = "Photo";
 
     private static final String API_STATE_PATH = "/photo/state/";
@@ -65,22 +66,6 @@ public class Photo extends Model {
         return CREATOR.parse(str);
     }
 
-    public static Uri resolve(Uri uri) {
-        return resolve(uri, 400);
-    }
-
-    public static Uri resolve(Uri uri, int preferredDimension) {
-        if(uri != null) {
-            String str = uri.toString();
-
-            str = str.replace("[DIM]", Integer.toString(preferredDimension));
-
-            return Uri.parse(str);
-        }
-
-        return uri;
-    }
-
     public static Photo update(Photo photo, int rephotosCount, int uploads) {
         Photo copy = new Photo(photo.getAttributes());
 
@@ -91,7 +76,6 @@ public class Photo extends Model {
     }
 
     private String m_identifier;
-    private Uri m_image;
     private int m_width;
     private int m_height;
     private String m_title;
@@ -183,10 +167,6 @@ public class Photo extends Model {
 
     public Uri getImage() {
         return m_image;
-    }
-
-    public Uri getThumbnail(int preferredDimension) {
-        return resolve(m_image, preferredDimension);
     }
 
     public int getWidth() {
