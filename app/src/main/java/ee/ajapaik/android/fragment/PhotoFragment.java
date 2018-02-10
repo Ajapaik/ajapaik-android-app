@@ -273,6 +273,8 @@ public class PhotoFragment extends ImageFragment {
                 TextView authorView = getRephotoAuthorView();
                 TextView dateView = getRephotoDateView();
                 authorView.setText(rephoto.getAuthor());
+                int textColor = rephoto.isUploadedByCurrentUser() ? R.color.tint : R.color.none;
+                authorView.setTextColor(getResources().getColor(textColor));
                 dateView.setText(Dates.toDDMMYYYYString(rephoto.getDate()));
             }
 
