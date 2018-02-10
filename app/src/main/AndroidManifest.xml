@@ -52,7 +52,7 @@
                     android:value="ee.ajapaik.android.AlbumsActivity"/>
         </activity>
         <activity
-                android:name="ee.ajapaik.android.LocalRephotosActivity"
+                android:name="ee.ajapaik.android.RephotoDraftsActivity"
                 android:label="@string/rephoto_drafts">
         </activity>
         <activity

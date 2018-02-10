@@ -9,31 +9,31 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
 
-import ee.ajapaik.android.fragment.LocalRephotosFragment;
+import ee.ajapaik.android.fragment.RephotoDraftsFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
-public class LocalRephotosActivity extends AlbumActivity {
+public class RephotoDraftsActivity extends AlbumActivity {
 
     private static final String TAG_FRAGMENT = "fragment";
     private static final int WRITE_EXTERNAL_STORAGE_PERMISSION = 6003;
     private static final int DIALOG_STORAGE_NOT_PERMITTED = 5;
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, LocalRephotosActivity.class);
+        Intent intent = new Intent(context, RephotoDraftsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
-    public LocalRephotosFragment createFragment(){
-        return new LocalRephotosFragment();
+    public RephotoDraftsFragment createFragment(){
+        return new RephotoDraftsFragment();
     }
 
     @Override
-    protected LocalRephotosFragment getFragment() {
-        return (LocalRephotosFragment) getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
+    protected RephotoDraftsFragment getFragment() {
+        return (RephotoDraftsFragment) getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
     }
 
     @Override

@@ -21,9 +21,9 @@ import android.widget.LinearLayout;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
-import ee.ajapaik.android.LocalRephotosActivity;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.RephotoDraftsActivity;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
@@ -133,7 +133,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 if (activity.isFromCameraActivity()) {
                     CameraActivity.start(activity, m_upload.getPhoto());
                 } else {
-                    LocalRephotosActivity.start(activity);
+                    RephotoDraftsActivity.start(activity);
                 }
                 activity.finish();
             }

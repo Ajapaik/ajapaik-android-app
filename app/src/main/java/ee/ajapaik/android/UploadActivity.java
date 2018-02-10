@@ -58,7 +58,7 @@ public class UploadActivity extends WebActivity {
         if (isFromCameraActivity()) {
             CameraActivity.start(this, upload.getPhoto());
         } else {
-            LocalRephotosActivity.start(this);
+            RephotoDraftsActivity.start(this);
         }
     }
 

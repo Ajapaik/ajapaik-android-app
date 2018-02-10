@@ -34,9 +34,9 @@ import static ee.ajapaik.android.UploadActivity.CreatedFrom.REPHOTOS;
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 import static org.apache.http.util.TextUtils.isBlank;
 
-public class LocalRephotosFragment extends PhotosFragment {
+public class RephotoDraftsFragment extends PhotosFragment {
 
-    private static final String TAG = "LocalRephotosFragment";
+    private static final String TAG = "RephotoDraftsFragment";
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class LocalRephotosFragment extends PhotosFragment {
         if (photos.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
-            Album album = new Album(photos, "local-rephotos");
+            Album album = new Album(photos, "rephoto-drafts");
             setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
                 @Override
                 public void onSelect(Photo photo) {
