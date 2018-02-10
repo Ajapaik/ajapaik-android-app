@@ -14,6 +14,7 @@ import ee.ajapaik.android.widget.WebImageView;
 public class ImagePagerAdapter extends PagerAdapter {
     private final Context context;
     private final List<Rephoto> m_images;
+    private static final int THUMBNAIL_SIZE = 400;
 
     public ImagePagerAdapter(Context context, List<Rephoto> rephotos) {
         this.context = context;
@@ -32,8 +33,9 @@ public class ImagePagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
+        Rephoto rephoto = m_images.get(position);
         WebImageView imageView = new WebImageView(context);
-        imageView.setImageURI(m_images.get(position).getThumbnail(400));
+        imageView.setImageURI(rephoto.getThumbnail(THUMBNAIL_SIZE));
         container.addView(imageView, 0);
         return imageView;
     }
@@ -41,5 +43,9 @@ public class ImagePagerAdapter extends PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((ImageView) object);
+    }
+
+    public Rephoto getRephoto(int position) {
+        return m_images.get(position);
     }
 }

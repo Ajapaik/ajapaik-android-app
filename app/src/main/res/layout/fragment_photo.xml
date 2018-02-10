@@ -19,7 +19,7 @@
             android:layout_height="0dp"
             android:contentDescription="@string/none"
             android:src="@drawable/transparent"
-            android:layout_weight="0.45"
+            android:layout_weight="0.43"
             android:scaleType="fitStart"
             android:visibility="invisible"/>
 
@@ -28,7 +28,42 @@
             android:id="@+id/pager"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="0.45"/>
+            android:layout_weight="0.43"/>
+
+        <RelativeLayout
+            android:id="@+id/rephoto_details_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="0.14"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/rephoto_author"
+                style="@style/PhotoInfoTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/rephoto_date"
+                style="@style/PhotoInfoTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rephoto_author"
+                android:text="" />
+
+            <Button
+                android:id="@+id/button_action_close_rephotos"
+                style="@style/PhotoOverlayButton"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_clear_white_48dp" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

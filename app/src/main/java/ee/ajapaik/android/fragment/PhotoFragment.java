@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,8 +32,10 @@ import ee.ajapaik.android.adapter.ImagePagerAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
+import ee.ajapaik.android.data.Rephoto;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.ImageFragment;
+import ee.ajapaik.android.util.Dates;
 import ee.ajapaik.android.util.Images;
 import ee.ajapaik.android.util.Locations;
 import ee.ajapaik.android.util.Objects;
@@ -47,6 +50,11 @@ import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
+import static android.view.View.OnClickListener;
+import static android.view.View.OnTouchListener;
+import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
     private static final int THUMBNAIL_SIZE = 400;
@@ -131,7 +139,7 @@ public class PhotoFragment extends ImageFragment {
 
         getImageView().setOffset(m_offset);
 
-        getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new View.OnTouchListener[]{
+        getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new OnTouchListener[]{
                 new OnScaleTouchListener(getActivity()) {
                     @Override
                     public void onScale(float scale) {
@@ -177,7 +185,7 @@ public class PhotoFragment extends ImageFragment {
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setOnLoadListener(imageLoadListener());
 
-        getSubtitleView().setOnClickListener(new View.OnClickListener() {
+        getSubtitleView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(m_photo != null) {
@@ -193,7 +201,7 @@ public class PhotoFragment extends ImageFragment {
             }
         });
 
-        getRephotoButton().setOnClickListener(new View.OnClickListener() {
+        getRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 List<String> permissionsNeeded = permissionsNeeded();
@@ -206,17 +214,21 @@ public class PhotoFragment extends ImageFragment {
             }
         });
 
-        getRephotosCountImageView().setOnClickListener(new View.OnClickListener() {
+        getRephotosCountImageView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                getImageView().setVisibility(View.INVISIBLE);
-                getInfoLayout().setVisibility(View.INVISIBLE);
-                getOverlayLayout().setVisibility(View.INVISIBLE);
                 getActionBar().hide();
-                getOriginalPhotoContainer().setVisibility(View.VISIBLE);
+                getImageView().setVisibility(INVISIBLE);
+                getInfoLayout().setVisibility(INVISIBLE);
+                getOverlayLayout().setVisibility(INVISIBLE);
+                getRephotoDetailsLayout().setVisibility(VISIBLE);
+                getOriginalPhotoContainer().setVisibility(VISIBLE);
                 getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-                ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
+                final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
                 getViewPager().setAdapter(adapter);
+                final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
+                getViewPager().addOnPageChangeListener(pageChangeListener);
+                selectFirstRephotoToDisplay(pageChangeListener);
             }
         });
 
@@ -224,6 +236,36 @@ public class PhotoFragment extends ImageFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+    }
+
+    private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
+        getViewPager().post(new Runnable() {
+            @Override
+            public void run() {
+                pageChangeListener.onPageSelected(0);
+            }
+        });
+    }
+
+    private ViewPager.OnPageChangeListener createOnPageChangeListener(final ImagePagerAdapter adapter) {
+        return new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Rephoto rephoto = adapter.getRephoto(position);
+                TextView authorView = getRephotoAuthorView();
+                TextView dateView = getRephotoDateView();
+                authorView.setText(rephoto.getAuthor());
+                dateView.setText(Dates.toDDMMYYYYString(rephoto.getDate()));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        };
     }
 
     @Override
@@ -379,12 +421,12 @@ public class PhotoFragment extends ImageFragment {
         m_immersiveMode = flag;
 
         if(m_immersiveMode) {
-            getInfoLayout().setVisibility(View.INVISIBLE);
-            getOverlayLayout().setVisibility(View.INVISIBLE);
+            getInfoLayout().setVisibility(INVISIBLE);
+            getOverlayLayout().setVisibility(INVISIBLE);
             getActionBar().hide();
         } else {
-            getInfoLayout().setVisibility(View.VISIBLE);
-            getOverlayLayout().setVisibility(View.VISIBLE);
+            getInfoLayout().setVisibility(VISIBLE);
+            getOverlayLayout().setVisibility(VISIBLE);
             getActionBar().show();
         }
     }
@@ -452,9 +494,9 @@ public class PhotoFragment extends ImageFragment {
 
         if(m_photo.getLocation() != null) {
             azimuthButton.setRotation((float)m_azimuth);
-            azimuthButton.setVisibility(View.VISIBLE);
+            azimuthButton.setVisibility(VISIBLE);
         } else {
-            azimuthButton.setVisibility(View.GONE);
+            azimuthButton.setVisibility(GONE);
         }
     }
 
@@ -514,4 +556,16 @@ public class PhotoFragment extends ImageFragment {
         return (ViewPager) getView().findViewById(R.id.pager);
     }
 
+
+    private TextView getRephotoDateView() {
+        return (TextView) getView().findViewById(R.id.rephoto_date);
+    }
+
+    private TextView getRephotoAuthorView() {
+        return (TextView) getView().findViewById(R.id.rephoto_author);
+    }
+
+    private RelativeLayout getRephotoDetailsLayout() {
+        return (RelativeLayout) getView().findViewById(R.id.rephoto_details_layout);
+    }
 }
