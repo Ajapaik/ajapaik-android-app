@@ -65,11 +65,13 @@ public class PhotoFragment extends ImageFragment {
     private static final String KEY_ALBUM = "album";
     private static final String KEY_AZIMUTH = "azimuth";
     private static final String KEY_IMMERSIVE_MODE = "immersive_mode";
+    private static final String KEY_REPHOTO_VIEW_MODE = "rephoto_view_mode";
     private static final String KEY_LOCATION = "location";
     private static final String KEY_OFFSET = "offset";
 
     private int m_azimuth;
     private boolean m_immersiveMode;
+    private boolean m_rephotoViewMode;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
@@ -116,6 +118,7 @@ public class PhotoFragment extends ImageFragment {
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
             m_location = savedInstanceState.getParcelable(KEY_LOCATION);
             m_immersiveMode = savedInstanceState.getBoolean(KEY_IMMERSIVE_MODE);
+            m_rephotoViewMode = savedInstanceState.getBoolean(KEY_REPHOTO_VIEW_MODE);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
             m_offset = savedInstanceState.getParcelable(KEY_OFFSET);
             m_scale = savedInstanceState.getFloat(KEY_SCALE, DEFAULT_SCALE);
@@ -217,32 +220,14 @@ public class PhotoFragment extends ImageFragment {
         getRephotosCountImageView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActionBar().hide();
-                getImageView().setVisibility(INVISIBLE);
-                getInfoLayout().setVisibility(INVISIBLE);
-                getOverlayLayout().setVisibility(INVISIBLE);
-                getRephotoDetailsLayout().setVisibility(VISIBLE);
-                getOriginalPhotoContainer().setVisibility(VISIBLE);
-                getViewPager().setVisibility(VISIBLE);
-                getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-                final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
-                getViewPager().setAdapter(adapter);
-                final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
-                getViewPager().addOnPageChangeListener(pageChangeListener);
-                selectFirstRephotoToDisplay(pageChangeListener);
+                setRephotoViewMode(true);
             }
         });
 
         getCloseRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActionBar().show();
-                getImageView().setVisibility(VISIBLE);
-                getInfoLayout().setVisibility(VISIBLE);
-                getOverlayLayout().setVisibility(VISIBLE);
-                getRephotoDetailsLayout().setVisibility(INVISIBLE);
-                getOriginalPhotoContainer().setVisibility(INVISIBLE);
-                getViewPager().setVisibility(INVISIBLE);
+                setRephotoViewMode(false);
             }
         });
 
@@ -250,6 +235,7 @@ public class PhotoFragment extends ImageFragment {
         invalidatePhoto();
 
         setImmersiveMode(m_immersiveMode);
+        setRephotoViewMode(m_rephotoViewMode);
     }
 
     private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
@@ -390,6 +376,7 @@ public class PhotoFragment extends ImageFragment {
 
         savedInstanceState.putParcelable(KEY_ALBUM, m_album);
         savedInstanceState.putBoolean(KEY_IMMERSIVE_MODE, m_immersiveMode);
+        savedInstanceState.putBoolean(KEY_REPHOTO_VIEW_MODE, m_rephotoViewMode);
         savedInstanceState.putBoolean(KEY_FLIPPED_MODE, m_flippedMode);
         savedInstanceState.putInt(KEY_AZIMUTH, m_azimuth);
         savedInstanceState.putParcelable(KEY_LOCATION, m_location);
@@ -444,6 +431,34 @@ public class PhotoFragment extends ImageFragment {
             getInfoLayout().setVisibility(VISIBLE);
             getOverlayLayout().setVisibility(VISIBLE);
             getActionBar().show();
+        }
+    }
+
+    private void setRephotoViewMode(boolean flag) {
+        m_rephotoViewMode = flag;
+
+        if(m_rephotoViewMode) {
+            getActionBar().hide();
+            getImageView().setVisibility(INVISIBLE);
+            getInfoLayout().setVisibility(INVISIBLE);
+            getOverlayLayout().setVisibility(INVISIBLE);
+            getRephotoDetailsLayout().setVisibility(VISIBLE);
+            getOriginalPhotoContainer().setVisibility(VISIBLE);
+            getViewPager().setVisibility(VISIBLE);
+            getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+            final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
+            getViewPager().setAdapter(adapter);
+            final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
+            getViewPager().addOnPageChangeListener(pageChangeListener);
+            selectFirstRephotoToDisplay(pageChangeListener);
+        } else {
+            getActionBar().show();
+            getImageView().setVisibility(VISIBLE);
+            getInfoLayout().setVisibility(VISIBLE);
+            getOverlayLayout().setVisibility(VISIBLE);
+            getRephotoDetailsLayout().setVisibility(INVISIBLE);
+            getOriginalPhotoContainer().setVisibility(INVISIBLE);
+            getViewPager().setVisibility(INVISIBLE);
         }
     }
 
