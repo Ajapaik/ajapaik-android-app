@@ -223,12 +223,26 @@ public class PhotoFragment extends ImageFragment {
                 getOverlayLayout().setVisibility(INVISIBLE);
                 getRephotoDetailsLayout().setVisibility(VISIBLE);
                 getOriginalPhotoContainer().setVisibility(VISIBLE);
+                getViewPager().setVisibility(VISIBLE);
                 getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
                 final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
                 getViewPager().setAdapter(adapter);
                 final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
                 getViewPager().addOnPageChangeListener(pageChangeListener);
                 selectFirstRephotoToDisplay(pageChangeListener);
+            }
+        });
+
+        getCloseRephotoButton().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActionBar().show();
+                getImageView().setVisibility(VISIBLE);
+                getInfoLayout().setVisibility(VISIBLE);
+                getOverlayLayout().setVisibility(VISIBLE);
+                getRephotoDetailsLayout().setVisibility(INVISIBLE);
+                getOriginalPhotoContainer().setVisibility(INVISIBLE);
+                getViewPager().setVisibility(INVISIBLE);
             }
         });
 
@@ -567,5 +581,9 @@ public class PhotoFragment extends ImageFragment {
 
     private RelativeLayout getRephotoDetailsLayout() {
         return (RelativeLayout) getView().findViewById(R.id.rephoto_details_layout);
+    }
+
+    private Button getCloseRephotoButton() {
+        return (Button) getView().findViewById(R.id.button_action_close_rephotos);
     }
 }
