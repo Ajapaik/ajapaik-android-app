@@ -16,7 +16,7 @@
         <item
                 android:id="@+id/rephotos"
                 android:icon="@drawable/ic_photo_album_white_36dp"
-                android:title="@string/rephotos" />
+                android:title="@string/rephoto_drafts" />
         <item
                 android:id="@+id/favorites"
                 android:icon="@drawable/ic_collections_bookmark_white_48dp"
