@@ -236,6 +236,8 @@ public class PhotoFragment extends ImageFragment {
 
         setImmersiveMode(m_immersiveMode);
         setRephotoViewMode(m_rephotoViewMode);
+
+        getSwipeRefreshLayout().setEnabled(false);
     }
 
     private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
