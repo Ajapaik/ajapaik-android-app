@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import ee.ajapaik.android.PhotoActivity;
@@ -56,20 +55,18 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
         File[] images = Upload.getFolder().listFiles();
 
-        List<Photo> photos = new ArrayList<>();
         final Map<Photo, Upload> uploadsByPhoto = new HashMap<>();
 
         for (File file : images) {
             Upload upload = getUpload(file);
             if (upload == null) continue;
-            photos.add(upload.getPhoto());
             uploadsByPhoto.put(upload.getPhoto(), upload);
         }
 
-        if (photos.isEmpty()) {
+        if (uploadsByPhoto.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
-            Album album = new Album(photos, "rephoto-drafts");
+            Album album = new Album(new ArrayList<>(uploadsByPhoto.keySet()), "rephoto-drafts");
             setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
                 @Override
                 public void onSelect(Photo photo) {
