@@ -48,20 +48,20 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_action_save"
+                android:id="@+id/button_action_delete"
                 style="@style/UploadActionButton"
                 android:layout_alignParentStart="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/ic_save_white_48dp" />
+                android:drawableTop="@drawable/ic_delete_white_48dp" />
 
             <Button
-                android:id="@+id/button_action_delete"
+                android:id="@+id/button_action_save"
                 style="@style/UploadActionButton"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/ic_delete_white_48dp" />
+                android:drawableTop="@drawable/ic_save_white_48dp" />
 
             <Button
                 android:id="@+id/button_action_confirm"
