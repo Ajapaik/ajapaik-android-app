@@ -69,7 +69,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/ic_check_box_white_48dp" />
+                android:drawableTop="@drawable/ic_cloud_upload_white_48dp" />
 
         </RelativeLayout>
 
