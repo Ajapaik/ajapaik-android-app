@@ -124,7 +124,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
         getNewImageView().setImageBitmap(scaledRephoto);
 
-        getDeclineButton().setOnClickListener(new View.OnClickListener() {
+        getSaveButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UploadActivity activity = (UploadActivity) getActivity();
@@ -387,8 +387,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         return (WebImageView) getView().findViewById(R.id.image_new);
     }
 
-    private Button getDeclineButton() {
-        return (Button) getView().findViewById(R.id.button_action_decline);
+    private Button getSaveButton() {
+        return (Button) getView().findViewById(R.id.button_action_save);
     }
 
     private Button getConfirmButton() {
