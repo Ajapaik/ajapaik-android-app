@@ -19,6 +19,7 @@ public abstract class SearchFragment extends WebFragment {
 
     private boolean isSearchVisible;
     private SearchService m_searchService;
+    private boolean m_isSearchResultVisible;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -29,10 +30,12 @@ public abstract class SearchFragment extends WebFragment {
             public void search(String query) {
                 getSwipeRefreshLayout().setRefreshing(true);
                 performAction(getActivity(), createSearchAction(query));
+                m_isSearchResultVisible = true;
             }
 
             @Override
             public void clearSearch() {
+                m_isSearchResultVisible = false;
                 getSwipeRefreshLayout().setRefreshing(true);
                 refresh();
             }
@@ -54,5 +57,9 @@ public abstract class SearchFragment extends WebFragment {
             isSearchVisible = true;
             getActivity().invalidateOptionsMenu();
         }
+    }
+
+    public boolean isSearchResultVisible() {
+        return m_isSearchResultVisible;
     }
 }

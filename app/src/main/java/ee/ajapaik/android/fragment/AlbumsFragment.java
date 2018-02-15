@@ -94,7 +94,7 @@ public class AlbumsFragment extends SearchFragment {
                 listView.setAdapter(new AlbumAdapter(listView.getContext(), m_feed.getAlbums()));
                 listView.setSelectionFromTop(lastViewedPosition, topOffset);
             } else {
-                getEmptyView().setText(R.string.albums_label_no_data);
+                getEmptyView().setText(isSearchResultVisible() ? R.string.no_search_result : R.string.albums_label_no_data);
                 listView.setAdapter(null);
             }
         }

@@ -75,7 +75,8 @@ public abstract class PhotosFragment extends SearchFragment {
     }
 
     protected void initializeEmptyGridView(StaggeredGridView gridView) {
-        getEmptyView().setText(getPlaceholderString());
+        String text = isSearchResultVisible() ? getString(R.string.no_search_result) : getPlaceholderString();
+        getEmptyView().setText(text);
         gridView.setAdapter(null);
     }
 

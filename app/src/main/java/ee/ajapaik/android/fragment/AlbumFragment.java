@@ -147,7 +147,7 @@ public class AlbumFragment extends PhotosFragment {
 
     @Override
     protected String getPlaceholderString() {
-        return getString(R.string.albums_label_no_data);
+        return getString(R.string.album_no_data);
     }
 
     protected boolean isNearestFragment() {
