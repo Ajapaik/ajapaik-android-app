@@ -127,12 +127,16 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
         getNewImageView().setImageBitmap(scaledRephoto);
 
-        getSaveButton().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closePreviewAndGoBack();
-            }
-        });
+        if (((UploadActivity)getActivity()).isFromCameraActivity()) {
+            getSaveButton().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    closePreviewAndGoBack();
+                }
+            });
+        } else {
+            getSaveButton().setVisibility(View.INVISIBLE);
+        }
 
         getDeleteButton().setOnClickListener(new View.OnClickListener() {
             @Override
