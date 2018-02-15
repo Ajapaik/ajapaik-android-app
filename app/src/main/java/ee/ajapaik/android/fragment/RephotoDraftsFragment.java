@@ -40,6 +40,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        getSwipeRefreshLayout().setEnabled(false);
         refresh();
     }
 
