@@ -131,6 +131,8 @@
     <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
     <string name="storage_not_permitted_cancel">Loobu</string>
     <string name="storage_not_permitted_open_settings">Ava seaded</string>
+    <string name="my_rephotos">Minu ülepildistused</string>
+    <string name="rephotos_label_not_logged_in_text">Ülepildistuse nägemiseks palun logi sisse</string>
 
     <string name="action_search">Otsing</string>
 
@@ -140,6 +142,7 @@
     <string name="action_favorite">Lisa lemmikuks</string>
     <string name="favorites_label_not_logged_in_button">Sisse logima</string>
     <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
+
     <string name="no_search_result">Tulemused puuduvad</string>
     <string name="album_no_data">Pildid puuduvad</string>
 </resources>

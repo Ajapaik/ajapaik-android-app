@@ -132,6 +132,8 @@
     <string name="storage_not_permitted_message">Not permitting this app to use storage stops You from accessing some features, for example taking and uploading rephotos. Please consider allowing storage usage</string>
     <string name="storage_not_permitted_cancel">Cancel</string>
     <string name="storage_not_permitted_open_settings">Open settings</string>
+    <string name="my_rephotos">My rephotos</string>
+    <string name="rephotos_label_not_logged_in_text">Please log in to see your rephotos</string>
 
     <string name="action_search">Search</string>
 
@@ -141,6 +143,7 @@
     <string name="action_favorite">Favorite</string>
     <string name="favorites_label_not_logged_in_button">Sign in</string>
     <string name="favorites_label_not_logged_in_text">Please log in to see your favorites</string>
+
     <string name="no_search_result">No search results</string>
     <string name="album_no_data">No photos</string>
 

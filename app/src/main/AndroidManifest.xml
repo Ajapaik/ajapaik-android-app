@@ -60,6 +60,10 @@
                 android:label="@string/favorites">
         </activity>
         <activity
+            android:name=".RephotosActivity"
+            android:label="@string/my_rephotos" >
+        </activity>
+        <activity
                 android:name="ee.ajapaik.android.PhotoActivity"
                 android:label="@string/photo_title"
                 android:theme="@style/AppThemeTranslucent">

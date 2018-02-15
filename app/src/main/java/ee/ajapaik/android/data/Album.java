@@ -10,6 +10,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,7 @@ public class Album extends Model {
     private static final String API_NEAREST_PATH = "/album/nearest/";
     private static final String API_FAVORITES_PATH = "/photos/favorite/order-by-distance-to-location/";
     private static final String API_STATE_PATH = "/album/state/";
+    private static final String API_MY_REPHOTOS_PATH = "/photos/filtered/rephotographed-by-user/";
     private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
     private static final String API_USER_REPHOTOS_SEARCH_PATH = "/photos/search/user-rephotos/";
@@ -66,6 +68,10 @@ public class Album extends Model {
         }
 
         return new Action(context, API_FAVORITES_PATH, parameters, null, "favorites");
+    }
+
+    public static WebAction<Album> createMyRephotosAction(Context context) {
+        return new Action(context, API_MY_REPHOTOS_PATH, Collections.<String, String>emptyMap(), null, "my-rephotos");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {

@@ -42,6 +42,7 @@ import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.FavoritesFragment;
+import ee.ajapaik.android.fragment.RephotosFragment;
 import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.WebFragment;
@@ -74,6 +75,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private static final List<String> returnActivities = new ArrayList<String>(){{
             add(UploadFragment.RETURN_ACTIVITY_NAME);
             add(FavoritesFragment.RETURN_ACTIVITY_NAME);
+            add(RephotosFragment.RETURN_ACTIVITY_NAME);
     }};
 
     public WebService.Connection getConnection() {
