@@ -56,6 +56,14 @@
                 android:drawableTop="@drawable/ic_save_white_48dp" />
 
             <Button
+                android:id="@+id/button_action_delete"
+                style="@style/UploadActionButton"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_delete_white_48dp" />
+
+            <Button
                 android:id="@+id/button_action_confirm"
                 style="@style/UploadActionButton"
                 android:layout_alignParentEnd="true"

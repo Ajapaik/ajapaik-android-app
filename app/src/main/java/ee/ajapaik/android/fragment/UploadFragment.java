@@ -2,12 +2,14 @@ package ee.ajapaik.android.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
@@ -18,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.io.File;
 import java.io.IOException;
 
 import ee.ajapaik.android.CameraActivity;
@@ -127,15 +130,16 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         getSaveButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UploadActivity activity = (UploadActivity) getActivity();
+                closePreviewAndGoBack();
+            }
+        });
 
-                activity.setResult(Activity.RESULT_FIRST_USER);
-                if (activity.isFromCameraActivity()) {
-                    CameraActivity.start(activity, m_upload.getPhoto());
-                } else {
-                    RephotoDraftsActivity.start(activity);
-                }
-                activity.finish();
+        getDeleteButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new File(m_upload.getPath()).delete();
+                removePhotoFromDeviceGallery();
+                closePreviewAndGoBack();
             }
         });
 
@@ -145,6 +149,22 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                 uploadPhoto();
             }
         });
+    }
+
+    private void removePhotoFromDeviceGallery() {
+        getActivity().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(m_upload.getPath()))));
+    }
+
+    private void closePreviewAndGoBack() {
+        UploadActivity activity = (UploadActivity) getActivity();
+
+        activity.setResult(Activity.RESULT_FIRST_USER);
+        if (activity.isFromCameraActivity()) {
+            CameraActivity.start(activity, m_upload.getPhoto());
+        } else {
+            RephotoDraftsActivity.start(activity);
+        }
+        activity.finish();
     }
 
     private void scaleOldPhoto(Bitmap scaledRephoto) {
@@ -389,6 +409,10 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     private Button getSaveButton() {
         return (Button) getView().findViewById(R.id.button_action_save);
+    }
+
+    private Button getDeleteButton() {
+        return (Button) getView().findViewById(R.id.button_action_delete);
     }
 
     private Button getConfirmButton() {
