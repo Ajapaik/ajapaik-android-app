@@ -36,7 +36,6 @@ public class RephotosFragment extends AlbumFragment {
     protected void refresh() {
         getSwipeRefreshLayout().setRefreshing(true);
         if (isLoggedIn()) {
-            initializeEmptyGridView(getGridView());
             getNotLoggedInButton().setVisibility(GONE);
             super.refresh();
         } else {
