@@ -12,7 +12,7 @@ import com.google.gson.stream.JsonReader;
 import java.io.File;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import ee.ajapaik.android.PhotoActivity;
@@ -56,7 +56,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
         File[] images = Upload.getFolder().listFiles();
 
-        final Map<Photo, Upload> uploadsByPhoto = new HashMap<>();
+        final Map<Photo, Upload> uploadsByPhoto = new LinkedHashMap<>();
 
         for (File file : images) {
             Upload upload = getUpload(file);
