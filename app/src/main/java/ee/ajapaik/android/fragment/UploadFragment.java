@@ -137,9 +137,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
         getViewPager().setPageTransformer(true, new DefaultTransformer());
 
-        CirclePageIndicator pageIndicator = getPageIndicator();
-        pageIndicator.setViewPager(getViewPager());
-        pageIndicator.setOnPageChangeListener(pageChangeListener);
+        if (uploadByRephotoBitmap.size() > 1) {
+            CirclePageIndicator pageIndicator = getPageIndicator();
+            pageIndicator.setViewPager(getViewPager());
+            pageIndicator.setOnPageChangeListener(pageChangeListener);
+        }
 
         getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
         selectFirstDraftToDisplay(pageChangeListener);
