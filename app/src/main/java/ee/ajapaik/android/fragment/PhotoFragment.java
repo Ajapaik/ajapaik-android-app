@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -234,10 +235,25 @@ public class PhotoFragment extends ImageFragment {
         invalidateAzimuth();
         invalidatePhoto();
 
-        setImmersiveMode(m_immersiveMode);
         setRephotoViewMode(m_rephotoViewMode);
 
         getSwipeRefreshLayout().setEnabled(false);
+
+        getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
+            @Override
+            public void onImageLoaded() {
+                m_offset = new PointF(0, Integer.MIN_VALUE);
+                avoidScrollingOutOfViewport(getImageView());
+                m_offset = new PointF(m_offset.x, m_offset.y + getActionBar().getHeight());
+                getImageView().setOffset(m_offset);
+            }
+
+            @Override
+            public void onImageUnloaded() { }
+
+            @Override
+            public void onImageFailed() { }
+        });
     }
 
     private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
@@ -433,6 +449,7 @@ public class PhotoFragment extends ImageFragment {
             getInfoLayout().setVisibility(VISIBLE);
             getOverlayLayout().setVisibility(VISIBLE);
             getActionBar().show();
+            getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
         }
     }
 
