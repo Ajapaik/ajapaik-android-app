@@ -31,7 +31,7 @@
                 android:title="@string/about_title" />
         <item
                 android:id="@+id/settings"
-                android:icon="@drawable/ic_setting_dark"
+                android:icon="@drawable/ic_settings_black_48dp"
                 android:title="@string/action_settings" />
     </group>
 </menu>
