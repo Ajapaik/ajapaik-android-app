@@ -39,6 +39,7 @@ public class UploadActivity extends WebActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_upload);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null) {
             Upload upload = getIntent().getParcelableExtra(EXTRA_UPLOAD);

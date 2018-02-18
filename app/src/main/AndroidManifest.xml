@@ -75,7 +75,8 @@
         </activity>
         <activity
                 android:name="ee.ajapaik.android.UploadActivity"
-                android:label="@string/upload_title">
+                android:label="@string/upload_title"
+                android:theme="@style/AppThemeTranslucent">
         </activity>
         <activity
                 android:name="ee.ajapaik.android.ProfileActivity"
