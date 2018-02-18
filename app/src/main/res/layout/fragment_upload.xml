@@ -27,16 +27,12 @@
                 android:scaleType="matrix"
                 android:layout_weight="43" />
 
-            <ee.ajapaik.android.widget.WebImageView
-                android:id="@+id/image_new"
-                android:adjustViewBounds="true"
+            <android.support.v4.view.ViewPager
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/upload_pager"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/none"
-                android:src="@drawable/transparent"
-                android:scaleType="matrix"
-                android:layout_weight="43" />
+                android:layout_weight="43"/>
 
         </LinearLayout>
 

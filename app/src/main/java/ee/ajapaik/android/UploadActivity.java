@@ -4,6 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.gson.JsonArray;
+
+import java.util.List;
+
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.UploadFragment;
 import ee.ajapaik.android.util.WebActivity;
@@ -21,17 +25,22 @@ public class UploadActivity extends WebActivity {
         CAMERA, REPHOTOS
     }
 
-    public static Intent getStartIntent(Context context, Upload upload) {
+    public static Intent getStartIntent(Context context, List<Upload> uploads) {
         Intent intent = new Intent(context, UploadActivity.class);
 
-        intent.putExtra(EXTRA_UPLOAD, upload);
+        JsonArray jsonArray = new JsonArray();
+        for (Upload upload : uploads) {
+            jsonArray.add(upload.getAttributes().toString());
+        }
+
+        intent.putExtra(EXTRA_UPLOAD, jsonArray.toString());
 
         return intent;
     }
 
-    public static void start(Context context, Upload upload, CreatedFrom from) {
+    public static void start(Context context, List<Upload> uploads, CreatedFrom from) {
         createdFrom = from;
-        context.startActivity(getStartIntent(context, upload));
+        context.startActivity(getStartIntent(context, uploads));
     }
 
     @Override
@@ -42,10 +51,8 @@ public class UploadActivity extends WebActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if(savedInstanceState == null) {
-            Upload upload = getIntent().getParcelableExtra(EXTRA_UPLOAD);
-
             UploadFragment fragment = new UploadFragment();
-            fragment.setUpload(upload);
+            fragment.setUploads(getIntent().getExtras().getString(EXTRA_UPLOAD));
 
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment, TAG_FRAGMENT).commit();
         }

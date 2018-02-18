@@ -16,7 +16,6 @@ import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.data.util.PhotoModel;
-import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.Size;
 import ee.ajapaik.android.util.WebAction;
 
@@ -223,28 +222,15 @@ public class Photo extends PhotoModel {
 
     @Override
     public boolean equals(Object obj) {
-        Photo photo = (Photo)obj;
+        Photo photo = (Photo) obj;
 
-        if(photo == this) {
-            return true;
-        }
+        return photo == this ||
+                photo != null && getAttributes().equals(photo.getAttributes());
+    }
 
-        if(photo == null ||
-                !Objects.match(photo.getIdentifier(), m_identifier) ||
-                !Objects.match(photo.getImage(), m_image) ||
-                photo.getWidth() != m_width ||
-                photo.getHeight() != m_height ||
-                !Objects.match(photo.getTitle(), m_title) ||
-                !Objects.match(photo.getAuthor(), m_author) ||
-                !Objects.match(photo.getDate(), m_date) ||
-                !Objects.match(photo.getSource(), m_source) ||
-                !Objects.match(photo.getLocation(), m_location) ||
-                photo.getRephotos() != m_rephotos ||
-                photo.getUploadsCount() != m_uploadsCount) {
-            return false;
-        }
-
-        return true;
+    @Override
+    public int hashCode() {
+        return getAttributes().hashCode();
     }
 
     private JsonArray getRephotosAsAttribute() {

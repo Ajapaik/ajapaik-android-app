@@ -12,22 +12,30 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.ProfileActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.RephotoDraftsActivity;
 import ee.ajapaik.android.UploadActivity;
+import ee.ajapaik.android.adapter.UploadPagerAdapter;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
@@ -55,28 +63,42 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     private static final int THUMBNAIL_SIZE = 400;
 
-    private Upload m_upload;
+    private List<Upload> m_uploads;
+    private Map<Bitmap, Upload> uploadByRephotoBitmap;
+    private Bitmap currentRephoto;
+    private final JsonParser jsonParser = new JsonParser();
+
     public static final String RETURN_ACTIVITY_NAME = "upload";
 
-    public Upload getUpload() {
+    public List<Upload> getUpload() {
         Bundle arguments = getArguments();
 
         if (arguments != null) {
-            return arguments.getParcelable(KEY_UPLOAD);
+            String uploadsJson = arguments.getString(KEY_UPLOAD);
+            return parseUploadsJson(uploadsJson);
         }
 
         return null;
     }
 
-    public void setUpload(Upload upload) {
+    private List<Upload> parseUploadsJson(String uploadsJson) {
+        List<Upload> uploads = new ArrayList<>();
+        JsonArray jsonElements = jsonParser.parse(uploadsJson).getAsJsonArray();
+        for (JsonElement jsonElement : jsonElements) {
+            uploads.add(new Upload(jsonParser.parse(jsonElement.getAsString()).getAsJsonObject()));
+        }
+        return uploads;
+    }
+
+    public void setUploads(String uploadsJson) {
         Bundle arguments = getArguments();
 
         if (arguments == null) {
             arguments = new Bundle();
         }
 
-        if (upload != null) {
-            arguments.putParcelable(KEY_UPLOAD, upload);
+        if (uploadsJson != null) {
+            arguments.putString(KEY_UPLOAD, uploadsJson);
         } else {
             arguments.remove(KEY_UPLOAD);
         }
@@ -94,24 +116,30 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         super.onActivityCreated(savedInstanceState);
 
         if (savedInstanceState != null) {
-            m_upload = savedInstanceState.getParcelable(KEY_UPLOAD);
+            m_uploads = parseUploadsJson(savedInstanceState.getString(KEY_UPLOAD));
         }
 
-        if (m_upload == null) {
-            m_upload = getUpload();
+        if (m_uploads == null) {
+            m_uploads = getUpload();
         }
 
-        final Bitmap scaledRephoto = scaleRephoto();
-        getOldImageView().setFlipped(m_upload.isFlipped());
-        getOldImageView().setImageURI(m_upload.getPhoto().getThumbnail(THUMBNAIL_SIZE));
+        uploadByRephotoBitmap = new HashMap<>();
+        for (Upload upload : m_uploads) {
+            Bitmap scaledRephoto = scaleRephoto(upload);
+            uploadByRephotoBitmap.put(scaledRephoto, upload);
+        }
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
+        getViewPager().setAdapter(adapter);
+        final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
+        getViewPager().addOnPageChangeListener(pageChangeListener);
+        getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
+        selectFirstDraftToDisplay(pageChangeListener);
+
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
-                if (m_upload.getScale() > 1.0f) {
-                    scaleOldPhoto(scaledRephoto);
-                    getOldImageView().setScale(m_upload.getScale());
-                }
                 getMainLayout().setVisibility(View.VISIBLE);
             }
 
@@ -124,8 +152,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             public void onImageFailed() {
             }
         });
-
-        getNewImageView().setImageBitmap(scaledRephoto);
 
         if (((UploadActivity)getActivity()).isFromCameraActivity()) {
             getSaveButton().setOnClickListener(new View.OnClickListener() {
@@ -141,7 +167,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         getDeleteButton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new File(m_upload.getPath()).delete();
+                new File(uploadByRephotoBitmap.get(currentRephoto).getPath()).delete();
                 removePhotoFromDeviceGallery();
                 closePreviewAndGoBack();
             }
@@ -156,7 +182,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private void removePhotoFromDeviceGallery() {
-        getActivity().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(m_upload.getPath()))));
+        getActivity().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(
+                new File(uploadByRephotoBitmap.get(currentRephoto).getPath()))));
     }
 
     private void closePreviewAndGoBack() {
@@ -164,35 +191,47 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
         activity.setResult(Activity.RESULT_FIRST_USER);
         if (activity.isFromCameraActivity()) {
-            CameraActivity.start(activity, m_upload.getPhoto());
+            CameraActivity.start(activity, uploadByRephotoBitmap.get(currentRephoto).getPhoto());
         } else {
             RephotoDraftsActivity.start(activity);
         }
         activity.finish();
     }
 
-    private void scaleOldPhoto(Bitmap scaledRephoto) {
-        int scaledImageWidth = (int) (m_upload.getPhoto().getHeight() / getOldImageAspectRatio(scaledRephoto));
-        double scale = (double) getOldImageView().getHeight() / m_upload.getPhoto().getHeight();
-        int scaledWidth = (int) (scaledImageWidth * scale);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(scaledWidth, getOldImageView().getHeight());
-        params.gravity = Gravity.CENTER;
-        getOldImageView().setLayoutParams(params);
-        getNewImageView().setLayoutParams(params);
+    private void selectFirstDraftToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
+        getViewPager().post(new Runnable() {
+            @Override
+            public void run() {
+                pageChangeListener.onPageSelected(0);
+            }
+        });
     }
 
-    private double getOldImageAspectRatio(Bitmap scaledRephoto) {
-        return (double) scaledRephoto.getHeight() / scaledRephoto.getWidth();
+    private ViewPager.OnPageChangeListener createOnPageChangeListener(final UploadPagerAdapter adapter) {
+        return new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                currentRephoto = adapter.getBitmap(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        };
     }
 
-    private Bitmap scaleRephoto() {
-        Bitmap unscaledCameraImage = loadAndRotateRephotoPreview(m_upload.getPath());
+    private Bitmap scaleRephoto(Upload upload) {
+        Bitmap unscaledCameraImage = loadAndRotateRephotoPreview(upload.getPath());
         float unscaledImageWidth = unscaledCameraImage.getWidth();
         float unscaledImageHeight = unscaledCameraImage.getHeight();
 
         float heightScale = 1.0F;
         float widthScale = 1.0F;
-        Photo oldPhoto = m_upload.getPhoto();
+        Photo oldPhoto = upload.getPhoto();
 
         if (needsHeightScaling(unscaledImageWidth, unscaledImageHeight, oldPhoto)) {
             float scale = unscaledImageWidth / oldPhoto.getWidth();
@@ -202,8 +241,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             widthScale = (oldPhoto.getWidth() * scale) / unscaledImageWidth;
         }
 
-        float scaledImageWidth = unscaledImageWidth * widthScale * m_upload.getScale();
-        float scaledImageHeight = unscaledImageHeight * heightScale * m_upload.getScale();
+        float scaledImageWidth = unscaledImageWidth * widthScale * upload.getScale();
+        float scaledImageHeight = unscaledImageHeight * heightScale * upload.getScale();
         float heightDifference = unscaledImageHeight - scaledImageHeight;
         float widthDifference = unscaledImageWidth - scaledImageWidth;
         return Bitmap.createBitmap(
@@ -265,7 +304,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         } catch (IOException e) {
             Log.e("Rephoto preview", "Failed to set rotation for rephoto preview", e);
         }
-        Bitmap bitmap = BitmapFactory.decodeFile(m_upload.getPath());
+        Bitmap bitmap = BitmapFactory.decodeFile(path);
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
@@ -279,7 +318,11 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     public void onSaveInstanceState(final Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
-        savedInstanceState.putParcelable(KEY_UPLOAD, m_upload);
+        JsonArray jsonArray = new JsonArray();
+        for (Upload upload : m_uploads) {
+            jsonArray.add(upload.getAttributes().toString());
+        }
+        savedInstanceState.putString(KEY_UPLOAD, jsonArray.toString());
     }
 
     @Override
@@ -362,7 +405,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             showDialog(DIALOG_NOT_AGREED_TO_TERMS);
         } else {
             Context context = getActivity();
-            WebAction<Upload> action = Upload.createAction(context, m_upload);
+            WebAction<Upload> action = Upload.createAction(context, uploadByRephotoBitmap.get(currentRephoto));
 
             showDialog(DIALOG_PROGRESS);
 
@@ -372,7 +415,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     hideDialog(DIALOG_PROGRESS);
 
                     if (status.isGood()) {
-                        ExifService.deleteField(m_upload.getPath(), USER_COMMENT);
+                        ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
                         showDialog(DIALOG_SUCCESS);
                     } else if (status.isNetworkProblem()) {
                         showDialog(DIALOG_ERROR_NO_CONNECTION);
@@ -407,10 +450,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         return (WebImageView) getView().findViewById(R.id.image_old);
     }
 
-    private WebImageView getNewImageView() {
-        return (WebImageView) getView().findViewById(R.id.image_new);
-    }
-
     private Button getSaveButton() {
         return (Button) getView().findViewById(R.id.button_action_save);
     }
@@ -422,4 +461,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private Button getConfirmButton() {
         return (Button) getView().findViewById(R.id.button_action_confirm);
     }
+
+    protected ViewPager getViewPager() {
+        return (ViewPager) getView().findViewById(R.id.upload_pager);
+    }
+
 }

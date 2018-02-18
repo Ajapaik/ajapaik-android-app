@@ -67,6 +67,7 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static ee.ajapaik.android.UploadActivity.CreatedFrom.CAMERA;
+import static java.util.Collections.singletonList;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class CameraFragment extends ImageFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -882,7 +883,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(data)) {
             settings.setUpload(upload);
-            UploadActivity.start(getActivity(), upload, CAMERA);
+            UploadActivity.start(getActivity(), singletonList(upload), CAMERA);
             getActivity().finish();
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();
