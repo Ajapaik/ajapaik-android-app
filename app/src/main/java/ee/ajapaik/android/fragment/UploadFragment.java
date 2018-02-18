@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.ToxicBakery.viewpager.transforms.DefaultTransformer;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -134,6 +135,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         getViewPager().setAdapter(adapter);
         final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
         getViewPager().addOnPageChangeListener(pageChangeListener);
+        getViewPager().setPageTransformer(true, new DefaultTransformer());
         getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
         selectFirstDraftToDisplay(pageChangeListener);
 
