@@ -57,27 +57,12 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createFavoritesAction(Context context, Location location) {
-        Map<String, String> parameters = new Hashtable<String, String>();
-        if (location != null) {
-            String latitude = Double.toString(location.getLatitude());
-            String longitude = Double.toString(location.getLongitude());
-
-            parameters.put("latitude", latitude);
-            parameters.put("longitude", longitude);
-        }
-
+        Map<String, String> parameters = createLocationParameters(location);
         return new Action(context, API_FAVORITES_PATH, parameters, null, "favorites");
     }
 
     public static WebAction<Album> createMyRephotosAction(Context context, Location location) {
-        Map<String, String> parameters = new Hashtable<String, String>();
-        if (location != null) {
-            String latitude = Double.toString(location.getLatitude());
-            String longitude = Double.toString(location.getLongitude());
-
-            parameters.put("latitude", latitude);
-            parameters.put("longitude", longitude);
-        }
+        Map<String, String> parameters = createLocationParameters(location);
         return new Action(context, API_MY_REPHOTOS_PATH, parameters, null, "my-rephotos");
     }
 
@@ -148,6 +133,18 @@ public class Album extends Model {
         }
 
         return album;
+    }
+
+    private static Map<String, String> createLocationParameters(Location location) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+        if (location != null) {
+            String latitude = Double.toString(location.getLatitude());
+            String longitude = Double.toString(location.getLongitude());
+
+            parameters.put("latitude", latitude);
+            parameters.put("longitude", longitude);
+        }
+        return parameters;
     }
 
     private String m_identifier;
