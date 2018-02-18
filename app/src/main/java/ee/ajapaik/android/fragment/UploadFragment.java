@@ -23,6 +23,7 @@ import com.ToxicBakery.viewpager.transforms.DefaultTransformer;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.io.File;
 import java.io.IOException;
@@ -134,8 +135,12 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
         getViewPager().setAdapter(adapter);
         final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
-        getViewPager().addOnPageChangeListener(pageChangeListener);
         getViewPager().setPageTransformer(true, new DefaultTransformer());
+
+        CirclePageIndicator pageIndicator = getPageIndicator();
+        pageIndicator.setViewPager(getViewPager());
+        pageIndicator.setOnPageChangeListener(pageChangeListener);
+
         getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
         selectFirstDraftToDisplay(pageChangeListener);
 
@@ -468,4 +473,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         return (ViewPager) getView().findViewById(R.id.upload_pager);
     }
 
+    private CirclePageIndicator getPageIndicator() {
+        return (CirclePageIndicator)getView().findViewById(R.id.pager_indicator);
+    }
 }

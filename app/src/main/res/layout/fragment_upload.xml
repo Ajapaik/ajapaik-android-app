@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 style="@style/UploadFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -33,6 +34,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="43"/>
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/pager_indicator"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:paddingTop="3dp"
+                app:radius="5dp"/>
 
         </LinearLayout>
 
