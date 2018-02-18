@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
 
 import java.util.List;
 
@@ -61,13 +62,22 @@ public class UploadActivity extends WebActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Upload upload = getIntent().getParcelableExtra(EXTRA_UPLOAD);
 
         if (isFromCameraActivity()) {
-            CameraActivity.start(this, upload.getPhoto());
+            CameraActivity.start(this, getUpload().getPhoto());
         } else {
             RephotoDraftsActivity.start(this);
         }
+    }
+
+    private Upload getUpload() {
+        JsonParser jsonParser = new JsonParser();
+        String uploadAsJsonString =
+                jsonParser.parse(getIntent().getStringExtra(EXTRA_UPLOAD))
+                        .getAsJsonArray().get(0)
+                        .getAsJsonPrimitive()
+                        .getAsString();
+        return new Upload(jsonParser.parse(uploadAsJsonString).getAsJsonObject());
     }
 
     public boolean isFromCameraActivity() {
