@@ -23,6 +23,11 @@ public class RephotosFragment extends AlbumFragment {
     }
 
     @Override
+    protected WebAction createSearchAction(String query) {
+        return Album.createRephotoSearchAction(getActivity(), query);
+    }
+
+    @Override
     protected String getPlaceholderString() {
         return getString(R.string.no_rephotos);
     }

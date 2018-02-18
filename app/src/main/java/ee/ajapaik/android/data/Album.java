@@ -90,7 +90,6 @@ public class Album extends Model {
         String baseIdentifier = "rephotos|" + query.replaceAll(" ", "-");
 
         Map<String, String> parameters = new Hashtable<String, String>();
-        parameters.put("rephotosOnly", "true");
         parameters.put("query", query);
 
         return new Action(context, API_USER_REPHOTOS_SEARCH_PATH, parameters, null, baseIdentifier);
