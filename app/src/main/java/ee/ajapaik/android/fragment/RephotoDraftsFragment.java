@@ -1,9 +1,8 @@
 package ee.ajapaik.android.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.view.Menu;
-import android.view.MenuInflater;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -37,6 +36,8 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
     private static final String TAG = "RephotoDraftsFragment";
 
+    private String m_searchQuery;
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -46,7 +47,8 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
     @Override
     protected WebAction createSearchAction(String query) {
-        return Album.createRephotoSearchAction(getActivity(), query);
+        this.m_searchQuery = query;
+        return null;
     }
 
     @Override
@@ -61,6 +63,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
         for (File file : images) {
             Upload upload = getUpload(file);
             if (upload == null) continue;
+            if (m_searchQuery != null && !matchesSearchQuery(upload)) continue;
             uploadsByPhoto.put(upload.getPhoto(), upload);
         }
 
@@ -75,7 +78,18 @@ public class RephotoDraftsFragment extends PhotosFragment {
                 }
             });
         }
-        getSwipeRefreshLayout().setRefreshing(false);
+        handleLoadingFinished();
+    }
+
+    @Override
+    protected void performAction(Context context, WebAction action) {
+        refresh();
+        m_searchQuery = null;
+    }
+
+    private boolean matchesSearchQuery(Upload upload) {
+        String title = upload.getPhoto().getTitle();
+        return title != null && title.toLowerCase().contains(m_searchQuery.toLowerCase());
     }
 
     private Upload getUpload(File file) {
@@ -114,10 +128,5 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
     private String getUploadData(File file) {
         return ExifService.readField(file, USER_COMMENT);
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        TODO: Remove this method to enable searching user rephotos
     }
 }
