@@ -27,18 +27,20 @@ android {
 
 repositories {
     mavenCentral()
+    maven { url "https://maven.google.com" }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.google.android.gms:play-services:11.8.0'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:preference-v7:25.3.1'
     compile 'com.facebook.android:facebook-android-sdk:4.18.0'
     compile 'com.google.code.gson:gson:2.7'
-    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile 'com.google.firebase:firebase-crash:11.8.0'
     compile 'com.github.Ajapaik:MaterialShowcaseView:1.1.1'
     compile files('libs/httpcore-4.3.3.jar')
     compile files('libs/httpclient-4.3.3.jar')
@@ -46,6 +48,10 @@ dependencies {
     compile('ch.acra:acra:4.5.0') {
         exclude group: 'org.json'
     }
+    compile('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
+        transitive = true
+    }
 }
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
