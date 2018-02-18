@@ -10,7 +10,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -70,8 +69,16 @@ public class Album extends Model {
         return new Action(context, API_FAVORITES_PATH, parameters, null, "favorites");
     }
 
-    public static WebAction<Album> createMyRephotosAction(Context context) {
-        return new Action(context, API_MY_REPHOTOS_PATH, Collections.<String, String>emptyMap(), null, "my-rephotos");
+    public static WebAction<Album> createMyRephotosAction(Context context, Location location) {
+        Map<String, String> parameters = new Hashtable<String, String>();
+        if (location != null) {
+            String latitude = Double.toString(location.getLatitude());
+            String longitude = Double.toString(location.getLongitude());
+
+            parameters.put("latitude", latitude);
+            parameters.put("longitude", longitude);
+        }
+        return new Action(context, API_MY_REPHOTOS_PATH, parameters, null, "my-rephotos");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {

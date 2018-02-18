@@ -19,7 +19,7 @@ public class RephotosFragment extends AlbumFragment {
 
     @Override
     protected WebAction<Album> createAction(Context context) {
-        return Album.createMyRephotosAction(context);
+        return Album.createMyRephotosAction(context, getSettings().getLocation());
     }
 
     @Override
