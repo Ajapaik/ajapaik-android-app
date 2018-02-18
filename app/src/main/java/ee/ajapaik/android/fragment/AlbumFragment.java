@@ -115,6 +115,7 @@ public class AlbumFragment extends PhotosFragment {
                 setPhotoAdapter(gridView, m_album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
                     @Override
                     public void onSelect(Photo photo) {
+                        getSwipeRefreshLayout().setRefreshing(false);
                         PhotoActivity.start(getActivity(), photo, m_album);
                     }
                 });
