@@ -4,14 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonReader;
-
-import java.io.File;
-import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,26 +15,26 @@ import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
-import ee.ajapaik.android.util.ExifService;
 import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.RephotoDraftService;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static ee.ajapaik.android.UploadActivity.CreatedFrom.REPHOTOS;
-import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
-import static org.apache.http.util.TextUtils.isBlank;
 
 public class RephotoDraftsFragment extends PhotosFragment {
 
     private static final String TAG = "RephotoDraftsFragment";
 
     private String m_searchQuery;
+    private RephotoDraftService m_rephotoDraftService;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        m_rephotoDraftService = new RephotoDraftService();
         getSwipeRefreshLayout().setEnabled(false);
         refresh();
     }
@@ -57,20 +50,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
         if (ContextCompat.checkSelfPermission(getActivity(), WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
             return;
 
-        File[] images = Upload.getFolder().listFiles();
-
-        final Map<Photo, List<Upload>> uploadsByPhoto = new HashMap<>();
-
-        for (File file : images) {
-            Upload upload = getUpload(file);
-            if (upload == null) continue;
-            if (m_searchQuery != null && !matchesSearchQuery(upload)) continue;
-            Photo photo = upload.getPhoto();
-            List<Upload> uploads = uploadsByPhoto.get(photo);
-            if (uploads == null) uploads = new ArrayList<>();
-            uploads.add(upload);
-            uploadsByPhoto.put(photo, uploads);
-        }
+        final Map<Photo, List<Upload>> uploadsByPhoto = m_rephotoDraftService.getAllDrafts(m_searchQuery);
 
         if (uploadsByPhoto.isEmpty()) {
             initializeEmptyGridView(getGridView());
@@ -90,19 +70,6 @@ public class RephotoDraftsFragment extends PhotosFragment {
     protected void performAction(Context context, WebAction action) {
         refresh();
         m_searchQuery = null;
-    }
-
-    private boolean matchesSearchQuery(Upload upload) {
-        String title = upload.getPhoto().getTitle();
-        return title != null && title.toLowerCase().contains(m_searchQuery.toLowerCase());
-    }
-
-    private Upload getUpload(File file) {
-        String uploadJsonString = getUploadData(file);
-        if (isBlank(uploadJsonString)) return null;
-
-        JsonObject uploadJson = new JsonParser().parse(new JsonReader(new StringReader(uploadJsonString))).getAsJsonObject();
-        return new Upload(uploadJson);
     }
 
     @Override
@@ -129,9 +96,5 @@ public class RephotoDraftsFragment extends PhotosFragment {
                 initializeEmptyGridView(gridView);
             }
         }
-    }
-
-    private String getUploadData(File file) {
-        return ExifService.readField(file, USER_COMMENT);
     }
 }
