@@ -11,9 +11,11 @@ import java.util.Map;
 import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
+import ee.ajapaik.android.adapter.DraftAdapter;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
+import ee.ajapaik.android.data.PhotoDraftsDTO;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.RephotoDraftService;
@@ -55,19 +57,20 @@ public class RephotoDraftsFragment extends PhotosFragment {
         if (uploadsByPhoto.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
-            List<Photo> photos = new ArrayList<>();
+            List<PhotoDraftsDTO> photos = new ArrayList<>();
 
             for (String identifier : uploadsByPhoto.keySet()) {
-                photos.add(uploadsByPhoto.get(identifier).get(0).getPhoto());
+                List<Upload> uploads = uploadsByPhoto.get(identifier);
+                photos.add(new PhotoDraftsDTO(uploads.get(0).getPhoto(), uploads.size()));
             }
 
-            Album album = new Album(photos, "rephoto-drafts");
-            setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+            getGridView().setAdapter(new DraftAdapter(getGridView().getContext(), photos,
+                    getSettings().getLocation(), new DraftAdapter.OnPhotoSelectionListener() {
                 @Override
                 public void onSelect(Photo photo) {
                     UploadActivity.start(getActivity(), uploadsByPhoto.get(photo.getIdentifier()), REPHOTOS);
                 }
-            });
+            }));
         }
         handleLoadingFinished();
     }
@@ -83,6 +86,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
         return getString(R.string.no_rephotos);
     }
 
+//    TODO this can be simplified?
     @Override
     public void setAlbum(Album album) {
         if(!Objects.match(m_album, album)) {
@@ -92,7 +96,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
 
             if(m_album != null && m_album.getPhotos().size() > 0) {
                 getEmptyView().setText("");
-                setPhotoAdapter(gridView, m_album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+                setPhotoAdapter(gridView, new PhotoAdapter.OnPhotoSelectionListener() {
                     @Override
                     public void onSelect(Photo photo) {
                         PhotoActivity.start(getActivity(), photo, m_album);
