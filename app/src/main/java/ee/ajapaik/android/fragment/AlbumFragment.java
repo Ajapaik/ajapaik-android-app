@@ -112,7 +112,7 @@ public class AlbumFragment extends PhotosFragment {
             if(m_album != null && m_album.getPhotos().size() > 0) {
                 getEmptyView().setText("");
                 getNoDataButton().setVisibility(GONE);
-                setPhotoAdapter(gridView, m_album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
+                setPhotoAdapter(gridView, new PhotoAdapter.OnPhotoSelectionListener() {
                     @Override
                     public void onSelect(Photo photo) {
                         getSwipeRefreshLayout().setRefreshing(false);

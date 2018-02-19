@@ -9,12 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
-
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
-import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.StaggeredGridView;
@@ -70,8 +67,8 @@ public abstract class PhotosFragment extends SearchFragment {
         }
     }
 
-    protected void setPhotoAdapter(StaggeredGridView gridView, List<Photo> photos, PhotoAdapter.OnPhotoSelectionListener selectionListener) {
-        gridView.setAdapter(new PhotoAdapter(gridView.getContext(), photos, getSettings().getLocation(), selectionListener));
+    protected void setPhotoAdapter(StaggeredGridView gridView, PhotoAdapter.OnPhotoSelectionListener selectionListener) {
+        gridView.setAdapter(new PhotoAdapter(gridView.getContext(), m_album.getPhotos(), getSettings().getLocation(), selectionListener));
     }
 
     protected void initializeEmptyGridView(StaggeredGridView gridView) {
