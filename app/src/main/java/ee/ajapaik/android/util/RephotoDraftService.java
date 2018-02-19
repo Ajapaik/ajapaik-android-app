@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
@@ -19,20 +18,20 @@ import static org.apache.http.util.TextUtils.isBlank;
 
 public class RephotoDraftService {
 
-    public Map<Photo, List<Upload>> getAllDrafts(String searchQuery) {
+    public Map<String, List<Upload>> getAllDrafts(String searchQuery) {
         File[] images = Upload.getFolder().listFiles();
 
-        final Map<Photo, List<Upload>> uploadsByPhoto = new HashMap<>();
+        final Map<String, List<Upload>> uploadsByPhoto = new HashMap<>();
 
         for (File file : images) {
             Upload upload = getUpload(file);
             if (upload == null) continue;
             if (searchQuery != null && !matchesSearchQuery(upload, searchQuery)) continue;
-            Photo photo = upload.getPhoto();
-            List<Upload> uploads = uploadsByPhoto.get(photo);
+            String identifier = upload.getPhoto().getIdentifier();
+            List<Upload> uploads = uploadsByPhoto.get(identifier);
             if (uploads == null) uploads = new ArrayList<>();
             uploads.add(upload);
-            uploadsByPhoto.put(photo, uploads);
+            uploadsByPhoto.put(identifier, uploads);
         }
 
         return uploadsByPhoto;

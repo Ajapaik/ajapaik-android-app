@@ -50,16 +50,22 @@ public class RephotoDraftsFragment extends PhotosFragment {
         if (ContextCompat.checkSelfPermission(getActivity(), WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
             return;
 
-        final Map<Photo, List<Upload>> uploadsByPhoto = m_rephotoDraftService.getAllDrafts(m_searchQuery);
+        final Map<String, List<Upload>> uploadsByPhoto = m_rephotoDraftService.getAllDrafts(m_searchQuery);
 
         if (uploadsByPhoto.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
-            Album album = new Album(new ArrayList<>(uploadsByPhoto.keySet()), "rephoto-drafts");
+            List<Photo> photos = new ArrayList<>();
+
+            for (String identifier : uploadsByPhoto.keySet()) {
+                photos.add(uploadsByPhoto.get(identifier).get(0).getPhoto());
+            }
+
+            Album album = new Album(photos, "rephoto-drafts");
             setPhotoAdapter(getGridView(), album.getPhotos(), new PhotoAdapter.OnPhotoSelectionListener() {
                 @Override
                 public void onSelect(Photo photo) {
-                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo), REPHOTOS);
+                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo.getIdentifier()), REPHOTOS);
                 }
             });
         }
