@@ -8,19 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.adapter.DraftAdapter;
-import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.PhotoDraftsDTO;
 import ee.ajapaik.android.data.Upload;
-import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.RephotoDraftService;
 import ee.ajapaik.android.util.WebAction;
-import ee.ajapaik.android.widget.StaggeredGridView;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -57,6 +53,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
         if (uploadsByPhoto.isEmpty()) {
             initializeEmptyGridView(getGridView());
         } else {
+            getEmptyView().setText("");
             List<PhotoDraftsDTO> photos = new ArrayList<>();
 
             for (String identifier : uploadsByPhoto.keySet()) {
@@ -64,13 +61,7 @@ public class RephotoDraftsFragment extends PhotosFragment {
                 photos.add(new PhotoDraftsDTO(uploads.get(0).getPhoto(), uploads.size()));
             }
 
-            getGridView().setAdapter(new DraftAdapter(getGridView().getContext(), photos,
-                    getSettings().getLocation(), new DraftAdapter.OnPhotoSelectionListener() {
-                @Override
-                public void onSelect(Photo photo) {
-                    UploadActivity.start(getActivity(), uploadsByPhoto.get(photo.getIdentifier()), REPHOTOS);
-                }
-            }));
+            setPhotoAdapter(uploadsByPhoto, photos);
         }
         handleLoadingFinished();
     }
@@ -86,25 +77,16 @@ public class RephotoDraftsFragment extends PhotosFragment {
         return getString(R.string.no_rephotos);
     }
 
-//    TODO this can be simplified?
     @Override
-    public void setAlbum(Album album) {
-        if(!Objects.match(m_album, album)) {
-            StaggeredGridView gridView = getGridView();
+    protected void setAlbum(Album album) { }
 
-            m_album = album;
-
-            if(m_album != null && m_album.getPhotos().size() > 0) {
-                getEmptyView().setText("");
-                setPhotoAdapter(gridView, new PhotoAdapter.OnPhotoSelectionListener() {
-                    @Override
-                    public void onSelect(Photo photo) {
-                        PhotoActivity.start(getActivity(), photo, m_album);
-                    }
-                });
-            } else {
-                initializeEmptyGridView(gridView);
+    private void setPhotoAdapter(final Map<String, List<Upload>> uploadsByPhoto, List<PhotoDraftsDTO> photos) {
+        getGridView().setAdapter(new DraftAdapter(getGridView().getContext(), photos,
+                getSettings().getLocation(), new DraftAdapter.OnPhotoSelectionListener() {
+            @Override
+            public void onSelect(Photo photo) {
+                UploadActivity.start(getActivity(), uploadsByPhoto.get(photo.getIdentifier()), REPHOTOS);
             }
-        }
+        }));
     }
 }
