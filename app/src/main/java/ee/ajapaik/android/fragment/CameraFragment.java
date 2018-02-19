@@ -24,6 +24,7 @@ import android.hardware.camera2.CaptureResult;
 import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.ImageReader;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -886,12 +887,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(data)) {
             settings.setUpload(upload);
-            List<Upload> uploads = m_repRephotoDraftService.getAllDraftsFor(m_photo.getIdentifier());
-            UploadActivity.start(getActivity(), uploads, CAMERA);
-            getActivity().finish();
-            if (progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
+            new UploadPreviewPreparation().execute(m_photo.getIdentifier());
         }
     }
 
@@ -915,5 +911,22 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     private Button getCameraButton() {
         return (Button) getView().findViewById(R.id.button_action_camera);
+    }
+
+    private class UploadPreviewPreparation extends AsyncTask<String, Void, List<Upload>> {
+
+        @Override
+        protected List<Upload> doInBackground(String... identifier) {
+            return m_repRephotoDraftService.getAllDraftsFor(identifier[0]);
+        }
+
+        @Override
+        protected void onPostExecute(List<Upload> uploads) {
+            UploadActivity.start(getActivity(), uploads, CAMERA);
+            getActivity().finish();
+            if (progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        }
     }
 }
