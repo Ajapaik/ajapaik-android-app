@@ -56,6 +56,7 @@ import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
 import ee.ajapaik.android.fragment.util.ImageFragment;
+import ee.ajapaik.android.util.RephotoDraftService;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;
@@ -67,7 +68,6 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static ee.ajapaik.android.UploadActivity.CreatedFrom.CAMERA;
-import static java.util.Collections.singletonList;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class CameraFragment extends ImageFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -75,6 +75,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
      * Conversion from screen rotation to JPEG orientation.
      */
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    private RephotoDraftService m_repRephotoDraftService;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -740,6 +741,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        m_repRephotoDraftService = new RephotoDraftService();
+
         if (savedInstanceState != null) {
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
             m_opacity = savedInstanceState.getFloat(KEY_OPACITY, DEFAULT_OPACITY);
@@ -883,7 +886,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(data)) {
             settings.setUpload(upload);
-            UploadActivity.start(getActivity(), singletonList(upload), CAMERA);
+            List<Upload> uploads = m_repRephotoDraftService.getAllDraftsFor(m_photo.getIdentifier());
+            UploadActivity.start(getActivity(), uploads, CAMERA);
             getActivity().finish();
             if (progressDialog.isShowing()) {
                 progressDialog.dismiss();

@@ -18,6 +18,21 @@ import static org.apache.http.util.TextUtils.isBlank;
 
 public class RephotoDraftService {
 
+    public List<Upload> getAllDraftsFor(String identifier) {
+        File[] images = Upload.getFolder().listFiles();
+
+        List<Upload> result = new ArrayList<>();
+
+        for (File file : images) {
+            Upload upload = getUpload(file);
+            if (upload == null) continue;
+            if (identifier.equals(upload.getPhoto().getIdentifier())) {
+                result.add(upload);
+            }
+        }
+        return result;
+    }
+
     public Map<String, List<Upload>> getAllDrafts(String searchQuery) {
         File[] images = Upload.getFolder().listFiles();
 
