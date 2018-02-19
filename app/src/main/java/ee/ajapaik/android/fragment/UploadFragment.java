@@ -28,9 +28,10 @@ import com.viewpagerindicator.CirclePageIndicator;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.ProfileActivity;
@@ -66,7 +67,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private static final int THUMBNAIL_SIZE = 400;
 
     private List<Upload> m_uploads;
-    private Map<Bitmap, Upload> uploadByRephotoBitmap;
+    private LinkedHashMap<Bitmap, Upload> uploadByRephotoBitmap;
     private Bitmap currentRephoto;
     private final JsonParser jsonParser = new JsonParser();
 
@@ -125,7 +126,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             m_uploads = getUpload();
         }
 
-        uploadByRephotoBitmap = new HashMap<>();
+        uploadByRephotoBitmap = new LinkedHashMap<>();
+        sortUploadsByDate();
         for (Upload upload : m_uploads) {
             Bitmap scaledRephoto = scaleRephoto(upload);
             uploadByRephotoBitmap.put(scaledRephoto, upload);
@@ -186,6 +188,15 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             @Override
             public void onClick(View v) {
                 uploadPhoto();
+            }
+        });
+    }
+
+    private void sortUploadsByDate() {
+        Collections.sort(m_uploads, new Comparator<Upload>() {
+            @Override
+            public int compare(Upload upload, Upload t1) {
+                return t1.getPath().compareTo(upload.getPath());
             }
         });
     }
