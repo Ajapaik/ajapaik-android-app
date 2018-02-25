@@ -1,0 +1,150 @@
+<!--Default language is English-->
+<resources>
+
+    <!-- Global -->
+    <string name="app_name">Ajapaik rephoto</string>
+    <string name="none"></string>
+    <string name="unit_km">km</string>
+    <string name="unit_m">m</string>
+    <string name="processing_image">Processing image</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="something_went_wrong">Something went wrong</string>
+
+    <!-- Menu -->
+    <string name="action_albums">Albums</string>
+    <string name="action_flip">Flip</string>
+    <string name="action_login">Login</string>
+    <string name="action_register">Register</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_profile">Profile</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Nearest -->
+    <string name="nearest_title">Photos nearby</string>
+
+    <!-- Albums -->
+    <string name="albums_label_no_data">No Albums</string>
+    <string name="albums_title">Albums</string>
+
+    <!-- Album -->
+    <string name="album_title">Album</string>
+
+    <!-- Nearest -->
+    <string name="nearest_dialog_error_location_disabled_title">Location Disabled</string>
+    <string name="nearest_dialog_error_location_disabled_message">Unable to get the current location. Would you like to enable it?</string>
+    <string name="nearest_dialog_error_location_disabled_close">Close</string>
+    <string name="nearest_dialog_error_location_disabled_open">Open Settings</string>
+    <string name="nearest_label_no_data">No photos nearby</string>
+    <string name="nearest_label_no_data_button">See albums to browse all images</string>
+
+    <!-- Photo -->
+    <string name="photo_title">Photo Details</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Camera</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_facebook_login">Sign in with Facebook</string>
+    <string name="profile_google_login">Sign in with Google</string>
+    <string name="profile_logout">Logout</string>
+    <string name="profile_login">Sign in</string>
+    <string name="profile_register">Create account</string>
+    <string name="input_username_hint">Email</string>
+    <string name="input_password_hint">Password</string>
+    <string name="input_firstname_hint">First name</string>
+    <string name="input_lastname_hint">Last name</string>
+    <plurals name="profile_rephotos">
+        <item quantity="zero">You haven\'t made any rephotos yet</item>
+        <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
+        <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
+    </plurals>
+
+    <!-- Login -->
+    <string name="login_title">Login</string>
+    <string name="login_failed">Login unsuccessful</string>
+    <string name="wrong_password">Wrong password!</string>
+
+    <!-- Registration -->
+    <string name="registration_title">Register</string>
+    <string name="user_already_exists">Username already exists</string>
+
+    <!-- Upload -->
+    <string name="upload_title">Confirm Rephoto</string>
+    <string name="upload_dialog_error_connection_title">Connection Error</string>
+    <string name="upload_dialog_error_connection_message">Unable to upload the photo. Try again?</string>
+    <string name="upload_dialog_error_connection_retry">Retry</string>
+    <string name="upload_dialog_error_connection_ok">OK</string>
+    <string name="upload_dialog_error_unknown_title">Unknown Error</string>
+    <string name="upload_dialog_error_unknown_message">Unable to upload the photo. Try again?</string>
+    <string name="upload_dialog_error_unknown_retry">Retry</string>
+    <string name="upload_dialog_error_unknown_ok">Cancel</string>
+    <string name="upload_dialog_process_title">Uploading the photo</string>
+    <string name="upload_dialog_process_message">Please wait&#8230;</string>
+    <string name="upload_dialog_success_title">Upload Successful</string>
+    <string name="upload_dialog_success_message">The photo was uploaded successfully!</string>
+    <string name="upload_dialog_success_ok">OK</string>
+    <string name="upload_dialog_not_authenticated_title">Must be logged in to upload</string>
+    <string name="upload_dialog_not_authenticated_message">Redirect to profile page</string>
+    <string name="upload_dialog_not_authenticated_ok">OK</string>
+    <string name="upload_dialog_not_agreed_to_terms">I agree to publishing rephotographs under the CC BY 4.0 licence.</string>
+    <string name="upload_dialog_agree_to_terms">Yes!</string>
+    <string name="upload_dialog_decline_terms">No</string>
+
+    <!-- ACRA -->
+    <string name="acra_dialog_title">Sift.pics has crashed</string>
+    <string name="acra_dialog_text">An unexpected error occurred forcing the application to stop. Please help us fix this by sending us error data, all you have to do is click OK.</string>
+    <string name="acra_dialog_comment_prompt">You might add your comments about the problem below:</string>
+    <string name="acra_dialog_ok_toast">Thank you!</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">201052296573134</string>
+
+    <!-- About -->
+    <string name="about_title">About</string>
+    <string name="version">Version</string>
+    <string name="contact">Contact</string>
+    <string name="privacy_policy">Privacy</string>
+
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
+    <!-- Settings -->
+    <string name="settings_show_tutorial">Show tutorial in rephoto mode</string>
+    <string name="settings_agree_to_license_terms">I agree to publishing rephotographs on Ajapaik.ee under CC BY 4.0 licence.</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_hide_show_flip">Tap to hide/show image.\nUse flip icon in upper right corner to flip old image.</string>
+    <string name="tutorial_opacity_zoom">Slide to adjust transparency of old image.\nPinch zoom to zoom old image.</string>
+    <string name="tutorial_take_picture">Press shutter button or long tap anywhere on screen to take the rephoto.</string>
+    <string name="tutorial_dismiss">Got it!</string>
+
+    <string name="tutorial_dialog_show_again_title">Show tutorial again?</string>
+    <string name="tutorial_dialog_show_again_message">You can turn tutorial on again from settings later</string>
+    <string name="tutorial_dialog_show_again_no">No</string>
+    <string name="tutorial_dialog_show_again_yes">Yes</string>
+
+    <!-- Rephotos -->
+    <string name="rephoto_drafts">Rephoto drafts</string>
+    <string name="no_rephotos">No rephotos</string>
+    <string name="storage_not_permitted_title">Storage not permitted</string>
+    <string name="storage_not_permitted_message">Not permitting this app to use storage stops You from accessing some features, for example taking and uploading rephotos. Please consider allowing storage usage</string>
+    <string name="storage_not_permitted_cancel">Cancel</string>
+    <string name="storage_not_permitted_open_settings">Open settings</string>
+    <string name="my_rephotos">My rephotos</string>
+    <string name="rephotos_label_not_logged_in_text">Please log in to see your rephotos</string>
+
+    <string name="action_search">Search</string>
+
+    <!-- Favorites -->
+    <string name="favorites">My favorites</string>
+    <string name="no_favorites">No favorites</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="favorites_label_not_logged_in_button">Sign in</string>
+    <string name="favorites_label_not_logged_in_text">Please log in to see your favorites</string>
+
+    <string name="no_search_result">No search results</string>
+    <string name="album_no_data">No photos</string>
+
+</resources>
