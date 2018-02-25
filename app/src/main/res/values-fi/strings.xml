@@ -35,7 +35,7 @@
     <string name="nearest_dialog_error_location_disabled_message">Sijaintipalvelut eivät ole käytössä. Haluatko kytkeä ne käyttöön?</string>
     <string name="nearest_dialog_error_location_disabled_close">Sulje</string>
     <string name="nearest_dialog_error_location_disabled_open">Avaa asetukset</string>
-    <string name="nearest_label_no_data">Lähistöstä ei ole kuvia</string>
+    <string name="nearest_label_no_data">Lähistöltä ei ole kuvia</string>
     <string name="nearest_label_no_data_button">Selaa albumeissa olevia kuvia</string>
 
     <!-- Photo -->
@@ -46,8 +46,8 @@
 
     <!-- Profile -->
     <string name="profile_title">Profiili</string>
-    <string name="profile_facebook_login">Kirjautuminen Facebookin kautta</string>
-    <string name="profile_google_login">Kirjautuminen Googlen kautta</string>
+    <string name="profile_facebook_login">Kirjaudu Facebookilla</string>
+    <string name="profile_google_login">Kirjaudu Googlella</string>
     <string name="profile_logout">Kirjaudu ulos</string>
     <string name="profile_login">Kirjaudu sisään</string>
     <string name="profile_register">Luo tunnus</string>
@@ -58,7 +58,7 @@
     <plurals name="profile_rephotos">
         <item quantity="zero">Et ole uudelleenkuvannut yhtään kuvaa vielä</item>
         <item quantity="one"><b>1</b> uudelleenkuvattu valokuva</item>
-        <item quantity="other"><b>%1$d</b> uudelleenkuvatut valokuvat</item>
+        <item quantity="other"><b>%1$d</b> uudelleenkuvattua valokuvaa</item>
     </plurals>
 
     <!-- Login -->
@@ -104,20 +104,20 @@
     <!-- About -->
     <string name="about_title">Tietoja</string>
     <string name="version">Versio</string>
-    <string name="contact">Yhteydenotto</string>
+    <string name="contact">Yhteystiedot</string>
     <string name="privacy_policy">Tietosuojakäytäntö</string>
 
     <string name="navigation_drawer_open">Avaa</string>
     <string name="navigation_drawer_close">Sulje</string>
 
     <!-- Settings -->
-    <string name="settings_show_tutorial">Näytä opastus uudelleenvalokuvaustilassa</string>
-    <string name="settings_agree_to_license_terms">Hyväksyn valokuvieni julkaisemisen ajapaik.ee:ssä CC BY 4.0 -lisenssillä.</string>
+    <string name="settings_show_tutorial">Näytä opastus uudelleenkuvaustilassa</string>
+    <string name="settings_agree_to_license_terms">Hyväksyn valokuvieni julkaisemisen Ajapaik.ee:ssä CC BY 4.0 -lisenssillä.</string>
 
     <!-- Tutorial -->
-    <string name="tutorial_hide_show_flip">Tap to hide/show image.\nUse flip icon in upper right corner to flip old image.</string>
-    <string name="tutorial_opacity_zoom">Slide to adjust transparency of old image.\nPinch zoom to zoom old image.</string>
-    <string name="tutorial_take_picture">Press shutter button or long tap anywhere on screen to take the rephoto.</string>
+    <string name="tutorial_hide_show_flip">Vanhan kuvan saa pois näkyviltä ja takaisin klikkaamalla ruutua.\nKuvan saa peilikuvaksi oikean ylänurkan käännä-kuvakkeella.</string>
+    <string name="tutorial_opacity_zoom">Sormen liuttaminen kuvan päällä säätää kuvan läpinäkyvyyttä.\nKahdella sormella nipistäminen lähentää tai loitontaa kuvaa.</string>
+    <string name="tutorial_take_picture">Laukaisimen painaminen tai pitkä klikkaus ottaa valokuvan.</string>
     <string name="tutorial_dismiss">Selvä!</string>
 
     <string name="tutorial_dialog_show_again_title">Näytä opastus uudestaan?</string>
@@ -126,8 +126,8 @@
     <string name="tutorial_dialog_show_again_yes">Kyllä</string>
 
     <!-- Rephotos -->
-    <string name="rephoto_drafts">Uudelleenvalokuvattujen valokuvien luonnokset</string>
-    <string name="no_rephotos">Ei uudelleenvalokuvattuja valokuvia</string>
+    <string name="rephoto_drafts">Luonnokset</string>
+    <string name="no_rephotos">Ei uudelleenkuvattuja valokuvia</string>
     <string name="storage_not_permitted_title">Tallennus ei sallittu</string>
     <string name="storage_not_permitted_message">Et voi käyttää kaikkia sovelluksen toimintoja, koska et ole sallinut sovelluksen käyttää tallennustilaa. Et voi esimerkiksi ladata kuvia verkkoon. Harkitse käyttöoikeuden antamista. </string>
     <string name="storage_not_permitted_cancel">Peruuta</string>
