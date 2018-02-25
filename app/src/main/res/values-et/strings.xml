@@ -11,91 +11,91 @@
 
     <!-- Menu -->
     <string name="action_albums">Albumid</string>
-    <string name="action_flip">Flip</string>
-    <string name="action_login">Login</string>
-    <string name="action_register">Register</string>
-    <string name="action_logout">Logout</string>
+    <string name="action_flip">Peegelpilti</string>
+    <string name="action_login">Logi sisse</string>
+    <string name="action_register">Registreeri</string>
+    <string name="action_logout">Logi välja</string>
     <string name="action_profile">Profiil</string>
     <string name="action_refresh">Värskenda</string>
     <string name="action_settings">Seaded</string>
 
     <!-- Nearest -->
-    <string name="nearest_title">Photos nearby</string>
+    <string name="nearest_title">Lähimad pildid</string>
 
     <!-- Albums -->
-    <string name="albums_label_no_data">No Albums</string>
-    <string name="albums_title">Albums</string>
+    <string name="albums_label_no_data">Albumeid pole</string>
+    <string name="albums_title">Albumid</string>
 
     <!-- Album -->
     <string name="album_title">Album</string>
 
     <!-- Nearest -->
-    <string name="nearest_dialog_error_location_disabled_title">Location Disabled</string>
-    <string name="nearest_dialog_error_location_disabled_message">Unable to get the current location. Would you like to enable it?</string>
-    <string name="nearest_dialog_error_location_disabled_close">Close</string>
-    <string name="nearest_dialog_error_location_disabled_open">Open Settings</string>
-    <string name="nearest_label_no_data">No photos nearby</string>
-    <string name="nearest_label_no_data_button">See albums to browse all images</string>
+    <string name="nearest_dialog_error_location_disabled_title">Asukoha tuvastamine keelatud</string>
+    <string name="nearest_dialog_error_location_disabled_message">Asukohta ei ole võimalik tuvastada. Kas tahate seda lubada?</string>
+    <string name="nearest_dialog_error_location_disabled_close">Sulge</string>
+    <string name="nearest_dialog_error_location_disabled_open">Ava seaded</string>
+    <string name="nearest_label_no_data">Lähedal pilte ei leidu</string>
+    <string name="nearest_label_no_data_button">Vaadake albumeid, et näha kõiki pilte</string>
 
     <!-- Photo -->
-    <string name="photo_title">Photo Details</string>
+    <string name="photo_title">Pildi info</string>
 
     <!-- Camera -->
-    <string name="camera_title">Camera</string>
+    <string name="camera_title">Kaamera</string>
 
     <!-- Profile -->
-    <string name="profile_title">Profile</string>
-    <string name="profile_facebook_login">Sign in with Facebook</string>
-    <string name="profile_google_login">Sign in with Google</string>
-    <string name="profile_logout">Logout</string>
-    <string name="profile_login">Sign in</string>
-    <string name="profile_register">Create account</string>
+    <string name="profile_title">Profiil</string>
+    <string name="profile_facebook_login">Logi sisse Facebookiga</string>
+    <string name="profile_google_login">Logi sisse Google'iga</string>
+    <string name="profile_logout">Logi välja</string>
+    <string name="profile_login">Logi sisse</string>
+    <string name="profile_register">Loo konto</string>
     <string name="input_username_hint">Email</string>
-    <string name="input_password_hint">Password</string>
-    <string name="input_firstname_hint">First name</string>
-    <string name="input_lastname_hint">Last name</string>
+    <string name="input_password_hint">Salasõna</string>
+    <string name="input_firstname_hint">Eesnimi</string>
+    <string name="input_lastname_hint">Perekonnanimi</string>
     <plurals name="profile_rephotos">
-        <item quantity="zero">You haven\'t made any rephotos yet</item>
-        <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
-        <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
+        <item quantity="zero">Sa ei ole veel refotosid teinud</item>
+        <item quantity="one">&lt;b>1&lt;/b> refoto</item>
+        <item quantity="other">&lt;b>%1$d&lt;/b> refotot</item>
     </plurals>
 
     <!-- Login -->
-    <string name="login_title">Login</string>
+    <string name="login_title">Logi sisse</string>
     <string name="login_failed">Sisselogimine ebaõnnestus</string>
-    <string name="wrong_password">Vale parool!</string>
+    <string name="wrong_password">Vale salasõna!</string>
 
     <!-- Registration -->
-    <string name="registration_title">Register</string>
-    <string name="user_already_exists">Username already exists</string>
+    <string name="registration_title">Registreeri konto</string>
+    <string name="user_already_exists">Kasutajanimi juba kasutusel</string>
 
     <!-- Upload -->
-    <string name="upload_title">Confirm Rephoto</string>
-    <string name="upload_dialog_error_connection_title">Connection Error</string>
-    <string name="upload_dialog_error_connection_message">Unable to upload the photo. Try again?</string>
-    <string name="upload_dialog_error_connection_retry">Retry</string>
+    <string name="upload_title">Kinnita ülepildistus</string>
+    <string name="upload_dialog_error_connection_title">Ühenduse viga</string>
+    <string name="upload_dialog_error_connection_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+    <string name="upload_dialog_error_connection_retry">Uuesti</string>
     <string name="upload_dialog_error_connection_ok">OK</string>
-    <string name="upload_dialog_error_unknown_title">Unknown Error</string>
-    <string name="upload_dialog_error_unknown_message">Unable to upload the photo. Try again?</string>
-    <string name="upload_dialog_error_unknown_retry">Retry</string>
-    <string name="upload_dialog_error_unknown_ok">Cancel</string>
-    <string name="upload_dialog_process_title">Uploading the photo</string>
-    <string name="upload_dialog_process_message">Please wait&#8230;</string>
-    <string name="upload_dialog_success_title">Upload Successful</string>
-    <string name="upload_dialog_success_message">The photo was uploaded successfully!</string>
+    <string name="upload_dialog_error_unknown_title">Tundmatu viga</string>
+    <string name="upload_dialog_error_unknown_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+    <string name="upload_dialog_error_unknown_retry">Uuesti</string>
+    <string name="upload_dialog_error_unknown_ok">Tühista</string>
+    <string name="upload_dialog_process_title">Pildi laadimine</string>
+    <string name="upload_dialog_process_message">Palun oota&#8230;</string>
+    <string name="upload_dialog_success_title">Üleslaadimine õnnestus</string>
+    <string name="upload_dialog_success_message">Pildi üles laadimine läks korda!</string>
     <string name="upload_dialog_success_ok">OK</string>
-    <string name="upload_dialog_not_authenticated_title">Must be logged in to upload</string>
-    <string name="upload_dialog_not_authenticated_message">Redirect to profile page</string>
+    <string name="upload_dialog_not_authenticated_title">Pildi üles laadimiseks peab olema sisse loginud</string>
+    <string name="upload_dialog_not_authenticated_message">Ümbersuunamine profiili lehele</string>
     <string name="upload_dialog_not_authenticated_ok">OK</string>
-    <string name="upload_dialog_not_agreed_to_terms">I agree to publishing rephotographs under the CC BY 4.0 licence.</string>
-    <string name="upload_dialog_agree_to_terms">Yes!</string>
-    <string name="upload_dialog_decline_terms">No</string>
+    <string name="upload_dialog_not_agreed_to_terms">Nõustun ülepildistuste avaldamisega CC BY 4.0 litsentsi all.</string>
+    <string name="upload_dialog_agree_to_terms">Jah!</string>
+    <string name="upload_dialog_decline_terms">Ei</string>
 
     <!-- ACRA -->
     <string name="acra_dialog_title">Sift.pics has crashed</string>
-    <string name="acra_dialog_text">An unexpected error occurred forcing the application to stop. Please help us fix this by sending us error data, all you have to do is click OK.</string>
-    <string name="acra_dialog_comment_prompt">You might add your comments about the problem below:</string>
-    <string name="acra_dialog_ok_toast">Thank you!</string>
+    <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama 'OK'.</string>
+    <string name="acra_dialog_comment_prompt">Saate allpool lisada omapoolseid selgitusi:</string>
+    <string name="acra_dialog_ok_toast">Aitäh!</string>
 
     <!-- Facebook -->
     <string name="facebook_app_id">201052296573134</string>
@@ -106,27 +106,27 @@
     <string name="contact">Kontakt</string>
     <string name="privacy_policy">Privaatsus</string>
 
-    <string name="navigation_drawer_open">Open drawer</string>
-    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="navigation_drawer_open">Ava menüü</string>
+    <string name="navigation_drawer_close">Sulge menüü</string>
 
     <!-- Settings -->
-    <string name="settings_show_tutorial">Show tutorial in rephoto mode</string>
-    <string name="settings_agree_to_license_terms">I agree to publishing rephotographs on Ajapaik.ee under CC BY 4.0 licence.</string>
+    <string name="settings_show_tutorial">Näita pildistamisvaates juhendit</string>
+    <string name="settings_agree_to_license_terms">Nõustun ülepildistuste avaldamisega Ajapaik.ee lehel CC BY 4.0 litsentsi all.</string>
 
     <!-- Tutorial -->
-    <string name="tutorial_hide_show_flip">Tap to hide/show image.\nUse flip icon in upper right corner to flip old image.</string>
-    <string name="tutorial_opacity_zoom">Slide to adjust transparency of old image.\nPinch zoom to zoom old image.</string>
-    <string name="tutorial_take_picture">Press shutter button or long tap anywhere on screen to take the rephoto.</string>
-    <string name="tutorial_dismiss">Got it!</string>
+    <string name="tutorial_hide_show_flip">Puuduta ekraani, et peita/näidata pilti.\nKasuta nuppu üleval paremal nurgas, et keerata vana pilt peegelpilti.</string>
+    <string name="tutorial_opacity_zoom">Vea sõrmega mööda ekraani, et muuta vana pildi läbipaistvust.\nKahe sõrmega saad vana pilti zoomida.</string>
+    <string name="tutorial_take_picture">Vajuta katiku nupule või pikalt ükskõik kuhu ekraanile, et teha ülepildistus.</string>
+    <string name="tutorial_dismiss">Selge!</string>
 
-    <string name="tutorial_dialog_show_again_title">Show tutorial again?</string>
-    <string name="tutorial_dialog_show_again_message">You can turn tutorial on again from settings later</string>
-    <string name="tutorial_dialog_show_again_no">No</string>
-    <string name="tutorial_dialog_show_again_yes">Yes</string>
+    <string name="tutorial_dialog_show_again_title">Näita taas juhendit?</string>
+    <string name="tutorial_dialog_show_again_message">Juhendi saab seadete all hiljem uuesti sisse lülitada</string>
+    <string name="tutorial_dialog_show_again_no">Ei</string>
+    <string name="tutorial_dialog_show_again_yes">Jah</string>
 
     <!-- Rephotos -->
-    <string name="rephoto_drafts">Ülepildistused seadmes</string>
-    <string name="no_rephotos">Ülepildistused puuduvad</string>
+    <string name="rephoto_drafts">Ülepildistuste mustandid</string>
+    <string name="no_rephotos">Ülepildistusi pole</string>
     <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
     <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
     <string name="storage_not_permitted_cancel">Loobu</string>
