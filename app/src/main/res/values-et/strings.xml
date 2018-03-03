@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Global -->
-    <string name="app_name">Ajapaik rephoto</string>
+    <string name="app_name">Ajapaik – enne ja nüüd</string>
     <string name="none"></string>
     <string name="unit_km">km</string>
     <string name="unit_m">m</string>
@@ -92,7 +92,7 @@
     <string name="upload_dialog_decline_terms">Ei</string>
 
     <!-- ACRA -->
-    <string name="acra_dialog_title">Sift.pics has crashed</string>
+    <string name="acra_dialog_title">Ajapaik – enne ja nüüd jooksis kokku</string>
     <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama 'OK'.</string>
     <string name="acra_dialog_comment_prompt">Saate allpool lisada omapoolseid selgitusi:</string>
     <string name="acra_dialog_ok_toast">Aitäh!</string>
