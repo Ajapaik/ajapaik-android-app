@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Global -->
-    <string name="app_name">Ajapaik rephoto</string>
+    <string name="app_name">Ajapaik – Ennen ja nyt</string>
     <string name="none"></string>
     <string name="unit_km">km</string>
     <string name="unit_m">m</string>
@@ -93,7 +93,7 @@
     <string name="upload_dialog_decline_terms">Ei</string>
 
     <!-- ACRA -->
-    <string name="acra_dialog_title">Sift.pics on kaatunut</string>
+    <string name="acra_dialog_title">'Ajapaik – Ennen ja nyt' on kaatunut</string>
     <string name="acra_dialog_text">Odottamaton virhe aiheutti ohjelman toiminnan keskeytymisen. Pyydämme sinua auttamaan virheen korjaamisessa lähettämälle meille virheeseen liittyvät tiedot. Saat tehtyä tämän klikkaamalla OK.</string>
     <string name="acra_dialog_comment_prompt">Lisää omat huomiosi virheestä:</string>
     <string name="acra_dialog_ok_toast">Kiitos!</string>
