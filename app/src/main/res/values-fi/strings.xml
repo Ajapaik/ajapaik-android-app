@@ -1,0 +1,150 @@
+<!--Default language is English-->
+<resources>
+
+    <!-- Global -->
+    <string name="app_name">Ajapaik rephoto</string>
+    <string name="none"></string>
+    <string name="unit_km">km</string>
+    <string name="unit_m">m</string>
+    <string name="processing_image">Käsitellään kuvaa</string>
+    <string name="please_wait">Odota …</string>
+    <string name="something_went_wrong">Jotain meni vikaan</string>
+
+    <!-- Menu -->
+    <string name="action_albums">Albumit</string>
+    <string name="action_flip">Käännä</string>
+    <string name="action_login">Kirjaudu sisään</string>
+    <string name="action_register">Luo tunnus</string>
+    <string name="action_logout">Kirjaudu ulos</string>
+    <string name="action_profile">Profiili</string>
+    <string name="action_refresh">Päivitä tiedot</string>
+    <string name="action_settings">Asetukset</string>
+
+    <!-- Nearest -->
+    <string name="nearest_title">Lähistöllä</string>
+
+    <!-- Albums -->
+    <string name="albums_label_no_data">Ei albumeita</string>
+    <string name="albums_title">Albumit</string>
+
+    <!-- Album -->
+    <string name="album_title">Albumi</string>
+
+    <!-- Nearest -->
+    <string name="nearest_dialog_error_location_disabled_title">Sijainti ei käytössä</string>
+    <string name="nearest_dialog_error_location_disabled_message">Sijaintipalvelut eivät ole käytössä. Haluatko kytkeä ne käyttöön?</string>
+    <string name="nearest_dialog_error_location_disabled_close">Sulje</string>
+    <string name="nearest_dialog_error_location_disabled_open">Avaa asetukset</string>
+    <string name="nearest_label_no_data">Lähistöltä ei ole kuvia</string>
+    <string name="nearest_label_no_data_button">Selaa albumeissa olevia kuvia</string>
+
+    <!-- Photo -->
+    <string name="photo_title">Kuvan tiedot</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Kamera</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profiili</string>
+    <string name="profile_facebook_login">Kirjaudu Facebookilla</string>
+    <string name="profile_google_login">Kirjaudu Googlella</string>
+    <string name="profile_logout">Kirjaudu ulos</string>
+    <string name="profile_login">Kirjaudu sisään</string>
+    <string name="profile_register">Luo tunnus</string>
+    <string name="input_username_hint">Sähköposti</string>
+    <string name="input_password_hint">Salasana</string>
+    <string name="input_firstname_hint">Etunimi</string>
+    <string name="input_lastname_hint">Sukunimi</string>
+    <plurals name="profile_rephotos">
+        <item quantity="zero">Et ole uudelleenkuvannut yhtään kuvaa vielä</item>
+        <item quantity="one"><b>1</b> uudelleenkuvattu valokuva</item>
+        <item quantity="other"><b>%1$d</b> uudelleenkuvattua valokuvaa</item>
+    </plurals>
+
+    <!-- Login -->
+    <string name="login_title">Kirjautuminen</string><!-- TARKASTA KONTEKSTI -->
+    <string name="login_failed">Kirjautuminen epäonnistui</string>
+    <string name="wrong_password">Virheellinen salasana!</string>
+
+    <!-- Registration -->
+    <string name="registration_title">Luo tunnus</string>
+    <string name="user_already_exists">Pyydetty käyttäjänimi on jo olemassa</string>
+
+    <!-- Upload -->
+    <string name="upload_title">Hyväksy kuva</string>
+    <string name="upload_dialog_error_connection_title">Yhteysvirhe</string>
+    <string name="upload_dialog_error_connection_message">Virhe kuvan latauksessa. Yritä uudestaan?</string>
+    <string name="upload_dialog_error_connection_retry">Yritä uudestaan</string>
+    <string name="upload_dialog_error_connection_ok">OK</string>
+    <string name="upload_dialog_error_unknown_title">Tapahtui tuntematon virhe</string>
+    <string name="upload_dialog_error_unknown_message">Virhe kuvan latauksessa. Yritä uudestaan?</string>
+    <string name="upload_dialog_error_unknown_retry">Yritä uudestaan</string>
+    <string name="upload_dialog_error_unknown_ok">Peruuta</string>
+    <string name="upload_dialog_process_title">Lähetetään kuvaa</string>
+    <string name="upload_dialog_process_message">Odota…</string>
+    <string name="upload_dialog_success_title">Lähetys onnistui</string>
+    <string name="upload_dialog_success_message">Kuvan lähetys onnistui</string>
+    <string name="upload_dialog_success_ok">OK</string>
+    <string name="upload_dialog_not_authenticated_title">Sinun pitää olla sisäänkirjautunut tallettaaksesi kuvia</string>
+    <string name="upload_dialog_not_authenticated_message">Siirry profiilisivulle</string>
+    <string name="upload_dialog_not_authenticated_ok">OK</string>
+    <string name="upload_dialog_not_agreed_to_terms">Hyväksyn valokuvieni julkaisemisen CC BY 4.0 -lisenssillä.</string>
+    <string name="upload_dialog_agree_to_terms">Kyllä!</string>
+    <string name="upload_dialog_decline_terms">Ei</string>
+
+    <!-- ACRA -->
+    <string name="acra_dialog_title">Sift.pics on kaatunut</string>
+    <string name="acra_dialog_text">Odottamaton virhe aiheutti ohjelman toiminnan keskeytymisen. Pyydämme sinua auttamaan virheen korjaamisessa lähettämälle meille virheeseen liittyvät tiedot. Saat tehtyä tämän klikkaamalla OK.</string>
+    <string name="acra_dialog_comment_prompt">Lisää omat huomiosi virheestä:</string>
+    <string name="acra_dialog_ok_toast">Kiitos!</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">201052296573134</string>
+
+    <!-- About -->
+    <string name="about_title">Tietoja</string>
+    <string name="version">Versio</string>
+    <string name="contact">Yhteystiedot</string>
+    <string name="privacy_policy">Tietosuojakäytäntö</string>
+
+    <string name="navigation_drawer_open">Avaa</string>
+    <string name="navigation_drawer_close">Sulje</string>
+
+    <!-- Settings -->
+    <string name="settings_show_tutorial">Näytä opastus uudelleenkuvaustilassa</string>
+    <string name="settings_agree_to_license_terms">Hyväksyn valokuvieni julkaisemisen Ajapaik.ee:ssä CC BY 4.0 -lisenssillä.</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_hide_show_flip">Vanhan kuvan saa pois näkyviltä ja takaisin klikkaamalla ruutua.\nKuvan saa peilikuvaksi oikean ylänurkan käännä-kuvakkeella.</string>
+    <string name="tutorial_opacity_zoom">Sormen liuttaminen kuvan päällä säätää kuvan läpinäkyvyyttä.\nKahdella sormella nipistäminen lähentää tai loitontaa kuvaa.</string>
+    <string name="tutorial_take_picture">Laukaisimen painaminen tai pitkä klikkaus ottaa valokuvan.</string>
+    <string name="tutorial_dismiss">Selvä!</string>
+
+    <string name="tutorial_dialog_show_again_title">Näytä opastus uudestaan?</string>
+    <string name="tutorial_dialog_show_again_message">Voit valita opastuksen näytettäväksi asetuksista</string>
+    <string name="tutorial_dialog_show_again_no">Ei</string>
+    <string name="tutorial_dialog_show_again_yes">Kyllä</string>
+
+    <!-- Rephotos -->
+    <string name="rephoto_drafts">Luonnokset</string>
+    <string name="no_rephotos">Ei uudelleenkuvattuja valokuvia</string>
+    <string name="storage_not_permitted_title">Tallennus ei sallittu</string>
+    <string name="storage_not_permitted_message">Et voi käyttää kaikkia sovelluksen toimintoja, koska et ole sallinut sovelluksen käyttää tallennustilaa. Et voi esimerkiksi ladata kuvia verkkoon. Harkitse käyttöoikeuden antamista. </string>
+    <string name="storage_not_permitted_cancel">Peruuta</string>
+    <string name="storage_not_permitted_open_settings">Avaa asetukset</string>
+    <string name="my_rephotos">Omat valokuvat</string>
+    <string name="rephotos_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi valokuvasi</string>
+
+    <string name="action_search">Search</string>
+
+    <!-- Favorites -->
+    <string name="favorites">Omat suosikkini</string>
+    <string name="no_favorites">Ei suosikkeja</string>
+    <string name="action_favorite">Suosikki</string>
+    <string name="favorites_label_not_logged_in_button">Kirjaudu sisään</string>
+    <string name="favorites_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi suosikkisi</string>
+
+    <string name="no_search_result">Ei hakuosumia</string>
+    <string name="album_no_data">Ei kuvia</string>
+
+</resources>

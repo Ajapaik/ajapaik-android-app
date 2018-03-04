@@ -26,7 +26,7 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textCapWords"
             android:ems="10"
             android:id="@+id/input_firstname"
             android:layout_below="@+id/input_password"
@@ -37,7 +37,7 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textCapWords"
             android:ems="10"
             android:id="@+id/input_lastname"
             android:layout_below="@+id/input_firstname"
