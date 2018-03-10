@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Parcelable;
 import android.util.Log;
 
+import com.crashlytics.android.Crashlytics;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -33,6 +35,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FilterOutputStream;
@@ -48,6 +51,7 @@ import java.util.Map;
 import java.util.zip.GZIPInputStream;
 
 import ee.ajapaik.android.BuildConfig;
+import ee.ajapaik.android.exception.ApiException;
 
 public abstract class WebOperation {
     private static final String TAG = "WebOperation";
@@ -286,10 +290,19 @@ public abstract class WebOperation {
                     encoding = entity.getContentEncoding();
                 }
 
-                onResponse(
-                        response.getStatusLine().getStatusCode(),
-                        (encoding != null && CONTENT_ENCODING_GZIP.equals(encoding.getValue())) ?
-                                new GZIPInputStream(entity.getContent()) : entity.getContent());
+                try {
+                    onResponse(
+                            response.getStatusLine().getStatusCode(),
+                            (encoding != null && CONTENT_ENCODING_GZIP.equals(encoding.getValue())) ?
+                                    new GZIPInputStream(entity.getContent()) : entity.getContent());
+                } catch (ApiException e) {
+                    Crashlytics.log(e.toString());
+                    Crashlytics.setString("URL", url);
+                    if ( m_parameters != null && !m_parameters.isEmpty()) {
+                        Crashlytics.setString("params", new JSONObject(m_parameters).toString());
+                    }
+                    Crashlytics.logException(e);
+                }
 
                 return true;
             }
@@ -328,7 +341,7 @@ public abstract class WebOperation {
     }
 
     protected void onFailure() { }
-    protected abstract void onResponse(int statusCode, InputStream stream);
+    protected abstract void onResponse(int statusCode, InputStream stream) throws ApiException;
 
     public interface ProgressListener {
         public void onProgress(long progress);
