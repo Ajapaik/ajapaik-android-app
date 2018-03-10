@@ -67,6 +67,8 @@ public class AlbumFragment extends PhotosFragment {
 
         if (!isNearestFragment()) {
             refresh();
+        } else {
+            getSwipeRefreshLayout().setRefreshing(false);
         }
     }
 
