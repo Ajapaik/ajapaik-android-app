@@ -297,6 +297,10 @@ public class PhotoFragment extends ImageFragment {
         return super.onOptionsItemSelected(item);
     }
 
+    public boolean isFavorited() {
+        return m_favorited;
+    }
+
     private void sendFavoriteUpdate(final MenuItem item) {
         getSwipeRefreshLayout().setRefreshing(true);
         WebAction<Photo> action = Photo.createFavoritingAction(getActivity(), m_photo.getIdentifier(), m_favorited);

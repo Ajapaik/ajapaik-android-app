@@ -1,6 +1,8 @@
 package ee.ajapaik.android.fragment;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,12 +22,15 @@ import ee.ajapaik.android.widget.StaggeredGridView;
 import static android.view.View.GONE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
+import static ee.ajapaik.android.PhotoActivity.IS_FAVORITED_KEY;
+import static ee.ajapaik.android.PhotoActivity.PHOTO_IDENTIFIER_KEY;
 
 public class AlbumFragment extends PhotosFragment {
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
 
     private static final String KEY_ALBUM = "album";
     private static final String KEY_LAYOUT = "layout";
+    private int PHOTO_ACTIVITY_REQUEST_CODE = 1001;
 
     public void invalidate() {
         getSwipeRefreshLayout().setRefreshing(true);
@@ -118,7 +123,7 @@ public class AlbumFragment extends PhotosFragment {
                     @Override
                     public void onSelect(Photo photo) {
                         getSwipeRefreshLayout().setRefreshing(false);
-                        PhotoActivity.start(getActivity(), photo, m_album);
+                        startActivityForResult(PhotoActivity.getStartIntent(getActivity(), photo, m_album), PHOTO_ACTIVITY_REQUEST_CODE);
                     }
                 });
             } else {
@@ -146,6 +151,23 @@ public class AlbumFragment extends PhotosFragment {
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
         performAction(context, action);
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PHOTO_ACTIVITY_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                String photoIdentifier = data.getStringExtra(PHOTO_IDENTIFIER_KEY);
+                if (photoIdentifier != null) {
+                    boolean isFavorited = data.getBooleanExtra(IS_FAVORITED_KEY, false);
+                    Photo photo = getAlbum().getPhoto(photoIdentifier);
+                    if (photo.isFavorited() != isFavorited) {
+                        photo.setFavorited(isFavorited);
+                        getGridView().getAdapter().notifyDataSetChanged();
+                    }
+                }
+            }
+        }
     }
 
     @Override

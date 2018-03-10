@@ -216,6 +216,10 @@ public class Photo extends PhotoModel {
         return m_favorited;
     }
 
+    public void setFavorited(boolean favorited) {
+        this.m_favorited = favorited;
+    }
+
     public boolean isLandscape() {
         return m_width > m_height;
     }

@@ -1,5 +1,6 @@
 package ee.ajapaik.android;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
@@ -13,6 +14,9 @@ import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
 
 public class PhotoActivity extends WebActivity {
+    public static final String IS_FAVORITED_KEY = "isFavorited";
+    public static final String PHOTO_IDENTIFIER_KEY = "photoIdentifier";
+
     private static final String EXTRA_ALBUM = "album";
     private static final String EXTRA_PHOTO = "photo";
 
@@ -62,6 +66,15 @@ public class PhotoActivity extends WebActivity {
             }
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra(IS_FAVORITED_KEY, getFragment().isFavorited());
+        intent.putExtra(PHOTO_IDENTIFIER_KEY, getFragment().getPhoto().getIdentifier());
+        setResult(Activity.RESULT_OK, intent);
+        super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
