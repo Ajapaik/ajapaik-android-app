@@ -11,6 +11,7 @@ import java.util.Map;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.adapter.DraftAdapter;
+import ee.ajapaik.android.adapter.DraftAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.PhotoDraftsDTO;

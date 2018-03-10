@@ -1,6 +1,8 @@
 package ee.ajapaik.android.fragment;
 
 import android.content.Context;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 
@@ -69,5 +71,10 @@ public class RephotosFragment extends AlbumFragment {
 
     private Button getNotLoggedInButton() {
         return (Button) getView().findViewById(R.id.favorites_not_logged_in_action);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        TODO Remove this method to enable searching from my rephotos
     }
 }
