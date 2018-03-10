@@ -69,13 +69,14 @@ public class Album extends Model {
     public static WebAction<Album> createStateAction(Context context, Album album) {
         Map<String, String> parameters = new Hashtable<String, String>();
 
-        parameters.put("id", album.getIdentifier());
+        String albumId = getAlbumId(album);
+        parameters.put("id", albumId);
 
         if(album.getState() != null) {
             parameters.put("state", album.getState());
         }
 
-        return new Action(context, API_STATE_PATH, parameters, album, album.getIdentifier());
+        return new Action(context, API_STATE_PATH, parameters, album, albumId);
     }
 
     public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
@@ -99,10 +100,11 @@ public class Album extends Model {
     public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
         if (album == null) return createSearchAction(context, query);
 
-        String baseIdentifier = album.getIdentifier() + "|" + query.replaceAll(" ", "-");
+        String albumId = getAlbumId(album);
 
+        String baseIdentifier = albumId + "|" + query.replaceAll(" ", "-");
         Map<String, String> parameters = new Hashtable<String, String>();
-        parameters.put("albumId", album.getIdentifier());
+        parameters.put("albumId", albumId);
         parameters.put("query", query);
 
         return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
@@ -132,6 +134,14 @@ public class Album extends Model {
         }
 
         return album;
+    }
+
+    private static String getAlbumId(Album album) {
+        String albumId = album.getIdentifier();
+        if (albumId.contains("|")) {
+            albumId = albumId.split("\\|")[0];
+        }
+        return albumId;
     }
 
     private static Map<String, String> createLocationParameters(Location location) {
