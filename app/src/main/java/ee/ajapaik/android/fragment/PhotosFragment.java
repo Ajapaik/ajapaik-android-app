@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.PhotoAdapter;
@@ -59,7 +58,7 @@ public abstract class PhotosFragment extends SearchFragment {
                     if (album != null) {
                         setAlbum(album);
                     } else if (m_album == null) {
-                        Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                        showRequestErrorToast();
                     }
                     handleLoadingFinished();
                 }

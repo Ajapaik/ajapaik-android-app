@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.AlbumAdapter;
@@ -116,7 +115,7 @@ public class AlbumsFragment extends SearchFragment {
                 if(feed != null) {
                     setFeed(feed);
                 } else if(m_feed == null) {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    showRequestErrorToast();
                 }
                 handleLoadingFinished();
             }

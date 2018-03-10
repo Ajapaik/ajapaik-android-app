@@ -9,15 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ee.ajapaik.android.LoginActivity;
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.RegistrationActivity;
 import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Profile;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.Authorization;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
@@ -172,7 +171,7 @@ public class ProfileFragment extends WebFragment {
 
                     setProfile(profile);
                 } else if(m_profile == null) {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    showRequestErrorToast();
                 }
                 getSwipeRefreshLayout().setRefreshing(false);
             }

@@ -21,7 +21,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -308,7 +307,7 @@ public class PhotoFragment extends ImageFragment {
                 if (status.isGood()) {
                     item.setIcon(m_favorited ? R.drawable.ic_favorite_white_36dp : R.drawable.ic_favorite_border_white_36dp);
                 } else {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
+                    showRequestErrorToast();
                 }
                 getSwipeRefreshLayout().setRefreshing(false);
             }

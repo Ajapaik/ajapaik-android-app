@@ -3,6 +3,9 @@ package ee.ajapaik.android.fragment.util;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
+import android.widget.Toast;
+
+import ee.ajapaik.android.R;
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.util.WebActivity;
@@ -26,6 +29,10 @@ public abstract class WebFragment extends Fragment {
 
     protected void hideDialog(int dialogId) {
         ((WebActivity)getActivity()).hideDialogFragment(dialogId);
+    }
+
+    protected void showRequestErrorToast() {
+        Toast.makeText(getActivity(), getResources().getString(R.string.something_went_wrong), Toast.LENGTH_LONG).show();
     }
 
     protected void signInWithFacebook() {
