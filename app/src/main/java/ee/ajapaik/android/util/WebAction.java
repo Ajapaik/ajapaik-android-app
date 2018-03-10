@@ -96,12 +96,16 @@ public class WebAction<T> extends WebOperation {
                         } else {
                             m_status = Status.UNKNOWN;
                         }
-                        throw new ApiException(element);
                     } else {
                         m_status = Status.NONE;
                     }
+
+                    if (m_status != Status.NONE) {
+                        throw new ApiException(element);
+                    }
+
                     isParsableObject = isParsableObject(attributes);
-                    if (m_status == Status.NONE && isParsableObject) {
+                    if (isParsableObject) {
                         m_object = parseObject(attributes);
                     }
                 }
