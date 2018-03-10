@@ -94,13 +94,13 @@ public class ProfileFragment extends WebFragment {
         );
 
         setProfile(profile);
-        invalidateLogin();
+        toggleLoginButtons();
     }
 
     public void onAuthorizationChanged() {
         super.onAuthorizationChanged();
 
-        invalidateLogin();
+        toggleLoginButtons();
 
         getSwipeRefreshLayout().setRefreshing(true);
         refresh();
@@ -128,7 +128,6 @@ public class ProfileFragment extends WebFragment {
     public void setProfile(Profile profile) {
         if(!Objects.match(m_profile, profile)) {
             Context context = getActivity();
-            View layout = getMainLayout();
 
             m_profile = profile;
 
@@ -151,9 +150,6 @@ public class ProfileFragment extends WebFragment {
                         getLinkView().setVisibility(GONE);
                     }
                 }
-                layout.setVisibility(VISIBLE);
-            } else {
-                layout.setVisibility(GONE);
             }
         }
     }
@@ -161,6 +157,7 @@ public class ProfileFragment extends WebFragment {
     protected void refresh() {
         Context context = getActivity();
 
+        getMainLayout().setVisibility(GONE);
         getConnection().enqueue(context, Profile.createAction(context, (m_profile != null) ? m_profile : getSettings().getProfile()), new WebAction.ResultHandler<Profile>() {
             @Override
             public void onActionResult(Status status, Profile profile) {
@@ -173,21 +170,19 @@ public class ProfileFragment extends WebFragment {
                 } else if(m_profile == null) {
                     showRequestErrorToast();
                 }
+                toggleLoginButtons();
+                getMainLayout().setVisibility(VISIBLE);
                 getSwipeRefreshLayout().setRefreshing(false);
             }
         });
-    }
-
-    private void invalidateLogin() {
-        Authorization authorization = getSettings().getAuthorization();
-        toggleLoginButtons(isLoggedIn(authorization));
     }
 
     private boolean isLoggedIn(Authorization authorization) {
         return authorization != null && authorization.getType() != Authorization.Type.ANONYMOUS;
     }
 
-    private void toggleLoginButtons(boolean isLoggedIn) {
+    private void toggleLoginButtons() {
+        boolean isLoggedIn = isLoggedIn(getSettings().getAuthorization());
         getLogoutButton().setVisibility(isLoggedIn ? VISIBLE : GONE);
         getFacebookButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
         getGoogleButton().setVisibility(isLoggedIn ? GONE : VISIBLE);
