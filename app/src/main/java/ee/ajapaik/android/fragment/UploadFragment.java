@@ -164,12 +164,16 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         });
 
-        getSaveButton().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                closePreviewAndGoBack();
-            }
-        });
+        if (((UploadActivity)getActivity()).isFromCameraActivity()) {
+            getSaveButton().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    closePreviewAndGoBack();
+                }
+            });
+        } else {
+            getSaveButton().setVisibility(View.INVISIBLE);
+        }
 
         getDeleteButton().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -232,8 +236,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             @Override
             public void onPageSelected(int position) {
                 currentRephoto = adapter.getBitmap(position);
-                boolean shouldShowSaveButton = position == 0 && ((UploadActivity)getActivity()).isFromCameraActivity();
-                getSaveButton().setVisibility(shouldShowSaveButton ? View.VISIBLE : View.INVISIBLE);
             }
 
             @Override

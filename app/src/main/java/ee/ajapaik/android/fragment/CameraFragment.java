@@ -24,7 +24,6 @@ import android.hardware.camera2.CaptureResult;
 import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.ImageReader;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -57,7 +56,6 @@ import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.fragment.util.AutoFitTextureView;
 import ee.ajapaik.android.fragment.util.ImageFragment;
-import ee.ajapaik.android.util.RephotoDraftService;
 import ee.ajapaik.android.util.Settings;
 import ee.ajapaik.android.widget.FixedAspectRatioLayout;
 import ee.ajapaik.android.widget.WebImageView;
@@ -69,6 +67,7 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static ee.ajapaik.android.UploadActivity.CreatedFrom.CAMERA;
+import static java.util.Collections.singletonList;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class CameraFragment extends ImageFragment implements View.OnClickListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -76,7 +75,6 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
      * Conversion from screen rotation to JPEG orientation.
      */
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
-    private RephotoDraftService m_repRephotoDraftService;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -742,8 +740,6 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        m_repRephotoDraftService = new RephotoDraftService();
-
         if (savedInstanceState != null) {
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
             m_opacity = savedInstanceState.getFloat(KEY_OPACITY, DEFAULT_OPACITY);
@@ -887,7 +883,11 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         if (upload.save(data)) {
             settings.setUpload(upload);
-            new UploadPreviewPreparation().execute(m_photo.getIdentifier());
+            UploadActivity.start(getActivity(), singletonList(upload), CAMERA);
+            getActivity().finish();
+            if (progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
         }
     }
 
@@ -911,22 +911,5 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     private Button getCameraButton() {
         return (Button) getView().findViewById(R.id.button_action_camera);
-    }
-
-    private class UploadPreviewPreparation extends AsyncTask<String, Void, List<Upload>> {
-
-        @Override
-        protected List<Upload> doInBackground(String... identifier) {
-            return m_repRephotoDraftService.getAllDraftsFor(identifier[0]);
-        }
-
-        @Override
-        protected void onPostExecute(List<Upload> uploads) {
-            UploadActivity.start(getActivity(), uploads, CAMERA);
-            getActivity().finish();
-            if (progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        }
     }
 }
