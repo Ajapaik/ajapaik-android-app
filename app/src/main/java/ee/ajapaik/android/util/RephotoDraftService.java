@@ -34,10 +34,11 @@ public class RephotoDraftService {
     }
 
     public Map<String, List<Upload>> getAllDrafts(String searchQuery) {
-        File[] images = Upload.getFolder().listFiles();
+        File rephotosFolder = Upload.getFolder();
+        if (!rephotosFolder.exists()) return new HashMap<>();
 
         final Map<String, List<Upload>> uploadsByPhoto = new HashMap<>();
-
+        File[] images = rephotosFolder.listFiles();
         for (File file : images) {
             Upload upload = getUpload(file);
             if (upload == null) continue;
