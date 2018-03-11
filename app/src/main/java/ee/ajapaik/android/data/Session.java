@@ -94,21 +94,16 @@ public class Session extends Model {
     }
 
     public Map<String, String> getWebParameters() {
-        return getWebParameters(null);
-    }
-
-    public Map<String, String> getWebParameters(String language) {
         Map<String, String> parameters = new Hashtable<String, String>();
 
         parameters.put(KEY_WEB_TOKEN, m_token);
         parameters.put(KEY_WEB_USER, m_user);
 
-        if(language == null || language.length() == 0) {
-            Locale locale = Locale.getDefault();
+        Locale locale = Locale.getDefault();
+        String language = null;
 
-            if(locale != null) {
-                language = locale.getLanguage();
-            }
+        if(locale != null) {
+            language = locale.getLanguage();
         }
 
         if(language != null) {
