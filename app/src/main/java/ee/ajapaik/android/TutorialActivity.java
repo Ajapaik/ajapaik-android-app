@@ -98,11 +98,11 @@ public class TutorialActivity extends WebActivity {
     }
 
     private boolean showTutorial() {
-        return getPreferences().getBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, false);
+        return getPreferences().getBoolean(SHOW_TUTORIAL_PREFERENCE_KEY, true);
     }
 
     private boolean showTutorialWithoutAsking() {
-        return getPreferences().getBoolean(SHOW_TUTORIAL_WITHOUT_ASKING_PREFERENCE_KEY, true);
+        return getPreferences().getBoolean(SHOW_TUTORIAL_WITHOUT_ASKING_PREFERENCE_KEY, false);
     }
 
     private SharedPreferences getPreferences() {
