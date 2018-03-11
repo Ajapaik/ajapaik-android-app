@@ -33,6 +33,7 @@ import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.TextureView;
@@ -903,6 +904,17 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                 activity.finish();
             }
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_flip) {
+            m_flippedMode = !m_flippedMode;
+            getImageView().setFlipped(m_flippedMode);
+            item.setIcon(m_flippedMode ? R.drawable.ic_flip_white_36dp_selected : R.drawable.ic_flip_white_36dp);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private FixedAspectRatioLayout getImageLayout() {

@@ -70,17 +70,6 @@ public abstract class ImageFragment extends WebFragment {
         setHasOptionsMenu(true);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_flip) {
-            m_flippedMode = !m_flippedMode;
-            getImageView().setFlipped(m_flippedMode);
-            item.setIcon(m_flippedMode ? R.drawable.ic_flip_white_36dp_selected : R.drawable.ic_flip_white_36dp);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
     protected View getMainLayout() {
         return getView().findViewById(R.id.layout_main);
     }
