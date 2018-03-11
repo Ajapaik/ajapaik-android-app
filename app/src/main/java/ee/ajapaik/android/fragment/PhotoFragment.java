@@ -321,9 +321,7 @@ public class PhotoFragment extends ImageFragment {
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
         int viewWidth = getMainLayout().getWidth();
         int viewHeight = getMainLayout().getHeight();
-        float imageViewDrawableRatio = isFullWidth(imageView) ?
-                (float) viewWidth / imageView.getDrawable().getIntrinsicWidth() :
-                (float) viewHeight / imageView.getDrawable().getIntrinsicHeight();
+        float imageViewDrawableRatio = (float) viewWidth / imageView.getDrawable().getIntrinsicWidth();
 
         avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
         avoidScrollingOutOfViewportOnYAxle(imageView, viewHeight, imageViewDrawableRatio);
