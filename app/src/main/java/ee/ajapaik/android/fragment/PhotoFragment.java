@@ -393,12 +393,6 @@ public class PhotoFragment extends ImageFragment {
         return currentPosition;
     }
 
-    private boolean isFullWidth(WebImageView imageView) {
-        int i = getMainLayout().getWidth() / getMainLayout().getHeight();
-        int j = imageView.getDrawable().getIntrinsicWidth() / imageView.getDrawable().getIntrinsicHeight();
-        return i < j;
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
