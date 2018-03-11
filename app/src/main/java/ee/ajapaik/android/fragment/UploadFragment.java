@@ -146,6 +146,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         }
 
         getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
+        getOldImageView().setFlipped(getUpload().get(0).isFlipped());
         selectFirstDraftToDisplay(pageChangeListener);
 
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
