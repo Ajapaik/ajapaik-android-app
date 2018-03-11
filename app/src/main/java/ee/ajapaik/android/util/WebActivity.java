@@ -127,7 +127,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private void handleLoginFail(Status status) {
         showErrorMessage(status);
         dismissProgressDialog();
-        getSettings().setAuthorization(Authorization.getAnonymous(this));
+        getSettings().setAuthorization(Authorization.getAnonymous());
     }
 
     private void showErrorMessage(Status status) {
@@ -275,7 +275,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
             logoutFromGoogle();
         }
 
-        Authorization anonymous = Authorization.getAnonymous(this);
+        Authorization anonymous = Authorization.getAnonymous();
         getSettings().setAuthorization(anonymous);
 
         getConnection().enqueue(WebActivity.this, Session.createLogoutAction(WebActivity.this), new WebAction.ResultHandler<Session>() {

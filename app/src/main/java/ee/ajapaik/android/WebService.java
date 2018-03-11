@@ -15,7 +15,6 @@ import com.facebook.AccessToken;
 
 import ee.ajapaik.android.data.Session;
 import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.BuildConfig;
 import ee.ajapaik.android.util.*;
 
 import java.lang.ref.WeakReference;
@@ -66,11 +65,15 @@ public class WebService extends Service {
 
     private void runSilentLogin() {
         Authorization authorization = m_settings.getAuthorization();
+        if (authorization == null){
+            setAuthorizationToAnonymous();
+            return;
+        } else if (authorization.isAnonymous()) {
+            return;
+        }
         WebAction<Session> action;
 
-        if(authorization == null) {
-            authorization = setAuthorizationToAnonymous();
-        } else if (FACEBOOK.equals(authorization.getType())) {
+        if (FACEBOOK.equals(authorization.getType())) {
             if (AccessToken.getCurrentAccessToken() == null) {
                 setAuthorizationToAnonymous();
             }
@@ -83,16 +86,12 @@ public class WebService extends Service {
             m_session = action.getObject();
             m_settings.setSession(m_session);
         } else if (action.getStatus() == Status.ACCESS_DENIED) {
-            m_settings.setAuthorization(Authorization.getAnonymous(this));
-            runSilentLogin();
+            setAuthorizationToAnonymous();
         }
     }
 
-    private Authorization setAuthorizationToAnonymous() {
-        Authorization authorization;
-        authorization = Authorization.getAnonymous(WebService.this);
-        m_settings.setAuthorization(authorization);
-        return authorization;
+    private void setAuthorizationToAnonymous() {
+        m_settings.setAuthorization(Authorization.getAnonymous());
     }
 
     private void runOperation(final Task task, final WebOperation operation) {

@@ -43,10 +43,8 @@ public class Authorization {
         return androidId;
     }
 
-    public static Authorization getAnonymous(Context context) {
-        String password = SHA256.encode(getUniqueIdentifier(context));
-
-        return new Authorization(ANONYMOUS, SHA1.encode(password), password);
+    public static Authorization getAnonymous() {
+        return new Authorization(ANONYMOUS, null, null);
     }
 
     public static Authorization parse(String str) {
