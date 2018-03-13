@@ -58,7 +58,11 @@ public class AlbumsFragment extends SearchFragment {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        refresh();
+                        if (isSearchResultVisible()) {
+                            search();
+                        } else {
+                            refresh();
+                        }
                     }
                 }
         );
