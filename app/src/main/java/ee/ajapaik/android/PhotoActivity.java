@@ -106,22 +106,6 @@ public class PhotoActivity extends WebActivity {
         super.onStop();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_photo, menu);
-        setFavoritedIcon(menu);
-        return true;
-    }
-
-    private void setFavoritedIcon(Menu menu) {
-        Photo photo = getIntent().getParcelableExtra(EXTRA_PHOTO);
-        menu.findItem(R.id.action_favorite).setIcon(
-                photo.isFavorited()
-                ? R.drawable.ic_favorite_white_36dp
-                : R.drawable.ic_favorite_border_white_36dp
-        );
-    }
-
     protected PhotoFragment getFragment() {
         return (PhotoFragment)getSupportFragmentManager().findFragmentByTag(TAG_FRAGMENT);
     }

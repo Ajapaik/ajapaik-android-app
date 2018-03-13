@@ -13,6 +13,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -255,6 +257,34 @@ public class PhotoFragment extends ImageFragment {
         });
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_photo, menu);
+        setFlipIcon(menu.findItem(R.id.action_flip));
+        if (m_rephotoViewMode) {
+            menu.findItem(R.id.action_favorite).setVisible(false);
+        } else {
+            menu.findItem(R.id.action_favorite).setVisible(true);
+            setFavoritedIcon(menu.findItem(R.id.action_favorite));
+        }
+    }
+
+    private void setFlipIcon(MenuItem item) {
+        item.setIcon(
+                m_flippedMode
+                        ? R.drawable.ic_flip_white_36dp_selected
+                        : R.drawable.ic_flip_white_36dp
+        );
+    }
+
+    private void setFavoritedIcon(MenuItem item) {
+        item.setIcon(
+                m_photo.isFavorited()
+                        ? R.drawable.ic_favorite_white_36dp
+                        : R.drawable.ic_favorite_border_white_36dp
+        );
+    }
+
     private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
         getViewPager().post(new Runnable() {
             @Override
@@ -292,6 +322,12 @@ public class PhotoFragment extends ImageFragment {
         if (item.getItemId() == R.id.action_favorite) {
             m_favorited = !m_favorited;
             sendFavoriteUpdate(item);
+            return true;
+        } else if (item.getItemId() == R.id.action_flip) {
+            m_flippedMode = !m_flippedMode;
+            getImageView().setFlipped(m_flippedMode);
+            getRephotoViewOriginalImageView().setFlipped(m_flippedMode);
+            setFlipIcon(item);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -355,12 +391,6 @@ public class PhotoFragment extends ImageFragment {
             return negativeEdge;
         }
         return currentPosition;
-    }
-
-    private boolean isFullWidth(WebImageView imageView) {
-        int i = getMainLayout().getWidth() / getMainLayout().getHeight();
-        int j = imageView.getDrawable().getIntrinsicWidth() / imageView.getDrawable().getIntrinsicHeight();
-        return i < j;
     }
 
     @Override
@@ -458,7 +488,7 @@ public class PhotoFragment extends ImageFragment {
         m_rephotoViewMode = flag;
 
         if(m_rephotoViewMode) {
-            getActionBar().hide();
+            getActionBar().setDisplayHomeAsUpEnabled(false);
             getImageView().setVisibility(INVISIBLE);
             getInfoLayout().setVisibility(INVISIBLE);
             getOverlayLayout().setVisibility(INVISIBLE);
@@ -472,7 +502,7 @@ public class PhotoFragment extends ImageFragment {
             getViewPager().addOnPageChangeListener(pageChangeListener);
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
-            getActionBar().show();
+            getActionBar().setDisplayHomeAsUpEnabled(true);
             getImageView().setVisibility(VISIBLE);
             getInfoLayout().setVisibility(VISIBLE);
             getOverlayLayout().setVisibility(VISIBLE);
@@ -480,6 +510,7 @@ public class PhotoFragment extends ImageFragment {
             getOriginalPhotoContainer().setVisibility(INVISIBLE);
             getViewPager().setVisibility(INVISIBLE);
         }
+        getActivity().invalidateOptionsMenu();
     }
 
     public void invalidate(Location location, float[] orientation) {
@@ -622,5 +653,9 @@ public class PhotoFragment extends ImageFragment {
 
     private Button getCloseRephotoButton() {
         return (Button) getView().findViewById(R.id.button_action_close_rephotos);
+    }
+
+    private WebImageView getRephotoViewOriginalImageView() {
+        return (WebImageView) getView().findViewById(R.id.rephotos_original);
     }
 }
