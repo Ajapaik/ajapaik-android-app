@@ -2,7 +2,6 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,20 +36,9 @@ public abstract class PhotosFragment extends SearchFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        getSwipeRefreshLayout().setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        if (isSearchResultVisible()) {
-                            search();
-                        } else {
-                            refresh();
-                        }
-                    }
-                }
-        );
-
         getSwipeRefreshLayout().setRefreshing(true);
+
+        setSwipeRefreshListener();
     }
 
     @Override

@@ -3,7 +3,6 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,18 +53,7 @@ public class AlbumsFragment extends SearchFragment {
             }
         }
 
-        getSwipeRefreshLayout().setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        if (isSearchResultVisible()) {
-                            search();
-                        } else {
-                            refresh();
-                        }
-                    }
-                }
-        );
+        setSwipeRefreshListener();
     }
 
     @Override

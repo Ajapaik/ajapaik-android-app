@@ -70,4 +70,19 @@ public abstract class SearchFragment extends WebFragment {
     public boolean isSearchResultVisible() {
         return m_isSearchResultVisible;
     }
+
+    protected void setSwipeRefreshListener() {
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        if (isSearchResultVisible()) {
+                            search();
+                        } else {
+                            refresh();
+                        }
+                    }
+                }
+        );
+    }
 }
