@@ -286,7 +286,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void selectFirstRephotoToDisplay(final ViewPager.OnPageChangeListener pageChangeListener) {
-        getViewPager().post(new Runnable() {
+        getRephotoViewPager().post(new Runnable() {
             @Override
             public void run() {
                 pageChangeListener.onPageSelected(0);
@@ -294,7 +294,7 @@ public class PhotoFragment extends ImageFragment {
         });
     }
 
-    private ViewPager.OnPageChangeListener createOnPageChangeListener(final ImagePagerAdapter adapter) {
+    private ViewPager.OnPageChangeListener createRephotoOnPageChangeListener(final ImagePagerAdapter adapter) {
         return new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -494,12 +494,12 @@ public class PhotoFragment extends ImageFragment {
             getOverlayLayout().setVisibility(INVISIBLE);
             getRephotoDetailsLayout().setVisibility(VISIBLE);
             getOriginalPhotoContainer().setVisibility(VISIBLE);
-            getViewPager().setVisibility(VISIBLE);
+            getRephotoViewPager().setVisibility(VISIBLE);
             getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
             final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
-            getViewPager().setAdapter(adapter);
-            final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
-            getViewPager().addOnPageChangeListener(pageChangeListener);
+            getRephotoViewPager().setAdapter(adapter);
+            final ViewPager.OnPageChangeListener pageChangeListener = createRephotoOnPageChangeListener(adapter);
+            getRephotoViewPager().addOnPageChangeListener(pageChangeListener);
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -508,7 +508,7 @@ public class PhotoFragment extends ImageFragment {
             getOverlayLayout().setVisibility(VISIBLE);
             getRephotoDetailsLayout().setVisibility(INVISIBLE);
             getOriginalPhotoContainer().setVisibility(INVISIBLE);
-            getViewPager().setVisibility(INVISIBLE);
+            getRephotoViewPager().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
     }
@@ -634,8 +634,8 @@ public class PhotoFragment extends ImageFragment {
         return (WebImageView) getView().findViewById(R.id.rephotos_original);
     }
 
-    protected ViewPager getViewPager() {
-        return (ViewPager) getView().findViewById(R.id.pager);
+    protected ViewPager getRephotoViewPager() {
+        return (ViewPager) getView().findViewById(R.id.rephoto_pager);
     }
 
 
