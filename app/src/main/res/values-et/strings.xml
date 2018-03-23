@@ -1,148 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Global -->
-    <string name="app_name">Ajapaik – enne ja nüüd</string>
-    <string name="none"></string>
-    <string name="unit_km">km</string>
-    <string name="unit_m">m</string>
-    <string name="processing_image">Pildi töötlemine</string>
-    <string name="please_wait">Palun oota…</string>
-    <string name="something_went_wrong">Midagi läks valesti</string>
-
-    <!-- Menu -->
-    <string name="action_albums">Albumid</string>
-    <string name="action_flip">Peegelpilti</string>
-    <string name="action_login">Logi sisse</string>
-    <string name="action_register">Registreeri</string>
-    <string name="action_logout">Logi välja</string>
-    <string name="action_profile">Profiil</string>
-    <string name="action_refresh">Värskenda</string>
-    <string name="action_settings">Seaded</string>
-
-    <!-- Nearest -->
-    <string name="nearest_title">Lähimad pildid</string>
-
-    <!-- Albums -->
-    <string name="albums_label_no_data">Albumeid pole</string>
-    <string name="albums_title">Albumid</string>
-
-    <!-- Album -->
-    <string name="album_title">Album</string>
-
-    <!-- Nearest -->
-    <string name="nearest_dialog_error_location_disabled_title">Asukoha tuvastamine keelatud</string>
-    <string name="nearest_dialog_error_location_disabled_message">Asukohta ei ole võimalik tuvastada. Kas tahate seda lubada?</string>
-    <string name="nearest_dialog_error_location_disabled_close">Sulge</string>
-    <string name="nearest_dialog_error_location_disabled_open">Ava seaded</string>
-    <string name="nearest_label_no_data">Lähedal pilte ei leidu</string>
-    <string name="nearest_label_no_data_button">Vaadake albumeid, et näha kõiki pilte</string>
-
-    <!-- Photo -->
-    <string name="photo_title">Pildi info</string>
-
-    <!-- Camera -->
-    <string name="camera_title">Kaamera</string>
-
-    <!-- Profile -->
-    <string name="profile_title">Profiil</string>
-    <string name="profile_facebook_login">Logi sisse Facebookiga</string>
-    <string name="profile_google_login">Logi sisse Google'iga</string>
-    <string name="profile_logout">Logi välja</string>
-    <string name="profile_login">Logi sisse</string>
-    <string name="profile_register">Loo konto</string>
-    <string name="input_username_hint">Email</string>
-    <string name="input_password_hint">Salasõna</string>
-    <string name="input_firstname_hint">Eesnimi</string>
-    <string name="input_lastname_hint">Perekonnanimi</string>
-    <plurals name="profile_rephotos">
-        <item quantity="zero">Sa ei ole veel refotosid teinud</item>
-        <item quantity="one">&lt;b>1&lt;/b> refoto</item>
-        <item quantity="other">&lt;b>%1$d&lt;/b> refotot</item>
-    </plurals>
-
-    <!-- Login -->
-    <string name="login_title">Logi sisse</string>
-    <string name="login_failed">Sisselogimine ebaõnnestus</string>
-    <string name="wrong_password">Vale salasõna!</string>
-
-    <!-- Registration -->
-    <string name="registration_title">Registreeri konto</string>
-    <string name="user_already_exists">Kasutajanimi juba kasutusel</string>
-
-    <!-- Upload -->
-    <string name="upload_title">Kinnita ülepildistus</string>
-    <string name="upload_dialog_error_connection_title">Ühenduse viga</string>
-    <string name="upload_dialog_error_connection_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
-    <string name="upload_dialog_error_connection_retry">Uuesti</string>
-    <string name="upload_dialog_error_connection_ok">OK</string>
-    <string name="upload_dialog_error_unknown_title">Tundmatu viga</string>
-    <string name="upload_dialog_error_unknown_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
-    <string name="upload_dialog_error_unknown_retry">Uuesti</string>
-    <string name="upload_dialog_error_unknown_ok">Tühista</string>
-    <string name="upload_dialog_process_title">Pildi laadimine</string>
-    <string name="upload_dialog_process_message">Palun oota&#8230;</string>
-    <string name="upload_dialog_success_title">Üleslaadimine õnnestus</string>
-    <string name="upload_dialog_success_message">Pildi üles laadimine läks korda!</string>
-    <string name="upload_dialog_success_ok">OK</string>
-    <string name="upload_dialog_not_authenticated_title">Pildi üles laadimiseks peab olema sisse loginud</string>
-    <string name="upload_dialog_not_authenticated_message">Ümbersuunamine profiili lehele</string>
-    <string name="upload_dialog_not_authenticated_ok">OK</string>
-    <string name="upload_dialog_not_agreed_to_terms">Nõustun ülepildistuste avaldamisega CC BY 4.0 litsentsi all.</string>
-    <string name="upload_dialog_agree_to_terms">Jah!</string>
-    <string name="upload_dialog_decline_terms">Ei</string>
-
-    <!-- ACRA -->
-    <string name="acra_dialog_title">'Ajapaik – enne ja nüüd' jooksis kokku</string>
-    <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama 'OK'.</string>
-    <string name="acra_dialog_comment_prompt">Saate allpool lisada omapoolseid selgitusi:</string>
-    <string name="acra_dialog_ok_toast">Aitäh!</string>
-
-    <!-- Facebook -->
-    <string name="facebook_app_id">201052296573134</string>
-
-    <!-- About -->
-    <string name="about_title">Abi</string>
-    <string name="version">Versioon</string>
-    <string name="contact">Kontakt</string>
-    <string name="privacy_policy">Privaatsus</string>
-
-    <string name="navigation_drawer_open">Ava menüü</string>
-    <string name="navigation_drawer_close">Sulge menüü</string>
-
-    <!-- Settings -->
-    <string name="settings_show_tutorial">Näita pildistamisvaates juhendit</string>
-    <string name="settings_agree_to_license_terms">Nõustun ülepildistuste avaldamisega Ajapaik.ee lehel CC BY 4.0 litsentsi all.</string>
-
-    <!-- Tutorial -->
-    <string name="tutorial_hide_show_flip">Puuduta ekraani, et peita/näidata pilti.\nKasuta nuppu üleval paremal nurgas, et keerata vana pilt peegelpilti.</string>
-    <string name="tutorial_opacity_zoom">Vea sõrmega mööda ekraani, et muuta vana pildi läbipaistvust.\nKahe sõrmega saad vana pilti zoomida.</string>
-    <string name="tutorial_take_picture">Vajuta katiku nupule või pikalt ükskõik kuhu ekraanile, et teha ülepildistus.</string>
-    <string name="tutorial_dismiss">Selge!</string>
-
-    <string name="tutorial_dialog_show_again_title">Näita taas juhendit?</string>
-    <string name="tutorial_dialog_show_again_message">Juhendi saab seadete all hiljem uuesti sisse lülitada</string>
-    <string name="tutorial_dialog_show_again_no">Ei</string>
-    <string name="tutorial_dialog_show_again_yes">Jah</string>
-
-    <!-- Rephotos -->
-    <string name="rephoto_drafts">Ülepildistuste mustandid</string>
-    <string name="no_rephotos">Ülepildistusi pole</string>
-    <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
-    <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
-    <string name="storage_not_permitted_cancel">Loobu</string>
-    <string name="storage_not_permitted_open_settings">Ava seaded</string>
-    <string name="my_rephotos">Minu ülepildistused</string>
-    <string name="rephotos_label_not_logged_in_text">Ülepildistuse nägemiseks palun logi sisse</string>
-
-    <string name="action_search">Otsing</string>
-
-    <!-- Favorites -->
-    <string name="favorites">Minu lemmikud</string>
-    <string name="no_favorites">Lemmikud puuduvad</string>
-    <string name="action_favorite">Lisa lemmikuks</string>
-    <string name="favorites_label_not_logged_in_button">Sisse logima</string>
-    <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
-
-    <string name="no_search_result">Tulemused puuduvad</string>
-    <string name="album_no_data">Pildid puuduvad</string>
+  <string name="app_name">Ajapaik – enne ja nüüd</string>
+  <string name="unit_km">km</string>
+  <string name="unit_m">m</string>
+  <string name="processing_image">Pildi töötlemine</string>
+  <string name="please_wait">Palun oota…</string>
+  <string name="something_went_wrong">Midagi läks valesti</string>
+  <string name="action_albums">Albumid</string>
+  <string name="action_flip">Peegelpilti</string>
+  <string name="action_login">Logi sisse</string>
+  <string name="action_register">Registreeri</string>
+  <string name="action_logout">Logi välja</string>
+  <string name="action_profile">Profiil</string>
+  <string name="action_refresh">Värskenda</string>
+  <string name="action_settings">Seaded</string>
+  <string name="nearest_title">Lähimad pildid</string>
+  <string name="albums_label_no_data">Albumeid pole</string>
+  <string name="albums_title">Albumid</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Asukoha tuvastamine keelatud</string>
+  <string name="nearest_dialog_error_location_disabled_message">Asukohta ei ole võimalik tuvastada. Kas tahate seda lubada?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Sulge</string>
+  <string name="nearest_dialog_error_location_disabled_open">Ava seaded</string>
+  <string name="nearest_label_no_data">Lähedal pilte ei leidu</string>
+  <string name="nearest_label_no_data_button">Vaadake albumeid, et näha kõiki pilte</string>
+  <string name="photo_title">Pildi info</string>
+  <string name="camera_title">Kaamera</string>
+  <string name="profile_title">Profiil</string>
+  <string name="profile_facebook_login">Logi sisse Facebookiga</string>
+  <string name="profile_google_login">Logi sisse Google\'iga</string>
+  <string name="profile_logout">Logi välja</string>
+  <string name="profile_login">Logi sisse</string>
+  <string name="profile_register">Loo konto</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Salasõna</string>
+  <string name="input_firstname_hint">Eesnimi</string>
+  <string name="input_lastname_hint">Perekonnanimi</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Sa ei ole veel refotosid teinud</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotot</item>
+  </plurals>
+  <string name="login_title">Logi sisse</string>
+  <string name="login_failed">Sisselogimine ebaõnnestus</string>
+  <string name="wrong_password">Vale salasõna!</string>
+  <string name="registration_title">Registreeri konto</string>
+  <string name="user_already_exists">Kasutajanimi juba kasutusel</string>
+  <string name="upload_title">Kinnita ülepildistus</string>
+  <string name="upload_dialog_error_connection_title">Ühenduse viga</string>
+  <string name="upload_dialog_error_connection_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+  <string name="upload_dialog_error_connection_retry">Uuesti</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Tundmatu viga</string>
+  <string name="upload_dialog_error_unknown_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+  <string name="upload_dialog_error_unknown_retry">Uuesti</string>
+  <string name="upload_dialog_error_unknown_ok">Tühista</string>
+  <string name="upload_dialog_process_title">Pildi laadimine</string>
+  <string name="upload_dialog_process_message">Palun oota…</string>
+  <string name="upload_dialog_success_title">Üleslaadimine õnnestus</string>
+  <string name="upload_dialog_success_message">Pildi üles laadimine läks korda!</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_title">Pildi üles laadimiseks peab olema sisse loginud</string>
+  <string name="upload_dialog_not_authenticated_message">Ümbersuunamine profiili lehele</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_not_agreed_to_terms">Nõustun ülepildistuste avaldamisega CC BY 4.0 litsentsi all.</string>
+  <string name="upload_dialog_agree_to_terms">Jah!</string>
+  <string name="upload_dialog_decline_terms">Ei</string>
+  <string name="acra_dialog_title">\'Ajapaik – enne ja nüüd\' jooksis kokku</string>
+  <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama \'OK\'.</string>
+  <string name="acra_dialog_comment_prompt">Saate allpool lisada omapoolseid selgitusi:</string>
+  <string name="acra_dialog_ok_toast">Aitäh!</string>
+  <string name="about_title">Abi</string>
+  <string name="version">Versioon</string>
+  <string name="contact">Kontakt</string>
+  <string name="privacy_policy">Privaatsus</string>
+  <string name="navigation_drawer_open">Ava menüü</string>
+  <string name="navigation_drawer_close">Sulge menüü</string>
+  <string name="settings_show_tutorial">Näita pildistamisvaates juhendit</string>
+  <string name="settings_agree_to_license_terms">Nõustun ülepildistuste avaldamisega Ajapaik.ee lehel CC BY 4.0 litsentsi all.</string>
+  <string name="tutorial_hide_show_flip">Puuduta ekraani, et peita/näidata pilti.\nKasuta nuppu üleval paremal nurgas, et keerata vana pilt peegelpilti.</string>
+  <string name="tutorial_opacity_zoom">Vea sõrmega mööda ekraani, et muuta vana pildi läbipaistvust.\nKahe sõrmega saad vana pilti zoomida.</string>
+  <string name="tutorial_take_picture">Vajuta katiku nupule või pikalt ükskõik kuhu ekraanile, et teha ülepildistus.</string>
+  <string name="tutorial_dismiss">Selge!</string>
+  <string name="tutorial_dialog_show_again_title">Näita taas juhendit?</string>
+  <string name="tutorial_dialog_show_again_message">Juhendi saab seadete all hiljem uuesti sisse lülitada</string>
+  <string name="tutorial_dialog_show_again_no">Ei</string>
+  <string name="tutorial_dialog_show_again_yes">Jah</string>
+  <string name="rephoto_drafts">Ülepildistuste mustandid</string>
+  <string name="no_rephotos">Ülepildistusi pole</string>
+  <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
+  <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
+  <string name="storage_not_permitted_cancel">Loobu</string>
+  <string name="storage_not_permitted_open_settings">Ava seaded</string>
+  <string name="my_rephotos">Minu ülepildistused</string>
+  <string name="rephotos_label_not_logged_in_text">Ülepildistuse nägemiseks palun logi sisse</string>
+  <string name="action_search">Otsing</string>
+  <string name="favorites">Minu lemmikud</string>
+  <string name="no_favorites">Lemmikud puuduvad</string>
+  <string name="action_favorite">Lisa lemmikuks</string>
+  <string name="favorites_label_not_logged_in_button">Sisse logima</string>
+  <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
+  <string name="no_search_result">Tulemused puuduvad</string>
+  <string name="album_no_data">Pildid puuduvad</string>
 </resources>

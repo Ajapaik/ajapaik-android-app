@@ -1,150 +1,105 @@
-<!--Default language is English-->
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- Global -->
-    <string name="app_name">Ajapaik refoto</string>
-    <string name="none"></string>
-    <string name="unit_km">km</string>
-    <string name="unit_m">m</string>
-    <string name="processing_image">Apstrādā attēlu</string>
-    <string name="please_wait">Lūdzu uzgaidiet…</string>
-    <string name="something_went_wrong">Notika kļūda</string>
-
-    <!-- Menu -->
-    <string name="action_albums">Albumi</string>
-    <string name="action_flip">Apvērst</string>
-    <string name="action_login">Autorizēties</string>
-    <string name="action_register">Reģistrēties</string>
-    <string name="action_logout">Beigt lietotāja sesiju</string>
-    <string name="action_profile">Profils</string>
-    <string name="action_refresh">Atjaunināt</string>
-    <string name="action_settings">Uzstādījumi</string>
-
-    <!-- Nearest -->
-    <string name="nearest_title">Tuvākie attēli</string>
-
-    <!-- Albums -->
-    <string name="albums_label_no_data">Nav albumu</string>
-    <string name="albums_title">Albumi</string>
-
-    <!-- Album -->
-    <string name="album_title">Albums</string>
-
-    <!-- Nearest -->
-    <string name="nearest_dialog_error_location_disabled_title">Lokācija nav iespējota</string>
-    <string name="nearest_dialog_error_location_disabled_message">Nav iespējams noteikt atrašanās vietu. Vai iespējot lokācijas noteikšanu?</string>
-    <string name="nearest_dialog_error_location_disabled_close">Aizvērt</string>
-    <string name="nearest_dialog_error_location_disabled_open">Atvērt iestatījumus</string>
-    <string name="nearest_label_no_data">Nav atrodami tuvākie attēli</string>
-    <string name="nearest_label_no_data_button">Apskatiet visus attēlus albumos</string>
-
-    <!-- Photo -->
-    <string name="photo_title">Attēla informācija</string>
-
-    <!-- Camera -->
-    <string name="camera_title">Kamera</string>
-
-    <!-- Profile -->
-    <string name="profile_title">Profils</string>
-    <string name="profile_facebook_login">Autorizēties ar Facebook</string>
-    <string name="profile_google_login">Autorizēties ar Google</string>
-    <string name="profile_logout">Beigt lietotāja sesiju</string>
-    <string name="profile_login">Autorizēties</string>
-    <string name="profile_register">Izveidot kontu</string>
-    <string name="input_username_hint">E-pasts</string>
-    <string name="input_password_hint">Parole</string>
-    <string name="input_firstname_hint">Vārds</string>
-    <string name="input_lastname_hint">Uzvārds</string>
-    <plurals name="profile_rephotos">
-        <item quantity="zero">Jums vēl nav savu refotogrāfiju</item>
-        <item quantity="one"><b>1</b> refotogrāfjia</item>
-        <item quantity="other"><b>%1$d</b> refotogrāfijas</item>
-    </plurals>
-
-    <!-- Login -->
-    <string name="login_title">Autorizācija</string>
-    <string name="login_failed">Neveiksmīga autorizācija</string>
-    <string name="wrong_password">Nepareiza parole!</string>
-
-    <!-- Registration -->
-    <string name="registration_title">Reģistrācija</string>
-    <string name="user_already_exists">Lietotāja vārds jau aizņemts</string>
-
-    <!-- Upload -->
-    <string name="upload_title">Apstiprināt refotogrāfiju</string>
-    <string name="upload_dialog_error_connection_title">Kļūda, veidojot savienojumu</string>
-    <string name="upload_dialog_error_connection_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
-    <string name="upload_dialog_error_connection_retry">Atkārtot</string>
-    <string name="upload_dialog_error_connection_ok">Labi</string>
-    <string name="upload_dialog_error_unknown_title">Kļūda</string>
-    <string name="upload_dialog_error_unknown_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
-    <string name="upload_dialog_error_unknown_retry">Atkārtot</string>
-    <string name="upload_dialog_error_unknown_ok">Atcelt</string>
-    <string name="upload_dialog_process_title">Notiek attēla augšupielāde</string>
-    <string name="upload_dialog_process_message">Lūdzu uzgaidiet&#8230;</string>
-    <string name="upload_dialog_success_title">Augšupielāde pabeigta</string>
-    <string name="upload_dialog_success_message">Attēls sekmīgi augšupielādēts!</string>
-    <string name="upload_dialog_success_ok">Labi</string>
-    <string name="upload_dialog_not_authenticated_title">Vispirms jāautorizējas</string>
-    <string name="upload_dialog_not_authenticated_message">Doties uz profila lapu</string>
-    <string name="upload_dialog_not_authenticated_ok">Labi</string>
-    <string name="upload_dialog_not_agreed_to_terms">Piekrītu publicēt savu refotogrāfiju ar CC BY 4.0 licenci.</string>
-    <string name="upload_dialog_agree_to_terms">Jā!</string>
-    <string name="upload_dialog_decline_terms">Nē</string>
-
-    <!-- ACRA -->
-    <string name="acra_dialog_title">'Ajapaik refoto' apstājās</string>
-    <string name="acra_dialog_text">Lietotne apstājusies kļūdas dēļ. Lūdzu palīdziet to uzlabot un nosūtiet datus par kļūdu, nospiežot uz Labi.</string>
-    <string name="acra_dialog_comment_prompt">Vieta jūsu komentāriem par kļūdu:</string>
-    <string name="acra_dialog_ok_toast">Paldies!</string>
-
-    <!-- Facebook -->
-    <string name="facebook_app_id">201052296573134</string>
-
-    <!-- About -->
-    <string name="about_title">Par</string>
-    <string name="version">Versija</string>
-    <string name="contact">Kontakti</string>
-    <string name="privacy_policy">Privātuma politika</string>
-
-    <string name="navigation_drawer_open">Atvērt atvilktni</string>
-    <string name="navigation_drawer_close">Aizvērt atvilktni</string>
-
-    <!-- Settings -->
-    <string name="settings_show_tutorial">Parādīt pamācību refotogrāfijas režīmam</string>
-    <string name="settings_agree_to_license_terms">Piekrītu publicēt savas refotogrāfijas Ajapaik.ee ar CC BY 4.0 licenci.</string>
-
-    <!-- Tutorial -->
-    <string name="tutorial_hide_show_flip">Uzsitiet, lai paslēptu/parādītu attēlu.\nLai apvērstu attēlu, lietojiet apvēršanas pogu augšējā labajā stūrī.</string>
-    <string name="tutorial_opacity_zoom">Velciet uz sāniem, lai mainītu attēla caurspīdīgumu.\nVelciet ar abiem pirkstiem, lai pievilktu/attālinātu attēlu.</string>
-    <string name="tutorial_take_picture">Refoto uzņem ar ilgu uzsitienu vai fotografēšanas pogu.</string>
-    <string name="tutorial_dismiss">Skaidrs!</string>
-
-    <string name="tutorial_dialog_show_again_title">Vai atkārtot pamācību?</string>
-    <string name="tutorial_dialog_show_again_message">Pamācību var palaist atkārtoti no iestatījumiem</string>
-    <string name="tutorial_dialog_show_again_no">Nē</string>
-    <string name="tutorial_dialog_show_again_yes">Jā</string>
-
-    <!-- Rephotos -->
-    <string name="rephoto_drafts">Refotofrāfijas uzmetumi</string>
-    <string name="no_rephotos">Nav refotogrāfiju</string>
-    <string name="storage_not_permitted_title">Nav pieejas diskam</string>
-    <string name="storage_not_permitted_message">Bez pieejas diskam lietotne nespēj uzņemt un augšuplādēt fotoattēlus. Lūdzu pārbaudiet piekļuvi diskam vai apsveriet diska vietas palielināšanu.</string>
-    <string name="storage_not_permitted_cancel">Atcelt</string>
-    <string name="storage_not_permitted_open_settings">Atvērt uzstādījumus</string>
-    <string name="my_rephotos">Manas refotogrāfijas</string>
-    <string name="rephotos_label_not_logged_in_text">Lūdzu autorizēties, lai apskatītu savas refotogrāfijas</string>
-
-    <string name="action_search">Meklēt</string>
-
-    <!-- Favorites -->
-    <string name="favorites">Mana izlase</string>
-    <string name="no_favorites">Izlase tukša</string>
-    <string name="action_favorite">Pievienot izlasei</string>
-    <string name="favorites_label_not_logged_in_button">Autorizēties</string>
-    <string name="favorites_label_not_logged_in_text">Lūdzu autorizējieties, lai apskatītu izlasi</string>
-
-    <string name="no_search_result">Nekas netika atrasts</string>
-    <string name="album_no_data">Nav attēlu</string>
-
+  <string name="app_name">Ajapaik refoto</string>
+  <string name="unit_km">km</string>
+  <string name="unit_m">m</string>
+  <string name="processing_image">Apstrādā attēlu</string>
+  <string name="please_wait">Lūdzu uzgaidiet…</string>
+  <string name="something_went_wrong">Notika kļūda</string>
+  <string name="action_albums">Albumi</string>
+  <string name="action_flip">Apvērst</string>
+  <string name="action_login">Autorizēties</string>
+  <string name="action_register">Reģistrēties</string>
+  <string name="action_logout">Beigt lietotāja sesiju</string>
+  <string name="action_profile">Profils</string>
+  <string name="action_refresh">Atjaunināt</string>
+  <string name="action_settings">Uzstādījumi</string>
+  <string name="nearest_title">Tuvākie attēli</string>
+  <string name="albums_label_no_data">Nav albumu</string>
+  <string name="albums_title">Albumi</string>
+  <string name="album_title">Albums</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lokācija nav iespējota</string>
+  <string name="nearest_dialog_error_location_disabled_message">Nav iespējams noteikt atrašanās vietu. Vai iespējot lokācijas noteikšanu?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Aizvērt</string>
+  <string name="nearest_dialog_error_location_disabled_open">Atvērt iestatījumus</string>
+  <string name="nearest_label_no_data">Nav atrodami tuvākie attēli</string>
+  <string name="nearest_label_no_data_button">Apskatiet visus attēlus albumos</string>
+  <string name="photo_title">Attēla informācija</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profils</string>
+  <string name="profile_facebook_login">Autorizēties ar Facebook</string>
+  <string name="profile_google_login">Autorizēties ar Google</string>
+  <string name="profile_logout">Beigt lietotāja sesiju</string>
+  <string name="profile_login">Autorizēties</string>
+  <string name="profile_register">Izveidot kontu</string>
+  <string name="input_username_hint">E-pasts</string>
+  <string name="input_password_hint">Parole</string>
+  <string name="input_firstname_hint">Vārds</string>
+  <string name="input_lastname_hint">Uzvārds</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Jums vēl nav savu refotogrāfiju</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotogrāfjia</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotogrāfijas</item>
+  </plurals>
+  <string name="login_title">Autorizācija</string>
+  <string name="login_failed">Neveiksmīga autorizācija</string>
+  <string name="wrong_password">Nepareiza parole!</string>
+  <string name="registration_title">Reģistrācija</string>
+  <string name="user_already_exists">Lietotāja vārds jau aizņemts</string>
+  <string name="upload_title">Apstiprināt refotogrāfiju</string>
+  <string name="upload_dialog_error_connection_title">Kļūda, veidojot savienojumu</string>
+  <string name="upload_dialog_error_connection_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
+  <string name="upload_dialog_error_connection_retry">Atkārtot</string>
+  <string name="upload_dialog_error_connection_ok">Labi</string>
+  <string name="upload_dialog_error_unknown_title">Kļūda</string>
+  <string name="upload_dialog_error_unknown_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
+  <string name="upload_dialog_error_unknown_retry">Atkārtot</string>
+  <string name="upload_dialog_error_unknown_ok">Atcelt</string>
+  <string name="upload_dialog_process_title">Notiek attēla augšupielāde</string>
+  <string name="upload_dialog_process_message">Lūdzu uzgaidiet…</string>
+  <string name="upload_dialog_success_title">Augšupielāde pabeigta</string>
+  <string name="upload_dialog_success_message">Attēls sekmīgi augšupielādēts!</string>
+  <string name="upload_dialog_success_ok">Labi</string>
+  <string name="upload_dialog_not_authenticated_title">Vispirms jāautorizējas</string>
+  <string name="upload_dialog_not_authenticated_message">Doties uz profila lapu</string>
+  <string name="upload_dialog_not_authenticated_ok">Labi</string>
+  <string name="upload_dialog_not_agreed_to_terms">Piekrītu publicēt savu refotogrāfiju ar CC BY 4.0 licenci.</string>
+  <string name="upload_dialog_agree_to_terms">Jā!</string>
+  <string name="upload_dialog_decline_terms">Nē</string>
+  <string name="acra_dialog_title">\'Ajapaik refoto\' apstājās</string>
+  <string name="acra_dialog_text">Lietotne apstājusies kļūdas dēļ. Lūdzu palīdziet to uzlabot un nosūtiet datus par kļūdu, nospiežot uz Labi.</string>
+  <string name="acra_dialog_comment_prompt">Vieta jūsu komentāriem par kļūdu:</string>
+  <string name="acra_dialog_ok_toast">Paldies!</string>
+  <string name="about_title">Par</string>
+  <string name="version">Versija</string>
+  <string name="contact">Kontakti</string>
+  <string name="privacy_policy">Privātuma politika</string>
+  <string name="navigation_drawer_open">Atvērt atvilktni</string>
+  <string name="navigation_drawer_close">Aizvērt atvilktni</string>
+  <string name="settings_show_tutorial">Parādīt pamācību refotogrāfijas režīmam</string>
+  <string name="settings_agree_to_license_terms">Piekrītu publicēt savas refotogrāfijas Ajapaik.ee ar CC BY 4.0 licenci.</string>
+  <string name="tutorial_hide_show_flip">Uzsitiet, lai paslēptu/parādītu attēlu.\nLai apvērstu attēlu, lietojiet apvēršanas pogu augšējā labajā stūrī.</string>
+  <string name="tutorial_opacity_zoom">Velciet uz sāniem, lai mainītu attēla caurspīdīgumu.\nVelciet ar abiem pirkstiem, lai pievilktu/attālinātu attēlu.</string>
+  <string name="tutorial_take_picture">Refoto uzņem ar ilgu uzsitienu vai fotografēšanas pogu.</string>
+  <string name="tutorial_dismiss">Skaidrs!</string>
+  <string name="tutorial_dialog_show_again_title">Vai atkārtot pamācību?</string>
+  <string name="tutorial_dialog_show_again_message">Pamācību var palaist atkārtoti no iestatījumiem</string>
+  <string name="tutorial_dialog_show_again_no">Nē</string>
+  <string name="tutorial_dialog_show_again_yes">Jā</string>
+  <string name="rephoto_drafts">Refotofrāfijas uzmetumi</string>
+  <string name="no_rephotos">Nav refotogrāfiju</string>
+  <string name="storage_not_permitted_title">Nav pieejas diskam</string>
+  <string name="storage_not_permitted_message">Bez pieejas diskam lietotne nespēj uzņemt un augšuplādēt fotoattēlus. Lūdzu pārbaudiet piekļuvi diskam vai apsveriet diska vietas palielināšanu.</string>
+  <string name="storage_not_permitted_cancel">Atcelt</string>
+  <string name="storage_not_permitted_open_settings">Atvērt uzstādījumus</string>
+  <string name="my_rephotos">Manas refotogrāfijas</string>
+  <string name="rephotos_label_not_logged_in_text">Lūdzu autorizēties, lai apskatītu savas refotogrāfijas</string>
+  <string name="action_search">Meklēt</string>
+  <string name="favorites">Mana izlase</string>
+  <string name="no_favorites">Izlase tukša</string>
+  <string name="action_favorite">Pievienot izlasei</string>
+  <string name="favorites_label_not_logged_in_button">Autorizēties</string>
+  <string name="favorites_label_not_logged_in_text">Lūdzu autorizējieties, lai apskatītu izlasi</string>
+  <string name="no_search_result">Nekas netika atrasts</string>
+  <string name="album_no_data">Nav attēlu</string>
 </resources>
