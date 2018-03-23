@@ -6,3 +6,5 @@ New version of [**android app**](play.google.com/store/apps/details?id=ee.ajapai
 We plan to integrate with other image sources (public repositories) and [**Wikimedia Commons**](https://commons.wikimedia.org).
 
 All help is welcome!
+
+The internationalization and localization (i18n) of the app is on [**Translatewiki**](https://translatewiki.net/wiki/Translating:Ajapaik), contribution welcome there as well.
