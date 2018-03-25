@@ -1,0 +1,15 @@
+title=Ajapaik
+short-description=Otsi üles ajalooliste fotode tegemise kohad ning pildista samad vaated üle!
+description=Ajapaiga rakendus näitab ajaloolisi pilte, mis on tehtud Sinu lähedal ning pakub mugava võimaluse vanadel piltidel kujutatud vaated üle pildistada.
+
+            Ülepildistamise täpsuse tagamiseks saad
+            * muuta ekraanil ajaloolise foto läbipaistvust (tõmmates sõrmega piki ekraani)
+            * muuta ajaloolise foto suurenduse astet (kahe sõrmega)
+
+            Uues versioonis on võimalik sirvida ja otsida ka Ajapaiga albumeid, otsida üksikuid pilte, vaadata nii enda kui teiste tehtud refotosid.
+
+            Uuendusena on võimalik salvestada ka ülepildistuste mustandeid ning laadida pildid Ajapaika hiljem (nt wifi-ühendust kasutades).
+
+            Ülepildistuse Ajapaika laadimiseks tuleb ennast tuvastada Facebooki või Google-kontoga või e-postiaadressiga.
+
+            Ajapaika vanade fotode ülepildistuste lisamisel saavad fotod Creative Commonsi litsentsi Autorile viitamine (CC BY).
