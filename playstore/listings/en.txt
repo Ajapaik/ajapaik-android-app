@@ -1,0 +1,15 @@
+title=Ajapaik rephoto
+short-description=Look up the vantage points of historic images and rephotograph the views!
+description=Ajapaik rephoto application displays historic images taken near to you and offers an easy way to take rephotographs of the same views.
+
+            In order to make the rephotography more convenient
+            * you can change the transparency of the historic image on your camera stream by sliding along the screen
+            * pinch zoom the historic image
+
+            In the new (2018) version you can also browse and search the albums, search for specific image, view the rephotos made by yourself or other users.
+
+            Now the rephoto drafts can be saved and browsed and uploaded to Ajapaik.ee later (over the wi-fi for instance).
+
+            In order to upload a rephotograph you have to authenticate yourself with Google or Facebook account or with an email based account.
+
+            By uploading rephotos to Ajapaik you agree to releasing the images under Creative Commons Attribution (CC BY) licence.
