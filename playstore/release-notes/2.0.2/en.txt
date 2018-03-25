@@ -1,0 +1,2 @@
+- Added new and improved existing translations
+- Optimized image processing to reduce outOfMemory errors
