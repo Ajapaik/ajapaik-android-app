@@ -11,6 +11,7 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -246,9 +247,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private Bitmap scaleRephoto(Upload upload) {
-        Bitmap unscaledCameraImage = loadAndRotateRephotoPreview(upload.getPath());
-        float unscaledImageWidth = unscaledCameraImage.getWidth();
-        float unscaledImageHeight = unscaledCameraImage.getHeight();
+        BitmapFactory.Options options = getBitmapOptions(upload);
+        float unscaledImageWidth = options.outWidth;
+        float unscaledImageHeight = options.outHeight;
 
         float heightScale = 1.0F;
         float widthScale = 1.0F;
@@ -267,11 +268,21 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         float heightDifference = unscaledImageHeight - scaledImageHeight;
         float widthDifference = unscaledImageWidth - scaledImageWidth;
         return Bitmap.createBitmap(
-                unscaledCameraImage,
+                BitmapFactory.decodeFile(upload.getPath()),
                 (int) (Math.max(widthDifference / 2, 0)),
                 (int) (Math.max(heightDifference / 2, 0)),
                 (int) (Math.min(unscaledImageWidth, scaledImageWidth)),
-                (int) (Math.min(unscaledImageHeight, scaledImageHeight)));
+                (int) (Math.min(unscaledImageHeight, scaledImageHeight)),
+                getRotationMatrix(upload.getPath()),
+                true );
+    }
+
+    @NonNull
+    private BitmapFactory.Options getBitmapOptions(Upload upload) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(upload.getPath(), options);
+        return options;
     }
 
     /**
@@ -280,7 +291,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
      * @return Matrix with proper rotation
      * @param path to bitmap needing rotation
      */
-    private Bitmap loadAndRotateRephotoPreview(String path) {
+    private Matrix getRotationMatrix(String path) {
         Matrix matrix = new Matrix();
         try {
             ExifInterface exif = new ExifInterface(path);
@@ -325,8 +336,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         } catch (IOException e) {
             Log.e("Rephoto preview", "Failed to set rotation for rephoto preview", e);
         }
-        Bitmap bitmap = BitmapFactory.decodeFile(path);
-        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        return matrix;
     }
 
     private boolean needsHeightScaling(float unscaledImageWidth, float unscaledImageHeight, Photo oldPhoto) {
