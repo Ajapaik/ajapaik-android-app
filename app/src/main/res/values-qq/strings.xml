@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="profile_register">{{Identical|Create account}}</string>
+  <string name="input_password_hint">{{Identical|Password}}</string>
+  <string name="input_firstname_hint">{{Identical|First name}}</string>
+  <string name="upload_dialog_not_authenticated_ok">{{Identical|OK}}</string>
+  <string name="contact">{{Identical|Contact}}</string>
+</resources>

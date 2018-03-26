@@ -78,4 +78,26 @@
   <string name="settings_agree_to_license_terms">我同意以CC BY 4.0许可协议在Ajapaik.ee发布我的照片重制作品。</string>
   <string name="tutorial_hide_show_flip">点按以隐藏/显示图片。使用右上角的翻转图标以翻转旧图片。</string>
   <string name="tutorial_opacity_zoom">滑动以调整旧图片的透明度。两指滑动以缩放旧图片。</string>
+  <string name="tutorial_take_picture">点击快门按钮或长按屏幕任意处以制作照片重制。</string>
+  <string name="tutorial_dismiss">明白了！</string>
+  <string name="tutorial_dialog_show_again_title">再次显示教程？</string>
+  <string name="tutorial_dialog_show_again_message">您可以日后在设置中再次打开教程</string>
+  <string name="tutorial_dialog_show_again_no">否</string>
+  <string name="tutorial_dialog_show_again_yes">是</string>
+  <string name="rephoto_drafts">照片重制草稿</string>
+  <string name="no_rephotos">无照片重制</string>
+  <string name="storage_not_permitted_title">存储未授权</string>
+  <string name="storage_not_permitted_message">未授权此应用使用存储，这阻止了您访问一些功能，例如制作并上传照片重制。请考虑允许存储使用</string>
+  <string name="storage_not_permitted_cancel">取消</string>
+  <string name="storage_not_permitted_open_settings">打开设置</string>
+  <string name="my_rephotos">我的照片重制</string>
+  <string name="rephotos_label_not_logged_in_text">请登录以查看您的照片重制</string>
+  <string name="action_search">搜索</string>
+  <string name="favorites">我的喜爱</string>
+  <string name="no_favorites">无喜爱</string>
+  <string name="action_favorite">喜爱</string>
+  <string name="favorites_label_not_logged_in_button">登录</string>
+  <string name="favorites_label_not_logged_in_text">请登录以查看您的喜爱</string>
+  <string name="no_search_result">无搜索结果</string>
+  <string name="album_no_data">无照片</string>
 </resources>

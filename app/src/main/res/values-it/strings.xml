@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="something_went_wrong">Qualcosa è andato storto</string>
+  <string name="action_albums">Album</string>
+  <string name="action_login">Accedi</string>
+  <string name="action_logout">Esci</string>
+  <string name="action_profile">Profilo</string>
+  <string name="action_refresh">Aggiorna</string>
+  <string name="action_settings">Impostazioni</string>
+  <string name="albums_label_no_data">Nessun album</string>
+  <string name="albums_title">Album</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_close">Chiudi</string>
+  <string name="profile_title">Profilo</string>
+  <string name="profile_facebook_login">Accedi con Facebook</string>
+  <string name="profile_google_login">Accedi con Google</string>
+  <string name="profile_logout">Esci</string>
+  <string name="profile_login">Entra</string>
+  <string name="profile_register">Crea un\'utenza</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Password</string>
+  <string name="input_firstname_hint">Nome</string>
+  <string name="input_lastname_hint">Cognome</string>
+  <string name="login_title">Accedi</string>
+  <string name="login_failed">Accesso non riuscito</string>
+  <string name="upload_dialog_error_connection_retry">Riprova</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Errore sconosciuto</string>
+  <string name="upload_dialog_error_unknown_message">Impossibile caricare la foto. Riprovare?</string>
+  <string name="upload_dialog_error_unknown_retry">Riprova</string>
+  <string name="upload_dialog_error_unknown_ok">Annulla</string>
+  <string name="upload_dialog_success_title">Caricamento riuscito</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Sì!</string>
+  <string name="upload_dialog_decline_terms">No</string>
+  <string name="acra_dialog_ok_toast">Grazie!</string>
+  <string name="version">Versione</string>
+  <string name="tutorial_dismiss">Capito!</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="tutorial_dialog_show_again_yes">Sì</string>
+  <string name="storage_not_permitted_cancel">Annulla</string>
+  <string name="favorites_label_not_logged_in_button">Entra</string>
+  <string name="album_no_data">Nessuna foto</string>
+</resources>

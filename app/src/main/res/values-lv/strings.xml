@@ -13,7 +13,7 @@
   <string name="action_logout">Beigt lietotāja sesiju</string>
   <string name="action_profile">Profils</string>
   <string name="action_refresh">Atjaunināt</string>
-  <string name="action_settings">Uzstādījumi</string>
+  <string name="action_settings">Iestatījumi</string>
   <string name="nearest_title">Tuvākie attēli</string>
   <string name="albums_label_no_data">Nav albumu</string>
   <string name="albums_title">Albumi</string>
@@ -91,7 +91,7 @@
   <string name="storage_not_permitted_title">Nav pieejas diskam</string>
   <string name="storage_not_permitted_message">Bez pieejas diskam lietotne nespēj uzņemt un augšuplādēt fotoattēlus. Lūdzu pārbaudiet piekļuvi diskam vai apsveriet diska vietas palielināšanu.</string>
   <string name="storage_not_permitted_cancel">Atcelt</string>
-  <string name="storage_not_permitted_open_settings">Atvērt uzstādījumus</string>
+  <string name="storage_not_permitted_open_settings">Atvērt iestatījumus</string>
   <string name="my_rephotos">Manas refotogrāfijas</string>
   <string name="rephotos_label_not_logged_in_text">Lūdzu autorizēties, lai apskatītu savas refotogrāfijas</string>
   <string name="action_search">Meklēt</string>
