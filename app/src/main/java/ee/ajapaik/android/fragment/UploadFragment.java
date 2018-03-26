@@ -11,9 +11,9 @@ import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -248,8 +248,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     private Bitmap scaleRephoto(Upload upload) {
         BitmapFactory.Options options = getBitmapOptions(upload);
-        float unscaledImageWidth = options.outWidth;
-        float unscaledImageHeight = options.outHeight;
+        int sampleSize = calculateSampleSize(options);
+        float unscaledImageWidth = options.outWidth / sampleSize;
+        float unscaledImageHeight = options.outHeight / sampleSize;
 
         float heightScale = 1.0F;
         float widthScale = 1.0F;
@@ -267,17 +268,41 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         float scaledImageHeight = unscaledImageHeight * heightScale * upload.getScale();
         float heightDifference = unscaledImageHeight - scaledImageHeight;
         float widthDifference = unscaledImageWidth - scaledImageWidth;
+        options.inJustDecodeBounds = false;
+        options.inSampleSize = sampleSize;
         return Bitmap.createBitmap(
-                BitmapFactory.decodeFile(upload.getPath()),
+                BitmapFactory.decodeFile(upload.getPath(), options),
                 (int) (Math.max(widthDifference / 2, 0)),
                 (int) (Math.max(heightDifference / 2, 0)),
                 (int) (Math.min(unscaledImageWidth, scaledImageWidth)),
                 (int) (Math.min(unscaledImageHeight, scaledImageHeight)),
                 getRotationMatrix(upload.getPath()),
-                true );
+                true);
     }
 
-    @NonNull
+    private int calculateSampleSize(BitmapFactory.Options options) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        if (getActivity() == null) return 1;
+
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int reqHeight = displayMetrics.heightPixels / 2;
+        int reqWidth = displayMetrics.widthPixels;
+
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+        return inSampleSize;
+    }
+
     private BitmapFactory.Options getBitmapOptions(Upload upload) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
