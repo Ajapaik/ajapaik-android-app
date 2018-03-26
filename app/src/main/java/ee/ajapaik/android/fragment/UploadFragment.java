@@ -116,9 +116,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             m_uploads = parseUploadsJson(savedInstanceState.getString(KEY_UPLOAD));
         }
@@ -133,6 +132,13 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             Bitmap scaledRephoto = scaleRephoto(upload);
             uploadByRephotoBitmap.put(scaledRephoto, upload);
         }
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setRetainInstance(true);
+
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
