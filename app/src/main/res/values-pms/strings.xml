@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">neuva fòto Ajapaik</string>
+  <string name="processing_image">Plancia an tratament</string>
+  <string name="please_wait">Ch\'a l\'abia passiensa…</string>
+  <string name="something_went_wrong">Quaicòs a l\'é andà mal</string>
+  <string name="action_albums">Àlbom</string>
+  <string name="action_flip">Volté</string>
+  <string name="action_login">Rintré ant ël sistema</string>
+  <string name="action_register">Anscriv-se</string>
+  <string name="action_logout">Seurte dal sistema</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Rinfrësché</string>
+  <string name="action_settings">Paràmeter</string>
+  <string name="nearest_title">Fòto dj\'anviron</string>
+  <string name="albums_label_no_data">Gnun àlbom</string>
+  <string name="albums_title">Àlbom</string>
+  <string name="album_title">Àlbom</string>
+  <string name="nearest_dialog_error_location_disabled_title">Locassion disabilità</string>
+  <string name="nearest_dialog_error_location_disabled_message">Impossìbil oten-e la posission atual. Veul-lo abilitela?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Saré</string>
+  <string name="nearest_dialog_error_location_disabled_open">Duverté ij paràmeter</string>
+  <string name="nearest_label_no_data">Gnun-e fòto ant j\'anviron</string>
+  <string name="nearest_label_no_data_button">Vëdde j\'àlbom për navighé an tute le plance</string>
+  <string name="photo_title">Anformassion an sla fòto</string>
+  <string name="camera_title">Màchina fòto</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Rintré ant ël sistema con Facebook</string>
+  <string name="profile_google_login">Rintré ant ël sistema con Google</string>
+  <string name="profile_logout">Seurte dal sistema</string>
+  <string name="profile_login">Rintré ant ël sistema</string>
+  <string name="profile_register">Creé un cont</string>
+  <string name="input_username_hint">Adrëssa ëd pòsta eletrònica</string>
+  <string name="input_password_hint">Ciav</string>
+  <string name="input_firstname_hint">Nòm</string>
+  <string name="input_lastname_hint">Cognòm</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">A l\'ha ancor nen fàit ëd duplicà ëd fòto</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; duplicà ëd fòto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; duplicà ëd fòto</item>
+  </plurals>
+  <string name="login_title">Rintré ant ël sistema</string>
+  <string name="login_failed">Conession nen riussìa</string>
+  <string name="wrong_password">Ciav nen bon-a!</string>
+  <string name="registration_title">Anscriv-se</string>
+</resources>

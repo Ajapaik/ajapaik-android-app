@@ -46,6 +46,8 @@
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
   <string name="upload_dialog_process_title">Cargando la foto</string>
   <string name="upload_dialog_process_message">Espera…</string>
+  <string name="upload_dialog_success_title">Carga correcta</string>
+  <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
   <string name="upload_dialog_success_ok">Aceptar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
@@ -54,6 +56,8 @@
   <string name="version">Versión</string>
   <string name="contact">Contacto</string>
   <string name="privacy_policy">Privacidad</string>
+  <string name="navigation_drawer_close">Cerrar cajón</string>
+  <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
   <string name="storage_not_permitted_cancel">Cancelar</string>

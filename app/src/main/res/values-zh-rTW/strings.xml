@@ -67,7 +67,7 @@
   <string name="acra_dialog_title">「Ajapaik rephoto」發生毀損</string>
   <string name="acra_dialog_text">因發生預期外的錯誤，導致應用程式被強制停止。請透過發送錯誤資料給我們，來協助我們修正此問題，您所要做的只需要按下「確認」即可。</string>
   <string name="acra_dialog_comment_prompt">您可以在下方添加有關問題的意見：</string>
-  <string name="acra_dialog_ok_toast">感謝您!</string>
+  <string name="acra_dialog_ok_toast">感謝您！</string>
   <string name="about_title">關於</string>
   <string name="version">版本</string>
   <string name="contact">聯絡</string>
