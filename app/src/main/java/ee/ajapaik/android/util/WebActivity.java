@@ -234,7 +234,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
             GoogleSignInAccount account = result.getSignInAccount();
             if (account == null) return;
-            Authorization authorization = new Authorization(GOOGLE, account.getEmail(), account.getServerAuthCode());
+            Authorization authorization = new Authorization(GOOGLE, account.getIdToken(), account.getServerAuthCode());
             getSettings().setAuthorization(authorization);
 
             getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
