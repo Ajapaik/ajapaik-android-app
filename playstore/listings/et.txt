@@ -1,15 +1,10 @@
 title=Ajapaik
 short-description=Otsi üles ajalooliste fotode tegemise kohad ning pildista samad vaated üle!
-description=Ajapaiga rakendus näitab ajaloolisi pilte, mis on tehtud Sinu lähedal ning pakub mugava võimaluse vanadel piltidel kujutatud vaated üle pildistada.
-
-            Ülepildistamise täpsuse tagamiseks saad
-            * muuta ekraanil ajaloolise foto läbipaistvust (tõmmates sõrmega piki ekraani)
-            * muuta ajaloolise foto suurenduse astet (kahe sõrmega)
-
-            Uues versioonis on võimalik sirvida ja otsida ka Ajapaiga albumeid, otsida üksikuid pilte, vaadata nii enda kui teiste tehtud refotosid.
-
-            Uuendusena on võimalik salvestada ka ülepildistuste mustandeid ning laadida pildid Ajapaika hiljem (nt wifi-ühendust kasutades).
-
-            Ülepildistuse Ajapaika laadimiseks tuleb ennast tuvastada Facebooki või Google-kontoga või e-postiaadressiga.
-
-            Ajapaika vanade fotode ülepildistuste lisamisel saavad fotod Creative Commonsi litsentsi Autorile viitamine (CC BY).
+description.paragraph.1=Ajapaiga rakendus näitab ajaloolisi pilte, mis on tehtud Sinu lähedal ning pakub mugava võimaluse vanadel piltidel kujutatud vaated üle pildistada.
+description.accuracy.title=Ülepildistamise täpsuse tagamiseks saad
+description.accuracy.bullet.1=* muuta ekraanil ajaloolise foto läbipaistvust (tõmmates sõrmega piki ekraani)
+description.accuracy.bullet.2=* muuta ajaloolise foto suurenduse astet (kahe sõrmega)
+description.paragraph.2=Uues versioonis on võimalik sirvida ja otsida ka Ajapaiga albumeid, otsida üksikuid pilte, vaadata nii enda kui teiste tehtud refotosid.
+description.paragraph.3=Uuendusena on võimalik salvestada ka ülepildistuste mustandeid ning laadida pildid Ajapaika hiljem (nt wifi-ühendust kasutades).
+description.paragraph.4=Ülepildistuse Ajapaika laadimiseks tuleb ennast tuvastada Facebooki või Google-kontoga või e-postiaadressiga.
+description.paragraph.5=Ajapaika vanade fotode ülepildistuste lisamisel saavad fotod Creative Commonsi litsentsi Autorile viitamine (CC BY).
