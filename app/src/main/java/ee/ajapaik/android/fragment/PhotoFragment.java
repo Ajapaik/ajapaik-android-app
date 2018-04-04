@@ -115,6 +115,8 @@ public class PhotoFragment extends ImageFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        getSwipeRefreshLayout().setEnabled(false);
+
         if (savedInstanceState != null) {
             m_album = savedInstanceState.getParcelable(KEY_ALBUM);
             m_azimuth = savedInstanceState.getInt(KEY_AZIMUTH, 0);
