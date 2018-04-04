@@ -186,14 +186,14 @@ public class PhotoFragment extends ImageFragment {
         getRephotosCountImageView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                setRephotoViewMode(true);
+                showRephotoViewMode();
             }
         });
 
         getCloseRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                setRephotoViewMode(false);
+                hideRephotoViewMode();
             }
         });
     }
@@ -514,27 +514,27 @@ public class PhotoFragment extends ImageFragment {
         getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
     }
 
-    //    TODO avoid sending boolean as param
-    private void setRephotoViewMode(boolean flag) {
-        m_rephotoViewMode = flag;
+    private void showRephotoViewMode() {
+        m_rephotoViewMode = true;
+        getActionBar().setDisplayHomeAsUpEnabled(false);
+        getDetailsViewLayout().setVisibility(INVISIBLE);
+        getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+        getRephotosViewLayout().setVisibility(VISIBLE);
+        getRephotoViewOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+        final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
+        getRephotoViewPager().setAdapter(adapter);
+        final ViewPager.OnPageChangeListener pageChangeListener = createRephotoOnPageChangeListener(adapter);
+        getRephotoViewPager().addOnPageChangeListener(pageChangeListener);
+        selectFirstRephotoToDisplay(pageChangeListener);
+        getActivity().invalidateOptionsMenu();
+    }
 
-        if (m_rephotoViewMode) {
-            getActionBar().setDisplayHomeAsUpEnabled(false);
-            getDetailsViewLayout().setVisibility(INVISIBLE);
-            getDetailsViewImagesLayout().setVisibility(INVISIBLE);
-            getRephotosViewLayout().setVisibility(VISIBLE);
-            getRephotoViewOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-            final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
-            getRephotoViewPager().setAdapter(adapter);
-            final ViewPager.OnPageChangeListener pageChangeListener = createRephotoOnPageChangeListener(adapter);
-            getRephotoViewPager().addOnPageChangeListener(pageChangeListener);
-            selectFirstRephotoToDisplay(pageChangeListener);
-        } else {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-            getDetailsViewLayout().setVisibility(VISIBLE);
-            getDetailsViewImagesLayout().setVisibility(VISIBLE);
-            getRephotosViewLayout().setVisibility(INVISIBLE);
-        }
+    private void hideRephotoViewMode() {
+        m_rephotoViewMode = false;
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getDetailsViewLayout().setVisibility(VISIBLE);
+        getDetailsViewImagesLayout().setVisibility(VISIBLE);
+        getRephotosViewLayout().setVisibility(INVISIBLE);
         getActivity().invalidateOptionsMenu();
     }
 
