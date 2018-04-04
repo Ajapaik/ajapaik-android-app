@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -55,7 +56,6 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
-import static android.view.View.OnTouchListener;
 import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
@@ -82,7 +82,7 @@ public class PhotoFragment extends ImageFragment {
     public Album getAlbum() {
         Bundle arguments = getArguments();
 
-        if(arguments != null) {
+        if (arguments != null) {
             return arguments.getParcelable(KEY_ALBUM);
         }
 
@@ -92,11 +92,11 @@ public class PhotoFragment extends ImageFragment {
     public void setAlbum(Album album) {
         Bundle arguments = getArguments();
 
-        if(arguments == null) {
+        if (arguments == null) {
             arguments = new Bundle();
         }
 
-        if(album != null) {
+        if (album != null) {
             arguments.putParcelable(KEY_ALBUM, album);
         } else {
             arguments.remove(KEY_ALBUM);
@@ -114,7 +114,7 @@ public class PhotoFragment extends ImageFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             m_album = savedInstanceState.getParcelable(KEY_ALBUM);
             m_azimuth = savedInstanceState.getInt(KEY_AZIMUTH, 0);
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
@@ -126,77 +126,38 @@ public class PhotoFragment extends ImageFragment {
             m_scale = savedInstanceState.getFloat(KEY_SCALE, DEFAULT_SCALE);
         }
 
-        if(m_album == null) {
+        if (m_album == null) {
             m_album = getAlbum();
         }
 
-        if(m_photo == null) {
+        if (m_photo == null) {
             m_photo = getPhoto();
         }
 
-        if(m_photo == null && m_album != null) {
+        if (m_photo == null && m_album != null) {
             m_photo = m_album.getFirstPhoto();
         }
 
-        if(m_location == null) {
+        if (m_location == null) {
             m_location = getSettings().getLocation();
         }
+        initializeImmersiveMode();
 
-        getImageView().setOffset(m_offset);
-
-        getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new OnTouchListener[]{
-                new OnScaleTouchListener(getActivity()) {
-                    @Override
-                    public void onScale(float scale) {
-                        if(m_immersiveMode) {
-                            WebImageView imageView = getImageView();
-                            float newScale = imageView.getScale() * scale;
-                            if (newScale < 1.0f) {
-                                newScale = 1.0f;
-                            };
-                            imageView.setScale(newScale);
-                            m_scale = imageView.getScale();
-                        }
-                    }
-                },
-                new OnPanTouchListener(getActivity()) {
-                    @Override
-                    public void onPan(float distanceX, float distanceY) {
-                        if(m_immersiveMode) {
-                            WebImageView imageView = getImageView();
-
-                            m_offset = imageView.getOffset();
-
-                            if(m_offset == null) {
-                                m_offset = new PointF();
-                            }
-
-                            m_offset = new PointF(m_offset.x - distanceX, m_offset.y - distanceY);
-                            avoidScrollingOutOfViewport(imageView);
-                            imageView.setOffset(m_offset);
-                        }
-                    }
-                },
-                new OnSwipeTouchListener(getActivity()) {
-                    @Override
-                    public void onSingleTap() {
-                        setImmersiveMode(!m_immersiveMode);
-                    }
-                }
-        }));
-
-        getImageView().setScale(m_scale);
-        getImageView().setFlipped(m_flippedMode);
-        getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-        getImageView().setOnLoadListener(imageLoadListener());
+        getOriginalPhotoViewPager().setVisibility(VISIBLE);
+        final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_album.getPhotos());
+        getOriginalPhotoViewPager().setAdapter(adapter);
+        final ViewPager.OnPageChangeListener pageChangeListener = createOriginalPhotoOnPageChangeListener(adapter);
+        getOriginalPhotoViewPager().addOnPageChangeListener(pageChangeListener);
+        getOriginalPhotoViewPager().setCurrentItem(m_album.getPhotos().indexOf(m_photo));
+        invalidatePhoto();
 
         getSubtitleView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(m_photo != null) {
+                if (m_photo != null) {
                     Hyperlink link = m_photo.getSource();
 
-                    if(link != null && link.getURL() != null) {
+                    if (link != null && link.getURL() != null) {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
 
                         intent.setData(link.getURL());
@@ -232,29 +193,59 @@ public class PhotoFragment extends ImageFragment {
                 setRephotoViewMode(false);
             }
         });
+    }
 
-        invalidateAzimuth();
-        invalidatePhoto();
+    private void initializeImmersiveMode() {
+        getImmersiveModeLayout().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new View.OnTouchListener[]{
+                new OnScaleTouchListener(getActivity()) {
+                    @Override
+                    public void onScale(float scale) {
+                        if (m_immersiveMode) {
+                            WebImageView imageView = getImmersiveImage();
+                            float newScale = imageView.getScale() * scale;
+                            if (newScale < 1.0f) {
+                                newScale = 1.0f;
+                            }
+                            ;
+                            imageView.setScale(newScale);
+                            m_scale = imageView.getScale();
+                        }
+                    }
+                },
+                new OnPanTouchListener(getActivity()) {
+                    @Override
+                    public void onPan(float distanceX, float distanceY) {
+                        if (m_immersiveMode) {
+                            WebImageView imageView = getImmersiveImage();
 
-        setRephotoViewMode(m_rephotoViewMode);
+                            m_offset = imageView.getOffset();
 
-        getSwipeRefreshLayout().setEnabled(false);
+                            if (m_offset == null) {
+                                m_offset = new PointF();
+                            }
 
-        getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
-            @Override
-            public void onImageLoaded() {
-                m_offset = new PointF(0, Integer.MIN_VALUE);
-                avoidScrollingOutOfViewport(getImageView());
-                m_offset = new PointF(m_offset.x, m_offset.y + getActionBar().getHeight());
-                getImageView().setOffset(m_offset);
-            }
+                            m_offset = new PointF(m_offset.x - distanceX, m_offset.y - distanceY);
+                            avoidScrollingOutOfViewport(imageView);
+                            imageView.setOffset(m_offset);
+                        }
+                    }
+                },
+                new OnSwipeTouchListener(getActivity()) {
+                    @Override
+                    public void onSingleTap() {
+                        setImmersiveMode(false);
+                    }
+                }
+        }));
 
-            @Override
-            public void onImageUnloaded() { }
-
-            @Override
-            public void onImageFailed() { }
-        });
+        getMainLayout().setOnTouchListener(
+                new OnSwipeTouchListener(getActivity()) {
+                    @Override
+                    public void onSingleTap() {
+                        setImmersiveMode(true);
+                    }
+                }
+        );
     }
 
     @Override
@@ -302,13 +293,38 @@ public class PhotoFragment extends ImageFragment {
 
             @Override
             public void onPageSelected(int position) {
-                Rephoto rephoto = adapter.getRephoto(position);
+                Rephoto rephoto = (Rephoto) adapter.getPhotoModel(position);
                 TextView authorView = getRephotoAuthorView();
                 TextView dateView = getRephotoDateView();
                 authorView.setText(rephoto.getAuthor());
                 int textColor = rephoto.isUploadedByCurrentUser() ? R.color.tint : R.color.none;
                 authorView.setTextColor(getResources().getColor(textColor));
                 dateView.setText(Dates.toDDMMYYYYString(rephoto.getDate()));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        };
+    }
+
+    private ViewPager.OnPageChangeListener createOriginalPhotoOnPageChangeListener(final ImagePagerAdapter adapter) {
+        return new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                m_photo = (Photo) adapter.getPhotoModel(position);
+
+                m_flippedMode = false;
+                m_immersiveMode = false;
+                m_rephotoViewMode = false;
+                m_offset = null;
+
+                invalidateAzimuth();
+                invalidatePhoto();
             }
 
             @Override
@@ -325,8 +341,13 @@ public class PhotoFragment extends ImageFragment {
             return true;
         } else if (item.getItemId() == R.id.action_flip) {
             m_flippedMode = !m_flippedMode;
-            getImageView().setFlipped(m_flippedMode);
-            getRephotoViewOriginalImageView().setFlipped(m_flippedMode);
+            getImmersiveImage().setFlipped(m_flippedMode);
+            getRephotoViewOriginalPhotoContainer().setFlipped(m_flippedMode);
+            ImagePagerAdapter originalPhotoPager = (ImagePagerAdapter) getOriginalPhotoViewPager().getAdapter();
+
+//            TODO this does not work
+            WebImageView imageView = originalPhotoPager.getImageView();
+            imageView.setFlipped(m_flippedMode);
             setFlipIcon(item);
             return true;
         }
@@ -355,8 +376,8 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
-        int viewWidth = getMainLayout().getWidth();
-        int viewHeight = getMainLayout().getHeight();
+        int viewWidth = getImmersiveModeLayout().getWidth();
+        int viewHeight = getImmersiveModeLayout().getHeight();
         float imageViewDrawableRatio = (float) viewWidth / imageView.getDrawable().getIntrinsicWidth();
 
         avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
@@ -436,14 +457,14 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == REQUEST_CAMERA) {
-            if(resultCode == Activity.RESULT_OK) {
+        if (requestCode == REQUEST_CAMERA) {
+            if (resultCode == Activity.RESULT_OK) {
                 Context context = getActivity();
 
-                if(m_photo != null) {
+                if (m_photo != null) {
                     m_photo = Photo.update(m_photo, m_photo.getRephotosCount() + 1, m_photo.getUploadsCount() + 1);
 
-                    if(m_album != null) {
+                    if (m_album != null) {
                         m_album = Album.update(m_album, m_photo);
                     }
 
@@ -453,11 +474,11 @@ public class PhotoFragment extends ImageFragment {
                 getConnection().enqueue(context, Photo.createStateAction(context, m_photo), new WebAction.ResultHandler<Photo>() {
                     @Override
                     public void onActionResult(Status status, Photo photo) {
-                        if(photo != null && (m_photo == null || m_photo.getRephotosCount() <= photo.getRephotosCount())) {
-                            if(m_album != null) {
+                        if (photo != null && (m_photo == null || m_photo.getRephotosCount() <= photo.getRephotosCount())) {
+                            if (m_album != null) {
                                 m_album = Album.update(m_album, photo);
 
-                                if(m_photo != null && Objects.match(m_photo.getIdentifier(), photo.getIdentifier())) {
+                                if (m_photo != null && Objects.match(m_photo.getIdentifier(), photo.getIdentifier())) {
                                     m_photo = photo;
                                     invalidatePhoto();
                                 }
@@ -469,33 +490,37 @@ public class PhotoFragment extends ImageFragment {
         }
     }
 
+    //    TODO avoid sending boolean as param
     private void setImmersiveMode(boolean flag) {
         m_immersiveMode = flag;
 
-        if(m_immersiveMode) {
-            getInfoLayout().setVisibility(INVISIBLE);
-            getOverlayLayout().setVisibility(INVISIBLE);
+        if (m_immersiveMode) {
+            getImmersiveImage().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+            getDetailsViewLayout().setVisibility(INVISIBLE);
+            getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+            getRephotosViewLayout().setVisibility(INVISIBLE);
+            getImmersiveModeLayout().setVisibility(VISIBLE);
             getActionBar().hide();
         } else {
-            getInfoLayout().setVisibility(VISIBLE);
-            getOverlayLayout().setVisibility(VISIBLE);
+            getDetailsViewLayout().setVisibility(VISIBLE);
+            getDetailsViewImagesLayout().setVisibility(VISIBLE);
+            getRephotosViewLayout().setVisibility(INVISIBLE);
+            getImmersiveModeLayout().setVisibility(INVISIBLE);
             getActionBar().show();
             getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
         }
     }
 
+//    TODO avoid sending boolean as param
     private void setRephotoViewMode(boolean flag) {
         m_rephotoViewMode = flag;
 
-        if(m_rephotoViewMode) {
+        if (m_rephotoViewMode) {
             getActionBar().setDisplayHomeAsUpEnabled(false);
-            getImageView().setVisibility(INVISIBLE);
-            getInfoLayout().setVisibility(INVISIBLE);
-            getOverlayLayout().setVisibility(INVISIBLE);
-            getRephotoDetailsLayout().setVisibility(VISIBLE);
-            getOriginalPhotoContainer().setVisibility(VISIBLE);
-            getRephotoViewPager().setVisibility(VISIBLE);
-            getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+            getDetailsViewLayout().setVisibility(INVISIBLE);
+            getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+            getRephotosViewLayout().setVisibility(VISIBLE);
+            getRephotoViewOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
             final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
             getRephotoViewPager().setAdapter(adapter);
             final ViewPager.OnPageChangeListener pageChangeListener = createRephotoOnPageChangeListener(adapter);
@@ -503,26 +528,23 @@ public class PhotoFragment extends ImageFragment {
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
-            getImageView().setVisibility(VISIBLE);
-            getInfoLayout().setVisibility(VISIBLE);
-            getOverlayLayout().setVisibility(VISIBLE);
-            getRephotoDetailsLayout().setVisibility(INVISIBLE);
-            getOriginalPhotoContainer().setVisibility(INVISIBLE);
-            getRephotoViewPager().setVisibility(INVISIBLE);
+            getDetailsViewLayout().setVisibility(VISIBLE);
+            getDetailsViewImagesLayout().setVisibility(VISIBLE);
+            getRephotosViewLayout().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
     }
 
     public void invalidate(Location location, float[] orientation) {
-        if(m_photo != null) {
+        if (m_photo != null) {
             int azimuth = Math.round(Locations.getAzimuthInDegrees(getActivity(), location, m_photo.getLocation(), orientation));
 
-            if(m_location != location) {
+            if (m_location != location) {
                 m_location = location;
                 invalidateLocation();
             }
 
-            if(m_azimuth != azimuth) {
+            if (m_azimuth != azimuth) {
                 m_azimuth = azimuth;
                 invalidateAzimuth();
             }
@@ -535,34 +557,33 @@ public class PhotoFragment extends ImageFragment {
         Date date = m_photo.getDate();
         m_favorited = m_photo.isFavorited();
 
-        getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getRephotosCountImageView().setImageResource(Images.toRephotoCountDrawableId(m_photo.getRephotosCount()));
 
-        if(m_photo.getUploadsCount() > 0) {
+        if (m_photo.getUploadsCount() > 0) {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
         }
 
-        if(author != null && author.length() == 0) {
+        if (author != null && author.length() == 0) {
             author = null;
         }
 
-        if(m_photo.getSource() != null) {
+        if (m_photo.getSource() != null) {
             getSubtitleView().setText(m_photo.getSource().toHtml());
         }
 
-        if(title != null) {
+        if (title != null) {
             getTitleView().setText(title);
         }
 
-        if(author != null) {
+        if (author != null) {
             getAuthorView().setText(author);
         }
 
-        if(date != null) {
+        if (date != null) {
             String dateString = Strings.toLocalizedDate(getActivity(), date);
-            if(author != null) {
+            if (author != null) {
                 dateString = ", " + dateString;
             }
             getDateView().setText(dateString);
@@ -574,8 +595,8 @@ public class PhotoFragment extends ImageFragment {
     private void invalidateAzimuth() {
         ImageButton azimuthButton = getAzimuthButton();
 
-        if(m_photo.getLocation() != null) {
-            azimuthButton.setRotation((float)m_azimuth);
+        if (m_photo.getLocation() != null) {
+            azimuthButton.setRotation((float) m_azimuth);
             azimuthButton.setVisibility(VISIBLE);
         } else {
             azimuthButton.setVisibility(GONE);
@@ -586,58 +607,53 @@ public class PhotoFragment extends ImageFragment {
         getDistanceView().setText(Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location));
     }
 
-    private View getInfoLayout() {
-        return getView().findViewById(R.id.layout_info);
-    }
-
-    private View getOverlayLayout() {
-        return getView().findViewById(R.id.layout_overlay);
-    }
-
     private ImageButton getAzimuthButton() {
-        return (ImageButton)getView().findViewById(R.id.button_action_azimuth);
+        return (ImageButton) getView().findViewById(R.id.button_action_azimuth);
     }
 
     private Button getRephotoButton() {
-        return (Button)getView().findViewById(R.id.button_action_rephoto);
+        return (Button) getView().findViewById(R.id.button_action_rephoto);
     }
 
     private TextView getDistanceView() {
-        return (TextView)getView().findViewById(R.id.text_distance);
+        return (TextView) getView().findViewById(R.id.text_distance);
     }
 
     private TextView getTitleView() {
-        return (TextView)getView().findViewById(R.id.text_title);
+        return (TextView) getView().findViewById(R.id.text_title);
     }
 
     private TextView getAuthorView() {
-        return (TextView)getView().findViewById(R.id.text_author);
+        return (TextView) getView().findViewById(R.id.text_author);
     }
 
     private TextView getDateView() {
-        return (TextView)getView().findViewById(R.id.text_date);
+        return (TextView) getView().findViewById(R.id.text_date);
     }
 
     private ImageView getRephotosCountImageView() {
-        return (ImageView)getView().findViewById(R.id.image_rephoto);
+        return (ImageView) getView().findViewById(R.id.image_rephoto);
     }
 
     private Button getSubtitleView() {
-        return (Button)getView().findViewById(R.id.button_subtitle);
+        return (Button) getView().findViewById(R.id.button_subtitle);
     }
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {
-        return (SwipeRefreshLayout)getView().findViewById(R.id.swiperefresh);
+        return (SwipeRefreshLayout) getView().findViewById(R.id.swiperefresh);
     }
 
-    protected WebImageView getOriginalPhotoContainer() {
-        return (WebImageView) getView().findViewById(R.id.rephotos_original);
+    protected WebImageView getRephotoViewOriginalPhotoContainer() {
+        return (WebImageView) getView().findViewById(R.id.rephotos_original_image);
     }
 
     protected ViewPager getRephotoViewPager() {
         return (ViewPager) getView().findViewById(R.id.rephoto_pager);
     }
 
+    protected ViewPager getOriginalPhotoViewPager() {
+        return (ViewPager) getView().findViewById(R.id.original_photo_pager);
+    }
 
     private TextView getRephotoDateView() {
         return (TextView) getView().findViewById(R.id.rephoto_date);
@@ -647,15 +663,27 @@ public class PhotoFragment extends ImageFragment {
         return (TextView) getView().findViewById(R.id.rephoto_author);
     }
 
-    private RelativeLayout getRephotoDetailsLayout() {
-        return (RelativeLayout) getView().findViewById(R.id.rephoto_details_layout);
+    private LinearLayout getRephotosViewLayout() {
+        return getView().findViewById(R.id.rephotos_layout);
+    }
+
+    private RelativeLayout getDetailsViewLayout() {
+        return getView().findViewById(R.id.details_view_layout);
+    }
+
+    private LinearLayout getImmersiveModeLayout() {
+        return getView().findViewById(R.id.immersive_layout);
+    }
+
+    private LinearLayout getDetailsViewImagesLayout() {
+        return getView().findViewById(R.id.details_view_images_layout);
+    }
+
+    private WebImageView getImmersiveImage() {
+        return getView().findViewById(R.id.immersive_image);
     }
 
     private Button getCloseRephotoButton() {
         return (Button) getView().findViewById(R.id.button_action_close_rephotos);
-    }
-
-    private WebImageView getRephotoViewOriginalImageView() {
-        return (WebImageView) getView().findViewById(R.id.rephotos_original);
     }
 }
