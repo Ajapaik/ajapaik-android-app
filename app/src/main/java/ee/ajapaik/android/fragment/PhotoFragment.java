@@ -236,7 +236,7 @@ public class PhotoFragment extends ImageFragment {
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
                     public void onSingleTap() {
-                        setImmersiveMode(false);
+                        hideImmersiveMode();
                     }
                 }
         }));
@@ -245,7 +245,7 @@ public class PhotoFragment extends ImageFragment {
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
                     public void onSingleTap() {
-                        setImmersiveMode(true);
+                        showImmersiveMode();
                     }
                 }
         );
@@ -494,28 +494,27 @@ public class PhotoFragment extends ImageFragment {
         }
     }
 
-    //    TODO avoid sending boolean as param
-    private void setImmersiveMode(boolean flag) {
-        m_immersiveMode = flag;
-
-        if (m_immersiveMode) {
-            getImmersiveImage().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-            getDetailsViewLayout().setVisibility(INVISIBLE);
-            getDetailsViewImagesLayout().setVisibility(INVISIBLE);
-            getRephotosViewLayout().setVisibility(INVISIBLE);
-            getImmersiveModeLayout().setVisibility(VISIBLE);
-            getActionBar().hide();
-        } else {
-            getDetailsViewLayout().setVisibility(VISIBLE);
-            getDetailsViewImagesLayout().setVisibility(VISIBLE);
-            getRephotosViewLayout().setVisibility(INVISIBLE);
-            getImmersiveModeLayout().setVisibility(INVISIBLE);
-            getActionBar().show();
-            getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
-        }
+    private void showImmersiveMode() {
+        m_immersiveMode = true;
+        getImmersiveImage().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
+        getDetailsViewLayout().setVisibility(INVISIBLE);
+        getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+        getRephotosViewLayout().setVisibility(INVISIBLE);
+        getImmersiveModeLayout().setVisibility(VISIBLE);
+        getActionBar().hide();
     }
 
-//    TODO avoid sending boolean as param
+    private void hideImmersiveMode() {
+        m_immersiveMode = false;
+        getDetailsViewLayout().setVisibility(VISIBLE);
+        getDetailsViewImagesLayout().setVisibility(VISIBLE);
+        getRephotosViewLayout().setVisibility(INVISIBLE);
+        getImmersiveModeLayout().setVisibility(INVISIBLE);
+        getActionBar().show();
+        getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
+    }
+
+    //    TODO avoid sending boolean as param
     private void setRephotoViewMode(boolean flag) {
         m_rephotoViewMode = flag;
 
