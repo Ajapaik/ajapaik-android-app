@@ -1,2 +1,2 @@
-- Added new and improved existing translations
-- Optimized image processing to reduce outOfMemory errors
+note.1=Added new and improved existing translations
+note.2=Optimized image processing to reduce outOfMemory errors
