@@ -520,13 +520,17 @@ public class PhotoFragment extends ImageFragment {
         getDetailsViewLayout().setVisibility(INVISIBLE);
         getDetailsViewImagesLayout().setVisibility(INVISIBLE);
         getRephotosViewLayout().setVisibility(VISIBLE);
+        initRephotosPager();
+        getActivity().invalidateOptionsMenu();
+    }
+
+    private void initRephotosPager() {
         getRephotoViewOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
         getRephotoViewPager().setAdapter(adapter);
         final ViewPager.OnPageChangeListener pageChangeListener = createRephotoOnPageChangeListener(adapter);
         getRephotoViewPager().addOnPageChangeListener(pageChangeListener);
         selectFirstRephotoToDisplay(pageChangeListener);
-        getActivity().invalidateOptionsMenu();
     }
 
     private void hideRephotoViewMode() {
