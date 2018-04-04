@@ -145,14 +145,15 @@ public class PhotoFragment extends ImageFragment {
             m_location = getSettings().getLocation();
         }
         initializeImmersiveMode();
+        initDetailsViewMode();
 
-        getOriginalPhotoViewPager().setVisibility(VISIBLE);
-        final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_album.getPhotos());
-        getOriginalPhotoViewPager().setAdapter(adapter);
-        final ViewPager.OnPageChangeListener pageChangeListener = createOriginalPhotoOnPageChangeListener(adapter);
-        getOriginalPhotoViewPager().addOnPageChangeListener(pageChangeListener);
-        getOriginalPhotoViewPager().setCurrentItem(m_album.getPhotos().indexOf(m_photo));
-        invalidatePhoto();
+        if (m_rephotoViewMode) {
+            showRephotoViewMode();
+        } else if (m_immersiveMode) {
+            showImmersiveMode();
+        } else {
+            showDetailsViewMode();
+        }
 
         getSubtitleView().setOnClickListener(new OnClickListener() {
             @Override
@@ -196,6 +197,13 @@ public class PhotoFragment extends ImageFragment {
                 hideRephotoViewMode();
             }
         });
+    }
+
+    private void initDetailsViewMode() {
+        final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_album.getPhotos());
+        getOriginalPhotoViewPager().setAdapter(adapter);
+        final ViewPager.OnPageChangeListener pageChangeListener = createOriginalPhotoOnPageChangeListener(adapter);
+        getOriginalPhotoViewPager().addOnPageChangeListener(pageChangeListener);
     }
 
     private void initializeImmersiveMode() {
@@ -323,8 +331,6 @@ public class PhotoFragment extends ImageFragment {
                 m_photo = (Photo) adapter.getPhotoModel(position);
 
                 m_flippedMode = false;
-                m_immersiveMode = false;
-                m_rephotoViewMode = false;
                 m_offset = null;
 
                 invalidateAzimuth();
@@ -497,8 +503,7 @@ public class PhotoFragment extends ImageFragment {
     private void showImmersiveMode() {
         m_immersiveMode = true;
         getImmersiveImage().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
-        getDetailsViewLayout().setVisibility(INVISIBLE);
-        getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+        hideDetailsViewMode();
         getRephotosViewLayout().setVisibility(INVISIBLE);
         getImmersiveModeLayout().setVisibility(VISIBLE);
         getActionBar().hide();
@@ -506,10 +511,7 @@ public class PhotoFragment extends ImageFragment {
 
     private void hideImmersiveMode() {
         m_immersiveMode = false;
-        getDetailsViewLayout().setVisibility(VISIBLE);
-        getDetailsViewImagesLayout().setVisibility(VISIBLE);
-        getRephotosViewLayout().setVisibility(INVISIBLE);
-        getImmersiveModeLayout().setVisibility(INVISIBLE);
+        showDetailsViewMode();
         getActionBar().show();
         getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
     }
@@ -517,9 +519,9 @@ public class PhotoFragment extends ImageFragment {
     private void showRephotoViewMode() {
         m_rephotoViewMode = true;
         getActionBar().setDisplayHomeAsUpEnabled(false);
-        getDetailsViewLayout().setVisibility(INVISIBLE);
-        getDetailsViewImagesLayout().setVisibility(INVISIBLE);
+        hideDetailsViewMode();
         getRephotosViewLayout().setVisibility(VISIBLE);
+        getImmersiveModeLayout().setVisibility(INVISIBLE);
         initRephotosPager();
         getActivity().invalidateOptionsMenu();
     }
@@ -536,10 +538,22 @@ public class PhotoFragment extends ImageFragment {
     private void hideRephotoViewMode() {
         m_rephotoViewMode = false;
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        showDetailsViewMode();
+        getActivity().invalidateOptionsMenu();
+    }
+
+    private void showDetailsViewMode() {
         getDetailsViewLayout().setVisibility(VISIBLE);
         getDetailsViewImagesLayout().setVisibility(VISIBLE);
         getRephotosViewLayout().setVisibility(INVISIBLE);
-        getActivity().invalidateOptionsMenu();
+        getImmersiveModeLayout().setVisibility(INVISIBLE);
+        getOriginalPhotoViewPager().setCurrentItem(m_album.getPhotos().indexOf(m_photo));
+        invalidatePhoto();
+    }
+
+    private void hideDetailsViewMode() {
+        getDetailsViewLayout().setVisibility(INVISIBLE);
+        getDetailsViewImagesLayout().setVisibility(INVISIBLE);
     }
 
     public void invalidate(Location location, float[] orientation) {
