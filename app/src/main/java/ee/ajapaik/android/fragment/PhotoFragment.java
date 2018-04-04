@@ -217,7 +217,6 @@ public class PhotoFragment extends ImageFragment {
                             if (newScale < 1.0f) {
                                 newScale = 1.0f;
                             }
-                            ;
                             imageView.setScale(newScale);
                             m_scale = imageView.getScale();
                         }
@@ -249,7 +248,7 @@ public class PhotoFragment extends ImageFragment {
                 }
         }));
 
-        getMainLayout().setOnTouchListener(
+        getDetailsViewImagesLayout().setOnTouchListener(
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
                     public void onSingleTap() {
@@ -388,10 +387,22 @@ public class PhotoFragment extends ImageFragment {
     private void avoidScrollingOutOfViewport(WebImageView imageView) {
         int viewWidth = getImmersiveModeLayout().getWidth();
         int viewHeight = getImmersiveModeLayout().getHeight();
-        float imageViewDrawableRatio = (float) viewWidth / imageView.getDrawable().getIntrinsicWidth();
+        float imageViewDrawableRatio = getImageViewRatio(imageView, viewWidth, viewHeight);
 
         avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
         avoidScrollingOutOfViewportOnYAxle(imageView, viewHeight, imageViewDrawableRatio);
+    }
+
+    private float getImageViewRatio(WebImageView imageView, float viewWidth, float viewHeight) {
+        return isFullWidth(imageView) ?
+                viewWidth / imageView.getDrawable().getIntrinsicWidth() :
+                viewHeight / imageView.getDrawable().getIntrinsicHeight();
+    }
+
+    private boolean isFullWidth(WebImageView imageView) {
+        float layoutRatio = (float) getMainLayout().getWidth() / (float) getMainLayout().getHeight();
+        float imageViewRatio = (float) imageView.getDrawable().getIntrinsicWidth() / (float) imageView.getDrawable().getIntrinsicHeight();
+        return layoutRatio < imageViewRatio;
     }
 
     private void avoidScrollingOutOfViewportOnYAxle(WebImageView imageView, int viewHeight, float imageViewDrawableRatio) {
