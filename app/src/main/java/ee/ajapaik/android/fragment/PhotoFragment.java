@@ -78,6 +78,7 @@ public class PhotoFragment extends ImageFragment {
     private Location m_location;
     private Album m_album;
     private PointF m_offset = null;
+    private Menu menu;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -250,6 +251,7 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        this.menu = menu;
         inflater.inflate(R.menu.menu_photo, menu);
         setFlipIcon(menu.findItem(R.id.action_flip));
         if (m_rephotoViewMode) {
@@ -563,6 +565,10 @@ public class PhotoFragment extends ImageFragment {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
+        }
+
+        if (menu != null) {
+            setFavoritedIcon(menu.findItem(R.id.action_favorite));
         }
 
         if (author != null && author.length() == 0) {
