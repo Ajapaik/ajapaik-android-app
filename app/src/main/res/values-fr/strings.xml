@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Gomoko
+* Puik
+* Wladek92
+-->
 <resources>
   <string name="app_name">Ajapaik rephotographie</string>
   <string name="processing_image">Traitement d\'image en cours</string>

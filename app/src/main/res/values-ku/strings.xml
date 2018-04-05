@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Bikarhêner
+* Ghybu
+-->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">Wêne tê barkirin</string>
@@ -69,6 +73,7 @@
   <string name="about_title">Derbar</string>
   <string name="version">Versiyon</string>
   <string name="contact">Têkilî</string>
+  <string name="privacy_policy">Siyaseta veşarîtiyê</string>
   <string name="settings_show_tutorial">Hînkerê di moda dîsa-wênekirinê de nîşan bide</string>
   <string name="settings_agree_to_license_terms">Ez qebûl dikim ku dîsa-wênekirinên min li ser Ajapaik.ee\'yê di bin lîsansa CC BY 4.0 de werin weşandin.</string>
   <string name="tutorial_dismiss">Min fam kir!</string>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* ديفيد
+* عبد الإله صديقي
+-->
 <resources>
   <string name="app_name">أجابيك لإعادة التصوير</string>
   <string name="processing_image">معالجة الصورة</string>

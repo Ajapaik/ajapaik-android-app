@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Bjankuloski06
+-->
 <resources>
   <string name="app_name">Споредбен сликач Ajapaik</string>
   <string name="unit_km">км</string>
@@ -39,7 +42,7 @@
   <plurals name="profile_rephotos">
     <item quantity="zero">Засега немате направено ниедна споредбена слика</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; споредбена слика</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; споредбени слики</item>
   </plurals>
   <string name="login_title">Најава</string>
   <string name="login_failed">Најавата не успеа</string>

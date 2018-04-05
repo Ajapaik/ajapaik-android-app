@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Borichèt
+-->
 <resources>
   <string name="app_name">neuva fòto Ajapaik</string>
   <string name="processing_image">Plancia an tratament</string>
@@ -43,4 +46,39 @@
   <string name="login_failed">Conession nen riussìa</string>
   <string name="wrong_password">Ciav nen bon-a!</string>
   <string name="registration_title">Anscriv-se</string>
+  <string name="user_already_exists">Së stranòm a esist già</string>
+  <string name="upload_title">Confirmé ël dobion dla fòto</string>
+  <string name="upload_dialog_error_connection_title">Eror ëd conession</string>
+  <string name="upload_dialog_error_connection_message">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_connection_retry">Prové torna</string>
+  <string name="upload_dialog_error_connection_ok">Va bin</string>
+  <string name="upload_dialog_error_unknown_title">Eror nen conossù</string>
+  <string name="upload_dialog_error_unknown_message">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_unknown_retry">Prové torna</string>
+  <string name="upload_dialog_error_unknown_ok">Anulé</string>
+  <string name="upload_dialog_process_title">Cariament ëd la fòto</string>
+  <string name="upload_dialog_process_message">Ch\'a l\'abia passiensa…</string>
+  <string name="upload_dialog_success_title">Cariament riussì</string>
+  <string name="upload_dialog_success_message">La fòto a l\'é stàita carià për da bin!</string>
+  <string name="upload_dialog_success_ok">Va bin</string>
+  <string name="upload_dialog_not_authenticated_title">A venta esse rintrà ant ël sistema për podèj caré</string>
+  <string name="upload_dialog_not_authenticated_message">Ridirige a la pàgina dël profil</string>
+  <string name="upload_dialog_not_authenticated_ok">Va bin</string>
+  <string name="upload_dialog_not_agreed_to_terms">I son d\'acòrd a publiché ij dobion dle fòto sota la licensa CC BY 4.0.</string>
+  <string name="upload_dialog_agree_to_terms">Bò!</string>
+  <string name="upload_dialog_decline_terms">Nò</string>
+  <string name="acra_dialog_title">\'Ajapaik fòto dobion\' a l\'é piantasse</string>
+  <string name="acra_dialog_text">A-i é rivaje n\'eror nen ëspetà an forsand l\'aplicassion a saresse. Për piasì, ch\'an giuta a corege sòn an mandand-ne ij dàit ëd l\'eror, tut lòn ch\'a l\'ha da fé a l\'é dë sgnaché su Va bin.</string>
+  <string name="acra_dialog_comment_prompt">A peul gionté ij sò coment an sël problema sì-sota:</string>
+  <string name="acra_dialog_ok_toast">Mersì!</string>
+  <string name="about_title">A propòsit</string>
+  <string name="version">Version</string>
+  <string name="contact">Contat</string>
+  <string name="privacy_policy">Confidensialità</string>
+  <string name="navigation_drawer_open">Duverté ël tirol</string>
+  <string name="navigation_drawer_close">Saré \'l tirol</string>
+  <string name="settings_show_tutorial">Smon-e lë spiegon an meud dobion ëd fòto</string>
+  <string name="settings_agree_to_license_terms">I son d\'acòrd ëd publiché ij dobion ëd fòto su Ajapaik.ee sota la licensa CC BY 4.0.</string>
+  <string name="tutorial_hide_show_flip">Sgnaché për ëstërmé/smon-e la plancia.\nDovré la plancia ëd viragi ant ël canton an àut a drita për volté la plancia veja.</string>
+  <string name="tutorial_opacity_zoom">Fé sghijé për rangé la trasparensa dla veja plancia.\nPëssié l\'angrandiment për modifiché l\'angrandiment ëd la veja plancia.</string>
 </resources>

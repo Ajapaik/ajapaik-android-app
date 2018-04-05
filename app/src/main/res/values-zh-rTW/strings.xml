@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Kly
+* 和平至上
+-->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">圖片處理中</string>

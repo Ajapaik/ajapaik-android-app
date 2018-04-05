@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Liuxinyu970226
+* Puik
+* Robby
+-->
 <resources>
+  <string name="app_name">Name of the app (how it is displayed in the apps listing etc).\nIn some languages (Estonian, Finnish) we\'ve actually used \"then and now\" not \"rephotography\" in the name.</string>
+  <string name="processing_image">Message when rephotograph has been captured and is being processed (cropped according to old image zoom etc)</string>
+  <string name="please_wait">Second part of message when rephotograph is processed</string>
+  <string name="something_went_wrong">Generic error message</string>
+  <string name="action_albums">Menu item for displaying the list of public albums (or albums created by user)</string>
+  <string name="action_flip">Alt message (not shown in user interface) for flip icon that flips image horizontally (needed when the historic image happens to be horizontally mirrored).</string>
   <string name="action_profile">{{Identical|Profile}}</string>
   <string name="action_refresh">{{Identical|Refresh}}</string>
   <string name="action_settings">{{Identical|Settings}}</string>
+  <string name="nearest_title">Menu section opened by default that displays nearest geotagged images to user\'s location. NB! only geotagged images are displayed – when opening an album from albums menu all pictures inside the album are displayed that is also those not geotagged.</string>
+  <string name="albums_label_no_data">Error message when no albums can be displayed (basically hypothetical).</string>
   <string name="album_title">{{Identical|Album}}</string>
   <string name="nearest_dialog_error_location_disabled_close">{{Identical|Close}}</string>
+  <string name="nearest_label_no_data">Displayed when no images from nearby (...) the user can be displayed</string>
+  <string name="nearest_label_no_data_button">Second part of message when no nearby images can be displayed suggesting the user to select \'Albums\' from the menu to see images</string>
   <string name="profile_title">{{Identical|Profile}}</string>
+  <string name="profile_facebook_login">One of the sign-in options</string>
+  <string name="profile_google_login">One of the sign-in options</string>
   <string name="profile_register">{{Identical|Create account}}</string>
   <string name="input_password_hint">{{Identical|Password}}</string>
   <string name="input_firstname_hint">{{Identical|First name}}</string>
+  <string name="profile_rephotos">Message displayed in user profile section indicating how many rephotos (if any) user has uploaded to Ajapaik (rephoto drafts do not count)</string>
+  <string name="upload_dialog_error_connection_message">When uploading of the rephoto fails</string>
+  <string name="upload_dialog_error_connection_ok">{{Identical|OK}}</string>
   <string name="upload_dialog_error_unknown_ok">{{Identical|Cancel}}</string>
+  <string name="upload_dialog_success_message">Confirmation message when the rephoto gets successfully uploaded to Ajapaik platform</string>
+  <string name="upload_dialog_not_authenticated_title">Alert to log in in order to upload rephotos to Ajapaik</string>
   <string name="upload_dialog_not_authenticated_ok">{{Identical|OK}}</string>
+  <string name="upload_dialog_not_agreed_to_terms">Confirmation in app settings section where user agrees to publishing rephotos under CC BY (has to be ticked otherwise user cannot upload rephotos).</string>
   <string name="upload_dialog_agree_to_terms">{{Identical|Yes}}</string>
   <string name="upload_dialog_decline_terms">{{Identical|No}}</string>
   <string name="acra_dialog_ok_toast">{{Identical|Thank you}}</string>
   <string name="about_title">{{Identical|About}}</string>
   <string name="version">{{Identical|Version}}</string>
   <string name="contact">{{Identical|Contact}}</string>
+  <string name="privacy_policy">{{Identical|Privacy}}</string>
+  <string name="settings_show_tutorial">Needs to be ticked in app settings section when user wants the rephoto user interface tutorial to be displayed again when user opens rephotography view</string>
+  <string name="settings_agree_to_license_terms">Dialogue message when user wants to upload his or her first rephotograph. User can give the confirmation also later (or withdraw it) in settings menu</string>
+  <string name="tutorial_hide_show_flip">First screen in rephotography mode tutorial explaining the rephoto user interface</string>
+  <string name="tutorial_opacity_zoom">Second screen in rephotography mode tutorial explaining the rephoto user interface</string>
+  <string name="tutorial_take_picture">Third screen in rephotography mode tutorial explaining the rephoto user interface</string>
+  <string name="tutorial_dismiss">User needs to tap the \"Got it!\" messages in the rephotography tutorial to get rid of the 3 tutorial screens</string>
+  <string name="tutorial_dialog_show_again_title">Dialogue message that pops up when the user opens the rephotography view for the second time</string>
+  <string name="tutorial_dialog_show_again_message">Note next to the \"Show tutorial again?\" dialogue explaining the user that tutorial can be also activated later on in the settings</string>
   <string name="tutorial_dialog_show_again_no">{{Identical|No}}</string>
   <string name="tutorial_dialog_show_again_yes">{{Identical|Yes}}</string>
+  <string name="rephoto_drafts">Menu item for rephoto drafts, i.e. rephotos that have not been uploaded to Ajapaik yet (can be either deleted or uploaded)</string>
   <string name="storage_not_permitted_cancel">{{Identical|Cancel}}</string>
+  <string name="rephotos_label_not_logged_in_text">Alert for unauthenticated user when accessing \"My rephotos\" menu</string>
+  <string name="action_search">{{Identical|Search}}</string>
+  <string name="favorites_label_not_logged_in_text">Alert for unauthenticated user when accessing \"My favorites\" menu</string>
 </resources>

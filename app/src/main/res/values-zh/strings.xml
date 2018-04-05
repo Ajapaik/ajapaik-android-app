@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Liuxinyu970226
+-->
 <resources>
   <string name="app_name">Ajapaik照片重制</string>
   <string name="processing_image">正在处理图片</string>

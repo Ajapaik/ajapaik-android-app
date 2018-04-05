@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Papuass
+-->
 <resources>
   <string name="app_name">Ajapaik refoto</string>
   <string name="unit_km">km</string>
@@ -51,7 +54,7 @@
   <string name="upload_dialog_error_connection_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
   <string name="upload_dialog_error_connection_retry">Atkārtot</string>
   <string name="upload_dialog_error_connection_ok">Labi</string>
-  <string name="upload_dialog_error_unknown_title">Kļūda</string>
+  <string name="upload_dialog_error_unknown_title">Nezināma kļūda</string>
   <string name="upload_dialog_error_unknown_message">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
   <string name="upload_dialog_error_unknown_retry">Atkārtot</string>
   <string name="upload_dialog_error_unknown_ok">Atcelt</string>

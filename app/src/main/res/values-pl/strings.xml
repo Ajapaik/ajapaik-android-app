@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* DeRudySoulStorm
+* Railfail536
+-->
 <resources>
   <string name="app_name">Ajapaik refoto</string>
   <string name="processing_image">Przetwarzanie zdjęcia</string>

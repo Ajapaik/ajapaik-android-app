@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* BadDog
+-->
 <resources>
   <string name="please_wait">Сачекајте…</string>
   <string name="something_went_wrong">Нешто је пошло наопако</string>

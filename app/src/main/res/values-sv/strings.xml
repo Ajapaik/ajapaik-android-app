@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* WikiPhoenix
+-->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">Bearbetar bild</string>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Ykhwong
+-->
 <resources>
   <string name="please_wait">기다려 주십시오...</string>
   <string name="something_went_wrong">무언가가 잘못되었습니다</string>
@@ -15,6 +18,7 @@
   <string name="nearest_dialog_error_location_disabled_title">위치가 꺼져 있습니다</string>
   <string name="nearest_dialog_error_location_disabled_message">현재의 위치를 가져올 수 없습니다. 위치를 활성화하시겠습니까?</string>
   <string name="nearest_dialog_error_location_disabled_close">닫기</string>
+  <string name="nearest_label_no_data">주변 사진 없음</string>
   <string name="nearest_label_no_data_button">모든 영상을 둘러보려면 앨범을 보십시오</string>
   <string name="photo_title">사진 상세 정보</string>
   <string name="camera_title">카메라</string>

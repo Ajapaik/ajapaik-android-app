@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Nikosgranturismogt
+-->
 <resources>
   <string name="app_name">επαναφωτογραφία Ajapaik</string>
   <string name="processing_image">Επεξεργασία εικόνας</string>

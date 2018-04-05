@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Aftabuzzaman
+* Rasal Lia
+-->
 <resources>
   <string name="processing_image">চিত্র প্রক্রিয়াকরণ হচ্ছে</string>
   <string name="please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
