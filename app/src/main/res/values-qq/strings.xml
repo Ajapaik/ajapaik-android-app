@@ -26,7 +26,11 @@
   <string name="profile_register">{{Identical|Create account}}</string>
   <string name="input_password_hint">{{Identical|Password}}</string>
   <string name="input_firstname_hint">{{Identical|First name}}</string>
-  <string name="profile_rephotos">Message displayed in user profile section indicating how many rephotos (if any) user has uploaded to Ajapaik (rephoto drafts do not count)</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">You haven\'t made any rephotos yet</item>
+    <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
+    <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
+  </plurals>
   <string name="upload_dialog_error_connection_message">When uploading of the rephoto fails</string>
   <string name="upload_dialog_error_connection_ok">{{Identical|OK}}</string>
   <string name="upload_dialog_error_unknown_ok">{{Identical|Cancel}}</string>
