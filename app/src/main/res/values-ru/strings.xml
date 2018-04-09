@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Happy13241
 * MaxBioHazard
 -->
 <resources>
+  <string name="app_name">Рефото Ajapaik</string>
   <string name="processing_image">Обработка изображения</string>
   <string name="please_wait">Пожалуйста, подождите...</string>
   <string name="something_went_wrong">Что-то пошло не так</string>
@@ -79,6 +81,8 @@
   <string name="settings_show_tutorial">Показать руководство в режиме рефото</string>
   <string name="settings_agree_to_license_terms">Я согласен опубликовать рефотографии на сайте Ajapaik.ee под лицензией CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Нажмите, чтобы скрыть/показать изображение.\nИспользуйте иконку \"перевернуть\" в верхнем правом углу, чтобы перевернуть старое изображение.</string>
+  <string name="tutorial_opacity_zoom">Горка то регулировать прозрачность от старая картинка.\nЗажимать зум от зум старая картинка.</string>
+  <string name="tutorial_take_picture">Нажмите кнопку спуска затвора или долгое нажатие в любом месте экрана, чтобы выполнить повторную съемку.</string>
   <string name="tutorial_dismiss">Понятно!</string>
   <string name="tutorial_dialog_show_again_title">Показать руководство заново?</string>
   <string name="tutorial_dialog_show_again_message">Вы сможете включить руководство позже в настройках</string>
@@ -86,6 +90,8 @@
   <string name="tutorial_dialog_show_again_yes">Да</string>
   <string name="rephoto_drafts">Черновики рефото</string>
   <string name="no_rephotos">Нет рефото</string>
+  <string name="storage_not_permitted_title">Хранение не разрешено</string>
+  <string name="storage_not_permitted_message">Не позволяя этому приложению использовать хранилище, останавливается. Вы получаете доступ к некоторым функциям, например, взяв и загрузив рефлексы. Пожалуйста, учитывайте возможность использования хранилища</string>
   <string name="storage_not_permitted_cancel">Отмена</string>
   <string name="storage_not_permitted_open_settings">Открыть настройки</string>
   <string name="my_rephotos">Мои рефото</string>

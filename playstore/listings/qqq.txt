@@ -1,0 +1,13 @@
+# Messages for Message documentation (Message documentation)
+# Exported from translatewiki.net
+# Author: Puik
+
+title=Name of the app in Google Play Store.\nIn some languages (Estonian, Finnish) we've actually used "then and now" not "rephotography" in the name.
+short-description=One-sentence description (80 characters max) of Ajapaik rephoto app at Google Play Store
+description.accuracy.title=Ajapaik app description 2nd sentence in the Google Play Store listing, list with 2 bullet-points follows.
+description.accuracy.bullet.1=Ajapaik app description in Google Play Store, first bullet point
+description.accuracy.bullet.2=Ajapaik app description in Google Play Store, second bullet point
+description.paragraph.2=Ajapaik app description in Google Play Store, information about the 2018 version
+description.paragraph.3=Additional information about the app's new version in Google Play Store listing
+description.paragraph.4=Information about authentication options in order to upload rephotos to Ajapaik platform
+description.paragraph.5=Information about the rephoto licencing when uploading images to Ajapaik

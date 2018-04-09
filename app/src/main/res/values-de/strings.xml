@@ -81,7 +81,7 @@
   <string name="settings_show_tutorial">Anleitung im Refoto-Modus anzeigen</string>
   <string name="settings_agree_to_license_terms">Ich stimme der Veröffentlichung der Refotos auf Ajapaik.ee unter der Lizenz CC BY 4.0 zu.</string>
   <string name="tutorial_hide_show_flip">Zum Verstecken/Anzeigen des Bildes tippen.\nBenutze das Kippen-Symbol in der obigen rechten Ecke, um das alte Bild zu kippen.</string>
-  <string name="tutorial_opacity_zoom">Schiebe zur Anpassung der Transparenz des alten Bildes.\nTippe auf „Zoom“, um das alte Bild zu vergrößern.</string>
+  <string name="tutorial_opacity_zoom">Schiebe zur Anpassung der Transparenz des alten Bildes.\nPinche, um das alte Bild zu vergrößern.</string>
   <string name="tutorial_take_picture">Drücke den Auslöseknopf oder tippe lang an einer beliebigen Stelle auf dem Bildschirm, um das Refoto zu erstellen.</string>
   <string name="tutorial_dismiss">Verstanden!</string>
   <string name="tutorial_dialog_show_again_title">Anleitung wiederholen?</string>

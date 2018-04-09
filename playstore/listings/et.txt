@@ -1,4 +1,8 @@
-title=Ajapaik
+# Messages for Estonian (eesti)
+# Exported from translatewiki.net
+# Author: Puik
+
+title=Ajapaik – enne ja nüüd
 short-description=Otsi üles ajalooliste fotode tegemise kohad ning pildista samad vaated üle!
 description.paragraph.1=Ajapaiga rakendus näitab ajaloolisi pilte, mis on tehtud Sinu lähedal ning pakub mugava võimaluse vanadel piltidel kujutatud vaated üle pildistada.
 description.accuracy.title=Ülepildistamise täpsuse tagamiseks saad

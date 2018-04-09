@@ -3,7 +3,7 @@
 * WikiPhoenix
 -->
 <resources>
-  <string name="app_name">Ajapaik rephoto</string>
+  <string name="app_name">Ajapaik då och nu</string>
   <string name="processing_image">Bearbetar bild</string>
   <string name="please_wait">Var god vänta…</string>
   <string name="something_went_wrong">Något gick fel</string>
@@ -67,7 +67,7 @@
   <string name="upload_dialog_not_agreed_to_terms">Jag samtycker till att publicera fotografier under licensen CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ja!</string>
   <string name="upload_dialog_decline_terms">Nej</string>
-  <string name="acra_dialog_title">\"Ajapaik rephoto\" kraschade</string>
+  <string name="acra_dialog_title">\"Ajapaik då och nu\" kraschade</string>
   <string name="acra_dialog_text">Ett oväntat fel uppstod som fick appen att sluta fungera. Var god hjälp oss att fixa detta genom att skicka feldata till oss, allt du behöver göra är att klicka på OK.</string>
   <string name="acra_dialog_comment_prompt">Du kan lägga till en kommentar om problemet nedan:</string>
   <string name="acra_dialog_ok_toast">Tack!</string>
@@ -77,11 +77,11 @@
   <string name="privacy_policy">Integritet</string>
   <string name="navigation_drawer_open">Öppna sidomeny</string>
   <string name="navigation_drawer_close">Stäng sidomeny</string>
-  <string name="settings_show_tutorial">Visa guide för fotoläge</string>
+  <string name="settings_show_tutorial">Visa guide i fotoläget</string>
   <string name="settings_agree_to_license_terms">Jag samtycker till att publicera fotografier på Ajapaik.ee under licensen CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Tryck för att dölja/visa bild.\nAnvänd vändikonen längst upp till höger för att vända den gamla bilden.</string>
   <string name="tutorial_opacity_zoom">Dra för att justera den gamla bildens genomskinlighet.\nNyp för att zooma in den gamla bilden.</string>
-  <string name="tutorial_take_picture">Tryck på knappen med kameraslutaren eller håll ned på skärmen för att ta fotot.</string>
+  <string name="tutorial_take_picture">Tryck på knappen för kameraslutaren eller håll ned på skärmen för att ta fotot.</string>
   <string name="tutorial_dismiss">Uppfattat!</string>
   <string name="tutorial_dialog_show_again_title">Visa guiden igen?</string>
   <string name="tutorial_dialog_show_again_message">Du kan aktivera guiden igen från inställningarna senare</string>

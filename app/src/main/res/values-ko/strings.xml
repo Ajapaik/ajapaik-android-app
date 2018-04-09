@@ -68,6 +68,7 @@
   <string name="tutorial_dialog_show_again_message">나중에 설정에서 강좌를 다시 켤 수 있습니다</string>
   <string name="tutorial_dialog_show_again_no">아니오</string>
   <string name="tutorial_dialog_show_again_yes">예</string>
+  <string name="storage_not_permitted_title">저장이 허가되지 않습니다</string>
   <string name="storage_not_permitted_cancel">취소</string>
   <string name="action_search">검색</string>
   <string name="favorites">내 즐겨찾기</string>

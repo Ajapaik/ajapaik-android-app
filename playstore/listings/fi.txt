@@ -1,3 +1,6 @@
+# Messages for Finnish (suomi)
+# Exported from translatewiki.net
+
 title=Ajapaik – Ennen ja nyt
 short-description=Kuvaa vanhojen valokuvien näkymiä uudelleen
 description.paragraph.1=Ajapaik-applikaatiolla näet historiallisia valokuvia lähistöltäsi ja voit helposti kuvata saman näkymän uudelleen.

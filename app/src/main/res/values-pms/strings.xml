@@ -81,4 +81,24 @@
   <string name="settings_agree_to_license_terms">I son d\'acòrd ëd publiché ij dobion ëd fòto su Ajapaik.ee sota la licensa CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Sgnaché për ëstërmé/smon-e la plancia.\nDovré la plancia ëd viragi ant ël canton an àut a drita për volté la plancia veja.</string>
   <string name="tutorial_opacity_zoom">Fé sghijé për rangé la trasparensa dla veja plancia.\nPëssié l\'angrandiment për modifiché l\'angrandiment ëd la veja plancia.</string>
+  <string name="tutorial_take_picture">Sgnaché an sël botor ëd lë stopador o sgnaché tant temp ant un pòst qualsëssìa ëd lë scren për pijé un dobion ëd la fòto.</string>
+  <string name="tutorial_dismiss">Fàit!</string>
+  <string name="tutorial_dialog_show_again_title">Smon-e torna lë spiegon?</string>
+  <string name="tutorial_dialog_show_again_message">A peul ativé torna pi tard lë spiegon dai paràmeter</string>
+  <string name="tutorial_dialog_show_again_no">Nò</string>
+  <string name="tutorial_dialog_show_again_yes">É</string>
+  <string name="rephoto_drafts">Sbòss ëd dobion ëd fòto</string>
+  <string name="no_rephotos">Gnun dobion ëd fòto</string>
+  <string name="storage_not_permitted_title">Archiviassion nen autorisà</string>
+  <string name="storage_not_permitted_message">Nen përmëtte a s\'aplicassion ëd dovré l\'archiviassion a j\'ampediss d\'acede a vàire fonsionalità, për esempi fé e carié dij dobion ëd fòto. Ch\'a pensa s\'a sia nen ël cas ëd përmëtte ëd dovré l\'archiviassion</string>
+  <string name="storage_not_permitted_cancel">Anulé</string>
+  <string name="storage_not_permitted_open_settings">Duverté la configurassion</string>
+  <string name="my_rephotos">Ij mè dobion ëd fòto</string>
+  <string name="rephotos_label_not_logged_in_text">Për piasì, ch\'a rintra ant ël sistema për vëdde ij sò dobion ëd fòto</string>
+  <string name="action_search">Sërché</string>
+  <string name="favorites">Ij mè preferì</string>
+  <string name="no_favorites">Gnun preferì</string>
+  <string name="action_favorite">Preferì</string>
+  <string name="favorites_label_not_logged_in_button">Rintré ant ël sistema</string>
+  <string name="favorites_label_not_logged_in_text">Për piasì, ch\'a rintra ant ël sistema për vëdde ij sò preferì</string>
 </resources>

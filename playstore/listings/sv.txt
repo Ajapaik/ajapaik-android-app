@@ -1,0 +1,14 @@
+# Messages for Swedish (svenska)
+# Exported from translatewiki.net
+# Author: WikiPhoenix
+
+title=Ajapaik då och nu
+short-description=Kolla upp synvinkeln för historiska bilder och ta nya foton av vyerna!
+description.paragraph.1=Applikationen Ajapaik visar historiska bilder som är tagna nära dig och erbjuder ett enkelt sätt att ta nya foton av samma vyer.
+description.accuracy.title=För att ta nya fotografier mer bekvämt
+description.accuracy.bullet.1=* kan du ändra genomskinligheten för den historiska bilden på den kamera genom att svepa över skärmen
+description.accuracy.bullet.2=* nyp för att zooma den historiska bilden
+description.paragraph.2=I den nya (2018) versionen kan du bläddra och söka album, söka efter en specifik bild, visa nya foton av dig eller andra användare.
+description.paragraph.3=Nu kan fotoskisser sparas, bläddras och laddas upp till Ajapaik.ee senare (t.ex. över WiFi).
+description.paragraph.4=För att kunna ladda upp ett nytt fotografi måste du a autentisera dig med ett Google- eller Facebook-konto eller med ett e-postbaserat konto.
+description.paragraph.5=Genom att ladda upp nya foton till Ajapaik samtycker du till att släppa bilderna under licensen Creative Commons Attribution (CC BY).
