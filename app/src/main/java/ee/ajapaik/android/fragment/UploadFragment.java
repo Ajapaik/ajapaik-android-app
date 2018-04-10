@@ -72,6 +72,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private Bitmap currentRephoto;
     private final JsonParser jsonParser = new JsonParser();
 
+    private boolean shouldSwitchWidthAndHeight = false;
+
     public static final String RETURN_ACTIVITY_NAME = "upload";
 
     public List<Upload> getUpload() {
@@ -255,8 +257,14 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private Bitmap scaleRephoto(Upload upload) {
         BitmapFactory.Options options = getBitmapOptions(upload);
         int sampleSize = calculateSampleSize(options);
-        float unscaledImageWidth = options.outWidth / sampleSize;
-        float unscaledImageHeight = options.outHeight / sampleSize;
+        int outWidth = options.outWidth;
+        int outHeight = options.outHeight;
+        if (shouldSwitchWidthAndHeight){
+            outHeight = options.outWidth;
+            outWidth = options.outHeight;
+        }
+        float unscaledImageWidth = outWidth / sampleSize;
+        float unscaledImageHeight = outHeight / sampleSize;
 
         float heightScale = 1.0F;
         float widthScale = 1.0F;
@@ -343,20 +351,24 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     break;
 
                 case ExifInterface.ORIENTATION_TRANSPOSE:
+                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(90);
                     matrix.postScale(-1, 1);
                     break;
 
                 case ExifInterface.ORIENTATION_ROTATE_90:
+                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(90);
                     break;
 
                 case ExifInterface.ORIENTATION_TRANSVERSE:
+                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(-90);
                     matrix.postScale(-1, 1);
                     break;
 
                 case ExifInterface.ORIENTATION_ROTATE_270:
+                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(-90);
                     break;
 
