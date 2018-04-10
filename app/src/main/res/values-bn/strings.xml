@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Aftabuzzaman
+* Rasal Lia
+-->
+<resources>
+  <string name="processing_image">চিত্র প্রক্রিয়াকরণ হচ্ছে</string>
+  <string name="please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
+  <string name="something_went_wrong">কোন একটা ভুল ছিল</string>
+  <string name="action_albums">এ্যালবাম</string>
+  <string name="action_login">প্রবেশ করুন</string>
+  <string name="action_register">নিবন্ধন করুন</string>
+  <string name="action_logout">প্রস্থান</string>
+  <string name="action_profile">প্রোফাইল</string>
+  <string name="action_refresh">পুনঃসতেজ</string>
+  <string name="action_settings">সেটিংস</string>
+  <string name="nearest_title">কাছাকাছির ছবি</string>
+  <string name="albums_label_no_data">কোন এ্যালবাম নেই</string>
+  <string name="albums_title">অ্যালবামগুলি</string>
+  <string name="album_title">অ্যালবাম</string>
+  <string name="nearest_dialog_error_location_disabled_title">অবস্থান নিষ্ক্রিয় করা</string>
+  <string name="nearest_dialog_error_location_disabled_message">বর্তমান অবস্থান জানতে অক্ষম। আপনি কি এটি সক্ষম করতে চান?</string>
+  <string name="nearest_dialog_error_location_disabled_close">বন্ধ করুন</string>
+  <string name="nearest_dialog_error_location_disabled_open">সেটিংস খুলুন</string>
+  <string name="nearest_label_no_data">নিকটবর্তী কোন ছবি নেই</string>
+  <string name="nearest_label_no_data_button">সব ছবি ব্রাউজ করতে অ্যালবাম দেখুন</string>
+  <string name="photo_title">ছবির বিস্তারিত</string>
+  <string name="camera_title">ক্যামেরা</string>
+  <string name="profile_title">প্রোফাইল</string>
+  <string name="profile_facebook_login">ফেসবুক দিয়ে প্রবেশ</string>
+  <string name="profile_google_login">গুগল এক্যাউন্ট ব্যবহার করে প্রবেশ</string>
+  <string name="profile_logout">প্রস্থান</string>
+  <string name="profile_login">প্রবেশ করুন</string>
+  <string name="profile_register">অ্যাকাউন্ট তৈরি করুন</string>
+  <string name="input_username_hint">ইমেইল</string>
+  <string name="input_password_hint">পাসওয়ার্ড</string>
+  <string name="input_firstname_hint">প্রথম নাম</string>
+  <string name="input_lastname_hint">শেষ নাম</string>
+  <string name="login_title">প্রবেশ করুন</string>
+  <string name="login_failed">প্রবেশ চেষ্টা সফল হয়নি</string>
+  <string name="wrong_password">ভুল পাসওয়ার্ড!</string>
+  <string name="registration_title">নিবন্ধন করুন</string>
+  <string name="user_already_exists">ব্যবহারকারী নাম ইতিমধ্যে বিদ্যমান আছে</string>
+  <string name="upload_dialog_error_connection_title">সংযোগ ত্রুটি</string>
+  <string name="upload_dialog_error_connection_message">ছবি আপলোড করতে অক্ষম। আবার চেষ্টা করবেন?</string>
+  <string name="upload_dialog_error_connection_retry">পুনঃচেষ্টা করুন</string>
+  <string name="upload_dialog_error_connection_ok">ঠিক আছে</string>
+  <string name="upload_dialog_error_unknown_title">অজানা ত্রুটি</string>
+  <string name="upload_dialog_error_unknown_message">ছবিটি অাপলোড করতে অক্ষম। পুনঃচেষ্টা করবেন?</string>
+  <string name="upload_dialog_error_unknown_retry">পুনঃচেষ্টা করুন</string>
+  <string name="upload_dialog_error_unknown_ok">বাতিল</string>
+  <string name="upload_dialog_process_title">ছবিটি আপলোড করা হচ্ছে</string>
+  <string name="upload_dialog_process_message">অনুগ্রহ করে অপেক্ষা করুন...</string>
+  <string name="upload_dialog_success_title">অাপলোড সফল হয়েছে</string>
+  <string name="upload_dialog_success_ok">ঠিক আছে</string>
+  <string name="upload_dialog_not_authenticated_ok">ঠিক অাছে</string>
+  <string name="upload_dialog_agree_to_terms">হ্যাঁ!</string>
+  <string name="upload_dialog_decline_terms">না</string>
+  <string name="acra_dialog_comment_prompt">অাপনি নিচের সমস্যাটি সম্পর্কে অাপনার মতামত দিতে পারেন:</string>
+  <string name="acra_dialog_ok_toast">আপনাকে ধন্যবাদ!</string>
+  <string name="about_title">পরিচিতি</string>
+  <string name="version">সংস্করণ</string>
+  <string name="contact">যোগাযোগ</string>
+  <string name="privacy_policy">গোপনীয়তা</string>
+  <string name="tutorial_dismiss">বুঝেছি!</string>
+  <string name="tutorial_dialog_show_again_title">পদ্ধতি পুনরায় দেখবেন?</string>
+  <string name="tutorial_dialog_show_again_no">না</string>
+  <string name="tutorial_dialog_show_again_yes">হ্যাঁ</string>
+  <string name="storage_not_permitted_cancel">বাতিল</string>
+  <string name="action_search">অনুসন্ধান</string>
+  <string name="favorites">আমার পছন্দ</string>
+  <string name="no_favorites">কোন পছন্দ নেই</string>
+  <string name="favorites_label_not_logged_in_button">প্রবেশ</string>
+  <string name="no_search_result">অনুসন্ধানের ফলাফল নেই</string>
+  <string name="album_no_data">কোন ছবি নেই</string>
+</resources>

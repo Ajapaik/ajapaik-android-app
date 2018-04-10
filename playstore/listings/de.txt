@@ -1,0 +1,14 @@
+# Messages for German (Deutsch)
+# Exported from translatewiki.net
+# Author: Metalhead64
+
+title=Ajapaik Refoto
+short-description=Suche den Blickwinkel der historischen Bilder und refotografiere die Ansichten!
+description.paragraph.1=Die Anwendung Ajapaik Refoto zeigt in deiner Nähe aufgenommene historische Bilder an und bietet einen einfachen Weg, Refotos der gleichen Ansichten aufzunehmen.
+description.accuracy.title=Um das Refoto passender zu machen,
+description.accuracy.bullet.1=* Du kannst die Transparenz des historischen Bildes in deinem Kamerastream ändern, indem du durch den Bildschirm wischst.
+description.accuracy.bullet.2=* Pinche das historische Bild
+description.paragraph.2=In der neuen (2018) Version kannst du auch die Alben durchsuchen, nach einem speziellen Bild suchen sowie die Refotos von dir oder anderen Nutzern ansehen.
+description.paragraph.3=Jetzt können die Refoto-Entwürfe gespeichert, durchsucht und später auf Ajapaik.ee hochgeladen werden (beispielsweise über WLAN).
+description.paragraph.4=Um ein Refoto hochzuladen, musst du dich mit einem Google- bzw. Facebook-Benutzerkonto oder einem E-Mail-basierten Benutzerkonto anmelden.
+description.paragraph.5=Durch das Hochladen von Refotos auf Ajapaik stimmst du der Veröffentlichung der Bilder unter der Lizenz Creative Commons Namensnennung (CC BY) zu.

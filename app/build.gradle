@@ -7,8 +7,8 @@ android {
         applicationId "ee.ajapaik.android"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 1010
-        versionName "2.0.1"
+        versionCode 1011
+        versionName "2.0.2"
         multiDexEnabled true
     }
     buildTypes {
@@ -16,6 +16,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
     }
 
     packagingOptions {

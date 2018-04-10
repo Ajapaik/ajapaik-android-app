@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Mirzali
+-->
+<resources>
+  <string name="please_wait">Kerem kerên, bıpawên...</string>
+  <string name="something_went_wrong">Tayê çi ğelet şi</string>
+  <string name="action_albums">Albumi</string>
+  <string name="action_flip">Çerx ke</string>
+  <string name="action_login">Cıkewtış</string>
+  <string name="action_register">Qeyd be</string>
+  <string name="action_logout">Veciyayış</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Newe ke</string>
+  <string name="action_settings">Eyari</string>
+  <string name="albums_title">Albumi</string>
+  <string name="album_title">Album</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Ebe Facebook ra cıkewê</string>
+  <string name="profile_logout">Veciyayış</string>
+  <string name="profile_login">Cı kewe</string>
+  <string name="profile_register">Hesab vıraze</string>
+  <string name="input_username_hint">E-poste</string>
+  <string name="input_password_hint">Parola</string>
+  <string name="input_firstname_hint">Nameyo sıfteyên</string>
+  <string name="input_lastname_hint">Nameyo peyên</string>
+  <string name="login_title">Cıkewtış</string>
+  <string name="login_failed">Cıkewtış hewl bi</string>
+  <string name="registration_title">Qeyd be</string>
+  <string name="upload_dialog_error_connection_ok">TEMAM</string>
+  <string name="upload_dialog_error_unknown_title">Xetaya nêzanıtiye</string>
+  <string name="upload_dialog_error_unknown_ok">Bıtexelne</string>
+  <string name="upload_dialog_process_message">Kerem kerên, bıpawên...</string>
+  <string name="upload_dialog_success_ok">TEMAM</string>
+  <string name="upload_dialog_not_authenticated_ok">TEMAM</string>
+  <string name="upload_dialog_agree_to_terms">Eya!</string>
+  <string name="upload_dialog_decline_terms">Nê</string>
+  <string name="version">Versiyon</string>
+  <string name="contact">İrtıbat</string>
+  <string name="tutorial_dismiss">Mı fehm kerd!</string>
+  <string name="tutorial_dialog_show_again_no">Nê</string>
+  <string name="tutorial_dialog_show_again_yes">Eya</string>
+  <string name="storage_not_permitted_cancel">Bıtexelne</string>
+  <string name="action_search">Cıgeyrayış</string>
+  <string name="favorites_label_not_logged_in_button">Cı kewe</string>
+</resources>

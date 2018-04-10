@@ -1,0 +1,14 @@
+# Messages for Simplified Chinese (中文（简体）‎)
+# Exported from translatewiki.net
+# Author: Liuxinyu970226
+
+title=Ajapaik照片重制
+short-description=找寻历史图片的优越地位，重制照片的视觉！
+description.paragraph.1=Ajapaik照片重制应用程序显示在您附近拍摄的历史图片，并提供容易创作同样视觉的照片重制的方式。
+description.accuracy.title=为了更方便制作照片重制
+description.accuracy.bullet.1=* 您可以在您的照相机光线设置中，通过滑动屏幕来更改历史图片的透明度
+description.accuracy.bullet.2=* 触控缩放历史图片
+description.paragraph.2=在2018年新版本中，您也可以浏览并搜索专辑、搜索特定图片、查看您自己或他人制作的照片重制。
+description.paragraph.3=现在照片重制草稿可以保存与下载，以及日后上传到Ajapaik.ee（比如在您连接wi-fi时）。
+description.paragraph.4=为了上传照片重制，您需要验证您自己的Google或Facebook账户，或验证基于电子邮件的账户。
+description.paragraph.5=通过上传照片重制至Ajapaik，您同意依据知识共享署名（CC BY）许可协议发表您的重制作品。

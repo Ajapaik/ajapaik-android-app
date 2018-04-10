@@ -1,0 +1,7 @@
+# Messages for Czech (čeština)
+# Exported from translatewiki.net
+# Author: Patriccck
+
+title=Ajapaik refotka
+description.accuracy.bullet.1=* můžete změnit průhlednost historického snímku v stramu kamery posunutím podél obrazovky
+description.paragraph.5=Nahráním refotek do Ajapaik souhlasíte s tím, že uvolníte obrázky pod licencí Creative Commons Attribution (CC BY).

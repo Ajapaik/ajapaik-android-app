@@ -1,15 +1,13 @@
+# Messages for Finnish (suomi)
+# Exported from translatewiki.net
+
 title=Ajapaik – Ennen ja nyt
 short-description=Kuvaa vanhojen valokuvien näkymiä uudelleen
-description=Ajapaik-applikaatiolla näet historiallisia valokuvia lähistöltäsi ja voit helposti kuvata saman näkymän uudelleen.
-
-            Jälleenkuvatessa…
-            * voit muuttaa historiallisen kuvan läpinäkyvyyttä kännykän kamerakuvan päällä sormella liu’uttamalla.
-            * voit zoomata lähemmäs historialliseen kuvaan nipistämällä
-
-            Uudessa vuoden 2018 versiossa voit selata ja hakea albumeista, etsiä tiettyä kuvaa, katsoa muiden ottamia tai omia kuviasi.
-
-            Nyt jälleenkuvattujen kuvien luonnoksia voi tallentaa ja ladata myöhemmin Ajapaik.ee-palveluun, esimerkiksi kun voit käyttää wi-fi-yhteyttä.
-
-            Jotta voit ladata jälleenkuvatun kuvan, sinun täytyy tunnistautua Googlen tai Facebookin tunnuksella tai luoda uusi käyttäjätunnus.
-
-            Lataamalla jälleenkuvatun kuvan Ajapaik.ee-palveluun, annat luvan julkaista kuvan Creative Commons Nimeä 4.0 (CC BY 4.0) – lisenssillä.
+description.paragraph.1=Ajapaik-applikaatiolla näet historiallisia valokuvia lähistöltäsi ja voit helposti kuvata saman näkymän uudelleen.
+description.accuracy.title=Jälleenkuvatessa…
+description.accuracy.bullet.1=* voit muuttaa historiallisen kuvan läpinäkyvyyttä kännykän kamerakuvan päällä sormella liu’uttamalla.
+description.accuracy.bullet.2=* voit zoomata lähemmäs historialliseen kuvaan nipistämällä
+description.paragraph.2=Uudessa vuoden 2018 versiossa voit selata ja hakea albumeista, etsiä tiettyä kuvaa, katsoa muiden ottamia tai omia kuviasi.
+description.paragraph.3=Nyt jälleenkuvattujen kuvien luonnoksia voi tallentaa ja ladata myöhemmin Ajapaik.ee-palveluun, esimerkiksi kun voit käyttää wi-fi-yhteyttä.
+description.paragraph.4=Jotta voit ladata jälleenkuvatun kuvan, sinun täytyy tunnistautua Googlen tai Facebookin tunnuksella tai luoda uusi käyttäjätunnus.
+description.paragraph.5=Lataamalla jälleenkuvatun kuvan Ajapaik.ee-palveluun, annat luvan julkaista kuvan Creative Commons Nimeä 4.0 (CC BY 4.0) – lisenssillä.

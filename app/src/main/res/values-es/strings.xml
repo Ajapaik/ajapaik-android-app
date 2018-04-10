@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Fitoschido
+-->
+<resources>
+  <string name="app_name">Refotografía Ajapaik</string>
+  <string name="processing_image">Procesando la imagen</string>
+  <string name="please_wait">Espera…</string>
+  <string name="something_went_wrong">Se produjo un error</string>
+  <string name="action_albums">Álbumes</string>
+  <string name="action_login">Acceder</string>
+  <string name="action_register">Registro</string>
+  <string name="action_logout">Salir</string>
+  <string name="action_profile">Perfil</string>
+  <string name="action_refresh">Actualizar</string>
+  <string name="action_settings">Configuración</string>
+  <string name="nearest_title">Fotos cercanas</string>
+  <string name="albums_label_no_data">No hay álbumes</string>
+  <string name="albums_title">Álbumes</string>
+  <string name="album_title">Álbum</string>
+  <string name="nearest_dialog_error_location_disabled_close">Cerrar</string>
+  <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
+  <string name="nearest_label_no_data">No hay fotos cercanas</string>
+  <string name="nearest_label_no_data_button">Consulta los álbumes para explorar todas las imágenes</string>
+  <string name="photo_title">Detalles de la foto</string>
+  <string name="camera_title">Cámara</string>
+  <string name="profile_title">Perfil</string>
+  <string name="profile_facebook_login">Acceder con Facebook</string>
+  <string name="profile_google_login">Acceder con Google</string>
+  <string name="profile_logout">Salir</string>
+  <string name="profile_login">Acceder</string>
+  <string name="profile_register">Crear cuenta</string>
+  <string name="input_username_hint">Correo electrónico</string>
+  <string name="input_password_hint">Contraseña</string>
+  <string name="input_firstname_hint">Nombres</string>
+  <string name="input_lastname_hint">Apellidos</string>
+  <string name="login_title">Acceder</string>
+  <string name="login_failed">No se pudo acceder</string>
+  <string name="wrong_password">La contraseña es incorrecta.</string>
+  <string name="registration_title">Registro</string>
+  <string name="user_already_exists">El nombre de usuario ya existe</string>
+  <string name="upload_dialog_error_connection_title">Error de conexión</string>
+  <string name="upload_dialog_error_connection_message">No se pudo cargar la foto. ¿Quieres volver a intentarlo?</string>
+  <string name="upload_dialog_error_connection_retry">Intentar de nuevo</string>
+  <string name="upload_dialog_error_connection_ok">Aceptar</string>
+  <string name="upload_dialog_error_unknown_title">Error desconocido</string>
+  <string name="upload_dialog_error_unknown_message">No se pudo cargar la foto. ¿Quieres volver a intentarlo?</string>
+  <string name="upload_dialog_error_unknown_retry">Intentar de nuevo</string>
+  <string name="upload_dialog_error_unknown_ok">Cancelar</string>
+  <string name="upload_dialog_process_title">Cargando la foto</string>
+  <string name="upload_dialog_process_message">Espera…</string>
+  <string name="upload_dialog_success_title">Carga correcta</string>
+  <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
+  <string name="upload_dialog_success_ok">Aceptar</string>
+  <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
+  <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
+  <string name="acra_dialog_ok_toast">¡Gracias!</string>
+  <string name="about_title">Acerca de</string>
+  <string name="version">Versión</string>
+  <string name="contact">Contacto</string>
+  <string name="privacy_policy">Privacidad</string>
+  <string name="navigation_drawer_close">Cerrar cajón</string>
+  <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="tutorial_dialog_show_again_yes">Sí</string>
+  <string name="storage_not_permitted_cancel">Cancelar</string>
+  <string name="storage_not_permitted_open_settings">Abrir configuración</string>
+  <string name="action_search">Buscar</string>
+  <string name="favorites">Mis favoritas</string>
+  <string name="no_favorites">No hay favoritas</string>
+  <string name="action_favorite">Favorita</string>
+  <string name="favorites_label_not_logged_in_button">Acceder</string>
+  <string name="favorites_label_not_logged_in_text">Accede a tu cuenta para ver tus favoritas</string>
+</resources>
