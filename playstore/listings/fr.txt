@@ -1,0 +1,15 @@
+# Messages for French (français)
+# Exported from translatewiki.net
+# Author: Gomoko
+# Author: Wladek92
+
+title=Rephotographie de Ajapaik
+short-description=Regardez le point de vue des images historiques et rephotographiez les vues !
+description.paragraph.1=L’application de rephoto Ajapaik affiche des images historiques prises près de vous et offre une manière simple de prendre des rephotographies de la même vue.
+description.accuracy.title=Afin de rendre la rephotographie plus commode
+description.accuracy.bullet.1=* vous pouvez modifier la transparence de l’image historique sur le flux de votre appareil photo en vous déplaçant le long de l’écran
+description.accuracy.bullet.2=*pincer le zoom de l’image historique
+description.paragraph.2=Dans la nouvelle version (2018), vous pouvez aussi naviguer et chercher dans les albums, rechercher uen image particulière, voir les rephotos faites par vous-même ou d’autres utilisateurs.
+description.paragraph.3=Maintenant, les brouillons de rephoto peuvent être enrehistrés et navigués et téléchargés ultérieurement vers Apajaik.ee (sur le wifi, par exemple).
+description.paragraph.4=Afin de télécharger une rephotographie, vous devez vous authentifier avec votre compte Google ou Facebook, ou un compte basé sur une adresse de messagerie.
+description.paragraph.5=En téléchargeant des rephotos dans Ajapaik, vous acceptez de les mettre sous la licence Creative Commons Attribution (CC BY).
