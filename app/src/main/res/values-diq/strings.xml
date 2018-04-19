@@ -36,6 +36,7 @@
   <string name="upload_dialog_not_authenticated_ok">TEMAM</string>
   <string name="upload_dialog_agree_to_terms">Eya!</string>
   <string name="upload_dialog_decline_terms">Nê</string>
+  <string name="acra_dialog_ok_toast">Teşekur kenan!</string>
   <string name="version">Versiyon</string>
   <string name="contact">İrtıbat</string>
   <string name="tutorial_dismiss">Mı fehm kerd!</string>

@@ -20,6 +20,7 @@
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Llocalización desactivada</string>
+  <string name="nearest_dialog_error_location_disabled_message">Nun puede sabese l\'allugamientu actual. ¿Quies activar la llocalización?</string>
   <string name="nearest_dialog_error_location_disabled_close">Zarrar</string>
   <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
   <string name="nearest_label_no_data">Nun hai fotos cercanes</string>
@@ -36,6 +37,11 @@
   <string name="input_password_hint">Contraseña</string>
   <string name="input_firstname_hint">Nome</string>
   <string name="input_lastname_hint">Apellíu</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Inda nun ficisti nenguna refoto</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotos</item>
+  </plurals>
   <string name="login_title">Aniciar sesión</string>
   <string name="login_failed">Aniciu de sesión correutu</string>
   <string name="wrong_password">La contraseña ye incorreuta.</string>

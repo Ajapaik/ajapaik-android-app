@@ -8,9 +8,10 @@
   <string name="please_wait">กรุณารอสักครู่…</string>
   <string name="something_went_wrong">มีบางอย่างผิดพลาด</string>
   <string name="action_albums">อัลบั้ม</string>
-  <string name="action_login">ลงชื่อเข้า</string>
+  <string name="action_flip">พลิก</string>
+  <string name="action_login">เข้าสู่ระบบ</string>
   <string name="action_register">ลงทะเบียน</string>
-  <string name="action_logout">ลงชื่อออก</string>
+  <string name="action_logout">ออกจากระบบ</string>
   <string name="action_profile">โปรไฟล์</string>
   <string name="action_refresh">รีเฟรช</string>
   <string name="action_settings">การตั้งค่า</string>
@@ -41,8 +42,8 @@
     <item quantity="one">rephoto &lt;b&gt;1&lt;/b&gt; ครั้ง</item>
     <item quantity="other">rephoto &lt;b&gt;%1$d&lt;/b&gt; ครั้ง</item>
   </plurals>
-  <string name="login_title">ลงชื่อเข้า</string>
-  <string name="login_failed">ลงชื่อเข้าไม่สำเร็จ</string>
+  <string name="login_title">เข้าสู่ระบบ</string>
+  <string name="login_failed">การเข้าสู่ระบบไม่สำเร็จ</string>
   <string name="wrong_password">รหัสผ่านผิด!</string>
   <string name="registration_title">ลงทะเบียน</string>
   <string name="user_already_exists">ชื่อผู้ใช้นี้มีอยู่แล้ว</string>
@@ -63,6 +64,7 @@
   <string name="upload_dialog_not_authenticated_title">ต้องลงชื่อเข้าเพื่ออัปโหลด</string>
   <string name="upload_dialog_not_authenticated_message">เปลี่ยนทางไปหน้าโปรไฟล์</string>
   <string name="upload_dialog_not_authenticated_ok">ตกลง</string>
+  <string name="upload_dialog_not_agreed_to_terms">ฉันยินยอมที่จะเผยแพร่รูปภาพที่ปรับแก้ไขใหม่ภายใต้สัญญาอนุญาต CC BY 4.0</string>
   <string name="upload_dialog_agree_to_terms">ใช่!</string>
   <string name="upload_dialog_decline_terms">ไม่</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' ขัดข้อง</string>
@@ -76,13 +78,19 @@
   <string name="navigation_drawer_open">เปิดรูปภาพ</string>
   <string name="navigation_drawer_close">ปิดรูปภาพ</string>
   <string name="settings_show_tutorial">แสดงบทช่วยสอนในโหมด rephoto</string>
+  <string name="settings_agree_to_license_terms">ฉันยินยอมที่จะเผยแพร่รูปภาพที่ปรับแก้ไขใหม่บน Ajapaik.ee ภายใต้สัญญาอนุญาต CC BY 4.0</string>
+  <string name="tutorial_hide_show_flip">แตะเพื่อซ่อน/แสดงรูปภาพ\nแตะไอคอนพลิกที่อยู่มุมขวาบนเพื่อพลิกรูปภาพเก่า</string>
+  <string name="tutorial_opacity_zoom">เลื่อนเพื่อปรับความโปร่งใสของรูปภาพเก่า\nจีบนิ้วเพื่อซูมรูปภาพเก่า</string>
   <string name="tutorial_take_picture">กดปุ่มชัตเตอร์หรือแตะค้างไว้บนหน้าจอเพื่อถ่ายภาพ</string>
   <string name="tutorial_dismiss">เข้าใจแล้ว!</string>
   <string name="tutorial_dialog_show_again_title">ต้องการแสดงบทช่วยสอนอีกครั้งหรือไม่?</string>
   <string name="tutorial_dialog_show_again_message">คุณสามารถเปิดบทช่วยสอนใหม่อีกครั้งได้จากการตั้งค่าในภายหลัง</string>
   <string name="tutorial_dialog_show_again_no">ไม่</string>
   <string name="tutorial_dialog_show_again_yes">ใช่</string>
+  <string name="rephoto_drafts">แบบร่าง Rephoto</string>
   <string name="no_rephotos">ไม่มี rephoto</string>
+  <string name="storage_not_permitted_title">ไม่ได้อนุญาตให้เข้าถึงที่เก็บข้อมูล</string>
+  <string name="storage_not_permitted_message">การไม่อนุญาตให้เข้าถึงที่เก็บข้อมูลจะทำให้คุณไม่สามารถเข้าถึงคุณลักษณะบางประการได้ เช่น ถ่ายหรืออัปโหลด rephoto กรุณาอนุญาตการเข้าถึงที่เก็บข้อมูล</string>
   <string name="storage_not_permitted_cancel">ยกเลิก</string>
   <string name="storage_not_permitted_open_settings">เปิดการตั้งค่า</string>
   <string name="my_rephotos">rephoto ของฉัน</string>
@@ -91,6 +99,7 @@
   <string name="favorites">รายการโปรดของฉัน</string>
   <string name="no_favorites">ไม่มีรายการโปรด</string>
   <string name="action_favorite">รายการโปรด</string>
+  <string name="favorites_label_not_logged_in_button">ลงชื่อเข้า</string>
   <string name="favorites_label_not_logged_in_text">กรุณาลงชื่อเข้าเพื่อดูรายการโปรดของคุณ</string>
   <string name="no_search_result">ไม่มีผลลัพธ์การค้นหา</string>
   <string name="album_no_data">ไม่มีรูปภาพ</string>

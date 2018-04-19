@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Mil
+* Ooswesthoesbes
 * Patio
 -->
 <resources>
@@ -93,10 +94,10 @@
   <string name="rephotos_label_not_logged_in_text">Meld u alstublieft aan om uw foto\'s te zien</string>
   <string name="action_search">Zoeken</string>
   <string name="favorites">Mijn favorieten</string>
-  <string name="no_favorites">Gee favorieten</string>
+  <string name="no_favorites">Geen favorieten</string>
   <string name="action_favorite">Favoriet</string>
   <string name="favorites_label_not_logged_in_button">Meld aan</string>
   <string name="favorites_label_not_logged_in_text">Meld u alstublieft aan om uw favorieten te zien</string>
   <string name="no_search_result">Geen zoekresultaten</string>
-  <string name="album_no_data">Gee foto\'s</string>
+  <string name="album_no_data">Geen foto\'s</string>
 </resources>

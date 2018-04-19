@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Asierog
+-->
+<resources>
+  <string name="please_wait">Mesedez itxaron…</string>
+  <string name="something_went_wrong">Zerbaitek huts egin du</string>
+  <string name="action_login">Hasi saioa</string>
+  <string name="action_register">Izena eman</string>
+  <string name="action_logout">Saioa itxi</string>
+  <string name="action_profile">Profila</string>
+  <string name="action_refresh">Eguneratu</string>
+  <string name="action_settings">Ezarpenak</string>
+  <string name="nearest_dialog_error_location_disabled_close">Itxi</string>
+  <string name="profile_title">Profila</string>
+  <string name="profile_facebook_login">Saioa hasi Facebookekin</string>
+  <string name="profile_google_login">Saioa hasi Googlekin</string>
+  <string name="profile_logout">Saioa itxi</string>
+  <string name="profile_login">Saioa hasi</string>
+  <string name="profile_register">Kontua sortu</string>
+  <string name="input_username_hint">Posta elektronikoa</string>
+  <string name="input_password_hint">Pasahitza</string>
+  <string name="input_firstname_hint">Izena</string>
+  <string name="input_lastname_hint">Abizena</string>
+  <string name="login_title">Hasi saioa</string>
+  <string name="wrong_password">Pasahitz okerra!</string>
+  <string name="registration_title">Izena eman</string>
+  <string name="upload_dialog_error_connection_retry">Saiatu berriro</string>
+  <string name="upload_dialog_error_connection_ok">Ados</string>
+  <string name="upload_dialog_error_unknown_retry">Saiatu berriro</string>
+  <string name="upload_dialog_error_unknown_ok">Utzi</string>
+  <string name="upload_dialog_process_title">Argazkia igotzen</string>
+  <string name="upload_dialog_process_message">Mesedez itxaron…</string>
+  <string name="upload_dialog_success_ok">Ados</string>
+  <string name="upload_dialog_not_authenticated_ok">Ados</string>
+  <string name="upload_dialog_agree_to_terms">Bai!</string>
+  <string name="upload_dialog_decline_terms">Ez</string>
+</resources>
