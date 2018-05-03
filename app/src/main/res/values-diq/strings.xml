@@ -3,6 +3,8 @@
 * Mirzali
 -->
 <resources>
+  <string name="app_name">Ajapaik refoto</string>
+  <string name="processing_image">Asayış gureniyeno</string>
   <string name="please_wait">Kerem kerên, bıpawên...</string>
   <string name="something_went_wrong">Tayê çi ğelet şi</string>
   <string name="action_albums">Albumi</string>
@@ -28,8 +30,10 @@
   <string name="login_title">Cıkewtış</string>
   <string name="login_failed">Cıkewtış hewl bi</string>
   <string name="registration_title">Qeyd be</string>
+  <string name="upload_dialog_error_connection_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
   <string name="upload_dialog_error_unknown_title">Xetaya nêzanıtiye</string>
+  <string name="upload_dialog_error_unknown_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_unknown_ok">Bıtexelne</string>
   <string name="upload_dialog_process_message">Kerem kerên, bıpawên...</string>
   <string name="upload_dialog_success_ok">TEMAM</string>
