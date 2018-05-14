@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Nike
+* Pyscowicz
 -->
 <resources>
   <string name="app_name">Ajapaik – Ennen ja nyt</string>
@@ -97,7 +98,7 @@
   <string name="storage_not_permitted_open_settings">Avaa asetukset</string>
   <string name="my_rephotos">Omat valokuvat</string>
   <string name="rephotos_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi valokuvasi</string>
-  <string name="action_search">Search</string>
+  <string name="action_search">Haku</string>
   <string name="favorites">Omat suosikkini</string>
   <string name="no_favorites">Ei suosikkeja</string>
   <string name="action_favorite">Suosikki</string>

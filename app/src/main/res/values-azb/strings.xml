@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Alp Er Tunqa
+-->
+<resources>
+  <string name="action_albums">آلبوملار</string>
+  <string name="action_login">گیریش</string>
+  <string name="action_register">آد یازدیر</string>
+  <string name="action_logout">چیخیش</string>
+  <string name="action_profile">پروفایل</string>
+  <string name="action_refresh">یئنیله</string>
+  <string name="action_settings">تنظیملر</string>
+  <string name="albums_label_no_data">آلبوم یوْخ</string>
+  <string name="albums_title">آلبوملار</string>
+  <string name="album_title">آلبوم</string>
+  <string name="nearest_dialog_error_location_disabled_close">باغلا</string>
+  <string name="nearest_dialog_error_location_disabled_open">تنظیماتی آچ</string>
+  <string name="camera_title">دوربین</string>
+  <string name="profile_title">پروفایل</string>
+  <string name="profile_logout">چیخیش</string>
+  <string name="profile_login">گیریش</string>
+  <string name="profile_register">حساب یارات</string>
+  <string name="input_username_hint">ایمئیل</string>
+  <string name="input_password_hint">رمز</string>
+  <string name="input_firstname_hint">آد</string>
+  <string name="input_lastname_hint">فامیل</string>
+  <string name="login_title">گیریش</string>
+  <string name="registration_title">آد یازدیر</string>
+  <string name="upload_dialog_error_connection_retry">یئنی‌دن چالیش</string>
+  <string name="upload_dialog_error_connection_ok">اوْلسون</string>
+  <string name="upload_dialog_error_unknown_retry">یئنی‌دن چالیش</string>
+  <string name="upload_dialog_error_unknown_ok">وازگئچ</string>
+  <string name="upload_dialog_success_ok">اوْلسون</string>
+  <string name="upload_dialog_not_authenticated_ok">اوْلسون</string>
+  <string name="upload_dialog_agree_to_terms">هن!</string>
+  <string name="upload_dialog_decline_terms">یوْخ</string>
+  <string name="acra_dialog_ok_toast">تشکورلر!</string>
+  <string name="about_title">گؤره</string>
+  <string name="version">نوسخه‌</string>
+  <string name="contact">ایرتیباط</string>
+  <string name="privacy_policy">شخصی حریم</string>
+  <string name="tutorial_dismiss">آنلادیم!</string>
+  <string name="tutorial_dialog_show_again_no">یوْخ</string>
+  <string name="tutorial_dialog_show_again_yes">هن</string>
+  <string name="storage_not_permitted_cancel">وازگئچ</string>
+  <string name="storage_not_permitted_open_settings">تنظیماتی آچ</string>
+  <string name="action_search">آختار</string>
+  <string name="favorites_label_not_logged_in_button">گیریش</string>
+</resources>

@@ -8,13 +8,14 @@
   <string name="please_wait">Kerem kerên, bıpawên...</string>
   <string name="something_went_wrong">Tayê çi ğelet şi</string>
   <string name="action_albums">Albumi</string>
-  <string name="action_flip">Çerx ke</string>
+  <string name="action_flip">Bıçarne</string>
   <string name="action_login">Cıkewtış</string>
   <string name="action_register">Qeyd be</string>
   <string name="action_logout">Veciyayış</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Newe ke</string>
   <string name="action_settings">Eyari</string>
+  <string name="albums_label_no_data">Albumi çıniyê</string>
   <string name="albums_title">Albumi</string>
   <string name="album_title">Album</string>
   <string name="camera_title">Kamera</string>
