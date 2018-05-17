@@ -80,8 +80,11 @@
   <string name="settings_show_tutorial">Ver tutorial en mou refoto</string>
   <string name="settings_agree_to_license_terms">Aceuto publicar les refotografíes en Ajapaik.ee baxo la llicencia CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Toca p\'anubrir/amosar imaxe.\nUsa l\'iconu voltiar de la esquina superior izquierda pa voltiar la imaxe antigua.</string>
+  <string name="tutorial_opacity_zoom">Esnidiar p\'axustar la tresparencia de la imaxe antigua.\nPlizcar nel zoom p\'ampliar la imaxe antigua.</string>
+  <string name="tutorial_take_picture">Prime nel botón del disparador o da un toque llargu en cualquier llugar de la pantalla pa tomar la refoto.</string>
   <string name="tutorial_dismiss">Entendílo</string>
   <string name="tutorial_dialog_show_again_title">¿Amosar el tutorial otra vegada?</string>
+  <string name="tutorial_dialog_show_again_message">Puedes volver a activar el tutorial sero dende les preferencies</string>
   <string name="tutorial_dialog_show_again_no">Non</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
   <string name="rephoto_drafts">Borradores de refotos</string>
