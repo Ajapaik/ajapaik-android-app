@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Asierog
+* Mikel Ibaiba
 -->
 <resources>
   <string name="please_wait">Mesedez itxaron…</string>
@@ -12,6 +13,7 @@
   <string name="action_refresh">Eguneratu</string>
   <string name="action_settings">Ezarpenak</string>
   <string name="nearest_dialog_error_location_disabled_close">Itxi</string>
+  <string name="camera_title">Kamera</string>
   <string name="profile_title">Profila</string>
   <string name="profile_facebook_login">Saioa hasi Facebookekin</string>
   <string name="profile_google_login">Saioa hasi Googlekin</string>
@@ -35,4 +37,13 @@
   <string name="upload_dialog_not_authenticated_ok">Ados</string>
   <string name="upload_dialog_agree_to_terms">Bai!</string>
   <string name="upload_dialog_decline_terms">Ez</string>
+  <string name="contact">Kontaktua</string>
+  <string name="privacy_policy">Pribatutasuna</string>
+  <string name="tutorial_dismiss">Ulertu dut!</string>
+  <string name="tutorial_dialog_show_again_no">Ez</string>
+  <string name="tutorial_dialog_show_again_yes">Bai</string>
+  <string name="storage_not_permitted_cancel">Utzi</string>
+  <string name="action_search">Bilatu</string>
+  <string name="action_favorite">Gogokoak</string>
+  <string name="album_no_data">Ez dago argazkirik</string>
 </resources>
