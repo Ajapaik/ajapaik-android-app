@@ -1,10 +1,11 @@
 # Messages for Message documentation (Message documentation)
 # Exported from translatewiki.net
+# Author: Awangba Mangang
 # Author: McDutchie
 # Author: Puik
 
 title=Name of the app in Google Play Store.\nShould be the same as {{msg-ajapaik|strings-app name}}.
-short-description=One-sentence description (80 characters max) of Ajapaik rephoto app at Google Play Store
+short-description=One-sentence description (80 characters max) of Ajapaik rephoto app at Google Play Store\nꯌꯦꯡꯈꯠꯂꯨ ꯄꯨꯋꯥꯔꯤꯒꯥ ꯁꯥꯒꯣꯟꯅꯕꯥ ꯃꯥꯃꯤꯗꯨꯒꯤ ꯀꯨꯗꯣꯡꯆꯥꯕꯥ ꯃꯐꯝꯗꯨꯗꯥ ꯑꯃꯗꯤ\nꯃꯤꯠꯌꯦꯡ ꯱ ꯊꯝꯃꯎ ꯑꯃꯨꯛꯍꯅꯕꯥ ꯃꯤꯔꯦꯜꯗꯨꯗꯥ
 description.accuracy.title=Ajapaik app description 2nd sentence in the Google Play Store listing, list with 2 bullet-points follows.
 description.accuracy.bullet.1=Ajapaik app description in Google Play Store, first bullet point
 description.accuracy.bullet.2=Ajapaik app description in Google Play Store, second bullet point
