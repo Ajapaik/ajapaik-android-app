@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Apundung
 * Simartampua
 -->
 <resources>
@@ -9,9 +10,9 @@
   <string name="something_went_wrong">Adong saotik nasala</string>
   <string name="action_albums">Sude album</string>
   <string name="action_flip">Mambalik</string>
-  <string name="action_login">Masuk</string>
+  <string name="action_login">Masuk log</string>
   <string name="action_register">Daftar</string>
-  <string name="action_logout">Kaluar</string>
+  <string name="action_logout">Kaluar log</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Segarkon</string>
   <string name="action_settings">Pangaturan</string>
@@ -55,7 +56,7 @@
   <string name="upload_dialog_error_unknown_title">Indabinoto segana</string>
   <string name="upload_dialog_error_unknown_message">Inda bisa mangaplod poto. Kajo mulak?</string>
   <string name="upload_dialog_error_unknown_retry">Mangkajo mulak</string>
-  <string name="upload_dialog_error_unknown_ok">Botalkon</string>
+  <string name="upload_dialog_error_unknown_ok">Antai</string>
   <string name="upload_dialog_process_title">Mangaplod gambar</string>
   <string name="upload_dialog_process_message">Painte tongkin...</string>
   <string name="upload_dialog_success_title">Aplod marhasil</string>
@@ -91,7 +92,7 @@
   <string name="no_rephotos">Indadong repoto</string>
   <string name="storage_not_permitted_title">Panyimpanan inda iisinkon</string>
   <string name="storage_not_permitted_message">Aplikasi inda mangisinkon on manggunaon panyimpanan mantak Amu mangakses bahat fitur, songon mambuat dot mangunggah rephotos. Anso partimbangkon mangisinkon panggunaan panyimpanan</string>
-  <string name="storage_not_permitted_cancel">Botalkon</string>
+  <string name="storage_not_permitted_cancel">Antai</string>
   <string name="storage_not_permitted_open_settings">Bukak pangaturan</string>
   <string name="my_rephotos">Rephotos ku</string>
   <string name="rephotos_label_not_logged_in_text">Masuk majolo muda get mangaligi rephotos</string>
