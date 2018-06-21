@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Tweety
+-->
+<resources>
+  <string name="please_wait">براءِ مھرباني انتظار ڪريو…</string>
+  <string name="something_went_wrong">ڪا غلطي ٿي</string>
+  <string name="action_albums">ايلبم</string>
+  <string name="action_flip">موڙيو</string>
+  <string name="action_login">داخل ٿيو</string>
+  <string name="action_register">کاتو کوليو</string>
+  <string name="action_logout">خارج ٿيو</string>
+  <string name="action_profile">خدوخال</string>
+  <string name="action_refresh">تازو ڪيو</string>
+  <string name="action_settings">ترتيبون</string>
+  <string name="nearest_title">ويجهيون تصويرون</string>
+  <string name="albums_label_no_data">ايلبم ناهي</string>
+  <string name="albums_title">ايلبم</string>
+  <string name="album_title">ايلبم</string>
+  <string name="nearest_dialog_error_location_disabled_title">جاءِ غير فعال</string>
+  <string name="nearest_dialog_error_location_disabled_message">موجوده جاءِ نه پيو لڀي. اوهان ان کي فعال ڪرڻ چاهيو ٿا؟</string>
+  <string name="nearest_dialog_error_location_disabled_close">بند ڪريو</string>
+  <string name="nearest_dialog_error_location_disabled_open">ترتيبون کوليو</string>
+  <string name="nearest_label_no_data">ويجهيون تصويرون ناهن</string>
+  <string name="nearest_label_no_data_button">سڀ تصويرون لاءِ ايلبم ڏسو</string>
+  <string name="photo_title">تصوير جي ڄاڻ</string>
+  <string name="camera_title">ڪيميرا</string>
+  <string name="profile_title">خدوخال</string>
+  <string name="profile_facebook_login">فيسبڪ ذريعي داخل ٿيو</string>
+  <string name="profile_google_login">گُوگل ذريعي داخل ٿيو</string>
+  <string name="profile_logout">ٻاهر نڪرو</string>
+  <string name="profile_login">داخل ٿيو</string>
+  <string name="profile_register">کاتو کوليو</string>
+  <string name="input_username_hint">ايميل</string>
+  <string name="input_password_hint">ڳجهو لفظ</string>
+  <string name="input_firstname_hint">پهريون نالو</string>
+  <string name="input_lastname_hint">ذات</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">اوهان اڃان تائين نئين تصوير نه ڪڍي آهي.</item>
+    <item quantity="other">هڪ=&lt;b&gt;1&lt;/b&gt; نئين تصوير</item>
+  </plurals>
+  <string name="login_title">داخل ٿيو</string>
+  <string name="login_failed">داخل نه ٿي سگھيو</string>
+  <string name="wrong_password">غلط ڳجهو لفظ</string>
+  <string name="registration_title">کاتو کوليو</string>
+  <string name="user_already_exists">کاتي جو نالو اڳئي موجود آهي</string>
+  <string name="upload_title">نئين تصوير جي پڪ ڪريو</string>
+  <string name="upload_dialog_error_connection_title">ڪنيڪشن ۾ مسئلو</string>
+  <string name="upload_dialog_error_connection_message">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_connection_retry">ٻيهر ڪوشش ڪريو</string>
+  <string name="upload_dialog_error_connection_ok">ٺيڪ</string>
+  <string name="upload_dialog_error_unknown_title">اڻڄاتل چُڪَ</string>
+  <string name="upload_dialog_error_unknown_message">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_unknown_retry">ٻيهر ڪوشش ڪريو</string>
+  <string name="upload_dialog_error_unknown_ok">رد</string>
+  <string name="upload_dialog_process_title">تصوير اپلوڊ ٿي رهي آهي</string>
+  <string name="upload_dialog_process_message">براءِ مھرباني انتظار ڪريو…</string>
+  <string name="upload_dialog_success_title">اپلوڊ نه ٿي سگھيو</string>
+  <string name="upload_dialog_success_message">تصوير اپلوڊ ٿي وئي!</string>
+  <string name="upload_dialog_success_ok">ٺيڪ</string>
+  <string name="upload_dialog_not_authenticated_title">اپلوڊ ڪرڻ لاءِ داخل ٿيڻ ضروري آهي</string>
+  <string name="upload_dialog_not_authenticated_message">خدوخال ڏي موڙيو</string>
+  <string name="upload_dialog_not_authenticated_ok">ٺيڪ</string>
+  <string name="upload_dialog_not_agreed_to_terms">آئون CC BY 4.0 تحت راضي آهيان ته تصوير کي ٻيهر ڇاپيو.</string>
+  <string name="upload_dialog_agree_to_terms">ها!</string>
+  <string name="upload_dialog_decline_terms">نه</string>
+  <string name="acra_dialog_title">\'اجاپيڪ نئين تصوير\' ختم ٿي وئي</string>
+  <string name="acra_dialog_text">ڪنهن غير متوقع چُڪ سبب پروگرام بند ٿي ويو. مهرباني ڪري ڄُڪ جي ڊيٽااسان ڏي موڪلي مدد ڪيو، اوهان کي صرف ٺيڪ کي دٻائڻو آهي.</string>
+  <string name="acra_dialog_comment_prompt">اوهان مسئلي جي باري ۾ هيٺ رايو ڏئي سگھو ٿا:</string>
+  <string name="acra_dialog_ok_toast">توهان جي مهرباني!</string>
+  <string name="about_title">بابت</string>
+  <string name="version">ورزن</string>
+  <string name="contact">رابطو</string>
+  <string name="privacy_policy">ذاتيات</string>
+  <string name="navigation_drawer_open">ڪٻٽ کوليو</string>
+  <string name="navigation_drawer_close">ڪٻٽ بند ڪيو</string>
+  <string name="settings_show_tutorial">نئين تصوير واري موڊ ۾ سبق ڏيکاريو</string>
+  <string name="settings_agree_to_license_terms">آئون CC BY 4.0 تحت راضي آهيان ته تصوير کي ٻيهر ڇاپيو.</string>
+  <string name="tutorial_hide_show_flip">تصوير گم ڪرڻ/ڏيکارڻ لاءِ دٻايو.\nمٿي کاٻي طرف موڙيو نشاني کي دٻائي پراڻين تصويرن ڏي وڃي سگھو ٿا.</string>
+</resources>
