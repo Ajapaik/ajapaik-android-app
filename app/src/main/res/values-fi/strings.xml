@@ -12,11 +12,11 @@
   <string name="something_went_wrong">Jotain meni vikaan</string>
   <string name="action_albums">Albumit</string>
   <string name="action_flip">Käännä</string>
-  <string name="action_login">Kirjaudu sisään</string>
-  <string name="action_register">Luo tunnus</string>
+  <string name="action_login">Kirjaudu</string>
+  <string name="action_register">Rekisteröidy</string>
   <string name="action_logout">Kirjaudu ulos</string>
   <string name="action_profile">Profiili</string>
-  <string name="action_refresh">Päivitä tiedot</string>
+  <string name="action_refresh">Päivitä</string>
   <string name="action_settings">Asetukset</string>
   <string name="nearest_title">Lähistöllä</string>
   <string name="albums_label_no_data">Ei albumeita</string>
