@@ -1,0 +1,10 @@
+# Messages for Basque (euskara)
+# Exported from translatewiki.net
+# Author: EukeneFL
+
+title=Ajapaik berrargazkia
+short-description=Begiratu irudi historikoen gotorlekuak eta atera iezaiozu argazkia ikuspegiari!
+description.accuracy.bullet.2=Klikatu zooma argazki historikoa
+description.paragraph.2=Bertsio berrian (2018) albumak arakatu eta bilatu ahal dituzu, argazki zehatz bat bilatu, eta zuk zeuk egindako berrargazkiak edo besteek egindakoak ikusi ere bai.
+description.paragraph.3=Orain berrargazki zirriborroak gorde, araka eta igo daitezke Ajapaik.ee -ra geroago (adibidez, Wi-Fiaren bidez)
+description.paragraph.4=Berrargazki bat igo dezazun zeure burua identifikatu beharko duzu Google edo Facebook kontu baten bidez edo emailean oinarritutako kontu baten bidez.
