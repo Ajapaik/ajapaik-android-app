@@ -13,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,8 +71,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     private Bitmap currentRephoto;
     private final JsonParser jsonParser = new JsonParser();
 
-    private boolean shouldSwitchWidthAndHeight = false;
-
     public static final String RETURN_ACTIVITY_NAME = "upload";
 
     public List<Upload> getUpload() {
@@ -118,8 +115,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
         if (savedInstanceState != null) {
             m_uploads = parseUploadsJson(savedInstanceState.getString(KEY_UPLOAD));
         }
@@ -134,13 +132,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             Bitmap scaledRephoto = scaleRephoto(upload);
             uploadByRephotoBitmap.put(scaledRephoto, upload);
         }
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        setRetainInstance(true);
-
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
@@ -255,16 +246,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private Bitmap scaleRephoto(Upload upload) {
-        BitmapFactory.Options options = getBitmapOptions(upload);
-        int sampleSize = calculateSampleSize(options);
-        int outWidth = options.outWidth;
-        int outHeight = options.outHeight;
-        if (shouldSwitchWidthAndHeight){
-            outHeight = options.outWidth;
-            outWidth = options.outHeight;
-        }
-        float unscaledImageWidth = outWidth / sampleSize;
-        float unscaledImageHeight = outHeight / sampleSize;
+        Bitmap unscaledCameraImage = loadAndRotateRephotoPreview(upload.getPath());
+        float unscaledImageWidth = unscaledCameraImage.getWidth();
+        float unscaledImageHeight = unscaledCameraImage.getHeight();
 
         float heightScale = 1.0F;
         float widthScale = 1.0F;
@@ -282,46 +266,12 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         float scaledImageHeight = unscaledImageHeight * heightScale * upload.getScale();
         float heightDifference = unscaledImageHeight - scaledImageHeight;
         float widthDifference = unscaledImageWidth - scaledImageWidth;
-        options.inJustDecodeBounds = false;
-        options.inSampleSize = sampleSize;
         return Bitmap.createBitmap(
-                BitmapFactory.decodeFile(upload.getPath(), options),
+                unscaledCameraImage,
                 (int) (Math.max(widthDifference / 2, 0)),
                 (int) (Math.max(heightDifference / 2, 0)),
                 (int) (Math.min(unscaledImageWidth, scaledImageWidth)),
-                (int) (Math.min(unscaledImageHeight, scaledImageHeight)),
-                getRotationMatrix(upload.getPath()),
-                true);
-    }
-
-    private int calculateSampleSize(BitmapFactory.Options options) {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        if (getActivity() == null) return 1;
-
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int reqHeight = displayMetrics.heightPixels / 2;
-        int reqWidth = displayMetrics.widthPixels;
-
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-            while ((halfHeight / inSampleSize) >= reqHeight
-                    && (halfWidth / inSampleSize) >= reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-        return inSampleSize;
-    }
-
-    private BitmapFactory.Options getBitmapOptions(Upload upload) {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(upload.getPath(), options);
-        return options;
+                (int) (Math.min(unscaledImageHeight, scaledImageHeight)));
     }
 
     /**
@@ -330,7 +280,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
      * @return Matrix with proper rotation
      * @param path to bitmap needing rotation
      */
-    private Matrix getRotationMatrix(String path) {
+    private Bitmap loadAndRotateRephotoPreview(String path) {
         Matrix matrix = new Matrix();
         try {
             ExifInterface exif = new ExifInterface(path);
@@ -351,24 +301,20 @@ public class UploadFragment extends WebFragment implements DialogInterface {
                     break;
 
                 case ExifInterface.ORIENTATION_TRANSPOSE:
-                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(90);
                     matrix.postScale(-1, 1);
                     break;
 
                 case ExifInterface.ORIENTATION_ROTATE_90:
-                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(90);
                     break;
 
                 case ExifInterface.ORIENTATION_TRANSVERSE:
-                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(-90);
                     matrix.postScale(-1, 1);
                     break;
 
                 case ExifInterface.ORIENTATION_ROTATE_270:
-                    shouldSwitchWidthAndHeight = true;
                     matrix.setRotate(-90);
                     break;
 
@@ -379,7 +325,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         } catch (IOException e) {
             Log.e("Rephoto preview", "Failed to set rotation for rephoto preview", e);
         }
-        return matrix;
+        Bitmap bitmap = BitmapFactory.decodeFile(path);
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
     private boolean needsHeightScaling(float unscaledImageWidth, float unscaledImageHeight, Photo oldPhoto) {
