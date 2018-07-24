@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Banjo
+* Elisardojm
+* Navhy
+-->
+<resources>
+  <string name="please_wait">Agarde por favor...</string>
+  <string name="something_went_wrong">Algo non está indo ben</string>
+  <string name="action_albums">Álbums</string>
+  <string name="action_flip">Retornar</string>
+  <string name="action_login">Iniciar sesión</string>
+  <string name="action_register">Rexistrar</string>
+  <string name="action_logout">Pechar sesión</string>
+  <string name="action_profile">Perfil</string>
+  <string name="action_refresh">Actualizar</string>
+  <string name="action_settings">Axustes</string>
+  <string name="nearest_title">Fotografías preto</string>
+  <string name="albums_label_no_data">Non hai álbums</string>
+  <string name="albums_title">Álbums</string>
+  <string name="album_title">Álbum</string>
+  <string name="nearest_dialog_error_location_disabled_close">Pechar</string>
+  <string name="nearest_dialog_error_location_disabled_open">Abrie configuracións</string>
+  <string name="nearest_label_no_data">Non hay fotografías preto</string>
+  <string name="camera_title">Cámara</string>
+  <string name="profile_title">Perfil</string>
+  <string name="profile_facebook_login">Acceder co Facebook</string>
+  <string name="profile_google_login">Iniciar sesión con Google</string>
+  <string name="profile_logout">Pechar a sesión</string>
+  <string name="profile_login">Iniciar sesión</string>
+  <string name="profile_register">Crear unha conta</string>
+  <string name="input_username_hint">Enderezo electrónico</string>
+  <string name="input_password_hint">Contrasinal</string>
+  <string name="input_firstname_hint">Nome</string>
+  <string name="input_lastname_hint">Apelido</string>
+  <string name="login_title">Iniciar sesión</string>
+  <string name="login_failed">Falla ó iniciar sesión</string>
+  <string name="wrong_password">O contrasinal é incorrecto!</string>
+  <string name="registration_title">Rexistrarse</string>
+  <string name="upload_dialog_error_connection_title">Erro na ligazón</string>
+  <string name="upload_dialog_error_connection_retry">Reintentar</string>
+  <string name="upload_dialog_error_connection_ok">Feito</string>
+  <string name="upload_dialog_error_unknown_title">Erro descoñecido</string>
+  <string name="upload_dialog_error_unknown_retry">Tentar novamente</string>
+  <string name="upload_dialog_error_unknown_ok">Cancelar</string>
+  <string name="upload_dialog_process_message">Agarde por favor...</string>
+  <string name="upload_dialog_success_ok">Feito</string>
+  <string name="upload_dialog_not_authenticated_title">Debe iniciar sesión pra carregar datos</string>
+  <string name="upload_dialog_not_authenticated_ok">Feito</string>
+  <string name="upload_dialog_agree_to_terms">Si!</string>
+  <string name="upload_dialog_decline_terms">Non</string>
+  <string name="acra_dialog_ok_toast">Grazas!</string>
+  <string name="about_title">Verbo de</string>
+  <string name="version">Versión</string>
+  <string name="contact">Contacto</string>
+  <string name="privacy_policy">Privacidade</string>
+  <string name="tutorial_dismiss">Compréndoo!</string>
+  <string name="tutorial_dialog_show_again_title">Desexa amosar a explicación novamente?</string>
+  <string name="tutorial_dialog_show_again_no">Non</string>
+  <string name="tutorial_dialog_show_again_yes">Si</string>
+  <string name="storage_not_permitted_cancel">Cancelar</string>
+  <string name="storage_not_permitted_open_settings">Abrir as configuracións</string>
+  <string name="my_rephotos">Miñas refotografías</string>
+  <string name="action_search">Procurar</string>
+  <string name="favorites">Meus favoritos</string>
+  <string name="action_favorite">Favorito</string>
+  <string name="favorites_label_not_logged_in_button">Iniciar sesión</string>
+  <string name="no_search_result">Non foi posíbel atopar os resultados da procura</string>
+  <string name="album_no_data">Non hai fotografías</string>
+</resources>

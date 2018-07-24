@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Anass Sedrati
+-->
+<resources>
+  <string name="app_name">أجابيك لإعادة التصوير</string>
+  <string name="processing_image">التصويرة تاتصايب</string>
+  <string name="please_wait">تسنًا عافاك</string>
+  <string name="something_went_wrong">شي غلط وقع</string>
+  <string name="action_albums">ألبومات</string>
+  <string name="action_flip">اقلب</string>
+  <string name="action_login">تكونيكطا</string>
+  <string name="action_register">تقيًد</string>
+  <string name="action_logout">خرج</string>
+  <string name="action_profile">الملف الشخصي</string>
+  <string name="action_refresh">تحديث</string>
+  <string name="action_settings">إعدادات</string>
+  <string name="nearest_title">تصاور قريبة</string>
+  <string name="albums_label_no_data">ماكاينش ألبومات</string>
+  <string name="albums_title">ألبومات</string>
+  <string name="album_title">ألبوم</string>
+  <string name="nearest_dialog_error_location_disabled_title">الموقع ماخدًامش</string>
+  <string name="nearest_dialog_error_location_disabled_close">سدً</string>
+  <string name="camera_title">مصوًرة</string>
+  <string name="input_username_hint">إيمايل</string>
+  <string name="input_password_hint">الساروت</string>
+  <string name="input_firstname_hint">السميًة</string>
+  <string name="input_lastname_hint">الكنيًة</string>
+  <string name="upload_dialog_error_connection_ok">واخًا</string>
+  <string name="upload_dialog_error_unknown_retry">عاود جرًب</string>
+  <string name="upload_dialog_success_ok">واحًا</string>
+  <string name="upload_dialog_not_authenticated_ok">واخًا</string>
+  <string name="upload_dialog_agree_to_terms">آه</string>
+  <string name="upload_dialog_decline_terms">لا</string>
+  <string name="acra_dialog_ok_toast">شكرا</string>
+  <string name="tutorial_dialog_show_again_no">لا</string>
+  <string name="tutorial_dialog_show_again_yes">آه</string>
+  <string name="action_search">قلّب</string>
+</resources>

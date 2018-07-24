@@ -1,0 +1,14 @@
+# Messages for Latvian (latviešu)
+# Exported from translatewiki.net
+# Author: Puik
+
+title=Ajapaik refoto
+short-description=Atrodiet vēsturisko foto uzņemšanas punktus un pārfotografējiet šodien!
+description.paragraph.1=Ajapaik refoto lietotne parāda netālu esošus vēsturiskus attēlus un piedāvā tos viegli pārfotografēt no tā paša skatu punkta.
+description.accuracy.title=Lai refoto veikšana būtu ērtāka, iespējams
+description.accuracy.bullet.1=* mainīt vēsturiskā foto caurspīdīgumu, pavelkot ekrānu uz sāniem,
+description.accuracy.bullet.2=* pietuvināt / attālināt vēsturisko foto.
+description.paragraph.2=Jaunajā (2018) versijā iespējams pārlūkot albumus un meklēt gan tos, gan noteiktus attēlus, kā arī aplūkot savus un citu lietotāju veiktos refoto.
+description.paragraph.3=Tagad ir arī iespējams saglabāt refoto uzmetumus, pārskatīt tos un vēlāk augšuplādēt uz Ajapaik.ee (piemēram, lietojot WiFi).
+description.paragraph.4=Lai augšuplādētu refoto, nepieciešams autorizēties Google, Facebook vai kontā, kurš izveidots jūsu e-pastam.
+description.paragraph.5=Augšuplādējot refoto uz Ajapaik, jūs piekrītiet attēla publicēšanai ar Creative Commons Attribution (CC BY) licenci.

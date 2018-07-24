@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* P. S. F. Freitas
+-->
+<resources>
+  <string name="app_name">Ajapaik – ymaguare ha ko\'ãga</string>
+  <string name="processing_image">Oñehesa\'ỹijo hína ta\'anga</string>
+  <string name="please_wait">Eha\'arõmíkena...</string>
+  <string name="something_went_wrong">Peteĩ mba\'e ndoikoporãi</string>
+  <string name="action_albums">Ta\'angaryru</string>
+  <string name="action_flip">Jere</string>
+  <string name="action_login">Jeike</string>
+  <string name="action_register">Teraguapy</string>
+  <string name="action_logout">Ñesẽ</string>
+  <string name="action_profile">Puruhára Kuatia</string>
+  <string name="action_refresh">Mbopyahurã</string>
+  <string name="action_settings">Ñemyatyrõ</string>
+  <string name="nearest_title">Ta\'anganguéra ne\'aguĩva</string>
+  <string name="albums_label_no_data">Ndaipóri ta\'angaryru</string>
+  <string name="albums_title">Ta\'angaryru</string>
+  <string name="album_title">Ta\'angaryru</string>
+  <string name="nearest_dialog_error_location_disabled_close">Mboty</string>
+  <string name="nearest_dialog_error_location_disabled_open">Tojechauka Ñemyatyrõ</string>
+  <string name="nearest_label_no_data">Ndaipóri ta\'anganguéra ne\'aguĩva</string>
+  <string name="nearest_label_no_data_button">Emañami ta\'angaryru kuéra rehe rehecha hag̃ua opa ta\'anga</string>
+  <string name="photo_title">Ta\'anga Marandu</string>
+  <string name="camera_title">Ta\'anga apoha</string>
+  <string name="profile_title">Puruhára Kuatia</string>
+  <string name="profile_facebook_login">Jeike Facebook rupive</string>
+  <string name="profile_google_login">Jeike Google rupive</string>
+  <string name="profile_logout">Ñesẽ</string>
+  <string name="profile_login">Teraguapy</string>
+  <string name="profile_register">Nde Kuatiarã</string>
+  <string name="input_username_hint">Pareha (e-mail)</string>
+  <string name="input_password_hint">Ñe\'ẽpe\'aha</string>
+  <string name="input_firstname_hint">Téra</string>
+  <string name="input_lastname_hint">Terajoapy</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Ne\'ĩra rejapo ta\'anga ipyahúva</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; ta\'anga</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ta\'anga</item>
+  </plurals>
+  <string name="login_title">Jeike</string>
+  <string name="login_failed">Jeike ndoikói</string>
+  <string name="wrong_password">Ñe\'ẽpe\'aha ndoikóiǃ</string>
+  <string name="registration_title">Teraguapy</string>
+  <string name="user_already_exists">Ojeipurúma ko puruhára réra</string>
+  <string name="upload_title">Oĩma</string>
+  <string name="upload_dialog_error_connection_title">Internet ndoikói</string>
+  <string name="upload_dialog_error_connection_retry">Jey</string>
+  <string name="upload_dialog_error_connection_ok">Oĩma</string>
+  <string name="upload_dialog_error_unknown_title">Jejavy ojeikuaa\'ỹva</string>
+  <string name="upload_dialog_error_unknown_message">Ndaikatúi ojejupi ko ta\'anga. Reha\'ãse jeýpa?</string>
+  <string name="upload_dialog_error_unknown_retry">Jey</string>
+  <string name="upload_dialog_error_unknown_ok">Tojeheja</string>
+  <string name="upload_dialog_process_title">Ojehupi hína ko ta\'anga</string>
+  <string name="upload_dialog_process_message">Eha\'arõmíkena...</string>
+  <string name="upload_dialog_success_title">Ojehupipáma</string>
+  <string name="upload_dialog_success_message">Ta\'anga ojehupipa hekopeteǃ</string>
+  <string name="upload_dialog_success_ok">Oĩma</string>
+  <string name="upload_dialog_not_authenticated_title">Reike va\'erã rehupi hag̃ua ta\'anga</string>
+  <string name="upload_dialog_not_authenticated_ok">Oĩma</string>
+  <string name="upload_dialog_agree_to_terms">Upéichaǃ</string>
+  <string name="upload_dialog_decline_terms">Nahániri</string>
+  <string name="acra_dialog_title">\'Ajapaik – ymaguare ha ko\'ãga\' oñembyai</string>
+  <string name="acra_dialog_ok_toast">Aguyjeǃ</string>
+  <string name="about_title">Rehegua</string>
+  <string name="version">Mba\'ereko</string>
+  <string name="contact">Oremomarandu</string>
+  <string name="my_rephotos">Che ra\'anganguéra</string>
+  <string name="rephotos_label_not_logged_in_text">Eikemíkena rehecha hag̃ua ne ra\'anganguéra</string>
+  <string name="action_search">Jeheka</string>
+  <string name="favorites">Umi poravopyre</string>
+  <string name="no_favorites">Ndaipóri umi reiporavóva reipuruvégui</string>
+  <string name="action_favorite">Poravopyre</string>
+  <string name="favorites_label_not_logged_in_button">Teraguapy</string>
+  <string name="favorites_label_not_logged_in_text">Eikemíkena rehecha hag̃ua umi nde reiporavókuri</string>
+  <string name="no_search_result">Ndaipóri ko rehekáva</string>
+  <string name="album_no_data">Ndaipóri ta\'anga</string>
+</resources>

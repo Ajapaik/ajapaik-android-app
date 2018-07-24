@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Saraiki
+-->
+<resources>
+  <string name="app_name">اجاپیک ریفوٹو</string>
+  <string name="please_wait">انتظار کرو۔۔۔</string>
+  <string name="something_went_wrong">کجھ خراب تھی ڳئے</string>
+  <string name="action_albums">البم</string>
+  <string name="action_flip">فلپ</string>
+  <string name="action_login">لاگ ان</string>
+  <string name="action_register">رجسٹر</string>
+  <string name="action_logout">لاگ آؤٹ</string>
+  <string name="action_profile">پروفائل</string>
+  <string name="action_refresh">سجرا، تازہ کرو</string>
+  <string name="action_settings">ترتیباں</string>
+  <string name="nearest_title">نیڑے دے فوٹو</string>
+  <string name="albums_label_no_data">البم کوئی کائنی</string>
+  <string name="albums_title">البم</string>
+  <string name="album_title">البم</string>
+  <string name="nearest_dialog_error_location_disabled_title">محل وقوع فعال کائنی</string>
+  <string name="nearest_dialog_error_location_disabled_close">بند کرو</string>
+  <string name="nearest_dialog_error_location_disabled_open">ترتیباں کھولو</string>
+  <string name="nearest_label_no_data">نیڑے کوئی فوٹو کائنی</string>
+  <string name="photo_title">فوٹو دی تفصیل</string>
+  <string name="camera_title">کیمرا</string>
+  <string name="profile_title">پروفائل</string>
+  <string name="profile_facebook_login">فیس بک نال لاگ ان تھیوو</string>
+  <string name="profile_google_login">گوگل نال لاگ ان تھیوو</string>
+  <string name="profile_logout">لاگ آؤٹ</string>
+  <string name="profile_login">سائن ان</string>
+  <string name="profile_register">کھاتہ کھولو</string>
+  <string name="input_username_hint">ای میل</string>
+  <string name="input_password_hint">پاس ورڈ</string>
+  <string name="input_firstname_hint">پہلا ناں</string>
+  <string name="input_lastname_hint">چھیکڑی ناں</string>
+  <string name="login_title">لاگ ان</string>
+  <string name="login_failed">لاگ ان نی تھیا</string>
+  <string name="wrong_password">غلط پاسورڈ</string>
+  <string name="registration_title">رجسٹر</string>
+  <string name="upload_title">ریفوٹو دی تصدیق کرو</string>
+  <string name="upload_dialog_error_connection_title">کنکشن خراب ہے</string>
+  <string name="upload_dialog_error_connection_retry">ولدا کوشش کرو</string>
+  <string name="upload_dialog_error_connection_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_error_unknown_title">نامعلوم غلطی</string>
+  <string name="upload_dialog_error_unknown_retry">ولدا کوشش کرو</string>
+  <string name="upload_dialog_error_unknown_ok">منسوخ</string>
+  <string name="upload_dialog_process_title">فوٹو اپ لوڈ تھیندا پئے</string>
+  <string name="upload_dialog_process_message">انتظار کرو۔۔۔</string>
+  <string name="upload_dialog_success_title">اپ لوڈ کامیاب</string>
+  <string name="upload_dialog_success_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_not_authenticated_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_agree_to_terms">جیا!</string>
+  <string name="upload_dialog_decline_terms">کو</string>
+  <string name="acra_dialog_ok_toast">شکریہ!</string>
+  <string name="about_title">تعارف</string>
+  <string name="version">ورژن</string>
+  <string name="contact">رابطہ</string>
+  <string name="privacy_policy">پرائیویسی</string>
+  <string name="tutorial_dismiss">گھن گھندا</string>
+  <string name="tutorial_dialog_show_again_no">کو</string>
+  <string name="tutorial_dialog_show_again_yes">جیا</string>
+  <string name="no_rephotos">ریفوٹو کائنی</string>
+  <string name="storage_not_permitted_cancel">منسوخ</string>
+  <string name="storage_not_permitted_open_settings">ترتیباں کھولو</string>
+  <string name="my_rephotos">میݙے ریفوٹو</string>
+  <string name="action_search">ڳولو</string>
+  <string name="action_favorite">پسند</string>
+  <string name="favorites_label_not_logged_in_button">سائن ان</string>
+  <string name="no_search_result">ڳولݨ دا کوئی نتیجہ کائنی</string>
+  <string name="album_no_data">فوٹو کائنی</string>
+</resources>

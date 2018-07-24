@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Coriandre
+* Guilhelma
+* Unuaiga
+-->
+<resources>
+  <string name="processing_image">Tractament d\'imatge en cors</string>
+  <string name="something_went_wrong">Quicòm a trucat</string>
+  <string name="action_albums">Albums</string>
+  <string name="action_flip">Tornar</string>
+  <string name="nearest_title">Fòtos a proximitat</string>
+  <string name="albums_label_no_data">Pas d\'albums</string>
+  <string name="nearest_dialog_error_location_disabled_message">Impossible d\'obténer la localizacion actuala. Voletz l\'activar?</string>
+  <string name="nearest_label_no_data">Pas de fòtos pròchas</string>
+  <string name="profile_title">Perfil</string>
+  <string name="profile_google_login">Connectatz-vos amb Google</string>
+  <string name="profile_logout">Desconnexion</string>
+  <string name="profile_register">Crear un compte</string>
+  <string name="login_title">Connexion</string>
+  <string name="login_failed">Connexion pas capitada</string>
+  <string name="registration_title">Enregistratz-vos</string>
+  <string name="upload_dialog_error_connection_title">Error de connexion</string>
+  <string name="upload_dialog_error_unknown_message">Impossible de cargar la fotografia. Tornar ensajar ?</string>
+  <string name="upload_dialog_error_unknown_ok">Anullar</string>
+  <string name="upload_dialog_process_message">Pacientatz...</string>
+  <string name="upload_dialog_success_title">Importacion capitada</string>
+  <string name="upload_dialog_not_authenticated_title">Devètz èstre connectat per telecargar</string>
+  <string name="upload_dialog_not_authenticated_ok">Òc</string>
+  <string name="upload_dialog_decline_terms">Non</string>
+  <string name="acra_dialog_comment_prompt">Podetz apondre vòstres comentaris sus lo problèma çai-jos :</string>
+  <string name="about_title">A prepaus</string>
+  <string name="version">Version</string>
+  <string name="contact">Contacte</string>
+  <string name="navigation_drawer_close">Barrar lo tirador</string>
+  <string name="tutorial_opacity_zoom">Limpar per ajustar la transparéncia d\'un image ancian. Piuçar lo zoom per agrandir un image vielh.</string>
+  <string name="tutorial_dismiss">Es bon</string>
+  <string name="tutorial_dialog_show_again_title">Mostrar lo tutorial tornamai?</string>
+  <string name="tutorial_dialog_show_again_yes">Òc</string>
+  <string name="rephotos_label_not_logged_in_text">Si vos plai, connectatz vos per veire vòstras fòtos</string>
+  <string name="favorites">Mos favorits</string>
+  <string name="no_favorites">Pas ges de favorits</string>
+  <string name="action_favorite">Favorita</string>
+  <string name="favorites_label_not_logged_in_button">S’identificar</string>
+  <string name="no_search_result">Pas de resultat a la recèrca</string>
+</resources>

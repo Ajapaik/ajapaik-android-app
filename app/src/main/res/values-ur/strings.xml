@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Abdulq
+-->
+<resources>
+  <string name="please_wait">براہ مہربانی کچھ دیر انتظار کریں۔۔۔</string>
+  <string name="something_went_wrong">کچھ غلط ہو گیا ہے</string>
+  <string name="action_albums">البم</string>
+  <string name="action_register">اندراج کریں</string>
+  <string name="action_logout">کھاتہ سے باہر آئیں (لاگ آؤٹ)</string>
+  <string name="action_profile">جایزہ</string>
+  <string name="action_refresh">ریفریش کریں</string>
+  <string name="action_settings">ترتیبات</string>
+  <string name="albums_label_no_data">کوئی البم نہیں</string>
+  <string name="albums_title">کافی البم</string>
+  <string name="nearest_dialog_error_location_disabled_close">بند کریں</string>
+  <string name="nearest_dialog_error_location_disabled_open">ترتیبات کھولیں</string>
+  <string name="profile_title">جائزہ</string>
+  <string name="profile_logout">کھاتہ سے باہر آئیں (لاگ آؤٹ)</string>
+  <string name="profile_register">کھاتہ بنائیں</string>
+  <string name="input_username_hint">برقی خط</string>
+  <string name="login_title">داخل ہوں</string>
+  <string name="login_failed">داخلہ ناکام۔</string>
+  <string name="registration_title">اندراج کریں</string>
+  <string name="upload_dialog_error_connection_retry">دوبارہ کوشش کریں</string>
+  <string name="upload_dialog_error_connection_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_error_unknown_title">نامعلوم غلطی</string>
+  <string name="upload_dialog_error_unknown_retry">دوبارہ کوشش کریں</string>
+  <string name="upload_dialog_success_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_not_authenticated_ok">ٹھیک ہے</string>
+  <string name="upload_dialog_agree_to_terms">جی</string>
+  <string name="upload_dialog_decline_terms">نہیں</string>
+  <string name="acra_dialog_ok_toast">شکریہ!</string>
+  <string name="about_title">تعارف</string>
+  <string name="version">نسخہ</string>
+  <string name="contact">رابطہ کریں</string>
+  <string name="navigation_drawer_open">دراز کھولیں</string>
+  <string name="navigation_drawer_close">دراز بند کریں</string>
+  <string name="tutorial_dialog_show_again_no">نہیں</string>
+  <string name="tutorial_dialog_show_again_yes">جی</string>
+  <string name="favorites">میرے پسندیدہ</string>
+  <string name="action_favorite">پسندیدہ</string>
+  <string name="favorites_label_not_logged_in_button">داخل ہوں</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Gwenn-Ael
+-->
+<resources>
+  <string name="app_name">Ajapaik liestennañ</string>
+  <string name="processing_image">Tretañ ar skeudennoù war ober</string>
+  <string name="please_wait">Gortozit mar plij…</string>
+  <string name="something_went_wrong">Un dra bennak a-dreuz a zo bet</string>
+  <string name="action_albums">Albomoù</string>
+  <string name="action_flip">Eilpennañ</string>
+  <string name="action_login">Kevreañ</string>
+  <string name="action_register">En em enskrivañ</string>
+  <string name="action_logout">Digevreañ</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Freskaat</string>
+  <string name="action_settings">Arventennoù</string>
+  <string name="nearest_title">Luc\'hskeudennoù nes</string>
+  <string name="albums_label_no_data">Albom ebet</string>
+  <string name="albums_title">Albomoù</string>
+  <string name="album_title">Albom</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lec\'hiadur digweredekaet</string>
+  <string name="nearest_dialog_error_location_disabled_message">Ne c\'haller ket kaout al lec\'hiadur a vremañ. C\'hoant ho eus da weredekaat anezhañ ?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Serriñ</string>
+  <string name="nearest_dialog_error_location_disabled_open">Digeriñ an arventennoù</string>
+  <string name="nearest_label_no_data">Luc\'hskeudenn nes ebet</string>
+  <string name="nearest_label_no_data_button">Gwelet an albomoù evit merdeiñ en holl skeudennoù</string>
+  <string name="photo_title">Titouroù war ar skeudenn</string>
+  <string name="camera_title">Luc\'hskeudennerez</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Kevreañ ouzh Facebook</string>
+  <string name="profile_google_login">Kevreañ ouzh Google</string>
+  <string name="profile_logout">Digevreañ</string>
+  <string name="profile_login">Kevreañ</string>
+  <string name="profile_register">Krouiñ ur gont</string>
+  <string name="input_username_hint">Postel</string>
+  <string name="input_password_hint">Ger-tremen</string>
+  <string name="input_firstname_hint">Anv-bihan</string>
+  <string name="input_lastname_hint">Anv-familh</string>
+  <string name="login_title">Kevreañ</string>
+  <string name="wrong_password">Ger-tremen faziek!</string>
+  <string name="registration_title">En em enskrivañ</string>
+  <string name="user_already_exists">An anv implijer zo anezhañ dija.</string>
+  <string name="upload_dialog_error_connection_title">Fazi kevreañ</string>
+  <string name="upload_dialog_error_connection_message">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_connection_retry">Klask en-dro</string>
+  <string name="upload_dialog_error_connection_ok">Mat eo</string>
+  <string name="upload_dialog_error_unknown_title">Fazi dianav</string>
+  <string name="upload_dialog_error_unknown_message">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_unknown_retry">Klask en-dro</string>
+  <string name="upload_dialog_error_unknown_ok">Nullañ</string>
+  <string name="upload_dialog_process_title">Pellgargañ al luc\'hskeudenn</string>
+  <string name="upload_dialog_process_message">Gortozit mar plij…</string>
+</resources>

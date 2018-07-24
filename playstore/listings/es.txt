@@ -1,0 +1,7 @@
+# Messages for Spanish (español)
+# Exported from translatewiki.net
+# Author: Fitoschido
+
+description.paragraph.1=La aplicación Ajapaik te muestra imágenes históricas capturadas cerca de ti y te brinda una manera práctica de tomar refotografías de las mismas vistas.
+description.paragraph.2=Con la versión renovada (2018) también puedes explorar y buscar álbumes, encontrar una imagen específica y ver las refotos hechas por ti u otros usuarios.
+description.paragraph.4=Para cargar una refotografía debes autenticarte mediante una cuenta de Google o Facebook o con una cuenta de correo.

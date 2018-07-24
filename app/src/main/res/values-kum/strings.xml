@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* ArslanX
+-->
+<resources>
+  <string name="something_went_wrong">Бир зат терс гетди</string>
+  <string name="action_login">Гирив</string>
+  <string name="action_logout">Чыгъыв</string>
+  <string name="action_profile">Бет</string>
+  <string name="action_refresh">Янгыртмакъ</string>
+  <string name="action_settings">Кюйлевлер</string>
+  <string name="nearest_title">Ювукъдагъы сурат</string>
+  <string name="nearest_dialog_error_location_disabled_close">Япмакъ</string>
+  <string name="nearest_dialog_error_location_disabled_open">Кюйлевлени ачмакъ</string>
+  <string name="nearest_label_no_data">Ювукъда суратлар ёкъ</string>
+  <string name="camera_title">Камера</string>
+  <string name="profile_title">Бет</string>
+  <string name="profile_facebook_login">Фейсбукдан таба гирмек</string>
+  <string name="profile_google_login">Googleʼдан таба гирмек</string>
+  <string name="profile_logout">Чыкъмакъ</string>
+  <string name="profile_login">Гирмек</string>
+  <string name="profile_register">Гьисап бет ачмакъ</string>
+  <string name="input_username_hint">Эмеил</string>
+  <string name="input_password_hint">Чечил</string>
+  <string name="input_firstname_hint">Ат</string>
+  <string name="input_lastname_hint">Тухумат</string>
+  <string name="login_title">Гирив</string>
+  <string name="login_failed">Гирив бажарывсуз</string>
+  <string name="wrong_password">Терс чечил!</string>
+  <string name="user_already_exists">Бу ат тутулгъан</string>
+  <string name="upload_dialog_error_connection_title">Ялгъав хатасы</string>
+  <string name="upload_dialog_error_connection_retry">Такрарламакъ</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Белгисиз янгылыш</string>
+  <string name="upload_dialog_error_unknown_retry">Такрарламакъ</string>
+  <string name="upload_dialog_error_unknown_ok">Гери алыв</string>
+  <string name="upload_dialog_process_title">Сурат юклев</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Дюр!</string>
+  <string name="upload_dialog_decline_terms">Ёкъ</string>
+  <string name="acra_dialog_ok_toast">Савбол!</string>
+  <string name="about_title">Гьакъында</string>
+  <string name="version">Тюр</string>
+  <string name="contact">Къатнама</string>
+  <string name="privacy_policy">Энчилик</string>
+  <string name="tutorial_dismiss">Тюшюндюм!</string>
+  <string name="tutorial_dialog_show_again_no">Ёкъ</string>
+  <string name="tutorial_dialog_show_again_yes">Дюр</string>
+  <string name="storage_not_permitted_cancel">Гери алыв</string>
+  <string name="storage_not_permitted_open_settings">Кюйлевлени ачмакъ</string>
+  <string name="action_search">Излев</string>
+  <string name="favorites_label_not_logged_in_button">Гирмек</string>
+  <string name="album_no_data">Суратлар ёкъ</string>
+</resources>
