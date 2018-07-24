@@ -1,0 +1,14 @@
+# Messages for Turkish (Türkçe)
+# Exported from translatewiki.net
+# Author: Hedda
+
+title=Ajapaik rephoto
+short-description=Tarihi resimlerin bakış açısına bakın ve refotoğrafları gözden geçirin!
+description.paragraph.1=Ajapaik rephoto uygulaması size yakınınızda çekilen tarihi görüntüleri görüntüler ve aynı görüntülerin yeniden fotoğraflarını çekmenin kolay bir yolunu sunar.
+description.accuracy.title=Rephotography'yi daha kullanışlı hale getirmek için
+description.accuracy.bullet.1=* Tarihi resmin saydamlığını ekran boyunca kaydırarak kamera akışınızda değiştirebilirsiniz
+description.accuracy.bullet.2=* tarihi resmi yakınlaştırabilirsiniz
+description.paragraph.2=Yeni (2018) sürümde, albümlere göz atabilir ve bunları arayabilir, belirli bir resmi arayabilir, kendiniz veya diğer kullanıcılar tarafından yapılmış rephoto'ları görüntüleyebilirsiniz.
+description.paragraph.3=Artık rephoto taslakları kaydedilebilir ve daha sonra (örneğin wi-fi üzerinden) Ajapaik.ee'ye yüklenebilir.
+description.paragraph.4=Bir refotoğraf yüklemek için kendinizi Google veya Facebook hesabıyla veya e-posta tabanlı bir hesapla doğrulamanız gerekmektedir.
+description.paragraph.5=Yeniden görüntülemeleri Ajapaik'e yükleyerek, görüntüleri Creative Commons Attribution (CC BY) lisansı altında yayınlamayı kabul etmektesiniz.

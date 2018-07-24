@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Liuxinyu970226
+* McDutchie
 * Puik
 * Robby
 -->
 <resources>
-  <string name="app_name">Name of the app (how it is displayed in the apps listing etc).\nIn some languages (Estonian, Finnish) we\'ve actually used \"then and now\" not \"rephotography\" in the name.</string>
+  <string name="app_name">Name of the app (how it is displayed in the apps listing, etc.).\n\nThe original Estonian name translates as \"Ajapaik – then and now\" and some languages (Finnish, Swedish) have translated that instead of \"rephoto(graphy)\" in the name. Translators should consider which version fits best with their language.</string>
   <string name="processing_image">Message when rephotograph has been captured and is being processed (cropped according to old image zoom etc)</string>
   <string name="please_wait">Second part of message when rephotograph is processed</string>
   <string name="something_went_wrong">Generic error message</string>
@@ -26,11 +27,7 @@
   <string name="profile_register">{{Identical|Create account}}</string>
   <string name="input_password_hint">{{Identical|Password}}</string>
   <string name="input_firstname_hint">{{Identical|First name}}</string>
-  <plurals name="profile_rephotos">
-    <item quantity="zero">You haven\'t made any rephotos yet</item>
-    <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
-    <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
-  </plurals>
+  <string name="profile_rephotos">Message displayed in user profile section indicating how many rephotos (if any) user has uploaded to Ajapaik (rephoto drafts do not count)</string>
   <string name="upload_dialog_error_connection_message">When uploading of the rephoto fails</string>
   <string name="upload_dialog_error_connection_ok">{{Identical|OK}}</string>
   <string name="upload_dialog_error_unknown_ok">{{Identical|Cancel}}</string>
@@ -40,6 +37,7 @@
   <string name="upload_dialog_not_agreed_to_terms">Confirmation in app settings section where user agrees to publishing rephotos under CC BY (has to be ticked otherwise user cannot upload rephotos).</string>
   <string name="upload_dialog_agree_to_terms">{{Identical|Yes}}</string>
   <string name="upload_dialog_decline_terms">{{Identical|No}}</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' should be the same as the name of the app ({{msg-ajapaik|strings-app name}}).</string>
   <string name="acra_dialog_ok_toast">{{Identical|Thank you}}</string>
   <string name="about_title">{{Identical|About}}</string>
   <string name="version">{{Identical|Version}}</string>

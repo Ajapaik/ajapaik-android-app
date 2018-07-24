@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Revi
 * Ykhwong
 -->
 <resources>
+  <string name="processing_image">이미지 처리 중</string>
   <string name="please_wait">기다려 주십시오...</string>
   <string name="something_went_wrong">무언가가 잘못되었습니다</string>
   <string name="action_albums">앨범</string>

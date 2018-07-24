@@ -1,0 +1,14 @@
+# Messages for Brazilian Portuguese (português do Brasil)
+# Exported from translatewiki.net
+# Author: Eduardo Addad de Oliveira
+
+title=Refotografia Ajapaik
+short-description=Olhe para as posições estratégicas das imagens históricas e refotografe as vistas!
+description.paragraph.1=A aplicação de refotografia Ajapaik te mostra as imagens históricas capturadas próximas a você e te oferece uma maneira prática de tirar as refotografias das mesmas vistas.
+description.accuracy.title=Para tornar a refotografia mais conveniente
+description.accuracy.bullet.1=* pode alterar a transparência da imagem histórica no fluxo da sua câmara, ao deslizar ao longo da tela
+description.accuracy.bullet.2=* mover a ampliação da imagem histórica
+description.paragraph.2=Com a nova  versão (2018), também pode explorar e procurar os álbuns, encontrar uma imagem específica, e ver as refotografias realizadas por você ou por outros utilizadores.
+description.paragraph.3=Agora, os rascunhos das refotografias podem ser salvados, explorados e carregados posteriormente ao Ajapaik.ee (sobre o wi-fi, por exemplo).
+description.paragraph.4=Para carregar uma refotografia, deve entrar com a sua conta do Google ou do Facebook ou com uma conta de e-mail.
+description.paragraph.5=Ao carregar as refotografias no Ajapaik, concorda em publicar as imagens nos termos da licença Creative Commons Atribuição (CC BY).

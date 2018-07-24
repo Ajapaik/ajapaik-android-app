@@ -3,5 +3,12 @@
 # Author: Patriccck
 
 title=Ajapaik refotka
+short-description=Podívejte se na historii obrázku a refotografujte zhlédnutí!
+description.paragraph.1=Ajapaik replikační aplikace zobrazuje historické obrazy a nabízí snadný způsob, jak provést rephotografie stejných pohledů.
+description.accuracy.title=Aby byla rephotografie přijatelnější
 description.accuracy.bullet.1=* můžete změnit průhlednost historického snímku v stramu kamery posunutím podél obrazovky
+description.accuracy.bullet.2=* velikost obrazu můžete přiblížit dvěmi prsty
+description.paragraph.2=V nové (2018) verzi můžete také procházet a vyhledávat v albech, hledat konkrétní obrázky, prohlížet si svůj profil či profil jiných uživatelů.
+description.paragraph.3=Nyní mohou být návrhy pro refotografie procházeny a nahrány do programu Ajapaik.ee později (například přes Wi-Fi).
+description.paragraph.4=Chcete-li nahrát rephotografii, musíte se ověřit pomocí účtu Google, Facebooku nebo pomocí e-mailového účtu.
 description.paragraph.5=Nahráním refotek do Ajapaik souhlasíte s tím, že uvolníte obrázky pod licencí Creative Commons Attribution (CC BY).

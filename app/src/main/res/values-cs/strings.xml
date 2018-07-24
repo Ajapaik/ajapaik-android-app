@@ -90,14 +90,18 @@
   <string name="tutorial_dialog_show_again_yes">Ano</string>
   <string name="rephoto_drafts">Pracovní verze refotek</string>
   <string name="no_rephotos">Žádné refotky</string>
+  <string name="storage_not_permitted_title">Oprávnění k úložišti není povoleno</string>
+  <string name="storage_not_permitted_message">Pokud nepovolíte této aplikaci, aby mohla číst soubory z Vašeho úložiště, tak nebudete mít přístup například k nahrávání refotografíí. Zvažte, prosím, možnost využití úložiště.</string>
   <string name="storage_not_permitted_cancel">Storno</string>
   <string name="storage_not_permitted_open_settings">Otevřít nastavení</string>
   <string name="my_rephotos">Moje refotky</string>
+  <string name="rephotos_label_not_logged_in_text">Přihlaste se, abyste viděli vaše refotografie</string>
   <string name="action_search">Hledat</string>
   <string name="favorites">Moje oblíbené</string>
   <string name="no_favorites">Žádné oblíbené</string>
   <string name="action_favorite">Oblíbené</string>
   <string name="favorites_label_not_logged_in_button">Přihlásit se</string>
+  <string name="favorites_label_not_logged_in_text">Přihlaste se a zobrazte své oblíbené položky</string>
   <string name="no_search_result">Žádné výsledky vyhledávání</string>
   <string name="album_no_data">Žádné fotky</string>
 </resources>

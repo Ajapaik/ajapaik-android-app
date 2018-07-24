@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Nike
+* Pyscowicz
 -->
 <resources>
   <string name="app_name">Ajapaik – Ennen ja nyt</string>
@@ -11,11 +12,11 @@
   <string name="something_went_wrong">Jotain meni vikaan</string>
   <string name="action_albums">Albumit</string>
   <string name="action_flip">Käännä</string>
-  <string name="action_login">Kirjaudu sisään</string>
-  <string name="action_register">Luo tunnus</string>
+  <string name="action_login">Kirjaudu</string>
+  <string name="action_register">Rekisteröidy</string>
   <string name="action_logout">Kirjaudu ulos</string>
   <string name="action_profile">Profiili</string>
-  <string name="action_refresh">Päivitä tiedot</string>
+  <string name="action_refresh">Päivitä</string>
   <string name="action_settings">Asetukset</string>
   <string name="nearest_title">Lähistöllä</string>
   <string name="albums_label_no_data">Ei albumeita</string>
@@ -97,7 +98,7 @@
   <string name="storage_not_permitted_open_settings">Avaa asetukset</string>
   <string name="my_rephotos">Omat valokuvat</string>
   <string name="rephotos_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi valokuvasi</string>
-  <string name="action_search">Search</string>
+  <string name="action_search">Haku</string>
   <string name="favorites">Omat suosikkini</string>
   <string name="no_favorites">Ei suosikkeja</string>
   <string name="action_favorite">Suosikki</string>

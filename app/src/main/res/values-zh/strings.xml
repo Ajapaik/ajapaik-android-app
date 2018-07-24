@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Deathkon
 * Liuxinyu970226
 -->
 <resources>
@@ -44,7 +45,7 @@
   </plurals>
   <string name="login_title">登录</string>
   <string name="login_failed">登录未成功</string>
-  <string name="wrong_password">错误密码！</string>
+  <string name="wrong_password">密码有误！</string>
   <string name="registration_title">注册</string>
   <string name="user_already_exists">用户名已存在</string>
   <string name="upload_title">确认照片重制</string>
@@ -69,11 +70,11 @@
   <string name="upload_dialog_decline_terms">否</string>
   <string name="acra_dialog_title">“Ajapaik照片重制”已崩溃</string>
   <string name="acra_dialog_text">发生未知错误，导致应用程序被迫停止。请向我们发送错误数据，帮助我们修复，您只需要点击确定即可。</string>
-  <string name="acra_dialog_comment_prompt">您也可以在下方添加有关问题的注释：</string>
+  <string name="acra_dialog_comment_prompt">您可以在下面添加您对该问题的评论：</string>
   <string name="acra_dialog_ok_toast">谢谢您！</string>
   <string name="about_title">关于</string>
   <string name="version">版本</string>
-  <string name="contact">联络</string>
+  <string name="contact">联系我们</string>
   <string name="privacy_policy">隐私</string>
   <string name="navigation_drawer_open">打开绘画器</string>
   <string name="navigation_drawer_close">关闭绘画器</string>
@@ -96,11 +97,11 @@
   <string name="my_rephotos">我的照片重制</string>
   <string name="rephotos_label_not_logged_in_text">请登录以查看您的照片重制</string>
   <string name="action_search">搜索</string>
-  <string name="favorites">我的喜爱</string>
-  <string name="no_favorites">无喜爱</string>
-  <string name="action_favorite">喜爱</string>
+  <string name="favorites">我的收藏</string>
+  <string name="no_favorites">未收藏</string>
+  <string name="action_favorite">收藏</string>
   <string name="favorites_label_not_logged_in_button">登录</string>
-  <string name="favorites_label_not_logged_in_text">请登录以查看您的喜爱</string>
+  <string name="favorites_label_not_logged_in_text">请登录以查看您的收藏夹</string>
   <string name="no_search_result">无搜索结果</string>
   <string name="album_no_data">无照片</string>
 </resources>

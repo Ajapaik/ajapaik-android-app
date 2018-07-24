@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Asierog
+* EukeneFL
+* Mikel Ibaiba
+-->
+<resources>
+  <string name="app_name">Ajapaik berrargazkia</string>
+  <string name="processing_image">Argazkia prozesatzen</string>
+  <string name="please_wait">Mesedez itxaron…</string>
+  <string name="something_went_wrong">Zerbaitek huts egin du</string>
+  <string name="action_albums">Albumak</string>
+  <string name="action_flip">Buelta eman</string>
+  <string name="action_login">Hasi saioa</string>
+  <string name="action_register">Izena eman</string>
+  <string name="action_logout">Saioa itxi</string>
+  <string name="action_profile">Profila</string>
+  <string name="action_refresh">Eguneratu</string>
+  <string name="action_settings">Ezarpenak</string>
+  <string name="nearest_title">Gertuko argazkiak</string>
+  <string name="albums_label_no_data">Albumik ez</string>
+  <string name="albums_title">Albumak</string>
+  <string name="album_title">Albuma</string>
+  <string name="nearest_dialog_error_location_disabled_title">Kokapena desgaitua</string>
+  <string name="nearest_dialog_error_location_disabled_message">Ezin izan da oraingo kokapena lortu. Gaitu nahiko zenuke?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Itxi</string>
+  <string name="nearest_dialog_error_location_disabled_open">Ireki Ezarpenak</string>
+  <string name="nearest_label_no_data">Gertuko argazkirik ez</string>
+  <string name="nearest_label_no_data_button">Ikusi albumak argazki guztiak arakatzeko</string>
+  <string name="photo_title">Argazkiaren Datuak</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profila</string>
+  <string name="profile_facebook_login">Saioa hasi Facebookekin</string>
+  <string name="profile_google_login">Saioa hasi Googlekin</string>
+  <string name="profile_logout">Saioa itxi</string>
+  <string name="profile_login">Saioa hasi</string>
+  <string name="profile_register">Kontua sortu</string>
+  <string name="input_username_hint">Posta elektronikoa</string>
+  <string name="input_password_hint">Pasahitza</string>
+  <string name="input_firstname_hint">Izena</string>
+  <string name="input_lastname_hint">Abizena</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Oraindik ez duzu berrargazkirik egin</item>
+    <item quantity="other">berrargazki bat=&lt;b&gt;1&lt;/b&gt; </item>
+  </plurals>
+  <string name="login_title">Hasi saioa</string>
+  <string name="login_failed">Saio hasiera ezin izan da egin</string>
+  <string name="wrong_password">Pasahitz okerra!</string>
+  <string name="registration_title">Izena eman</string>
+  <string name="user_already_exists">Erabiltzailea jadanik existitzen da</string>
+  <string name="upload_title">Berargazkia Baieztatu</string>
+  <string name="upload_dialog_error_connection_title">Konektatzeko Errorea</string>
+  <string name="upload_dialog_error_connection_message">Ezin izan da argazkia igo. Berriz saiatu?</string>
+  <string name="upload_dialog_error_connection_retry">Saiatu berriro</string>
+  <string name="upload_dialog_error_connection_ok">Ados</string>
+  <string name="upload_dialog_error_unknown_title">Errore ezezaguna</string>
+  <string name="upload_dialog_error_unknown_message">Ezin izan da argazkia igo. Berriz saiatu?</string>
+  <string name="upload_dialog_error_unknown_retry">Saiatu berriro</string>
+  <string name="upload_dialog_error_unknown_ok">Utzi</string>
+  <string name="upload_dialog_process_title">Argazkia igotzen</string>
+  <string name="upload_dialog_process_message">Mesedez itxaron…</string>
+  <string name="upload_dialog_success_title">Ondo igo da</string>
+  <string name="upload_dialog_success_message">Argazkia arrakastaz igo da!</string>
+  <string name="upload_dialog_success_ok">Ados</string>
+  <string name="upload_dialog_not_authenticated_title">Saioa hasi behar da zerbait igotzeko</string>
+  <string name="upload_dialog_not_authenticated_message">Profil orrialdera birbideratu</string>
+  <string name="upload_dialog_not_authenticated_ok">Ados</string>
+  <string name="upload_dialog_not_agreed_to_terms">Onartzen dut argazkiak argitaratzea CC BY 4.0 lizentziaren babespean</string>
+  <string name="upload_dialog_agree_to_terms">Bai!</string>
+  <string name="upload_dialog_decline_terms">Ez</string>
+  <string name="acra_dialog_title">\'Ajapaik berargazkia\' eten da</string>
+  <string name="acra_dialog_text">Espero ez zen errorea gertatu da aplikazioa geldiarazi denean. Mesedez, lagun iezaguzu errore honen datuak bidaliz, egin behar duzun guztia OK klikatzea da.</string>
+  <string name="acra_dialog_comment_prompt">Arazoari buruzko iruzkinak behean idatz ditzakezu</string>
+  <string name="acra_dialog_ok_toast">Eskerrik asko!</string>
+  <string name="about_title">Honi buruz</string>
+  <string name="version">Bertsioa</string>
+  <string name="contact">Kontaktua</string>
+  <string name="privacy_policy">Pribatutasuna</string>
+  <string name="navigation_drawer_open">Kaxoia ireki</string>
+  <string name="navigation_drawer_close">Itxi kaxoia</string>
+  <string name="settings_show_tutorial">Erakutsi tutoriala berargazki moduan</string>
+  <string name="settings_agree_to_license_terms">Onartzen dut berargazkiak argitaratzea Ajapaik.ee-en CC BY 4.0 lizentziaren babespean</string>
+  <string name="tutorial_hide_show_flip">Klikatu argazkia ezkutatzeko/agertarazteko.\nErabili buelta ikonoa goiko eskumaldeko izkinean argazki zaharrari buelta emateko.</string>
+  <string name="tutorial_opacity_zoom">Irristatu argazki zaharraren gardentasuna doitzeko.\nKlikatu zooma argazki zaharrean zoom egiteko.</string>
+  <string name="tutorial_take_picture">Sakatu itxiera botoia edo sakatu luzez edonon pantailan berrargazkia ateratzeko.</string>
+  <string name="tutorial_dismiss">Ulertu dut!</string>
+  <string name="tutorial_dialog_show_again_title">Erakutsi berriz tutoriala?</string>
+  <string name="tutorial_dialog_show_again_message">Geroago piztu dezakezu berriz tutoriala ezarpenetatik</string>
+  <string name="tutorial_dialog_show_again_no">Ez</string>
+  <string name="tutorial_dialog_show_again_yes">Bai</string>
+  <string name="rephoto_drafts">Berargazki zirriborroak</string>
+  <string name="no_rephotos">Berrargazkirik ez</string>
+  <string name="storage_not_permitted_title">Biltagiratzea ez da onartzen</string>
+  <string name="storage_not_permitted_message">Aplikazio honi biltegiratzea erabiltzea ez uzteak zeinbat funtzioetako sarbidea oztopatzen du, adibidez, berrargazkiak hartzea edo igotzea. Mesedez kontsidera ezazu biltegiratzearen erabilpena baimentzea.</string>
+  <string name="storage_not_permitted_cancel">Utzi</string>
+  <string name="storage_not_permitted_open_settings">Ireki ezarpenak</string>
+  <string name="my_rephotos">Nire berrargazkiak</string>
+  <string name="rephotos_label_not_logged_in_text">Mesedez hasi saioa zure berrargazkiak ikusteko</string>
+  <string name="action_search">Bilatu</string>
+  <string name="favorites">Nire gogokoenak</string>
+  <string name="no_favorites">Gogokorik ez</string>
+  <string name="action_favorite">Gogokoak</string>
+  <string name="favorites_label_not_logged_in_button">Hasi saioa</string>
+  <string name="favorites_label_not_logged_in_text">Mesdez hasi saioa zure gogokoak ikus ditzazun</string>
+  <string name="no_search_result">Bilaketa emaitzarik ez</string>
+  <string name="album_no_data">Ez dago argazkirik</string>
+</resources>

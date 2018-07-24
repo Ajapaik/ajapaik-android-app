@@ -1,0 +1,14 @@
+# Messages for Dutch (Nederlands)
+# Exported from translatewiki.net
+# Author: McDutchie
+
+title=Ajapaik – toen en nu
+short-description=Ga terug naar de plek van historische afbeeldingen en maak er nieuwe foto's van!
+description.paragraph.1=Met "Ajapaik – toen en nu" bekijk je oude foto's van bij jou in de buurt, en kun je makkelijk vanuit hetzelfde gezichtspunt nieuwe foto's nemen.
+description.accuracy.title=Om makkelijk nieuwe foto's te kunnen nemen, kun je:
+description.accuracy.bullet.1=* met verschuifbare doorzichtigheid de oude foto over je camerabeeld weergeven
+description.accuracy.bullet.2=* op de oude foto in- en uitzoomen
+description.paragraph.2=In de nieuwe versie (van 2018) kun je ook de albums bekijken en doorzoeken, een bepaalde afbeelding opzoeken, en de door jou of andere gebruikers genomen nieuwe foto's bekijken.
+description.paragraph.3=Nu kun je ook kladfoto's opslaan en bekijken om ze pas later naar Ajapaik.ee te uploaden (bv. wanneer er wi-fi beschikbaar is).
+description.paragraph.4=Om een nieuwe foto te uploaden moet je je identificeren met je Google- of Facebook-account of met een via je e-mailadres bevestigd account.
+description.paragraph.5=Door nieuwe foto's naar Ajapaik te uploaden ga je ermee akkoord dat de afbeeldingen aan iedereen vrij beschikbaar worden gesteld onder licentie Creative Commons Naamsvermelding (CC BY).

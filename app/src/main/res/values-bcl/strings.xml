@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* ShimunUfesoj
+-->
+<resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">Pigpoproseso an ladawan</string>
+  <string name="please_wait">Pakihalat tabi…</string>
+  <string name="something_went_wrong">Igwang nagkasalá</string>
+  <string name="action_albums">Mga album</string>
+  <string name="action_flip">Paltik</string>
+  <string name="action_login">Maglaog</string>
+  <string name="action_register">Magrehistro</string>
+  <string name="action_logout">Magluwas</string>
+  <string name="action_profile">Profile</string>
+  <string name="action_refresh">Preskohon otro</string>
+  <string name="action_settings">Mga Panuytoy</string>
+  <string name="nearest_title">Hararaning mga ladawan</string>
+  <string name="albums_label_no_data">Mayong mga album</string>
+  <string name="albums_title">Mga album</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Dae pigpaganang Lokasyon</string>
+  <string name="nearest_dialog_error_location_disabled_message">Dae makua an sa ngunyan na kinamumugtakan. Gusto mo bang paganahon ini?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Isara</string>
+  <string name="nearest_dialog_error_location_disabled_open">Bukas na mga panuytoy</string>
+  <string name="nearest_label_no_data">Mayong hararaning mga ladawan</string>
+  <string name="nearest_label_no_data_button">Hilingon an mga album tanganing mag-browse sa gabos nin mga ladawan</string>
+  <string name="photo_title">Mga detalye kan Ladawan</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profile</string>
+  <string name="profile_facebook_login">Maglaog na gamit an Facebook</string>
+  <string name="profile_google_login">Mag-laog na gamit an Google</string>
+  <string name="profile_logout">Magluwas</string>
+  <string name="profile_login">Maglaog</string>
+  <string name="profile_register">Magmukna nin panindog</string>
+  <string name="input_username_hint">E-surat</string>
+  <string name="input_password_hint">Pasa-taramon</string>
+  <string name="input_firstname_hint">Enot na pangaran</string>
+  <string name="input_lastname_hint">Panhuring pangaran</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Dae ka pa nakagibo nin anumang mga pagsasaladawan</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; Pagsasaladawan</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; mga pagsasaladawan</item>
+  </plurals>
+  <string name="login_title">Maglaog</string>
+  <string name="login_failed">Dae matagumpay an pag-laog</string>
+  <string name="wrong_password">Salang Pasa-taramon!</string>
+  <string name="registration_title">Magrehistro</string>
+  <string name="user_already_exists">Igwa nang arog kaining pangaran-nin-paragamit</string>
+  <string name="upload_title">Kumpirmahon an Pagsasaladawan</string>
+  <string name="upload_dialog_error_connection_title">Error sa Koneksyon</string>
+  <string name="upload_dialog_error_connection_message">Dae ma-upload an ladawan. Utruhon?</string>
+  <string name="upload_dialog_error_connection_retry">Uliton</string>
+  <string name="upload_dialog_error_connection_ok">Sige</string>
+  <string name="upload_dialog_error_unknown_title">Bakong bistadong sala</string>
+  <string name="upload_dialog_error_unknown_retry">Uliton</string>
+  <string name="upload_dialog_error_unknown_ok">Kanselaron</string>
+  <string name="upload_dialog_process_message">Pakihalat tabi…</string>
+  <string name="upload_dialog_success_ok">Sige</string>
+  <string name="upload_dialog_not_authenticated_ok">Sige</string>
+  <string name="upload_dialog_agree_to_terms">Iyo!</string>
+  <string name="upload_dialog_decline_terms">Dae</string>
+</resources>

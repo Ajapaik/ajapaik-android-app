@@ -101,4 +101,6 @@
   <string name="action_favorite">Preferì</string>
   <string name="favorites_label_not_logged_in_button">Rintré ant ël sistema</string>
   <string name="favorites_label_not_logged_in_text">Për piasì, ch\'a rintra ant ël sistema për vëdde ij sò preferì</string>
+  <string name="no_search_result">Gnun arzultà d\'arserca</string>
+  <string name="album_no_data">Gnun-e fòto</string>
 </resources>
