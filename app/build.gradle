@@ -57,6 +57,7 @@ dependencies {
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.0@aar') {
         transitive = true
     }
+    implementation project(':JniBitmapOperationsLibrary')
 }
 
 apply plugin: 'com.google.gms.google-services'
