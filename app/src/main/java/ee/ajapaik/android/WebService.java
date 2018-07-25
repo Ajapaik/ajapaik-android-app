@@ -13,15 +13,20 @@ import android.util.Log;
 
 import com.facebook.AccessToken;
 
-import ee.ajapaik.android.data.Session;
-import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.util.*;
-
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import ee.ajapaik.android.data.Session;
+import ee.ajapaik.android.data.util.Status;
+import ee.ajapaik.android.util.Authorization;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.Settings;
+import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.util.WebImage;
+import ee.ajapaik.android.util.WebOperation;
 
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 
@@ -65,17 +70,16 @@ public class WebService extends Service {
 
     private void runSilentLogin() {
         Authorization authorization = m_settings.getAuthorization();
-        if (authorization == null){
-            setAuthorizationToAnonymous();
-            return;
-        } else if (authorization.isAnonymous()) {
+        if (authorization == null || authorization.isAnonymous()){
+            resetAuthorizationAndSession();
             return;
         }
+
         WebAction<Session> action;
 
         if (FACEBOOK.equals(authorization.getType())) {
             if (AccessToken.getCurrentAccessToken() == null) {
-                setAuthorizationToAnonymous();
+                resetAuthorizationAndSession();
             }
         }
 
@@ -86,12 +90,13 @@ public class WebService extends Service {
             m_session = action.getObject();
             m_settings.setSession(m_session);
         } else {
-            setAuthorizationToAnonymous();
+            resetAuthorizationAndSession();
         }
     }
 
-    private void setAuthorizationToAnonymous() {
+    private void resetAuthorizationAndSession() {
         m_settings.setAuthorization(Authorization.getAnonymous());
+        m_session = null;
     }
 
     private void runOperation(final Task task, final WebOperation operation) {
