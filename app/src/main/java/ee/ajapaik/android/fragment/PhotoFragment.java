@@ -24,14 +24,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import ee.ajapaik.android.CameraActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.ImagePagerAdapter;
 import ee.ajapaik.android.data.Album;
-import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Rephoto;
 import ee.ajapaik.android.data.util.Status;
@@ -136,8 +134,6 @@ public class PhotoFragment extends ImageFragment {
             m_location = getSettings().getLocation();
         }
 
-        getImageView().setOffset(m_offset);
-
         getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new OnTouchListener[]{
                 new OnScaleTouchListener(getActivity()) {
                     @Override
@@ -179,26 +175,11 @@ public class PhotoFragment extends ImageFragment {
                 }
         }));
 
+        //        TODO change to immersive mode image view
         getImageView().setScale(m_scale);
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setOnLoadListener(imageLoadListener());
-
-        getSubtitleView().setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(m_photo != null) {
-                    Hyperlink link = m_photo.getSource();
-
-                    if(link != null && link.getURL() != null) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-
-                        intent.setData(link.getURL());
-                        startActivity(intent);
-                    }
-                }
-            }
-        });
 
         getRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
@@ -233,13 +214,14 @@ public class PhotoFragment extends ImageFragment {
 
         getSwipeRefreshLayout().setEnabled(false);
 
+//        TODO change to immersive mode image view
         getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
                 m_offset = new PointF(0, Integer.MIN_VALUE);
                 avoidScrollingOutOfViewport(getImageView());
                 m_offset = new PointF(m_offset.x, m_offset.y + getActionBar().getHeight());
-                getImageView().setOffset(m_offset);
+//                getImageView().setOffset(m_offset);
             }
 
             @Override
@@ -465,12 +447,8 @@ public class PhotoFragment extends ImageFragment {
         m_immersiveMode = flag;
 
         if(m_immersiveMode) {
-            getInfoLayout().setVisibility(INVISIBLE);
-            getOverlayLayout().setVisibility(INVISIBLE);
             getActionBar().hide();
         } else {
-            getInfoLayout().setVisibility(VISIBLE);
-            getOverlayLayout().setVisibility(VISIBLE);
             getActionBar().show();
             getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
         }
@@ -482,8 +460,6 @@ public class PhotoFragment extends ImageFragment {
         if(m_rephotoViewMode) {
             getActionBar().setDisplayHomeAsUpEnabled(false);
             getImageView().setVisibility(INVISIBLE);
-            getInfoLayout().setVisibility(INVISIBLE);
-            getOverlayLayout().setVisibility(INVISIBLE);
             getRephotoDetailsLayout().setVisibility(VISIBLE);
             getOriginalPhotoContainer().setVisibility(VISIBLE);
             getViewPager().setVisibility(VISIBLE);
@@ -496,8 +472,6 @@ public class PhotoFragment extends ImageFragment {
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
             getImageView().setVisibility(VISIBLE);
-            getInfoLayout().setVisibility(VISIBLE);
-            getOverlayLayout().setVisibility(VISIBLE);
             getRephotoDetailsLayout().setVisibility(INVISIBLE);
             getOriginalPhotoContainer().setVisibility(INVISIBLE);
             getViewPager().setVisibility(INVISIBLE);
@@ -515,9 +489,6 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void invalidatePhoto() {
-        String title = m_photo.getTitle();
-        String author = m_photo.getAuthor();
-        Date date = m_photo.getDate();
         m_favorited = m_photo.isFavorited();
 
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
@@ -529,43 +500,11 @@ public class PhotoFragment extends ImageFragment {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
         }
 
-        if(author != null && author.length() == 0) {
-            author = null;
-        }
-
-        if(m_photo.getSource() != null) {
-            getSubtitleView().setText(m_photo.getSource().toHtml());
-        }
-
-        if(title != null) {
-            getTitleView().setText(title);
-        }
-
-        if(author != null) {
-            getAuthorView().setText(author);
-        }
-
-        if(date != null) {
-            String dateString = Strings.toLocalizedDate(getActivity(), date);
-            if(author != null) {
-                dateString = ", " + dateString;
-            }
-            getDateView().setText(dateString);
-        }
-
         invalidateLocation();
     }
 
     private void invalidateLocation() {
         getDistanceView().setText(Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location));
-    }
-
-    private View getInfoLayout() {
-        return getView().findViewById(R.id.layout_info);
-    }
-
-    private View getOverlayLayout() {
-        return getView().findViewById(R.id.layout_overlay);
     }
 
     private ImageView getRephotoButton() {
@@ -576,24 +515,8 @@ public class PhotoFragment extends ImageFragment {
         return (TextView)getView().findViewById(R.id.text_distance);
     }
 
-    private TextView getTitleView() {
-        return (TextView)getView().findViewById(R.id.text_title);
-    }
-
-    private TextView getAuthorView() {
-        return (TextView)getView().findViewById(R.id.text_author);
-    }
-
-    private TextView getDateView() {
-        return (TextView)getView().findViewById(R.id.text_date);
-    }
-
     private ImageView getRephotosCountImageView() {
         return (ImageView)getView().findViewById(R.id.image_rephoto);
-    }
-
-    private Button getSubtitleView() {
-        return (Button)getView().findViewById(R.id.button_subtitle);
     }
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {

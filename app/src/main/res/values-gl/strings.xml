@@ -69,4 +69,5 @@
   <string name="album_no_data">Non hai fotografías</string>
   <string name="start_taking_rephoto">Start taking rephoto</string>
   <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>
