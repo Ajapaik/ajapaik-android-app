@@ -142,11 +142,11 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/photo_details_map"
                 android:layout_height="0dp"
-                android:text="123123etgsd"
-                android:layout_weight="0.43"/>
+                android:layout_weight="0.43"
+                android:layout_width="match_parent" />
 
         </LinearLayout>
 
