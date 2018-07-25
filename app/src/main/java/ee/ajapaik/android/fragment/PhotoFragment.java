@@ -19,7 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -39,7 +38,6 @@ import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.ImageFragment;
 import ee.ajapaik.android.util.Dates;
 import ee.ajapaik.android.util.Images;
-import ee.ajapaik.android.util.Locations;
 import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.Strings;
 import ee.ajapaik.android.util.WebAction;
@@ -52,7 +50,6 @@ import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
 import static android.view.View.OnTouchListener;
@@ -571,8 +568,8 @@ public class PhotoFragment extends ImageFragment {
         return getView().findViewById(R.id.layout_overlay);
     }
 
-    private Button getRephotoButton() {
-        return (Button)getView().findViewById(R.id.button_action_rephoto);
+    private ImageView getRephotoButton() {
+        return (ImageView)getView().findViewById(R.id.button_action_rephoto);
     }
 
     private TextView getDistanceView() {

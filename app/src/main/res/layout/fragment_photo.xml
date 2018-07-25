@@ -146,7 +146,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="12 m" />
+                                android:text="" />
 
                         <ImageView
                             android:id="@+id/button_action_rephoto"
@@ -167,18 +167,6 @@
                             android:contentDescription="@string/show_photo_details" />
 
                     </LinearLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/layout_details_actions"
-                        style="@style/PhotoInfoActions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-
-
-                    </RelativeLayout>
-
 
                 </LinearLayout>
 
