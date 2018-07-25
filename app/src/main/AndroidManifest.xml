@@ -27,6 +27,11 @@
                 android:name="com.facebook.sdk.ApplicationId"
                 android:value="@string/facebook_app_id"/>
 
+        <!--TODO DO NOT COMMIT THIS KEY!!!!-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="Key-goes-here"/>
+
         <activity
                 android:name="ee.ajapaik.android.NearestActivity">
             <intent-filter>

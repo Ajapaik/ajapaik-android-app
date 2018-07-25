@@ -7,11 +7,13 @@ import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,6 +24,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +56,7 @@ import ee.ajapaik.android.widget.util.OnPanTouchListener;
 import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -54,6 +66,8 @@ import static android.view.View.OnTouchListener;
 import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
+    private static final String TAG = "PhotoFragment";
+
     private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
@@ -100,7 +114,36 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_photo, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_photo, container, false);
+        MapView m_mapView = (MapView) rootView.findViewById(R.id.photo_details_map);
+        m_mapView.onCreate(savedInstanceState);
+        m_mapView.onResume();
+
+        try {
+            MapsInitializer.initialize(getActivity().getApplicationContext());
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to initialize map", e);
+        }
+
+        m_mapView.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap mMap) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (getActivity().checkSelfPermission(ACCESS_FINE_LOCATION) == PERMISSION_GRANTED) {
+                        mMap.setMyLocationEnabled(true);
+                    }
+                } else {
+                    mMap.setMyLocationEnabled(true);
+                }
+
+                LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
+                mMap.addMarker(new MarkerOptions().position(photoLocation));
+
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(13).build();
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            }
+        });
+        return rootView;
     }
 
     @Override
