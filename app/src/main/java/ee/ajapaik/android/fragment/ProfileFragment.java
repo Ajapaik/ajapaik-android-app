@@ -118,7 +118,11 @@ public class ProfileFragment extends WebFragment {
         super.onStart();
 
         getSwipeRefreshLayout().setRefreshing(true);
-        refresh();
+        if (!getSettings().getAuthorization().isAnonymous()) {
+            refresh();
+        } else {
+            initUserInterface();
+        }
     }
 
     public Profile getProfile() {
@@ -170,11 +174,15 @@ public class ProfileFragment extends WebFragment {
                 } else if(m_profile == null) {
                     showRequestErrorToast();
                 }
-                toggleLoginButtons();
-                getMainLayout().setVisibility(VISIBLE);
-                getSwipeRefreshLayout().setRefreshing(false);
+                initUserInterface();
             }
         });
+    }
+
+    private void initUserInterface() {
+        toggleLoginButtons();
+        getMainLayout().setVisibility(VISIBLE);
+        getSwipeRefreshLayout().setRefreshing(false);
     }
 
     private boolean isLoggedIn(Authorization authorization) {
