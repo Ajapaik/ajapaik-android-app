@@ -67,9 +67,10 @@ public class NearestActivity extends AlbumActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        m_connection.connect(this);
         if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, ACCESS_FINE_LOCATION_PERMISSION);
+        } else {
+            m_connection.connect(this);
         }
         this.setTitle(getResources().getString(R.string.nearest_title));
     }
@@ -81,6 +82,8 @@ public class NearestActivity extends AlbumActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                    if (!((LocationManager)getSystemService(LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                        showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+                   } else {
+                       m_connection.connect(this);
                    }
                 } else if (isDoNotAskAgainChecked()) {
                     showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
