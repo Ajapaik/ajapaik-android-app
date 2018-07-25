@@ -115,6 +115,13 @@ public class PhotoFragment extends ImageFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_photo, container, false);
+        if (m_photo.getLocation() != null) {
+            initMap(savedInstanceState, rootView);
+        }
+        return rootView;
+    }
+
+    private void initMap(Bundle savedInstanceState, View rootView) {
         MapView m_mapView = (MapView) rootView.findViewById(R.id.photo_details_map);
         m_mapView.onCreate(savedInstanceState);
         m_mapView.onResume();
@@ -143,7 +150,6 @@ public class PhotoFragment extends ImageFragment {
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
         });
-        return rootView;
     }
 
     @Override
