@@ -27,4 +27,6 @@
   <string name="input_password_hint">Лозинка</string>
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
 </resources>

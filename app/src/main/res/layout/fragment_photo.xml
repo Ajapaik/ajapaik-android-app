@@ -132,23 +132,39 @@
                         android:layout_height="wrap_content"
                         android:text="" />
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-
-                        <ImageButton
-                                android:id="@+id/button_action_azimuth"
-                                style="@style/PhotoOverlayButton"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_navigation_white_36dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
 
                         <TextView
                                 style="@style/PhotoOverlayText"
                                 android:layout_gravity="center_vertical"
                                 android:textColor="@color/albums_item_title"
                                 android:id="@+id/text_distance"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:text="" />
+                                android:gravity="center"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="12 m" />
+
+                        <ImageView
+                            android:id="@+id/button_action_rephoto"
+                            style="@style/PhotoOverlayButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_camera_white_48dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/start_taking_rephoto" />
+
+                        <ImageView
+                            android:id="@+id/button_action_photo_info"
+                            style="@style/PhotoOverlayButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/round_info_white_48"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/show_photo_details" />
 
                     </LinearLayout>
 
@@ -159,22 +175,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/button_action_download"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_alignParentLeft="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawableTop="@drawable/ic_file_download_white_48dp"
-                            android:visibility="gone"/>
 
-                        <Button
-                            android:id="@+id/button_action_rephoto"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_alignParentRight="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawableTop="@drawable/ic_camera_white_48dp" />
 
                     </RelativeLayout>
 

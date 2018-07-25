@@ -65,13 +65,11 @@ public class PhotoFragment extends ImageFragment {
     private static final int CAMERA_AND_STORAGE_PERMISSION = 6002;
 
     private static final String KEY_ALBUM = "album";
-    private static final String KEY_AZIMUTH = "azimuth";
     private static final String KEY_IMMERSIVE_MODE = "immersive_mode";
     private static final String KEY_REPHOTO_VIEW_MODE = "rephoto_view_mode";
     private static final String KEY_LOCATION = "location";
     private static final String KEY_OFFSET = "offset";
 
-    private int m_azimuth;
     private boolean m_immersiveMode;
     private boolean m_rephotoViewMode;
     protected boolean m_favorited;
@@ -116,7 +114,6 @@ public class PhotoFragment extends ImageFragment {
 
         if(savedInstanceState != null) {
             m_album = savedInstanceState.getParcelable(KEY_ALBUM);
-            m_azimuth = savedInstanceState.getInt(KEY_AZIMUTH, 0);
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
             m_location = savedInstanceState.getParcelable(KEY_LOCATION);
             m_immersiveMode = savedInstanceState.getBoolean(KEY_IMMERSIVE_MODE);
@@ -233,7 +230,6 @@ public class PhotoFragment extends ImageFragment {
             }
         });
 
-        invalidateAzimuth();
         invalidatePhoto();
 
         setRephotoViewMode(m_rephotoViewMode);
@@ -427,7 +423,6 @@ public class PhotoFragment extends ImageFragment {
         savedInstanceState.putBoolean(KEY_IMMERSIVE_MODE, m_immersiveMode);
         savedInstanceState.putBoolean(KEY_REPHOTO_VIEW_MODE, m_rephotoViewMode);
         savedInstanceState.putBoolean(KEY_FLIPPED_MODE, m_flippedMode);
-        savedInstanceState.putInt(KEY_AZIMUTH, m_azimuth);
         savedInstanceState.putParcelable(KEY_LOCATION, m_location);
         savedInstanceState.putParcelable(KEY_PHOTO, m_photo);
         savedInstanceState.putParcelable(KEY_OFFSET, m_offset);
@@ -515,16 +510,9 @@ public class PhotoFragment extends ImageFragment {
 
     public void invalidate(Location location, float[] orientation) {
         if(m_photo != null) {
-            int azimuth = Math.round(Locations.getAzimuthInDegrees(getActivity(), location, m_photo.getLocation(), orientation));
-
             if(m_location != location) {
                 m_location = location;
                 invalidateLocation();
-            }
-
-            if(m_azimuth != azimuth) {
-                m_azimuth = azimuth;
-                invalidateAzimuth();
             }
         }
     }
@@ -571,17 +559,6 @@ public class PhotoFragment extends ImageFragment {
         invalidateLocation();
     }
 
-    private void invalidateAzimuth() {
-        ImageButton azimuthButton = getAzimuthButton();
-
-        if(m_photo.getLocation() != null) {
-            azimuthButton.setRotation((float)m_azimuth);
-            azimuthButton.setVisibility(VISIBLE);
-        } else {
-            azimuthButton.setVisibility(GONE);
-        }
-    }
-
     private void invalidateLocation() {
         getDistanceView().setText(Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location));
     }
@@ -592,10 +569,6 @@ public class PhotoFragment extends ImageFragment {
 
     private View getOverlayLayout() {
         return getView().findViewById(R.id.layout_overlay);
-    }
-
-    private ImageButton getAzimuthButton() {
-        return (ImageButton)getView().findViewById(R.id.button_action_azimuth);
     }
 
     private Button getRephotoButton() {

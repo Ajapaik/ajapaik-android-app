@@ -51,4 +51,6 @@
   <string name="upload_dialog_error_unknown_ok">Nullañ</string>
   <string name="upload_dialog_process_title">Pellgargañ al luc\'hskeudenn</string>
   <string name="upload_dialog_process_message">Gortozit mar plij…</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
 </resources>
