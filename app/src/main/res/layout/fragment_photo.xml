@@ -4,6 +4,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
+    <!--Rephotos view-->
     <LinearLayout
         android:id="@+id/rephotos_layout"
         android:layout_width="match_parent"
@@ -68,131 +70,85 @@
 
     </LinearLayout>
 
+    <!--Photo details view-->
     <android.support.v4.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/layout_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="?android:attr/actionBarSize">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <ee.ajapaik.android.widget.WebImageView
                 android:id="@+id/image"
                 android:adjustViewBounds="true"
-                android:layout_alignParentTop="true"
+                android:layout_marginTop="?android:attr/actionBarSize"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.43"
                 android:contentDescription="@string/none"
                 android:src="@drawable/transparent"
-                android:scaleType="fitStart" />
+                android:scaleType="fitCenter" />
 
-            <RelativeLayout
-                android:id="@+id/layout_info"
-                android:layout_alignParentBottom="true"
+            <ImageView
+                style="@style/AlbumOverlayRephotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/image_rephoto"
+                android:contentDescription="@string/show_rephotos"
+                android:visibility="gone"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="0dp"
+                android:layout_weight="0.14"
+                android:gravity="center">
 
-                <LinearLayout
-                    android:id="@+id/layout_details_info"
-                    style="@style/PhotoInfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/text_title"
-                        style="@style/PhotoInfoTitleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                        <TextView
-                                android:id="@+id/text_author"
-                                style="@style/PhotoInfoTitleText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:text="" />
-                        <TextView
-                                android:id="@+id/text_date"
-                                style="@style/PhotoInfoTitleText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="" />
-                    </LinearLayout>
-
-                    <Button
-                        android:id="@+id/button_subtitle"
-                        style="@style/PhotoInfoSubtitleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-
-                        <TextView
-                                style="@style/PhotoOverlayText"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/albums_item_title"
-                                android:id="@+id/text_distance"
-                                android:gravity="center"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="" />
-
-                        <ImageView
-                            android:id="@+id/button_action_rephoto"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_camera_white_48dp"
-                            android:layout_height="wrap_content"
-                            android:contentDescription="@string/start_taking_rephoto" />
-
-                        <ImageView
-                            android:id="@+id/button_action_photo_info"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/round_info_white_48"
-                            android:layout_height="wrap_content"
-                            android:contentDescription="@string/show_photo_details" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/layout_overlay"
-                style="@style/PhotoOverlay"
-                android:layout_alignParentTop="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/layout_info">
-
+                <TextView
+                    style="@style/PhotoOverlayText"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/albums_item_title"
+                    android:id="@+id/text_distance"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
-                    style="@style/AlbumOverlayRephotoButton"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/button_action_rephoto"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_camera_white_48dp"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:id="@+id/image_rephoto"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true" />
+                    android:contentDescription="@string/start_taking_rephoto" />
 
-            </RelativeLayout>
+                <ImageView
+                    android:id="@+id/button_action_photo_info"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/round_info_white_48"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/show_photo_details" />
 
-        </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="123123etgsd"
+                android:layout_weight="0.43"/>
+
+        </LinearLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
