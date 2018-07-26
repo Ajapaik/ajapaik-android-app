@@ -4,6 +4,9 @@ import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -27,7 +30,7 @@ public class ImmersivePhotoFragment extends ImageFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
             m_scale = savedInstanceState.getFloat(KEY_SCALE);
@@ -71,6 +74,31 @@ public class ImmersivePhotoFragment extends ImageFragment {
 
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setOnLoadListener(imageLoadListener());
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_photo, menu);
+        menu.findItem(R.id.action_favorite).setVisible(false);
+        setFlipIcon(menu.findItem(R.id.action_flip));
+    }
+
+    private void setFlipIcon(MenuItem item) {
+        item.setIcon(m_flippedMode
+                ? R.drawable.ic_flip_white_36dp_selected
+                : R.drawable.ic_flip_white_36dp
+        );
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_flip) {
+            m_flippedMode = !m_flippedMode;
+            getImageView().setFlipped(m_flippedMode);
+            setFlipIcon(item);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
