@@ -2,14 +2,15 @@ package ee.ajapaik.android.fragment.util;
 
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ProgressBar;
-import ee.ajapaik.android.data.Photo;
+
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.widget.WebImageView;
 
 public abstract class ImageFragment extends WebFragment {
+
+    protected static final int THUMBNAIL_SIZE = 400;
 
     protected boolean m_flippedMode = false;
     protected Photo m_photo;
