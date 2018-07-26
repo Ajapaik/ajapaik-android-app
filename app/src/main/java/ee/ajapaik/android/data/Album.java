@@ -367,6 +367,13 @@ public class Album extends Model {
         return null;
     }
 
+    public boolean hasPhotosWithLocation() {
+        for (Photo photo : m_photos) {
+            if (photo.getLocation() != null) return true;
+        }
+        return false;
+    }
+
     public List<Photo> getPhotos() {
         return m_photos;
     }

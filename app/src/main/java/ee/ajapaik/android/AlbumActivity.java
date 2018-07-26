@@ -31,7 +31,6 @@ public class AlbumActivity extends NavigationDrawerActivity {
     @Override
     protected void setContentView() {
         setContentView(R.layout.activity_album);
-
     }
 
     @Override

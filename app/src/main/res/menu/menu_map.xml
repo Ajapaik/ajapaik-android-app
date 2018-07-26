@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".PhotoActivity">
+
+    <item
+        android:id="@+id/action_toggle_map"
+        android:title="Toggle map"
+        android:icon="@drawable/round_map_white_48"
+        app:showAsAction="always" />
+
+</menu>

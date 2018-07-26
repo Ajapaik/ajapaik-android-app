@@ -23,6 +23,12 @@
         </ee.ajapaik.android.widget.StaggeredGridView>
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/album_map"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="gone"/>
+
     <TextView
             android:id="@+id/empty"
             style="@style/AlbumPlaceholderTitleText"
