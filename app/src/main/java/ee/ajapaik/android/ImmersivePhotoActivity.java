@@ -26,7 +26,7 @@ public class ImmersivePhotoActivity extends WebActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_photo);
+        setContentView(R.layout.activity_immersive_photo);
         if (savedInstanceState == null) {
             Photo photo = getIntent().getParcelableExtra(EXTRA_PHOTO);
             ImmersivePhotoFragment fragment = new ImmersivePhotoFragment();
@@ -35,5 +35,6 @@ public class ImmersivePhotoActivity extends WebActivity {
 
             getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, TAG_FRAGMENT).commit();
         }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

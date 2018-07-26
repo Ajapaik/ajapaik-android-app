@@ -121,7 +121,8 @@
                 android:name="ee.ajapaik.android.SettingsActivity"
                 android:label="@string/action_settings">
         </activity>
-        <activity android:name=".ImmersivePhotoActivity" />
+        <activity android:name=".ImmersivePhotoActivity"
+                android:theme="@style/AppThemeTranslucent"/>
     </application>
 
 </manifest>
