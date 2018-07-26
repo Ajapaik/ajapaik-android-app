@@ -28,6 +28,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -128,7 +129,11 @@ public class PhotoFragment extends ImageFragment {
                 }
 
                 LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
-                mMap.addMarker(new MarkerOptions().position(photoLocation));
+                MarkerOptions markerOptions = new MarkerOptions()
+                        .position(photoLocation)
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
+
+                mMap.addMarker(markerOptions);
 
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(13).build();
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
