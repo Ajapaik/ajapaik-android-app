@@ -70,6 +70,7 @@
         <activity
                 android:name="ee.ajapaik.android.PhotoActivity"
                 android:label="@string/photo_title"
+                android:screenOrientation="portrait"
                 android:theme="@style/AppThemeTranslucent">
         </activity>
         <activity
