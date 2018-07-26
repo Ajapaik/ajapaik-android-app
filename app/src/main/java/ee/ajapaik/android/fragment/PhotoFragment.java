@@ -220,14 +220,16 @@ public class PhotoFragment extends ImageFragment {
         getPhotoInfoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                m_infoViewMode = !m_infoViewMode;
-                if (m_infoViewMode) {
-                    getMapView().setVisibility(GONE);
-                    getInfoLayout().setVisibility(VISIBLE);
-                } else {
-                    getMapView().setVisibility(VISIBLE);
-                    getInfoLayout().setVisibility(GONE);
-                }
+                m_infoViewMode = true;
+                toggleMapAndInfo();
+            }
+        });
+
+        getMapButton().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                m_infoViewMode = false;
+                toggleMapAndInfo();
             }
         });
 
@@ -250,6 +252,20 @@ public class PhotoFragment extends ImageFragment {
         setRephotoViewMode(m_rephotoViewMode);
 
         getSwipeRefreshLayout().setEnabled(false);
+    }
+
+    private void toggleMapAndInfo() {
+        if (m_infoViewMode) {
+            getMapView().setVisibility(GONE);
+            getMapButton().setVisibility(VISIBLE);
+            getInfoLayout().setVisibility(VISIBLE);
+            getPhotoInfoButton().setVisibility(GONE);
+        } else {
+            getMapView().setVisibility(VISIBLE);
+            getMapButton().setVisibility(GONE);
+            getInfoLayout().setVisibility(GONE);
+            getPhotoInfoButton().setVisibility(VISIBLE);
+        }
     }
 
     @Override
@@ -568,5 +584,9 @@ public class PhotoFragment extends ImageFragment {
 
     private ImageView getPhotoInfoButton() {
         return (ImageView) getView().findViewById(R.id.button_action_photo_info);
+    }
+
+    private ImageView getMapButton() {
+        return (ImageView) getView().findViewById(R.id.button_action_map);
     }
 }
