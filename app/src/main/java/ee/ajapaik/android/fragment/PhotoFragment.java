@@ -22,7 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -508,10 +508,8 @@ public class PhotoFragment extends ImageFragment {
 
         if(m_rephotoViewMode) {
             getActionBar().setDisplayHomeAsUpEnabled(false);
-            getImageView().setVisibility(INVISIBLE);
-            getRephotoDetailsLayout().setVisibility(VISIBLE);
-            getOriginalPhotoContainer().setVisibility(VISIBLE);
-            getViewPager().setVisibility(VISIBLE);
+            getRephotosLayout().setVisibility(VISIBLE);
+            getMainLayout().setVisibility(INVISIBLE);
             getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
             final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
             getViewPager().setAdapter(adapter);
@@ -520,10 +518,8 @@ public class PhotoFragment extends ImageFragment {
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
-            getImageView().setVisibility(VISIBLE);
-            getRephotoDetailsLayout().setVisibility(INVISIBLE);
-            getOriginalPhotoContainer().setVisibility(INVISIBLE);
-            getViewPager().setVisibility(INVISIBLE);
+            getMainLayout().setVisibility(VISIBLE);
+            getRephotosLayout().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
     }
@@ -589,15 +585,15 @@ public class PhotoFragment extends ImageFragment {
         return (TextView) getView().findViewById(R.id.rephoto_author);
     }
 
-    private RelativeLayout getRephotoDetailsLayout() {
-        return (RelativeLayout) getView().findViewById(R.id.rephoto_details_layout);
-    }
-
     private Button getCloseRephotoButton() {
         return (Button) getView().findViewById(R.id.button_action_close_rephotos);
     }
 
     private WebImageView getRephotoViewOriginalImageView() {
         return (WebImageView) getView().findViewById(R.id.rephotos_original);
+    }
+
+    private LinearLayout getRephotosLayout() {
+        return (LinearLayout) getView().findViewById(R.id.rephotos_layout);
     }
 }
