@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/PhotoFragment"
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <ee.ajapaik.android.widget.WebImageView
+            android:id="@+id/image"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/none"
+            android:src="@drawable/transparent"
+            android:scaleType="fitCenter"/>
+
+</RelativeLayout>

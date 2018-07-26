@@ -3,9 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PointF;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -38,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ee.ajapaik.android.CameraActivity;
+import ee.ajapaik.android.ImmersivePhotoActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.ImagePagerAdapter;
 import ee.ajapaik.android.data.Album;
@@ -52,8 +51,6 @@ import ee.ajapaik.android.util.Strings;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
 import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
-import ee.ajapaik.android.widget.util.OnPanTouchListener;
-import ee.ajapaik.android.widget.util.OnScaleTouchListener;
 import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -68,23 +65,17 @@ import static android.view.View.VISIBLE;
 public class PhotoFragment extends ImageFragment {
     private static final String TAG = "PhotoFragment";
 
-    private static final int THUMBNAIL_SIZE = 400;
-
     private static final int REQUEST_CAMERA = 4000;
     private static final int CAMERA_AND_STORAGE_PERMISSION = 6002;
 
     private static final String KEY_ALBUM = "album";
-    private static final String KEY_IMMERSIVE_MODE = "immersive_mode";
     private static final String KEY_REPHOTO_VIEW_MODE = "rephoto_view_mode";
     private static final String KEY_LOCATION = "location";
-    private static final String KEY_OFFSET = "offset";
 
-    private boolean m_immersiveMode;
     private boolean m_rephotoViewMode;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
-    private PointF m_offset = null;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -156,11 +147,8 @@ public class PhotoFragment extends ImageFragment {
             m_album = savedInstanceState.getParcelable(KEY_ALBUM);
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
             m_location = savedInstanceState.getParcelable(KEY_LOCATION);
-            m_immersiveMode = savedInstanceState.getBoolean(KEY_IMMERSIVE_MODE);
             m_rephotoViewMode = savedInstanceState.getBoolean(KEY_REPHOTO_VIEW_MODE);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
-            m_offset = savedInstanceState.getParcelable(KEY_OFFSET);
-            m_scale = savedInstanceState.getFloat(KEY_SCALE, DEFAULT_SCALE);
         }
 
         if(m_album == null) {
@@ -184,48 +172,14 @@ public class PhotoFragment extends ImageFragment {
         }
 
         getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new OnTouchListener[]{
-                new OnScaleTouchListener(getActivity()) {
-                    @Override
-                    public void onScale(float scale) {
-                        if(m_immersiveMode) {
-                            WebImageView imageView = getImageView();
-                            float newScale = imageView.getScale() * scale;
-                            if (newScale < 1.0f) {
-                                newScale = 1.0f;
-                            };
-                            imageView.setScale(newScale);
-                            m_scale = imageView.getScale();
-                        }
-                    }
-                },
-                new OnPanTouchListener(getActivity()) {
-                    @Override
-                    public void onPan(float distanceX, float distanceY) {
-                        if(m_immersiveMode) {
-                            WebImageView imageView = getImageView();
-
-                            m_offset = imageView.getOffset();
-
-                            if(m_offset == null) {
-                                m_offset = new PointF();
-                            }
-
-                            m_offset = new PointF(m_offset.x - distanceX, m_offset.y - distanceY);
-                            avoidScrollingOutOfViewport(imageView);
-                            imageView.setOffset(m_offset);
-                        }
-                    }
-                },
                 new OnSwipeTouchListener(getActivity()) {
                     @Override
                     public void onSingleTap() {
-                        setImmersiveMode(!m_immersiveMode);
+                        ImmersivePhotoActivity.start(getActivity(), m_photo);
                     }
                 }
         }));
 
-        //        TODO change to immersive mode image view
-        getImageView().setScale(m_scale);
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setOnLoadListener(imageLoadListener());
@@ -262,23 +216,6 @@ public class PhotoFragment extends ImageFragment {
         setRephotoViewMode(m_rephotoViewMode);
 
         getSwipeRefreshLayout().setEnabled(false);
-
-//        TODO change to immersive mode image view
-        getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
-            @Override
-            public void onImageLoaded() {
-                m_offset = new PointF(0, Integer.MIN_VALUE);
-                avoidScrollingOutOfViewport(getImageView());
-                m_offset = new PointF(m_offset.x, m_offset.y + getActionBar().getHeight());
-//                getImageView().setOffset(m_offset);
-            }
-
-            @Override
-            public void onImageUnloaded() { }
-
-            @Override
-            public void onImageFailed() { }
-        });
     }
 
     @Override
@@ -378,44 +315,7 @@ public class PhotoFragment extends ImageFragment {
         });
     }
 
-    private void avoidScrollingOutOfViewport(WebImageView imageView) {
-        int viewWidth = getMainLayout().getWidth();
-        int viewHeight = getMainLayout().getHeight();
-        float imageViewDrawableRatio = (float) viewWidth / imageView.getDrawable().getIntrinsicWidth();
 
-        avoidScrollingOutOfViewportOnXAxle(imageView, viewWidth, imageViewDrawableRatio);
-        avoidScrollingOutOfViewportOnYAxle(imageView, viewHeight, imageViewDrawableRatio);
-    }
-
-    private void avoidScrollingOutOfViewportOnYAxle(WebImageView imageView, int viewHeight, float imageViewDrawableRatio) {
-        int imageHeight = imageView.getDrawable().getIntrinsicHeight();
-        m_offset.y = getPosition(m_offset.y, viewHeight, imageHeight, imageViewDrawableRatio, imageView.getScale());
-    }
-
-    private void avoidScrollingOutOfViewportOnXAxle(WebImageView imageView, int viewWidth, float imageViewDrawableRatio) {
-        int imageWidth = imageView.getDrawable().getIntrinsicWidth();
-        m_offset.x = getPosition(m_offset.x, viewWidth, imageWidth, imageViewDrawableRatio, imageView.getScale());
-    }
-
-    private float getPosition(float currentPosition, int viewLength, float imageLength, float imageViewDrawableRatio, float scale) {
-        float scaledImageLength = imageLength * imageViewDrawableRatio * scale;
-        float positiveEdge = (viewLength - scaledImageLength) / 2;
-        float negativeEdge = -positiveEdge;
-        if (scaledImageLength < viewLength) {
-            return avoidScrollingOutOfViewport(currentPosition, positiveEdge, negativeEdge);
-        } else {
-            return avoidScrollingOutOfViewport(currentPosition, negativeEdge, positiveEdge);
-        }
-    }
-
-    private float avoidScrollingOutOfViewport(float currentPosition, float positiveEdge, float negativeEdge) {
-        if (currentPosition > positiveEdge) {
-            return positiveEdge;
-        } else if (currentPosition < negativeEdge) {
-            return negativeEdge;
-        }
-        return currentPosition;
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -448,13 +348,10 @@ public class PhotoFragment extends ImageFragment {
         super.onSaveInstanceState(savedInstanceState);
 
         savedInstanceState.putParcelable(KEY_ALBUM, m_album);
-        savedInstanceState.putBoolean(KEY_IMMERSIVE_MODE, m_immersiveMode);
         savedInstanceState.putBoolean(KEY_REPHOTO_VIEW_MODE, m_rephotoViewMode);
         savedInstanceState.putBoolean(KEY_FLIPPED_MODE, m_flippedMode);
         savedInstanceState.putParcelable(KEY_LOCATION, m_location);
         savedInstanceState.putParcelable(KEY_PHOTO, m_photo);
-        savedInstanceState.putParcelable(KEY_OFFSET, m_offset);
-        savedInstanceState.putFloat(KEY_SCALE, m_scale);
     }
 
     @Override
@@ -489,17 +386,6 @@ public class PhotoFragment extends ImageFragment {
                     }
                 });
             }
-        }
-    }
-
-    private void setImmersiveMode(boolean flag) {
-        m_immersiveMode = flag;
-
-        if(m_immersiveMode) {
-            getActionBar().hide();
-        } else {
-            getActionBar().show();
-            getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.photo_background)));
         }
     }
 
