@@ -50,8 +50,6 @@ import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.Strings;
 import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.widget.WebImageView;
-import ee.ajapaik.android.widget.util.OnCompositeTouchListener;
-import ee.ajapaik.android.widget.util.OnSwipeTouchListener;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
@@ -59,7 +57,6 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
-import static android.view.View.OnTouchListener;
 import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
@@ -171,14 +168,12 @@ public class PhotoFragment extends ImageFragment {
             m_location = getSettings().getLocation();
         }
 
-        getImageView().setOnTouchListener(new OnCompositeTouchListener(getActivity(), new OnTouchListener[]{
-                new OnSwipeTouchListener(getActivity()) {
-                    @Override
-                    public void onSingleTap() {
-                        ImmersivePhotoActivity.start(getActivity(), m_photo);
-                    }
-                }
-        }));
+        getImageView().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImmersivePhotoActivity.start(getActivity(), m_photo);
+            }
+        });
 
         getImageView().setFlipped(m_flippedMode);
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
