@@ -144,6 +144,16 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/show_photo_details" />
 
+                <ImageView
+                    android:id="@+id/button_action_map"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/round_map_white_48"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/show_photo_details"
+                    android:visibility="gone"/>
+
             </LinearLayout>
 
             <com.google.android.gms.maps.MapView
