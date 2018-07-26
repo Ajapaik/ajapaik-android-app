@@ -34,6 +34,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import ee.ajapaik.android.CameraActivity;
@@ -41,6 +42,7 @@ import ee.ajapaik.android.ImmersivePhotoActivity;
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.adapter.ImagePagerAdapter;
 import ee.ajapaik.android.data.Album;
+import ee.ajapaik.android.data.Hyperlink;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Rephoto;
 import ee.ajapaik.android.data.util.Status;
@@ -56,6 +58,7 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
@@ -70,7 +73,8 @@ public class PhotoFragment extends ImageFragment {
     private static final String KEY_REPHOTO_VIEW_MODE = "rephoto_view_mode";
     private static final String KEY_LOCATION = "location";
 
-    private boolean m_rephotoViewMode;
+    private boolean m_rephotoViewMode = false;
+    private boolean m_infoViewMode = false;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
@@ -107,7 +111,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void initMap(Bundle savedInstanceState) {
-        final MapView m_mapView = (MapView) getView().findViewById(R.id.photo_details_map);
+        MapView m_mapView = getMapView();
         m_mapView.onCreate(savedInstanceState);
         m_mapView.onResume();
 
@@ -184,6 +188,22 @@ public class PhotoFragment extends ImageFragment {
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getImageView().setOnLoadListener(imageLoadListener());
 
+        getSubtitleView().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(m_photo != null) {
+                    Hyperlink link = m_photo.getSource();
+
+                    if(link != null && link.getURL() != null) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+
+                        intent.setData(link.getURL());
+                        startActivity(intent);
+                    }
+                }
+            }
+        });
+
         getRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,6 +213,20 @@ public class PhotoFragment extends ImageFragment {
                     ActivityCompat.requestPermissions(getActivity(), permissionsNeeded.toArray(new String[permissionsNeeded.size()]), CAMERA_AND_STORAGE_PERMISSION);
                 } else {
                     startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
+                }
+            }
+        });
+
+        getPhotoInfoButton().setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                m_infoViewMode = !m_infoViewMode;
+                if (m_infoViewMode) {
+                    getMapView().setVisibility(GONE);
+                    getInfoLayout().setVisibility(VISIBLE);
+                } else {
+                    getMapView().setVisibility(VISIBLE);
+                    getInfoLayout().setVisibility(GONE);
                 }
             }
         });
@@ -315,8 +349,6 @@ public class PhotoFragment extends ImageFragment {
         });
     }
 
-
-
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
@@ -420,6 +452,9 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void invalidatePhoto() {
+        String title = m_photo.getTitle();
+        String author = m_photo.getAuthor();
+        Date date = m_photo.getDate();
         m_favorited = m_photo.isFavorited();
 
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
@@ -429,6 +464,30 @@ public class PhotoFragment extends ImageFragment {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
+        }
+
+        if(author != null && author.length() == 0) {
+            author = null;
+        }
+
+        if(m_photo.getSource() != null) {
+            getSubtitleView().setText(m_photo.getSource().toHtml());
+        }
+
+        if(title != null) {
+            getTitleView().setText(title);
+        }
+
+        if(author != null) {
+            getAuthorView().setText(author);
+        }
+
+        if(date != null) {
+            String dateString = Strings.toLocalizedDate(getActivity(), date);
+            if(author != null) {
+                dateString = ", " + dateString;
+            }
+            getDateView().setText(dateString);
         }
 
         invalidateLocation();
@@ -446,8 +505,24 @@ public class PhotoFragment extends ImageFragment {
         return (TextView)getView().findViewById(R.id.text_distance);
     }
 
+    private TextView getTitleView() {
+        return (TextView)getView().findViewById(R.id.text_title);
+    }
+
+    private TextView getAuthorView() {
+        return (TextView)getView().findViewById(R.id.text_author);
+    }
+
+    private TextView getDateView() {
+        return (TextView)getView().findViewById(R.id.text_date);
+    }
+
     private ImageView getRephotosCountImageView() {
         return (ImageView)getView().findViewById(R.id.image_rephoto);
+    }
+
+    private Button getSubtitleView() {
+        return (Button)getView().findViewById(R.id.button_subtitle);
     }
 
     private SwipeRefreshLayout getSwipeRefreshLayout() {
@@ -481,5 +556,17 @@ public class PhotoFragment extends ImageFragment {
 
     private LinearLayout getRephotosLayout() {
         return (LinearLayout) getView().findViewById(R.id.rephotos_layout);
+    }
+
+    private MapView getMapView() {
+        return (MapView) getView().findViewById(R.id.photo_details_map);
+    }
+
+    private LinearLayout getInfoLayout() {
+        return (LinearLayout) getView().findViewById(R.id.layout_details_info);
+    }
+
+    private ImageView getPhotoInfoButton() {
+        return (ImageView) getView().findViewById(R.id.button_action_photo_info);
     }
 }
