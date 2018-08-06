@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Dr Lotus Black
+-->
+<resources>
+  <string name="please_wait">ကျေးဇူးပြု၍ ခဏစောင့်ပါ...</string>
+  <string name="something_went_wrong">တစ်ခုခု မှားယွင်းသွားခဲ့ပါသည်</string>
+  <string name="action_albums">အယ်လ်ဘမ်များ</string>
+  <string name="action_flip">လှန်မည်</string>
+  <string name="action_login">အကောင့်ထဲဝင်ရန်</string>
+  <string name="action_register">မှတ်ပုံတင်ရန်</string>
+  <string name="action_logout">အကောင့်မှပြန်ထွက်ခြင်း</string>
+  <string name="action_profile">ပရိုဖိုင်</string>
+  <string name="action_refresh">ရှင်းသန့်</string>
+  <string name="action_settings">အပြင်အဆင်များ</string>
+  <string name="nearest_title">အနီးအနား ရုပ်ပုံများ</string>
+  <string name="albums_label_no_data">အယ်လ်ဘမ်များ မရှိပါ</string>
+  <string name="albums_title">အယ်လ်ဘမ်များ</string>
+  <string name="album_title">အယ်လ်ဘမ်</string>
+  <string name="nearest_dialog_error_location_disabled_title">တည်နေရာ ပိတ်ထားသည်</string>
+  <string name="nearest_dialog_error_location_disabled_message">လက်ရှိတည်နေရာ မရရှိနိုင်ပါ၊ ဖွင့်လိုပါသလား။</string>
+  <string name="nearest_dialog_error_location_disabled_close">ပိတ်ရန်</string>
+  <string name="nearest_dialog_error_location_disabled_open">အပြင်အဆင်များကို ဖွင့်ရန်</string>
+  <string name="nearest_label_no_data">အနီးအနား ရုပ်ပုံများ မရှိပါ</string>
+  <string name="nearest_label_no_data_button">ရုပ်ပုံများအားလုံးကို ကြည့်ရန် အယ်လ်ဘမ်များကို ရှုပါ</string>
+  <string name="photo_title">ရုပ်ပုံများ အသေးစိပ်</string>
+  <string name="camera_title">ကင်မရာ</string>
+  <string name="profile_title">ပရိုဖိုင်</string>
+  <string name="profile_facebook_login">ဖေ့ဘုတ်ဖြင့် အကောင့်ထဲဝင်ရန်</string>
+  <string name="profile_google_login">ဂူဂဲလ်ဖြင့် အကောင့်ထဲဝင်ရန်</string>
+  <string name="profile_logout">အကောင့်မှပြန်ထွက်ခြင်း</string>
+  <string name="profile_login">အကောင့်ဝင်ရန်</string>
+  <string name="profile_register">အကောင့် ဖန်တီးရန်</string>
+  <string name="input_username_hint">အီးမေးလ်</string>
+  <string name="input_password_hint">စကားဝှက်</string>
+  <string name="input_firstname_hint">ပထမအမည်</string>
+  <string name="input_lastname_hint">မိသားစု/မျိုးနွယ်အမည်</string>
+  <string name="login_title">အကောင့်ထဲဝင်ရန်</string>
+  <string name="login_failed">လော့အင်ဝင်ခြင်း မအောင်မြင်ပါ</string>
+  <string name="wrong_password">စကားဝှက် မှားနေပါသည်</string>
+  <string name="registration_title">မှတ်ပုံတင်ရန်</string>
+  <string name="user_already_exists">အသုံးပြုသူအမည် ရှိနေပြီးသားဖြစ်သည်</string>
+  <string name="upload_dialog_error_connection_title">ဆက်သွယ်မှု အမှား</string>
+  <string name="upload_dialog_error_connection_message">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
+  <string name="upload_dialog_error_connection_retry">ပြန်လုပ်</string>
+  <string name="upload_dialog_error_connection_ok">အိုကေ</string>
+  <string name="upload_dialog_error_unknown_title">အမည်မသိအမှား</string>
+  <string name="upload_dialog_error_unknown_message">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
+  <string name="upload_dialog_error_unknown_retry">ပြန်လုပ်</string>
+  <string name="upload_dialog_error_unknown_ok">မလုပ်တော့ပါ</string>
+  <string name="upload_dialog_process_title">ရုပ်ပုံ ဆွဲတင်နေသည်</string>
+  <string name="upload_dialog_process_message">ကျေးဇူးပြု၍ ခဏစောင့်ပါ...</string>
+  <string name="upload_dialog_success_title">ဆွဲတင်ခြင်း အောင်မြင်သည်</string>
+  <string name="upload_dialog_success_message">ရုပ်ပုံ အောင်မြင်စွာ တင်လိုက်ပါပြီ</string>
+  <string name="upload_dialog_success_ok">အိုကေ</string>
+  <string name="upload_dialog_not_authenticated_title">ဆွဲတင်ရန် လော့အင် ဝင်ရပါမည်</string>
+  <string name="upload_dialog_not_authenticated_message">ပရိုဖိုင်စာမျက်နှာသို့ ပြန်ညွှန်းမည်</string>
+  <string name="upload_dialog_not_authenticated_ok">အိုကေ</string>
+  <string name="upload_dialog_agree_to_terms">ဟုတ်ကဲ့</string>
+  <string name="upload_dialog_decline_terms">မလုပ်ပါ</string>
+  <string name="acra_dialog_ok_toast">ကျေးဇူးတင်ပါသည်</string>
+  <string name="about_title">အကြောင်း</string>
+  <string name="version">ဗားရှင်း</string>
+  <string name="contact">ဆက်သွယ်ရန်</string>
+  <string name="privacy_policy">ကိုယ်ရေးကိုယ်တာ</string>
+  <string name="tutorial_dialog_show_again_no">မလုပ်ပါ</string>
+  <string name="tutorial_dialog_show_again_yes">လုပ်မည်</string>
+  <string name="storage_not_permitted_title">သိုလှောင်ခန်းက ခွင့်မပြုပါ</string>
+  <string name="storage_not_permitted_cancel">မလုပ်တော့ပါ</string>
+  <string name="storage_not_permitted_open_settings">အပြင်အဆင်များကို ဖွင့်ရန်</string>
+  <string name="action_search">ရှာဖွေရန်</string>
+  <string name="favorites_label_not_logged_in_button">အကောင့်ဝင်ရန်</string>
+  <string name="no_search_result">ရှာဖွေမှု ရလာဒ်များ မရှိပါ</string>
+  <string name="album_no_data">ရုပ်ပုံများ မရှိပါ</string>
+</resources>
