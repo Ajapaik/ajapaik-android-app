@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Saederup92
+-->
+<resources>
+  <string name="please_wait">Vent venligst…</string>
+  <string name="something_went_wrong">Noget gik galt</string>
+  <string name="action_albums">Albummer</string>
+  <string name="action_login">Log på</string>
+  <string name="action_register">Registrér</string>
+  <string name="action_logout">Log af</string>
+  <string name="action_profile">Profil</string>
+  <string name="albums_label_no_data">Intet album</string>
+  <string name="albums_title">Albummer</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_close">Luk</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Log ind med Facebook</string>
+  <string name="profile_google_login">Log ind med Google</string>
+  <string name="profile_logout">Log af</string>
+  <string name="profile_login">Log ind</string>
+  <string name="profile_register">Opret konto</string>
+  <string name="input_username_hint">E-mail</string>
+  <string name="input_password_hint">Adgangskode</string>
+  <string name="input_firstname_hint">Fornavn</string>
+  <string name="input_lastname_hint">Efternavn</string>
+  <string name="login_title">Log på</string>
+  <string name="upload_dialog_error_connection_retry">Forsøg igen</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Ukendt fejl</string>
+  <string name="upload_dialog_error_unknown_retry">Forsøg igen</string>
+  <string name="upload_dialog_process_message">Vent venligst…</string>
+  <string name="upload_dialog_success_ok">O.k.</string>
+  <string name="upload_dialog_not_authenticated_ok">O.k.</string>
+  <string name="upload_dialog_agree_to_terms">Ja!</string>
+  <string name="upload_dialog_decline_terms">Nej</string>
+  <string name="acra_dialog_ok_toast">Tak!</string>
+  <string name="about_title">Om</string>
+  <string name="version">Version</string>
+  <string name="contact">Kontakt</string>
+  <string name="privacy_policy">Privatliv</string>
+  <string name="navigation_drawer_open">Åbn skuffe</string>
+  <string name="navigation_drawer_close">Luk skuffe</string>
+  <string name="tutorial_dismiss">Forstået!</string>
+  <string name="tutorial_dialog_show_again_title">Vise guiden igen?</string>
+  <string name="tutorial_dialog_show_again_no">Nej</string>
+  <string name="tutorial_dialog_show_again_yes">Ja</string>
+  <string name="action_search">Søg</string>
+  <string name="favorites">Mine favoritter</string>
+  <string name="no_favorites">Ingen favoritter</string>
+  <string name="album_no_data">Ingen billeder</string>
+</resources>
