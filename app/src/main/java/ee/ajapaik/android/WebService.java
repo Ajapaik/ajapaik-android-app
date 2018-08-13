@@ -13,16 +13,20 @@ import android.util.Log;
 
 import com.facebook.AccessToken;
 
-import ee.ajapaik.android.data.Session;
-import ee.ajapaik.android.data.util.Status;
-import ee.ajapaik.android.BuildConfig;
-import ee.ajapaik.android.util.*;
-
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import ee.ajapaik.android.data.Session;
+import ee.ajapaik.android.data.util.Status;
+import ee.ajapaik.android.util.Authorization;
+import ee.ajapaik.android.util.Objects;
+import ee.ajapaik.android.util.Settings;
+import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.util.WebImage;
+import ee.ajapaik.android.util.WebOperation;
 
 import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 

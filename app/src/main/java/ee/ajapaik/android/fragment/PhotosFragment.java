@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,6 +28,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.adapter.MapViewGridAdapter;
 import ee.ajapaik.android.adapter.PhotoAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
@@ -90,6 +94,10 @@ public abstract class PhotosFragment extends SearchFragment {
             getGridView().setVisibility(GONE);
             if (m_mapView == null) {
                 initMap();
+                MapViewGridAdapter adapter = new MapViewGridAdapter(m_album.getPhotos(), getActivity());
+                getMapViewGrid().setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, true));
+                getMapViewGrid().setAdapter(adapter);
+                adapter.notifyDataSetChanged();
             }
         } else {
             getMapView().setVisibility(GONE);
@@ -98,7 +106,7 @@ public abstract class PhotosFragment extends SearchFragment {
     }
 
     private void initMap() {
-        m_mapView = getMapView();
+        m_mapView = getMap();
         m_mapView.onCreate(null);
         m_mapView.onResume();
 
@@ -189,14 +197,18 @@ public abstract class PhotosFragment extends SearchFragment {
     }
 
     protected StaggeredGridView getGridView() {
-        return getGridView(getView());
+        return (StaggeredGridView) getView().findViewById(R.id.grid);
     }
 
-    protected StaggeredGridView getGridView(View view) {
-        return (StaggeredGridView)view.findViewById(R.id.grid);
-    }
-
-    private MapView getMapView() {
+    private MapView getMap() {
         return (MapView) getView().findViewById(R.id.album_map);
+    }
+
+    private LinearLayout getMapView() {
+        return (LinearLayout) getView().findViewById(R.id.map_view);
+    }
+
+    private RecyclerView getMapViewGrid() {
+        return (RecyclerView) getView().findViewById(R.id.map_gird);
     }
 }
