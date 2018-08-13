@@ -10,6 +10,8 @@
   <string name="action_register">Registrér</string>
   <string name="action_logout">Log af</string>
   <string name="action_profile">Profil</string>
+  <string name="action_refresh">Genindlæs</string>
+  <string name="action_settings">Indstillinger</string>
   <string name="albums_label_no_data">Intet album</string>
   <string name="albums_title">Albummer</string>
   <string name="album_title">Album</string>
@@ -26,10 +28,14 @@
   <string name="input_firstname_hint">Fornavn</string>
   <string name="input_lastname_hint">Efternavn</string>
   <string name="login_title">Log på</string>
+  <string name="wrong_password">Forkert adgangskode!</string>
+  <string name="registration_title">Registrér</string>
+  <string name="user_already_exists">Brugernavnet findes allerede</string>
   <string name="upload_dialog_error_connection_retry">Forsøg igen</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Ukendt fejl</string>
   <string name="upload_dialog_error_unknown_retry">Forsøg igen</string>
+  <string name="upload_dialog_error_unknown_ok">Annullér</string>
   <string name="upload_dialog_process_message">Vent venligst…</string>
   <string name="upload_dialog_success_ok">O.k.</string>
   <string name="upload_dialog_not_authenticated_ok">O.k.</string>
@@ -46,6 +52,7 @@
   <string name="tutorial_dialog_show_again_title">Vise guiden igen?</string>
   <string name="tutorial_dialog_show_again_no">Nej</string>
   <string name="tutorial_dialog_show_again_yes">Ja</string>
+  <string name="storage_not_permitted_cancel">Annullér</string>
   <string name="action_search">Søg</string>
   <string name="favorites">Mine favoritter</string>
   <string name="no_favorites">Ingen favoritter</string>
