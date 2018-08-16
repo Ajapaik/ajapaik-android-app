@@ -19,8 +19,8 @@
                 android:orientation="vertical"
                 app:rowHeight="140dp"
                 app:cellSpacing="4dp"
-                app:rowHeightMaxDeviation="20%">
-        </ee.ajapaik.android.widget.StaggeredGridView>
+                app:rowHeightMaxDeviation="20%" />
+
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <LinearLayout
@@ -31,12 +31,10 @@
         android:weightSum="1"
         android:visibility="gone">
 
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/map_gird"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@android:color/holo_green_dark"
             android:layout_weight="0.2" />
 
         <com.google.android.gms.maps.MapView
