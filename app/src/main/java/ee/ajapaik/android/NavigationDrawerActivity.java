@@ -8,12 +8,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import ee.ajapaik.android.util.WebActivity;
 
 public abstract class NavigationDrawerActivity extends WebActivity {
-
+    private static final String TAG = "NavigationDrawerActivity";
     private DrawerLayout mDrawer;
 
     protected abstract void setContentView();
@@ -54,11 +55,29 @@ public abstract class NavigationDrawerActivity extends WebActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+                Log.d(TAG, "onNavigationItemSelected");
+
                 Context context = NavigationDrawerActivity.this;
+                Intent intent;
                 switch (menuItem.getItemId()) {
                     case R.id.nearest:
-                        if (context instanceof NearestActivity) break;
-                        Intent intent = new Intent(context, NearestActivity.class);
+                        if (!(context instanceof FinnaActivity)
+                            && context instanceof NearestActivity) break;
+                        intent = new Intent(context, NearestActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                        finish();
+                        break;
+                    case R.id.finna:
+                        if (context instanceof FinnaActivity) break;
+                        intent = new Intent(context, FinnaActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                        finish();
+                        break;
+                    case R.id.finna1918:
+                        if (context instanceof Finna1918Activity) break;
+                        intent = new Intent(context, Finna1918Activity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
                         finish();

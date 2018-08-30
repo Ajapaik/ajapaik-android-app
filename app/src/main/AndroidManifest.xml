@@ -31,9 +31,26 @@
                 android:name="ee.ajapaik.android.NearestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name="ee.ajapaik.android.FinnaActivity"
+            android:label="@string/finna_title"
+            android:parentActivityName="ee.ajapaik.android.NearestActivity">
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ee.ajapaik.android.NearestActivity"/>
+        </activity>
+        <activity
+            android:name="ee.ajapaik.android.Finna1918Activity"
+            android:label="@string/finna1918_title"
+            android:parentActivityName="ee.ajapaik.android.NearestActivity">
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ee.ajapaik.android.NearestActivity"/>
         </activity>
         <activity
                 android:name="ee.ajapaik.android.AlbumsActivity"

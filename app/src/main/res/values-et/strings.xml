@@ -102,4 +102,6 @@
   <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
   <string name="no_search_result">Tulemused puuduvad</string>
   <string name="album_no_data">Pildid puuduvad</string>
+    <string name="finna_title">Lähimad pildid (Finna)</string>
+  <string name="finna1918_title">Lähimad pildid (1918)</string>
 </resources>

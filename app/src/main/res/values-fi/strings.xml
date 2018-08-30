@@ -106,4 +106,6 @@
   <string name="favorites_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi suosikkisi</string>
   <string name="no_search_result">Ei hakuosumia</string>
   <string name="album_no_data">Ei kuvia</string>
+    <string name="finna_title">Lähistöllä (Finna)</string>
+  <string name="finna1918_title">Lähistöllä (1918)</string>
 </resources>
