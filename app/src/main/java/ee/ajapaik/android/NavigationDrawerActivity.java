@@ -61,8 +61,10 @@ public abstract class NavigationDrawerActivity extends WebActivity {
                 Intent intent;
                 switch (menuItem.getItemId()) {
                     case R.id.nearest:
-                        if (!(context instanceof FinnaActivity)
-                            && context instanceof NearestActivity) break;
+                        if ( context instanceof NearestActivity
+                            && !(context instanceof FinnaActivity)
+                            && !(context instanceof Finna1918Activity)
+                                ) break;
                         intent = new Intent(context, NearestActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
