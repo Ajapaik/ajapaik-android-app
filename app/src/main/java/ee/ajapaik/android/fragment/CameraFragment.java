@@ -75,6 +75,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     /**
      * Conversion from screen rotation to JPEG orientation.
      */
+    private static final String TAG = "CameraFragment";
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
 
     static {
@@ -149,6 +150,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         @Override
         public void onOpened(@NonNull CameraDevice cameraDevice) {
+            Log.d(TAG, "onOpened");
+
             mCameraOpenCloseLock.release();
             mCameraDevice = cameraDevice;
             createCameraPreviewSession();
@@ -156,13 +159,22 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
         @Override
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
+            Log.d(TAG, "onDisconnected");
+
             mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
         }
 
         @Override
+        public void onClosed(@NonNull CameraDevice cameraDevice) {
+            Log.d(TAG, "onClosed");
+            mCameraOpenCloseLock.release();
+        }
+
+        @Override
         public void onError(@NonNull CameraDevice cameraDevice, int error) {
+            Log.d(TAG, "onError");
             mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
@@ -344,12 +356,16 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
+        Log.d(TAG, "onViewCreated");
+
         getCameraButton().setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     }
 
     @Override
     public void onResume() {
+        Log.d(TAG, "onResume");
+
         super.onResume();
         startBackgroundThread();
 
@@ -366,9 +382,26 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     @Override
     public void onPause() {
+        Log.d(TAG, "onPause");
+
         closeCamera();
         stopBackgroundThread();
+        if (progressDialog!=null) {
+            Log.d(TAG, "onPause: progressDialog.dismiss()");
+            progressDialog.dismiss();
+        }
         super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG, "onDestroy");
+
+        if (progressDialog!=null) {
+            Log.d(TAG, "onDestroy: progressDialog.dismiss()");
+            progressDialog.dismiss();
+        }
+        super.onDestroy();
     }
 
     /**
@@ -378,6 +411,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
      * @param height The height of available size for camera preview
      */
     private void setUpCameraOutputs(int width, int height) {
+        Log.d(TAG, "setUpCameraOutputs");
+
         Activity activity = getActivity();
         CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
         try {
@@ -477,26 +512,34 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     }
 
     private void openCamera(int width, int height) {
-        setUpCameraOutputs(width, height);
-        configureTransform(width, height);
-        Activity activity = getActivity();
-        CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
-        try {
-            if (!mCameraOpenCloseLock.tryAcquire(2500, MILLISECONDS)) {
-                throw new RuntimeException("Time out waiting to lock camera opening.");
+        Log.d(TAG, "OpenCamera");
+        if (null == mCameraDevice) {
+            setUpCameraOutputs(width, height);
+            configureTransform(width, height);
+            Activity activity = getActivity();
+            CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
+            try {
+                if (!mCameraOpenCloseLock.tryAcquire(2500, MILLISECONDS)) {
+                    throw new RuntimeException("Time out waiting to lock camera opening.");
+                }
+                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PERMISSION_GRANTED) {
+                    return;
+                }
+                manager.openCamera(mCameraId, mStateCallback, mBackgroundHandler);
+            } catch (CameraAccessException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
             }
-            if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) != PERMISSION_GRANTED) {
-                return;
-            }
-            manager.openCamera(mCameraId, mStateCallback, mBackgroundHandler);
-        } catch (CameraAccessException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
+        }
+        else {
+            Log.d(TAG, "OpenCamera: Camera already existed.");
         }
     }
 
     private void closeCamera() {
+        Log.d(TAG, "CloseCamera");
+
         try {
             mCameraOpenCloseLock.acquire();
             if (null != mCaptureSession) {
@@ -519,12 +562,16 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     }
 
     private void startBackgroundThread() {
+        Log.d(TAG, "StartBackgroundThread");
+
         mBackgroundThread = new HandlerThread("CameraBackground");
         mBackgroundThread.start();
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
     }
 
     private void stopBackgroundThread() {
+        Log.d(TAG, "StopBackgroundThread");
+
         mBackgroundThread.quitSafely();
         try {
             mBackgroundThread.join();
@@ -536,6 +583,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     }
 
     private void createCameraPreviewSession() {
+        Log.d(TAG, "createCameraPreviewSession");
+
         try {
             SurfaceTexture texture = mTextureView.getSurfaceTexture();
             assert texture != null;
@@ -556,6 +605,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
                         @Override
                         public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
+                            Log.d(TAG, "onConfigured");
+
                             // The camera is already closed
                             if (null == mCameraDevice) {
                                 return;
@@ -581,6 +632,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                         @Override
                         public void onConfigureFailed(
                                 @NonNull CameraCaptureSession cameraCaptureSession) {
+                            Log.d(TAG, "onConfigureFailed");
                             showToast("Failed");
                         }
                     }, null
@@ -626,8 +678,16 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     private void takePicture() {
         if (!((CameraActivity) getActivity()).isTutorialCompleted()) return;
-        progressDialog = ProgressDialog.show(getActivity(), getString(R.string.processing_image), getString(R.string.please_wait));
-        lockFocus();
+
+        // Do no try to take picture if camera is not ready
+        if ((null != mCaptureSession) && (null != mCameraDevice)) {
+            // Dismiss existing progressDialog
+            if (null != progressDialog && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+            progressDialog = ProgressDialog.show(getActivity(), getString(R.string.processing_image), getString(R.string.please_wait));
+            lockFocus();
+        }
     }
 
     private void lockFocus() {
@@ -716,8 +776,6 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
         }
     }
 
-    private static final String TAG = "CameraFragment";
-
     private static final int REQUEST_UPLOAD = 5000;
 
     private static final String KEY_OPACITY = "opacity";
@@ -728,17 +786,23 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate");
+
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView");
+
         return inflater.inflate(R.layout.fragment_camera, container, false);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated");
+
         super.onActivityCreated(savedInstanceState);
 
         if (savedInstanceState != null) {
