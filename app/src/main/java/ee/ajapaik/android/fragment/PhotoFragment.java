@@ -12,6 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -59,6 +60,7 @@ import static android.view.View.OnTouchListener;
 import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
+    private static final String TAG = "PhotoFragment";
     private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
@@ -112,6 +114,8 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated");
+
         super.onActivityCreated(savedInstanceState);
 
         if(savedInstanceState != null) {
@@ -243,6 +247,14 @@ public class PhotoFragment extends ImageFragment {
         getImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
+                Log.d(TAG, "onImageLoaded");
+                if (m_photo!=null)
+                {
+                    Log.d(TAG, "onImageLoaded (2) width: " + m_photo.getWidth() + "; height: " + m_photo.getHeight() );
+                    m_photo.setWidth(getImageView().getDrawableWidth());
+                    m_photo.setHeight(getImageView().getDrawableHeight());
+                }
+
                 m_offset = new PointF(0, Integer.MIN_VALUE);
                 avoidScrollingOutOfViewport(getImageView());
                 m_offset = new PointF(m_offset.x, m_offset.y + getActionBar().getHeight());
