@@ -161,29 +161,29 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
             Log.d(TAG, "onDisconnected");
 
-            mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
+            mCameraOpenCloseLock.release();
         }
 
         @Override
         public void onClosed(@NonNull CameraDevice cameraDevice) {
             Log.d(TAG, "onClosed");
+            mCameraDevice = null;
             mCameraOpenCloseLock.release();
         }
 
         @Override
         public void onError(@NonNull CameraDevice cameraDevice, int error) {
             Log.d(TAG, "onError");
-            mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
+            mCameraOpenCloseLock.release();
             Activity activity = getActivity();
             if (null != activity) {
                 activity.finish();
             }
         }
-
     };
 
     private HandlerThread mBackgroundThread;
@@ -532,9 +532,6 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                 throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
             }
         }
-        else {
-            Log.d(TAG, "OpenCamera: Camera already existed.");
-        }
     }
 
     private void closeCamera() {
@@ -584,62 +581,75 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     private void createCameraPreviewSession() {
         Log.d(TAG, "createCameraPreviewSession");
-
         try {
-            SurfaceTexture texture = mTextureView.getSurfaceTexture();
-            assert texture != null;
+            mCameraOpenCloseLock.acquire();
+            if (null != mCameraDevice) {
+                SurfaceTexture texture = mTextureView.getSurfaceTexture();
+                assert texture != null;
 
-            // We configure the size of default buffer to be the size of camera preview we want.
-            texture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());
+                // We configure the size of default buffer to be the size of camera preview we want.
+                texture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());
 
-            // This is the output Surface we need to start preview.
-            Surface surface = new Surface(texture);
+                // This is the output Surface we need to start preview.
+                Surface surface = new Surface(texture);
 
-            // We set up a CaptureRequest.Builder with the output Surface.
-            mPreviewRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
-            mPreviewRequestBuilder.addTarget(surface);
+                // We set up a CaptureRequest.Builder with the output Surface.
+                mPreviewRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+                mPreviewRequestBuilder.addTarget(surface);
 
-            // Here, we create a CameraCaptureSession for camera preview.
-            mCameraDevice.createCaptureSession(Arrays.asList(surface, mImageReader.getSurface()),
-                    new CameraCaptureSession.StateCallback() {
+                // Here, we create a CameraCaptureSession for camera preview.
+                mCameraDevice.createCaptureSession(Arrays.asList(surface, mImageReader.getSurface()),
+                        new CameraCaptureSession.StateCallback() {
 
-                        @Override
-                        public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
-                            Log.d(TAG, "onConfigured");
+                            @Override
+                            public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
+                                Log.d(TAG, "onConfigured");
 
-                            // The camera is already closed
-                            if (null == mCameraDevice) {
-                                return;
+                                // When the session is ready, we start displaying the preview.
+                                mCaptureSession = cameraCaptureSession;
+                                try {
+                                    mCameraOpenCloseLock.acquire();
+                                    if (null != mCameraDevice) {
+                                        // Auto focus should be continuous for camera preview.
+                                        mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,
+                                                CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
+                                        // Flash is automatically enabled when necessary.
+
+                                        // Finally, we start displaying the camera preview.
+                                        mPreviewRequest = mPreviewRequestBuilder.build();
+                                        mCaptureSession.setRepeatingRequest(mPreviewRequest,
+                                                mCaptureCallback, mBackgroundHandler);
+                                    }
+                                } catch (CameraAccessException e) {
+                                    e.printStackTrace();
+                                } catch(InterruptedException e) {
+                                    throw new RuntimeException("Interrupted while trying to lock camera configuration().", e);
+                                } finally {
+                                    mCameraOpenCloseLock.release();
+                                }
+                                Log.d(TAG, "onConfigured end");
                             }
 
-                            // When the session is ready, we start displaying the preview.
-                            mCaptureSession = cameraCaptureSession;
-                            try {
-                                // Auto focus should be continuous for camera preview.
-                                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,
-                                        CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
-                                // Flash is automatically enabled when necessary.
 
-                                // Finally, we start displaying the camera preview.
-                                mPreviewRequest = mPreviewRequestBuilder.build();
-                                mCaptureSession.setRepeatingRequest(mPreviewRequest,
-                                        mCaptureCallback, mBackgroundHandler);
-                            } catch (CameraAccessException e) {
-                                e.printStackTrace();
+                            @Override
+                            public void onConfigureFailed(
+                                    @NonNull CameraCaptureSession cameraCaptureSession) {
+                                Log.d(TAG, "onConfigureFailed");
+                                showToast("Failed");
                             }
-                        }
-
-                        @Override
-                        public void onConfigureFailed(
-                                @NonNull CameraCaptureSession cameraCaptureSession) {
-                            Log.d(TAG, "onConfigureFailed");
-                            showToast("Failed");
-                        }
-                    }, null
-            );
+                        }, null
+                );
+            }
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
+        catch(InterruptedException e) {
+            throw new RuntimeException("Interrupted while trying to lock createCameraPreviewSession().", e);
+        } finally {
+            mCameraOpenCloseLock.release();
+        }
+
+        Log.d(TAG, "createCameraPreviewSession End");
     }
 
     /**
@@ -699,6 +709,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                     mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
+            progressDialog.dismiss();
         }
     }
 
@@ -942,11 +953,16 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     }
 
     private void onPictureTaken(byte[] data) {
+        Log.d(TAG, "onPictureTaken");
+
         CameraActivity activity = (CameraActivity) getActivity();
         Settings settings = getSettings();
         Upload upload = new Upload(m_photo, m_flippedMode, m_scale, null, getSettings().getLocation(), activity.getOrientation());
 
         if (upload.save(data)) {
+            // Camera preview will be gone so close the camera
+            closeCamera();
+
             settings.setUpload(upload);
             UploadActivity.start(getActivity(), singletonList(upload), CAMERA);
             getActivity().finish();
