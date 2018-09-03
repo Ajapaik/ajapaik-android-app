@@ -11,7 +11,7 @@
   <string name="action_register">မှတ်ပုံတင်ရန်</string>
   <string name="action_logout">အကောင့်မှပြန်ထွက်ခြင်း</string>
   <string name="action_profile">ပရိုဖိုင်</string>
-  <string name="action_refresh">ရှင်းသန့်</string>
+  <string name="action_refresh">ပြန်လည်ဆန်းသစ်ရန်</string>
   <string name="action_settings">အပြင်အဆင်များ</string>
   <string name="nearest_title">အနီးအနား ရုပ်ပုံများ</string>
   <string name="albums_label_no_data">အယ်လ်ဘမ်များ မရှိပါ</string>
