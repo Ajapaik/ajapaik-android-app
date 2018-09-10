@@ -63,6 +63,8 @@
   <string name="version">ဗားရှင်း</string>
   <string name="contact">ဆက်သွယ်ရန်</string>
   <string name="privacy_policy">ကိုယ်ရေးကိုယ်တာ</string>
+  <string name="tutorial_dismiss">သဘောပေါက်ပြီ</string>
+  <string name="tutorial_dialog_show_again_title">သင်ခန်းစာကို ထပ်ပြမှာလား?</string>
   <string name="tutorial_dialog_show_again_no">မလုပ်ပါ</string>
   <string name="tutorial_dialog_show_again_yes">လုပ်မည်</string>
   <string name="storage_not_permitted_title">သိုလှောင်ခန်းက ခွင့်မပြုပါ</string>
