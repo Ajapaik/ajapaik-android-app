@@ -15,9 +15,12 @@
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Newe ke</string>
   <string name="action_settings">Eyari</string>
+  <string name="nearest_title">Fotrafê nêzdi</string>
   <string name="albums_label_no_data">Albumi çıniyê</string>
   <string name="albums_title">Albumi</string>
   <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Ca Qedexekerdeyo</string>
+  <string name="nearest_dialog_error_location_disabled_close">Ca de</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
   <string name="profile_facebook_login">Ebe Facebook ra cıkewê</string>
@@ -42,6 +45,7 @@
   <string name="upload_dialog_agree_to_terms">Eya!</string>
   <string name="upload_dialog_decline_terms">Nê</string>
   <string name="acra_dialog_ok_toast">Teşekur kenan!</string>
+  <string name="about_title">Heqa</string>
   <string name="version">Versiyon</string>
   <string name="contact">İrtıbat</string>
   <string name="tutorial_dismiss">Mı fehm kerd!</string>
