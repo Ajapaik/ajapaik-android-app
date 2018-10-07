@@ -139,7 +139,7 @@ public class PhotoFragment extends ImageFragment {
 
                 mMap.addMarker(markerOptions);
 
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(13).build();
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(17).build();
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
             }
         });
