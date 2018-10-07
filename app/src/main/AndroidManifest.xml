@@ -68,6 +68,10 @@
             android:label="@string/my_rephotos" >
         </activity>
         <activity
+            android:name=".RecentRephotosActivity"
+            android:label="@string/recent_rephotos_title" >
+        </activity>
+        <activity
                 android:name="ee.ajapaik.android.PhotoActivity"
                 android:label="@string/photo_title"
                 android:screenOrientation="portrait"

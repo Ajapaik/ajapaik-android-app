@@ -149,5 +149,6 @@
     <string name="start_taking_rephoto">Start taking rephoto</string>
     <string name="show_photo_details">Show photo details</string>
     <string name="show_rephotos">Show rephotos</string>
+    <string name="recent_rephotos_title">Recent rephotos</string>
 
 </resources>

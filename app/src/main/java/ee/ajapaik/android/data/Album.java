@@ -23,6 +23,7 @@ public class Album extends Model {
     private static final String API_FAVORITES_PATH = "/photos/favorite/order-by-distance-to-location/";
     private static final String API_STATE_PATH = "/album/state/";
     private static final String API_MY_REPHOTOS_PATH = "/photos/filtered/rephotographed-by-user/";
+    private static final String API_RECENT_REPHOTOS_PATH = "/photos/recent/";
     private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
     private static final String API_USER_REPHOTOS_SEARCH_PATH = "/photos/search/user-rephotos/";
@@ -64,6 +65,11 @@ public class Album extends Model {
     public static WebAction<Album> createMyRephotosAction(Context context, Location location) {
         Map<String, String> parameters = createLocationParameters(location);
         return new Action(context, API_MY_REPHOTOS_PATH, parameters, null, "my-rephotos");
+    }
+
+    public static WebAction<Album> createRecentRephotosAction(Context context, Location location) {
+        Map<String, String> parameters = createLocationParameters(location);
+        return new Action(context, API_RECENT_REPHOTOS_PATH, parameters, null, "recent-rephotos");
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {

@@ -68,6 +68,11 @@ public abstract class NavigationDrawerActivity extends WebActivity {
                         AlbumsActivity.start(context);
                         finish();
                         break;
+                    case R.id.recent_rephotos:
+                        if (context instanceof RecentRephotosActivity) break;
+                        RecentRephotosActivity.start(context);
+                        finish();
+                        break;
                     case R.id.profile:
                         if (context instanceof ProfileActivity) break;
                         ProfileActivity.start(context);

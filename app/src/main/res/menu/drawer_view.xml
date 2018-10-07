@@ -10,6 +10,10 @@
                 android:icon="@drawable/ic_photo_library_white_36dp"
                 android:title="@string/albums_title" />
         <item
+                android:id="@+id/recent_rephotos"
+                android:icon="@drawable/baseline_access_time_white_36"
+                android:title="@string/recent_rephotos_title" />
+        <item
                 android:id="@+id/favorites"
                 android:icon="@drawable/ic_favorite_white_36dp"
                 android:title="@string/favorites" />
