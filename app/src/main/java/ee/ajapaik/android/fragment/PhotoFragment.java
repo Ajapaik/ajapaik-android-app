@@ -523,7 +523,21 @@ public class PhotoFragment extends ImageFragment {
         return new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                showToast("Rating successfully saved!");
+                ImagePagerAdapter rephotoPagerAdapter = (ImagePagerAdapter)getViewPager().getAdapter();
+                String rephotoId = rephotoPagerAdapter.getRephoto(getViewPager().getCurrentItem()).getId();
+                getConnection().enqueue(getActivity(),
+                        Rephoto.createRatingChangeAction(getActivity(), rating, rephotoId),
+                        new WebAction.ResultHandler<Rephoto>() {
+                            @Override
+                            public void onActionResult(Status status, Rephoto data) {
+                                if (status.isGood()) {
+                                    //TODO Translations
+                                    showToast(getString(R.string.rating_saved));
+                                } else {
+                                    showToast(getString(R.string.something_went_wrong));
+                                }
+                            }
+                });
             }
         };
     }

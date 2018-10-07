@@ -134,6 +134,7 @@
     <string name="storage_not_permitted_open_settings">Open settings</string>
     <string name="my_rephotos">My rephotos</string>
     <string name="rephotos_label_not_logged_in_text">Please log in to see your rephotos</string>
+    <string name="rating_saved">Rating saved</string>
 
     <string name="action_search">Search</string>
 
