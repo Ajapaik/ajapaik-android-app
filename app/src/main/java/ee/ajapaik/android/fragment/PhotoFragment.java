@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -294,7 +295,7 @@ public class PhotoFragment extends ImageFragment {
         });
     }
 
-    private ViewPager.OnPageChangeListener createOnPageChangeListener(final ImagePagerAdapter adapter) {
+    private ViewPager.OnPageChangeListener createOnRephotoPageChangeListener(final ImagePagerAdapter adapter) {
         return new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -309,6 +310,7 @@ public class PhotoFragment extends ImageFragment {
                 int textColor = rephoto.isUploadedByCurrentUser() ? R.color.tint : R.color.none;
                 authorView.setTextColor(getResources().getColor(textColor));
                 dateView.setText(Dates.toDDMMYYYYString(rephoto.getDate()));
+                getRephotoRatingBar().setRating(0);
             }
 
             @Override
@@ -495,10 +497,11 @@ public class PhotoFragment extends ImageFragment {
             getRephotoDetailsLayout().setVisibility(VISIBLE);
             getOriginalPhotoContainer().setVisibility(VISIBLE);
             getViewPager().setVisibility(VISIBLE);
+            getRephotoRatingBar().setVisibility(VISIBLE);
             getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
             final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
             getViewPager().setAdapter(adapter);
-            final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
+            final ViewPager.OnPageChangeListener pageChangeListener = createOnRephotoPageChangeListener(adapter);
             getViewPager().addOnPageChangeListener(pageChangeListener);
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
@@ -509,6 +512,7 @@ public class PhotoFragment extends ImageFragment {
             getRephotoDetailsLayout().setVisibility(INVISIBLE);
             getOriginalPhotoContainer().setVisibility(INVISIBLE);
             getViewPager().setVisibility(INVISIBLE);
+            getRephotoRatingBar().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
     }
@@ -657,5 +661,9 @@ public class PhotoFragment extends ImageFragment {
 
     private WebImageView getRephotoViewOriginalImageView() {
         return (WebImageView) getView().findViewById(R.id.rephotos_original);
+    }
+
+    private RatingBar getRephotoRatingBar() {
+        return (RatingBar) getView().findViewById(R.id.rephoto_rating_bar);
     }
 }

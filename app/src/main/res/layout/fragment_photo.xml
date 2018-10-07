@@ -32,10 +32,12 @@
             android:visibility="invisible"/>
 
         <RatingBar
+            android:id="@+id/rephoto_rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
-            android:stepSize="1.0"/>
+            android:stepSize="1.0"
+            android:visibility="invisible"/>
 
         <RelativeLayout
             android:id="@+id/rephoto_details_layout"
