@@ -54,4 +54,7 @@
   <string name="storage_not_permitted_cancel">Bıtexelne</string>
   <string name="action_search">Cıgeyrayış</string>
   <string name="favorites_label_not_logged_in_button">Cı kewe</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>

@@ -127,7 +127,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private void handleLoginFail(Status status) {
         showErrorMessage(status);
         dismissProgressDialog();
-        getSettings().setAuthorization(Authorization.getAnonymous(this));
+        getSettings().setAuthorization(Authorization.getAnonymous());
     }
 
     private void showErrorMessage(Status status) {
@@ -144,6 +144,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     public void signInWithUsername() {
+        showProgressDialog("Logging in...");
         Authorization authorization = getSettings().getAuthorization();
         getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
             @Override
@@ -151,6 +152,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 if (session != null) {
                     login(session);
                 } else {
+                    dismissProgressDialog();
                     getSettings().setAuthorization(null);
                     findViewById(R.id.login_unsuccessful).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(R.id.input_password)).setText("");
@@ -160,6 +162,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     public void registerWithUsername() {
+        showProgressDialog("Registering...");
         Authorization authorization = getSettings().getAuthorization();
         getConnection().enqueue(WebActivity.this, Session.createRegisterAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
             @Override
@@ -167,6 +170,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 if (session != null) {
                     login(session);
                 } else {
+                    dismissProgressDialog();
                     getSettings().setAuthorization(null);
                     findViewById(R.id.user_already_exists).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(R.id.input_password)).setText("");
@@ -234,7 +238,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
 
             GoogleSignInAccount account = result.getSignInAccount();
             if (account == null) return;
-            Authorization authorization = new Authorization(GOOGLE, account.getEmail(), account.getIdToken());
+            Authorization authorization = new Authorization(GOOGLE, account.getIdToken(), account.getServerAuthCode());
             getSettings().setAuthorization(authorization);
 
             getConnection().enqueue(WebActivity.this, Session.createLoginAction(WebActivity.this, authorization), new WebAction.ResultHandler<Session>() {
@@ -275,7 +279,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
             logoutFromGoogle();
         }
 
-        Authorization anonymous = Authorization.getAnonymous(this);
+        Authorization anonymous = Authorization.getAnonymous();
         getSettings().setAuthorization(anonymous);
 
         getConnection().enqueue(WebActivity.this, Session.createLogoutAction(WebActivity.this), new WebAction.ResultHandler<Session>() {

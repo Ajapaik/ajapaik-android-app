@@ -105,4 +105,7 @@
   <string name="favorites_label_not_logged_in_text">Најавете се за да ги видите омилените</string>
   <string name="no_search_result">Пребарувањето не даде ништо</string>
   <string name="album_no_data">Нема слики</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>

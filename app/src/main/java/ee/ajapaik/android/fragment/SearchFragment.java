@@ -28,9 +28,7 @@ public abstract class SearchFragment extends WebFragment {
         m_searchService = new SearchService(new SearchService.Search() {
             @Override
             public void search(String query) {
-                getSwipeRefreshLayout().setRefreshing(true);
-                performAction(getActivity(), createSearchAction(query));
-                m_isSearchResultVisible = true;
+                SearchFragment.this.search(query);
             }
 
             @Override
@@ -40,6 +38,16 @@ public abstract class SearchFragment extends WebFragment {
                 refresh();
             }
         });
+    }
+
+    public void search() {
+        search(m_searchService.getQuery());
+    }
+
+    private void search(String query) {
+        getSwipeRefreshLayout().setRefreshing(true);
+        performAction(getActivity(), createSearchAction(query));
+        m_isSearchResultVisible = true;
     }
 
     @Override
@@ -61,5 +69,20 @@ public abstract class SearchFragment extends WebFragment {
 
     public boolean isSearchResultVisible() {
         return m_isSearchResultVisible;
+    }
+
+    protected void setSwipeRefreshListener() {
+        getSwipeRefreshLayout().setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        if (isSearchResultVisible()) {
+                            search();
+                        } else {
+                            refresh();
+                        }
+                    }
+                }
+        );
     }
 }

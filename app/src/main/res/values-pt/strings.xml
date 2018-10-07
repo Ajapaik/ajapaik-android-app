@@ -103,4 +103,7 @@
   <string name="favorites_label_not_logged_in_text">Entre para ver os seus favoritos, por favor</string>
   <string name="no_search_result">Não foi possível encontrar os resultados da procura</string>
   <string name="album_no_data">Não há fotografias</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>
