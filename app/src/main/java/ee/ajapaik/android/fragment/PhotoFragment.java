@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -503,6 +504,7 @@ public class PhotoFragment extends ImageFragment {
             getViewPager().setAdapter(adapter);
             final ViewPager.OnPageChangeListener pageChangeListener = createOnRephotoPageChangeListener(adapter);
             getViewPager().addOnPageChangeListener(pageChangeListener);
+            getRephotoRatingBar().setOnRatingBarChangeListener(createOnRatingChangedListener());
             selectFirstRephotoToDisplay(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -515,6 +517,27 @@ public class PhotoFragment extends ImageFragment {
             getRephotoRatingBar().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
+    }
+
+    private RatingBar.OnRatingBarChangeListener createOnRatingChangedListener() {
+        return new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                showToast("Rating successfully saved!");
+            }
+        };
+    }
+
+    private void showToast(final String text) {
+        final Activity activity = getActivity();
+        if (activity != null) {
+            activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(activity, text, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     public void invalidate(Location location, float[] orientation) {
