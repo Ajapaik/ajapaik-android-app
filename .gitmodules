@@ -1,0 +1,3 @@
+[submodule "AndroidJniBitmapOperations"]
+	path = AndroidJniBitmapOperations
+	url = https://github.com/AndroidDeveloperLB/AndroidJniBitmapOperations.git

@@ -1,1 +1,3 @@
 include ':app'
+include ':JniBitmapOperationsLibrary'
+project(':JniBitmapOperationsLibrary').projectDir = new File(rootProject.getProjectDir(), 'AndroidJniBitmapOperations/JniBitmapOperationsLibrary')
