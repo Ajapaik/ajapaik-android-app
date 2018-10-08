@@ -161,7 +161,7 @@ public class AlbumFragment extends PhotosFragment {
                 if (photoIdentifier != null) {
                     boolean isFavorited = data.getBooleanExtra(IS_FAVORITED_KEY, false);
                     Photo photo = getAlbum().getPhoto(photoIdentifier);
-                    if (photo.isFavorited() != isFavorited) {
+                    if (photo != null && photo.isFavorited() != isFavorited) {
                         photo.setFavorited(isFavorited);
                         getGridView().getAdapter().notifyDataSetChanged();
                     }
