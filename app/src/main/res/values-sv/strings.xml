@@ -16,6 +16,8 @@
   <string name="action_refresh">Uppdatera</string>
   <string name="action_settings">Inställningar</string>
   <string name="nearest_title">Foton i närheten</string>
+  <string name="finna_title">Foton i närheten (Finna)</string>
+  <string name="finna1918_title">Foton i närheten (1918)</string>
   <string name="albums_label_no_data">Inga album</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
@@ -103,6 +105,4 @@
   <string name="favorites_label_not_logged_in_text">Logga in för att se dina favoriter</string>
   <string name="no_search_result">Inga sökresultat</string>
   <string name="album_no_data">Inga foton</string>
-    <string name="finna_title">Foton i närheten (Finna)</string>
-  <string name="finna1918_title">Foton i närheten (1918)</string>
 </resources>

@@ -19,6 +19,8 @@
   <string name="action_refresh">Päivitä</string>
   <string name="action_settings">Asetukset</string>
   <string name="nearest_title">Lähistöllä</string>
+  <string name="finna_title">Lähistöllä (Finna)</string>
+  <string name="finna1918_title">Lähistöllä (1918)</string>
   <string name="albums_label_no_data">Ei albumeita</string>
   <string name="albums_title">Albumit</string>
   <string name="album_title">Albumi</string>
@@ -106,6 +108,4 @@
   <string name="favorites_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi suosikkisi</string>
   <string name="no_search_result">Ei hakuosumia</string>
   <string name="album_no_data">Ei kuvia</string>
-    <string name="finna_title">Lähistöllä (Finna)</string>
-  <string name="finna1918_title">Lähistöllä (1918)</string>
 </resources>

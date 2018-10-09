@@ -17,6 +17,8 @@
   <string name="action_refresh">Neu laden</string>
   <string name="action_settings">Einstellungen</string>
   <string name="nearest_title">Fotos in der Nähe</string>
+  <string name="finna_title">Fotos in der Nähe (Finna)</string>
+  <string name="finna1918_title">Fotos in der Nähe (1918)</string>
   <string name="albums_label_no_data">Keine Alben</string>
   <string name="albums_title">Alben</string>
   <string name="album_title">Album</string>

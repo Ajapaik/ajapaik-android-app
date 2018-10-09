@@ -43,6 +43,7 @@
   <string name="wrong_password">Błędne hasło!</string>
   <string name="registration_title">Zarejestruj się</string>
   <string name="user_already_exists">Nazwa użytkownika już istnieje</string>
+  <string name="upload_title">Zatwierdź fotografię</string>
   <string name="upload_dialog_error_connection_title">Błąd połączenia</string>
   <string name="upload_dialog_error_connection_message">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
   <string name="upload_dialog_error_connection_retry">Ponów</string>
@@ -59,6 +60,7 @@
   <string name="upload_dialog_not_authenticated_title">Musisz być zalogowany aby przesłać zdjęcie</string>
   <string name="upload_dialog_not_authenticated_message">Przekieruj do strony profilu</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_not_agreed_to_terms">Zgadzam się na publikowanie fotografii na licencji CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Tak!</string>
   <string name="upload_dialog_decline_terms">Nie</string>
   <string name="acra_dialog_title">„Ajapaik rephoto” został zatrzymany</string>
@@ -71,14 +73,19 @@
   <string name="privacy_policy">Prywatność</string>
   <string name="navigation_drawer_open">Otwórz szkicownik</string>
   <string name="navigation_drawer_close">Zamknij szkicownik</string>
+  <string name="settings_agree_to_license_terms">Zgadzam się na publikowanie fotografii na Ajapaik.ee na licencji CC BY 4.0.</string>
   <string name="tutorial_opacity_zoom">Przesuń, aby dostosować przezroczystość starego obrazu.\nPowiększ zdjęcie, aby zmienić wymiary starego obrazu.</string>
   <string name="tutorial_dismiss">Wszystko jasne!</string>
   <string name="tutorial_dialog_show_again_title">Wyświetlić samouczek ponownie?</string>
   <string name="tutorial_dialog_show_again_message">Samouczek może zostać włączony później w ustawieniach</string>
   <string name="tutorial_dialog_show_again_no">Nie</string>
   <string name="tutorial_dialog_show_again_yes">Tak</string>
+  <string name="rephoto_drafts">Szkice fotografii</string>
+  <string name="no_rephotos">Brak fotografii</string>
   <string name="storage_not_permitted_cancel">Anuluj</string>
   <string name="storage_not_permitted_open_settings">Otwórz ustawienia</string>
+  <string name="my_rephotos">Moje fotografie</string>
+  <string name="rephotos_label_not_logged_in_text">Zaloguj się, aby zobaczyć swoje fotografie</string>
   <string name="action_search">Szukaj</string>
   <string name="favorites">Moje ulubione</string>
   <string name="no_favorites">Brak ulubionych</string>
