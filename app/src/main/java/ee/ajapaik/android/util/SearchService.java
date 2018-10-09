@@ -40,6 +40,10 @@ public class SearchService {
         });
     }
 
+    public String getQuery() {
+        return String.valueOf(m_searchView.getQuery());
+    }
+
     public interface Search {
         void search(String query);
         void clearSearch();
