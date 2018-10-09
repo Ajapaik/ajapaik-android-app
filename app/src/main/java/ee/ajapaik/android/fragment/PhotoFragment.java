@@ -147,6 +147,8 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated");
+
         super.onActivityCreated(savedInstanceState);
 
         if(savedInstanceState != null) {
