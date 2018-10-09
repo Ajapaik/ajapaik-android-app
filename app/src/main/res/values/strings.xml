@@ -23,6 +23,11 @@
     <!-- Nearest -->
     <string name="nearest_title">Photos nearby</string>
 
+    <!-- Finna -->
+    <string name="finna_title">Photos nearby (Finna)</string>
+    <string name="finna1918_title">Photos nearby (1918)</string>
+
+
     <!-- Albums -->
     <string name="albums_label_no_data">No Albums</string>
     <string name="albums_title">Albums</string>
