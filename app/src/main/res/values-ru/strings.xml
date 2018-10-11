@@ -19,6 +19,8 @@
   <string name="action_refresh">Обновить</string>
   <string name="action_settings">Настройки</string>
   <string name="nearest_title">Фото поблизости</string>
+  <string name="finna_title">Фото поблизости (Finna)</string>
+  <string name="finna1918_title">Фото поблизости (1918)</string>
   <string name="albums_label_no_data">Нет альбомов</string>
   <string name="albums_title">Альбомы</string>
   <string name="album_title">Альбом</string>

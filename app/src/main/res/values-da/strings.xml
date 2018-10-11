@@ -12,6 +12,8 @@
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Genindlæs</string>
   <string name="action_settings">Indstillinger</string>
+  <string name="finna_title">Billeder i nærheden (Finna)</string>
+  <string name="finna1918_title">Billeder i nærheden (1918)</string>
   <string name="albums_label_no_data">Intet album</string>
   <string name="albums_title">Albummer</string>
   <string name="album_title">Album</string>

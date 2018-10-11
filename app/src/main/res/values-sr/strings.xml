@@ -16,6 +16,8 @@
   <string name="action_refresh">Освежи</string>
   <string name="action_settings">Подешавања</string>
   <string name="nearest_title">Фотографије у близини</string>
+  <string name="finna_title">Слике у близини (Finna)</string>
+  <string name="finna1918_title">Слике у близини (1918)</string>
   <string name="albums_label_no_data">Нема албума</string>
   <string name="albums_title">Албуми</string>
   <string name="album_title">Албум</string>

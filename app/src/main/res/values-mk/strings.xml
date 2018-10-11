@@ -18,6 +18,8 @@
   <string name="action_refresh">Превчитај</string>
   <string name="action_settings">Нагодувања</string>
   <string name="nearest_title">Слики во околина</string>
+  <string name="finna_title">Слики во околина (Finna)</string>
+  <string name="finna1918_title">Слики во околина (1918)</string>
   <string name="albums_label_no_data">Нема албуми</string>
   <string name="albums_title">Албуми</string>
   <string name="album_title">Албум</string>

@@ -18,6 +18,8 @@
   <string name="action_refresh">Atjaunināt</string>
   <string name="action_settings">Iestatījumi</string>
   <string name="nearest_title">Tuvākie attēli</string>
+  <string name="finna_title">Fotogrāfijas tuvumā (Finna)</string>
+  <string name="finna1918_title">Fotogrāfijas tuvumā (1918)</string>
   <string name="albums_label_no_data">Nav albumu</string>
   <string name="albums_title">Albumi</string>
   <string name="album_title">Albums</string>
