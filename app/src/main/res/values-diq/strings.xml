@@ -33,6 +33,7 @@
   <string name="input_lastname_hint">Nameyo peyên</string>
   <string name="login_title">Cıkewtış</string>
   <string name="login_failed">Cıkewtış hewl bi</string>
+  <string name="wrong_password">Parolaya ğelete!</string>
   <string name="registration_title">Qeyd be</string>
   <string name="upload_dialog_error_connection_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
