@@ -35,12 +35,15 @@
   <string name="login_failed">Cıkewtış hewl bi</string>
   <string name="wrong_password">Parolaya ğelete!</string>
   <string name="registration_title">Qeyd be</string>
+  <string name="upload_dialog_error_connection_title">Xetaya Gırêdayışi</string>
   <string name="upload_dialog_error_connection_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
   <string name="upload_dialog_error_unknown_title">Xetaya nêzanıtiye</string>
   <string name="upload_dialog_error_unknown_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_unknown_ok">Bıtexelne</string>
+  <string name="upload_dialog_process_title">Resım bar beno</string>
   <string name="upload_dialog_process_message">Kerem kerên, bıpawên...</string>
+  <string name="upload_dialog_success_title">Barkerdış Serfirazo</string>
   <string name="upload_dialog_success_ok">TEMAM</string>
   <string name="upload_dialog_not_authenticated_ok">TEMAM</string>
   <string name="upload_dialog_agree_to_terms">Eya!</string>
