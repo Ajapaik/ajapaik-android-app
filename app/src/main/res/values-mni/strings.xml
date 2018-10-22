@@ -60,8 +60,8 @@
   <string name="upload_dialog_not_authenticated_title">ꯊꯥꯒꯠꯅꯕꯥ ꯁꯣꯤꯗꯅꯥ ꯆꯪꯁꯤꯟꯒꯗꯕꯅꯤ</string>
   <string name="upload_dialog_not_authenticated_message">Redirect to profile page</string>
   <string name="upload_dialog_not_authenticated_ok">ꯌꯥꯔꯦ</string>
-  <string name="upload_dialog_not_agreed_to_terms">ꯑꯩꯅꯥ ꯃꯤꯔꯦꯜ ꯑꯁꯤ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯐꯣꯡꯗꯣꯛꯄꯗꯥ ꯌꯥꯔꯦ ꯆꯆ ꯴.꯰ ꯒꯤ ꯃꯈꯥꯗꯥ</string>
-  <string name="upload_dialog_agree_to_terms">ꯍꯣꯏ</string>
+  <string name="upload_dialog_not_agreed_to_terms">ꯑꯩꯅꯥ ꯃꯤꯔꯦꯜ ꯑꯁꯤ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯐꯣꯡꯗꯣꯛꯄꯗꯥ ꯌꯥꯔꯦ ꯆꯆ ꯴.꯰ ꯒꯤ ꯃꯈꯥꯗꯥ ꯫</string>
+  <string name="upload_dialog_agree_to_terms">ꯍꯣꯏ!</string>
   <string name="upload_dialog_decline_terms">ꯅꯠꯇꯦ</string>
   <string name="acra_dialog_title">ꯑꯖꯥꯄꯥꯏꯛꯀꯤ ꯑꯃꯨꯛꯍꯟꯕꯥ ꯀꯥꯏꯔꯦ</string>
   <string name="acra_dialog_text">ꯈꯪꯍꯧꯗꯕꯥ ꯑꯁꯣꯏꯕꯥ ꯲ ꯃꯌꯣꯛꯅꯔꯦ ꯅꯝꯐꯨꯗꯥ ꯂꯦꯞ ꯍꯟꯂꯨ ꯄꯥꯡꯊꯣꯛꯏꯕꯥ ꯊꯕꯛ ꯑꯗꯨ. \nꯉꯥꯏꯍꯥꯛꯇꯪ ꯉꯥꯏꯕꯤꯈꯣ ꯑꯁꯣꯏꯕꯥ ꯋꯥꯔꯣꯟꯗꯨ ꯊꯥꯕꯤꯔꯛꯇꯨꯅꯥ, ꯅꯣꯏꯅꯥ ꯍꯧꯖꯤꯛ ꯇꯧꯒꯗꯤ ꯌꯥꯔꯦ ꯍꯥꯤꯕꯥ ꯃꯄꯥꯗꯨꯗꯥ ꯅꯝꯃꯨ</string>
@@ -84,7 +84,7 @@
   <string name="no_rephotos">ꯃꯤꯔꯦꯜ ꯂꯩꯇꯦ</string>
   <string name="storage_not_permitted_title">ꯇꯪꯐꯝ ꯄꯤꯗꯔꯦ</string>
   <string name="storage_not_permitted_message">ꯇꯪꯐꯝ ꯄꯤꯗꯔꯦ ꯃꯁꯤꯒꯤ ꯑꯦꯞꯁꯀꯤ ꯁꯤꯖꯤꯟꯅꯐꯝ ꯑꯗꯨꯅꯥ ꯂꯦꯄꯨ ꯑꯇꯣꯞꯄꯥꯒꯤ ꯁꯛꯇꯝ ꯁꯥꯒꯠꯄꯥ, ꯈꯨꯗꯝ ꯑꯣꯏꯅꯥ ꯑꯃꯨꯛꯍꯟꯅꯥ ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯄꯥ ꯑꯃꯗꯤ ꯂꯧꯁꯤꯟꯕꯥ. \nꯆꯥꯟꯕꯤꯗꯨꯅꯥ ꯌꯦꯡꯕꯤꯗꯨꯅꯥ ꯇꯨꯡꯁꯤꯟꯕꯥ ꯌꯥꯍꯟꯕꯤꯌꯨ</string>
-  <string name="storage_not_permitted_cancel">ꯀꯛꯊꯠꯄꯥ</string>
+  <string name="storage_not_permitted_cancel">ꯇꯣꯛꯄ</string>
   <string name="storage_not_permitted_open_settings">ꯁꯦꯝꯐꯝ ꯍꯥꯡꯊꯣꯛꯄꯥ</string>
   <string name="my_rephotos">ꯑꯩꯒꯤ ꯃꯤꯔꯦꯜ</string>
   <string name="rephotos_label_not_logged_in_text">ꯆꯥꯟꯕꯤꯗꯅꯥ ꯆꯪꯁꯤꯜꯂꯨ ꯅꯪꯒꯤ ꯃꯤꯔꯦꯜ ꯌꯦꯡꯅꯥꯕꯥ</string>

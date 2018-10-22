@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Fitoschido
+* LittlePuppers
 * Racha
 * Zarisi
 -->
@@ -10,6 +11,7 @@
   <string name="please_wait">Espera…</string>
   <string name="something_went_wrong">Se produjo un error</string>
   <string name="action_albums">Álbumes</string>
+  <string name="action_flip">Reflejar</string>
   <string name="action_login">Acceder</string>
   <string name="action_register">Registro</string>
   <string name="action_logout">Salir</string>
@@ -17,6 +19,7 @@
   <string name="action_refresh">Actualizar</string>
   <string name="action_settings">Configuración</string>
   <string name="nearest_title">Fotos cercanas</string>
+  <string name="finna1918_title">Las fotos cercanas (1918)</string>
   <string name="albums_label_no_data">No hay álbumes</string>
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
