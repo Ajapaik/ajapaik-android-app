@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Adithyak1997
+-->
+<resources>
+  <string name="please_wait">ദയവായി കാത്തിരിക്കുക…</string>
+  <string name="something_went_wrong">എന്തോ പ്രശ്നമുണ്ടായി</string>
+  <string name="action_login">പ്രവേശിക്കുക</string>
+  <string name="action_register">രജിസ്റ്റർ ചെയ്യുക</string>
+  <string name="action_logout">ലോഗൗട്ട്</string>
+  <string name="action_refresh">പുതുക്കുക</string>
+  <string name="action_settings">സജ്ജീകരണങ്ങൾ</string>
+  <string name="nearest_title">സമീപത്തുള്ള ചിത്രങ്ങൾ</string>
+  <string name="finna1918_title">സമീപത്തുള്ള ചിത്രങ്ങൾ (1918)</string>
+  <string name="albums_label_no_data">ആൽബങ്ങളില്ല</string>
+  <string name="albums_title">ആൽബം</string>
+  <string name="album_title">ആൽബം</string>
+  <string name="nearest_dialog_error_location_disabled_close">അടയ്ക്കുക</string>
+  <string name="nearest_dialog_error_location_disabled_open">സജ്ജീകരണങ്ങൾ തുറക്കുക</string>
+  <string name="nearest_label_no_data">സമീപത്ത് ചിത്രങ്ങളില്ല</string>
+  <string name="photo_title">ചിത്രത്തിന്റെ വിശദാംശങ്ങൾ</string>
+  <string name="camera_title">ക്യാമറ</string>
+  <string name="profile_facebook_login">ഫേസ്ബുക്ക് ഉപയോഗിച്ച് പ്രവേശിക്കുക</string>
+  <string name="profile_google_login">ഗൂഗിൾ ഉപയോഗിച്ച് പ്രവേശിക്കുക</string>
+  <string name="profile_logout">ലോഗൗട്ട്</string>
+  <string name="profile_login">പ്രവേശിക്കുക</string>
+  <string name="profile_register">അംഗത്വമെടുക്കുക</string>
+  <string name="input_username_hint">ഇമെയിൽ</string>
+  <string name="input_password_hint">രഹസ്യവാക്ക്</string>
+  <string name="input_firstname_hint">പ്രഥമനാമം</string>
+  <string name="input_lastname_hint">അവസാന നാമം</string>
+  <string name="login_title">പ്രവേശിക്കുക</string>
+  <string name="login_failed">പ്രവേശനം പരാജയപ്പെട്ടു</string>
+  <string name="wrong_password">തെറ്റായ രഹസ്യവാക്ക്!</string>
+  <string name="registration_title">രജിസ്റ്റർ ചെയ്യുക</string>
+  <string name="user_already_exists">ഉപയോക്തൃനാമം നിലവിലുണ്ട്</string>
+  <string name="upload_dialog_error_connection_retry">വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="upload_dialog_error_connection_ok">ശരി</string>
+  <string name="upload_dialog_error_unknown_title">അപരിചിതമായ പിഴവ്</string>
+  <string name="upload_dialog_error_unknown_retry">വീണ്ടും ശ്രമിക്കുക</string>
+  <string name="upload_dialog_error_unknown_ok">റദ്ദാക്കുക</string>
+  <string name="upload_dialog_process_message">ദയവായി കാത്തിരിക്കുക…</string>
+  <string name="upload_dialog_success_title">അപ്‌ലോഡ് വിജയകരം</string>
+  <string name="upload_dialog_success_ok">ശരി</string>
+  <string name="upload_dialog_not_authenticated_ok">ശരി</string>
+  <string name="upload_dialog_agree_to_terms">അതെ!</string>
+  <string name="upload_dialog_decline_terms">ഇല്ല</string>
+  <string name="acra_dialog_ok_toast">നന്ദി!</string>
+  <string name="about_title">വിവരണം</string>
+  <string name="version">പതിപ്പ്</string>
+  <string name="privacy_policy">സ്വകാര്യത</string>
+  <string name="tutorial_dialog_show_again_no">വേണ്ട</string>
+  <string name="tutorial_dialog_show_again_yes">വേണം</string>
+  <string name="storage_not_permitted_cancel">റദ്ദാക്കുക</string>
+  <string name="storage_not_permitted_open_settings">സജ്ജീകരണങ്ങൾ തുറക്കുക</string>
+  <string name="action_search">തിരയുക</string>
+  <string name="favorites_label_not_logged_in_button">പ്രവേശിക്കുക</string>
+  <string name="no_search_result">തിരച്ചിൽ ഫലങ്ങളൊന്നുമില്ല</string>
+  <string name="album_no_data">ചിത്രങ്ങളില്ല</string>
+</resources>

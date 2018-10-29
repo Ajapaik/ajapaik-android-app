@@ -23,6 +23,7 @@
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_title">Ca Qedexekerdeyo</string>
   <string name="nearest_dialog_error_location_disabled_close">Ca de</string>
+  <string name="nearest_dialog_error_location_disabled_open">Eyaran ake</string>
   <string name="nearest_label_no_data">Fotrafê nêzdi çıniyê</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
@@ -35,10 +36,17 @@
   <string name="input_password_hint">Parola</string>
   <string name="input_firstname_hint">Nameyo sıfteyên</string>
   <string name="input_lastname_hint">Nameyo peyên</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Hewna refotoyê şıma çıniyo</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephoto</item>
+  </plurals>
   <string name="login_title">Cıkewtış</string>
   <string name="login_failed">Cıkewtış hewl bi</string>
   <string name="wrong_password">Parolaya ğelete!</string>
   <string name="registration_title">Qeyd be</string>
+  <string name="user_already_exists">Nameyê karberi xora esto</string>
+  <string name="upload_title">Refotoyi qebul ke</string>
   <string name="upload_dialog_error_connection_title">Xetaya Gırêdayışi</string>
   <string name="upload_dialog_error_connection_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>

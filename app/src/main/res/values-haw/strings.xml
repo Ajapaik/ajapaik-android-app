@@ -3,12 +3,24 @@
 * Kolonahe
 -->
 <resources>
+  <string name="app_name">Ajapaik Huliau</string>
+  <string name="processing_image">Ke haʻaliu nei i ke kiʻi</string>
   <string name="please_wait">E kali ke ʻoluʻolu…</string>
   <string name="something_went_wrong">Loaʻa i ka pilikia</string>
+  <string name="action_albums">Nā Waihona Kiʻi</string>
+  <string name="action_flip">Huli</string>
   <string name="action_login">ʻEʻe</string>
   <string name="action_register">Kāinoa</string>
   <string name="action_logout">Haʻalele</string>
+  <string name="action_profile">ʻAoʻao mea hoʻohana</string>
+  <string name="action_refresh">Hōʻano hou</string>
+  <string name="action_settings">Makemake</string>
   <string name="nearest_title">Nā kiʻi wahi kokoke</string>
+  <string name="finna_title">Nā Kiʻi kokoke (Finna)</string>
+  <string name="finna1918_title">Nā Kiʻi kokoke (1918)</string>
+  <string name="albums_label_no_data">ʻAʻohe Waihona kiʻi</string>
+  <string name="albums_title">Nā Waihona kiʻi</string>
+  <string name="album_title">Waihona kiʻi</string>
   <string name="nearest_dialog_error_location_disabled_close">Pani</string>
   <string name="nearest_label_no_data">ʻAʻohe kiʻi i kahi kokoke</string>
   <string name="nearest_label_no_data_button">E nānā i ka wahī kiʻi no nā kiʻi</string>
