@@ -25,6 +25,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Ca de</string>
   <string name="nearest_dialog_error_location_disabled_open">Eyaran ake</string>
   <string name="nearest_label_no_data">Fotrafê nêzdi çıniyê</string>
+  <string name="photo_title">Melumatê fotrafi</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
   <string name="profile_facebook_login">Ebe Facebook ra cıkewê</string>
@@ -65,11 +66,21 @@
   <string name="version">Versiyon</string>
   <string name="contact">İrtıbat</string>
   <string name="privacy_policy">Dızdêniye</string>
+  <string name="navigation_drawer_open">Çımeyi ake</string>
+  <string name="navigation_drawer_close">Çımeyi cade</string>
   <string name="tutorial_dismiss">Mı fehm kerd!</string>
   <string name="tutorial_dialog_show_again_no">Nê</string>
   <string name="tutorial_dialog_show_again_yes">Eya</string>
+  <string name="rephoto_drafts">Nımuneyê refotoyi</string>
+  <string name="no_rephotos">Refoto çıniyo</string>
   <string name="storage_not_permitted_cancel">Bıtexelne</string>
   <string name="storage_not_permitted_open_settings">Eyaran ake</string>
+  <string name="my_rephotos">Refotoyê mı</string>
   <string name="action_search">Cıgeyrayış</string>
+  <string name="favorites">Zerricıkewteyê mı</string>
+  <string name="no_favorites">Zerricıkewteyi çıniyê</string>
+  <string name="action_favorite">Zerricıkewte</string>
   <string name="favorites_label_not_logged_in_button">Cı kewe</string>
+  <string name="no_search_result">Neticeyê cıgeyrayışi nêvêniya</string>
+  <string name="album_no_data">Resımi çıniyê</string>
 </resources>
