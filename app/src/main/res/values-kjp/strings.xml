@@ -3,7 +3,7 @@
 * Rul1902
 -->
 <resources>
-  <string name="please_wait">အင်းခိုဝ်ဖှ်ေလာၮင်းမၞိင်ႋ...</string>
+  <string name="please_wait">အုဲးသာဆိုင် အင်းခိုဝ်ဖှ်ေလာၮင်းမၞိင်ႋ...</string>
   <string name="something_went_wrong">ၜးဝေ့ လ်ုမိင်မိင်</string>
   <string name="action_login">အွးလင်</string>
   <string name="action_register">မ်ုပၞံင်ထာင်</string>
