@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Kolonahe
+-->
+<resources>
+  <string name="app_name">Ajapaik Huliau</string>
+  <string name="processing_image">Ke haʻaliu nei i ke kiʻi</string>
+  <string name="please_wait">E kali ke ʻoluʻolu…</string>
+  <string name="something_went_wrong">Loaʻa i ka pilikia</string>
+  <string name="action_albums">Nā Waihona Kiʻi</string>
+  <string name="action_flip">Huli</string>
+  <string name="action_login">ʻEʻe</string>
+  <string name="action_register">Kāinoa</string>
+  <string name="action_logout">Haʻalele</string>
+  <string name="action_profile">ʻAoʻao mea hoʻohana</string>
+  <string name="action_refresh">Hōʻano hou</string>
+  <string name="action_settings">Makemake</string>
+  <string name="nearest_title">Nā kiʻi wahi kokoke</string>
+  <string name="finna_title">Nā Kiʻi kokoke (Finna)</string>
+  <string name="finna1918_title">Nā Kiʻi kokoke (1918)</string>
+  <string name="albums_label_no_data">ʻAʻohe Waihona kiʻi</string>
+  <string name="albums_title">Nā Waihona kiʻi</string>
+  <string name="album_title">Waihona kiʻi</string>
+  <string name="nearest_dialog_error_location_disabled_close">Pani</string>
+  <string name="nearest_label_no_data">ʻAʻohe kiʻi i kahi kokoke</string>
+  <string name="nearest_label_no_data_button">E nānā i ka wahī kiʻi no nā kiʻi</string>
+  <string name="camera_title">Pahupaʻikiʻi</string>
+  <string name="profile_facebook_login">E ʻeʻe me Facebook</string>
+  <string name="profile_google_login">E ʻeʻe me Google</string>
+  <string name="profile_logout">Haʻalele</string>
+  <string name="profile_login">ʻEʻe</string>
+  <string name="profile_register">Kāinoa</string>
+  <string name="input_username_hint">Leka uila</string>
+  <string name="input_password_hint">ʻŌlelo hūnā</string>
+  <string name="input_firstname_hint">Inoa mua</string>
+  <string name="input_lastname_hint">Inoa Hope</string>
+  <string name="login_title">ʻEʻe</string>
+  <string name="registration_title">Kāinoa</string>
+  <string name="upload_dialog_error_connection_retry">Hana hou</string>
+  <string name="upload_dialog_error_connection_ok">Hiki nō</string>
+  <string name="upload_dialog_error_unknown_retry">Hana hou</string>
+  <string name="upload_dialog_error_unknown_ok">Hoʻōki</string>
+  <string name="upload_dialog_process_message">E kali ke ʻoluʻolu…</string>
+  <string name="upload_dialog_success_ok">Hiki nō</string>
+  <string name="upload_dialog_not_authenticated_title">Pono ʻoe e ʻeʻe no ka hoʻouka kiʻi ʻana</string>
+  <string name="upload_dialog_not_authenticated_ok">Hiki nō</string>
+  <string name="upload_dialog_agree_to_terms">ʻAe!</string>
+  <string name="upload_dialog_decline_terms">ʻAʻole</string>
+  <string name="acra_dialog_ok_toast">Mahalo!</string>
+  <string name="version">Mana</string>
+  <string name="contact">Hoʻokaʻaʻike</string>
+  <string name="privacy_policy">Pilikino</string>
+  <string name="tutorial_dismiss">Maopopo!</string>
+  <string name="tutorial_dialog_show_again_no">ʻAʻole</string>
+  <string name="tutorial_dialog_show_again_yes">ʻAe</string>
+  <string name="storage_not_permitted_cancel">Hoʻōki</string>
+  <string name="action_search">Huli</string>
+  <string name="favorites_label_not_logged_in_button">ʻEʻe</string>
+  <string name="no_search_result">ʻAʻohe hualoaʻa</string>
+  <string name="album_no_data">ʻAʻohe kiʻi</string>
+</resources>

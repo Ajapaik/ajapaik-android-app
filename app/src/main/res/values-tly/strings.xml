@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Гусейн
+-->
+<resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="please_wait">Зәһмәт ныбу, чәш быкан…</string>
+  <string name="action_albums">Албомон</string>
+  <string name="action_login">Дәшәҹо</string>
+  <string name="action_register">Ғејдијот</string>
+  <string name="action_profile">Профил</string>
+  <string name="action_refresh">Тожә кардеј</string>
+  <string name="action_settings">Сәбәро</string>
+  <string name="albums_label_no_data">Албомон нин</string>
+  <string name="albums_title">Албомон</string>
+  <string name="album_title">Албом</string>
+  <string name="nearest_dialog_error_location_disabled_close">Жәј</string>
+  <string name="nearest_dialog_error_location_disabled_open">Сәбәро окардеј</string>
+  <string name="nearest_label_no_data">Незәдә шикилон нин</string>
+  <string name="photo_title">Шикили барәдә</string>
+  <string name="camera_title">Камера</string>
+  <string name="profile_title">Профил</string>
+  <string name="profile_login">Дәше</string>
+  <string name="input_username_hint">Електронә почт</string>
+  <string name="input_password_hint">Парол</string>
+  <string name="input_firstname_hint">Ном</string>
+  <string name="input_lastname_hint">Фамилијә</string>
+  <string name="login_title">Дәшәҹо</string>
+  <string name="wrong_password">Рост ныбә парол!</string>
+  <string name="registration_title">Ғејдијот</string>
+  <string name="upload_dialog_error_connection_ok">ОК</string>
+  <string name="upload_dialog_error_unknown_ok">Оһаштеј</string>
+  <string name="upload_dialog_process_title">Шикил әловәкә</string>
+  <string name="upload_dialog_process_message">Зәһмәт ныбу, чәш быкан …</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Бәле!</string>
+  <string name="upload_dialog_decline_terms">НЕ</string>
+</resources>

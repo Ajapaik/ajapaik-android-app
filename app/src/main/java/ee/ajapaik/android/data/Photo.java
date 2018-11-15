@@ -3,6 +3,7 @@ package ee.ajapaik.android.data;
 import android.content.Context;
 import android.location.Location;
 import android.net.Uri;
+import android.util.Log;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -221,7 +222,21 @@ public class Photo extends PhotoModel {
     }
 
     public boolean isLandscape() {
-        return m_width > m_height;
+        boolean isLandscape=m_width > m_height;
+        Log.d(TAG, "isLandscape: " + isLandscape);
+        return isLandscape;
+    }
+
+    public void setWidth(int width)
+    {
+        m_width = width;
+        Log.d(TAG, "setWidth: " + m_width);
+    }
+
+    public void setHeight(int height)
+    {
+        m_height = height;
+        Log.d(TAG, "setHeight: " + m_height);
     }
 
     @Override

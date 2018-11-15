@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Omotecho
+* Shirayuki
 -->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">画像の処理中</string>
   <string name="please_wait">お待ちください…</string>
-  <string name="something_went_wrong">エラーが発生しました…</string>
+  <string name="something_went_wrong">エラーが発生しました</string>
   <string name="action_albums">アルバム</string>
   <string name="action_login">ログイン</string>
   <string name="action_register">登録する</string>

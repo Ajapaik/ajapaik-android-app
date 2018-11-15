@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Beta16
+* SilviaF
 -->
 <resources>
+  <string name="please_wait">Attendere prego …</string>
   <string name="something_went_wrong">Qualcosa è andato storto</string>
   <string name="action_albums">Album</string>
   <string name="action_login">Accedi</string>
+  <string name="action_register">Registrati</string>
   <string name="action_logout">Esci</string>
   <string name="action_profile">Profilo</string>
   <string name="action_refresh">Aggiorna</string>
@@ -26,6 +29,9 @@
   <string name="input_lastname_hint">Cognome</string>
   <string name="login_title">Accedi</string>
   <string name="login_failed">Accesso non riuscito</string>
+  <string name="wrong_password">Password errata!</string>
+  <string name="registration_title">Registrati</string>
+  <string name="user_already_exists">Nome utente già esistente</string>
   <string name="upload_dialog_error_connection_retry">Riprova</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Errore sconosciuto</string>

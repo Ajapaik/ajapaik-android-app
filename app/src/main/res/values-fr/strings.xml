@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Alacabe
 * Gomoko
 * Puik
 * Wladek92
@@ -18,6 +19,8 @@
   <string name="action_refresh">Rafraîchir</string>
   <string name="action_settings">Paramètres</string>
   <string name="nearest_title">Photos à proximité</string>
+  <string name="finna_title">Photos à proximité (Finna)</string>
+  <string name="finna1918_title">Photos à proximité (1918)</string>
   <string name="albums_label_no_data">Aucun album</string>
   <string name="albums_title">Albums</string>
   <string name="album_title">Album</string>
@@ -46,7 +49,7 @@
   </plurals>
   <string name="login_title">Se connecter</string>
   <string name="login_failed">Echec de connexion</string>
-  <string name="wrong_password">Mot de passe erronné !</string>
+  <string name="wrong_password">Mot de passe erroné !</string>
   <string name="registration_title">S’inscrire</string>
   <string name="user_already_exists">Le nom d’utilisateur existe déjà</string>
   <string name="upload_title">Confirmer la rephoto</string>

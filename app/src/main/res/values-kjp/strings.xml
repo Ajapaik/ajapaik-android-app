@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Rul1902
+-->
+<resources>
+  <string name="please_wait">အုဲးသာဆိုင် အင်းခိုဝ်ဖှ်ေလာၮင်းမၞိင်ႋ...</string>
+  <string name="something_went_wrong">ၜးဝေ့ လ်ုမိင်မိင်</string>
+  <string name="action_login">အွးလင်</string>
+  <string name="action_register">မ်ုပၞံင်ထာင်</string>
+  <string name="action_logout">တါ်ထင်း</string>
+  <string name="action_profile">မေံၯင်</string>
+  <string name="action_refresh">ကျးက္ဍာ</string>
+  <string name="nearest_dialog_error_location_disabled_close">ကာၜါ်</string>
+  <string name="camera_title">က်ုမ်ုလာ့</string>
+  <string name="profile_logout">တါ်ထင်း</string>
+  <string name="profile_login">မ်ုအွးလင် အ်ုကၞါင်</string>
+  <string name="profile_register">မ်ုတါင်ထါင်း ၮင့်ဆာႋအ်ုၮါင်း</string>
+  <string name="input_username_hint">အီႋမဲ</string>
+  <string name="input_password_hint">ဝီးၜါ်ဖၠုံး</string>
+  <string name="input_firstname_hint">မၠိင်မေံယာႋ</string>
+  <string name="input_lastname_hint">မၠိင်လါင်ခါင့်</string>
+  <string name="login_title">အွးလင်</string>
+  <string name="upload_dialog_error_connection_retry">ကၠ်စူ့ၮင်</string>
+  <string name="upload_dialog_error_connection_ok">အိုဝ်ကေ</string>
+  <string name="upload_dialog_error_unknown_ok">မာလိုင်အေး</string>
+  <string name="upload_dialog_process_message">အင်းခိုဝ်ဖှ်ေလာၮင်းမၞိင်ႋ...</string>
+  <string name="upload_dialog_success_ok">အိုဝ်ကေ</string>
+  <string name="upload_dialog_not_authenticated_ok">အိုဝ်ကေ</string>
+  <string name="upload_dialog_agree_to_terms">မွာဲ</string>
+  <string name="upload_dialog_decline_terms">မွာဲအေး</string>
+  <string name="acra_dialog_ok_toast">ဆ်ုခၠံးလှ်</string>
+  <string name="tutorial_dialog_show_again_no">မွာဲအေး</string>
+  <string name="tutorial_dialog_show_again_yes">မွာဲ</string>
+  <string name="storage_not_permitted_cancel">မာလိုင်အေး</string>
+  <string name="action_search">အင်းၰူ့</string>
+  <string name="favorites_label_not_logged_in_button">မ်ုအွးလင် အ်ုကၞါင်</string>
+  <string name="album_no_data">လါၯင်လ်ုအှ်</string>
+</resources>

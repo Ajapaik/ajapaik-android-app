@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Fitoschido
+* LittlePuppers
+* Racha
+* Zarisi
 -->
 <resources>
   <string name="app_name">Refotografía Ajapaik</string>
@@ -8,6 +11,7 @@
   <string name="please_wait">Espera…</string>
   <string name="something_went_wrong">Se produjo un error</string>
   <string name="action_albums">Álbumes</string>
+  <string name="action_flip">Reflejar</string>
   <string name="action_login">Acceder</string>
   <string name="action_register">Registro</string>
   <string name="action_logout">Salir</string>
@@ -15,6 +19,7 @@
   <string name="action_refresh">Actualizar</string>
   <string name="action_settings">Configuración</string>
   <string name="nearest_title">Fotos cercanas</string>
+  <string name="finna1918_title">Las fotos cercanas (1918)</string>
   <string name="albums_label_no_data">No hay álbumes</string>
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
@@ -54,12 +59,15 @@
   <string name="upload_dialog_success_ok">Aceptar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
+  <string name="upload_dialog_agree_to_terms">Sí!</string>
+  <string name="upload_dialog_decline_terms">No</string>
   <string name="acra_dialog_ok_toast">¡Gracias!</string>
   <string name="about_title">Acerca de</string>
   <string name="version">Versión</string>
   <string name="contact">Contacto</string>
   <string name="privacy_policy">Privacidad</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
+  <string name="tutorial_dismiss">Entendido!</string>
   <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
@@ -71,7 +79,9 @@
   <string name="action_favorite">Favorita</string>
   <string name="favorites_label_not_logged_in_button">Acceder</string>
   <string name="favorites_label_not_logged_in_text">Accede a tu cuenta para ver tus favoritas</string>
+  <string name="no_search_result">Ningún resultado de búsqueda</string>
+  <string name="album_no_data">No hay fotos</string>
   <string name="start_taking_rephoto">Start taking rephoto</string>
   <string name="show_photo_details">Show photo details</string>
-    <string name="show_rephotos">Show rephotos</string>
+  <string name="show_rephotos">Show rephotos</string>
 </resources>

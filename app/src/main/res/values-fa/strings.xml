@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Amirsara
+-->
+<resources>
+  <string name="please_wait">لطفاً صبر کنید...</string>
+  <string name="something_went_wrong">مشکلی وجود دارد</string>
+  <string name="action_albums">آلبوم ها</string>
+  <string name="action_login">ورود</string>
+  <string name="action_register">ثبت نام</string>
+  <string name="action_logout">خروج</string>
+  <string name="action_profile">نمایه</string>
+  <string name="action_refresh">تازه کردن</string>
+  <string name="action_settings">تنظیمات</string>
+  <string name="albums_label_no_data">بدون آلبوم</string>
+  <string name="albums_title">آلبوم ها</string>
+  <string name="album_title">آلبوم</string>
+  <string name="nearest_dialog_error_location_disabled_close">بستن</string>
+  <string name="nearest_dialog_error_location_disabled_open">تنظیمات را باز کن</string>
+  <string name="camera_title">دوربین</string>
+  <string name="profile_title">نمایه</string>
+  <string name="profile_facebook_login">با فیس بوک وارد شوید</string>
+  <string name="profile_google_login">ورود با گوگل</string>
+  <string name="profile_logout">خروج</string>
+  <string name="profile_login">ورود</string>
+  <string name="profile_register">ایجاد حساب کاربری</string>
+  <string name="input_username_hint">ایمیل</string>
+  <string name="input_password_hint">گذرواژه</string>
+  <string name="input_firstname_hint">نام</string>
+  <string name="input_lastname_hint">نام خانوادگی</string>
+  <string name="registration_title">ثبت‌نام</string>
+  <string name="user_already_exists">نام کاربری درحال حاضر وجود دارد</string>
+  <string name="upload_dialog_error_connection_retry">سعی مجدد</string>
+  <string name="upload_dialog_error_connection_ok">تأیید</string>
+  <string name="upload_dialog_error_unknown_title">خطای ناشناخته</string>
+  <string name="upload_dialog_error_unknown_retry">سعی مجدد</string>
+  <string name="upload_dialog_error_unknown_ok">لغو</string>
+  <string name="upload_dialog_process_message">لطفاً صبر کنید...</string>
+  <string name="upload_dialog_success_ok">تأیید</string>
+  <string name="upload_dialog_not_authenticated_ok">تأیید</string>
+  <string name="upload_dialog_agree_to_terms">بله</string>
+  <string name="upload_dialog_decline_terms">خیر</string>
+  <string name="acra_dialog_ok_toast">سپاس!</string>
+  <string name="about_title">درباره</string>
+  <string name="version">نسخه</string>
+  <string name="storage_not_permitted_cancel">لغو</string>
+  <string name="action_search">جستجو</string>
+</resources>

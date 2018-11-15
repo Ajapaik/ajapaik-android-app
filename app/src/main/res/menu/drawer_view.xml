@@ -6,6 +6,15 @@
                 android:icon="@drawable/ic_navigation_white_36dp"
                 android:title="@string/nearest_title" />
         <item
+                android:id="@+id/finna"
+                android:icon="@drawable/ic_navigation_white_36dp"
+                android:title="@string/finna_title" />
+        <item
+            android:id="@+id/finna1918"
+            android:icon="@drawable/ic_navigation_white_36dp"
+            android:title="@string/finna1918_title" />
+
+        <item
                 android:id="@+id/albums"
                 android:icon="@drawable/ic_photo_library_white_36dp"
                 android:title="@string/albums_title" />

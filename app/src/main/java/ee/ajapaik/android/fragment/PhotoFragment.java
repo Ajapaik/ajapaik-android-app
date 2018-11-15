@@ -3,6 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.location.Location;
 import android.os.Build;
@@ -65,6 +66,7 @@ import static android.view.View.VISIBLE;
 
 public class PhotoFragment extends ImageFragment {
     private static final String TAG = "PhotoFragment";
+    private static final int THUMBNAIL_SIZE = 400;
 
     private static final int REQUEST_CAMERA = 4000;
     private static final int CAMERA_AND_STORAGE_PERMISSION = 6002;
@@ -78,6 +80,7 @@ public class PhotoFragment extends ImageFragment {
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
+    private PointF m_offset = null;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -147,9 +150,11 @@ public class PhotoFragment extends ImageFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated");
+
         super.onActivityCreated(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             m_album = savedInstanceState.getParcelable(KEY_ALBUM);
             m_photo = savedInstanceState.getParcelable(KEY_PHOTO);
             m_location = savedInstanceState.getParcelable(KEY_LOCATION);
@@ -157,11 +162,11 @@ public class PhotoFragment extends ImageFragment {
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
         }
 
-        if(m_album == null) {
+        if (m_album == null) {
             m_album = getAlbum();
         }
 
-        if(m_photo == null) {
+        if (m_photo == null) {
             m_photo = getPhoto();
         }
 
@@ -169,11 +174,11 @@ public class PhotoFragment extends ImageFragment {
             initMap(savedInstanceState);
         }
 
-        if(m_photo == null && m_album != null) {
+        if (m_photo == null && m_album != null) {
             m_photo = m_album.getFirstPhoto();
         }
 
-        if(m_location == null) {
+        if (m_location == null) {
             m_location = getSettings().getLocation();
         }
 
@@ -191,10 +196,10 @@ public class PhotoFragment extends ImageFragment {
         getSubtitleView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(m_photo != null) {
+                if (m_photo != null) {
                     Hyperlink link = m_photo.getSource();
 
-                    if(link != null && link.getURL() != null) {
+                    if (link != null && link.getURL() != null) {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
 
                         intent.setData(link.getURL());

@@ -38,6 +38,8 @@ public class WebImageView extends ImageView {
     private int m_placeholderResourceId = INVALID_RESOURCE_ID;
     private OnLoadListener m_loadListener;
     private Uri m_uri;
+    private int m_width = 2;
+    private int m_height = 1;
 
     public WebImageView(Context context) {
         super(context);
@@ -69,6 +71,15 @@ public class WebImageView extends ImageView {
             invalidateBitmap();
         }
     }
+
+    public int getDrawableWidth() {
+        return m_width;
+    }
+
+    public int getDrawableHeight() {
+        return m_height;
+    }
+
 
     public PointF getOffset() {
         return m_offset;
@@ -207,6 +218,10 @@ public class WebImageView extends ImageView {
                 public void onImageResult(int status, Drawable drawable) {
                     if(m_attachedToWindow) {
                         if(drawable != null) {
+                            Log.d(TAG, "enqueue: onImageLoaded width: " + drawable.getIntrinsicWidth() + " height: " + drawable.getIntrinsicHeight());
+                            m_width =  drawable.getIntrinsicWidth();
+                            m_height = drawable.getIntrinsicHeight();
+
                             if(m_flipped) {
                                 Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
 

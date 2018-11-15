@@ -16,6 +16,8 @@
   <string name="action_refresh">Ανανέωση</string>
   <string name="action_settings">Ρυθμίσεις</string>
   <string name="nearest_title">Φωτογραφίες κοντά</string>
+  <string name="finna_title">Φωτογραφίες σε κοντινή απόσταση (Finna)</string>
+  <string name="finna1918_title">Φωτογραφίες σε κοντινή απόσταση (1918)</string>
   <string name="albums_label_no_data">Χωρίς άλμπουμ</string>
   <string name="albums_title">Άλμπουμ</string>
   <string name="album_title">Άλμπουμ</string>

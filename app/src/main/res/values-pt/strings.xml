@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Athena in Wonderland
+* Hamilton Abreu
 -->
 <resources>
   <string name="app_name">Refotografia Ajapaik</string>
@@ -15,7 +16,9 @@
   <string name="action_profile">Perfil</string>
   <string name="action_refresh">Atualizar</string>
   <string name="action_settings">Configurações</string>
-  <string name="nearest_title">Fotografias próximas</string>
+  <string name="nearest_title">Fotografias das redondezas</string>
+  <string name="finna_title">Fotografias das redondezas (Finna)</string>
+  <string name="finna1918_title">Fotografias das redondezas (1918)</string>
   <string name="albums_label_no_data">Não há álbuns</string>
   <string name="albums_title">Álbuns</string>
   <string name="album_title">Álbum</string>
@@ -58,8 +61,8 @@
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
   <string name="upload_dialog_process_title">A enviar a fotografia</string>
   <string name="upload_dialog_process_message">Aguarde, por favor…</string>
-  <string name="upload_dialog_success_title">O envio foi realizado com sucesso</string>
-  <string name="upload_dialog_success_message">A fotografia foi carregada com sucesso!</string>
+  <string name="upload_dialog_success_title">O envio foi realizado</string>
+  <string name="upload_dialog_success_message">A fotografia foi carregada!</string>
   <string name="upload_dialog_success_ok">Aceitar</string>
   <string name="upload_dialog_not_authenticated_title">Deve iniciar sessão para enviar</string>
   <string name="upload_dialog_not_authenticated_message">Redirecionar a página do perfil</string>
