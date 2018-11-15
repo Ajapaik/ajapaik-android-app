@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Adithyak1997
+* Praveenp
 -->
 <resources>
   <string name="please_wait">ദയവായി കാത്തിരിക്കുക…</string>
@@ -20,7 +21,7 @@
   <string name="nearest_label_no_data">സമീപത്ത് ചിത്രങ്ങളില്ല</string>
   <string name="photo_title">ചിത്രത്തിന്റെ വിശദാംശങ്ങൾ</string>
   <string name="camera_title">ക്യാമറ</string>
-  <string name="profile_facebook_login">ഫേസ്ബുക്ക് ഉപയോഗിച്ച് പ്രവേശിക്കുക</string>
+  <string name="profile_facebook_login">ഫേസ്‌ബുക്ക് ഉപയോഗിച്ച് പ്രവേശിക്കുക</string>
   <string name="profile_google_login">ഗൂഗിൾ ഉപയോഗിച്ച് പ്രവേശിക്കുക</string>
   <string name="profile_logout">ലോഗൗട്ട്</string>
   <string name="profile_login">പ്രവേശിക്കുക</string>
