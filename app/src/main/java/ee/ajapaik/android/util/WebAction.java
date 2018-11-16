@@ -1,5 +1,6 @@
 package ee.ajapaik.android.util;
 
+import android.arch.core.BuildConfig;
 import android.content.Context;
 import android.util.Log;
 
@@ -16,7 +17,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-import ee.ajapaik.android.BuildConfig;
 import ee.ajapaik.android.data.util.Model;
 import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.exception.ApiException;
@@ -64,7 +64,7 @@ public class WebAction<T> extends WebOperation {
 
     @Override
     public boolean shouldRetry() {
-        return (!isCancelled() && isSecure() && m_status.isSessionProblem()) ? true : false;
+        return !isCancelled() && isSecure() && m_status.isSessionProblem();
     }
 
     @Override
