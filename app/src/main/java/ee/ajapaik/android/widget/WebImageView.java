@@ -10,7 +10,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.ImageView;
 
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.util.Bitmaps;
@@ -18,7 +17,7 @@ import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebActivity;
 import ee.ajapaik.android.util.WebImage;
 
-public class WebImageView extends ImageView {
+public class WebImageView extends android.support.v7.widget.AppCompatImageView {
     private static final String TAG = "WebImageView";
 
     private static final String NAMESPACE = "http://schemas.android.com/apk/res/android";

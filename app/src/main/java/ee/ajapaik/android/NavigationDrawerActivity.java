@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import ee.ajapaik.android.util.WebActivity;
 
 public abstract class NavigationDrawerActivity extends WebActivity {
-    private static final String TAG = "NavigationDrawerActivity";
+    private static final String TAG = "NavDrawerActivity";
     private DrawerLayout mDrawer;
 
     protected abstract void setContentView();
