@@ -62,6 +62,7 @@ import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
+import static com.google.android.gms.maps.model.MapStyleOptions.loadRawResourceStyle;
 
 public class PhotoFragment extends ImageFragment {
     private static final String TAG = "PhotoFragment";
@@ -132,6 +133,8 @@ public class PhotoFragment extends ImageFragment {
                 } else {
                     mMap.setMyLocationEnabled(true);
                 }
+
+                mMap.setMapStyle(loadRawResourceStyle(getActivity(), R.raw.style_json));
 
                 LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
                 MarkerOptions markerOptions = new MarkerOptions()
