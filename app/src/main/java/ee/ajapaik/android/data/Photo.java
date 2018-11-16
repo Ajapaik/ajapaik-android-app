@@ -36,6 +36,7 @@ public class Photo extends PhotoModel {
     private static final String KEY_SOURCE = "source";
     private static final String KEY_LATITUDE = "latitude";
     private static final String KEY_LONGITUDE = "longitude";
+    private static final String KEY_AZIMUTH = "azimuth";
     private static final String KEY_REPHOTOS = "rephotos";
     private static final String KEY_REPHOTOS_COUNT = "rephotosCount";
     private static final String KEY_UPLOADS = "uploads";
@@ -45,8 +46,8 @@ public class Photo extends PhotoModel {
         return createStateAction(context, photo.getIdentifier());
     }
 
-    public static WebAction<Photo> createStateAction(Context context, String photoIdentifier) {
-        Map<String, String> parameters = new Hashtable<String, String>();
+    private static WebAction<Photo> createStateAction(Context context, String photoIdentifier) {
+        Map<String, String> parameters = new Hashtable<>();
 
         parameters.put("id", photoIdentifier);
 
@@ -54,7 +55,7 @@ public class Photo extends PhotoModel {
     }
 
     public static WebAction<Photo> createFavoritingAction(Context context, String photoIdentifier, boolean favorited) {
-        Map<String, String> parameters = new Hashtable<String, String>();
+        Map<String, String> parameters = new Hashtable<>();
 
         parameters.put("id", photoIdentifier);
         parameters.put("favorited", String.valueOf(favorited));
@@ -83,6 +84,7 @@ public class Photo extends PhotoModel {
     private String m_author;
     private Hyperlink m_source;
     private Location m_location;
+    private Float m_azimuth;
     private List<Rephoto> m_rephotos;
     private int m_rephotosCount;
     private int m_uploadsCount;
@@ -108,6 +110,7 @@ public class Photo extends PhotoModel {
             m_location.setLongitude(readNumber(attributes, KEY_LONGITUDE));
         }
 
+        m_azimuth = (float) readNumber(attributes, KEY_AZIMUTH);
         m_rephotos = parseRephotos(attributes);
         m_rephotosCount = m_rephotos.size();
         m_uploadsCount = getUserUploadsCount();
@@ -153,6 +156,7 @@ public class Photo extends PhotoModel {
             write(attributes, KEY_LONGITUDE, m_location.getLongitude());
         }
 
+        write(attributes, KEY_AZIMUTH, m_azimuth);
         write(attributes, KEY_REPHOTOS_COUNT, m_rephotosCount);
         write(attributes, KEY_REPHOTOS, getRephotosAsAttribute());
         write(attributes, KEY_UPLOADS, m_uploadsCount);
@@ -199,6 +203,10 @@ public class Photo extends PhotoModel {
 
     public Location getLocation() {
         return m_location;
+    }
+
+    public Float getAzimuth() {
+        return m_azimuth;
     }
 
     public int getRephotosCount() {
@@ -263,7 +271,7 @@ public class Photo extends PhotoModel {
     private static class Action extends WebAction<Photo> {
         private String m_baseIdentifier;
 
-        public Action(Context context, String path, Map<String, String> parameters, String baseIdentifier) {
+        Action(Context context, String path, Map<String, String> parameters, String baseIdentifier) {
             super(context, path, parameters, CREATOR);
             m_baseIdentifier = baseIdentifier;
         }

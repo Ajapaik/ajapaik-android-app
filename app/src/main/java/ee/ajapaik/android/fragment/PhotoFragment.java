@@ -3,7 +3,6 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.location.Location;
 import android.os.Build;
@@ -80,7 +79,6 @@ public class PhotoFragment extends ImageFragment {
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
-    private PointF m_offset = null;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -138,6 +136,7 @@ public class PhotoFragment extends ImageFragment {
                 LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
                 MarkerOptions markerOptions = new MarkerOptions()
                         .position(photoLocation)
+                        .rotation(m_photo.getAzimuth())
                         .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
 
                 mMap.addMarker(markerOptions);
@@ -215,7 +214,7 @@ public class PhotoFragment extends ImageFragment {
                 List<String> permissionsNeeded = permissionsNeeded();
 
                 if (!permissionsNeeded.isEmpty()) {
-                    ActivityCompat.requestPermissions(getActivity(), permissionsNeeded.toArray(new String[permissionsNeeded.size()]), CAMERA_AND_STORAGE_PERMISSION);
+                    ActivityCompat.requestPermissions(getActivity(), permissionsNeeded.toArray(new String[0]), CAMERA_AND_STORAGE_PERMISSION);
                 } else {
                     startActivityForResult(CameraActivity.getStartIntent(getActivity(), m_photo), REQUEST_CAMERA);
                 }
@@ -463,7 +462,7 @@ public class PhotoFragment extends ImageFragment {
         getActivity().invalidateOptionsMenu();
     }
 
-    public void invalidate(Location location, float[] orientation) {
+    public void invalidate(Location location) {
         if(m_photo != null) {
             if(m_location != location) {
                 m_location = location;

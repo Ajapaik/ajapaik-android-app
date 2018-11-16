@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.view.Menu;
 
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;
@@ -48,7 +47,7 @@ public class PhotoActivity extends WebActivity {
                 settings.setLocation(newLocation);
 
                 if(fragment != null) {
-                    fragment.invalidate(newLocation, getOrientation());
+                    fragment.invalidate(newLocation);
                 }
             }
         }
@@ -61,7 +60,7 @@ public class PhotoActivity extends WebActivity {
                 PhotoFragment fragment = getFragment();
 
                 if(fragment != null) {
-                    fragment.invalidate(location, getOrientation());
+                    fragment.invalidate(location);
                 }
             }
         }
