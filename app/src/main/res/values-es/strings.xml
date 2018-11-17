@@ -59,15 +59,12 @@
   <string name="upload_dialog_success_ok">Aceptar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
-  <string name="upload_dialog_agree_to_terms">Sí!</string>
-  <string name="upload_dialog_decline_terms">No</string>
   <string name="acra_dialog_ok_toast">¡Gracias!</string>
   <string name="about_title">Acerca de</string>
   <string name="version">Versión</string>
   <string name="contact">Contacto</string>
   <string name="privacy_policy">Privacidad</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
-  <string name="tutorial_dismiss">Entendido!</string>
   <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>

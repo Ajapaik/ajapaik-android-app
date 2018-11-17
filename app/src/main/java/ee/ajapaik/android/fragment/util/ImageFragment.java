@@ -52,6 +52,10 @@ public abstract class ImageFragment extends WebFragment {
             @Override
             public void onImageLoaded() {
                 getMainLayout().setVisibility(View.VISIBLE);
+                // API doesn't know dimensions of online photos 
+                // so we will read them from the loaded image 
+                m_photo.setWidth(getImageView().getDrawableWidth());
+                m_photo.setHeight(getImageView().getDrawableHeight());
             }
 
             @Override
