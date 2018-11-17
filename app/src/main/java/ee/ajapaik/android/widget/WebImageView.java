@@ -23,7 +23,7 @@ public class WebImageView extends android.support.v7.widget.AppCompatImageView {
     private static final String NAMESPACE = "http://schemas.android.com/apk/res/android";
     private static final String KEY_SRC = "src";
 
-    private static final float SCALE_MIN = 0.5F;
+    private static final float SCALE_MIN = 0.3F;
     private static final float SCALE_MAX = 4.0F;
 
     private static final int INVALID_RESOURCE_ID = 0;

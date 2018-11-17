@@ -3,14 +3,11 @@
 * BadDog
 -->
 <resources>
-  <string name="app_name">Ajapaik рефотографисање</string>
-  <string name="processing_image">Обрађивање слике</string>
   <string name="please_wait">Сачекајте…</string>
-  <string name="something_went_wrong">Нешто није у реду</string>
+  <string name="something_went_wrong">Нешто је пошло наопако</string>
   <string name="action_albums">Албуми</string>
-  <string name="action_flip">Окрени</string>
   <string name="action_login">Пријави ме</string>
-  <string name="action_register">Региструј ме</string>
+  <string name="action_register">Отвори налог</string>
   <string name="action_logout">Одјави ме</string>
   <string name="action_profile">Профил</string>
   <string name="action_refresh">Освежи</string>
@@ -21,24 +18,22 @@
   <string name="albums_label_no_data">Нема албума</string>
   <string name="albums_title">Албуми</string>
   <string name="album_title">Албум</string>
-  <string name="nearest_dialog_error_location_disabled_title">Локација је онемогућена</string>
-  <string name="nearest_dialog_error_location_disabled_message">Није могуће набавити актуелну локацију. Желите ли да је омогућите?</string>
   <string name="nearest_dialog_error_location_disabled_close">Затвори</string>
   <string name="nearest_dialog_error_location_disabled_open">Отвори подешавања</string>
-  <string name="nearest_label_no_data">Нема фотографија у близини</string>
-  <string name="nearest_label_no_data_button">Погледајте албуме да бисте прегледали све слике</string>
-  <string name="photo_title">Детаљи о фотографији</string>
   <string name="camera_title">Камера</string>
   <string name="profile_title">Профил</string>
-  <string name="profile_facebook_login">Пријави ме преко Facebook-а</string>
-  <string name="profile_google_login">Пријави ме преко Google-а</string>
+  <string name="profile_facebook_login">Пријава преко Фејсбука</string>
+  <string name="profile_google_login">Пријава преко Гугла</string>
   <string name="profile_logout">Одјави ме</string>
-  <string name="profile_login">Пријави ме</string>
+  <string name="profile_login">Пријава</string>
   <string name="profile_register">Отвори налог</string>
   <string name="input_username_hint">Имејл</string>
   <string name="input_password_hint">Лозинка</string>
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
   <plurals name="profile_rephotos">
     <item quantity="zero">Још нисте направили ниједно рефотографисање</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефотографисање</item>

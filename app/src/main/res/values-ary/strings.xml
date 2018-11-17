@@ -36,4 +36,7 @@
   <string name="tutorial_dialog_show_again_no">لا</string>
   <string name="tutorial_dialog_show_again_yes">آه</string>
   <string name="action_search">قلّب</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>

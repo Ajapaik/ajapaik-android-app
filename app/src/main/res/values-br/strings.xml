@@ -80,4 +80,7 @@
   <string name="storage_not_permitted_cancel">Nullañ</string>
   <string name="storage_not_permitted_open_settings">Digeriñ ar c\'hefluniadur</string>
   <string name="action_search">Klask</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>

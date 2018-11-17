@@ -96,4 +96,7 @@
   <string name="favorites_label_not_logged_in_text">ꯅꯪꯒꯤ ꯑꯄꯥꯝꯕꯥ ꯎꯅꯅꯕꯥ ꯆꯥꯟꯕꯤꯗꯨꯅꯥ ꯃꯅꯨꯡ ꯆꯪꯁꯤꯟꯂꯨ</string>
   <string name="no_search_result">ꯊꯤꯕꯒꯤ ꯐꯣꯜ ꯐꯪꯗꯦ</string>
   <string name="album_no_data">ꯃꯤꯔꯦꯜ ꯂꯩꯇꯦ</string>
+  <string name="start_taking_rephoto">Start taking rephoto</string>
+  <string name="show_photo_details">Show photo details</string>
+    <string name="show_rephotos">Show rephotos</string>
 </resources>

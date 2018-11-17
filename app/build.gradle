@@ -6,8 +6,8 @@ android {
         applicationId "ee.ajapaik.android"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 1011
-        versionName "2.0.2"
+        versionCode 1012
+        versionName "2.0.3"
         multiDexEnabled true
     }
     buildTypes {
@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.android.support:customtabs:27.1.1'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:preference-v7:27.1.1'
     implementation 'com.facebook.android:facebook-android-sdk:4.18.0'

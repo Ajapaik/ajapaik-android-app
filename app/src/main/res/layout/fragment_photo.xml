@@ -4,13 +4,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
+    <!--Rephotos view-->
     <LinearLayout
         android:id="@+id/rephotos_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:visibility="invisible">
 
         <ee.ajapaik.android.widget.WebImageView
             android:id="@+id/rephotos_original"
@@ -20,16 +23,14 @@
             android:contentDescription="@string/none"
             android:src="@drawable/transparent"
             android:layout_weight="0.43"
-            android:scaleType="fitStart"
-            android:visibility="invisible"/>
+            android:scaleType="fitStart"/>
 
         <android.support.v4.view.ViewPager
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/pager"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="0.43"
-            android:visibility="invisible"/>
+            android:layout_weight="0.43"/>
 
         <RelativeLayout
             android:id="@+id/rephoto_details_layout"
@@ -38,8 +39,7 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:paddingTop="5dp"
-            android:layout_weight="0.14"
-            android:visibility="invisible">
+            android:layout_weight="0.14">
 
             <TextView
                 android:id="@+id/rephoto_author"
@@ -68,142 +68,143 @@
 
     </LinearLayout>
 
+    <!--Photo details view-->
     <android.support.v4.widget.SwipeRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/layout_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="?android:attr/actionBarSize">
-
-            <ee.ajapaik.android.widget.WebImageView
-                android:id="@+id/image"
-                android:adjustViewBounds="true"
-                android:layout_alignParentTop="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/none"
-                android:src="@drawable/transparent"
-                android:scaleType="fitStart" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <RelativeLayout
-                android:id="@+id/layout_info"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.45">
 
-                <LinearLayout
-                    android:id="@+id/layout_details_info"
-                    style="@style/PhotoInfo"
+                <ee.ajapaik.android.widget.WebImageView
+                    android:id="@+id/image"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="?android:attr/actionBarSize"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/text_title"
-                        style="@style/PhotoInfoTitleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                        <TextView
-                                android:id="@+id/text_author"
-                                style="@style/PhotoInfoTitleText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:text="" />
-                        <TextView
-                                android:id="@+id/text_date"
-                                style="@style/PhotoInfoTitleText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="" />
-                    </LinearLayout>
-
-                    <Button
-                        android:id="@+id/button_subtitle"
-                        style="@style/PhotoInfoSubtitleText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-
-                        <ImageButton
-                                android:id="@+id/button_action_azimuth"
-                                style="@style/PhotoOverlayButton"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_navigation_white_36dp" />
-
-                        <TextView
-                                style="@style/PhotoOverlayText"
-                                android:layout_gravity="center_vertical"
-                                android:textColor="@color/albums_item_title"
-                                android:id="@+id/text_distance"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:text="" />
-
-                    </LinearLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/layout_details_actions"
-                        style="@style/PhotoInfoActions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/button_action_download"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_alignParentLeft="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawableTop="@drawable/ic_file_download_white_48dp"
-                            android:visibility="gone"/>
-
-                        <Button
-                            android:id="@+id/button_action_rephoto"
-                            style="@style/PhotoOverlayButton"
-                            android:layout_alignParentRight="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawableTop="@drawable/ic_camera_white_48dp" />
-
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/layout_overlay"
-                style="@style/PhotoOverlay"
-                android:layout_alignParentTop="true"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/layout_info">
-
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/none"
+                    android:src="@drawable/transparent"
+                    android:scaleType="fitCenter" />
 
                 <ImageView
                     style="@style/AlbumOverlayRephotoButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
                     android:text=""
                     android:id="@+id/image_rephoto"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true" />
-
+                    android:contentDescription="@string/show_rephotos"/>
             </RelativeLayout>
 
-        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.10"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/PhotoOverlayText"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/albums_item_title"
+                    android:id="@+id/text_distance"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/button_action_rephoto"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_camera_white_48dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/start_taking_rephoto" />
+
+                <ImageView
+                    android:id="@+id/button_action_photo_info"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/round_info_white_48"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/show_photo_details" />
+
+                <ImageView
+                    android:id="@+id/button_action_map"
+                    style="@style/PhotoOverlayButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/round_map_white_48"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/show_photo_details"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/photo_details_map"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:layout_width="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/layout_details_info"
+                style="@style/PhotoInfo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:orientation="vertical"
+                android:gravity="top"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    style="@style/PhotoInfoTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/text_author"
+                        style="@style/PhotoInfoTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="" />
+                    <TextView
+                        android:id="@+id/text_date"
+                        style="@style/PhotoInfoTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_subtitle"
+                    style="@style/PhotoInfoSubtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
