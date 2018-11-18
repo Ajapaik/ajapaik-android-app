@@ -7,6 +7,7 @@ import android.graphics.PorterDuff;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -58,7 +59,6 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
@@ -76,7 +76,6 @@ public class PhotoFragment extends ImageFragment {
     private static final String KEY_LOCATION = "location";
 
     private boolean m_rephotoViewMode = false;
-    private boolean m_infoViewMode = false;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
@@ -108,7 +107,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_photo, container, false);
     }
 
@@ -224,22 +223,6 @@ public class PhotoFragment extends ImageFragment {
             }
         });
 
-        getPhotoInfoButton().setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                m_infoViewMode = true;
-                toggleMapAndInfo();
-            }
-        });
-
-        getMapButton().setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                m_infoViewMode = false;
-                toggleMapAndInfo();
-            }
-        });
-
         getRephotosCountImageView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -259,20 +242,6 @@ public class PhotoFragment extends ImageFragment {
         setRephotoViewMode(m_rephotoViewMode);
 
         getSwipeRefreshLayout().setEnabled(false);
-    }
-
-    private void toggleMapAndInfo() {
-        if (m_infoViewMode) {
-            getMapView().setVisibility(GONE);
-            getMapButton().setVisibility(VISIBLE);
-            getInfoLayout().setVisibility(VISIBLE);
-            getPhotoInfoButton().setVisibility(GONE);
-        } else {
-            getMapView().setVisibility(VISIBLE);
-            getMapButton().setVisibility(GONE);
-            getInfoLayout().setVisibility(GONE);
-            getPhotoInfoButton().setVisibility(VISIBLE);
-        }
     }
 
     @Override
@@ -373,7 +342,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
             case CAMERA_AND_STORAGE_PERMISSION: {
                 if (grantResults.length > 0 && areAllNeededPermissionsGranted()) {
@@ -399,7 +368,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     @Override
-    public void onSaveInstanceState(final Bundle savedInstanceState) {
+    public void onSaveInstanceState(@NonNull final Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
         savedInstanceState.putParcelable(KEY_ALBUM, m_album);
@@ -517,7 +486,8 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void invalidateLocation() {
-        getDistanceView().setText(Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location));
+        String localizedDistance = Strings.toLocalizedDistance(getActivity(), m_photo.getLocation(), m_location);
+        getDistanceView().setText(getString(R.string.distance_from_your_location, localizedDistance));
     }
 
     private ImageView getRephotoButton() {
@@ -583,17 +553,5 @@ public class PhotoFragment extends ImageFragment {
 
     private MapView getMapView() {
         return (MapView) getView().findViewById(R.id.photo_details_map);
-    }
-
-    private LinearLayout getInfoLayout() {
-        return (LinearLayout) getView().findViewById(R.id.layout_details_info);
-    }
-
-    private ImageView getPhotoInfoButton() {
-        return (ImageView) getView().findViewById(R.id.button_action_photo_info);
-    }
-
-    private ImageView getMapButton() {
-        return (ImageView) getView().findViewById(R.id.button_action_map);
     }
 }

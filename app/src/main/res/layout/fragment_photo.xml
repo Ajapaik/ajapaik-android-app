@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                style="@style/PhotoFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+    style="@style/PhotoFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <!--Rephotos view-->
     <LinearLayout
@@ -12,34 +11,33 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:weightSum="1"
-        android:visibility="invisible">
+        android:visibility="invisible"
+        android:weightSum="1">
 
         <ee.ajapaik.android.widget.WebImageView
             android:id="@+id/rephotos_original"
-            android:adjustViewBounds="true"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:contentDescription="@string/none"
-            android:src="@drawable/transparent"
             android:layout_weight="0.43"
-            android:scaleType="fitStart"/>
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/none"
+            android:scaleType="fitStart"
+            android:src="@drawable/transparent" />
 
-        <android.support.v4.view.ViewPager
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/pager"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="0.43"/>
+            android:layout_weight="0.43" />
 
         <RelativeLayout
             android:id="@+id/rephoto_details_layout"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_weight="0.14"
             android:paddingStart="5dp"
-            android:paddingEnd="5dp"
             android:paddingTop="5dp"
-            android:layout_weight="0.14">
+            android:paddingEnd="5dp">
 
             <TextView
                 android:id="@+id/rephoto_author"
@@ -59,9 +57,9 @@
             <Button
                 android:id="@+id/button_action_close_rephotos"
                 style="@style/PhotoOverlayButton"
-                android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:drawableTop="@drawable/ic_clear_white_48dp" />
 
         </RelativeLayout>
@@ -69,108 +67,44 @@
     </LinearLayout>
 
     <!--Photo details view-->
-    <android.support.v4.widget.SwipeRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/layout_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:weightSum="1">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="0.45">
-
-                <ee.ajapaik.android.widget.WebImageView
-                    android:id="@+id/image"
-                    android:adjustViewBounds="true"
-                    android:layout_marginTop="?android:attr/actionBarSize"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/none"
-                    android:src="@drawable/transparent"
-                    android:scaleType="fitCenter" />
-
-                <ImageView
-                    style="@style/AlbumOverlayRephotoButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true"
-                    android:text=""
-                    android:id="@+id/image_rephoto"
-                    android:contentDescription="@string/show_rephotos"/>
-            </RelativeLayout>
-
-            <LinearLayout
+            <ee.ajapaik.android.widget.WebImageView
+                android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.10"
-                android:gravity="center">
+                android:layout_height="match_parent"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/none"
+                android:scaleType="fitCenter"
+                android:src="@drawable/transparent" />
 
-                <TextView
-                    style="@style/PhotoOverlayText"
-                    android:layout_gravity="center_vertical"
-                    android:textColor="@color/albums_item_title"
-                    android:id="@+id/text_distance"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="" />
-
-                <ImageView
-                    android:id="@+id/button_action_rephoto"
-                    style="@style/PhotoOverlayButton"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_camera_white_48dp"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/start_taking_rephoto" />
-
-                <ImageView
-                    android:id="@+id/button_action_photo_info"
-                    style="@style/PhotoOverlayButton"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/round_info_white_48"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/show_photo_details" />
-
-                <ImageView
-                    android:id="@+id/button_action_map"
-                    style="@style/PhotoOverlayButton"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/round_map_white_48"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/show_photo_details"
-                    android:visibility="gone"/>
-
-            </LinearLayout>
-
-            <com.google.android.gms.maps.MapView
-                android:id="@+id/photo_details_map"
-                android:layout_height="0dp"
-                android:layout_weight="0.45"
-                android:layout_width="match_parent"/>
+            <ImageView
+                android:id="@+id/image_rephoto"
+                style="@style/AlbumOverlayRephotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/show_rephotos"
+                android:text="" />
 
             <LinearLayout
                 android:id="@+id/layout_details_info"
                 style="@style/PhotoInfo"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.45"
-                android:orientation="vertical"
-                android:gravity="top"
-                android:visibility="gone">
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/text_title"
@@ -178,16 +112,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/text_author"
                         style="@style/PhotoInfoTitleText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="" />
+                        android:text=""
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/text_date"
                         style="@style/PhotoInfoTitleText"
@@ -196,16 +133,45 @@
                         android:text="" />
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/button_subtitle"
-                    style="@style/PhotoInfoSubtitleText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="" />
-            </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        </LinearLayout>
+                    <Button
+                        android:id="@+id/button_subtitle"
+                        style="@style/PhotoInfoSubtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="start"
+                        android:layout_toStartOf="@+id/button_action_rephoto" />
+
+                    <ImageView
+                        android:id="@+id/button_action_rephoto"
+                        style="@style/PhotoOverlayButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/start_taking_rephoto"
+                        android:src="@drawable/ic_camera_white_48dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
 
     </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        tools:context=".PhotoActivity">
+
+        <include layout="@layout/bottom_sheet_map" />
+
+    </android.support.design.widget.CoordinatorLayout>
 
 </RelativeLayout>

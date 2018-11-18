@@ -154,5 +154,6 @@
     <string name="start_taking_rephoto">Start taking rephoto</string>
     <string name="show_photo_details">Show photo details</string>
     <string name="show_rephotos">Show rephotos</string>
+    <string name="distance_from_your_location">Distance from your location: %1$s</string>
 
 </resources>
