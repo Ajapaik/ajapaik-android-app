@@ -8,6 +8,7 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -420,6 +421,7 @@ public class PhotoFragment extends ImageFragment {
             getActionBar().setDisplayHomeAsUpEnabled(false);
             getRephotosLayout().setVisibility(VISIBLE);
             getMainLayout().setVisibility(INVISIBLE);
+            getPhotoDetailsMapLayout().setVisibility(INVISIBLE);
             getOriginalPhotoContainer().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
             final ImagePagerAdapter adapter = new ImagePagerAdapter(getActivity(), m_photo.getRephotos());
             getViewPager().setAdapter(adapter);
@@ -429,6 +431,7 @@ public class PhotoFragment extends ImageFragment {
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
             getMainLayout().setVisibility(VISIBLE);
+            getPhotoDetailsMapLayout().setVisibility(VISIBLE);
             getRephotosLayout().setVisibility(INVISIBLE);
         }
         getActivity().invalidateOptionsMenu();
@@ -553,5 +556,9 @@ public class PhotoFragment extends ImageFragment {
 
     private MapView getMapView() {
         return (MapView) getView().findViewById(R.id.photo_details_map);
+    }
+
+    private CoordinatorLayout getPhotoDetailsMapLayout() {
+        return (CoordinatorLayout) getView().findViewById(R.id.photo_details_map_layout);
     }
 }
