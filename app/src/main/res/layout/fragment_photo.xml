@@ -88,16 +88,6 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/transparent" />
 
-            <ImageView
-                android:id="@+id/image_rephoto"
-                style="@style/AlbumOverlayRephotoButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:contentDescription="@string/show_rephotos"
-                android:text="" />
-
             <LinearLayout
                 android:id="@+id/layout_details_info"
                 style="@style/PhotoInfo"
@@ -144,14 +134,25 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
-                        android:layout_toStartOf="@+id/button_action_rephoto"
+                        android:layout_toStartOf="@+id/image_rephoto"
                         android:gravity="start" />
+
+                    <ImageView
+                        android:id="@+id/image_rephoto"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@+id/button_action_rephoto"
+                        android:contentDescription="@string/show_rephotos"
+                        android:text="" />
 
                     <ImageView
                         android:id="@+id/button_action_rephoto"
                         style="@style/PhotoOverlayButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_alignParentEnd="true"
                         android:contentDescription="@string/start_taking_rephoto"
                         android:src="@drawable/ic_camera_white_48dp" />
