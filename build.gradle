@@ -19,7 +19,7 @@ buildscript {
     }
     // Variables for JniBitmapOperationsLibrary
     ext.propCompileSdkVersion = 27
-    ext.propBuildToolsVersion = "27.0.3"
+    ext.propBuildToolsVersion = "28.0.3"
 }
 
 allprojects {
