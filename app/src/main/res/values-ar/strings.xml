@@ -109,7 +109,7 @@
   <string name="favorites_label_not_logged_in_text">رجاءً سجل الدخول لرؤية تفضيلاتك</string>
   <string name="no_search_result">لا نتائج بحث</string>
   <string name="album_no_data">لا صور</string>
-  <string name="start_taking_rephoto">Start taking rephoto</string>
-  <string name="show_photo_details">Show photo details</string>
-    <string name="show_rephotos">Show rephotos</string>
+  <string name="start_taking_rephoto">البدء في عمل إعادة تصوير</string>
+  <string name="show_photo_details">عرض تفاصيل الصور</string>
+  <string name="show_rephotos">عرض إعادة التصوير</string>
 </resources>
