@@ -98,5 +98,5 @@
   <string name="album_no_data">Wêne tine</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
   <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_rephotos">Dîsa-fotokirinan bibîne</string>
 </resources>

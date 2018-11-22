@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Aefgh39622
+* TrisT7
 -->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
@@ -16,6 +17,8 @@
   <string name="action_refresh">รีเฟรช</string>
   <string name="action_settings">การตั้งค่า</string>
   <string name="nearest_title">รูปภาพที่อยู่ใกล้เคียง</string>
+  <string name="finna_title">รูปภาพที่อยู่ใกล้เคียง (ฟินน่า)</string>
+  <string name="finna1918_title">รูปภาพที่อยู่ใกล้เคียง (1918)</string>
   <string name="albums_label_no_data">ไม่มีอัลบั้ม</string>
   <string name="albums_title">อัลบั้ม</string>
   <string name="album_title">อัลบั้ม</string>
@@ -38,9 +41,7 @@
   <string name="input_firstname_hint">ชื่อ</string>
   <string name="input_lastname_hint">นามสกุล</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">คุณยังไม่เคยเรียกใช้ rephoto เลย</item>
-    <item quantity="one">rephoto &lt;b&gt;1&lt;/b&gt; ครั้ง</item>
-    <item quantity="other">rephoto &lt;b&gt;%1$d&lt;/b&gt; ครั้ง</item>
+    <item quantity="other">ศูนย์=คุณยังมิเคย rephotos เลย</item>
   </plurals>
   <string name="login_title">เข้าสู่ระบบ</string>
   <string name="login_failed">การเข้าสู่ระบบไม่สำเร็จ</string>
@@ -103,7 +104,7 @@
   <string name="favorites_label_not_logged_in_text">กรุณาลงชื่อเข้าเพื่อดูรายการโปรดของคุณ</string>
   <string name="no_search_result">ไม่มีผลลัพธ์การค้นหา</string>
   <string name="album_no_data">ไม่มีรูปภาพ</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">เริ่มทำการถ่ายภาพใหม่</string>
+  <string name="show_photo_details">แสดงรายละเอียดภาพ</string>
+  <string name="show_rephotos">แสดงการถ่ายภาพ</string>
 </resources>

@@ -105,7 +105,7 @@
   <string name="favorites_label_not_logged_in_text">Për piasì, ch\'a rintra ant ël sistema për vëdde ij sò preferì</string>
   <string name="no_search_result">Gnun arzultà d\'arserca</string>
   <string name="album_no_data">Gnun-e fòto</string>
-  <string name="start_taking_rephoto" fuzzy="true">Ancaminé a fé n\'arprodussion fotogràfica</string>
-  <string name="show_photo_details" fuzzy="true">Mostré ij detaj dla fòto</string>
-  <string name="show_rephotos" fuzzy="true">Smon-e l\'arprodussion fotogràfica</string>
+  <string name="start_taking_rephoto">Ancaminé a fé n\'arprodussion fotogràfica</string>
+  <string name="show_photo_details">Mostré ij detaj dla fòto</string>
+  <string name="show_rephotos">Smon-e l\'arprodussion fotogràfica</string>
 </resources>
