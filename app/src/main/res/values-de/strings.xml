@@ -2,6 +2,7 @@
 <!-- Authors:
 * Metalhead64
 * MidnightRaver
+* Sushi
 -->
 <resources>
   <string name="app_name">Ajapaik Refoto</string>
@@ -108,5 +109,5 @@
   <string name="album_no_data">Keine Fotos</string>
   <string name="start_taking_rephoto">Mit dem Aufnehmen des Refotos beginnen</string>
   <string name="show_photo_details">Einzelheiten zum Foto anzeigen</string>
-  <string name="show_rephotos">Refotos anzeigen</string>
+  <string name="show_rephotos">Neu aufgenommene Fotografien anzeigen</string>
 </resources>

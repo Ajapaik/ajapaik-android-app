@@ -103,7 +103,7 @@
   <string name="favorites_label_not_logged_in_text">Aperi session pro vider tu favorites</string>
   <string name="no_search_result">Nulle resultato de recerca</string>
   <string name="album_no_data">Nulle photo</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">Comenciar a prender un rephoto</string>
+  <string name="show_photo_details">Monstrar le detalios del photo</string>
+  <string name="show_rephotos">Monstrar rephotos</string>
 </resources>
