@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Joetaras
+-->
+<resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">Stoche a processe l\'immaggine</string>
+  <string name="please_wait">Aspitte...</string>
+  <string name="something_went_wrong">Quacche cose ha sciute stuèrte</string>
+  <string name="action_albums">Album</string>
+  <string name="action_flip">Lange</string>
+  <string name="action_login">Tràse</string>
+  <string name="action_register">Reggistre</string>
+  <string name="action_logout">Isse</string>
+  <string name="action_profile">Profile</string>
+  <string name="action_refresh">Aggiorne</string>
+  <string name="action_settings">\'Mbostaziune</string>
+  <string name="nearest_title">Fote vecine a</string>
+  <string name="finna_title">Fote vicine a (Finna)</string>
+  <string name="finna1918_title">Fote vicine a (1918)</string>
+  <string name="albums_label_no_data">Nisciune albbum</string>
+  <string name="albums_title">Album</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Luèche disabbilitate</string>
+  <string name="nearest_dialog_error_location_disabled_close">Achiude</string>
+  <string name="nearest_label_no_data">Nisciuna fote vecine a</string>
+  <string name="camera_title">Fotocamere</string>
+  <string name="profile_title">Profile</string>
+  <string name="profile_facebook_login">Tràse cu Feisbuk</string>
+  <string name="profile_google_login">Tràse cu Google</string>
+  <string name="profile_logout">Isse</string>
+  <string name="profile_login">Tràse</string>
+  <string name="profile_register">Ccreje \'nu cunde</string>
+  <string name="input_username_hint">E-mail</string>
+  <string name="input_password_hint">Passuord</string>
+  <string name="input_firstname_hint">Prime nome</string>
+  <string name="input_lastname_hint">Urteme nome</string>
+  <string name="login_title">Tràse</string>
+  <string name="registration_title">Reggìstre</string>
+  <string name="user_already_exists">\'U nome de l\'utende già esiste</string>
+  <string name="upload_dialog_error_connection_retry">Pruève arrete</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Errore scanusciute</string>
+  <string name="upload_dialog_error_unknown_retry">Pruève arrete</string>
+  <string name="upload_dialog_error_unknown_ok">Annulle</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Sìne!</string>
+  <string name="upload_dialog_decline_terms">None</string>
+  <string name="acra_dialog_ok_toast">Grazie \'mbà!</string>
+  <string name="about_title">Sus a</string>
+  <string name="version">Versione</string>
+  <string name="contact">Condatte</string>
+  <string name="privacy_policy">Privacy</string>
+  <string name="tutorial_dismiss">Pigghiale!</string>
+  <string name="tutorial_dialog_show_again_no">None</string>
+  <string name="tutorial_dialog_show_again_yes">Sìne</string>
+  <string name="storage_not_permitted_cancel">Annulle</string>
+  <string name="action_search">Cirche</string>
+</resources>
