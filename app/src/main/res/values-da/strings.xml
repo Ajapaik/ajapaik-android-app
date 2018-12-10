@@ -60,6 +60,7 @@
   <string name="favorites">Mine favoritter</string>
   <string name="no_favorites">Ingen favoritter</string>
   <string name="favorites_label_not_logged_in_button">Log ind</string>
+  <string name="no_search_result">Ingen søgeresultater</string>
   <string name="album_no_data">Ingen billeder</string>
   <string name="show_photo_details">Vis billededetaljer</string>
 </resources>
