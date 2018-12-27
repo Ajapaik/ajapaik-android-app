@@ -22,8 +22,12 @@
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_title">Luèche disabbilitate</string>
+  <string name="nearest_dialog_error_location_disabled_message">No ge se riesce a pigghià \'u luèche de mò. \'U vue ccù abbilite?</string>
   <string name="nearest_dialog_error_location_disabled_close">Achiude</string>
+  <string name="nearest_dialog_error_location_disabled_open">Iapre le \'mbostaziune</string>
   <string name="nearest_label_no_data">Nisciuna fote vecine a</string>
+  <string name="nearest_label_no_data_button">\'Ndruche le albbum pe sfogghià tutte le immaggine</string>
+  <string name="photo_title">Dettaglie d\'a fote</string>
   <string name="camera_title">Fotocamere</string>
   <string name="profile_title">Profile</string>
   <string name="profile_facebook_login">Tràse cu Feisbuk</string>
