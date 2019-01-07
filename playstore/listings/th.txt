@@ -1,14 +1,16 @@
 # Messages for Thai (ไทย)
 # Exported from translatewiki.net
 # Author: Aefgh39622
+# Author: Patsagorn Y.
 # Author: TrisT7
 
 title=Ajapaik rephoto
 short-description=มองหาประวัติของภาพที่โดดเด่นและจัดเรียงภาพใหม่อีกครั้ง
+description.paragraph.1=แอปพลิเคชั่น Ajapaik rephoto จะแสดงภาพประวัติศาสตร์ที่ถ่ายใกล้กับคุณและนำเสนอวิธีที่ง่ายในการถ่ายภาพมุมมองเดียวกัน
 description.accuracy.title=ในแบบที่สามารถถ่ายภาพใหม่ได้ง่ายขึ้น
-description.accuracy.bullet.1=* you can change the transparency of the historic image on your camera stream by sliding along the screen * คุณสามารถเปลี่ยนการแสดงประวัติของภาพให้ดูง่ายขึ้นในกล้องถ่ายรูปแบบสตรีมได้โดยเลื่อนไปตามหน้าจอ
+description.accuracy.bullet.1=* คุณสามารถเปลี่ยนการแสดงประวัติของภาพให้ดูง่ายขึ้นในกล้องถ่ายรูปแบบสตรีมได้โดยเลื่อนไปตามหน้าจอ
 description.accuracy.bullet.2=* กดซูมประวัติของภาพ
-description.paragraph.2=ในเวอร์ชั่น 2018 คุณสามารถที่จะเลือกและค้นหาอัลบั้มได้ด้วย,ค้นหาภาพเฉพาะ,วิวภาพที่ถูกจัดเรียงโดยคุณเองหรือผู้ใช้รายอื่น
+description.paragraph.2=ในเวอร์ชั่น 2018 คุุณสามารถที่จะเลือกและค้นหาอัลบั้ม,ภาพเฉพาะ,หรือวิวภาพที่ถูกจัดเรียงโดยคุณเองหรือผู้ใช้รายอื่นได้ด้วย
 description.paragraph.3=ขณะนี้แบบร่างของการจัดเรียงภาพสามารถที่จะเซฟและเลือกและอัพโหลดไป Ajapaik.ee ภายหลังได้ (เช่น เมื่อเชื่อมต่อ wi-fi)
 description.paragraph.4=ในการที่จะอัพโหลดการจัดเรียงภาพ คุณต้องยืนยันตัวตนด้วยบัญชี Google หรือ Facebook หรือด้วยบัญชีอีเมล์ที่ลงทะเบียนไว้
 description.paragraph.5=โดยการอัพโหลดภาพที่จัดเรียงใหม่ไปยัง Ajapaik คุณตกลงที่จะเผยแพร่ภาพภายใต้การสัญญาอนุญาตครีเอทีฟคอมมอนส์ (CC BY)
