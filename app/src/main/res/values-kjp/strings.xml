@@ -10,6 +10,8 @@
   <string name="action_logout">တါ်ထင်း</string>
   <string name="action_profile">မေံၯင်</string>
   <string name="action_refresh">ကျးက္ဍာ</string>
+  <string name="action_settings">အင်းတါင်ဆ်ုက်ုယိုင့်လ်ုဖး</string>
+  <string name="nearest_title">ၜုဂ်ထိင်ႋ ဆ်ုလာၯင်လ်ုဖး</string>
   <string name="nearest_dialog_error_location_disabled_close">ကာၜါ်</string>
   <string name="camera_title">က်ုမ်ုလာ့</string>
   <string name="profile_logout">တါ်ထင်း</string>
@@ -30,6 +32,7 @@
   <string name="upload_dialog_decline_terms">မွာဲအေး</string>
   <string name="acra_dialog_ok_toast">ဆ်ုဂုဏ်လှ်</string>
   <string name="about_title">အ်ုကျံင်</string>
+  <string name="tutorial_dismiss">ကၠယ်ယုဂ်</string>
   <string name="tutorial_dialog_show_again_no">မွာဲအေး</string>
   <string name="tutorial_dialog_show_again_yes">မွာဲ</string>
   <string name="storage_not_permitted_cancel">မာလိုင်အေး</string>

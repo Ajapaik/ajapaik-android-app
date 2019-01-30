@@ -1,0 +1,14 @@
+# Messages for Romanian (română)
+# Exported from translatewiki.net
+# Author: MSClaudiu
+
+title=Ajapaik refotografie
+short-description=Caută punctele înalte ale imaginilor istorice și refotografiază!
+description.paragraph.1=Aplicația Ajapaik refotografie afișează imagini istorice apropiate de dvs. și oferă o modalitate ușoară de a face refotografii ale acelorași panorame.
+description.accuracy.title=Pentru a face refotografia mai convenabilă
+description.accuracy.bullet.1=* puteți schimba transparența imaginii istorice din fluxul camerei dvs. prin glisarea de-a lungul ecranului
+description.accuracy.bullet.2=* măriți imaginea istorică
+description.paragraph.2=În versiunea nouă (2018) puteți de asemenea să răsfoiți și să căutați în albume, să căutați o imagine specifică, să vizualizați fotografiile făcute de dvs. sau de alți utilizatori.
+description.paragraph.3=Acum, schițele de refotografiere pot fi salvate și folosite pentru căutare și încărcate mai târziu în Ajapaik.ee (de exemplu, pe wi-fi).
+description.paragraph.4=Pentru a încărca o refotografie trebuie să te autentifici cu contul Google sau Facebook sau cu un cont bazat pe e-mail.
+description.paragraph.5=Prin încărcarea refotografiilor la Ajapaik sunteți de acord să eliberați imaginile sub licența Creative Commons Attribution (CC BY).
