@@ -45,6 +45,7 @@
   <string name="wrong_password">Ger-tremen faziek!</string>
   <string name="registration_title">En em enskrivañ</string>
   <string name="user_already_exists">An anv implijer zo anezhañ dija.</string>
+  <string name="upload_title">Kadarnaat al liestennañ</string>
   <string name="upload_dialog_error_connection_title">Fazi kevreañ</string>
   <string name="upload_dialog_error_connection_message">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
   <string name="upload_dialog_error_connection_retry">Klask en-dro</string>
@@ -55,6 +56,7 @@
   <string name="upload_dialog_error_unknown_ok">Nullañ</string>
   <string name="upload_dialog_process_title">Pellgargañ al luc\'hskeudenn</string>
   <string name="upload_dialog_process_message">Gortozit mar plij…</string>
+  <string name="upload_dialog_success_title">Pellgarget gant berzh</string>
   <string name="upload_dialog_success_message">Pellgarget mat eo bet al luc\'hskeudenn !</string>
   <string name="upload_dialog_success_ok">Mat eo</string>
   <string name="upload_dialog_not_authenticated_title">Ret eo bezañ kevreet evit pellgargañ</string>
@@ -63,6 +65,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Asantiñ a ran embann al luc\'hskeudennoù adeilet dindan an aotre-implijout CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ya !</string>
   <string name="upload_dialog_decline_terms">Ket</string>
+  <string name="acra_dialog_title">\'Ajapaik liestennañ\' zo sac\'het</string>
+  <string name="acra_dialog_text">Ur fazi dic\'hortoz zo bet ha rediet eo bet an arload da baouez. Sikourimp ac\'hanomp da reizhañ an dra-se en ur gas roadennoù ar fazi deomp. An dra nemetañ ho peus d\'ober eo klikañ war Kas.</string>
+  <string name="acra_dialog_comment_prompt">Gallout a rit ouzhpennañ hoc\'h evezhiadennoù diwar-benn ar gudenn amañ dindan :</string>
   <string name="acra_dialog_ok_toast">Trugarez !</string>
   <string name="about_title">Diwar-benn</string>
   <string name="version">Stumm</string>
@@ -71,11 +76,17 @@
   <string name="navigation_drawer_open">Digeriñ an diretenn</string>
   <string name="navigation_drawer_close">Serriñ an diretenn</string>
   <string name="settings_show_tutorial">Diskwel an tutorial er mod adluc\'hskeudenniñ</string>
+  <string name="settings_agree_to_license_terms">Asantiñ a ran embann al luc\'hskeudennoù adeilet dindan an aotre-implijout CC BY 4.0.</string>
+  <string name="tutorial_hide_show_flip">Pouezañ evit kuzhat/diskwel ar skeudenn.\nImplijout an arlun distreiñ er c\'horn en nec\'h a gleiz  evit distreiñ d\'ar skeudenn gozh.</string>
+  <string name="tutorial_opacity_zoom">Lakaat da riklañ evit spisaat treuzwelusted ar skeudenn gozh.\nPiñsat ar zoum evit zoumañ war ar skeudenn gozh.</string>
+  <string name="tutorial_take_picture">Pouezañ war bouton ar stanker pe pouezañ pell n\'eus forzh pelec\'h war ar skramm evit tapout ul luc\'hskeudenn.</string>
   <string name="tutorial_dismiss">Mat eo !</string>
   <string name="tutorial_dialog_show_again_title">Diskwel an tutorial en-dro ?</string>
   <string name="tutorial_dialog_show_again_message">Gallout a reot gweredekaat an tutorial en-dro diwezhatoc\'h adalek an arventennoù</string>
   <string name="tutorial_dialog_show_again_no">Ket</string>
   <string name="tutorial_dialog_show_again_yes">Ya</string>
+  <string name="rephoto_drafts">Brouilloñsoù luc\'hskeudennoù</string>
+  <string name="no_rephotos">Luc\'hskeudenn ebet</string>
   <string name="storage_not_permitted_title">N\'eo ket aotreet stokañ</string>
   <string name="storage_not_permitted_cancel">Nullañ</string>
   <string name="storage_not_permitted_open_settings">Digeriñ ar c\'hefluniadur</string>
