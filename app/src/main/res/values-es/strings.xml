@@ -19,10 +19,12 @@
   <string name="action_refresh">Actualizar</string>
   <string name="action_settings">Configuración</string>
   <string name="nearest_title">Fotos cercanas</string>
-  <string name="finna1918_title">Las fotos cercanas (1918)</string>
+  <string name="finna_title">Fotos cercanas (Finna)</string>
+  <string name="finna1918_title">Fotos cercanas (1918)</string>
   <string name="albums_label_no_data">No hay álbumes</string>
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
+  <string name="nearest_dialog_error_location_disabled_title">Ubicación desactivada</string>
   <string name="nearest_dialog_error_location_disabled_close">Cerrar</string>
   <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
   <string name="nearest_label_no_data">No hay fotos cercanas</string>
@@ -66,8 +68,9 @@
   <string name="version">Versión</string>
   <string name="contact">Contacto</string>
   <string name="privacy_policy">Privacidad</string>
+  <string name="navigation_drawer_open">Abrir cajón</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
-  <string name="tutorial_dismiss">Entendido!</string>
+  <string name="tutorial_dismiss">Entendido</string>
   <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
@@ -82,6 +85,6 @@
   <string name="no_search_result">Ningún resultado de búsqueda</string>
   <string name="album_no_data">No hay fotos</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
+  <string name="show_photo_details">Mostrar detalles de foto</string>
   <string name="show_rephotos" fuzzy="true">Show rephotos</string>
 </resources>
