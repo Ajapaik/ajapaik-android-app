@@ -50,7 +50,7 @@
   </plurals>
   <string name="login_title">دخول</string>
   <string name="login_failed">دخول غير ناجح</string>
-  <string name="wrong_password">كلمة مرور خاطئة!</string>
+  <string name="wrong_password">كلمة سر خاطئة!</string>
   <string name="registration_title">سجل</string>
   <string name="user_already_exists">اسم المستخدم موجود بالفعل</string>
   <string name="upload_title">تأكيد الصورة المجدَّدة</string>
