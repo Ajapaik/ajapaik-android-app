@@ -21,8 +21,8 @@
   <string name="albums_label_no_data">Albom ebet</string>
   <string name="albums_title">Albomoù</string>
   <string name="album_title">Albom</string>
-  <string name="nearest_dialog_error_location_disabled_title">Lec\'hiadur digweredekaet</string>
-  <string name="nearest_dialog_error_location_disabled_message">Ne c\'haller ket kaout al lec\'hiadur a vremañ. C\'hoant ho eus da weredekaat anezhañ ?</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lec\'hiadur diweredekaet</string>
+  <string name="nearest_dialog_error_location_disabled_message">Ne c\'haller ket kaout al lec\'hiadur a vremañ. C\'hoant hoc\'h eus da weredekaat anezhañ ?</string>
   <string name="nearest_dialog_error_location_disabled_close">Serriñ</string>
   <string name="nearest_dialog_error_location_disabled_open">Digeriñ an arventennoù</string>
   <string name="nearest_label_no_data">Luc\'hskeudenn nes ebet</string>
@@ -91,6 +91,13 @@
   <string name="storage_not_permitted_cancel">Nullañ</string>
   <string name="storage_not_permitted_open_settings">Digeriñ ar c\'hefluniadur</string>
   <string name="action_search">Klask</string>
+  <string name="favorites">Ma fenndibaboù</string>
+  <string name="no_favorites">Penndibab ebet</string>
+  <string name="action_favorite">Penndibaboù</string>
+  <string name="favorites_label_not_logged_in_button">Kevreañ</string>
+  <string name="favorites_label_not_logged_in_text">Kevreit, mar plij, evit gwelet ho penndibaboù</string>
+  <string name="no_search_result">Disoc\'h enklask ebet</string>
+  <string name="album_no_data">Luc\'hskeudenn ebet</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
   <string name="show_photo_details" fuzzy="true">Show photo details</string>
   <string name="show_rephotos" fuzzy="true">Show rephotos</string>

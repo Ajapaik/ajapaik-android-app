@@ -5,7 +5,7 @@
 <resources>
   <string name="app_name">refotoyo Ajapaik</string>
   <string name="processing_image">Asayış gureniyeno</string>
-  <string name="please_wait">Kerem kerên, bıpawên...</string>
+  <string name="please_wait">Kerem ke, bıpawe...</string>
   <string name="something_went_wrong">Tayê çi ğelet şi</string>
   <string name="action_albums">Albumi</string>
   <string name="action_flip">Bıçarne</string>
@@ -23,7 +23,7 @@
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_title">Ca Qedexekerdeyo</string>
   <string name="nearest_dialog_error_location_disabled_message">Lokasyono mewcud nêgêriya. Şıma qayılê lokasyoni aktif kerê?</string>
-  <string name="nearest_dialog_error_location_disabled_close">Ca de</string>
+  <string name="nearest_dialog_error_location_disabled_close">Kip ke</string>
   <string name="nearest_dialog_error_location_disabled_open">Eyaran ake</string>
   <string name="nearest_label_no_data">Fotrafê nêzdi çıniyê</string>
   <string name="nearest_label_no_data_button">Resıman weyniyayışi rê çım berze albuman</string>
@@ -97,7 +97,7 @@
   <string name="storage_not_permitted_open_settings">Eyaran ake</string>
   <string name="my_rephotos">Refotoyê mı</string>
   <string name="rephotos_label_not_logged_in_text">Refotoyanê xo vênayışi rê cı kewe</string>
-  <string name="action_search">Cıgeyrayış</string>
+  <string name="action_search">Cı geyre</string>
   <string name="favorites">Zerricıkewteyê mı</string>
   <string name="no_favorites">Zerricıkewteyi çıniyê</string>
   <string name="action_favorite">Zerricıkewte</string>

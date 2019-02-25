@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Dj
+* Pasztilla
 -->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
@@ -104,6 +105,6 @@
   <string name="no_search_result">Nincs találat</string>
   <string name="album_no_data">Nincs fénykép</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
+  <string name="show_photo_details">Fényképadatok mutatása</string>
   <string name="show_rephotos" fuzzy="true">Show rephotos</string>
 </resources>
