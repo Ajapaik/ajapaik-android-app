@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Sultanselim baloch
+-->
+<resources>
+  <string name="processing_image">Aks à àragæn</string>
+  <string name="please_wait">Sabr Kan...</string>
+  <string name="something_went_wrong">Cizè Haràb ent</string>
+  <string name="action_albums">Àlbumàn</string>
+  <string name="action_flip">Ťeling</string>
+  <string name="action_login">Màn biyag</string>
+  <string name="action_register">Hòr biyag</string>
+  <string name="action_logout">Dar Àyag</string>
+  <string name="action_profile">Propàyl</string>
+  <string name="action_refresh">Padàr</string>
+  <string name="action_settings">Redànkàn</string>
+  <string name="nearest_title">Nazikèn Aksàn</string>
+  <string name="finna_title">Nazzikèn Aksàn(Finna)</string>
+  <string name="finna1918_title">Nazzikèn Aksàn(1918)</string>
+  <string name="albums_label_no_data">Àlbum Nè</string>
+  <string name="albums_title">Àlbumàn</string>
+  <string name="album_title">Àlbum</string>
+  <string name="nearest_dialog_error_location_disabled_title">Jàh dasras à næn</string>
+  <string name="nearest_dialog_error_location_disabled_close">Bandag</string>
+  <string name="nearest_dialog_error_location_disabled_open">Redànkàn e Pac kanag</string>
+  <string name="nearest_label_no_data">Nazzikèn Aksè Nè</string>
+  <string name="nearest_label_no_data_button">Àlbumàn be càr pa aksàn e paròc kanag à</string>
+  <string name="photo_title">Aks e Gelišàn</string>
+  <string name="camera_title">Aksšànk</string>
+  <string name="profile_title">Propàyl</string>
+  <string name="profile_facebook_login">Màn biyag gò Paisbuk</string>
+  <string name="profile_google_login">Màn biyag gò Gugel</string>
+  <string name="profile_logout">Dar Àyag</string>
+  <string name="profile_login">Hòr Biyag</string>
+  <string name="profile_register">Sàbè Jòďènag</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Gàlguaz</string>
+  <string name="input_firstname_hint">Nàm</string>
+  <string name="input_lastname_hint">Bon Nàm</string>
+  <string name="login_title">Màn Biyag</string>
+  <string name="login_failed">Màn biyag na bit</string>
+  <string name="wrong_password">Gàlguaz Eši Naen</string>
+  <string name="registration_title">Saptnàm</string>
+  <string name="user_already_exists">È kàrzuroki nàm pèsar à ha</string>
+  <string name="upload_title">Aks ťagal dayag bit</string>
+  <string name="upload_dialog_error_connection_title">Ťac na bit</string>
+  <string name="upload_dialog_error_connection_message">Aks sargèjag(Àplod) na bit,pad à kòšest a kan ae?</string>
+  <string name="upload_dialog_error_connection_retry">Kòšest</string>
+  <string name="upload_dialog_error_connection_ok">Ša!</string>
+  <string name="upload_dialog_error_unknown_title">Nàbezàntèn Haràbi</string>
+  <string name="upload_dialog_error_unknown_message">Aks sargèjag(Àplod) na bit,pad Aà kòšest a kan ae?</string>
+  <string name="upload_dialog_error_unknown_retry">Kòšest</string>
+  <string name="upload_dialog_error_unknown_ok">Bajjag</string>
+  <string name="upload_dialog_process_title">Aks sargèjag biyagaen</string>
+  <string name="upload_dialog_process_message">Sabr kan...</string>
+  <string name="upload_dialog_success_title">Sargèjag bi</string>
+  <string name="upload_dialog_success_message">Aks sargèjag bit</string>
+  <string name="upload_dialog_success_ok">Ša</string>
+  <string name="upload_dialog_not_authenticated_title">Pa sargèjag à bàyad ent ka màn be bae</string>
+  <string name="upload_dialog_not_authenticated_ok">Ša</string>
+  <string name="upload_dialog_agree_to_terms">Hà!</string>
+  <string name="upload_dialog_decline_terms">Nan</string>
+  <string name="acra_dialog_ok_toast">Dast et dard ma kan!</string>
+  <string name="about_title">Bàrawà</string>
+  <string name="version">Weržen</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* StanProg
+* Vlad5250
+-->
+<resources>
+  <string name="processing_image">Обработване на изображението</string>
+  <string name="please_wait">Изчакайте…</string>
+  <string name="something_went_wrong">Нещо се обърка</string>
+  <string name="action_albums">Албуми</string>
+  <string name="action_flip">Обърнете</string>
+  <string name="action_login">Влизане</string>
+  <string name="action_register">Регистрация</string>
+  <string name="action_logout">Излизане</string>
+  <string name="action_profile">Профил</string>
+  <string name="action_refresh">Обновяване</string>
+  <string name="action_settings">Настройки</string>
+  <string name="albums_label_no_data">Няма албуми</string>
+  <string name="albums_title">Албуми</string>
+  <string name="album_title">Албум</string>
+  <string name="nearest_dialog_error_location_disabled_title">Местоположението е изключено</string>
+  <string name="nearest_dialog_error_location_disabled_close">Затваряне</string>
+  <string name="nearest_dialog_error_location_disabled_open">Отваряне на настройки</string>
+  <string name="photo_title">Информация за снимката</string>
+  <string name="camera_title">Фотоапарат</string>
+  <string name="profile_title">Профил</string>
+  <string name="profile_facebook_login">Вход чрез Facebook</string>
+  <string name="profile_google_login">Вход чрез Google</string>
+  <string name="profile_logout">Излизане</string>
+  <string name="profile_login">Влизане</string>
+  <string name="profile_register">Създаване на сметка</string>
+  <string name="input_username_hint">Електронна поща</string>
+  <string name="input_password_hint">Парола</string>
+  <string name="input_firstname_hint">Име</string>
+  <string name="input_lastname_hint">Фамилия</string>
+  <string name="login_title">Влизане</string>
+  <string name="login_failed">Неуспешно влизане</string>
+  <string name="wrong_password">Грешна парола!</string>
+  <string name="registration_title">Регистрация</string>
+  <string name="user_already_exists">Потребителското име вече съществува</string>
+  <string name="upload_dialog_error_connection_title">Грешка при свързването</string>
+  <string name="upload_dialog_error_connection_retry">Опитайте отново</string>
+  <string name="upload_dialog_error_connection_ok">ОК</string>
+  <string name="upload_dialog_error_unknown_title">Неизвестна грешка</string>
+  <string name="upload_dialog_error_unknown_retry">Опитайте отново</string>
+  <string name="upload_dialog_error_unknown_ok">Отказ</string>
+  <string name="upload_dialog_process_title">Качване на картината</string>
+  <string name="upload_dialog_process_message">Изчакайте…</string>
+  <string name="upload_dialog_success_title">Успешно качване</string>
+  <string name="upload_dialog_success_message">Снимката е успешно качена!</string>
+  <string name="upload_dialog_success_ok">ОК</string>
+  <string name="upload_dialog_not_authenticated_title">Трябва да влезете, за да качите файл</string>
+  <string name="upload_dialog_not_authenticated_message">Пренасочено към профилната страница</string>
+  <string name="upload_dialog_not_authenticated_ok">ОК</string>
+  <string name="upload_dialog_agree_to_terms">Да!</string>
+  <string name="upload_dialog_decline_terms">Не</string>
+  <string name="acra_dialog_ok_toast">Благодарим ви!</string>
+  <string name="about_title">За приложението</string>
+  <string name="version">Версия</string>
+  <string name="contact">Контакт</string>
+  <string name="privacy_policy">Лични данни</string>
+  <string name="tutorial_dismiss">Разбраx!</string>
+  <string name="tutorial_dialog_show_again_no">Не</string>
+  <string name="tutorial_dialog_show_again_yes">Да</string>
+  <string name="storage_not_permitted_title">Складирането не е разрешено</string>
+  <string name="storage_not_permitted_cancel">Отказ</string>
+  <string name="storage_not_permitted_open_settings">Отваряне на настройки</string>
+  <string name="action_search">Търсене</string>
+  <string name="action_favorite">Любими</string>
+  <string name="favorites_label_not_logged_in_button">Влизане</string>
+  <string name="favorites_label_not_logged_in_text">Влезете, за да погледнете любимите</string>
+  <string name="album_no_data">Няма картини</string>
+  <string name="show_photo_details">Детайли за картината</string>
+</resources>

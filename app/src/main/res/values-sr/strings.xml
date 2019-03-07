@@ -3,8 +3,8 @@
 * BadDog
 -->
 <resources>
-  <string name="app_name">Ajapaik рефотографисање</string>
-  <string name="processing_image">Обрађивање слике</string>
+  <string name="app_name">Ајапајк рефотографисање</string>
+  <string name="processing_image">Обрађујем слику</string>
   <string name="please_wait">Сачекајте…</string>
   <string name="something_went_wrong">Нешто није у реду</string>
   <string name="action_albums">Албуми</string>
@@ -16,7 +16,7 @@
   <string name="action_refresh">Освежи</string>
   <string name="action_settings">Подешавања</string>
   <string name="nearest_title">Фотографије у близини</string>
-  <string name="finna_title">Слике у близини (Finna)</string>
+  <string name="finna_title">Слике у близини (Фина)</string>
   <string name="finna1918_title">Слике у близини (1918)</string>
   <string name="albums_label_no_data">Нема албума</string>
   <string name="albums_title">Албуми</string>
@@ -30,12 +30,12 @@
   <string name="photo_title">Детаљи о фотографији</string>
   <string name="camera_title">Камера</string>
   <string name="profile_title">Профил</string>
-  <string name="profile_facebook_login">Пријави ме преко Facebook-а</string>
-  <string name="profile_google_login">Пријави ме преко Google-а</string>
+  <string name="profile_facebook_login">Пријави ме преко Фејсбука</string>
+  <string name="profile_google_login">Пријави ме преко Гугла</string>
   <string name="profile_logout">Одјави ме</string>
   <string name="profile_login">Пријави ме</string>
   <string name="profile_register">Отвори налог</string>
-  <string name="input_username_hint">Имејл</string>
+  <string name="input_username_hint">Е-пошта</string>
   <string name="input_password_hint">Лозинка</string>
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
@@ -58,7 +58,7 @@
   <string name="upload_dialog_error_unknown_message">Није могуће отпремити фотографију. Покушати поново?</string>
   <string name="upload_dialog_error_unknown_retry">Покушај поново</string>
   <string name="upload_dialog_error_unknown_ok">Откажи</string>
-  <string name="upload_dialog_process_title">Отпремање фотофрафије</string>
+  <string name="upload_dialog_process_title">Отпремам фотографију</string>
   <string name="upload_dialog_process_message">Сачекајте…</string>
   <string name="upload_dialog_success_title">Успешно отпремање</string>
   <string name="upload_dialog_success_message">Фотографија је успешно отпремљена.</string>
@@ -69,7 +69,7 @@
   <string name="upload_dialog_not_agreed_to_terms">Прихватам да објавим рефотографисања под лиценцом CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Да</string>
   <string name="upload_dialog_decline_terms">Не</string>
-  <string name="acra_dialog_title">Апликација „Ajapaik рефотографисање” је отказала</string>
+  <string name="acra_dialog_title">Апликација „Ајапајк рефотографисање” је отказала</string>
   <string name="acra_dialog_comment_prompt">Можете да додајете своје коментаре о проблему испод:</string>
   <string name="acra_dialog_ok_toast">Хвала вам!</string>
   <string name="about_title">О нама</string>
@@ -78,13 +78,13 @@
   <string name="privacy_policy">Приватност</string>
   <string name="navigation_drawer_open">Отвори цртач</string>
   <string name="navigation_drawer_close">Затвори цртач</string>
-  <string name="settings_show_tutorial">Прикажи туторијал у режиму рефотографисања</string>
+  <string name="settings_show_tutorial">Прикажи упутство у режиму рефотографисања</string>
   <string name="settings_agree_to_license_terms">Прихватам да објавим рефотографисања на Ajapaik.ee под лиценцом CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Додирните да бисте сакрили/приказали слику.\nКористите иконицу за окретање у горњем десном углу да бисте окренули стару слику.</string>
   <string name="tutorial_opacity_zoom">Превуците да бисте прилагодили прозирност старих слика.\nКористите покрет умањивања примицањем прстију да бисте зумирали стару слику.</string>
   <string name="tutorial_dismiss">Разумем</string>
-  <string name="tutorial_dialog_show_again_title">Поново приказати туторијал?</string>
-  <string name="tutorial_dialog_show_again_message">Можете да поново укључите туторијал из подешавања касније</string>
+  <string name="tutorial_dialog_show_again_title">Поново приказати упутство?</string>
+  <string name="tutorial_dialog_show_again_message">Можете да поново укључите упутство из подешавања касније</string>
   <string name="tutorial_dialog_show_again_no">Не</string>
   <string name="tutorial_dialog_show_again_yes">Да</string>
   <string name="rephoto_drafts">Нацрти рефотографисања</string>

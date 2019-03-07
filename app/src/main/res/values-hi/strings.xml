@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Abijeet Patro
 * Sachinkatiyar
 * Smtchahal
 -->
@@ -104,7 +105,7 @@
   <string name="favorites_label_not_logged_in_text">अपने सबसे प्रिय देखने के लिए लॉगिन करें</string>
   <string name="no_search_result">कोई खोज परिणाम नहीं</string>
   <string name="album_no_data">कोई तस्वीरें नहीं</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
+  <string name="start_taking_rephoto">दोबारा फोटो लेना शुरु करें।</string>
   <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_rephotos">दोबारा फोटो दिखाओ</string>
 </resources>

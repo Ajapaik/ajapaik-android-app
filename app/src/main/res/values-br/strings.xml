@@ -66,7 +66,7 @@
   <string name="upload_dialog_agree_to_terms">Ya !</string>
   <string name="upload_dialog_decline_terms">Ket</string>
   <string name="acra_dialog_title">\'Ajapaik liestennañ\' zo sac\'het</string>
-  <string name="acra_dialog_text">Ur fazi dic\'hortoz zo bet ha rediet eo bet an arload da baouez. Sikourimp ac\'hanomp da reizhañ an dra-se en ur gas roadennoù ar fazi deomp. An dra nemetañ ho peus d\'ober eo klikañ war Kas.</string>
+  <string name="acra_dialog_text">Ur fazi dic\'hortoz zo bet ha rediet eo bet an arload da baouez. Sikourit ac\'hanomp da reizhañ an dra-se en ur gas roadennoù ar fazi deomp. An dra nemetañ ho peus d\'ober eo klikañ war Kas.</string>
   <string name="acra_dialog_comment_prompt">Gallout a rit ouzhpennañ hoc\'h evezhiadennoù diwar-benn ar gudenn amañ dindan :</string>
   <string name="acra_dialog_ok_toast">Trugarez !</string>
   <string name="about_title">Diwar-benn</string>
@@ -77,19 +77,21 @@
   <string name="navigation_drawer_close">Serriñ an diretenn</string>
   <string name="settings_show_tutorial">Diskwel an tutorial er mod adluc\'hskeudenniñ</string>
   <string name="settings_agree_to_license_terms">Asantiñ a ran embann al luc\'hskeudennoù adeilet dindan an aotre-implijout CC BY 4.0.</string>
-  <string name="tutorial_hide_show_flip">Pouezañ evit kuzhat/diskwel ar skeudenn.\nImplijout an arlun distreiñ er c\'horn en nec\'h a gleiz  evit distreiñ d\'ar skeudenn gozh.</string>
+  <string name="tutorial_hide_show_flip">Pouezañ evit kuzhat/diskwel ar skeudenn.\nImplijout an arlun distreiñ er c\'horn en nec\'h a-zehoù evit distreiñ d\'ar skeudenn gozh.</string>
   <string name="tutorial_opacity_zoom">Lakaat da riklañ evit spisaat treuzwelusted ar skeudenn gozh.\nPiñsat ar zoum evit zoumañ war ar skeudenn gozh.</string>
-  <string name="tutorial_take_picture">Pouezañ war bouton ar stanker pe pouezañ pell n\'eus forzh pelec\'h war ar skramm evit tapout ul luc\'hskeudenn.</string>
+  <string name="tutorial_take_picture">Pouezañ war bouton ar stanker pe pouezañ pell n\'eus forzh pelec\'h war ar skramm evit tennañ ul luc\'hskeudenn adeilet.</string>
   <string name="tutorial_dismiss">Mat eo !</string>
   <string name="tutorial_dialog_show_again_title">Diskwel an tutorial en-dro ?</string>
   <string name="tutorial_dialog_show_again_message">Gallout a reot gweredekaat an tutorial en-dro diwezhatoc\'h adalek an arventennoù</string>
   <string name="tutorial_dialog_show_again_no">Ket</string>
   <string name="tutorial_dialog_show_again_yes">Ya</string>
-  <string name="rephoto_drafts">Brouilloñsoù luc\'hskeudennoù</string>
-  <string name="no_rephotos">Luc\'hskeudenn ebet</string>
+  <string name="rephoto_drafts">Brouilloñsoù luc\'hskeudennoù adeilet</string>
+  <string name="no_rephotos">Luc\'hskeudenn adeilet ebet</string>
   <string name="storage_not_permitted_title">N\'eo ket aotreet stokañ</string>
   <string name="storage_not_permitted_cancel">Nullañ</string>
   <string name="storage_not_permitted_open_settings">Digeriñ ar c\'hefluniadur</string>
+  <string name="my_rephotos">Ma luc\'hskeudennoù adeilet</string>
+  <string name="rephotos_label_not_logged_in_text">Kevreit, mar plij, evit gwelet ho luc\'hskeudennoù adeilet</string>
   <string name="action_search">Klask</string>
   <string name="favorites">Ma fenndibaboù</string>
   <string name="no_favorites">Penndibab ebet</string>
@@ -98,7 +100,7 @@
   <string name="favorites_label_not_logged_in_text">Kevreit, mar plij, evit gwelet ho penndibaboù</string>
   <string name="no_search_result">Disoc\'h enklask ebet</string>
   <string name="album_no_data">Luc\'hskeudenn ebet</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">Kregiñ d\'ober ul luc\'hskeudenn adeilet</string>
+  <string name="show_photo_details">Diskouez munudoù al luc\'hskeudenn adeilet</string>
+  <string name="show_rephotos">Diskwel al luc\'hskeudennoù adeilet</string>
 </resources>
