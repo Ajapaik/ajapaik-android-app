@@ -1,0 +1,14 @@
+# Messages for Norwegian Bokmål (norsk bokmål)
+# Exported from translatewiki.net
+# Author: Kingu
+
+title=Ajapaik gjenavbilder
+short-description=Finn synsvinkelen for historiske bilder og gjenskap bildene.
+description.paragraph.1=Ajapaik-gjenbildeprogrammet viser historiske bilder tatt nær deg, og tilbyr en enkel måte å gjenavbilde samme synsvinkler.
+description.accuracy.title=For å gjøre gjenavbildningen mer bekvemmelig
+description.accuracy.bullet.1=* Du kan endre gjennomsiktigheten for det historiske bilde på kameraet ditt ved å dra langs skjermen
+description.accuracy.bullet.2=* Knipningsforstørrelse av det historiske bilde
+description.paragraph.2=I den nye (2018) versjonen kan du bla og søke etter album, søke etter et spesifikt bilde, vise nye gjenavbildninger tatt av deg eller andre brukere.
+description.paragraph.3=Nå kan gjenavbildningsmalene lagres, utforskes i, og lastes opp til Ajapaik.ee senre (over Wi-Fi for eksempel).
+description.paragraph.4=For å kunne laste opp en gjenavbildning, må du identitetsbekrefte deg med Google- eller Facebook-konto, eller med en e-postbasert konto.
+description.paragraph.5=Ved å laste opp gjenavbildninger til Ajapaik samtykker du til lisensiering av bildene i henhold til Creative Commons Attribution (CC BY)-lisensen.
