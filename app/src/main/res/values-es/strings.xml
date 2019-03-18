@@ -2,6 +2,7 @@
 <!-- Authors:
 * Fitoschido
 * LittlePuppers
+* Marcelo9987
 * Racha
 * Zarisi
 -->
@@ -25,6 +26,7 @@
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Ubicación desactivada</string>
+  <string name="nearest_dialog_error_location_disabled_message">No se puede conseguir la ubicación actual.  te gusta habilitarlo?</string>
   <string name="nearest_dialog_error_location_disabled_close">Cerrar</string>
   <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
   <string name="nearest_label_no_data">No hay fotos cercanas</string>
@@ -41,11 +43,13 @@
   <string name="input_password_hint">Contraseña</string>
   <string name="input_firstname_hint">Nombres</string>
   <string name="input_lastname_hint">Apellidos</string>
+  <string name="profile_rephotos">{{Cero|PLURAL=no has hecho cualquier rephotos aún así|uno=1 rephoto|%1$d rephotos}}</string>
   <string name="login_title">Acceder</string>
   <string name="login_failed">No se pudo acceder</string>
   <string name="wrong_password">La contraseña es incorrecta.</string>
   <string name="registration_title">Registro</string>
   <string name="user_already_exists">El nombre de usuario ya existe</string>
+  <string name="upload_title">Confirma Rephoto</string>
   <string name="upload_dialog_error_connection_title">Error de conexión</string>
   <string name="upload_dialog_error_connection_message">No se pudo cargar la foto. ¿Quieres volver a intentarlo?</string>
   <string name="upload_dialog_error_connection_retry">Intentar de nuevo</string>
@@ -59,10 +63,15 @@
   <string name="upload_dialog_success_title">Carga correcta</string>
   <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
   <string name="upload_dialog_success_ok">Aceptar</string>
+  <string name="upload_dialog_not_authenticated_title">Tiene que haber iniciado sesion para cargar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
+  <string name="upload_dialog_not_agreed_to_terms">Apalabro publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="upload_dialog_agree_to_terms">Sí!</string>
   <string name="upload_dialog_decline_terms">No</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' Esta corrupta o no se puede acceder a ella</string>
+  <string name="acra_dialog_text">Un error inesperado ocurrió. forzar la aplicación para parar. Ayudanos a arreglar al enviarnos el informe de error, todo lo que  tienes que hacer es clic VALE.</string>
+  <string name="acra_dialog_comment_prompt">Podrías añadir tus comentarios sobre el problema :</string>
   <string name="acra_dialog_ok_toast">¡Gracias!</string>
   <string name="about_title">Acerca de</string>
   <string name="version">Versión</string>
@@ -70,10 +79,16 @@
   <string name="privacy_policy">Privacidad</string>
   <string name="navigation_drawer_open">Abrir cajón</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
+  <string name="settings_show_tutorial">Enseñar el tutorial de el modo rephoto</string>
+  <string name="settings_agree_to_license_terms">Acepto publicar rephotographs bajo el CC POR 4.0 licencia.</string>
+  <string name="tutorial_hide_show_flip">Pulsa para mostrar/esconder la imagen.\nUsa el icono en la esquina derecha para rotar la imagen.</string>
+  <string name="tutorial_opacity_zoom">Deslizamiento para ajustar transparencia de imagen vieja.\nPellizca zoom para acercar la imagen</string>
   <string name="tutorial_dismiss">Entendido</string>
   <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
+  <string name="no_rephotos">No hay fotos</string>
+  <string name="storage_not_permitted_title">Almacenamiento no permitido</string>
   <string name="storage_not_permitted_cancel">Cancelar</string>
   <string name="storage_not_permitted_open_settings">Abrir configuración</string>
   <string name="action_search">Buscar</string>
@@ -84,7 +99,7 @@
   <string name="favorites_label_not_logged_in_text">Accede a tu cuenta para ver tus favoritas</string>
   <string name="no_search_result">Ningún resultado de búsqueda</string>
   <string name="album_no_data">No hay fotos</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
+  <string name="start_taking_rephoto">Tomar refoto</string>
   <string name="show_photo_details">Mostrar detalles de foto</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_rephotos">Mostrar las fotos</string>
 </resources>
