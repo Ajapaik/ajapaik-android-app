@@ -101,7 +101,7 @@
   <string name="my_rephotos">Omat valokuvat</string>
   <string name="rephotos_label_not_logged_in_text">Ole hyvä ja kirjaudu sisään nähdäksesi valokuvasi</string>
   <string name="action_search">Haku</string>
-  <string name="favorites">Omat suosikkini</string>
+  <string name="favorites">Omat suosikit</string>
   <string name="no_favorites">Ei suosikkeja</string>
   <string name="action_favorite">Suosikki</string>
   <string name="favorites_label_not_logged_in_button">Kirjaudu sisään</string>
