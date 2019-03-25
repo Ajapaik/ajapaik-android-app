@@ -92,6 +92,7 @@
   <string name="favorites">お気に入り</string>
   <string name="no_favorites">お気に入りがありません</string>
   <string name="action_favorite">お気に入り</string>
+  <string name="favorites_label_not_logged_in_button">サインイン</string>
   <string name="favorites_label_not_logged_in_text">お気に入りを表示するにはログインしてください</string>
   <string name="no_search_result">検索がヒットしませんでした</string>
   <string name="album_no_data">写真がありません</string>
