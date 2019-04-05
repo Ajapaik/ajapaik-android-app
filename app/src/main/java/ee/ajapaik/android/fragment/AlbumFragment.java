@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,12 +28,15 @@ import static ee.ajapaik.android.PhotoActivity.PHOTO_IDENTIFIER_KEY;
 
 public class AlbumFragment extends PhotosFragment {
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
-
+    private static final String KEY_ALBUM_TYPE = "type";
+    private static final String TAG = "AlbumFragment";
     private static final String KEY_ALBUM = "album";
     private static final String KEY_LAYOUT = "layout";
     private int PHOTO_ACTIVITY_REQUEST_CODE = 1001;
 
     public void invalidate() {
+        Log.d(TAG, "AlbumFragment: invalidaten()");
+
         getSwipeRefreshLayout().setRefreshing(true);
         refresh();
     }
@@ -42,6 +46,13 @@ public class AlbumFragment extends PhotosFragment {
 
         return (arguments != null) ? arguments.getString(KEY_ALBUM_IDENTIFIER) : null;
     }
+
+    public String getAlbumType() {
+        Bundle arguments = getArguments();
+
+        return (arguments != null) ? arguments.getString(KEY_ALBUM_TYPE) : null;
+    }
+
 
     public void setAlbumIdentifier(String albumIdentifier) {
         Bundle arguments = getArguments();
@@ -58,6 +69,23 @@ public class AlbumFragment extends PhotosFragment {
 
         setArguments(arguments);
     }
+
+    public void setAlbumType(String albumType) {
+        Bundle arguments = getArguments();
+
+        if(arguments == null) {
+            arguments = new Bundle();
+        }
+
+        if(albumType != null) {
+            arguments.putString(KEY_ALBUM_TYPE, albumType);
+        } else {
+            arguments.remove(KEY_ALBUM_TYPE);
+        }
+
+        setArguments(arguments);
+    }
+
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -79,6 +107,8 @@ public class AlbumFragment extends PhotosFragment {
 
     @Override
     protected WebAction<Album> createSearchAction(String query) {
+        Log.d(TAG, "AlbumFragment: WebAction createSearchAction");
+
         return Album.createSearchAction(getActivity(), getAlbum(), query);
     }
 
@@ -148,6 +178,8 @@ public class AlbumFragment extends PhotosFragment {
 
     @Override
     protected void refresh() {
+        Log.d(TAG, "AlbumFragment: refresh()");
+
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
         performAction(context, action);
@@ -180,7 +212,9 @@ public class AlbumFragment extends PhotosFragment {
     }
 
     protected WebAction<Album> createAction(Context context) {
-        return (m_album != null) ? Album.createStateAction(context, m_album) : Album.createStateAction(context, getAlbumIdentifier());
+        Log.d(TAG, "AlbumFragment: createAction()");
+
+        return (m_album != null) ? Album.createStateAction(context, m_album) : Album.createStateAction(context, getAlbumIdentifier(), getAlbumType());
     }
 
     private Button getNoDataButton() {

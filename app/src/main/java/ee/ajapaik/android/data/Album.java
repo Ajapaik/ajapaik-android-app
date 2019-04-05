@@ -3,6 +3,7 @@ package ee.ajapaik.android.data;
 import android.content.Context;
 import android.location.Location;
 import android.net.Uri;
+import android.util.Log;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -19,6 +20,7 @@ import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebAction;
 
 public class Album extends Model {
+    private static final String TAG = "Album";
     private static final String API_NEAREST_PATH = "/album/nearest/";
     private static final String API_FAVORITES_PATH = "/photos/favorite/order-by-distance-to-location/";
     private static final String API_STATE_PATH = "/album/state/";
@@ -26,14 +28,18 @@ public class Album extends Model {
     private static final String API_SEARCH_PATH = "/photos/search/";
     private static final String API_PHOTOS_IN_ALBUM_SEARCH_PATH = "/album/photos/search/";
     private static final String API_USER_REPHOTOS_SEARCH_PATH = "/photos/search/user-rephotos/";
+    private static final String API_PHOTOS_IN_WIKIDOCUMENTARIES_SEARCH_PATH = "/wikidocumentaries/photos/";
+    private static final String API_WIKIDOCUMENTARIES_PATH = "/wikidocumentaries/photos/";
     private static final String KEY_IDENTIFIER = "id";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_TITLE = "title";
     private static final String KEY_STATE = "state";
     private static final String KEY_STATS = "stats";
+    private static final String KEY_TYPE = "type";
     private static final String KEY_PHOTOS = "photos";
     private static final String KEY_PHOTOS_ADD = "photos+";
     private static final String KEY_PHOTOS_REMOVE = "photos-";
+    private static final String KEY_WIKIDOCUMENTARIES = "wikidocumentaries";
 
     public static WebAction<Album> createNearestAction(Context context, Location location, String state, int range) {
         Map<String, String> parameters = new Hashtable<String, String>();
@@ -67,16 +73,24 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createStateAction(Context context, Album album) {
+        Log.d(TAG, "Album: createStateAction 1");
+
         Map<String, String> parameters = new Hashtable<String, String>();
 
         String albumId = getAlbumId(album);
         parameters.put("id", albumId);
 
-        if(album.getState() != null) {
+        if (album.getState() != null) {
             parameters.put("state", album.getState());
         }
 
-        return new Action(context, API_STATE_PATH, parameters, album, albumId);
+        if (album.getType().equals(KEY_WIKIDOCUMENTARIES)) {
+            Log.d(TAG, "Album: createStateAction 1");
+
+            return new Action(context, API_WIKIDOCUMENTARIES_PATH, parameters, album, albumId);
+        } else {
+            return new Action(context, API_STATE_PATH, parameters, album, albumId);
+        }
     }
 
     public static WebAction<Album> createRephotoSearchAction(Context context, String query) {
@@ -89,6 +103,8 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createSearchAction(Context context, String query) {
+        Log.d(TAG, "Album: createSearchAction");
+
         String baseIdentifier = "all-albums|" + query.replaceAll(" ", "-");
 
         Map<String, String> parameters = new Hashtable<String, String>();
@@ -98,6 +114,8 @@ public class Album extends Model {
     }
 
     public static WebAction<Album> createSearchAction(Context context, Album album, String query) {
+        Log.d(TAG, "Album: createSearchAction API_PHOTOS_IN_ALBUM");
+
         if (album == null) return createSearchAction(context, query);
 
         String albumId = getAlbumId(album);
@@ -107,15 +125,31 @@ public class Album extends Model {
         parameters.put("albumId", albumId);
         parameters.put("query", query);
 
-        return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
+        if (album.getType().equals(KEY_WIKIDOCUMENTARIES)) {
+            return new Action(context, API_PHOTOS_IN_WIKIDOCUMENTARIES_SEARCH_PATH, parameters, null, baseIdentifier);
+        }
+        else {
+            return new Action(context, API_PHOTOS_IN_ALBUM_SEARCH_PATH, parameters, null, baseIdentifier);
+        }
     }
 
-    public static WebAction<Album> createStateAction(Context context, String albumIdentifier) {
+    public static WebAction<Album> createStateAction(Context context, String albumIdentifier, String albumType) {
+        Log.d(TAG, "Album: createStateAction 2" + albumType);
+
         Map<String, String> parameters = new Hashtable<String, String>();
 
         parameters.put("id", albumIdentifier);
 
-        return new Action(context, API_STATE_PATH, parameters, null, albumIdentifier);
+        if (albumType.equals(KEY_WIKIDOCUMENTARIES)) {
+            Log.d(TAG, "Album: createStateAction 2a" + albumType);
+
+            return new Action(context, API_WIKIDOCUMENTARIES_PATH, parameters, null, albumIdentifier);
+        }
+        else {
+            Log.d(TAG, "Album: createStateAction 2b" + albumType);
+
+            return new Action(context, API_STATE_PATH, parameters, null, albumIdentifier);
+        }
     }
 
     public static Album parse(String str) {
@@ -160,6 +194,7 @@ public class Album extends Model {
     private Uri m_image;
     private String m_title;
     private String m_state;
+    private String m_type;
     private Stats m_stats;
     private List<Photo> m_photos;
 
@@ -171,6 +206,7 @@ public class Album extends Model {
         m_identifier = identifier;
         m_photos = photos;
         m_state = String.valueOf(System.currentTimeMillis());
+        m_type = "ajapaikalbum";
     }
 
     public Album(JsonObject attributes, Album baseAlbum, String baseIdentifier) {
@@ -181,6 +217,7 @@ public class Album extends Model {
         m_image = readUri(attributes, KEY_IMAGE, (baseAlbum != null) ? baseAlbum.getImage() : null);
         m_title = readString(attributes, KEY_TITLE, (baseAlbum != null) ? baseAlbum.getTitle() : null);
         m_state = readString(attributes, KEY_STATE, (baseAlbum != null) ? baseAlbum.getState() : null);
+        m_type = readString(attributes, KEY_TYPE, "ajapaikalbum");
         m_stats = (stats != null) ? new Stats(stats) : ((baseAlbum != null) ? baseAlbum.getStats() : null);
         m_photos = new ArrayList<Photo>();
 
@@ -295,6 +332,10 @@ public class Album extends Model {
 
     public Stats getStats() {
         return m_stats;
+    }
+
+    public String getType() {
+        return m_type;
     }
 
     public Photo getFirstPhoto() {

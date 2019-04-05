@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
 
-    <uses-feature android:name="android.hardware.camera"/>
+        <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
@@ -42,16 +42,15 @@
             android:name="ee.ajapaik.android.FinnaActivity"
             android:label="@string/finna_title"
             android:parentActivityName="ee.ajapaik.android.NearestActivity">
-            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ee.ajapaik.android.NearestActivity"/>
         </activity>
         <activity
-            android:name="ee.ajapaik.android.Finna1918Activity"
-            android:label="@string/finna1918_title"
+            android:name="ee.ajapaik.android.WikidocsAlbumsActivity"
+            android:label="Wikidocumentaries"
             android:parentActivityName="ee.ajapaik.android.NearestActivity">
-            >
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ee.ajapaik.android.NearestActivity"/>

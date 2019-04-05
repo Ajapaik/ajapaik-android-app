@@ -77,11 +77,16 @@ public abstract class NavigationDrawerActivity extends WebActivity {
                         context.startActivity(intent);
                         finish();
                         break;
-                    case R.id.finna1918:
+/*                    case R.id.finna1918:
                         if (context instanceof Finna1918Activity) break;
                         intent = new Intent(context, Finna1918Activity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent);
+                        finish();
+                        break;*/
+                    case R.id.wikidocs_albums:
+                        if (context instanceof WikidocsAlbumsActivity) break;
+                        WikidocsAlbumsActivity.start(context);
                         finish();
                         break;
                     case R.id.albums:

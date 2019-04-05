@@ -10,9 +10,9 @@
                 android:icon="@drawable/ic_navigation_white_36dp"
                 android:title="@string/finna_title" />
         <item
-            android:id="@+id/finna1918"
+            android:id="@+id/wikidocs_albums"
             android:icon="@drawable/ic_navigation_white_36dp"
-            android:title="@string/finna1918_title" />
+            android:title="@string/wikidocs_albums_title" />
 
         <item
                 android:id="@+id/albums"

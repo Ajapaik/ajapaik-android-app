@@ -33,8 +33,9 @@ import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 public class WebService extends Service {
     private static final String TAG = "WebService";
 
+    private static final String API_URL = "http://10.0.2.2:8000/api/v1/";
 //    private static final String API_URL = "https://ajapaik.ee/api/v1/";
-    private static final String API_URL = "https://staging.ajapaik.ee/api/v1/";
+//    private static final String API_URL = "https://staging.ajapaik.ee/api/v1/";
     private static final int MAX_CONNECTIONS = 4;
     private static final int SHUTDOWN_DELAY_IN_SECONDS = 1;
 
