@@ -5,6 +5,7 @@
 * Omotecho
 * Puik
 * Robby
+* Rocky 734
 -->
 <resources>
   <string name="app_name">Name of the app (how it is displayed in the apps listing, etc.).\n\nThe original Estonian name translates as \"Ajapaik – then and now\" and some languages (Finnish, Swedish) have translated that instead of \"rephoto(graphy)\" in the name. Translators should consider which version fits best with their language.</string>
@@ -38,7 +39,7 @@
   <string name="upload_dialog_not_agreed_to_terms">Confirmation in app settings section where user agrees to publishing rephotos under CC BY (has to be ticked otherwise user cannot upload rephotos).</string>
   <string name="upload_dialog_agree_to_terms">{{Identical|Yes}}</string>
   <string name="upload_dialog_decline_terms">{{Identical|No}}</string>
-  <string name="acra_dialog_title">\'Ajapaik rephoto\' should be the same as the name of the app ({{msg-ajapaik|strings-app name}}).</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' should be the same as the name of the app ({{int:Ajapaik:strings-app name}}).</string>
   <string name="acra_dialog_ok_toast">{{Identical|Thank you}}</string>
   <string name="about_title">{{Identical|About}}</string>
   <string name="version">{{Identical|Version}}</string>
