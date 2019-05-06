@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Mirin
+* Robin van der Vliet
+-->
+<resources>
+  <string name="please_wait">Bonvolu atendi...</string>
+  <string name="action_login">Ensaluti</string>
+  <string name="action_register">Registriĝi</string>
+  <string name="action_logout">Elsaluti</string>
+  <string name="action_profile">Profilo</string>
+  <string name="action_refresh">Aktualigi</string>
+  <string name="action_settings">Agordoj</string>
+  <string name="nearest_title">Proksimaj fotoj</string>
+  <string name="finna_title">Proksimaj fotoj (Finna)</string>
+  <string name="finna1918_title">Proksimaj fotoj (1918)</string>
+  <string name="albums_label_no_data">Neniu albumo</string>
+  <string name="albums_title">Albumoj</string>
+  <string name="album_title">Albumo</string>
+  <string name="nearest_dialog_error_location_disabled_close">Fermi</string>
+  <string name="nearest_label_no_data">Neniu apudaj fotoj</string>
+  <string name="photo_title">Detaloj pri Foto</string>
+  <string name="camera_title">Fotilo</string>
+  <string name="profile_title">Profilo</string>
+  <string name="profile_facebook_login">Ensaluti per Facebook</string>
+  <string name="profile_google_login">Ensaluti per Google</string>
+  <string name="profile_logout">Elsaluti</string>
+  <string name="profile_login">Ensaluti</string>
+  <string name="profile_register">Krei konton</string>
+  <string name="input_username_hint">Retpoŝta adreso</string>
+  <string name="input_password_hint">Pasvorto</string>
+  <string name="input_firstname_hint">Antaŭnomo</string>
+  <string name="input_lastname_hint">Familinomo</string>
+  <string name="login_title">Ensaluti</string>
+  <string name="login_failed">Ensalutado malsukcesis</string>
+  <string name="wrong_password">Malĝusta pasvorto!</string>
+  <string name="registration_title">Registriĝi</string>
+  <string name="user_already_exists">Uzantnomo jam ekzistas</string>
+  <string name="upload_dialog_error_connection_title">Konekta Eraro</string>
+  <string name="upload_dialog_error_connection_message">Ne povis alŝuti foton. Ĉu reprovi?</string>
+  <string name="upload_dialog_error_connection_retry">Reprovi</string>
+  <string name="upload_dialog_error_connection_ok">Bone</string>
+  <string name="upload_dialog_error_unknown_title">Nekonata eraro</string>
+  <string name="upload_dialog_error_unknown_message">Ne povis alŝuti foton. Ĉu reprovi?</string>
+  <string name="upload_dialog_error_unknown_retry">Reprovi</string>
+  <string name="upload_dialog_error_unknown_ok">Nuligi</string>
+  <string name="upload_dialog_process_title">Alŝutanta foton</string>
+  <string name="upload_dialog_process_message">Bonvolu atendi...</string>
+  <string name="upload_dialog_success_title">Sukcese Alŝutis</string>
+  <string name="upload_dialog_success_message">Sukcese alŝutis la foton!</string>
+  <string name="upload_dialog_success_ok">Bone</string>
+  <string name="upload_dialog_not_authenticated_ok">Bone</string>
+  <string name="upload_dialog_agree_to_terms">Jes!</string>
+  <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="acra_dialog_ok_toast">Dankon!</string>
+  <string name="about_title">Pri</string>
+  <string name="version">Versio</string>
+  <string name="contact">Kontakti</string>
+  <string name="privacy_policy">Privateco</string>
+  <string name="tutorial_dismiss">Komprenite!</string>
+  <string name="tutorial_dialog_show_again_no">Ne</string>
+  <string name="tutorial_dialog_show_again_yes">Jes</string>
+  <string name="storage_not_permitted_cancel">Nuligi</string>
+  <string name="action_search">Serĉi</string>
+  <string name="favorites_label_not_logged_in_button">Ensaluti</string>
+  <string name="no_search_result">Neniu serĉrezulto</string>
+  <string name="album_no_data">Neniu foto</string>
+  <string name="show_photo_details">Montri detalojn de foto</string>
+</resources>
