@@ -6,8 +6,8 @@ android {
         applicationId "ee.ajapaik.android"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 1012
-        versionName "2.0.3"
+        versionCode 1013
+        versionName "2.0.4"
         multiDexEnabled true
     }
     buildTypes {
