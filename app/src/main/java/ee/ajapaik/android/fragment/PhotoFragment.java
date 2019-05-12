@@ -74,7 +74,7 @@ public class PhotoFragment extends ImageFragment {
     private static final String KEY_LOCATION = "location";
 
     private boolean m_rephotoViewMode = false;
-    private boolean m_infoViewMode = false;
+    private boolean m_infoViewMode = true;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
@@ -158,7 +158,8 @@ public class PhotoFragment extends ImageFragment {
             m_rephotoViewMode = savedInstanceState.getBoolean(KEY_REPHOTO_VIEW_MODE);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
         }
-
+        m_infoViewMode = true;
+        toggleMapAndInfo();
         if(m_album == null) {
             m_album = getAlbum();
         }
