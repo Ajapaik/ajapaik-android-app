@@ -16,6 +16,8 @@
   <string name="action_refresh">ꯇꯦꯛꯈꯠꯍꯟꯕꯥ</string>
   <string name="action_settings">ꯁꯦꯝꯐꯝ</string>
   <string name="nearest_title">ꯅꯛꯅꯅꯥ ꯂꯩꯕꯥ ꯃꯤꯂꯦꯜ</string>
+  <string name="finna_title">ꯅꯛꯅꯥ ꯂꯩꯕ ꯃꯤꯔꯦꯜꯁꯤꯡ</string>
+  <string name="finna1918_title">ꯅꯛꯅꯥ ꯂꯩꯕ ꯃꯤꯔꯦꯜꯁꯤꯡ(꯱꯹꯱꯸)</string>
   <string name="albums_label_no_data">ꯇꯨꯡꯁꯤꯟꯗꯨꯅꯥ ꯂꯩꯇꯦ</string>
   <string name="albums_title">ꯇꯨꯡꯁꯤꯟꯐꯝ</string>
   <string name="album_title">ꯇꯨꯡꯁꯤꯟꯐꯝ</string>
@@ -97,6 +99,6 @@
   <string name="no_search_result">ꯊꯤꯕꯒꯤ ꯐꯣꯜ ꯐꯪꯗꯦ</string>
   <string name="album_no_data">ꯃꯤꯔꯦꯜ ꯂꯩꯇꯦ</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_photo_details">ꯃꯤꯔꯦꯜ ꯑꯀꯨꯞꯄ ꯃꯔꯣꯜꯁꯤꯡ ꯎꯠꯂꯨ ꯫</string>
+  <string name="show_rephotos">ꯍꯥꯅꯒꯤ ꯃꯤꯔꯦꯜꯁꯤꯡ ꯎꯠꯂꯨ</string>
 </resources>
