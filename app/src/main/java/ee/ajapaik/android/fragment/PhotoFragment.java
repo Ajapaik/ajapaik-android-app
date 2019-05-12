@@ -137,6 +137,10 @@ public class PhotoFragment extends ImageFragment {
                         .position(photoLocation)
                         .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
 
+                if (m_photo.getLocation().hasBearing()) {
+                    markerOptions.rotation(m_photo.getLocation().getBearing());
+                }
+
                 mMap.addMarker(markerOptions);
 
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(17).build();

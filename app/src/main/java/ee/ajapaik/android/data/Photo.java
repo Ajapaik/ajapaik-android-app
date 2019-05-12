@@ -36,6 +36,7 @@ public class Photo extends PhotoModel {
     private static final String KEY_SOURCE = "source";
     private static final String KEY_LATITUDE = "latitude";
     private static final String KEY_LONGITUDE = "longitude";
+    private static final String KEY_AZIMUTH = "azimuth";
     private static final String KEY_REPHOTOS = "rephotos";
     private static final String KEY_REPHOTOS_COUNT = "rephotosCount";
     private static final String KEY_UPLOADS = "uploads";
@@ -106,6 +107,11 @@ public class Photo extends PhotoModel {
             m_location = new Location(TAG);
             m_location.setLatitude(readNumber(attributes, KEY_LATITUDE));
             m_location.setLongitude(readNumber(attributes, KEY_LONGITUDE));
+
+            if (canRead(attributes, KEY_AZIMUTH)) {
+                m_location.setBearing((float)readNumber(attributes, KEY_AZIMUTH));
+            }
+
         }
 
         m_rephotos = parseRephotos(attributes);
@@ -151,6 +157,7 @@ public class Photo extends PhotoModel {
         if (m_location != null) {
             write(attributes, KEY_LATITUDE, m_location.getLatitude());
             write(attributes, KEY_LONGITUDE, m_location.getLongitude());
+            write(attributes, KEY_AZIMUTH, m_location.getBearing());
         }
 
         write(attributes, KEY_REPHOTOS_COUNT, m_rephotosCount);
