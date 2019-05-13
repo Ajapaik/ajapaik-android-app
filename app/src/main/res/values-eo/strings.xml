@@ -4,7 +4,12 @@
 * Robin van der Vliet
 -->
 <resources>
+  <string name="app_name">Ajapaik refotado</string>
+  <string name="processing_image">Traktante bildon</string>
   <string name="please_wait">Bonvolu atendi...</string>
+  <string name="something_went_wrong">Io misfunkciis</string>
+  <string name="action_albums">Albumoj</string>
+  <string name="action_flip">Inversigi</string>
   <string name="action_login">Ensaluti</string>
   <string name="action_register">Registriĝi</string>
   <string name="action_logout">Elsaluti</string>
@@ -17,8 +22,12 @@
   <string name="albums_label_no_data">Neniu albumo</string>
   <string name="albums_title">Albumoj</string>
   <string name="album_title">Albumo</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lokiĝo Malŝaltita</string>
+  <string name="nearest_dialog_error_location_disabled_message">Ne povis lokiĝi. Ĉu vi volas ŝalti lokiĝon?</string>
   <string name="nearest_dialog_error_location_disabled_close">Fermi</string>
+  <string name="nearest_dialog_error_location_disabled_open">Agordi</string>
   <string name="nearest_label_no_data">Neniu apudaj fotoj</string>
+  <string name="nearest_label_no_data_button">Vidi albumojn por foliumi ĉiujn bildojn</string>
   <string name="photo_title">Detaloj pri Foto</string>
   <string name="camera_title">Fotilo</string>
   <string name="profile_title">Profilo</string>
@@ -31,11 +40,17 @@
   <string name="input_password_hint">Pasvorto</string>
   <string name="input_firstname_hint">Antaŭnomo</string>
   <string name="input_lastname_hint">Familinomo</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Vi ankoraŭ ne refotis</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotoj</item>
+  </plurals>
   <string name="login_title">Ensaluti</string>
   <string name="login_failed">Ensalutado malsukcesis</string>
   <string name="wrong_password">Malĝusta pasvorto!</string>
   <string name="registration_title">Registriĝi</string>
   <string name="user_already_exists">Uzantnomo jam ekzistas</string>
+  <string name="upload_title">Konfirmi Refotadon</string>
   <string name="upload_dialog_error_connection_title">Konekta Eraro</string>
   <string name="upload_dialog_error_connection_message">Ne povis alŝuti foton. Ĉu reprovi?</string>
   <string name="upload_dialog_error_connection_retry">Reprovi</string>
@@ -49,21 +64,49 @@
   <string name="upload_dialog_success_title">Sukcese Alŝutis</string>
   <string name="upload_dialog_success_message">Sukcese alŝutis la foton!</string>
   <string name="upload_dialog_success_ok">Bone</string>
+  <string name="upload_dialog_not_authenticated_title">Devas esti ensalutinta por alŝuti</string>
+  <string name="upload_dialog_not_authenticated_message">Redirekti al profilan paĝon</string>
   <string name="upload_dialog_not_authenticated_ok">Bone</string>
+  <string name="upload_dialog_not_agreed_to_terms">Mi konsentas publikigi la refotojn laŭ la permesilo CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Jes!</string>
   <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="acra_dialog_title">\'Ajapaik refotado\' fiaskis</string>
+  <string name="acra_dialog_text">Ne atendita eraro okazis, kaj tial la aplikaĵo fiaskis. Bonvolu helpi nin ripari tion per sendado de dateno pri la eraro al ni; vi nur devas alklaki la butonon Bone.</string>
+  <string name="acra_dialog_comment_prompt">Vi povas komenti la problemon ĉi-sube:</string>
   <string name="acra_dialog_ok_toast">Dankon!</string>
   <string name="about_title">Pri</string>
   <string name="version">Versio</string>
   <string name="contact">Kontakti</string>
   <string name="privacy_policy">Privateco</string>
+  <string name="navigation_drawer_open">Malfermi tirkeston</string>
+  <string name="navigation_drawer_close">Fermi tirkeston</string>
+  <string name="settings_show_tutorial">Montri lernilon en refotada reĝimo</string>
+  <string name="settings_agree_to_license_terms">Mi konsentas publikigi la refotojn ĉe Ajapaik.ee laŭ la permesilo CC BY 4.0.</string>
+  <string name="tutorial_hide_show_flip">Frapetu por kaŝi/montri bildon.\nUzu la inversigan ikonon ĉe la supra dekstra angulo por inversigi malnovan bildon.</string>
+  <string name="tutorial_opacity_zoom">Deŝovu por ŝanĝi travideblecon de malnova bildo.\nPinĉu por zomi malnovan bildon.</string>
+  <string name="tutorial_take_picture">Por refoti, alpremu la obturatoran butonon aŭ longe frapetu ĉie ajn.</string>
   <string name="tutorial_dismiss">Komprenite!</string>
+  <string name="tutorial_dialog_show_again_title">Remontri lernilon?</string>
+  <string name="tutorial_dialog_show_again_message">Vi povas poste remontri lerniloj ĉe agordoj</string>
   <string name="tutorial_dialog_show_again_no">Ne</string>
   <string name="tutorial_dialog_show_again_yes">Jes</string>
+  <string name="rephoto_drafts">Refotaj malnetoj</string>
+  <string name="no_rephotos">Neniu refoto</string>
+  <string name="storage_not_permitted_title">Konservado ne estas permesata</string>
+  <string name="storage_not_permitted_message">Malpermeso far vi pri ĉi tiu aplikaĵo de konservejo malebligas iujn funkciojn, inkluzive de refotado kaj la alŝuto de la refotoj. Bonvolu konsideri permeson de atingo al konservejo.</string>
   <string name="storage_not_permitted_cancel">Nuligi</string>
+  <string name="storage_not_permitted_open_settings">Agordi</string>
+  <string name="my_rephotos">Miaj refotoj</string>
+  <string name="rephotos_label_not_logged_in_text">Bonvolu ensaluti por vidi viajn refotojn</string>
   <string name="action_search">Serĉi</string>
+  <string name="favorites">Miaj legosignoj</string>
+  <string name="no_favorites">Neniu legosigno</string>
+  <string name="action_favorite">Legosigno</string>
   <string name="favorites_label_not_logged_in_button">Ensaluti</string>
+  <string name="favorites_label_not_logged_in_text">Bonvolu ensaluti por vidi viajn legosignojn</string>
   <string name="no_search_result">Neniu serĉrezulto</string>
   <string name="album_no_data">Neniu foto</string>
+  <string name="start_taking_rephoto">Ekrefoti</string>
   <string name="show_photo_details">Montri detalojn de foto</string>
+  <string name="show_rephotos">Montri refotojn</string>
 </resources>
