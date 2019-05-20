@@ -4,6 +4,7 @@
 * LittlePuppers
 * Marcelo9987
 * Racha
+* Ryo567
 * Zarisi
 -->
 <resources>
@@ -83,14 +84,19 @@
   <string name="settings_agree_to_license_terms">Acepto publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="tutorial_hide_show_flip">Pulsa para mostrar/esconder la imagen.\nUsa el icono en la esquina derecha para rotar la imagen.</string>
   <string name="tutorial_opacity_zoom">Deslizamiento para ajustar transparencia de imagen vieja.\nPellizca zoom para acercar la imagen</string>
+  <string name="tutorial_take_picture">Pulsa el botón del obturador o mantén cualquier punto de la pantalla para hacer una refoto.</string>
   <string name="tutorial_dismiss">Entendido</string>
   <string name="tutorial_dialog_show_again_title">¿Mostrar el tutorial otra vez?</string>
+  <string name="tutorial_dialog_show_again_message">Puedes volver a activar el tutorial desde ajustes más tarde</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
+  <string name="rephoto_drafts">Borradores de refotos</string>
   <string name="no_rephotos">No hay fotos</string>
   <string name="storage_not_permitted_title">Almacenamiento no permitido</string>
   <string name="storage_not_permitted_cancel">Cancelar</string>
   <string name="storage_not_permitted_open_settings">Abrir configuración</string>
+  <string name="my_rephotos">Mis refotos</string>
+  <string name="rephotos_label_not_logged_in_text">Inicia sesión para ver tus refotos</string>
   <string name="action_search">Buscar</string>
   <string name="favorites">Mis favoritas</string>
   <string name="no_favorites">No hay favoritas</string>
