@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Joseagush
+* Luh Gede Krismayanti
 * Wandering ant
 -->
 <resources>
@@ -47,6 +48,7 @@
   <string name="upload_dialog_error_unknown_retry">Indayang malih</string>
   <string name="upload_dialog_error_unknown_ok">Buungan</string>
   <string name="upload_dialog_process_title">Gambar kantun kaunggahang</string>
+  <string name="upload_dialog_process_message">Jantos dumun...</string>
   <string name="upload_dialog_success_ok">Becik</string>
   <string name="upload_dialog_not_authenticated_title">Patut ngranjing dumun mangda prasida ngunggahang</string>
   <string name="upload_dialog_not_authenticated_ok">Becik</string>

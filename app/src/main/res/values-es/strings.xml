@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Fitoschido
+* Harvest
 * LittlePuppers
 * Marcelo9987
 * Racha
@@ -27,7 +28,7 @@
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Ubicación desactivada</string>
-  <string name="nearest_dialog_error_location_disabled_message">No se puede conseguir la ubicación actual.  te gusta habilitarlo?</string>
+  <string name="nearest_dialog_error_location_disabled_message">No se puede conseguir la ubicación actual. Te gustaría habilitarlo?</string>
   <string name="nearest_dialog_error_location_disabled_close">Cerrar</string>
   <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
   <string name="nearest_label_no_data">No hay fotos cercanas</string>
@@ -64,14 +65,14 @@
   <string name="upload_dialog_success_title">Carga correcta</string>
   <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
   <string name="upload_dialog_success_ok">Aceptar</string>
-  <string name="upload_dialog_not_authenticated_title">Tiene que haber iniciado sesion para cargar</string>
+  <string name="upload_dialog_not_authenticated_title">Tiene que iniciar sesion para cargar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
   <string name="upload_dialog_not_agreed_to_terms">Apalabro publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="upload_dialog_agree_to_terms">Sí!</string>
   <string name="upload_dialog_decline_terms">No</string>
-  <string name="acra_dialog_title">\'Ajapaik rephoto\' Esta corrupta o no se puede acceder a ella</string>
-  <string name="acra_dialog_text">Un error inesperado ocurrió. forzar la aplicación para parar. Ayudanos a arreglar al enviarnos el informe de error, todo lo que  tienes que hacer es clic VALE.</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' se ha cerrado repentínamente.</string>
+  <string name="acra_dialog_text">Ocurrió un error inesperado y la aplicación tuvo que cerrarse. Por favor ayudanos a solucionalo mandándonos la información del error, todo lo que tienes que hacer es tocar OK.</string>
   <string name="acra_dialog_comment_prompt">Podrías añadir tus comentarios sobre el problema :</string>
   <string name="acra_dialog_ok_toast">¡Gracias!</string>
   <string name="about_title">Acerca de</string>
