@@ -28,7 +28,7 @@
   <string name="albums_title">Álbumes</string>
   <string name="album_title">Álbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Ubicación desactivada</string>
-  <string name="nearest_dialog_error_location_disabled_message">No se puede conseguir la ubicación actual. Te gustaría habilitarlo?</string>
+  <string name="nearest_dialog_error_location_disabled_message">No se puede obtener la ubicación actual. ¿Quieres activar el GPS?</string>
   <string name="nearest_dialog_error_location_disabled_close">Cerrar</string>
   <string name="nearest_dialog_error_location_disabled_open">Abrir configuración</string>
   <string name="nearest_label_no_data">No hay fotos cercanas</string>
