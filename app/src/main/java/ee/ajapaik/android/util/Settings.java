@@ -25,6 +25,7 @@ public class Settings {
     private static final String KEY_PROFILE = "profile";
     private static final String KEY_UPLOAD = "upload";
     private static final String KEY_SESSION = "session";
+    private static final String KEY_SESSION_DIRTY = "sessiondirty";
 
     public static void updateLocale(Context context, String language) {
         Resources resources = context.getResources();
@@ -112,6 +113,18 @@ public class Settings {
         editor.putString(KEY_PROFILE, (profile != null) ? profile.toString() : null);
         editor.apply();
     }
+
+    public Boolean getSessionDirty() {
+        return m_preferences.getString(KEY_SESSION_DIRTY, null) == "1";
+    }
+
+    public void setSessionDirty(Boolean dirty) {
+        SharedPreferences.Editor editor = m_preferences.edit();
+
+        editor.putString(KEY_SESSION_DIRTY, (dirty) ? "1" : "0");
+        editor.apply();
+    }
+
 
     public Session getSession() {
         return Session.parse(m_preferences.getString(KEY_SESSION, null));

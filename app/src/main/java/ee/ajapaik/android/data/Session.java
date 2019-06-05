@@ -50,6 +50,11 @@ public class Session extends Model {
         return new Action(context, "/login/", parameters);
     }
 
+    public static WebAction<Session> createRefreshSessionAction(Context context) {
+        return new WebAction<Session>(context, "/user/me/", null, CREATOR);
+    }
+
+
     public static WebAction<Session> createLogoutAction(Context context) {
         return new WebAction<Session>(context, "/logout/", null, CREATOR);
     }
@@ -125,8 +130,11 @@ public class Session extends Model {
         return m_user;
     }
 
+    // currently server side will expire the session_key
+    // and if there is no sessionid in http response then session is gone
     public boolean isExpired() {
-        return (new Date().getTime() > m_expires) ? true : false;
+        // return (new Date().getTime() > m_expires) ? true : false;
+        return false;
     }
 
     @Override

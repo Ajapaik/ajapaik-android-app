@@ -5,6 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
 
+import org.apache.hc.client5.http.cookie.BasicCookieStore;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -185,7 +187,7 @@ public class WebImage extends WebOperation {
     }
 
     @Override
-    public boolean performRequest(String baseURL, Map<String, String> extraParameters) {
+    public boolean performRequest(String baseURL, Map<String, String> extraParameters, BasicCookieStore cookieStore) {
         boolean result = false;
         String url = getUrl();
 
@@ -213,7 +215,7 @@ public class WebImage extends WebOperation {
         }
 
         if(!result) {
-            result = super.performRequest(baseURL, extraParameters);
+            result = super.performRequest(baseURL, extraParameters, cookieStore);
         }
 
         if(m_render && m_status == HTTP_STATUS_OK) {

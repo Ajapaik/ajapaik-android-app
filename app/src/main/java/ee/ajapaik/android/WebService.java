@@ -11,10 +11,13 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
 
-import com.facebook.AccessToken;
+import org.apache.hc.client5.http.cookie.BasicCookieStore;
+import org.apache.hc.client5.http.impl.cookie.BasicClientCookie;
 
 import java.lang.ref.WeakReference;
+import java.net.URI;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -28,18 +31,20 @@ import ee.ajapaik.android.util.WebAction;
 import ee.ajapaik.android.util.WebImage;
 import ee.ajapaik.android.util.WebOperation;
 
-import static ee.ajapaik.android.util.Authorization.Type.FACEBOOK;
 
 public class WebService extends Service {
     private static final String TAG = "WebService";
 
 //    private static final String API_URL = "https://ajapaik.ee/api/v1/";
     private static final String API_URL = "https://staging.ajapaik.ee/api/v1/";
+//    private static final String API_URL = "http://192.168.1.100:8000/api/v1/";
+
     private static final int MAX_CONNECTIONS = 4;
     private static final int SHUTDOWN_DELAY_IN_SECONDS = 1;
 
     private final IBinder m_binder = new LocalBinder();
     private final Handler m_handler = new Handler(Looper.getMainLooper());
+    private BasicCookieStore m_cookieStore;
     private ExecutorService m_actionQueue = Executors.newFixedThreadPool(1);
     private ExecutorService m_imageQueue = Executors.newFixedThreadPool(MAX_CONNECTIONS - 1);
     private List<Task> m_tasks = new ArrayList<Task>();
@@ -68,29 +73,37 @@ public class WebService extends Service {
         }
     }
 
-    private void runSilentLogin() {
+    public void runSilentLogin() {
         Authorization authorization = m_settings.getAuthorization();
-        if (authorization == null || authorization.isAnonymous()){
+
+        // No login credentials
+        if (authorization == null || authorization.isAnonymous()) {
             resetAuthorizationAndSession();
             return;
         }
 
-        WebAction<Session> action;
-
-        if (FACEBOOK.equals(authorization.getType())) {
-            if (AccessToken.getCurrentAccessToken() == null) {
-                resetAuthorizationAndSession();
-            }
+        // First run only. Test if session_key is still valid
+        if (m_settings.getSessionDirty())
+        {
+            WebAction<Session> action;
+            action = Session.createRefreshSessionAction(this);
+            action.performRequest(API_URL, null, m_cookieStore);
+            m_settings.setSessionDirty(false);
         }
 
-        action = Session.createLoginAction(this, authorization);
-        action.performRequest(API_URL, null);
-
-        if(action.getStatus() == Status.NONE) {
-            m_session = action.getObject();
-            m_settings.setSession(m_session);
-        } else {
-            resetAuthorizationAndSession();
+        // Try to relogin if session is gone
+        if (m_settings.getSession()==null)
+        {
+            WebAction<Session> action;
+            action = Session.createLoginAction(this, authorization);
+            action.performRequest(API_URL, null, m_cookieStore);
+            if (action.getStatus() == Status.NONE) {
+                m_session = action.getObject();
+                m_settings.setSession(m_session);
+            } else {
+                resetAuthorizationAndSession();
+                return;
+            }
         }
     }
 
@@ -108,12 +121,12 @@ public class WebService extends Service {
             public void run() {
                 boolean isSecure = operation.isSecure();
                 if (!isImageRequest) runSilentLogin();
-                operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null);
+                operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null, m_cookieStore);
 
                 if(operation.shouldRetry()) {
 
                     if(m_session != null) {
-                        operation.performRequest(API_URL, m_session.getWebParameters());
+                        operation.performRequest(API_URL, m_session.getWebParameters(), m_cookieStore);
                     }
                 }
 
@@ -199,6 +212,25 @@ public class WebService extends Service {
             m_settings.setSession(null);
             m_session = null;
         }
+
+        Log.d(TAG, "Create CookieStore");
+        m_cookieStore = new BasicCookieStore();
+
+        if(m_session != null)
+        {
+            try {
+                BasicClientCookie cookie = new BasicClientCookie("sessionid", m_session.getToken());
+                URI uri = new URI(API_URL);
+                cookie.setDomain(uri.getHost());
+                cookie.setPath("/");
+                cookie.setExpiryDate(new Date(System.currentTimeMillis() + 100000 * 1000L));
+                m_cookieStore.addCookie(cookie);
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
     @Override
