@@ -256,6 +256,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                     Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
                     Log.d(TAG, "STATE_WAITING_PRECAPTURE aeState: " + aeState);
                     if (aeState == null ||
+                            aeState == CaptureResult.CONTROL_AE_STATE_CONVERGED ||
                             aeState == CaptureResult.CONTROL_AE_STATE_PRECAPTURE ||
                             aeState == CaptureRequest.CONTROL_AE_STATE_FLASH_REQUIRED) {
                         mState = STATE_WAITING_NON_PRECAPTURE;
