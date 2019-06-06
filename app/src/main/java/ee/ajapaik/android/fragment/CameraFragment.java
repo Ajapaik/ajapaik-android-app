@@ -223,6 +223,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     private CameraCaptureSession.CaptureCallback mCaptureCallback = new CameraCaptureSession.CaptureCallback() {
 
         private void process(CaptureResult result) {
+            Log.d(TAG, "mState: " + mState);
             switch (mState) {
                 case STATE_PREVIEW: {
                     // We have nothing to do when the camera preview is working normally.
@@ -230,10 +231,14 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                 }
                 case STATE_WAITING_LOCK: {
                     Integer afState = result.get(CaptureResult.CONTROL_AF_STATE);
+                    Log.d(TAG, "STATE_WAITING_LOCK afState: " + afState);
                     if (afState == null) {
                         captureStillPicture();
                     } else if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
-                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState) {
+                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState ||
+                            CaptureResult.CONTROL_AF_STATE_PASSIVE_FOCUSED == afState ||
+                            CaptureResult.CONTROL_AF_STATE_PASSIVE_UNFOCUSED == afState
+                    ) {
                         // CONTROL_AE_STATE can be null on some devices
                         Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
                         if (aeState == null ||
@@ -249,6 +254,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                 case STATE_WAITING_PRECAPTURE: {
                     // CONTROL_AE_STATE can be null on some devices
                     Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
+                    Log.d(TAG, "STATE_WAITING_PRECAPTURE aeState: " + aeState);
                     if (aeState == null ||
                             aeState == CaptureResult.CONTROL_AE_STATE_PRECAPTURE ||
                             aeState == CaptureRequest.CONTROL_AE_STATE_FLASH_REQUIRED) {
@@ -259,6 +265,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
                 case STATE_WAITING_NON_PRECAPTURE: {
                     // CONTROL_AE_STATE can be null on some devices
                     Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
+                    Log.d(TAG, "STATE_WAITING_NON_PRECAPTURE aeState: " + aeState);
+
                     if (aeState == null || aeState != CaptureResult.CONTROL_AE_STATE_PRECAPTURE) {
                         mState = STATE_PICTURE_TAKEN;
                         captureStillPicture();
@@ -389,6 +397,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
         if (progressDialog!=null) {
             Log.d(TAG, "onPause: progressDialog.dismiss()");
             progressDialog.dismiss();
+            mState=STATE_PREVIEW;
         }
         super.onPause();
     }
@@ -661,6 +670,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
      * @param viewHeight The height of `mTextureView`
      */
     private void configureTransform(int viewWidth, int viewHeight) {
+        Log.d(TAG, "configureTransform");
+
         Activity activity = getActivity();
         if (null == mTextureView || null == mPreviewSize || null == activity) {
             return;
@@ -687,20 +698,25 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
 
     private void takePicture() {
-        if (!((CameraActivity) getActivity()).isTutorialCompleted()) return;
+        Log.d(TAG, "takePicture");
 
-        // Do no try to take picture if camera is not ready
-        if ((null != mCaptureSession) && (null != mCameraDevice)) {
-            // Dismiss existing progressDialog
-            if (null != progressDialog && progressDialog.isShowing()) {
-                progressDialog.dismiss();
+        if (!((CameraActivity) getActivity()).isTutorialCompleted()) return;
+        if (mState==STATE_PREVIEW) {
+            // Do no try to take picture if camera is not ready
+            if ((null != mCaptureSession) && (null != mCameraDevice)) {
+                // Dismiss existing progressDialog
+                if (null != progressDialog && progressDialog.isShowing()) {
+                    progressDialog.dismiss();
+                }
+                progressDialog = ProgressDialog.show(getActivity(), getString(R.string.processing_image), getString(R.string.please_wait));
+                lockFocus();
             }
-            progressDialog = ProgressDialog.show(getActivity(), getString(R.string.processing_image), getString(R.string.please_wait));
-            lockFocus();
         }
     }
 
     private void lockFocus() {
+        Log.d(TAG, "lockFocus");
+
         try {
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_TRIGGER,
                     CameraMetadata.CONTROL_AF_TRIGGER_START);
@@ -710,10 +726,13 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
         } catch (CameraAccessException e) {
             e.printStackTrace();
             progressDialog.dismiss();
+            mState=STATE_PREVIEW;
         }
     }
 
     private void runPrecaptureSequence() {
+        Log.d(TAG, "runPrecaptureSequence");
+
         try {
             // This is how to tell the camera to trigger.
             mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_PRECAPTURE_TRIGGER,
@@ -728,6 +747,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
     }
 
     private void captureStillPicture() {
+        Log.d(TAG, "captureStillPicture");
         try {
             final Activity activity = getActivity();
             if (null == activity || null == mCameraDevice) {
@@ -944,6 +964,8 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     @Override
     public void onSaveInstanceState(final Bundle savedInstanceState) {
+        Log.d(TAG, "savedInstanceState");
+
         super.onSaveInstanceState(savedInstanceState);
 
         savedInstanceState.putBoolean(KEY_FLIPPED_MODE, m_flippedMode);
@@ -974,6 +996,7 @@ public class CameraFragment extends ImageFragment implements View.OnClickListene
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d(TAG, "onActivityResult");
         if (requestCode == REQUEST_UPLOAD) {
             getSettings().setUpload(null);
 
