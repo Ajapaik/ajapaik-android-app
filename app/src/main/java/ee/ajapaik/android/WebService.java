@@ -78,6 +78,7 @@ public class WebService extends Service {
 
         // No login credentials
         if (authorization == null || authorization.isAnonymous()) {
+            Log.d(TAG, "runSilentLogin: no authorization");
             resetAuthorizationAndSession();
             return;
         }
@@ -85,6 +86,7 @@ public class WebService extends Service {
         // First run only. Test if session_key is still valid
         if (m_settings.getSessionDirty())
         {
+            Log.d(TAG, "runSilentLogin: sessionDirty()");
             WebAction<Session> action;
             action = Session.createRefreshSessionAction(this);
             action.performRequest(API_URL, null, m_cookieStore);
@@ -94,6 +96,7 @@ public class WebService extends Service {
         // Try to relogin if session is gone
         if (m_settings.getSession()==null)
         {
+            Log.d(TAG, "runSilentLogin: session gone");
             WebAction<Session> action;
             action = Session.createLoginAction(this, authorization);
             action.performRequest(API_URL, null, m_cookieStore);
@@ -101,6 +104,7 @@ public class WebService extends Service {
                 m_session = action.getObject();
                 m_settings.setSession(m_session);
             } else {
+                Log.d(TAG, "runSilentLogin: resetAuthorizationAndSession");
                 resetAuthorizationAndSession();
                 return;
             }

@@ -290,11 +290,16 @@ public abstract class WebOperation {
                     String session_id=null;
 
                     for (int n = 0; n < cookies.size(); n++) {
-                        if (cookies.get(n).getName()=="sessionid") session_id=cookies.get(n).getValue();
+
+                        if (cookies.get(n).getName().equals("sessionid")) {
+                            Log.d(TAG, "Cookie :" + cookies.get(n).getName() + "; value " + cookies.get(n).getValue());
+                            session_id=cookies.get(n).getValue();
+                        }
                     }
 
                     // If no session_id in response then kill login
                     if (session_id==null) {
+                        Log.e(TAG, "No session_id in response cookie");
                         m_settings.setSession(null);
                     }
 

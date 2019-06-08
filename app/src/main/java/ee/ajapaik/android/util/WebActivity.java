@@ -191,6 +191,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     private void logout() {
+        Log.d(TAG, "logout");
         dismissProgressDialog();
         m_settings.setSession(null);
         getSettings().setProfile(new Profile());
