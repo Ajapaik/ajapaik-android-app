@@ -101,17 +101,22 @@ public class Session extends Model {
     public Map<String, String> getWebParameters() {
         Map<String, String> parameters = new Hashtable<String, String>();
 
-        parameters.put(KEY_WEB_TOKEN, m_token);
-        parameters.put(KEY_WEB_USER, m_user);
+        if (m_token!=null) {
+            parameters.put(KEY_WEB_TOKEN, m_token);
+        }
+
+        if (m_user!=null) {
+            parameters.put(KEY_WEB_USER, m_user);
+        }
 
         Locale locale = Locale.getDefault();
         String language = null;
 
-        if(locale != null) {
+        if (locale != null) {
             language = locale.getLanguage();
         }
 
-        if(language != null) {
+        if (language != null) {
             parameters.put(KEY_WEB_LANGUAGE, language);
         }
 
