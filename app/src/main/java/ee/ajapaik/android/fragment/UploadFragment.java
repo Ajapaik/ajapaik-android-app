@@ -275,7 +275,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         Bitmap bitmap_info = BitmapFactory.decodeFile(upload.getPath(), options);
-        options.inSampleSize=calculateInSampleSize(options, 2000, 2000);
+        options.inSampleSize=calculateInSampleSize(options, 1500, 1500);
         Log.d(TAG, "inSampleSize: " + options.inSampleSize );
         options.inJustDecodeBounds = false;
         Bitmap bitmap = BitmapFactory.decodeFile(upload.getPath(), options);
