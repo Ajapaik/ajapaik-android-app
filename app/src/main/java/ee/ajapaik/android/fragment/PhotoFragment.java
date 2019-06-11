@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -23,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -31,6 +33,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -143,8 +146,20 @@ public class PhotoFragment extends ImageFragment {
 
                 mMap.addMarker(markerOptions);
 
-                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(17).build();
-                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                builder.include(photoLocation);
+
+                Location myLocation = getSettings().getLocation();
+                LatLng myLatLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
+                builder.include(myLatLng);
+
+                LatLngBounds bounds = builder.build();
+                CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 10);
+
+                mMap.moveCamera(cu);
+                mMap.setMaxZoomPreference(18.0f);
+//                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(17).build();
+//                mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cu));
             }
         });
     }
@@ -162,7 +177,7 @@ public class PhotoFragment extends ImageFragment {
             m_rephotoViewMode = savedInstanceState.getBoolean(KEY_REPHOTO_VIEW_MODE);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
         }
-        m_infoViewMode = true;
+        m_infoViewMode = false;
         toggleMapAndInfo();
         if(m_album == null) {
             m_album = getAlbum();
