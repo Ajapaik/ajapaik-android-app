@@ -9,12 +9,14 @@ import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
 
+import org.apache.hc.client5.http.config.RequestConfig;
 import org.apache.hc.client5.http.cookie.BasicCookieStore;
 import org.apache.hc.client5.http.cookie.Cookie;
 import org.apache.hc.client5.http.entity.mime.FileBody;
 import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
 import org.apache.hc.client5.http.entity.mime.StringBody;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
+import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.NameValuePair;
@@ -26,6 +28,7 @@ import org.apache.hc.client5.http.entity.mime.HttpMultipartMode;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.message.BasicNameValuePair;
+import org.apache.hc.core5.util.Timeout;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -36,6 +39,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
 
 import ee.ajapaik.android.BuildConfig;
@@ -54,7 +58,7 @@ public abstract class WebOperation {
 
     private static final int RETRY_COUNT = 3;
     private static final long RETRY_INTERVAL = 500;
-    private static final int TIMEOUT = 30000;
+    private static final int TIMEOUT = 45;
 
     protected Context m_context;
     private CloseableHttpClient m_client;
@@ -143,9 +147,23 @@ public abstract class WebOperation {
             }
 
             try {
-                m_client = HttpClients.custom()
-                        .setDefaultCookieStore(cookieStore)
+                Timeout to = Timeout.ofSeconds(TIMEOUT);
+                RequestConfig config = RequestConfig.custom()
+                        .setConnectTimeout(to)
+                        .setConnectionRequestTimeout(to)
+                        .setResponseTimeout(to)
+                        .setContentCompressionEnabled(true)
                         .build();
+
+                 m_client =
+                        HttpClientBuilder.create()
+                                .setDefaultCookieStore(cookieStore)
+                                .setDefaultRequestConfig(config)
+                                .build();
+
+/*                m_client = HttpClients.custom()
+                        .setDefaultCookieStore(cookieStore)
+                        .build();*/
 
             }
             catch(Exception e) {
