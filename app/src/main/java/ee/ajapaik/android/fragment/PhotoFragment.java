@@ -78,9 +78,12 @@ public class PhotoFragment extends ImageFragment {
 
     private boolean m_rephotoViewMode = false;
     private boolean m_infoViewMode = true;
+    private boolean m_ready = false;
+    private boolean m_map_ready = false;
     protected boolean m_favorited;
     private Location m_location;
     private Album m_album;
+    private MapView m_mapView;
 
     public Album getAlbum() {
         Bundle arguments = getArguments();
@@ -114,7 +117,7 @@ public class PhotoFragment extends ImageFragment {
     }
 
     private void initMap(Bundle savedInstanceState) {
-        MapView m_mapView = getMapView();
+        m_mapView = getMapView();
         m_mapView.onCreate(savedInstanceState);
         m_mapView.onResume();
 
@@ -123,43 +126,54 @@ public class PhotoFragment extends ImageFragment {
         } catch (Exception e) {
             Log.e(TAG, "Failed to initialize map", e);
         }
+        setMapInitialState();
+    }
+    private void setMapInitialState() {
+        // getMaoAsync is inside
+        if (m_mapView == null) return;
 
-        m_mapView.getMapAsync(new OnMapReadyCallback() {
+        m_mapView.post(new Runnable() {
             @Override
-            public void onMapReady(GoogleMap mMap) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    if (getActivity().checkSelfPermission(ACCESS_FINE_LOCATION) == PERMISSION_GRANTED) {
-                        mMap.setMyLocationEnabled(true);
+            public void run() {
+                Log.d(TAG, "mapView run()");
+                m_mapView.getMapAsync(new OnMapReadyCallback() {
+                    @Override
+                    public void onMapReady(GoogleMap mMap) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            if (getActivity().checkSelfPermission(ACCESS_FINE_LOCATION) == PERMISSION_GRANTED) {
+                                mMap.setMyLocationEnabled(true);
+                            }
+                        } else {
+                            mMap.setMyLocationEnabled(true);
+                        }
+
+                        LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
+                        MarkerOptions markerOptions = new MarkerOptions()
+                                .position(photoLocation)
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
+
+                        if (m_photo.getLocation().hasBearing()) {
+                            markerOptions.rotation(m_photo.getLocation().getBearing());
+                        }
+
+                        mMap.addMarker(markerOptions);
+
+                        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+                        builder.include(photoLocation);
+
+                        Location myLocation = getSettings().getLocation();
+                        LatLng myLatLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
+                        builder.include(myLatLng);
+
+                        LatLngBounds bounds = builder.build();
+                        if (m_mapView.getVisibility()==VISIBLE) {
+                            CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 100);
+                            mMap.setMaxZoomPreference(18.0f);
+                            mMap.moveCamera(cu);
+                            m_map_ready=true;
+                        }
                     }
-                } else {
-                    mMap.setMyLocationEnabled(true);
-                }
-
-                LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
-                MarkerOptions markerOptions = new MarkerOptions()
-                        .position(photoLocation)
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
-
-                if (m_photo.getLocation().hasBearing()) {
-                    markerOptions.rotation(m_photo.getLocation().getBearing());
-                }
-
-                mMap.addMarker(markerOptions);
-
-                LatLngBounds.Builder builder = new LatLngBounds.Builder();
-                builder.include(photoLocation);
-
-                Location myLocation = getSettings().getLocation();
-                LatLng myLatLng = new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-                builder.include(myLatLng);
-
-                LatLngBounds bounds = builder.build();
-                CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, 10);
-
-                mMap.moveCamera(cu);
-                mMap.setMaxZoomPreference(18.0f);
-//                CameraPosition cameraPosition = new CameraPosition.Builder().target(photoLocation).zoom(17).build();
-//                mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cu));
+                });
             }
         });
     }
@@ -168,6 +182,7 @@ public class PhotoFragment extends ImageFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         Log.d(TAG, "onActivityCreated");
 
+        m_ready = false;
         super.onActivityCreated(savedInstanceState);
 
         if(savedInstanceState != null) {
@@ -177,8 +192,6 @@ public class PhotoFragment extends ImageFragment {
             m_rephotoViewMode = savedInstanceState.getBoolean(KEY_REPHOTO_VIEW_MODE);
             m_flippedMode = savedInstanceState.getBoolean(KEY_FLIPPED_MODE);
         }
-        m_infoViewMode = false;
-        toggleMapAndInfo();
         if(m_album == null) {
             m_album = getAlbum();
         }
@@ -188,7 +201,14 @@ public class PhotoFragment extends ImageFragment {
         }
 
         if (m_photo.getLocation() != null) {
+            m_infoViewMode = getSettings().getInfoViewMode();
+            toggleMapAndInfo();
             initMap(savedInstanceState);
+        }
+        else
+        {
+            m_infoViewMode = true;
+            toggleMapAndInfo();
         }
 
         if(m_photo == null && m_album != null) {
@@ -242,30 +262,37 @@ public class PhotoFragment extends ImageFragment {
         getPhotoInfoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                m_infoViewMode = true;
-                toggleMapAndInfo();
+                if (m_ready) {
+                    m_infoViewMode = true;
+                    getSettings().setInfoViewMode(m_infoViewMode);
+                    toggleMapAndInfo();
+                }
             }
         });
 
         getMapButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                m_infoViewMode = false;
-                toggleMapAndInfo();
+                if (m_ready) {
+                    m_infoViewMode = false;
+                    getSettings().setInfoViewMode(m_infoViewMode);
+                    toggleMapAndInfo();
+                    if (!m_map_ready) setMapInitialState();
+                }
             }
         });
 
         getRephotosCountImageView().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                setRephotoViewMode(true);
+                if (m_ready) setRephotoViewMode(true);
             }
         });
 
         getCloseRephotoButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                setRephotoViewMode(false);
+                if (m_ready) setRephotoViewMode(false);
             }
         });
 
@@ -274,6 +301,7 @@ public class PhotoFragment extends ImageFragment {
         setRephotoViewMode(m_rephotoViewMode);
 
         getSwipeRefreshLayout().setEnabled(false);
+        m_ready = true;
     }
 
     private void toggleMapAndInfo() {
