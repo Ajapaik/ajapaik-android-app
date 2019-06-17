@@ -1,9 +1,10 @@
 # Messages for French (français)
 # Exported from translatewiki.net
 # Author: Gomoko
+# Author: VIGNERON
 # Author: Wladek92
 
-title=Rephotographie de Ajapaik
+title=Ajapaik rephotographie
 short-description=Regardez le point de vue des images historiques et rephotographiez les vues !
 description.paragraph.1=L’application de rephoto Ajapaik affiche des images historiques prises près de vous et offre une manière simple de prendre des rephotographies des mêmes vues.
 description.accuracy.title=Afin de rendre la rephotographie plus commode
