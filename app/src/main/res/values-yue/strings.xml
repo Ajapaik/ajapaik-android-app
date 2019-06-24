@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* 神樂坂秀吉
+-->
+<resources>
+  <string name="action_logout">簽走</string>
+  <string name="action_settings">設定</string>
+  <string name="nearest_dialog_error_location_disabled_close">閂</string>
+  <string name="profile_logout">簽走</string>
+  <string name="profile_login">簽到</string>
+  <string name="profile_register">開戶口</string>
+  <string name="input_username_hint">電郵</string>
+  <string name="input_password_hint">密碼</string>
+  <string name="input_firstname_hint">名</string>
+  <string name="input_lastname_hint">姓</string>
+  <string name="login_title">登入</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">未知嘅錯誤</string>
+  <string name="upload_dialog_error_unknown_retry">再試過</string>
+  <string name="upload_dialog_error_unknown_ok">取消</string>
+  <string name="upload_dialog_process_message">請稍等⋯⋯</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="acra_dialog_ok_toast">多謝！</string>
+  <string name="about_title">關於</string>
+  <string name="version">版本</string>
+  <string name="contact">聯絡</string>
+  <string name="privacy_policy">私隱</string>
+  <string name="tutorial_dialog_show_again_yes">好</string>
+  <string name="storage_not_permitted_cancel">取消</string>
+  <string name="action_search">搵</string>
+  <string name="favorites_label_not_logged_in_button">簽到</string>
+</resources>

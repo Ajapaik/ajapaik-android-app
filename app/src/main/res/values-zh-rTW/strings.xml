@@ -28,7 +28,7 @@
   <string name="nearest_dialog_error_location_disabled_open">開啟設定</string>
   <string name="nearest_label_no_data">沒有附近的照片</string>
   <string name="nearest_label_no_data_button">查看相簿來瀏覽所有圖片</string>
-  <string name="photo_title">照片詳細資訊</string>
+  <string name="photo_title">照片詳情</string>
   <string name="camera_title">相機</string>
   <string name="profile_title">個人設置</string>
   <string name="profile_facebook_login">使用 Facebook 帳號登入</string>

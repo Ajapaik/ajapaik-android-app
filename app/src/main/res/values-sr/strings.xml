@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * BadDog
+* Zoranzoki21
 -->
 <resources>
   <string name="app_name">Ајапајк рефотографисање</string>
@@ -70,6 +71,7 @@
   <string name="upload_dialog_agree_to_terms">Да</string>
   <string name="upload_dialog_decline_terms">Не</string>
   <string name="acra_dialog_title">Апликација „Ајапајк рефотографисање” је отказала</string>
+  <string name="acra_dialog_text">Дошло је до неочекиване грешке која је приморала апликацију да се заустави. Помозите нам да ово поправимо слањем података о грешци, све што треба да урадите је да кликнете на дугме OK.</string>
   <string name="acra_dialog_comment_prompt">Можете да додајете своје коментаре о проблему испод:</string>
   <string name="acra_dialog_ok_toast">Хвала вам!</string>
   <string name="about_title">О нама</string>
@@ -82,6 +84,7 @@
   <string name="settings_agree_to_license_terms">Прихватам да објавим рефотографисања на Ajapaik.ee под лиценцом CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Додирните да бисте сакрили/приказали слику.\nКористите иконицу за окретање у горњем десном углу да бисте окренули стару слику.</string>
   <string name="tutorial_opacity_zoom">Превуците да бисте прилагодили прозирност старих слика.\nКористите покрет умањивања примицањем прстију да бисте зумирали стару слику.</string>
+  <string name="tutorial_take_picture">Притисните дугме затварача или дуго тапните било где на екрану да бисте снимили фотографију.</string>
   <string name="tutorial_dismiss">Разумем</string>
   <string name="tutorial_dialog_show_again_title">Поново приказати упутство?</string>
   <string name="tutorial_dialog_show_again_message">Можете да поново укључите упутство из подешавања касније</string>
@@ -90,6 +93,7 @@
   <string name="rephoto_drafts">Нацрти рефотографисања</string>
   <string name="no_rephotos">Нема поновних фотографисања</string>
   <string name="storage_not_permitted_title">Складиштење није дозвољено</string>
+  <string name="storage_not_permitted_message">Ако не дозволите овој апликацији да користи складиште, престаје вам приступ неким функцијама, на пример узимање и отпремање фотографија. Размислите о дозвољавању коришћења меморије.</string>
   <string name="storage_not_permitted_cancel">Откажи</string>
   <string name="storage_not_permitted_open_settings">Отвори подешавања</string>
   <string name="my_rephotos">Моја рефотографисања</string>

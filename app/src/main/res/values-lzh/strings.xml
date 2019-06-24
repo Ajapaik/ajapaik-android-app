@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* 神樂坂秀吉
+-->
+<resources>
+  <string name="action_login">籍名</string>
+  <string name="action_logout">出籍</string>
+  <string name="action_settings">簿註</string>
+  <string name="nearest_dialog_error_location_disabled_close">閉</string>
+  <string name="profile_logout">出籍</string>
+  <string name="profile_login">登簿</string>
+  <string name="profile_register">增簿</string>
+  <string name="input_username_hint">郵</string>
+  <string name="input_password_hint">符節</string>
+  <string name="input_firstname_hint">名</string>
+  <string name="input_lastname_hint">姓</string>
+  <string name="login_title">籍名</string>
+  <string name="upload_dialog_error_connection_ok">可</string>
+  <string name="upload_dialog_error_unknown_title">未知之誤</string>
+  <string name="upload_dialog_error_unknown_ok">棄</string>
+  <string name="upload_dialog_success_ok">可</string>
+  <string name="upload_dialog_not_authenticated_ok">可</string>
+  <string name="upload_dialog_agree_to_terms">是</string>
+  <string name="upload_dialog_decline_terms">否</string>
+  <string name="about_title">有關</string>
+  <string name="version">版</string>
+  <string name="privacy_policy">隱私</string>
+  <string name="tutorial_dialog_show_again_no">否</string>
+  <string name="tutorial_dialog_show_again_yes">是</string>
+  <string name="storage_not_permitted_cancel">棄</string>
+  <string name="action_search">尋</string>
+  <string name="favorites_label_not_logged_in_button">登簿</string>
+</resources>
