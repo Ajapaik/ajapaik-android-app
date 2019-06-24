@@ -50,6 +50,11 @@ public class Session extends Model {
         return new Action(context, "/login/", parameters);
     }
 
+    public static WebAction<Session> createRefreshSessionAction(Context context) {
+        return new WebAction<Session>(context, "/user/me/", null, CREATOR);
+    }
+
+
     public static WebAction<Session> createLogoutAction(Context context) {
         return new WebAction<Session>(context, "/logout/", null, CREATOR);
     }
@@ -96,17 +101,22 @@ public class Session extends Model {
     public Map<String, String> getWebParameters() {
         Map<String, String> parameters = new Hashtable<String, String>();
 
-        parameters.put(KEY_WEB_TOKEN, m_token);
-        parameters.put(KEY_WEB_USER, m_user);
+        if (m_token!=null) {
+            parameters.put(KEY_WEB_TOKEN, m_token);
+        }
+
+        if (m_user!=null) {
+            parameters.put(KEY_WEB_USER, m_user);
+        }
 
         Locale locale = Locale.getDefault();
         String language = null;
 
-        if(locale != null) {
+        if (locale != null) {
             language = locale.getLanguage();
         }
 
-        if(language != null) {
+        if (language != null) {
             parameters.put(KEY_WEB_LANGUAGE, language);
         }
 
@@ -125,8 +135,11 @@ public class Session extends Model {
         return m_user;
     }
 
+    // currently server side will expire the session_key
+    // and if there is no sessionid in http response then session is gone
     public boolean isExpired() {
-        return (new Date().getTime() > m_expires) ? true : false;
+        // return (new Date().getTime() > m_expires) ? true : false;
+        return false;
     }
 
     @Override

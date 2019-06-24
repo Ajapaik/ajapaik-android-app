@@ -118,10 +118,12 @@ public class ProfileFragment extends WebFragment {
         super.onStart();
 
         getSwipeRefreshLayout().setRefreshing(true);
-        if (!getSettings().getAuthorization().isAnonymous()) {
-            refresh();
-        } else {
+        Authorization authorization = getSettings().getAuthorization();
+
+        if (authorization == null || authorization.isAnonymous()) {
             initUserInterface();
+        } else {
+            refresh();
         }
     }
 

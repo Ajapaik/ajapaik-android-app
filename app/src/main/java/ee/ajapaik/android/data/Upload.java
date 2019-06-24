@@ -52,6 +52,7 @@ public class Upload extends Model {
     private static final String KEY_SCALE = "scale";
 
     public static WebAction<Upload> createAction(Context context, Upload upload) {
+        Log.d(TAG, "createAction");
         Map<String, String> parameters = new Hashtable<String, String>();
 
         parameters.put("id", upload.getPhoto().getIdentifier());

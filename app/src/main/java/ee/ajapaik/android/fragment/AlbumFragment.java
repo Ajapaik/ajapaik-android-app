@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -26,6 +27,7 @@ import static ee.ajapaik.android.PhotoActivity.IS_FAVORITED_KEY;
 import static ee.ajapaik.android.PhotoActivity.PHOTO_IDENTIFIER_KEY;
 
 public class AlbumFragment extends PhotosFragment {
+    private static final String TAG = "AlbumFragment";
     private static final String KEY_ALBUM_IDENTIFIER = "album_id";
 
     private static final String KEY_ALBUM = "album";
@@ -103,7 +105,8 @@ public class AlbumFragment extends PhotosFragment {
     }
 
     public void setAlbum(Album album, Parcelable state) {
-        if(!Objects.match(m_album, album)) {
+        Log.d(TAG, "setAlbum");
+        if(album!=null) {
             StaggeredGridView gridView = getGridView();
 
             m_album = album;
@@ -112,6 +115,7 @@ public class AlbumFragment extends PhotosFragment {
                 ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getAlbumTitle());
             }
 
+            Log.d(TAG, "album title: " + getAlbumTitle() + "; size:" + album.getPhotos().size() );
             if(state == null) {
                 state = gridView.getLayoutManager().onSaveInstanceState();
             }
@@ -148,12 +152,14 @@ public class AlbumFragment extends PhotosFragment {
 
     @Override
     protected void refresh() {
+        Log.d(TAG, "refresh");
         Context context = getActivity();
         WebAction<Album> action = createAction(context);
         performAction(context, action);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d(TAG, "onActivityResult");
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PHOTO_ACTIVITY_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {

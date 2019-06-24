@@ -55,6 +55,8 @@ import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
+    private static final String TAG = "UploadFragment";
+
     private static final String KEY_UPLOAD = "upload";
 
     private static final int DIALOG_ERROR_NO_CONNECTION = 1;
@@ -116,6 +118,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated");
         super.onActivityCreated(savedInstanceState);
 
         if (savedInstanceState != null) {
@@ -133,7 +136,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             uploadByRephotoBitmap.put(scaledRephoto, upload);
         }
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
         getViewPager().setAdapter(adapter);
         final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
@@ -144,11 +146,9 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             pageIndicator.setViewPager(getViewPager());
             pageIndicator.setOnPageChangeListener(pageChangeListener);
         }
-
         getOldImageView().setImageURI(uploadByRephotoBitmap.entrySet().iterator().next().getValue().getPhoto().getThumbnail(THUMBNAIL_SIZE));
         getOldImageView().setFlipped(getUpload().get(0).isFlipped());
         selectFirstDraftToDisplay(pageChangeListener);
-
         getOldImageView().setOnLoadListener(new WebImageView.OnLoadListener() {
             @Override
             public void onImageLoaded() {
@@ -245,8 +245,40 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         };
     }
 
+    // https://developer.android.com/topic/performance/graphics/load-bitmap
+    private static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+        return inSampleSize;
+    }
+
+
     private Bitmap scaleRephoto(Upload upload) {
-        Bitmap bitmap = BitmapFactory.decodeFile(upload.getPath());
+        Log.d(TAG, "scaleRephoto");
+
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        Bitmap bitmap_info = BitmapFactory.decodeFile(upload.getPath(), options);
+        options.inSampleSize=calculateInSampleSize(options, 1500, 1500);
+        Log.d(TAG, "inSampleSize: " + options.inSampleSize );
+        options.inJustDecodeBounds = false;
+        Bitmap bitmap = BitmapFactory.decodeFile(upload.getPath(), options);
 
         JniBitmapHolder bitmapHolder = new JniBitmapHolder(bitmap);
         bitmap.recycle();
@@ -288,6 +320,8 @@ public class UploadFragment extends WebFragment implements DialogInterface {
      * @param bitmapHolder
      */
     private void loadAndRotateRephotoPreview(String path, JniBitmapHolder bitmapHolder) {
+        Log.d(TAG, "loadAndRotateRephotoPreview");
+
         try {
             ExifInterface exif = new ExifInterface(path);
             int rotation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
@@ -404,7 +438,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             ProfileActivity.start(getContext(), RETURN_ACTIVITY_NAME);
         } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
             if(resultCode == AlertFragment.RESULT_POSITIVE) {
-                SharedPreferences.Editor editor = getSharedPreferences().edit();
+                    SharedPreferences.Editor editor = getSharedPreferences().edit();
                 editor.putBoolean("agreeToLicenseTerms", true);
                 editor.apply();
                 uploadPhoto();
@@ -424,6 +458,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private void uploadPhoto() {
+        Log.d(TAG, "uploadPhoto()");
         if (getSettings().getAuthorization().isAnonymous()) {
             showDialog(DIALOG_NOT_AUTHENTICATED);
         } else if (!isAgreedToTerms()) {
@@ -437,8 +472,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
                 @Override
                 public void onActionResult(Status status, Upload upload) {
-                    hideDialog(DIALOG_PROGRESS);
-
                     if (status.isGood()) {
                         ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
                         showDialog(DIALOG_SUCCESS);

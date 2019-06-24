@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.location.Location;
 import android.util.DisplayMetrics;
+import android.util.Log;
 
 import java.util.Locale;
 
@@ -25,6 +26,8 @@ public class Settings {
     private static final String KEY_PROFILE = "profile";
     private static final String KEY_UPLOAD = "upload";
     private static final String KEY_SESSION = "session";
+    private static final String KEY_SESSION_DIRTY = "sessiondirty";
+    private static final String KEY_INFOVIEWMODE = "infoviewmode";
 
     public static void updateLocale(Context context, String language) {
         Resources resources = context.getResources();
@@ -112,6 +115,30 @@ public class Settings {
         editor.putString(KEY_PROFILE, (profile != null) ? profile.toString() : null);
         editor.apply();
     }
+
+    public Boolean getSessionDirty() {
+        return m_preferences.getString(KEY_SESSION_DIRTY, null) == "1";
+    }
+
+    public void setSessionDirty(Boolean dirty) {
+        SharedPreferences.Editor editor = m_preferences.edit();
+
+        editor.putString(KEY_SESSION_DIRTY, (dirty) ? "1" : "0");
+        editor.apply();
+    }
+
+    public Boolean getInfoViewMode() {
+        return m_preferences.getString(KEY_INFOVIEWMODE, null) == "1";
+    }
+
+    public void setInfoViewMode(Boolean infoViewMode) {
+        Log.d(TAG, "setInfoViewMode: " + infoViewMode.toString());
+        SharedPreferences.Editor editor = m_preferences.edit();
+
+        editor.putString(KEY_INFOVIEWMODE, (infoViewMode) ? "1" : "0");
+        editor.apply();
+    }
+
 
     public Session getSession() {
         return Session.parse(m_preferences.getString(KEY_SESSION, null));
