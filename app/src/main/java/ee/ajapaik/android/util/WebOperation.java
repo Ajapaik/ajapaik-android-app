@@ -9,14 +9,13 @@ import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
 
-import org.apache.hc.client5.http.config.RequestConfig;
 import org.apache.hc.client5.http.cookie.BasicCookieStore;
 import org.apache.hc.client5.http.cookie.Cookie;
 import org.apache.hc.client5.http.entity.mime.FileBody;
 import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
 import org.apache.hc.client5.http.entity.mime.StringBody;
+import org.apache.hc.client5.http.impl.DefaultConnectionKeepAliveStrategy;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
-import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.NameValuePair;
@@ -28,7 +27,6 @@ import org.apache.hc.client5.http.entity.mime.HttpMultipartMode;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.message.BasicNameValuePair;
-import org.apache.hc.core5.util.Timeout;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -39,7 +37,6 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
 
 import ee.ajapaik.android.BuildConfig;
@@ -58,7 +55,6 @@ public abstract class WebOperation {
 
     private static final int RETRY_COUNT = 3;
     private static final long RETRY_INTERVAL = 500;
-    private static final int TIMEOUT = 45;
 
     protected Context m_context;
     private CloseableHttpClient m_client;
@@ -75,6 +71,7 @@ public abstract class WebOperation {
     }
 
     public WebOperation(Context context, String url, Map<String, String> parameters, File file) {
+        Log.d(TAG, "WebOperation()");
         m_context = context;
         m_url = url;
         m_parameters = parameters;
@@ -123,11 +120,14 @@ public abstract class WebOperation {
     }
 
     public boolean performRequest() {
+        Log.d(TAG, "performRequest(null, null, null)");
         return performRequest(null, null, null);
     }
 
     public boolean performRequest(String baseURL, Map<String, String> extraParameters, BasicCookieStore cookieStore) {
+        Log.d(TAG, "performRequest()");
         ConnectivityManager cm = (ConnectivityManager)m_context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
         NetworkInfo info = cm.getActiveNetworkInfo();
         boolean isPost = isPost();
         String url = m_url;
@@ -147,23 +147,10 @@ public abstract class WebOperation {
             }
 
             try {
-                Timeout to = Timeout.ofSeconds(TIMEOUT);
-                RequestConfig config = RequestConfig.custom()
-                        .setConnectTimeout(to)
-                        .setConnectionRequestTimeout(to)
-                        .setResponseTimeout(to)
-                        .setContentCompressionEnabled(true)
-                        .build();
-
-                 m_client =
-                        HttpClientBuilder.create()
-                                .setDefaultCookieStore(cookieStore)
-                                .setDefaultRequestConfig(config)
-                                .build();
-
-/*                m_client = HttpClients.custom()
+                m_client = HttpClients.custom()
+                        .setKeepAliveStrategy(new DefaultConnectionKeepAliveStrategy())
                         .setDefaultCookieStore(cookieStore)
-                        .build();*/
+                        .build();
 
             }
             catch(Exception e) {
@@ -293,7 +280,6 @@ public abstract class WebOperation {
 
                 response = m_client.execute(request);
 
-
                 if((entity = response.getEntity()) != null) {
                     encoding = entity.getContentEncoding();
                 }
@@ -329,13 +315,17 @@ public abstract class WebOperation {
                     }
                     Crashlytics.logException(e);
                 }
-
+                response.close();
                 return true;
             }
             catch(IOException e) {
                 if(BuildConfig.DEBUG) {
                     Log.w(TAG, "Network error", e);
                 }
+
+                Crashlytics.log(e.toString());
+                Crashlytics.setString("URL", url);
+                Crashlytics.logException(e);
 
                 try {
                     HttpEntity entity = response.getEntity();

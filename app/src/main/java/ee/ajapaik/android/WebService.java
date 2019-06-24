@@ -94,9 +94,10 @@ public class WebService extends Service {
         }
 
         // Try to relogin if session is gone
-        if (m_settings.getSession()==null)
+        if (m_settings.getSession()==null || m_session == null)
         {
-            Log.d(TAG, "runSilentLogin: session gone");
+            Log.d(TAG, "runSilentLogin: session gone ( m_settings.getSession() = "
+                    + m_settings.getSession() + "; m_session = " + m_session +" )" );
             WebAction<Session> action;
             action = Session.createLoginAction(this, authorization);
             action.performRequest(API_URL, null, m_cookieStore);
@@ -117,18 +118,20 @@ public class WebService extends Service {
     }
 
     private void runOperation(final Task task, final WebOperation operation) {
+        Log.d(TAG, "runOperation()");
         final boolean isImageRequest = operation instanceof WebImage;
         ExecutorService queue = isImageRequest ? m_imageQueue : m_actionQueue;
 
         queue.execute(new Runnable() {
             @Override
             public void run() {
+                Log.d(TAG, "runOperation() -> run()");
                 boolean isSecure = operation.isSecure();
                 if (!isImageRequest) runSilentLogin();
+
                 operation.performRequest(API_URL, (isSecure && m_session != null) ? m_session.getWebParameters() : null, m_cookieStore);
 
                 if(operation.shouldRetry()) {
-
                     if(m_session != null) {
                         operation.performRequest(API_URL, m_session.getWebParameters(), m_cookieStore);
                     }

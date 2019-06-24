@@ -438,7 +438,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             ProfileActivity.start(getContext(), RETURN_ACTIVITY_NAME);
         } else if (requestCode == DIALOG_NOT_AGREED_TO_TERMS) {
             if(resultCode == AlertFragment.RESULT_POSITIVE) {
-                SharedPreferences.Editor editor = getSharedPreferences().edit();
+                    SharedPreferences.Editor editor = getSharedPreferences().edit();
                 editor.putBoolean("agreeToLicenseTerms", true);
                 editor.apply();
                 uploadPhoto();
@@ -458,6 +458,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
     }
 
     private void uploadPhoto() {
+        Log.d(TAG, "uploadPhoto()");
         if (getSettings().getAuthorization().isAnonymous()) {
             showDialog(DIALOG_NOT_AUTHENTICATED);
         } else if (!isAgreedToTerms()) {
@@ -471,8 +472,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
                 @Override
                 public void onActionResult(Status status, Upload upload) {
-                    hideDialog(DIALOG_PROGRESS);
-
                     if (status.isGood()) {
                         ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
                         showDialog(DIALOG_SUCCESS);

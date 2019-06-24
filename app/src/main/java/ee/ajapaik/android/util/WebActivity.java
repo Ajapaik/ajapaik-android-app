@@ -71,6 +71,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     private GoogleApiClient m_googleApiClient = null;
 
     private ProgressDialog progressDialog;
+    private DialogFragment dialog;
 
     private static final List<String> returnActivities = new ArrayList<String>(){{
             add(UploadFragment.RETURN_ACTIVITY_NAME);
@@ -320,6 +321,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     @Override
     protected void onDestroy() {
         dismissProgressDialog();
+        hideDialogFragment();
         m_connection.dequeueAll(this);
 
         super.onDestroy();
@@ -337,6 +339,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     @Override
     protected void onStop() {
         dismissProgressDialog();
+        hideDialogFragment();
         if (m_googleApiClient != null) {
             m_googleApiClient.disconnect();
         }
@@ -351,6 +354,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     @Override
     protected void onPause() {
         dismissProgressDialog();
+        hideDialogFragment();
         super.onPause();
     }
 
@@ -423,7 +427,10 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
     }
 
     public void showDialogFragment(int requestCode) {
-        DialogFragment dialog = createDialogFragment(requestCode);
+        if (dialog != null) {
+            hideDialogFragment();
+        }
+        dialog = createDialogFragment(requestCode);
         if (dialog != null) {
             String tag = DIALOG_PREFIX + Integer.toString(requestCode);
             FragmentManager manager = getSupportFragmentManager();
@@ -446,13 +453,10 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
         }
     }
 
-    public void hideDialogFragment(int requestCode) {
-        FragmentManager manager = getSupportFragmentManager();
-        String tag = DIALOG_PREFIX + Integer.toString(requestCode);
-        Fragment fragment = manager.findFragmentByTag(tag);
-
-        if (fragment != null) {
-            ((DialogFragment) fragment).dismiss();
+    public void hideDialogFragment() {
+        if (dialog != null) {
+            dialog.dismiss();
+            dialog=null;
         }
     }
 }

@@ -27,8 +27,8 @@ public abstract class WebFragment extends Fragment {
         ((WebActivity)getActivity()).showDialogFragment(dialogId);
     }
 
-    protected void hideDialog(int dialogId) {
-        ((WebActivity)getActivity()).hideDialogFragment(dialogId);
+    protected void hideDialog() {
+        ((WebActivity)getActivity()).hideDialogFragment();
     }
 
     protected void showRequestErrorToast() {
