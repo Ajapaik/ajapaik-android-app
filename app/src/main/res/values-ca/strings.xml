@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Fitoschido
+-->
+<resources>
+  <string name="processing_image">S’està processant la imatge</string>
+  <string name="please_wait">Espereu…</string>
+  <string name="something_went_wrong">Ha fallat alguna cosa</string>
+  <string name="action_albums">Àlbums</string>
+  <string name="action_profile">Perfil</string>
+  <string name="action_refresh">Actualitza</string>
+  <string name="action_settings">Configuració</string>
+  <string name="albums_label_no_data">Cap àlbum</string>
+  <string name="albums_title">Àlbums</string>
+  <string name="album_title">Àlbum</string>
+  <string name="nearest_dialog_error_location_disabled_close">Tanca</string>
+  <string name="camera_title">Càmera</string>
+  <string name="profile_title">Perfil</string>
+  <string name="profile_register">Crea un compte</string>
+  <string name="input_username_hint">Adreça electrònica</string>
+  <string name="input_password_hint">Contrasenya</string>
+  <string name="input_firstname_hint">Nom</string>
+  <string name="input_lastname_hint">Cognoms</string>
+  <string name="user_already_exists">El nom d’usuari ja existeix</string>
+  <string name="upload_dialog_error_connection_retry">Torna a provar</string>
+  <string name="upload_dialog_error_connection_ok">D’acord</string>
+  <string name="upload_dialog_error_unknown_retry">Torna a provar</string>
+  <string name="upload_dialog_error_unknown_ok">Cancel·la</string>
+  <string name="upload_dialog_process_message">Espereu…</string>
+  <string name="upload_dialog_success_ok">D’acord</string>
+  <string name="upload_dialog_not_authenticated_ok">D’acord</string>
+  <string name="acra_dialog_ok_toast">Gràcies.</string>
+  <string name="about_title">Quant a</string>
+  <string name="version">Versió</string>
+  <string name="contact">Contacte</string>
+  <string name="privacy_policy">Privadesa</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="tutorial_dialog_show_again_yes">Sí</string>
+  <string name="storage_not_permitted_cancel">Cancel·la</string>
+  <string name="action_search">Cerca</string>
+  <string name="favorites">Les meves preferides</string>
+  <string name="no_favorites">Cap preferida</string>
+  <string name="action_favorite">Marca com a preferida</string>
+</resources>
