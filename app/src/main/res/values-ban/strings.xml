@@ -6,6 +6,7 @@
 -->
 <resources>
   <string name="app_name">Ngawawanin poto Ajapaik</string>
+  <string name="processing_image">Ngaryanin poto</string>
   <string name="please_wait">Gantosan dumun</string>
   <string name="something_went_wrong">Wénten sané iwang</string>
   <string name="action_albums">Album</string>
@@ -17,6 +18,8 @@
   <string name="action_refresh">Nganyarin</string>
   <string name="action_settings">Pangaturan</string>
   <string name="nearest_title">Gambar sané pinih nampek</string>
+  <string name="finna_title">Poto poto ané paek</string>
+  <string name="finna1918_title">Poto-poto sané nampek</string>
   <string name="albums_label_no_data">Nénten wénten album</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
@@ -24,6 +27,8 @@
   <string name="nearest_dialog_error_location_disabled_message">Nénten prasida ngamolihang genahné mangkin. Napiké meled jagi ngaktifang?</string>
   <string name="nearest_dialog_error_location_disabled_close">Sineb</string>
   <string name="nearest_label_no_data">Nénten wénten gambar sané nampek</string>
+  <string name="nearest_label_no_data_button">Cingakin pupulan anggé ngrereh makasami poto</string>
+  <string name="photo_title">Daging poto</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
   <string name="profile_facebook_login">Ngranjing nganggén Facebook</string>
@@ -40,6 +45,7 @@
   <string name="wrong_password">Kruna sereg iwang!</string>
   <string name="registration_title">Makarya akun</string>
   <string name="user_already_exists">Wastan sang sané nganggé sampun kaanggén</string>
+  <string name="upload_title">Mastiang potrekan ané lénan</string>
   <string name="upload_dialog_error_connection_message">Nénten prasida ngunggahang gambar. Indayang malih?</string>
   <string name="upload_dialog_error_connection_retry">Indayang malih</string>
   <string name="upload_dialog_error_connection_ok">Becik!</string>
@@ -49,26 +55,45 @@
   <string name="upload_dialog_error_unknown_ok">Buungan</string>
   <string name="upload_dialog_process_title">Gambar kantun kaunggahang</string>
   <string name="upload_dialog_process_message">Jantos dumun...</string>
+  <string name="upload_dialog_success_title">Munggahan sampun puput</string>
+  <string name="upload_dialog_success_message">Potoné sampun prasida kaunggah</string>
   <string name="upload_dialog_success_ok">Becik</string>
   <string name="upload_dialog_not_authenticated_title">Patut ngranjing dumun mangda prasida ngunggahang</string>
   <string name="upload_dialog_not_authenticated_ok">Becik</string>
+  <string name="upload_dialog_not_agreed_to_terms">Tiang cumpu jagi nyobyahang poto puniki malarapan ring sor lisensi CC BY 4.0</string>
   <string name="upload_dialog_agree_to_terms">Inggih!</string>
   <string name="upload_dialog_decline_terms">Nénten</string>
+  <string name="acra_dialog_title">Poto ulang Ajapaik madué tetambetan</string>
   <string name="acra_dialog_comment_prompt">Jero prasida ngawuwuhin pasaur praragan indik pikobet ring sor puniki:</string>
   <string name="acra_dialog_ok_toast">Matur suksma!</string>
   <string name="about_title">Indik</string>
   <string name="version">Vérsi</string>
   <string name="contact">Kontak</string>
   <string name="privacy_policy">Pedewekan</string>
+  <string name="navigation_drawer_open">Tanggal pangawit</string>
+  <string name="navigation_drawer_close">Tanggal panguntat</string>
+  <string name="settings_show_tutorial">Édéngang tata cara di modé poto ulang</string>
+  <string name="settings_agree_to_license_terms">Titiang cumpu mangda nyobyahang poto ulang ring Ajipaik malarapan antuk genah ring wewidangan CC BY 4.0 lisensi</string>
+  <string name="tutorial_hide_show_flip">Celek anggo ngengkeban/ngenahang poto.\nAnggon simbol mabalik di sisi tengawan baduur anggo malikang poto ka tongos simalu</string>
   <string name="tutorial_dismiss">Sampun kamanahang!</string>
+  <string name="tutorial_dialog_show_again_title">Édéngang tata cara buin?</string>
+  <string name="tutorial_dialog_show_again_message">Ida prasida ngidupang tata cara malih magenah ring dresta ring galah sané lianan</string>
   <string name="tutorial_dialog_show_again_no">Nénten</string>
   <string name="tutorial_dialog_show_again_yes">Inggih</string>
+  <string name="rephoto_drafts">Pupulan poto ulang</string>
+  <string name="no_rephotos">Nénten wénten poto ulang</string>
   <string name="storage_not_permitted_cancel">Buungan</string>
+  <string name="my_rephotos">Poto ulang karyan titiang</string>
+  <string name="rephotos_label_not_logged_in_text">Tulung munggah mangda prasida nyingakin poto ulang pakaryan idané</string>
   <string name="action_search">Ngrereh</string>
   <string name="favorites">Sané kasenengin</string>
   <string name="no_favorites">Nénten wénten sané kasenengin</string>
   <string name="action_favorite">Sané kasenengin</string>
   <string name="favorites_label_not_logged_in_button">Makarya akun</string>
+  <string name="favorites_label_not_logged_in_text">Tulung munggah mangda prasida nyingakin kasenengan idané</string>
+  <string name="no_search_result">Bukak dresta</string>
   <string name="album_no_data">Nénten wénten gambar</string>
   <string name="start_taking_rephoto">Ngawit ngawawanin foto</string>
+  <string name="show_photo_details">Édéngang isin poto</string>
+  <string name="show_rephotos">Édéngang poto ulang</string>
 </resources>
