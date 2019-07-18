@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Abijeet Patro
 * Omotecho
 * Shirayuki
 * 神樂坂秀吉
@@ -10,7 +11,7 @@
   <string name="please_wait">お待ちください…</string>
   <string name="something_went_wrong">エラーが発生しました</string>
   <string name="action_albums">アルバム</string>
-  <string name="action_flip">フリップ</string>
+  <string name="action_flip" fuzzy="true">フリップ</string>
   <string name="action_login">ログイン</string>
   <string name="action_register">登録する</string>
   <string name="action_logout">ログアウト</string>
