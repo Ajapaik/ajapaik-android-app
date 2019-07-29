@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* ToJack
+-->
+<resources>
+  <string name="app_name">Аҷапайк рефото</string>
+  <string name="processing_image">Коркарди акс</string>
+  <string name="please_wait">Лутфан мунтазир шавед…</string>
+  <string name="something_went_wrong">Чизе хато шуд</string>
+  <string name="action_albums">Албомҳо</string>
+  <string name="action_flip">Гузарондан</string>
+  <string name="action_login">Вуруд ба система</string>
+  <string name="action_register">Сабти ном</string>
+  <string name="action_logout">Баромад</string>
+  <string name="action_profile">Профил</string>
+  <string name="action_refresh">Азнавкунӣ</string>
+  <string name="action_settings">Танзимот</string>
+  <string name="nearest_title">Аксҳои наздик</string>
+  <string name="finna_title">Аксҳои наздик (Финна)</string>
+  <string name="finna1918_title">Аксҳои наздик (1918)</string>
+  <string name="albums_label_no_data">Албоме нест</string>
+  <string name="albums_title">Албомҳо</string>
+  <string name="album_title">Албом</string>
+  <string name="nearest_dialog_error_location_disabled_close">Бастан</string>
+  <string name="nearest_dialog_error_location_disabled_open">Кушодани танзимот</string>
+  <string name="nearest_label_no_data">Аксҳои наздике нест</string>
+  <string name="photo_title">Танзими акс</string>
+  <string name="camera_title">Камера</string>
+  <string name="profile_title">Профил</string>
+  <string name="profile_facebook_login">Бо Фейсбук ворид шудан</string>
+  <string name="profile_google_login">Бо Гугл ворид шудан</string>
+  <string name="profile_logout">Хуруҷ шудан</string>
+  <string name="profile_login">Вуруд</string>
+  <string name="profile_register">Эҷоди ҳисоб</string>
+  <string name="input_username_hint">Почтаи электронӣ</string>
+  <string name="input_password_hint">Гузарвожа</string>
+  <string name="input_firstname_hint">Номи аввал</string>
+  <string name="input_lastname_hint">Номи охир</string>
+  <string name="login_title">Вуруд</string>
+  <string name="login_failed">Вуруди номуваффақ</string>
+  <string name="wrong_password">Гузарвожаи нодуруст</string>
+  <string name="registration_title">Сабти ном</string>
+  <string name="user_already_exists">Ин гуна ном аллакай вуҷуд дорад</string>
+  <string name="upload_dialog_error_connection_title">Хатои пайвастагӣ</string>
+  <string name="upload_dialog_error_connection_retry">Дубора саъй кунед</string>
+  <string name="upload_dialog_error_connection_ok">Таъйид</string>
+  <string name="upload_dialog_error_unknown_title">Хатогии ношинос</string>
+  <string name="upload_dialog_error_unknown_retry">Дубора саъй кунед</string>
+  <string name="upload_dialog_error_unknown_ok">Тамом кардан</string>
+  <string name="upload_dialog_process_title">Боркунии акс</string>
+  <string name="upload_dialog_success_title">Боркунии муваффақон</string>
+  <string name="upload_dialog_success_ok">Таъйид</string>
+  <string name="upload_dialog_not_authenticated_ok">Таъйид</string>
+  <string name="upload_dialog_agree_to_terms">Ҳа!</string>
+  <string name="upload_dialog_decline_terms">На</string>
+  <string name="acra_dialog_ok_toast">Раҳмат!</string>
+  <string name="about_title">Дар бораи</string>
+  <string name="version">Нусха</string>
+  <string name="contact">Тамос</string>
+  <string name="privacy_policy">Ҳарими хусусӣ</string>
+  <string name="navigation_drawer_open">Кушодани тасовир</string>
+  <string name="navigation_drawer_close">Пӯшидани тасовир</string>
+  <string name="tutorial_dismiss">Гирифтан!</string>
+  <string name="tutorial_dialog_show_again_no">Не</string>
+  <string name="tutorial_dialog_show_again_yes">Ҳа</string>
+  <string name="storage_not_permitted_cancel">Пӯшидан</string>
+  <string name="storage_not_permitted_open_settings">Кушодани танзимот</string>
+  <string name="action_search">Ҷустан</string>
+  <string name="favorites">Маъқулаҳои ман</string>
+  <string name="no_favorites">Маъқулае нест</string>
+  <string name="action_favorite">Маъқулшуда</string>
+  <string name="favorites_label_not_logged_in_button">Вуруд</string>
+  <string name="favorites_label_not_logged_in_text">Лутфан барои дидани маъқулаҳо вуруд шавед</string>
+  <string name="no_search_result">Натиҷае дар ҷустуҷӯ нест</string>
+  <string name="album_no_data">Аксе нест</string>
+</resources>

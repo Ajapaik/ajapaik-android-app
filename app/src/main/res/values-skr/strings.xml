@@ -57,6 +57,8 @@
   <string name="version">ورژن</string>
   <string name="contact">رابطہ</string>
   <string name="privacy_policy">پرائیویسی</string>
+  <string name="navigation_drawer_open">دراز کھولو</string>
+  <string name="navigation_drawer_close">دراز بند کرو</string>
   <string name="tutorial_dismiss">گھن گھندا</string>
   <string name="tutorial_dialog_show_again_no">کو</string>
   <string name="tutorial_dialog_show_again_yes">جیا</string>
@@ -65,6 +67,7 @@
   <string name="storage_not_permitted_open_settings">ترتیباں کھولو</string>
   <string name="my_rephotos">میݙے ریفوٹو</string>
   <string name="action_search">ڳولو</string>
+  <string name="favorites">میرے من بھان٘وݨے</string>
   <string name="action_favorite">پسند</string>
   <string name="favorites_label_not_logged_in_button">سائن ان</string>
   <string name="no_search_result">ڳولݨ دا کوئی نتیجہ کائنی</string>
