@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* H2kks
 * Jon Harald Søby
 -->
 <resources>
+  <string name="app_name">Ajapaik da og nå</string>
   <string name="processing_image">Prosesser bilde</string>
   <string name="please_wait">Vent litt …</string>
   <string name="something_went_wrong">Noe gikk galt</string>
@@ -43,6 +45,7 @@
   <string name="wrong_password">Feil passord!</string>
   <string name="registration_title">Registrer deg</string>
   <string name="user_already_exists">Brukernavnet finnes allerede</string>
+  <string name="upload_title">Bekreft refoto</string>
   <string name="upload_dialog_error_connection_title">Tilkoblingsfeil</string>
   <string name="upload_dialog_error_connection_message">Kunne ikke laste opp bildet. Prøve igjen?</string>
   <string name="upload_dialog_error_connection_retry">Prøv igjen</string>
@@ -59,8 +62,10 @@
   <string name="upload_dialog_not_authenticated_title">Må være innlogget for å laste opp</string>
   <string name="upload_dialog_not_authenticated_message">Omdiriger til profilsiden</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_not_agreed_to_terms">Jeg samtykker til å publisere fotografier under lisensen CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ja!</string>
   <string name="upload_dialog_decline_terms">Nei</string>
+  <string name="acra_dialog_title">\"Ajapaik da og nå\" kraschade</string>
   <string name="acra_dialog_text">En ukjent feil oppsto som gjorde at appen stoppet. Hjelp oss gjerne med å fikse dette ved å sende oss feildata, alt du trenger å gjøre er å trykke på OK.</string>
   <string name="acra_dialog_comment_prompt">Du kan legge til kommentarer om problemet nedenfor:</string>
   <string name="acra_dialog_ok_toast">Takk!</string>
@@ -70,6 +75,7 @@
   <string name="privacy_policy">Personvern</string>
   <string name="navigation_drawer_open">Åpne skuff</string>
   <string name="navigation_drawer_close">Lukk skuff</string>
+  <string name="settings_agree_to_license_terms">Jeg samtykker til å publisere fotografier på Ajapaik.ee under lisensen CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Trykk for å skjule/vise bilde.\nBruk snu-ikonet i øvre høyre hjørne for å snu det gamle bildet.</string>
   <string name="tutorial_opacity_zoom">Dra for å stille inn gjennomsiktigheten til det gamle bildet.\nKnip for å zoome inn på det gamle bildet.</string>
   <string name="tutorial_dismiss">Skjønner!</string>
@@ -80,6 +86,7 @@
   <string name="storage_not_permitted_title">Lagring ikke tillatt</string>
   <string name="storage_not_permitted_cancel">Avbryt</string>
   <string name="storage_not_permitted_open_settings">Åpne innstillinger</string>
+  <string name="my_rephotos">Mine refoton</string>
   <string name="action_search">Søk</string>
   <string name="favorites">Mine favoritter</string>
   <string name="no_favorites">Ingen favoritter</string>
@@ -89,6 +96,6 @@
   <string name="no_search_result">Ingen søkeresultater</string>
   <string name="album_no_data">Ingen bilder</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_photo_details">Vis billededetaljer</string>
+  <string name="show_rephotos">Vise refoton</string>
 </resources>
