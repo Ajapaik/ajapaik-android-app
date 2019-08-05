@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Brazal.dang
 * ShimunUfesoj
 -->
 <resources>
@@ -60,7 +61,7 @@
   <string name="upload_dialog_not_authenticated_ok">Sige</string>
   <string name="upload_dialog_agree_to_terms">Iyo!</string>
   <string name="upload_dialog_decline_terms">Dae</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">Magpoon nang magkua nin ladawan</string>
+  <string name="show_photo_details">Ipahiling an detalye kan ladawan</string>
+  <string name="show_rephotos">Ipahiling an mga bagong litrato</string>
 </resources>
