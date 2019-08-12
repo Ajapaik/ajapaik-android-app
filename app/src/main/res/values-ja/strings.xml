@@ -31,10 +31,10 @@
   <string name="photo_title">写真の詳細情報</string>
   <string name="camera_title">カメラ</string>
   <string name="profile_title">プロフィール</string>
-  <string name="profile_facebook_login">Facebook を使用して登録</string>
+  <string name="profile_facebook_login">Facebook を使用してサインイン</string>
   <string name="profile_google_login">Google を使用して登録</string>
   <string name="profile_logout">ログアウト</string>
-  <string name="profile_login">登録</string>
+  <string name="profile_login">サインイン</string>
   <string name="profile_register">アカウントを作成</string>
   <string name="input_username_hint">メールアドレス</string>
   <string name="input_password_hint">パスワード</string>
