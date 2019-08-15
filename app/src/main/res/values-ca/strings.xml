@@ -14,6 +14,7 @@
   <string name="albums_title">Àlbums</string>
   <string name="album_title">Àlbum</string>
   <string name="nearest_dialog_error_location_disabled_close">Tanca</string>
+  <string name="photo_title">Detalls de la fotografia</string>
   <string name="camera_title">Càmera</string>
   <string name="profile_title">Perfil</string>
   <string name="profile_register">Crea un compte</string>
@@ -29,11 +30,15 @@
   <string name="upload_dialog_process_message">Espereu…</string>
   <string name="upload_dialog_success_ok">D’acord</string>
   <string name="upload_dialog_not_authenticated_ok">D’acord</string>
+  <string name="upload_dialog_agree_to_terms">Sí!</string>
+  <string name="upload_dialog_decline_terms">No</string>
   <string name="acra_dialog_ok_toast">Gràcies.</string>
   <string name="about_title">Quant a</string>
   <string name="version">Versió</string>
   <string name="contact">Contacte</string>
   <string name="privacy_policy">Privadesa</string>
+  <string name="tutorial_dismiss">Entesos!</string>
+  <string name="tutorial_dialog_show_again_title">Voleu mostrar el tutorial un altre cop?</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sí</string>
   <string name="storage_not_permitted_cancel">Cancel·la</string>
