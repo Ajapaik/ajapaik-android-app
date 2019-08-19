@@ -37,7 +37,7 @@
   <string name="profile_logout">Logi välja</string>
   <string name="profile_login">Logi sisse</string>
   <string name="profile_register">Loo konto</string>
-  <string name="input_username_hint">Email</string>
+  <string name="input_username_hint">E-post</string>
   <string name="input_password_hint">Salasõna</string>
   <string name="input_firstname_hint">Eesnimi</string>
   <string name="input_lastname_hint">Perekonnanimi</string>
