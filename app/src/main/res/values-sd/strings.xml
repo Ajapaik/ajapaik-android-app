@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Indus Asia
+* Mehtab ahmed
 * Tweety
 -->
 <resources>
   <string name="app_name">ايجاپيڪ ٻيهر تصوير</string>
+  <string name="unit_km">ڪم</string>
+  <string name="unit_m">م</string>
   <string name="processing_image">تصوير تياري هيٺ</string>
   <string name="please_wait">مھرباني ڪري انتظار ڪريو…</string>
   <string name="something_went_wrong">ڪا غلطي ٿي آهي</string>
@@ -17,6 +20,8 @@
   <string name="action_refresh">تازو ڪيو</string>
   <string name="action_settings">ترتيبون</string>
   <string name="nearest_title">ويجهيون تصويرون</string>
+  <string name="finna_title">ويجھا ڦوٽو (Finna(</string>
+  <string name="finna1918_title">ويجھا ڦوٽو (1918)</string>
   <string name="albums_label_no_data">ايلبم ناهي</string>
   <string name="albums_title">آلبمَ</string>
   <string name="album_title">آلبم</string>
@@ -64,7 +69,7 @@
   <string name="upload_dialog_not_authenticated_title">اپلوڊ ڪرڻ لاءِ داخل ٿيڻ ضروري آهي</string>
   <string name="upload_dialog_not_authenticated_message">پرفائيل ڏانهن موڙيو</string>
   <string name="upload_dialog_not_authenticated_ok">ٺيڪ</string>
-  <string name="upload_dialog_not_agreed_to_terms">آئون CC BY 4.0 تحت راضي آهيان ته تصوير کي ٻيهر ڇاپيو.</string>
+  <string name="upload_dialog_not_agreed_to_terms">آئون سيسي بي.واءِ 4.0 اجازتنامي ھيٺ ڦوٽوگراف ڇاپڻ لاءِ راضي ٿيان ٿو.</string>
   <string name="upload_dialog_agree_to_terms">ها!</string>
   <string name="upload_dialog_decline_terms">نه</string>
   <string name="acra_dialog_title">\'اجاپيڪ نئين تصوير\' ختم ٿي وئي</string>
@@ -78,7 +83,7 @@
   <string name="navigation_drawer_open">ڪٻٽ کوليو</string>
   <string name="navigation_drawer_close">ڪٻٽ بند ڪيو</string>
   <string name="settings_show_tutorial">نئين تصوير واري موڊ ۾ سبق ڏيکاريو</string>
-  <string name="settings_agree_to_license_terms">آئون CC BY 4.0 تحت راضي آهيان ته تصوير کي ٻيهر ڇاپيو.</string>
+  <string name="settings_agree_to_license_terms">آئون سيسي بي.واءِ 4.0 اجازتنامي ھيٺ Ajapaik.ee تي ڦوٽوگراف ڇاپڻ لاءِ راضي آھيان.</string>
   <string name="tutorial_hide_show_flip">تصوير گم ڪرڻ/ڏيکارڻ لاءِ دٻايو.\nمٿي کاٻي طرف موڙيو نشاني کي دٻائي پراڻين تصويرن ڏي وڃي سگھو ٿا.</string>
   <string name="tutorial_opacity_zoom">پراڻي تصوير کي شفاف بنائڻ لاءِ ڇڪيو.\nڇڪيو پراڻي تصوير کي زوم ڪرڻ لاءِ.</string>
   <string name="tutorial_take_picture">فوٽو واري بٽڻ يا اسڪرين تي ڪٿي به زور ڏئي ٻيهر تصوير ڪڍو.</string>
@@ -102,7 +107,7 @@
   <string name="favorites_label_not_logged_in_text">پسنديده ڏسڻ لاءِ اول داخل ٿيو</string>
   <string name="no_search_result">ڳولا جا نتيجا نه مليا</string>
   <string name="album_no_data">تصويرون ناهن</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
+  <string name="start_taking_rephoto">ٻيھر-ڦوٽو ڪڍڻ شروع ڪريو</string>
+  <string name="show_photo_details">ڦوٽو جا تفصيل ڏيکاريو</string>
   <string name="show_rephotos" fuzzy="true">Show rephotos</string>
 </resources>
