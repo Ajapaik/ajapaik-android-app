@@ -63,4 +63,26 @@
   <string name="acra_dialog_ok_toast">Dast et dard ma kan!</string>
   <string name="about_title">Bàrawà</string>
   <string name="version">Weržen</string>
+  <string name="contact">رابتہ</string>
+  <string name="privacy_policy">وتیگی</string>
+  <string name="navigation_drawer_open">درئیورء پچ کنگ</string>
+  <string name="navigation_drawer_close">درئیورء بندگ</string>
+  <string name="tutorial_dismiss">برو!</string>
+  <string name="tutorial_dialog_show_again_no">نں</string>
+  <string name="tutorial_dialog_show_again_yes">ھؤ</string>
+  <string name="storage_not_permitted_cancel">بجّگ</string>
+  <string name="storage_not_permitted_open_settings">ردانکانء پچ کنگ</string>
+  <string name="my_rephotos">منی اکساں</string>
+  <string name="rephotos_label_not_logged_in_text">پہ وتی اکسانء چارگ‌ئا مان بئ اݔت</string>
+  <string name="action_search">شۏھاز</string>
+  <string name="favorites">منی دلواھشتاں</string>
+  <string name="no_favorites">دلواھشتے نے</string>
+  <string name="action_favorite">دلواھشت</string>
+  <string name="favorites_label_not_logged_in_button">ھۏر بییگ</string>
+  <string name="favorites_label_not_logged_in_text">پہ وتی واھشتانء چارگ‌ئا مان بئ اݔت</string>
+  <string name="no_search_result">ھچے درگݔجگ نہ بیت</string>
+  <string name="album_no_data">اکس نے</string>
+  <string name="start_taking_rephoto">اکس گرگء بنگݔج</string>
+  <string name="show_photo_details">اکسء چیزانء سۏج</string>
+  <string name="show_rephotos">اکسانء سۏج</string>
 </resources>

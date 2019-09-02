@@ -3,7 +3,7 @@
 * Hedda
 -->
 <resources>
-  <string name="app_name">Ajapaik rephoto</string>
+  <string name="app_name">Ajapaik yeniden fotoğraflama</string>
   <string name="processing_image">Görüntü işleniyor</string>
   <string name="please_wait">Lütfen bekleyin…</string>
   <string name="something_went_wrong">Bir şeyler yanlış gitti</string>
@@ -40,16 +40,16 @@
   <string name="input_firstname_hint">İsim</string>
   <string name="input_lastname_hint">Soyisim</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Henüz rephoto\'nuz yok</item>
+    <item quantity="zero">Henüz yeniden fotoğraflamanız yok</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; yeniden fotoğraflama</item>
   </plurals>
   <string name="login_title">Giriş</string>
   <string name="login_failed">Giriş başarılı</string>
   <string name="wrong_password">Yanlış parola!</string>
   <string name="registration_title">Kaydol</string>
   <string name="user_already_exists">Bu kullanıcı adı zaten mevcut</string>
-  <string name="upload_title">Rephoto\'yu Onayla</string>
+  <string name="upload_title">Yeniden Fotoğraflamayı Onayla</string>
   <string name="upload_dialog_error_connection_title">Bağlantı Hatası</string>
   <string name="upload_dialog_error_connection_message">Fotoğraf yüklenemedi. Tekrar denemek ister misiniz?</string>
   <string name="upload_dialog_error_connection_retry">Tekrar Deneyin</string>
@@ -59,17 +59,17 @@
   <string name="upload_dialog_error_unknown_retry">Tekrar Deneyin</string>
   <string name="upload_dialog_error_unknown_ok">Vazgeç</string>
   <string name="upload_dialog_process_title">Fotoğraf yükleniyor</string>
-  <string name="upload_dialog_process_message">Lütfen bekleyin…</string>
+  <string name="upload_dialog_process_message">Lütfen bekleyin...</string>
   <string name="upload_dialog_success_title">Yükleme Başarılı</string>
   <string name="upload_dialog_success_message">Fotoğraf başarıyla yüklendi!</string>
   <string name="upload_dialog_success_ok">Tamam</string>
   <string name="upload_dialog_not_authenticated_title">Yükleme yapmak için giriş yapılmalı</string>
   <string name="upload_dialog_not_authenticated_message">Profil sayfasına yönlendir</string>
   <string name="upload_dialog_not_authenticated_ok">Tamam</string>
-  <string name="upload_dialog_not_agreed_to_terms">Refotoğrafları, CC BY 4.0 lisansı altında yayınlamayı kabul ediyorum.</string>
+  <string name="upload_dialog_not_agreed_to_terms">Yeniden fotoğraflamayı, CC BY 4.0 lisansı altında yayınlamayı kabul ediyorum.</string>
   <string name="upload_dialog_agree_to_terms">Evet!</string>
   <string name="upload_dialog_decline_terms">Hayır</string>
-  <string name="acra_dialog_title">\'Ajapaik rephoto\' çöktü</string>
+  <string name="acra_dialog_title">\'Ajapaik yeniden fotoğraflama\' çöktü</string>
   <string name="acra_dialog_text">Uygulamayı durmaya zorlayan beklenmedik bir hata oluştu. Lütfen bize hata verilerini göndererek düzeltmemize yardımcı olun, yapmanız gereken tek şey Tamam\'a tıklamaktır.</string>
   <string name="acra_dialog_comment_prompt">Aşağıdaki sorun hakkında yorumlarınızı ekleyebilirsiniz:</string>
   <string name="acra_dialog_ok_toast">Teşekkürler!</string>
@@ -79,24 +79,24 @@
   <string name="privacy_policy">Gizlilik</string>
   <string name="navigation_drawer_open">Çekmeceyi açın</string>
   <string name="navigation_drawer_close">Çekmeceyi kapayın</string>
-  <string name="settings_show_tutorial">Rephoto modunda eğiticiyi göster</string>
+  <string name="settings_show_tutorial">Yeniden fotoğraflama modunda eğiticiyi göster</string>
   <string name="settings_agree_to_license_terms">Refotoğrafları, CC-4.0 lisansı altında Ajapaik.ee üzerinde yayınlamayı kabul ediyorum.</string>
   <string name="tutorial_hide_show_flip">Resmi gizlemek/göstermek için dokunun.\nEski resmi çevirmek için sağ üst köşedeki çevirme simgesini kullanın.</string>
   <string name="tutorial_opacity_zoom">Eski resmin saydamlığını ayarlamak için kaydırın.\nEski resmi yakınlaştırmak için yakınlaştırma yapın.</string>
-  <string name="tutorial_take_picture">Rephoto çekmek için deklanşöre basın veya ekranda herhangi bir yere uzunca dokunun.</string>
+  <string name="tutorial_take_picture">Yeniden fotoğraflama çekmek için deklanşöre basın veya ekranda herhangi bir yere uzunca dokunun.</string>
   <string name="tutorial_dismiss">Anladım!</string>
   <string name="tutorial_dialog_show_again_title">Eğitici tekrar gösterilsin mi?</string>
   <string name="tutorial_dialog_show_again_message">Eğiticiyi daha sonra ayarlardan tekrar açabilirsiniz.</string>
   <string name="tutorial_dialog_show_again_no">Hayır</string>
   <string name="tutorial_dialog_show_again_yes">Evet</string>
-  <string name="rephoto_drafts">Rephoto taslakları</string>
-  <string name="no_rephotos">Rephoto yok</string>
+  <string name="rephoto_drafts">Yeniden fotoğraflama taslakları</string>
+  <string name="no_rephotos">Yeniden fotoğraflama yok</string>
   <string name="storage_not_permitted_title">Depolamaya izin verilmiyor</string>
   <string name="storage_not_permitted_message">Bu uygulamanın depolama alanını kullanmasına izin vermemek, bazı özelliklere erişmenizi, örneğin yeniden resim çekmeyi ve yüklemeyi durdurmanızı engeller. Lütfen depolama alanı kullanımına izin vermeyi düşünün</string>
   <string name="storage_not_permitted_cancel">Vazgeç</string>
   <string name="storage_not_permitted_open_settings">Ayarları aç</string>
-  <string name="my_rephotos">Benim rephoto\'larım</string>
-  <string name="rephotos_label_not_logged_in_text">Rephoto\'larınızı görmek için lütfen giriş yapın</string>
+  <string name="my_rephotos">Yeniden fotoğraflandırdıklarım</string>
+  <string name="rephotos_label_not_logged_in_text">Yeniden fotoğraflandırdıklarınızı görmek için lütfen giriş yapın</string>
   <string name="action_search">Ara</string>
   <string name="favorites">Favorilerim</string>
   <string name="no_favorites">Favori yok</string>
@@ -105,7 +105,7 @@
   <string name="favorites_label_not_logged_in_text">Favorilerinizi görmek için lütfen giriş yapın</string>
   <string name="no_search_result">Arama sonucu bulunamadı</string>
   <string name="album_no_data">Fotoğraf yok</string>
-  <string name="start_taking_rephoto">Rephoto çekmeye başla</string>
+  <string name="start_taking_rephoto">Yeniden fotoğraflama çekmeye başla</string>
   <string name="show_photo_details">Fotoğraf detaylarını göster</string>
-  <string name="show_rephotos">Rephoto\'ları göster</string>
+  <string name="show_rephotos">Yeniden fotoğraflamaları göster</string>
 </resources>
