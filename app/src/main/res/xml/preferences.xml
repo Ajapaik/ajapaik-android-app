@@ -5,6 +5,11 @@
                         android:key="showTutorialPreference"
                         android:widgetLayout="@layout/checkbox_layout"
                         android:layout="@layout/preference_layout"/>
+    <CheckBoxPreference android:title="@string/settings_show_map_by_default"
+                        android:defaultValue="false"
+                        android:key="showMapByDefaultPreference"
+                        android:widgetLayout="@layout/checkbox_layout"
+                        android:layout="@layout/preference_layout"/>
     <CheckBoxPreference android:title="@string/settings_agree_to_license_terms"
                         android:defaultValue="true"
                         android:key="agreeToLicenseTerms"

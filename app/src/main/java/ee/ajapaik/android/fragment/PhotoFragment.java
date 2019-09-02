@@ -3,6 +3,7 @@ package ee.ajapaik.android.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.location.Location;
 import android.location.LocationManager;
@@ -60,11 +61,13 @@ import ee.ajapaik.android.widget.WebImageView;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.content.Context.MODE_PRIVATE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.OnClickListener;
 import static android.view.View.VISIBLE;
+import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
 
 public class PhotoFragment extends ImageFragment {
     private static final String TAG = "PhotoFragment";
@@ -147,15 +150,20 @@ public class PhotoFragment extends ImageFragment {
                             mMap.setMyLocationEnabled(true);
                         }
 
+                        MarkerOptions markerOptions;
                         LatLng photoLocation = new LatLng(m_photo.getLocation().getLatitude(), m_photo.getLocation().getLongitude());
-                        MarkerOptions markerOptions = new MarkerOptions()
+                        if (m_photo.getLocation().hasBearing() && (m_photo.getLocation().getBearing() != 0) ) {
+                            markerOptions = new MarkerOptions()
                                 .position(photoLocation)
                                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigation_black_18));
-
-                        if (m_photo.getLocation().hasBearing()) {
                             markerOptions.rotation(m_photo.getLocation().getBearing());
                         }
-
+                        else
+                        {
+                            markerOptions = new MarkerOptions()
+                                    .position(photoLocation)
+                                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.room_black_48x48));
+                        }
                         mMap.addMarker(markerOptions);
 
                         LatLngBounds.Builder builder = new LatLngBounds.Builder();
@@ -200,8 +208,17 @@ public class PhotoFragment extends ImageFragment {
             m_photo = getPhoto();
         }
 
-        if (m_photo.getLocation() != null) {
-            m_infoViewMode = getSettings().getInfoViewMode();
+        if (m_photo.getLocation() != null ) {
+            SharedPreferences prefs=getActivity().getSharedPreferences(DEFAULT_PREFERENCES_KEY, MODE_PRIVATE);
+
+            if (prefs.getBoolean("showMapByDefaultPreference", false))
+            {
+                m_infoViewMode = false; // getSettings().getInfoViewMode();
+            }
+            else
+            {
+                m_infoViewMode = true;
+            }
             toggleMapAndInfo();
             initMap(savedInstanceState);
         }
