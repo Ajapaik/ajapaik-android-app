@@ -20,7 +20,7 @@
   <string name="action_settings">Asetukset</string>
   <string name="nearest_title">Lähistöllä</string>
   <string name="finna_title">Lähistöllä (Finna)</string>
-  <string name="finna1918_title">Lähistöllä (1918)</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">Ei albumeita</string>
   <string name="albums_title">Albumit</string>
   <string name="album_title">Albumi</string>
@@ -83,6 +83,7 @@
   <string name="navigation_drawer_open">Avaa</string>
   <string name="navigation_drawer_close">Sulje</string>
   <string name="settings_show_tutorial">Näytä opastus uudelleenkuvaustilassa</string>
+  <string name="settings_show_map_by_default">Näytä kartta vakiona</string>
   <string name="settings_agree_to_license_terms">Hyväksyn valokuvieni julkaisemisen Ajapaik.ee:ssä CC BY 4.0 -lisenssillä.</string>
   <string name="tutorial_hide_show_flip">Vanhan kuvan saa pois näkyviltä ja takaisin klikkaamalla ruutua.\nKuvan saa peilikuvaksi oikean ylänurkan käännä-kuvakkeella.</string>
   <string name="tutorial_opacity_zoom">Sormen liuttaminen kuvan päällä säätää kuvan läpinäkyvyyttä.\nKahdella sormella nipistäminen lähentää tai loitontaa kuvaa.</string>

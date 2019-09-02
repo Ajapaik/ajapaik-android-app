@@ -17,7 +17,7 @@
   <string name="action_settings">Tiaƒe</string>
   <string name="nearest_title">Kpuiƒefotowo</string>
   <string name="finna_title">Kpuiƒefotowo (Finna)</string>
-  <string name="finna1918_title">Kpuiƒefotowo (Ƒe 1918)</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">Album meli o</string>
   <string name="albums_title">Fotonɔƒewo</string>
   <string name="album_title">Fotonɔƒe</string>
@@ -76,6 +76,7 @@
   <string name="navigation_drawer_open">Ʋu drɔwɔa</string>
   <string name="navigation_drawer_close">Tu drɔwɔa</string>
   <string name="settings_show_tutorial">Nufiamenuwo nedze le fotogbugbɔɖe me</string>
+  <string name="settings_show_map_by_default">Vaikimisi näita kaarti</string>
   <string name="settings_agree_to_license_terms">Melɔ̃ be woakaka fotogbugbɔɖewo le Ajapaik.ee dzi le ezãmɔɖeɖe CC BY 4.0 ƒe ɖoɖoa nu.</string>
   <string name="tutorial_hide_show_flip">Zi edzi ne fotoa nadze/naɣla.\nZã fototɔtrɔ ƒe dzesikpevi si le ɖusimedzogoe si le dzia dzi nàtsɔ atrɔ foto xoxowo.</string>
   <string name="tutorial_opacity_zoom">Hee yi nàtsɔ atrɔ asi le foto xoxowo ƒe kɔkɔme ŋu. Te fe nukeke ƒe dzesia dzi nàtsɔ akake foto xoxowo.</string>

@@ -25,7 +25,7 @@
 
     <!-- Finna -->
     <string name="finna_title">Photos nearby (Finna)</string>
-    <string name="finna1918_title">Photos nearby (1918)</string>
+    <string name="finna1918_title">Signe Brander</string>
 
 
     <!-- Albums -->
@@ -117,6 +117,7 @@
 
     <!-- Settings -->
     <string name="settings_show_tutorial">Show tutorial in rephoto mode</string>
+    <string name="settings_show_map_by_default">Show map by default</string>
     <string name="settings_agree_to_license_terms">I agree to publishing rephotographs on Ajapaik.ee under CC BY 4.0 licence.</string>
 
     <!-- Tutorial -->
