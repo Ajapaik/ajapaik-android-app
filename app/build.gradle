@@ -5,9 +5,9 @@ android {
     defaultConfig {
         applicationId "ee.ajapaik.android"
         minSdkVersion 21
-        targetSdkVersion 27
-        versionCode 1016
-        versionName "2.0.6"
+        targetSdkVersion 28
+        versionCode 1017
+        versionName "2.0.7"
         multiDexEnabled true
     }
     buildTypes {
