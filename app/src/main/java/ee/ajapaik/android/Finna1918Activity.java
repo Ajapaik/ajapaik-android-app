@@ -14,7 +14,7 @@ public class Finna1918Activity extends NearestActivity {
 
         FinnaFragment f =  new FinnaFragment();
         f.setAlbumTitle(getString(R.string.finna1918_title));
-        f.setFinnaAlbum("1918");
+        f.setFinnaAlbum("signebrander");
         return f;
     }
 }
