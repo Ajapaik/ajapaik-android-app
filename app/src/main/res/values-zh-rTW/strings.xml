@@ -81,6 +81,7 @@
   <string name="navigation_drawer_open">開啟繪圖</string>
   <string name="navigation_drawer_close">關閉繪圖</string>
   <string name="settings_show_tutorial">在翻拍模式顯示教學內容</string>
+  <string name="settings_show_map_by_default">按預設顯示地圖</string>
   <string name="settings_agree_to_license_terms">我同意以姓名標示 4.0 國際（CC BY 4.0）授權來發佈翻拍的照片到 Ajapaik.ee 裡。</string>
   <string name="tutorial_hide_show_flip">輕觸隱藏/顯示圖片。\n使用右上角翻轉圖標來翻轉舊有圖片。</string>
   <string name="tutorial_opacity_zoom">滑動來調整舊有圖片的透明度。\n兩指觸控來縮放舊有圖片。</string>

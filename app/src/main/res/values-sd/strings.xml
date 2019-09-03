@@ -21,7 +21,7 @@
   <string name="action_settings">ترتيبون</string>
   <string name="nearest_title">ويجهيون تصويرون</string>
   <string name="finna_title">ويجھا ڦوٽو (Finna(</string>
-  <string name="finna1918_title">ويجھا ڦوٽو (1918)</string>
+  <string name="finna1918_title" fuzzy="true">ويجھا ڦوٽو (1918)</string>
   <string name="albums_label_no_data">ايلبم ناهي</string>
   <string name="albums_title">آلبمَ</string>
   <string name="album_title">آلبم</string>

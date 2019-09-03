@@ -19,7 +19,7 @@
   <string name="action_settings">Pangaturan</string>
   <string name="nearest_title">Gambar sané pinih nampek</string>
   <string name="finna_title">Poto poto ané paek</string>
-  <string name="finna1918_title">Poto-poto sané nampek</string>
+  <string name="finna1918_title" fuzzy="true">Poto-poto sané nampek</string>
   <string name="albums_label_no_data">Nénten wénten album</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>

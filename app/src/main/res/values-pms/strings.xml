@@ -80,6 +80,7 @@
   <string name="navigation_drawer_open">Duverté ël tirol</string>
   <string name="navigation_drawer_close">Saré \'l tirol</string>
   <string name="settings_show_tutorial">Smon-e lë spiegon an meud dobion ëd fòto</string>
+  <string name="settings_show_map_by_default">Smon-e la carta dë stàndard</string>
   <string name="settings_agree_to_license_terms">I son d\'acòrd ëd publiché ij dobion ëd fòto su Ajapaik.ee sota la licensa CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Sgnaché për ëstërmé/smon-e la plancia.\nDovré la plancia ëd viragi ant ël canton an àut a drita për volté la plancia veja.</string>
   <string name="tutorial_opacity_zoom">Fé sghijé për rangé la trasparensa dla veja plancia.\nPëssié l\'angrandiment për modifiché l\'angrandiment ëd la veja plancia.</string>

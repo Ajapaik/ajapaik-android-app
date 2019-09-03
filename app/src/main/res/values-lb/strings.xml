@@ -58,6 +58,7 @@
   <string name="privacy_policy">Dateschutz</string>
   <string name="navigation_drawer_open">Tirang opmaachen</string>
   <string name="navigation_drawer_close">Tirang zoumaachen</string>
+  <string name="settings_show_map_by_default">Kaart generell weisen</string>
   <string name="tutorial_dismiss">Verstanen!</string>
   <string name="tutorial_dialog_show_again_no">Neen</string>
   <string name="tutorial_dialog_show_again_yes">Jo</string>

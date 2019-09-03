@@ -10,6 +10,7 @@
   <string name="action_profile">Perfil</string>
   <string name="action_refresh">Actualitza</string>
   <string name="action_settings">Configuració</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">Cap àlbum</string>
   <string name="albums_title">Àlbums</string>
   <string name="album_title">Àlbum</string>
@@ -37,6 +38,7 @@
   <string name="version">Versió</string>
   <string name="contact">Contacte</string>
   <string name="privacy_policy">Privadesa</string>
+  <string name="settings_show_map_by_default">Mostra per defecte el mapa</string>
   <string name="tutorial_dismiss">Entesos!</string>
   <string name="tutorial_dialog_show_again_title">Voleu mostrar el tutorial un altre cop?</string>
   <string name="tutorial_dialog_show_again_no">No</string>

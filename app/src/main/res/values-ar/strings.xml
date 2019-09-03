@@ -84,6 +84,7 @@
   <string name="navigation_drawer_open">الدرج المفتوح</string>
   <string name="navigation_drawer_close">إغلاق الدرج</string>
   <string name="settings_show_tutorial">عرض البرنامج التعليمي في وضع إعادة التصوير</string>
+  <string name="settings_show_map_by_default">عرض الخريطة بشكل افتراضي</string>
   <string name="settings_agree_to_license_terms">أوافق على نشر صور إعادة التصوير في Ajapaik.ee بموجب ترخيص المشاع الإبداعي النسبة 4.0.</string>
   <string name="tutorial_hide_show_flip">انقر لإخفاء/إظهار الصورة.\nاستخدم رمز الوجه في الزاوية اليمنى العليا لقلب الصورة القديمة.</string>
   <string name="tutorial_opacity_zoom">حرك لضبط شفافية الصورة القديمة.\nاضبط التكبير لتكبير الصورة القديمة.</string>

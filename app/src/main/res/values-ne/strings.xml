@@ -18,7 +18,7 @@
   <string name="action_settings">सेटिङहरू</string>
   <string name="nearest_title">नजिकैका फोटोहरू</string>
   <string name="finna_title">नजिकैका फोटोहरू (Finna)</string>
-  <string name="finna1918_title">नजिकैका फोटोहरू (1918)</string>
+  <string name="finna1918_title" fuzzy="true">नजिकैका फोटोहरू (1918)</string>
   <string name="albums_label_no_data">एल्बमहरू छैनन्</string>
   <string name="albums_title">एल्बमहरू</string>
   <string name="album_title">एल्बम</string>

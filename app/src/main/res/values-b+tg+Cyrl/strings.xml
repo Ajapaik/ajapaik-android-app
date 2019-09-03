@@ -17,7 +17,7 @@
   <string name="action_settings">Танзимот</string>
   <string name="nearest_title">Аксҳои наздик</string>
   <string name="finna_title">Аксҳои наздик (Финна)</string>
-  <string name="finna1918_title">Аксҳои наздик (1918)</string>
+  <string name="finna1918_title" fuzzy="true">Аксҳои наздик (1918)</string>
   <string name="albums_label_no_data">Албоме нест</string>
   <string name="albums_title">Албомҳо</string>
   <string name="album_title">Албом</string>
