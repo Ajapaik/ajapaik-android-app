@@ -84,6 +84,7 @@
   <string name="navigation_drawer_open">Ouvrir le tiroir</string>
   <string name="navigation_drawer_close">Fermer le tiroir</string>
   <string name="settings_show_tutorial">Afficher le tutoriel en mode rephoto</string>
+  <string name="settings_show_map_by_default">Afficher la carte par défaut</string>
   <string name="settings_agree_to_license_terms">J’accepte de publier les rephotographies sur Ajapaik.ee sous la licence CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Taper pour masquer/afficher l’image.\nUtiliser l’icône de retournement dans le coin en haut à droite pour retourner à l’ancienne image.</string>
   <string name="tutorial_opacity_zoom">Faire glisser pour ajuster la transparence de l’ancienne image.\nPincer le zoom pour zoomer sur l’ancienne image.</string>

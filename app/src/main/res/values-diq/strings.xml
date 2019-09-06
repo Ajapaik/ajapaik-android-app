@@ -81,6 +81,7 @@
   <string name="navigation_drawer_open">Çımeyi ake</string>
   <string name="navigation_drawer_close">Çımeyi cade</string>
   <string name="settings_show_tutorial">Modê refotoyi de musnayoği bımocne</string>
+  <string name="settings_show_map_by_default">Xeritaya hesabiyayiye bıvêne</string>
   <string name="settings_agree_to_license_terms">Refotoğrafan, bınê lisansê CC-4.0 de Ajapaik.ee sero neşrkerdışi ezo qebul kenan.</string>
   <string name="tutorial_hide_show_flip">Resımi nımnayış/mocnayışi rê cı gıne.\nSeba çarnayışê resımi rê sembolê çarnayışiyo ke cor kışta raşti de yo, ey bıgurene.</string>
   <string name="tutorial_opacity_zoom">Şefafiya resımê kehani eyarkerdışi rê ğız ke.\nResımê kehani nêzdikerdışi rê nêzdi ke.</string>

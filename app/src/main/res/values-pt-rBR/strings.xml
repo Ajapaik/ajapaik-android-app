@@ -82,6 +82,7 @@
   <string name="navigation_drawer_open">Abrir a gaveta</string>
   <string name="navigation_drawer_close">Fechar a gaveta</string>
   <string name="settings_show_tutorial">Mostrar a explicação no modo da refotografia</string>
+  <string name="settings_show_map_by_default">Mostrar mapa por padrão</string>
   <string name="settings_agree_to_license_terms">Concordo em publicar as refotografias no Ajapaik.ee nos termos da licença CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Toque para esconder/mostrar a imagem.\nUtilize o ícone de virar no canto superior direito para retornar à imagem antiga.</string>
   <string name="tutorial_opacity_zoom">Deslize para ajustar a transparência da imagem antiga.\nMova a aproximação para ampliar a imagem antiga.</string>
