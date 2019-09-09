@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Erelon
+* Falling star
 * Steeve815
 * YaronSh
 -->
@@ -78,11 +79,15 @@
   <string name="storage_not_permitted_title">אין הרשאה לאחסון</string>
   <string name="storage_not_permitted_cancel">ביטול</string>
   <string name="storage_not_permitted_open_settings">פתיחת ההגדרות</string>
+  <string name="my_rephotos">התמונות החוזרות שלי</string>
+  <string name="rephotos_label_not_logged_in_text">יש להתחבר כדי לראות את התמונות שלך</string>
   <string name="action_search">חיפוש</string>
   <string name="favorites">המועדפים שלי</string>
   <string name="no_favorites">אין מועדפים</string>
   <string name="action_favorite">מועדף</string>
   <string name="favorites_label_not_logged_in_button">כניסה</string>
+  <string name="favorites_label_not_logged_in_text">יש להתחבר כדי לראות את המועדפים שלך</string>
+  <string name="no_search_result">אין תוצאות חיפוש</string>
   <string name="album_no_data">אין תמונות</string>
   <string name="show_photo_details">הצגת פרטי התמונה</string>
 </resources>
