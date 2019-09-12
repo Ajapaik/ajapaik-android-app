@@ -1,0 +1,14 @@
+# Messages for British English (British English)
+# Exported from translatewiki.net
+# Author: Cblair91
+
+title=Ajapaik rephoto
+short-description=Look up the vantage points of historic images and rephotograph the views!
+description.paragraph.1=Ajapaik rephoto application displays historic images taken near to you and offers an easy way to take rephotographs of the same views.
+description.accuracy.title=In order to make the rephotography more convenient
+description.accuracy.bullet.1=* you can change the transparency of the historic image on your camera stream by sliding along the screen
+description.accuracy.bullet.2=* pinch zoom the historic image
+description.paragraph.2=In the new (2018) version you can also browse and search the albums, search for specific image, view the rephotos made by yourself or other users.
+description.paragraph.3=Now the rephoto drafts can be saved and browsed and uploaded to Ajapaik.ee later (over the wi-fi for instance).
+description.paragraph.4=In order to upload a rephotograph you have to authenticate yourself with Google or Facebook account or with an email based account.
+description.paragraph.5=By uploading rephotos to Ajapaik you agree to releasing the images under Creative Commons Attribution (CC BY) licence.

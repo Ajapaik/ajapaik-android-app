@@ -67,6 +67,7 @@
   <string name="privacy_policy">개인정보</string>
   <string name="navigation_drawer_open">서랍 열기</string>
   <string name="navigation_drawer_close">서랍 닫기</string>
+  <string name="settings_show_map_by_default">기본적으로 지도 표시</string>
   <string name="tutorial_opacity_zoom">오래된 이미지의 투명도를 조정하려면 슬라이드하십시오.\n오래된 이미지의 크기를 변경하려면 두 손가락을 이용하여 확대/축소하십시오.</string>
   <string name="tutorial_dismiss">알겠습니다!</string>
   <string name="tutorial_dialog_show_again_title">다시 강좌를 표시할까요?</string>
