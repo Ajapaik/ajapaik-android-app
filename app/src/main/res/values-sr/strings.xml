@@ -81,6 +81,7 @@
   <string name="navigation_drawer_open">Отвори цртач</string>
   <string name="navigation_drawer_close">Затвори цртач</string>
   <string name="settings_show_tutorial">Прикажи упутство у режиму рефотографисања</string>
+  <string name="settings_show_map_by_default">Приказује мапу по подразумеваном</string>
   <string name="settings_agree_to_license_terms">Прихватам да објавим рефотографисања на Ajapaik.ee под лиценцом CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Додирните да бисте сакрили/приказали слику.\nКористите иконицу за окретање у горњем десном углу да бисте окренули стару слику.</string>
   <string name="tutorial_opacity_zoom">Превуците да бисте прилагодили прозирност старих слика.\nКористите покрет умањивања примицањем прстију да бисте зумирали стару слику.</string>
