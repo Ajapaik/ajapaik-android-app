@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Vishwanatha Badikana
+-->
+<resources>
+  <string name="please_wait">ದಯಮಲ್ತ್ ಕಾಪುಲೆ</string>
+  <string name="action_albums">ಆಲ್ಬಮ್‍ಲು</string>
+  <string name="action_flip">ಮೀಟ್‍ಲೆ</string>
+  <string name="action_login">ಲಾಗಿನ್ ಆಲೆ</string>
+  <string name="action_register">ಹಾಜಿರ್</string>
+  <string name="action_logout">ಪಿದಯಿ ಪೋಲೆ</string>
+  <string name="action_profile">ವಿವರೊ</string>
+  <string name="action_refresh">ಪೆರ ಮಲ್ಪುಲೆ</string>
+  <string name="action_settings">ಸಂಯೋಜನೆಲು</string>
+  <string name="finna_title">ಕೈತಲ್ದ್ ಚಿತ್ರೊ (ಫಿನ್ನಾ)</string>
+  <string name="finna1918_title">ಸಹಿ ಬ್ರ್ಯಾಂಡರ್</string>
+  <string name="albums_label_no_data">ಆಲ್ಬಮ್‍ಲು ಇದ್ದಿ</string>
+  <string name="albums_title">ಆಲ್ಬಮ್‍ಲು</string>
+  <string name="album_title">ಆಲ್ಬಮ್</string>
+  <string name="nearest_dialog_error_location_disabled_title">ಸಾದಿ ಮುಚ್ಚಿದ್ಂಡ್</string>
+  <string name="nearest_dialog_error_location_disabled_message">ಇತ್ತೆದ ಸಾದಿಡ್ ಪೋಯರ್ ಆಪುಜಿ.  ಈರೆಗ್ ಪೋಯರ್ ಇಚ್ಚೆ ಉಂಡಾ?</string>
+  <string name="nearest_dialog_error_location_disabled_close">ಮುಚ್ಚಿದ್ಂಡ್</string>
+  <string name="nearest_dialog_error_location_disabled_open">ದೆತ್ತ್‌ನ ಸಂಯೋಜನೆಲು</string>
+  <string name="nearest_label_no_data">ಕೈತಲ್ಡ್ ಚಿತ್ರೊ ಇದ್ದಿ</string>
+  <string name="nearest_label_no_data_button">ಮಾತಾ ಚಿತ್ರೊನು ಬ್ರಾಸ್ ಮಲ್ಪೆರೆ ಆಲ್ಬಮ್‌ನ್ ತೂಲೆ</string>
+  <string name="photo_title">ಚಿತ್ರೊದ ವಿವರೊ</string>
+  <string name="camera_title">ಕೆಮರೊ</string>
+  <string name="profile_title">ವಿವರೊ</string>
+  <string name="profile_facebook_login">ಅಬಿಪ್ರಾಯೊದೊಟ್ಟುಗು ಸಹಿ ಪಾಡ್ಲೆ</string>
+  <string name="profile_google_login">ಗೂಗುಲ್ದೊಟ್ಟುಗು ಸಹಿ</string>
+  <string name="profile_logout">ಪಿದಯಿ ಪೋಲೆ</string>
+  <string name="profile_login">ಸಹಿ ಮಲ್ಪುಲೆ</string>
+  <string name="profile_register">ಪೊಸ ಕಾತೆ ಸುರು ಮಲ್ಪುಲೆ</string>
+  <string name="input_username_hint">ಇ-ಮೈಲ್</string>
+  <string name="input_password_hint">ಪ್ರವೇಸೊಪದೊ</string>
+  <string name="input_firstname_hint">ಸುರುತ ಪುದರ್</string>
+  <string name="input_lastname_hint">ಕಡೆತ ಪುದರ್</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">You haven\'t made any rephotos yet</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
+  </plurals>
+  <string name="login_title">ಉಲಯಿ ಬಲೆ</string>
+  <string name="login_failed">ಉಲಯಿ ಬರ್ಪುನೆಡ್ ಸೋತರ್</string>
+  <string name="wrong_password">ತಪ್ಪು ಪ್ರವೇಸೊಪದೊ</string>
+  <string name="registration_title">ಹಾಜಿರ್</string>
+  <string name="user_already_exists">ಬಳಕೆದಾರೆರೆನ ಪುದರ್ ದುಂಬೆ ಉಂಡು</string>
+  <string name="upload_title">ಪಟೊನು ನಾನೊರೊ ದ್ರುಡೊ ಮಲ್ಪುಲೆ</string>
+  <string name="upload_dialog_error_connection_title">ತಾಗುನ ದೋಸೊ</string>
+  <string name="upload_dialog_error_connection_message">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
+  <string name="upload_dialog_error_connection_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
+  <string name="upload_dialog_error_connection_ok">ಅವು</string>
+  <string name="upload_dialog_error_unknown_title">ಗೊತ್ತಿಜ್ಜಂದಿನ ದೋಸೊ</string>
+  <string name="upload_dialog_error_unknown_message">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
+  <string name="upload_dialog_error_unknown_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
+  <string name="upload_dialog_error_unknown_ok">ದೆಪ್ಪುಲೆ</string>
+  <string name="upload_dialog_process_title">ಪಟೊನು ಅಪ್ಲೋಡು ಮಲ್ಪುಂಡು</string>
+  <string name="upload_dialog_process_message">ದಯಮಲ್ತ್ ಕಾಪುಲೆ</string>
+  <string name="upload_dialog_success_title">ಅಪ್ಲೋಡ್ ಸರಿಯಾತ್ಂಡ್</string>
+  <string name="upload_dialog_success_message">ಪಟೊ ಅಪ್ಲೋಡ್ ಸರಿಯಾದ್ ಆತ್ಂಡ್!</string>
+  <string name="upload_dialog_success_ok">ಅವು</string>
+  <string name="upload_dialog_not_authenticated_title">ಉಲಯಿ ಬತ್ತ್‌ದೆ ಅಪ್ಲೋಡ್ ಮಲ್ಪೊಡು</string>
+  <string name="upload_dialog_not_authenticated_message">ವಿವರೊ ಪುಟೊನು ಪಿರ ಕಡಪುಡ್ಲೆ</string>
+  <string name="upload_dialog_not_authenticated_ok">ಅವು</string>
+  <string name="upload_dialog_not_agreed_to_terms">ಸಿಸಿ ಬಿವೈ 4.0 ಪರವಾನಗಿದ ಅಡಿಟ್ ಪಟೊಲೆನ್ ಪಿರ ಪ್ರಕಟಿಸಯೆರ ಯಾನ್ ಒಪ್ಪುದೆ.</string>
+  <string name="upload_dialog_agree_to_terms">ಅಂದ್</string>
+  <string name="upload_dialog_decline_terms">ಅತ್ತ್</string>
+</resources>
