@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* H2kks
 * Puik
 -->
 <resources>
@@ -82,6 +83,7 @@
   <string name="navigation_drawer_open">Ava menüü</string>
   <string name="navigation_drawer_close">Sulge menüü</string>
   <string name="settings_show_tutorial">Näita pildistamisvaates juhendit</string>
+  <string name="settings_show_map_by_default">Näita kaarti vaikimisi</string>
   <string name="settings_agree_to_license_terms">Nõustun ülepildistuste avaldamisega Ajapaik.ee lehel CC BY 4.0 litsentsi all.</string>
   <string name="tutorial_hide_show_flip">Puuduta ekraani, et peita/näidata pilti.\nKasuta nuppu üleval paremal nurgas, et keerata vana pilt peegelpilti.</string>
   <string name="tutorial_opacity_zoom">Vea sõrmega mööda ekraani, et muuta vana pildi läbipaistvust.\nKahe sõrmega saad vana pilti zoomida.</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* BaRaN6161 TURK
 * Hedda
 -->
 <resources>
@@ -80,6 +81,7 @@
   <string name="navigation_drawer_open">Çekmeceyi açın</string>
   <string name="navigation_drawer_close">Çekmeceyi kapayın</string>
   <string name="settings_show_tutorial">Yeniden fotoğraflama modunda eğiticiyi göster</string>
+  <string name="settings_show_map_by_default">Haritayı varsayılan olarak göster</string>
   <string name="settings_agree_to_license_terms">Refotoğrafları, CC-4.0 lisansı altında Ajapaik.ee üzerinde yayınlamayı kabul ediyorum.</string>
   <string name="tutorial_hide_show_flip">Resmi gizlemek/göstermek için dokunun.\nEski resmi çevirmek için sağ üst köşedeki çevirme simgesini kullanın.</string>
   <string name="tutorial_opacity_zoom">Eski resmin saydamlığını ayarlamak için kaydırın.\nEski resmi yakınlaştırmak için yakınlaştırma yapın.</string>
