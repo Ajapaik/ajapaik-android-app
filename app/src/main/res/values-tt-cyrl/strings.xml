@@ -15,14 +15,14 @@
   <string name="action_profile">Профиль</string>
   <string name="action_refresh">Яңарту</string>
   <string name="action_settings">Көйләнмәләр</string>
-  <string name="nearest_title">Фото якын-тирәдә</string>
-  <string name="finna_title">Фото якын-тирәдә (Finna)</string>
+  <string name="nearest_title">Якын-тирәдәге фотолар</string>
+  <string name="finna_title">Якын-тирәдәге фотолар (Finna)</string>
   <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">Альбомнар юк</string>
   <string name="albums_title">Альбомнар</string>
   <string name="album_title">Альбом</string>
-  <string name="nearest_dialog_error_location_disabled_title">Җир билгеләве өзелгән</string>
-  <string name="nearest_dialog_error_location_disabled_message">Хәзерге урнашкан җирне билгеләү мөмкин түгел. Билгеләүне кабызасыгыз киләме?</string>
+  <string name="nearest_dialog_error_location_disabled_title">Урынны билгеләү өзелгән</string>
+  <string name="nearest_dialog_error_location_disabled_message">Хәзерге урнашкан урынны билгеләү мөмкин түгел. Билгеләүне кабызасыгыз киләме?</string>
   <string name="nearest_dialog_error_location_disabled_close">Ябу</string>
   <string name="nearest_dialog_error_location_disabled_open">Көйләнмәләрне ачу</string>
   <string name="nearest_label_no_data">Якын-тирәдәге фото юк</string>
@@ -39,6 +39,11 @@
   <string name="input_password_hint">Серсүз</string>
   <string name="input_firstname_hint">Исем</string>
   <string name="input_lastname_hint">Фамилия</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Сез әле бер рефотоны да ясамадыгыз</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефото</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+  </plurals>
   <string name="login_title">Керү</string>
   <string name="login_failed">Кереп булмады</string>
   <string name="wrong_password">Ялгыш серсүз!</string>
@@ -55,9 +60,10 @@
   <string name="upload_dialog_error_unknown_ok">Кире алу</string>
   <string name="upload_dialog_process_title">Фотоны төяү бара</string>
   <string name="upload_dialog_process_message">Зинһар, көтегез…</string>
-  <string name="upload_dialog_success_title">Төяү уңышлы үтте</string>
+  <string name="upload_dialog_success_title">Төяү уңышлы булды</string>
   <string name="upload_dialog_success_message">Фотоны төяү уңышлы булды!</string>
   <string name="upload_dialog_success_ok">Ярар</string>
+  <string name="upload_dialog_not_authenticated_title">Төяү өчен керергә мәҗбүр</string>
   <string name="upload_dialog_not_authenticated_ok">Ярар</string>
   <string name="upload_dialog_agree_to_terms">Әйе!</string>
   <string name="upload_dialog_decline_terms">Юк</string>
