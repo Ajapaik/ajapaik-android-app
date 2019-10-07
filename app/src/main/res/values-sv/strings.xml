@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Haxpett
 * WikiPhoenix
 -->
 <resources>
@@ -45,7 +46,7 @@
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; foton</item>
   </plurals>
   <string name="login_title">Logga in</string>
-  <string name="login_failed">Inloggning lyckades</string>
+  <string name="login_failed">Innlogging misslyckades</string>
   <string name="wrong_password">Fel lösenord!</string>
   <string name="registration_title">Registrera</string>
   <string name="user_already_exists">Användarnamnet finns redan</string>
@@ -80,6 +81,7 @@
   <string name="navigation_drawer_open">Öppna sidomeny</string>
   <string name="navigation_drawer_close">Stäng sidomeny</string>
   <string name="settings_show_tutorial">Visa guide i fotoläget</string>
+  <string name="settings_show_map_by_default">Visa karta som standard</string>
   <string name="settings_agree_to_license_terms">Jag samtycker till att publicera fotografier på Ajapaik.ee under licensen CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Tryck för att dölja/visa bild.\nAnvänd vändikonen längst upp till höger för att vända den gamla bilden.</string>
   <string name="tutorial_opacity_zoom">Dra för att justera den gamla bildens genomskinlighet.\nNyp för att zooma in den gamla bilden.</string>
