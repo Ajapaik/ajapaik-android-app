@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Papuass
+* Silraks
 -->
 <resources>
   <string name="app_name">Ajapaik refoto</string>
@@ -82,6 +83,7 @@
   <string name="navigation_drawer_open">Atvērt atvilktni</string>
   <string name="navigation_drawer_close">Aizvērt atvilktni</string>
   <string name="settings_show_tutorial">Parādīt pamācību refotogrāfijas režīmam</string>
+  <string name="settings_show_map_by_default">Rādīt karti pēc noklusējuma</string>
   <string name="settings_agree_to_license_terms">Piekrītu publicēt savas refotogrāfijas Ajapaik.ee ar CC BY 4.0 licenci.</string>
   <string name="tutorial_hide_show_flip">Uzsitiet, lai paslēptu/parādītu attēlu.\nLai apvērstu attēlu, lietojiet apvēršanas pogu augšējā labajā stūrī.</string>
   <string name="tutorial_opacity_zoom">Velciet uz sāniem, lai mainītu attēla caurspīdīgumu.\nVelciet ar abiem pirkstiem, lai pievilktu/attālinātu attēlu.</string>
