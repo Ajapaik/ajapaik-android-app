@@ -5,7 +5,7 @@
 <resources>
   <string name="app_name">Ajapaik</string>
   <string name="processing_image">Сурәтне эшкәртү бара</string>
-  <string name="please_wait">Зинһар, көтегез…</string>
+  <string name="please_wait">Көтегез әле…</string>
   <string name="something_went_wrong">Нәрсәдер килеп чыкмады</string>
   <string name="action_albums">Альбомнар</string>
   <string name="action_flip">Чагылдыру</string>
@@ -59,7 +59,7 @@
   <string name="upload_dialog_error_unknown_retry">Кабатлау</string>
   <string name="upload_dialog_error_unknown_ok">Кире алу</string>
   <string name="upload_dialog_process_title">Фотоны төяү бара</string>
-  <string name="upload_dialog_process_message">Зинһар, көтегез…</string>
+  <string name="upload_dialog_process_message">Көтегез әле…</string>
   <string name="upload_dialog_success_title">Төяү уңышлы булды</string>
   <string name="upload_dialog_success_message">Фотоны төяү уңышлы булды!</string>
   <string name="upload_dialog_success_ok">Ярар</string>

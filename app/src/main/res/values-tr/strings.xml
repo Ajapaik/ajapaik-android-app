@@ -65,13 +65,13 @@
   <string name="upload_dialog_success_title">Yükleme Başarılı</string>
   <string name="upload_dialog_success_message">Fotoğraf başarıyla yüklendi!</string>
   <string name="upload_dialog_success_ok">Tamam</string>
-  <string name="upload_dialog_not_authenticated_title">Yükleme yapmak için giriş yapılmalı</string>
+  <string name="upload_dialog_not_authenticated_title">Yükleme yapmak için giriş yapmalısınız</string>
   <string name="upload_dialog_not_authenticated_message">Profil sayfasına yönlendir</string>
   <string name="upload_dialog_not_authenticated_ok">Tamam</string>
   <string name="upload_dialog_not_agreed_to_terms">Yeniden fotoğraflamayı, CC BY 4.0 lisansı altında yayınlamayı kabul ediyorum.</string>
   <string name="upload_dialog_agree_to_terms">Evet!</string>
   <string name="upload_dialog_decline_terms">Hayır</string>
-  <string name="acra_dialog_title">\'Ajapaik yeniden fotoğraflama\' çöktü</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' çöktü</string>
   <string name="acra_dialog_text">Uygulamayı durmaya zorlayan beklenmedik bir hata oluştu. Lütfen bize hata verilerini göndererek düzeltmemize yardımcı olun, yapmanız gereken tek şey Tamam\'a tıklamaktır.</string>
   <string name="acra_dialog_comment_prompt">Aşağıdaki sorun hakkında yorumlarınızı ekleyebilirsiniz:</string>
   <string name="acra_dialog_ok_toast">Teşekkürler!</string>
