@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Semina x
+-->
+<resources>
+  <string name="processing_image">Obrada slike</string>
+  <string name="please_wait">Molimo pričekajte ...</string>
+  <string name="something_went_wrong">Nešto je pošlo naopako</string>
+  <string name="action_albums">albumi</string>
+  <string name="action_login">Prijava</string>
+  <string name="action_register">Prijavi se</string>
+  <string name="action_logout">Odjavi se</string>
+  <string name="action_profile">Profil</string>
+  <string name="nearest_title">Slike u blizini</string>
+  <string name="albums_label_no_data">Nema Albuma</string>
+  <string name="albums_title">albumi</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lokacija isključena</string>
+  <string name="nearest_dialog_error_location_disabled_message">Nije moguće dobiti trenutnu lokaciju. Da li bi ste željeli da je omogućite?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Zatvori</string>
+  <string name="nearest_dialog_error_location_disabled_open">Otvorite postavke</string>
+  <string name="nearest_label_no_data">Nema slika u blizini</string>
+  <string name="nearest_label_no_data_button">Pogledajte albume da pregledate sve slike</string>
+  <string name="photo_title">Detalji fotografije</string>
+  <string name="camera_title">KAmera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_logout">Odjavi se</string>
+  <string name="profile_login">Prijavi se</string>
+  <string name="profile_register">Napravi račun</string>
+  <string name="input_username_hint">E-mail</string>
+  <string name="input_password_hint">Lozinka</string>
+  <string name="input_firstname_hint">Ime</string>
+  <string name="input_lastname_hint">Prezime</string>
+  <string name="login_title">Prijava</string>
+  <string name="upload_dialog_error_connection_title">Greška konekcije</string>
+  <string name="upload_dialog_error_connection_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
+  <string name="upload_dialog_error_connection_retry">Pokušajte ponovo</string>
+  <string name="upload_dialog_error_connection_ok">U redu</string>
+  <string name="upload_dialog_error_unknown_title">Nepoznata greška</string>
+  <string name="upload_dialog_error_unknown_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
+  <string name="upload_dialog_error_unknown_retry">Pokušajte ponovo</string>
+  <string name="upload_dialog_error_unknown_ok">Otkaži</string>
+  <string name="upload_dialog_process_message">Molimo pričekajte ...</string>
+  <string name="upload_dialog_success_title">Postavljanje uspješno</string>
+  <string name="upload_dialog_success_ok">U redu</string>
+</resources>
