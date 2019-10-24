@@ -11,7 +11,10 @@
   <string name="action_register">Prijavi se</string>
   <string name="action_logout">Odjavi se</string>
   <string name="action_profile">Profil</string>
+  <string name="action_refresh">Osvježi</string>
+  <string name="action_settings">Postavke</string>
   <string name="nearest_title">Slike u blizini</string>
+  <string name="finna_title">Fotografije u blizini (Finna)</string>
   <string name="albums_label_no_data">Nema Albuma</string>
   <string name="albums_title">albumi</string>
   <string name="album_title">Album</string>
@@ -24,6 +27,8 @@
   <string name="photo_title">Detalji fotografije</string>
   <string name="camera_title">KAmera</string>
   <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Prijava preko Facebooka</string>
+  <string name="profile_google_login">Prijava preko Googlea</string>
   <string name="profile_logout">Odjavi se</string>
   <string name="profile_login">Prijavi se</string>
   <string name="profile_register">Napravi račun</string>
@@ -32,6 +37,10 @@
   <string name="input_firstname_hint">Ime</string>
   <string name="input_lastname_hint">Prezime</string>
   <string name="login_title">Prijava</string>
+  <string name="login_failed">Prijavljivanje nije uspjelo</string>
+  <string name="wrong_password">Pogrešna lozinka!</string>
+  <string name="registration_title">Registracija</string>
+  <string name="user_already_exists">Korisnik već postoji!</string>
   <string name="upload_dialog_error_connection_title">Greška konekcije</string>
   <string name="upload_dialog_error_connection_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
   <string name="upload_dialog_error_connection_retry">Pokušajte ponovo</string>
@@ -40,7 +49,12 @@
   <string name="upload_dialog_error_unknown_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
   <string name="upload_dialog_error_unknown_retry">Pokušajte ponovo</string>
   <string name="upload_dialog_error_unknown_ok">Otkaži</string>
+  <string name="upload_dialog_process_title">Učitavam fotografiju</string>
   <string name="upload_dialog_process_message">Molimo pričekajte ...</string>
   <string name="upload_dialog_success_title">Postavljanje uspješno</string>
   <string name="upload_dialog_success_ok">U redu</string>
+  <string name="upload_dialog_not_authenticated_title">Morate biti prijavljenji da učitate</string>
+  <string name="upload_dialog_not_authenticated_ok">U redu</string>
+  <string name="upload_dialog_agree_to_terms">Da!</string>
+  <string name="upload_dialog_decline_terms">Ne</string>
 </resources>
