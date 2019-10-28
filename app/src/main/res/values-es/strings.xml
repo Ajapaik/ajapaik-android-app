@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Canaan9801
 * Fitoschido
 * Harvest
 * LittlePuppers
@@ -82,6 +83,7 @@
   <string name="navigation_drawer_open">Abrir cajón</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
   <string name="settings_show_tutorial">Enseñar el tutorial de el modo rephoto</string>
+  <string name="settings_show_map_by_default">Mostrar mapa por defecto</string>
   <string name="settings_agree_to_license_terms">Acepto publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="tutorial_hide_show_flip">Pulsa para mostrar/esconder la imagen.\nUsa el icono en la esquina derecha para rotar la imagen.</string>
   <string name="tutorial_opacity_zoom">Deslizamiento para ajustar transparencia de imagen vieja.\nPellizca zoom para acercar la imagen</string>
@@ -94,6 +96,7 @@
   <string name="rephoto_drafts">Borradores de refotos</string>
   <string name="no_rephotos">No hay fotos</string>
   <string name="storage_not_permitted_title">Almacenamiento no permitido</string>
+  <string name="storage_not_permitted_message">No permitir que esta aplicación use memoria te impide de acceder a algunas funciones, por ejemplo tomar y subir rephotos. Por favor considera permitir el uso de memoria.</string>
   <string name="storage_not_permitted_cancel">Cancelar</string>
   <string name="storage_not_permitted_open_settings">Abrir configuración</string>
   <string name="my_rephotos">Mis refotos</string>
