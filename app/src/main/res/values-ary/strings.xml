@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Anass Sedrati
+* SADI9I
 -->
 <resources>
   <string name="app_name">أجابيك لإعادة التصوير</string>
@@ -23,7 +24,7 @@
   <string name="nearest_dialog_error_location_disabled_close">سدً</string>
   <string name="camera_title">مصوًرة</string>
   <string name="input_username_hint">إيمايل</string>
-  <string name="input_password_hint">الساروت</string>
+  <string name="input_password_hint">الكود</string>
   <string name="input_firstname_hint">السميًة</string>
   <string name="input_lastname_hint">الكنيًة</string>
   <string name="upload_dialog_error_connection_ok">واخًا</string>
@@ -36,7 +37,7 @@
   <string name="tutorial_dialog_show_again_no">لا</string>
   <string name="tutorial_dialog_show_again_yes">آه</string>
   <string name="action_search">قلّب</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">بدا فعملية إعادة التصوير</string>
+  <string name="show_photo_details">شوف تفاصيل التصاور</string>
+  <string name="show_rephotos">شوف إعادة التصوير</string>
 </resources>

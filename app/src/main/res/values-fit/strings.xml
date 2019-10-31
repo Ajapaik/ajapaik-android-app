@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Pyscowicz
+-->
+<resources>
+  <string name="please_wait">Oota...</string>
+  <string name="action_login">Lokkaa sisäle</string>
+  <string name="action_logout">Lokkaa ulos</string>
+  <string name="action_settings">Inställninkit</string>
+  <string name="nearest_dialog_error_location_disabled_open">Avaa inställninkit</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_facebook_login">Lokkaa sisäle Feispukilla</string>
+  <string name="profile_google_login">Lokkaa sisäle Googlella</string>
+  <string name="profile_logout">Lokkaa ulos</string>
+  <string name="profile_login">Lokkaa sisäle</string>
+  <string name="profile_register">Luo konttu</string>
+  <string name="input_username_hint">E-posti</string>
+  <string name="login_title">Lokkaa</string>
+  <string name="login_failed">Lokkaus epäonnistui</string>
+  <string name="upload_dialog_error_unknown_ok">Lopeta</string>
+  <string name="upload_dialog_success_title">Ylöslattaus onnistui</string>
+  <string name="upload_dialog_success_message">Kuvan ylöslattaus onnistui</string>
+  <string name="upload_dialog_not_authenticated_title">Sinun pitää olla lokannut sisäle ylösladataksesi kuvia</string>
+  <string name="upload_dialog_not_authenticated_message">Siiry profiilisivule</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Joo!</string>
+  <string name="upload_dialog_decline_terms">Ei</string>
+  <string name="about_title">Tästä</string>
+  <string name="version">Versuuni</string>
+  <string name="tutorial_dialog_show_again_no">Ei</string>
+  <string name="tutorial_dialog_show_again_yes">Joo</string>
+  <string name="storage_not_permitted_cancel">Lopeta</string>
+  <string name="storage_not_permitted_open_settings">Avaa inställninkit</string>
+  <string name="action_search">Haku</string>
+  <string name="favorites_label_not_logged_in_button">Lokkaa sisäle</string>
+</resources>

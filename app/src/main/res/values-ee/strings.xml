@@ -39,7 +39,11 @@
   <string name="input_password_hint">Mɔʋunya</string>
   <string name="input_firstname_hint">Ŋkɔ gbãtɔ</string>
   <string name="input_lastname_hint">Tɔgbuiŋkɔ</string>
-  <string name="profile_rephotos">{{GEƉE|ɖekeo=Mèkpɔ da foto aɖeke ɖi o|ɖeka=&lt;b&gt;1&lt;/b&gt; gbugbɔfoto|&lt;b&gt;%1$d&lt;/b&gt; gbugbɔfotowo}}</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Mèkpɔ da foto aɖeke ɖi o</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; gbugbɔfoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; gbugbɔfotowo</item>
+  </plurals>
   <string name="login_title">Geɖeme</string>
   <string name="login_failed">Mete ŋu ge ɖe eme o</string>
   <string name="wrong_password">Mɔʋunya mede o!</string>

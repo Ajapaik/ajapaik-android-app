@@ -46,7 +46,11 @@
   <string name="input_password_hint">Contraseña</string>
   <string name="input_firstname_hint">Nombres</string>
   <string name="input_lastname_hint">Apellidos</string>
-  <string name="profile_rephotos">{{Cero|PLURAL=no has hecho cualquier rephotos aún así|uno=1 rephoto|%1$d rephotos}}</string>
+  <plurals name="profile_rephotos" fuzzy="true">
+    <item quantity="zero">no has hecho cualquier rephotos aún así</item>
+    <item quantity="one">1 rephoto</item>
+    <item quantity="other">%1$d rephotos</item>
+  </plurals>
   <string name="login_title">Acceder</string>
   <string name="login_failed">No se pudo acceder</string>
   <string name="wrong_password">La contraseña es incorrecta.</string>

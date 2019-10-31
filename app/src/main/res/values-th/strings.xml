@@ -41,7 +41,9 @@
   <string name="input_firstname_hint">ชื่อ</string>
   <string name="input_lastname_hint">นามสกุล</string>
   <plurals name="profile_rephotos">
-    <item quantity="other">ศูนย์=คุณยังมิเคย rephotos เลย</item>
+    <item quantity="zero">คุณยังมิเคย rephotos เลย</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
   <string name="login_title">เข้าสู่ระบบ</string>
   <string name="login_failed">การเข้าสู่ระบบไม่สำเร็จ</string>

@@ -39,7 +39,11 @@
   <string name="input_password_hint">ꯆꯪꯁꯤꯟꯅꯕꯥ ꯋꯥꯍꯩ</string>
   <string name="input_firstname_hint">ꯑꯍꯥꯟꯕꯥ ꯃꯃꯤꯡ</string>
   <string name="input_lastname_hint">ꯑꯔꯣꯏꯕꯥ ꯃꯃꯤꯡ</string>
-  <string name="profile_rephotos">{{ ꯃꯌꯥꯝ|ꯐꯨꯟ(꯰)= ꯅꯪ ꯒꯧꯖꯤꯛꯐꯥꯑꯣꯕꯥ ꯃꯤꯔꯦꯜ ꯁꯦꯝꯗꯔꯤ|꯱=&lt;ꯕ&gt;‌꯱&lt;/ꯕ&gt;\nrephoto|&lt;ꯕ&gt;%꯱$ꯗ&lt;/ꯕ&gt;rephotos}}</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">ꯅꯪ ꯒꯧꯖꯤꯛꯐꯥꯑꯣꯕꯥ ꯃꯤꯔꯦꯜ ꯁꯦꯝꯗꯔꯤ</item>
+    <item quantity="one">&lt;b&gt;‌꯱&lt;/b&gt;\nrephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
+  </plurals>
   <string name="login_title">ꯆꯪꯁꯤꯟꯕꯥ</string>
   <string name="login_failed">ꯃꯥꯏꯄꯥꯛꯅꯥ ꯆꯪꯁꯤꯜꯂꯦ</string>
   <string name="wrong_password">ꯆꯪꯁꯤꯟꯅꯕꯥ ꯋꯥꯍꯩ ꯂꯥꯟꯂꯦ</string>
