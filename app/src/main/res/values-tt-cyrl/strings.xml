@@ -26,7 +26,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Ябу</string>
   <string name="nearest_dialog_error_location_disabled_open">Көйләнмәләрне ачу</string>
   <string name="nearest_label_no_data">Якын-тирәдәге фото юк</string>
-  <string name="nearest_label_no_data_button">Барлык сурәтләр карап чыгу өчен альбомнарны кулланыгыз</string>
+  <string name="nearest_label_no_data_button">Барлык сурәтләрне карап чыгу өчен альбомнарны кулланыгыз</string>
   <string name="photo_title">Фото мәгълүматлары</string>
   <string name="camera_title">Камера</string>
   <string name="profile_title">Профиль</string>
