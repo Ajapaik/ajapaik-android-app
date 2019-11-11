@@ -2,6 +2,7 @@
 <!-- Authors:
 * Deathkon
 * Liuxinyu970226
+* 沈澄心
 -->
 <resources>
   <string name="app_name">Ajapaik照片重制</string>
@@ -81,6 +82,7 @@
   <string name="navigation_drawer_open">打开绘画器</string>
   <string name="navigation_drawer_close">关闭绘画器</string>
   <string name="settings_show_tutorial">在照片重制模式中显示教程</string>
+  <string name="settings_show_map_by_default">按默认显示地图</string>
   <string name="settings_agree_to_license_terms">我同意以CC BY 4.0许可协议在Ajapaik.ee发布我的照片重制作品。</string>
   <string name="tutorial_hide_show_flip">点按以隐藏/显示图片。使用右上角的翻转图标以翻转旧图片。</string>
   <string name="tutorial_opacity_zoom">滑动以调整旧图片的透明度。两指滑动以缩放旧图片。</string>
