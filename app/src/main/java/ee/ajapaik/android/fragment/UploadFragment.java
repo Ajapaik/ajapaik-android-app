@@ -472,13 +472,17 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
                 @Override
                 public void onActionResult(Status status, Upload upload) {
-                    if (status.isGood()) {
-                        ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
-                        showDialog(DIALOG_SUCCESS);
-                    } else if (status.isNetworkProblem()) {
-                        showDialog(DIALOG_ERROR_NO_CONNECTION);
-                    } else {
-                        showDialog(DIALOG_ERROR_UNKNOWN);
+                    try {
+                        if (status.isGood()) {
+                            ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
+                            showDialog(DIALOG_SUCCESS);
+                        } else if (status.isNetworkProblem()) {
+                            showDialog(DIALOG_ERROR_NO_CONNECTION);
+                        } else {
+                            showDialog(DIALOG_ERROR_UNKNOWN);
+                        }
+                    } catch(Exception e) {
+                        Log.e(TAG, "Unable to show dialog, because the app is not foreground.");
                     }
                 }
             });
