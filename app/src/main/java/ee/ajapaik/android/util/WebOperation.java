@@ -115,6 +115,10 @@ public abstract class WebOperation {
         return m_started;
     }
 
+    public boolean isFileUpload() {
+        return m_file != null;
+    }
+
     public boolean shouldRetry() {
         return false;
     }

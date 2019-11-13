@@ -10,6 +10,11 @@
     <string name="please_wait">Please wait…</string>
     <string name="something_went_wrong">Something went wrong</string>
 
+    <!-- Notifications -->
+    <string name="notification_channel">General Notifications</string>
+    <string name="notification_upload_title">Uploading rephoto</string>
+    <string name="notification_upload_text">Please wait&#8230;</string>
+
     <!-- Menu -->
     <string name="action_albums">Albums</string>
     <string name="action_flip">Flip</string>
