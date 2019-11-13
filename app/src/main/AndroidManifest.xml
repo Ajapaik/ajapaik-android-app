@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ee.ajapaik.android">
+    package="ee.ajapaik.android">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -42,7 +42,6 @@
             android:name="ee.ajapaik.android.FinnaActivity"
             android:label="@string/finna_title"
             android:parentActivityName="ee.ajapaik.android.NearestActivity">
-            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ee.ajapaik.android.NearestActivity"/>
@@ -51,7 +50,6 @@
             android:name="ee.ajapaik.android.Finna1918Activity"
             android:label="@string/finna1918_title"
             android:parentActivityName="ee.ajapaik.android.NearestActivity">
-            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ee.ajapaik.android.NearestActivity"/>
