@@ -7,6 +7,9 @@
   <string name="processing_image">Stoche a processe l\'immaggine</string>
   <string name="please_wait">Aspitte...</string>
   <string name="something_went_wrong">Quacche cose ha sciute stuèrte</string>
+  <string name="notification_channel">Notifeche generale</string>
+  <string name="notification_upload_title">Stoche a careche \'a refote</string>
+  <string name="notification_upload_text">Aspitte...</string>
   <string name="action_albums">Album</string>
   <string name="action_flip">Lange</string>
   <string name="action_login">Tràse</string>

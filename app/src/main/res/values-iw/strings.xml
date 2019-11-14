@@ -4,11 +4,15 @@
 * Falling star
 * Steeve815
 * YaronSh
+* דגש חזק
 -->
 <resources>
   <string name="processing_image">התמונה בעיבוד</string>
   <string name="please_wait">נא להמתין…</string>
   <string name="something_went_wrong">משהו השתבש</string>
+  <string name="notification_channel">התראות כלליות</string>
+  <string name="notification_upload_title">מעלה את הצילום מחדש</string>
+  <string name="notification_upload_text">אנא המתן</string>
   <string name="action_albums">אלבומים</string>
   <string name="action_flip">היפוך</string>
   <string name="action_login">כניסה</string>

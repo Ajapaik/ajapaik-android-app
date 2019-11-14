@@ -8,6 +8,7 @@
   <string name="processing_image">Bearbetar bild</string>
   <string name="please_wait">Var god vänta…</string>
   <string name="something_went_wrong">Något gick fel</string>
+  <string name="notification_upload_text">Var god vänta…</string>
   <string name="action_albums">Album</string>
   <string name="action_flip">Vänd</string>
   <string name="action_login">Logga in</string>

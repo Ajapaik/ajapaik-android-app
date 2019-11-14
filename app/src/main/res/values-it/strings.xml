@@ -6,6 +6,8 @@
 <resources>
   <string name="please_wait">Attendere prego …</string>
   <string name="something_went_wrong">Qualcosa è andato storto</string>
+  <string name="notification_channel">Notifiche generali</string>
+  <string name="notification_upload_text">Attendi per favore…</string>
   <string name="action_albums">Album</string>
   <string name="action_login">Accedi</string>
   <string name="action_register">Registrati</string>

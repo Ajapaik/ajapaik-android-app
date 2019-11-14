@@ -6,6 +6,7 @@
   <string name="processing_image">Bild gëtt verschafft</string>
   <string name="please_wait">Waart w.e.g. ...</string>
   <string name="something_went_wrong">Et ass eppes schif gaangen</string>
+  <string name="notification_upload_text">Waart w.e.g. ...</string>
   <string name="action_albums">Albumen</string>
   <string name="action_flip">Kippen</string>
   <string name="action_login">Aloggen</string>

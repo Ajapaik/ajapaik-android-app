@@ -2,6 +2,7 @@
 <!-- Authors:
 * Metalhead64
 * MidnightRaver
+* Runun
 * Sushi
 -->
 <resources>
@@ -9,6 +10,9 @@
   <string name="processing_image">Verarbeite Bild</string>
   <string name="please_wait">Bitte warten …</string>
   <string name="something_went_wrong">Etwas ist schief gelaufen</string>
+  <string name="notification_channel">Generelle Benachrichtigung</string>
+  <string name="notification_upload_title">Hochladen deines Fotos</string>
+  <string name="notification_upload_text">Bitte warten …</string>
   <string name="action_albums">Alben</string>
   <string name="action_flip">Kippen</string>
   <string name="action_login">Anmelden</string>

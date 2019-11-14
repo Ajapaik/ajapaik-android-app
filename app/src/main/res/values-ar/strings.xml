@@ -11,6 +11,9 @@
   <string name="processing_image">معالجة الصورة</string>
   <string name="please_wait">الرجاء الانتظار…</string>
   <string name="something_went_wrong">حدث خطأ ما</string>
+  <string name="notification_channel">الإخطارات العامة</string>
+  <string name="notification_upload_title">رفع إعادة الصورة</string>
+  <string name="notification_upload_text">الرجاء الانتظار…</string>
   <string name="action_albums">الألبومات</string>
   <string name="action_flip">قلب</string>
   <string name="action_login">تسجيل الدخول</string>
