@@ -130,19 +130,16 @@ public class WebService extends Service {
         final boolean isFileUpload = operation.isFileUpload();
         ExecutorService queue = isImageRequest ? m_imageQueue : m_actionQueue;
 
-        if(isFileUpload) {
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                NotificationManager nm = getSystemService(NotificationManager.class);
+        if(isFileUpload && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager nm = getSystemService(NotificationManager.class);
 
-                if(nm != null) {
-                    nm.createNotificationChannel(new NotificationChannel(
-                            CHANNEL_ID,
-                            getString(R.string.notification_channel),
-                            NotificationManager.IMPORTANCE_DEFAULT));
-                }
+            if(nm != null) {
+                nm.createNotificationChannel(new NotificationChannel(
+                        CHANNEL_ID,
+                        getString(R.string.notification_channel),
+                        NotificationManager.IMPORTANCE_DEFAULT));
             }
 
-            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                     .setSmallIcon(R.drawable.ic_add_to_photos_white_36dp)
                     .setContentTitle(getString(R.string.notification_upload_title))
@@ -152,7 +149,7 @@ public class WebService extends Service {
                     .setAutoCancel(false)
                     .setOngoing(true);
 
-            notificationManager.notify(NOTIFICATION_ID, builder.build());
+            startForeground(NOTIFICATION_ID, builder.build());
         }
 
         queue.execute(new Runnable() {
@@ -175,10 +172,8 @@ public class WebService extends Service {
                     task.notifyHandlers();
                 }
 
-                if(isFileUpload) {
-                    NotificationManagerCompat nm = NotificationManagerCompat.from(WebService.this);
-
-                    nm.cancel(NOTIFICATION_ID);
+                if(isFileUpload && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    stopForeground(true);
                 }
 
                 m_handler.postDelayed(new Runnable() {
