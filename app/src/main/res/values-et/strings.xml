@@ -10,6 +10,7 @@
   <string name="processing_image">Pildi töötlemine</string>
   <string name="please_wait">Palun oota…</string>
   <string name="something_went_wrong">Midagi läks valesti</string>
+  <string name="notification_upload_text">Palun oota…</string>
   <string name="action_albums">Albumid</string>
   <string name="action_flip">Peegelpilti</string>
   <string name="action_login">Logi sisse</string>

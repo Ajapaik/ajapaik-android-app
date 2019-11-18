@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Bjankuloski06
+* Vlad5250
 -->
 <resources>
   <string name="app_name">Споредбен сликач Ajapaik</string>
@@ -9,6 +10,7 @@
   <string name="processing_image">Ја обработувам сликата</string>
   <string name="please_wait">Почекајте...</string>
   <string name="something_went_wrong">Нешто не е во ред</string>
+  <string name="notification_upload_text">Почекајте…</string>
   <string name="action_albums">Албуми</string>
   <string name="action_flip">Преврти</string>
   <string name="action_login">Најава</string>
