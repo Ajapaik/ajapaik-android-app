@@ -14,6 +14,8 @@
   <string name="processing_image">Procesando la imagen</string>
   <string name="please_wait">Espera…</string>
   <string name="something_went_wrong">Se produjo un error</string>
+  <string name="notification_channel">Notificaciones generales</string>
+  <string name="notification_upload_text">Un momento…</string>
   <string name="action_albums">Álbumes</string>
   <string name="action_flip">Reflejar</string>
   <string name="action_login">Acceder</string>

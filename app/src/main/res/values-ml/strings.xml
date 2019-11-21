@@ -6,6 +6,8 @@
 <resources>
   <string name="please_wait">ദയവായി കാത്തിരിക്കുക…</string>
   <string name="something_went_wrong">എന്തോ പ്രശ്നമുണ്ടായി</string>
+  <string name="notification_channel">പൊതുവായ അറിയിപ്പുകൾ</string>
+  <string name="notification_upload_text">ദയവായി കാത്തിരിക്കുക…</string>
   <string name="action_login">പ്രവേശിക്കുക</string>
   <string name="action_register">രജിസ്റ്റർ ചെയ്യുക</string>
   <string name="action_logout">ലോഗൗട്ട്</string>

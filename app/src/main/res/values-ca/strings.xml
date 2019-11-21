@@ -6,6 +6,7 @@
   <string name="processing_image">S’està processant la imatge</string>
   <string name="please_wait">Espereu…</string>
   <string name="something_went_wrong">Ha fallat alguna cosa</string>
+  <string name="notification_upload_text">Espereu…</string>
   <string name="action_albums">Àlbums</string>
   <string name="action_profile">Perfil</string>
   <string name="action_refresh">Actualitza</string>
