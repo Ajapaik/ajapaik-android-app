@@ -5,6 +5,7 @@
 <resources>
   <string name="please_wait">Vent venligst…</string>
   <string name="something_went_wrong">Noget gik galt</string>
+  <string name="notification_upload_text">Vent venligst...</string>
   <string name="action_albums">Albummer</string>
   <string name="action_login">Log på</string>
   <string name="action_register">Registrér</string>

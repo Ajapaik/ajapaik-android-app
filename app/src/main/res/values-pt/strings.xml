@@ -9,6 +9,9 @@
   <string name="processing_image">A processar a imagem</string>
   <string name="please_wait">Aguarde, por favor…</string>
   <string name="something_went_wrong">Algo correu mal</string>
+  <string name="notification_channel">Notificações Gerais</string>
+  <string name="notification_upload_title">A carregar a refotografia</string>
+  <string name="notification_upload_text">Aguarde, por favor...</string>
   <string name="action_albums">Álbuns</string>
   <string name="action_flip">Retornar</string>
   <string name="action_login">Iniciar sessão</string>
