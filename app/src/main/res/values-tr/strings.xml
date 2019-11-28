@@ -9,6 +9,9 @@
   <string name="processing_image">Görüntü işleniyor</string>
   <string name="please_wait">Lütfen bekleyin…</string>
   <string name="something_went_wrong">Bir şeyler yanlış gitti</string>
+  <string name="notification_channel">Genel Bildirimler</string>
+  <string name="notification_upload_title">Yeniden fotoğraf yükleniyor</string>
+  <string name="notification_upload_text">Lütfen bekleyin...</string>
   <string name="action_albums">Albümler</string>
   <string name="action_flip">Çevir</string>
   <string name="action_login">Giriş Yap</string>

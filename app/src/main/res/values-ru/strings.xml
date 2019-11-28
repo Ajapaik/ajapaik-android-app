@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Eleferen
 * Happy13241
 * MaxBioHazard
 * Movses
@@ -11,6 +12,7 @@
   <string name="processing_image">Обработка изображения</string>
   <string name="please_wait">Пожалуйста, подождите...</string>
   <string name="something_went_wrong">Что-то пошло не так</string>
+  <string name="notification_upload_text">Пожалуйста, подождите…</string>
   <string name="action_albums">Альбомы</string>
   <string name="action_flip">Отразить</string>
   <string name="action_login">Вход</string>

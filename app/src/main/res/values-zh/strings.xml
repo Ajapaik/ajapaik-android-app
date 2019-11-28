@@ -7,8 +7,11 @@
 <resources>
   <string name="app_name">Ajapaik照片重制</string>
   <string name="processing_image">正在处理图片</string>
-  <string name="please_wait">请稍候…</string>
+  <string name="please_wait">请稍候……</string>
   <string name="something_went_wrong">发生了一些错误</string>
+  <string name="notification_channel">一般通知</string>
+  <string name="notification_upload_title">上传翻拍照片中</string>
+  <string name="notification_upload_text">请稍候……</string>
   <string name="action_albums">专辑</string>
   <string name="action_flip">翻转</string>
   <string name="action_login">登录</string>
@@ -61,7 +64,7 @@
   <string name="upload_dialog_error_unknown_retry">重试</string>
   <string name="upload_dialog_error_unknown_ok">取消</string>
   <string name="upload_dialog_process_title">正在上传照片</string>
-  <string name="upload_dialog_process_message">请稍候…</string>
+  <string name="upload_dialog_process_message">请稍候……</string>
   <string name="upload_dialog_success_title">上传成功</string>
   <string name="upload_dialog_success_message">照片上传成功！</string>
   <string name="upload_dialog_success_ok">确定</string>
