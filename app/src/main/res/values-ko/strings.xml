@@ -7,6 +7,7 @@
   <string name="processing_image">이미지 처리 중</string>
   <string name="please_wait">기다려 주십시오...</string>
   <string name="something_went_wrong">무언가가 잘못되었습니다</string>
+  <string name="notification_upload_text">기다려 주십시오...</string>
   <string name="action_albums">앨범</string>
   <string name="action_login">로그인</string>
   <string name="action_register">등록</string>

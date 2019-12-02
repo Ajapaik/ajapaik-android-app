@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Nykta 1917
+-->
+<resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">Spracovanie obrázku</string>
+  <string name="please_wait">Prosím čakajte...</string>
+  <string name="something_went_wrong">Niečo sa pokazilo</string>
+  <string name="notification_channel">Všeobecné oznámenia</string>
+  <string name="notification_upload_title">Nahrávanie refotky</string>
+  <string name="notification_upload_text">Prosím čakajte...</string>
+  <string name="action_albums">Albumy</string>
+  <string name="action_flip">Otočiť</string>
+  <string name="action_login">Prihlásiť sa</string>
+  <string name="action_register">Zaregistrovať sa</string>
+  <string name="action_logout">Odhlásiť sa</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Obnoviť</string>
+  <string name="action_settings">Nastavenia</string>
+  <string name="nearest_title">Fotky v blízkosti</string>
+  <string name="finna_title">Fotky v blízkosti (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Žiadne Albumy</string>
+  <string name="albums_title">Albumy</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Poloha Zakázaná</string>
+  <string name="nearest_dialog_error_location_disabled_message">Nie je možné zistiť aktuálnu polohu. Chcete ju povoliť?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Zavrieť</string>
+  <string name="nearest_dialog_error_location_disabled_open">Otvoriť Nastavenia</string>
+  <string name="nearest_label_no_data">Žiadne fotky v blízkosti</string>
+  <string name="nearest_label_no_data_button">Zobraziť albumy na prezeranie všetkých obrázkov</string>
+  <string name="photo_title">Detaily fotky</string>
+  <string name="camera_title">Fotoaparát</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Prihlásiť sa cez Facebook</string>
+  <string name="profile_google_login">Prihlásiť sa cez Google</string>
+  <string name="profile_logout">Odhlásiť sa</string>
+  <string name="profile_login">Prihlásiť sa</string>
+  <string name="profile_register">Vytvoriť účet</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Heslo</string>
+  <string name="input_firstname_hint">Krstné meno</string>
+  <string name="input_lastname_hint">Priezvisko</string>
+</resources>
