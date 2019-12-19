@@ -10,6 +10,9 @@
   <string name="processing_image">Käsitellään kuvaa</string>
   <string name="please_wait">Odota…</string>
   <string name="something_went_wrong">Jotain meni vikaan</string>
+  <string name="notification_channel">Yleiset ilmoitukset</string>
+  <string name="notification_upload_title">Lähetetään valokuvaa</string>
+  <string name="notification_upload_text">Odota…</string>
   <string name="action_albums">Albumit</string>
   <string name="action_flip">Käännä</string>
   <string name="action_login">Kirjaudu</string>
