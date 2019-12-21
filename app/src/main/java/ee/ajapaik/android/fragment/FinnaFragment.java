@@ -3,13 +3,12 @@ package ee.ajapaik.android.fragment;
 import android.content.Context;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import ee.ajapaik.android.R;
-import ee.ajapaik.android.data.FinnaAlbum;
-import ee.ajapaik.android.data.Album;
+import androidx.appcompat.app.AppCompatActivity;
 
+import ee.ajapaik.android.data.Album;
+import ee.ajapaik.android.data.FinnaAlbum;
 import ee.ajapaik.android.util.WebAction;
 
 public class FinnaFragment extends NearestFragment {

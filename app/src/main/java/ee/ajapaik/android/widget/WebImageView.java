@@ -17,7 +17,7 @@ import ee.ajapaik.android.util.Objects;
 import ee.ajapaik.android.util.WebActivity;
 import ee.ajapaik.android.util.WebImage;
 
-public class WebImageView extends android.support.v7.widget.AppCompatImageView {
+public class WebImageView extends androidx.appcompat.widget.AppCompatImageView {
     private static final String TAG = "WebImageView";
 
     private static final String NAMESPACE = "http://schemas.android.com/apk/res/android";

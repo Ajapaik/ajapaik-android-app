@@ -18,13 +18,12 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import ee.ajapaik.android.BuildConfig;
 
 public class LocationService extends Service implements LocationListener, SensorEventListener {
     private static final String TAG = "LocationService";

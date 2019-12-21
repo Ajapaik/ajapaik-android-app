@@ -2,9 +2,10 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.Menu;
 import android.view.MenuInflater;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.fragment.util.WebFragment;

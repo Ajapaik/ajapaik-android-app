@@ -2,7 +2,8 @@ package ee.ajapaik.android.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,6 @@ import java.util.Map;
 
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.UploadActivity;
-import ee.ajapaik.android.adapter.DraftAdapter;
 import ee.ajapaik.android.adapter.DraftAdapter;
 import ee.ajapaik.android.data.Album;
 import ee.ajapaik.android.data.Photo;

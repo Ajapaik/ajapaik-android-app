@@ -1,9 +1,10 @@
 package ee.ajapaik.android.fragment.util;
 
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import ee.ajapaik.android.R;
 import ee.ajapaik.android.WebService;

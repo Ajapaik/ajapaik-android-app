@@ -6,8 +6,9 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnKeyListener;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.app.DialogFragment;
 import android.view.KeyEvent;
+
+import androidx.fragment.app.DialogFragment;
 
 import ee.ajapaik.android.BuildConfig;
 

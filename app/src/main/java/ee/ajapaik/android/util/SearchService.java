@@ -1,8 +1,9 @@
 package ee.ajapaik.android.util;
 
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
+
+import androidx.appcompat.widget.SearchView;
 
 import ee.ajapaik.android.R;
 

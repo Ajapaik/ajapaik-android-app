@@ -2,17 +2,18 @@ package ee.ajapaik.android;
 
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.support.v4.app.DialogFragment;
 import android.view.View;
+
+import androidx.fragment.app.DialogFragment;
+
+import java.util.Date;
+
 import ee.ajapaik.android.fragment.CameraFragment;
 import ee.ajapaik.android.fragment.util.AlertFragment;
-import ee.ajapaik.android.R;
 import ee.ajapaik.android.util.WebActivity;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseSequence;
 import uk.co.deanwild.materialshowcaseview.MaterialShowcaseView;
 import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
-
-import java.util.Date;
 
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
 
