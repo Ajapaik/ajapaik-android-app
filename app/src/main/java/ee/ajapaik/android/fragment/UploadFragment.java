@@ -1,7 +1,6 @@
 package ee.ajapaik.android.fragment;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -15,8 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.ToxicBakery.viewpager.transforms.DefaultTransformer;
@@ -42,18 +43,16 @@ import ee.ajapaik.android.UploadActivity;
 import ee.ajapaik.android.adapter.UploadPagerAdapter;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
-import ee.ajapaik.android.data.util.Status;
 import ee.ajapaik.android.fragment.util.AlertFragment;
 import ee.ajapaik.android.fragment.util.DialogInterface;
 import ee.ajapaik.android.fragment.util.ProgressFragment;
 import ee.ajapaik.android.fragment.util.WebFragment;
-import ee.ajapaik.android.util.ExifService;
-import ee.ajapaik.android.util.WebAction;
+import ee.ajapaik.android.util.UploadService;
 import ee.ajapaik.android.widget.WebImageView;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
-import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
+import static ee.ajapaik.android.util.UploadService.BITMAP_KEY;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String TAG = "UploadFragment";
@@ -465,28 +464,12 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         } else if (!isAgreedToTerms()) {
             showDialog(DIALOG_NOT_AGREED_TO_TERMS);
         } else {
-            Context context = getActivity();
-            WebAction<Upload> action = Upload.createAction(context, uploadByRephotoBitmap.get(currentRephoto));
-
-            showDialog(DIALOG_PROGRESS);
-
-            getConnection().enqueue(context, action, new WebAction.ResultHandler<Upload>() {
-                @Override
-                public void onActionResult(Status status, Upload upload) {
-                    try {
-                        if (status.isGood()) {
-                            ExifService.deleteField(uploadByRephotoBitmap.get(currentRephoto).getPath(), USER_COMMENT);
-                            showDialog(DIALOG_SUCCESS);
-                        } else if (status.isNetworkProblem()) {
-                            showDialog(DIALOG_ERROR_NO_CONNECTION);
-                        } else {
-                            showDialog(DIALOG_ERROR_UNKNOWN);
-                        }
-                    } catch(Exception e) {
-                        Log.e(TAG, "Unable to show dialog, because the app is not foreground.");
-                    }
-                }
-            });
+            FragmentActivity context = getActivity();
+            Toast.makeText(context, getString(R.string.upload_dialog_process_title), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(context, UploadService.class);
+            intent.putExtra(BITMAP_KEY, uploadByRephotoBitmap.get(currentRephoto));
+            context.startService(intent);
+            context.finish();
         }
     }
 
@@ -500,7 +483,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
 
     private void success() {
         Activity activity = getActivity();
-
         activity.setResult(Activity.RESULT_OK);
         activity.finish();
     }

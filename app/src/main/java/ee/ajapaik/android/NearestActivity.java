@@ -1,5 +1,7 @@
 package ee.ajapaik.android;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -18,6 +20,7 @@ import ee.ajapaik.android.util.Settings;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static ee.ajapaik.android.util.NotificationChannel.NOTIFICATION_CHANNEL;
 
 public class NearestActivity extends AlbumActivity {
     private static final int DIALOG_ERROR_LOCATION_DISABLED = 2;
@@ -34,7 +37,7 @@ public class NearestActivity extends AlbumActivity {
             if (shouldLoadNearestPhotos(newLocation, oldLocation, fragment)) {
                 settings.setLocation(newLocation);
 
-                if(fragment != null) {
+                if (fragment != null) {
                     fragment.invalidate();
                 }
             }
@@ -74,6 +77,17 @@ public class NearestActivity extends AlbumActivity {
             m_connection.connect(this);
         }
         this.setTitle(getResources().getString(R.string.nearest_title));
+        createNotificationChannel();
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL.name(), getString(R.string.notification_channel), NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            if (notificationManager != null) {
+                notificationManager.createNotificationChannel(channel);
+            }
+        }
     }
 
     @Override
@@ -81,11 +95,11 @@ public class NearestActivity extends AlbumActivity {
         switch (requestCode) {
             case ACCESS_FINE_LOCATION_PERMISSION: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                   if (!((LocationManager)getSystemService(LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                       showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
-                   } else {
-                       m_connection.connect(this);
-                   }
+                    if (!((LocationManager) getSystemService(LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                        showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
+                    } else {
+                        m_connection.connect(this);
+                    }
                 } else if (isDoNotAskAgainChecked()) {
                     showDialogFragment(DIALOG_ERROR_LOCATION_DISABLED);
                 } else {
@@ -107,7 +121,7 @@ public class NearestActivity extends AlbumActivity {
 
     @Override
     protected DialogFragment createDialogFragment(int requestCode) {
-        if(requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
+        if (requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
             return AlertFragment.create(
                     getString(R.string.nearest_dialog_error_location_disabled_title),
                     getString(R.string.nearest_dialog_error_location_disabled_message),
@@ -120,8 +134,8 @@ public class NearestActivity extends AlbumActivity {
 
     @Override
     public void onDialogFragmentDismissed(DialogFragment fragment, int requestCode, int resultCode) {
-        if(requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
-            if(resultCode == AlertFragment.RESULT_POSITIVE) {
+        if (requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
+            if (resultCode == AlertFragment.RESULT_POSITIVE) {
                 LocationService.startSettings(this);
             } else {
                 AlbumsActivity.start(this);
@@ -134,7 +148,7 @@ public class NearestActivity extends AlbumActivity {
 
     @Override
     public void onDialogFragmentCancelled(DialogFragment fragment, int requestCode) {
-        if(requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
+        if (requestCode == DIALOG_ERROR_LOCATION_DISABLED) {
             AlbumsActivity.start(this);
         }
 

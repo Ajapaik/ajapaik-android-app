@@ -9,30 +9,29 @@ import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
 
-import org.apache.hc.client5.http.cookie.BasicCookieStore;
-import org.apache.hc.client5.http.cookie.Cookie;
-import org.apache.hc.client5.http.entity.mime.FileBody;
-import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
-import org.apache.hc.client5.http.entity.mime.StringBody;
-import org.apache.hc.client5.http.impl.DefaultConnectionKeepAliveStrategy;
-import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
-import org.apache.hc.core5.http.ContentType;
-import org.apache.hc.core5.http.HttpEntity;
-import org.apache.hc.core5.http.NameValuePair;
-import org.apache.hc.client5.http.entity.UrlEncodedFormEntity;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.classic.methods.HttpUriRequestBase;
+import org.apache.hc.client5.http.cookie.BasicCookieStore;
+import org.apache.hc.client5.http.cookie.Cookie;
+import org.apache.hc.client5.http.entity.UrlEncodedFormEntity;
+import org.apache.hc.client5.http.entity.mime.FileBody;
 import org.apache.hc.client5.http.entity.mime.HttpMultipartMode;
+import org.apache.hc.client5.http.entity.mime.MultipartEntityBuilder;
+import org.apache.hc.client5.http.entity.mime.StringBody;
+import org.apache.hc.client5.http.impl.DefaultConnectionKeepAliveStrategy;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
+import org.apache.hc.core5.http.ContentType;
+import org.apache.hc.core5.http.HttpEntity;
+import org.apache.hc.core5.http.NameValuePair;
 import org.apache.hc.core5.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.ref.WeakReference;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +63,6 @@ public abstract class WebOperation {
     private File m_file;
     private volatile boolean m_cancelled;
     protected volatile boolean m_started;
-    private volatile WeakReference<ProgressListener> m_progressListener;
 
     public WebOperation(Context context, String url, Map<String, String> parameters) {
         this(context, url, parameters, null);
@@ -79,10 +77,6 @@ public abstract class WebOperation {
         m_settings = new Settings(context);
     }
 
-    public void setProgressListener(ProgressListener progressListener) {
-        m_progressListener = (progressListener != null) ? new WeakReference<ProgressListener>(progressListener) : null;
-    }
-
     public String getUniqueId() {
         return null;
     }
@@ -95,12 +89,8 @@ public abstract class WebOperation {
         return false;
     }
 
-    public boolean isMultipart() {
-        return (m_file != null) ? true : false;
-    }
-
     protected boolean isPost() {
-        return (m_file != null) ? true : false;
+        return m_file != null;
     }
 
     protected File getFile() {
@@ -111,21 +101,8 @@ public abstract class WebOperation {
         return m_url;
     }
 
-    public boolean isStarted() {
-        return m_started;
-    }
-
-    public boolean isFileUpload() {
-        return m_file != null;
-    }
-
     public boolean shouldRetry() {
         return false;
-    }
-
-    public boolean performRequest() {
-        Log.d(TAG, "performRequest(null, null, null)");
-        return performRequest(null, null, null);
     }
 
     public boolean performRequest(String baseURL, Map<String, String> extraParameters, BasicCookieStore cookieStore) {
@@ -135,7 +112,7 @@ public abstract class WebOperation {
         NetworkInfo info = cm.getActiveNetworkInfo();
         boolean isPost = isPost();
         String url = m_url;
-        URI uri = null;
+        URI uri;
 
         if(baseURL != null && !url.contains("://")) {
             if(url.startsWith("/") && baseURL.endsWith("/")) {
@@ -219,7 +196,7 @@ public abstract class WebOperation {
                         if(m_file != null) {
                             Log.d(TAG, "Adding file to post");
                             for(NameValuePair pair : postData) {
-                                StringBody stringBody1 = new StringBody(pair.getValue().toString(), ContentType.MULTIPART_FORM_DATA);
+                                StringBody stringBody1 = new StringBody(pair.getValue(), ContentType.MULTIPART_FORM_DATA);
                                 builder.addPart(pair.getName(), stringBody1);
 
                                 strData.append(separator);
@@ -353,10 +330,6 @@ public abstract class WebOperation {
 
     public void abortRequest() {
         m_cancelled = true;
-    }
-
-    protected String getFileName() {
-        return "original";
     }
 
     protected void onFailure() { }

@@ -33,8 +33,7 @@ public class Upload extends Model {
 
     private static final String API_PATH = "/photo/upload/";
 
-    public static final String INTERNAL_STORAGE_FILE_SUFFIX = "Ajapaik-rephoto-";
-    public static final String DATA_FILE_EXTENSION = ".txt";
+    private static final String INTERNAL_STORAGE_FILE_SUFFIX = "Ajapaik-rephoto-";
     private static final String IMAGE_FILE_EXTENSION = ".jpg";
     private static final String FOLDER_NAME = "Ajapaik-rephotos";
 

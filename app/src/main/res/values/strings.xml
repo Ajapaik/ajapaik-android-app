@@ -83,14 +83,14 @@
     <!-- Upload -->
     <string name="upload_title">Confirm Rephoto</string>
     <string name="upload_dialog_error_connection_title">Connection Error</string>
-    <string name="upload_dialog_error_connection_message">Unable to upload the photo. Try again?</string>
+    <string name="upload_dialog_error_connection_message">Unable to upload the photo.</string>
     <string name="upload_dialog_error_connection_retry">Retry</string>
     <string name="upload_dialog_error_connection_ok">OK</string>
     <string name="upload_dialog_error_unknown_title">Unknown Error</string>
-    <string name="upload_dialog_error_unknown_message">Unable to upload the photo. Try again?</string>
+    <string name="upload_dialog_error_unknown_message">Unable to upload the photo.</string>
     <string name="upload_dialog_error_unknown_retry">Retry</string>
     <string name="upload_dialog_error_unknown_ok">Cancel</string>
-    <string name="upload_dialog_process_title">Uploading the photo</string>
+    <string name="upload_dialog_process_title">Uploading the photo in background</string>
     <string name="upload_dialog_process_message">Please wait&#8230;</string>
     <string name="upload_dialog_success_title">Upload Successful</string>
     <string name="upload_dialog_success_message">The photo was uploaded successfully!</string>
@@ -101,6 +101,10 @@
     <string name="upload_dialog_not_agreed_to_terms">I agree to publishing rephotographs under the CC BY 4.0 licence.</string>
     <string name="upload_dialog_agree_to_terms">Yes!</string>
     <string name="upload_dialog_decline_terms">No</string>
+    <string name="upload_notification_title">Uploading rephoto</string>
+    <string name="upload_notification_in_progress">It might take some time</string>
+    <string name="upload_notification_success">Rephoto uploaded successfully</string>
+    <string name="upload_notification_failure">Rephoto uploaded failed. Click here to try again</string>
 
     <!-- ACRA -->
     <string name="acra_dialog_title">\'Ajapaik rephoto\' has crashed</string>

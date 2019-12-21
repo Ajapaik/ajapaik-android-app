@@ -1,20 +1,15 @@
 package ee.ajapaik.android;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Binder;
-import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
-
-import androidx.core.app.NotificationCompat;
 
 import org.apache.hc.client5.http.cookie.BasicCookieStore;
 import org.apache.hc.client5.http.impl.cookie.BasicClientCookie;
@@ -46,8 +41,6 @@ public class WebService extends Service {
 
     private static final int MAX_CONNECTIONS = 4;
     private static final int SHUTDOWN_DELAY_IN_SECONDS = 1;
-    private static final String CHANNEL_ID = "notification_file_upload";
-    private static final int NOTIFICATION_ID = 1000;
 
     private final IBinder m_binder = new LocalBinder();
     private final Handler m_handler = new Handler(Looper.getMainLooper());
@@ -127,30 +120,7 @@ public class WebService extends Service {
     private void runOperation(final Task task, final WebOperation operation) {
         Log.d(TAG, "runOperation()");
         final boolean isImageRequest = operation instanceof WebImage;
-        final boolean isFileUpload = operation.isFileUpload();
         ExecutorService queue = isImageRequest ? m_imageQueue : m_actionQueue;
-
-        if(isFileUpload && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationManager nm = getSystemService(NotificationManager.class);
-
-            if(nm != null) {
-                nm.createNotificationChannel(new NotificationChannel(
-                        CHANNEL_ID,
-                        getString(R.string.notification_channel),
-                        NotificationManager.IMPORTANCE_DEFAULT));
-            }
-
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                    .setSmallIcon(R.drawable.ic_add_to_photos_white_36dp)
-                    .setContentTitle(getString(R.string.notification_upload_title))
-                    .setContentText(getString(R.string.notification_upload_text))
-                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                    .setWhen(System.currentTimeMillis())
-                    .setAutoCancel(false)
-                    .setOngoing(true);
-
-            startForeground(NOTIFICATION_ID, builder.build());
-        }
 
         queue.execute(new Runnable() {
             @Override
@@ -170,10 +140,6 @@ public class WebService extends Service {
                 synchronized(m_tasks) {
                     m_tasks.remove(task);
                     task.notifyHandlers();
-                }
-
-                if(isFileUpload && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    stopForeground(true);
                 }
 
                 m_handler.postDelayed(new Runnable() {
