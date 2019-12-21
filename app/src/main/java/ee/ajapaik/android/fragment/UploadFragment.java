@@ -52,7 +52,7 @@ import ee.ajapaik.android.widget.WebImageView;
 
 import static android.content.Context.MODE_PRIVATE;
 import static ee.ajapaik.android.SettingsActivity.DEFAULT_PREFERENCES_KEY;
-import static ee.ajapaik.android.util.UploadService.BITMAP_KEY;
+import static ee.ajapaik.android.util.UploadService.UPLOAD_KEY;
 
 public class UploadFragment extends WebFragment implements DialogInterface {
     private static final String TAG = "UploadFragment";
@@ -467,7 +467,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             FragmentActivity context = getActivity();
             Toast.makeText(context, getString(R.string.upload_dialog_process_title), Toast.LENGTH_LONG).show();
             Intent intent = new Intent(context, UploadService.class);
-            intent.putExtra(BITMAP_KEY, uploadByRephotoBitmap.get(currentRephoto));
+            intent.putExtra(UPLOAD_KEY, uploadByRephotoBitmap.get(currentRephoto));
             context.startService(intent);
             context.finish();
         }
