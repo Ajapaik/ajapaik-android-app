@@ -1,6 +1,5 @@
 package ee.ajapaik.android.util;
 
-import android.arch.core.BuildConfig;
 import android.content.Context;
 import android.util.Log;
 
@@ -14,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 import ee.ajapaik.android.data.util.Model;
@@ -74,49 +73,40 @@ public class WebAction<T> extends WebOperation {
 
     @Override
     protected void onResponse(int statusCode, InputStream stream) throws ApiException {
-        if(BuildConfig.DEBUG) {
-            Log.d(TAG, "statusCode=" + statusCode + ", stream=" + ((stream != null) ? "YES" : "NONE"));
-        }
-
         boolean isParsableObject = false;
 
-        if((statusCode == HTTP_STATUS_OK || statusCode == HTTP_STATUS_FORBIDDEN || statusCode == HTTP_STATUS_INTERNAL_SERVER_ERROR) && stream != null) {
-            try {
-                JsonElement element = new JsonParser().parse(new JsonReader(new InputStreamReader(stream, "UTF-8")));
+        if ((statusCode == HTTP_STATUS_OK || statusCode == HTTP_STATUS_FORBIDDEN || statusCode == HTTP_STATUS_INTERNAL_SERVER_ERROR) && stream != null) {
+            JsonElement element = new JsonParser().parse(new JsonReader(new InputStreamReader(stream, StandardCharsets.UTF_8)));
 
-                if(element.isJsonObject()) {
-                    JsonObject attributes = element.getAsJsonObject();
-                    JsonPrimitive error = attributes.getAsJsonPrimitive(KEY_ERROR);
+            if (element.isJsonObject()) {
+                JsonObject attributes = element.getAsJsonObject();
+                JsonPrimitive error = attributes.getAsJsonPrimitive(KEY_ERROR);
 
-                    if(error != null) {
-                        if (error.isNumber()) {
-                            m_status = Status.parse(error.getAsInt());
-                        } else if (error.isString()) {
-                            m_status = Status.parse(error.getAsString());
-                        } else {
-                            m_status = Status.UNKNOWN;
-                        }
+                if (error != null) {
+                    if (error.isNumber()) {
+                        m_status = Status.parse(error.getAsInt());
+                    } else if (error.isString()) {
+                        m_status = Status.parse(error.getAsString());
                     } else {
-                        m_status = Status.NONE;
+                        m_status = Status.UNKNOWN;
                     }
-
-                    if (m_status != Status.NONE) {
-                        throw new ApiException(element);
-                    }
-
-                    isParsableObject = isParsableObject(attributes);
-                    if (isParsableObject) {
-                        m_object = parseObject(attributes);
-                    }
+                } else {
+                    m_status = Status.NONE;
                 }
-            }
-            catch (UnsupportedEncodingException e) {
-                Log.w(TAG, "Parse error", e);
+
+                if (m_status != Status.NONE) {
+                    throw new ApiException(element);
+                }
+
+                isParsableObject = isParsableObject(attributes);
+                if (isParsableObject) {
+                    m_object = parseObject(attributes);
+                }
             }
         } else {
             m_status = Status.CONNECTION;
 
-            if(stream != null) {
+            if (stream != null) {
                 try {
                     stream.close();
                 } catch (IOException e) {
@@ -125,7 +115,7 @@ public class WebAction<T> extends WebOperation {
             }
         }
 
-        if(m_status == Status.NONE && m_object == null && m_creator != null && isParsableObject) {
+        if (m_status == Status.NONE && m_object == null && m_creator != null && isParsableObject) {
             m_status = Status.INVALID_DATA;
         }
     }
