@@ -1,6 +1,6 @@
 package ee.ajapaik.android.util;
 
-import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
@@ -8,8 +8,12 @@ import android.os.IBinder;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import ee.ajapaik.android.NearestActivity;
+import ee.ajapaik.android.PhotoActivity;
 import ee.ajapaik.android.R;
+import ee.ajapaik.android.RephotoDraftsActivity;
 import ee.ajapaik.android.WebService;
+import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
 import ee.ajapaik.android.data.util.Status;
 
@@ -36,16 +40,26 @@ public class UploadService extends Service {
         return null;
     }
 
-    private void showNotification(String title, String photoId, String photoTitle) {
-        Notification notification = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL.name())
+    private void showNotification(String title, Photo photo, Intent startIntent) {
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL.name())
                 .setSmallIcon(R.drawable.ic_add_to_photos_white_36dp)
                 .setContentTitle(title)
-                .setContentText(photoTitle)
+                .setContentText(photo.getTitle())
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
-                .setOngoing(false).build();
-        NotificationManagerCompat.from(this).notify(photoId, NOTIFICATION_ID, notification);
+                .setOngoing(false);
+
+        if (startIntent != null) {
+            Intent launcherIntent = new Intent(this, NearestActivity.class);
+            launcherIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            notificationBuilder.setContentIntent(PendingIntent.getActivities(
+                    this,
+                    0,
+                    new Intent[]{launcherIntent, startIntent},
+                    PendingIntent.FLAG_UPDATE_CURRENT));
+        }
+        NotificationManagerCompat.from(this).notify(photo.getIdentifier(), NOTIFICATION_ID, notificationBuilder.build());
     }
 
     private void uploadPhoto(Intent intent) {
@@ -53,11 +67,8 @@ public class UploadService extends Service {
         if (upload == null) {
             return;
         }
-
-        String photoId = upload.getPhoto().getIdentifier();
-        String photoTitle = upload.getPhoto().getTitle();
-
-        showNotification(getString(R.string.upload_notification_title), photoId, photoTitle);
+        Photo originalPhoto = upload.getPhoto();
+        showNotification(getString(R.string.upload_notification_title), originalPhoto, null);
         WebAction<Upload> action = Upload.createAction(getApplicationContext(), upload);
 
         m_connection.enqueue(getApplicationContext(), action, new WebAction.ResultHandler<Upload>() {
@@ -65,13 +76,15 @@ public class UploadService extends Service {
             public void onActionResult(Status status, Upload requestBody) {
                 if (status.isGood()) {
                     ExifService.deleteField(upload.getPath(), USER_COMMENT);
-                    showNotification(getString(R.string.upload_dialog_success_title), photoId, photoTitle);
+
+                    Intent startIntent = PhotoActivity.getStartIntent(UploadService.this, originalPhoto, null);
+                    showNotification(getString(R.string.upload_dialog_success_title), originalPhoto, startIntent);
                     stopSelf();
                 } else {
-                    showNotification(getString(R.string.upload_notification_title), photoId, photoTitle);
+                    Intent startIntent = new Intent(UploadService.this, RephotoDraftsActivity.class);
+                    showNotification(getString(R.string.upload_notification_title), originalPhoto, startIntent);
                 }
             }
         });
     }
-
 }
