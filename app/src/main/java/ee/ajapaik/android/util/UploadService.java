@@ -82,7 +82,7 @@ public class UploadService extends Service {
                     stopSelf();
                 } else {
                     Intent startIntent = new Intent(UploadService.this, RephotoDraftsActivity.class);
-                    showNotification(getString(R.string.upload_notification_title), originalPhoto, startIntent);
+                    showNotification(getString(R.string.upload_notification_failure), originalPhoto, startIntent);
                 }
             }
         });

@@ -75,7 +75,7 @@
   <string name="upload_dialog_decline_terms">Ei</string>
   <string name="upload_notification_title">Ülepildistuse üleslaadimine. See võib võtta mõne aja</string>
   <string name="upload_notification_success">Ülepildistamine edukalt üles laetud</string>
-  <string name="upload_notification_failure">Ülepildistuse üleslaadimine ebaõnnestus. Uuesti proovimiseks vajuta siia</string>
+  <string name="upload_notification_failure">Ülepildistuse üleslaadimine ebaõnnestus</string>
   <string name="acra_dialog_title">\'Ajapaik – enne ja nüüd\' jooksis kokku</string>
   <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama \'OK\'.</string>
   <string name="acra_dialog_comment_prompt">Saate allpool lisada omapoolseid selgitusi:</string>
