@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Amire80
 * Erelon
 * Falling star
 * Steeve815
@@ -54,7 +55,7 @@
   <string name="upload_dialog_error_connection_message">לא ניתן להעלות את התמונה. לנסות שוב?</string>
   <string name="upload_dialog_error_connection_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_connection_ok">אישור</string>
-  <string name="upload_dialog_error_unknown_title">שגיאה בלתי ידועה.</string>
+  <string name="upload_dialog_error_unknown_title">שגיאה בלתי־ידועה.</string>
   <string name="upload_dialog_error_unknown_message">לא ניתן להעלות את התמונה. לנסות שוב?</string>
   <string name="upload_dialog_error_unknown_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_unknown_ok">ביטול</string>
