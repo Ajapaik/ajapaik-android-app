@@ -475,7 +475,7 @@ public class PhotoFragment extends ImageFragment {
                 Context context = getActivity();
 
                 if(m_photo != null) {
-                    m_photo = Photo.update(m_photo, m_photo.getRephotosCount() + 1, m_photo.getUploadsCount() + 1);
+                    m_photo = Photo.update(m_photo, m_photo.getRephotosCount() + 1, true);
 
                     if(m_album != null) {
                         m_album = Album.update(m_album, m_photo);
@@ -542,7 +542,7 @@ public class PhotoFragment extends ImageFragment {
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getRephotosCountImageView().setImageResource(Images.toRephotoCountDrawableId(m_photo.getRephotosCount()));
 
-        if(m_photo.getUploadsCount() > 0) {
+        if(m_photo.hasSessionUserRephoto()) {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);

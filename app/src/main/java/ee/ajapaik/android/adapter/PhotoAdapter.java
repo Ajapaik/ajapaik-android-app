@@ -52,7 +52,7 @@ public class PhotoAdapter extends StaggeredGridView.Adapter {
         imageView = (ImageView)view.findViewById(R.id.image_rephoto);
         imageView.setImageResource(Images.toRephotoCountDrawableId(photo.getRephotosCount()));
 
-        if(photo.getUploadsCount() > 0) {
+        if(photo.hasSessionUserRephoto()) {
             imageView.setColorFilter(view.getContext().getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             imageView.setColorFilter(view.getContext().getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
