@@ -15,6 +15,7 @@ import ee.ajapaik.android.RephotoDraftsActivity;
 import ee.ajapaik.android.WebService;
 import ee.ajapaik.android.data.Photo;
 import ee.ajapaik.android.data.Upload;
+import ee.ajapaik.android.data.UploadResponse;
 import ee.ajapaik.android.data.util.Status;
 
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
@@ -67,22 +68,21 @@ public class UploadService extends Service {
         if (upload == null) {
             return;
         }
-        Photo originalPhoto = upload.getPhoto();
-        showNotification(getString(R.string.upload_notification_title), originalPhoto, null);
-        WebAction<Upload> action = Upload.createAction(getApplicationContext(), upload);
+        showNotification(getString(R.string.upload_notification_title), upload.getPhoto(), null);
+        WebAction<UploadResponse> action = Upload.createAction(getApplicationContext(), upload);
 
-        m_connection.enqueue(getApplicationContext(), action, new WebAction.ResultHandler<Upload>() {
+        m_connection.enqueue(getApplicationContext(), action, new WebAction.ResultHandler<UploadResponse>() {
             @Override
-            public void onActionResult(Status status, Upload requestBody) {
+            public void onActionResult(Status status, UploadResponse uploadResponse) {
+                Photo photo = uploadResponse.getPhoto();
                 if (status.isGood()) {
                     ExifService.deleteField(upload.getPath(), USER_COMMENT);
-
-                    Intent startIntent = PhotoActivity.getStartIntent(UploadService.this, originalPhoto, null);
-                    showNotification(getString(R.string.upload_dialog_success_title), originalPhoto, startIntent);
+                    Intent startIntent = PhotoActivity.getStartIntent(UploadService.this, photo, null);
+                    showNotification(getString(R.string.upload_dialog_success_title), photo, startIntent);
                     stopSelf();
                 } else {
                     Intent startIntent = new Intent(UploadService.this, RephotoDraftsActivity.class);
-                    showNotification(getString(R.string.upload_notification_failure), originalPhoto, startIntent);
+                    showNotification(getString(R.string.upload_notification_failure), photo, startIntent);
                 }
             }
         });

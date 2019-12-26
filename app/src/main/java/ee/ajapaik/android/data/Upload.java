@@ -50,7 +50,7 @@ public class Upload extends Model {
     private static final String KEY_PHOTO = "photo";
     private static final String KEY_SCALE = "scale";
 
-    public static WebAction<Upload> createAction(Context context, Upload upload) {
+    public static WebAction<UploadResponse> createAction(Context context, Upload upload) {
         Log.d(TAG, "createAction");
         Map<String, String> parameters = new Hashtable<String, String>();
 
@@ -73,7 +73,7 @@ public class Upload extends Model {
         parameters.put(KEY_PITCH, Float.toString(upload.m_pitch));
         parameters.put(KEY_ROLL, Float.toString(upload.m_roll));
 
-        return new WebAction<Upload>(context, API_PATH, parameters, new File(upload.getPath()), null);
+        return new WebAction<UploadResponse>(context, API_PATH, parameters, new File(upload.getPath()), UploadResponse.CREATOR);
     }
 
     private String m_path;
