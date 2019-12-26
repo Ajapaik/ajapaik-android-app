@@ -35,6 +35,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -516,6 +517,9 @@ public class PhotoFragment extends ImageFragment {
             final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
             getViewPager().addOnPageChangeListener(pageChangeListener);
             selectFirstRephotoToDisplay(pageChangeListener);
+            CirclePageIndicator pageIndicator = getPageIndicator();
+            pageIndicator.setViewPager(getViewPager());
+            pageIndicator.setOnPageChangeListener(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
             getMainLayout().setVisibility(VISIBLE);
@@ -524,7 +528,7 @@ public class PhotoFragment extends ImageFragment {
         getActivity().invalidateOptionsMenu();
     }
 
-    public void invalidate(Location location, float[] orientation) {
+    public void invalidate(Location location) {
         if(m_photo != null) {
             if(m_location != location) {
                 m_location = location;
@@ -654,5 +658,9 @@ public class PhotoFragment extends ImageFragment {
 
     private ImageView getMapButton() {
         return (ImageView) getView().findViewById(R.id.button_action_map);
+    }
+
+    private CirclePageIndicator getPageIndicator() {
+        return (CirclePageIndicator)getView().findViewById(R.id.pager_indicator);
     }
 }
