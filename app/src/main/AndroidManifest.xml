@@ -118,6 +118,7 @@
         </service>
         <service android:name="ee.ajapaik.android.LocationService">
         </service>
+        <service android:name="ee.ajapaik.android.util.UploadService" />
 
         <activity
                 android:name="org.acra.CrashReportDialog"

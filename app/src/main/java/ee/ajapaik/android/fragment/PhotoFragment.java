@@ -35,6 +35,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -475,7 +476,7 @@ public class PhotoFragment extends ImageFragment {
                 Context context = getActivity();
 
                 if(m_photo != null) {
-                    m_photo = Photo.update(m_photo, m_photo.getRephotosCount() + 1, m_photo.getUploadsCount() + 1);
+                    m_photo = Photo.update(m_photo, m_photo.getRephotosCount() + 1, true);
 
                     if(m_album != null) {
                         m_album = Album.update(m_album, m_photo);
@@ -516,6 +517,9 @@ public class PhotoFragment extends ImageFragment {
             final ViewPager.OnPageChangeListener pageChangeListener = createOnPageChangeListener(adapter);
             getViewPager().addOnPageChangeListener(pageChangeListener);
             selectFirstRephotoToDisplay(pageChangeListener);
+            CirclePageIndicator pageIndicator = getPageIndicator();
+            pageIndicator.setViewPager(getViewPager());
+            pageIndicator.setOnPageChangeListener(pageChangeListener);
         } else {
             getActionBar().setDisplayHomeAsUpEnabled(true);
             getMainLayout().setVisibility(VISIBLE);
@@ -524,7 +528,7 @@ public class PhotoFragment extends ImageFragment {
         getActivity().invalidateOptionsMenu();
     }
 
-    public void invalidate(Location location, float[] orientation) {
+    public void invalidate(Location location) {
         if(m_photo != null) {
             if(m_location != location) {
                 m_location = location;
@@ -542,7 +546,7 @@ public class PhotoFragment extends ImageFragment {
         getImageView().setImageURI(m_photo.getThumbnail(THUMBNAIL_SIZE));
         getRephotosCountImageView().setImageResource(Images.toRephotoCountDrawableId(m_photo.getRephotosCount()));
 
-        if(m_photo.getUploadsCount() > 0) {
+        if(m_photo.hasSessionUserRephoto()) {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.tint), PorterDuff.Mode.MULTIPLY);
         } else {
             getRephotosCountImageView().setColorFilter(getResources().getColor(R.color.none), PorterDuff.Mode.SRC_ATOP);
@@ -654,5 +658,9 @@ public class PhotoFragment extends ImageFragment {
 
     private ImageView getMapButton() {
         return (ImageView) getView().findViewById(R.id.button_action_map);
+    }
+
+    private CirclePageIndicator getPageIndicator() {
+        return (CirclePageIndicator)getView().findViewById(R.id.pager_indicator);
     }
 }

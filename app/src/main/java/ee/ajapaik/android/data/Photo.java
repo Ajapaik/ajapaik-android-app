@@ -67,11 +67,11 @@ public class Photo extends PhotoModel {
         return CREATOR.parse(str);
     }
 
-    public static Photo update(Photo photo, int rephotosCount, int uploads) {
+    public static Photo update(Photo photo, int rephotosCount, boolean hasSessionUserRephoto) {
         Photo copy = new Photo(photo.getAttributes());
 
         copy.m_rephotosCount = rephotosCount;
-        copy.m_uploadsCount = uploads;
+        copy.m_hasSessionUserRephoto = hasSessionUserRephoto;
 
         return copy;
     }
@@ -86,7 +86,7 @@ public class Photo extends PhotoModel {
     private Location m_location;
     private List<Rephoto> m_rephotos;
     private int m_rephotosCount;
-    private int m_uploadsCount;
+    private boolean m_hasSessionUserRephoto;
     private boolean m_favorited;
 
     public Photo(JsonObject attributes) {
@@ -116,7 +116,12 @@ public class Photo extends PhotoModel {
 
         m_rephotos = parseRephotos(attributes);
         m_rephotosCount = m_rephotos.size();
-        m_uploadsCount = getUserUploadsCount();
+        for (Rephoto rephoto : m_rephotos) {
+            if (rephoto.isUploadedByCurrentUser()) {
+                m_hasSessionUserRephoto = true;
+            }
+        }
+
         m_favorited = readBoolean(attributes, KEY_FAVORITED);
 
         if(m_identifier == null || m_image == null || m_width == 0 || m_height == 0) {
@@ -131,14 +136,6 @@ public class Photo extends PhotoModel {
             result.add(new Rephoto(rephoto.getAsJsonObject()));
         }
         return result;
-    }
-
-    private int getUserUploadsCount() {
-        int userUploadsCount = 0;
-        for (Rephoto rephoto : m_rephotos) {
-            if (rephoto.isUploadedByCurrentUser()) userUploadsCount++;
-        }
-        return userUploadsCount;
     }
 
     @Override
@@ -162,7 +159,7 @@ public class Photo extends PhotoModel {
 
         write(attributes, KEY_REPHOTOS_COUNT, m_rephotosCount);
         write(attributes, KEY_REPHOTOS, getRephotosAsAttribute());
-        write(attributes, KEY_UPLOADS, m_uploadsCount);
+        write(attributes, KEY_UPLOADS, m_hasSessionUserRephoto);
         write(attributes, KEY_FAVORITED, m_favorited);
 
         return attributes;
@@ -216,8 +213,8 @@ public class Photo extends PhotoModel {
         return m_rephotos;
     }
 
-    public int getUploadsCount() {
-        return m_uploadsCount;
+    public boolean hasSessionUserRephoto() {
+        return m_hasSessionUserRephoto;
     }
 
     public boolean isFavorited() {
