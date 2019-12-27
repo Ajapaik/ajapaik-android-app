@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Abijeet Patro
+* Aefgh39622
 * Omotecho
 * Shirayuki
 * 沈澄心
@@ -11,6 +12,8 @@
   <string name="processing_image">画像の処理中</string>
   <string name="please_wait">お待ちください…</string>
   <string name="something_went_wrong">エラーが発生しました</string>
+  <string name="notification_channel">一般通知</string>
+  <string name="notification_upload_title">Rephotoをアップロード中</string>
   <string name="notification_upload_text">お待ちください…</string>
   <string name="action_albums">アルバム</string>
   <string name="action_flip">フリップ</string>
@@ -21,6 +24,8 @@
   <string name="action_refresh">更新</string>
   <string name="action_settings">設定</string>
   <string name="nearest_title">付近の写真</string>
+  <string name="finna_title">付近の写真 (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">アルバムがありません</string>
   <string name="albums_title">アルバム</string>
   <string name="album_title">アルバム</string>
@@ -88,7 +93,9 @@
   <string name="tutorial_dialog_show_again_message">後でチュートリアルを再開するには設定から操作します</string>
   <string name="tutorial_dialog_show_again_no">いいえ</string>
   <string name="tutorial_dialog_show_again_yes">はい</string>
+  <string name="rephoto_drafts">Rephoto下書き</string>
   <string name="no_rephotos">rephotoがありません</string>
+  <string name="storage_not_permitted_title">ストレージは許可されていません</string>
   <string name="storage_not_permitted_cancel">キャンセル</string>
   <string name="storage_not_permitted_open_settings">設定を開く</string>
   <string name="my_rephotos">自分のrephotos</string>

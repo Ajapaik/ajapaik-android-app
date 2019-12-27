@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Amire80
 * Erelon
 * Falling star
 * Steeve815
@@ -32,7 +33,7 @@
   <string name="nearest_dialog_error_location_disabled_close">סגירה</string>
   <string name="nearest_dialog_error_location_disabled_open">פתיחת ההגדרות</string>
   <string name="nearest_label_no_data">אין תמונות בסביבה</string>
-  <string name="nearest_label_no_data_button">הצגת האלבומים כדי לעיין בין כל התמונות</string>
+  <string name="nearest_label_no_data_button">הצגת האלבומים כדי לעיין בכל התמונות</string>
   <string name="photo_title">פרטי התמונה</string>
   <string name="camera_title">מצלמה</string>
   <string name="profile_title">פרופיל</string>
@@ -42,19 +43,19 @@
   <string name="profile_login">כניסה</string>
   <string name="profile_register">יצירת חשבון</string>
   <string name="input_username_hint">דוא״ל</string>
-  <string name="input_password_hint">ססמה</string>
+  <string name="input_password_hint">סיסמה</string>
   <string name="input_firstname_hint">שם פרטי</string>
   <string name="input_lastname_hint">שם משפחה</string>
   <string name="login_title">כניסה</string>
   <string name="login_failed">הכניסה נכשלה</string>
-  <string name="wrong_password">ססמה שגויה!</string>
+  <string name="wrong_password">סיסמה שגויה!</string>
   <string name="registration_title">הרשמה</string>
   <string name="user_already_exists">שם המשתמש כבר תפוס</string>
   <string name="upload_dialog_error_connection_title">שגיאת חיבור</string>
   <string name="upload_dialog_error_connection_message">לא ניתן להעלות את התמונה. לנסות שוב?</string>
   <string name="upload_dialog_error_connection_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_connection_ok">אישור</string>
-  <string name="upload_dialog_error_unknown_title">שגיאה בלתי ידועה.</string>
+  <string name="upload_dialog_error_unknown_title">שגיאה בלתי־ידועה.</string>
   <string name="upload_dialog_error_unknown_message">לא ניתן להעלות את התמונה. לנסות שוב?</string>
   <string name="upload_dialog_error_unknown_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_unknown_ok">ביטול</string>

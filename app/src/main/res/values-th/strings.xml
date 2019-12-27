@@ -8,6 +8,9 @@
   <string name="processing_image">กำลังประมวลผลรูปภาพ</string>
   <string name="please_wait">กรุณารอสักครู่…</string>
   <string name="something_went_wrong">มีบางอย่างผิดพลาด</string>
+  <string name="notification_channel">การแจ้งเตือนทั่วไป</string>
+  <string name="notification_upload_title">กำลังอัปโหลด rephoto</string>
+  <string name="notification_upload_text">กรุณารอสักครู่…</string>
   <string name="action_albums">อัลบั้ม</string>
   <string name="action_flip">พลิก</string>
   <string name="action_login">เข้าสู่ระบบ</string>

@@ -2,13 +2,18 @@
 <!-- Authors:
 * Bikarhêner
 * Ghybu
+* Mirzali
 -->
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">Wêne tê barkirin</string>
   <string name="please_wait">Xêra xwe hinek bisekine...</string>
   <string name="something_went_wrong">Hinek tişt nerast bûn</string>
+  <string name="notification_channel">Agahdariyên Giştî</string>
+  <string name="notification_upload_title">Wêne tê barkirin</string>
+  <string name="notification_upload_text">Xêra xwe hinek bisekine...</string>
   <string name="action_albums">Albûm</string>
+  <string name="action_flip">Vegere</string>
   <string name="action_login">Têkeve</string>
   <string name="action_register">Xwe qeyd bike</string>
   <string name="action_logout">Derkeve</string>
