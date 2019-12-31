@@ -42,14 +42,14 @@
   <string name="registration_title">Registruotis</string>
   <string name="user_already_exists">Vartotojas jau egzistuoja</string>
   <string name="upload_dialog_error_connection_title">Ryšio Klaida</string>
-  <string name="upload_dialog_error_connection_message">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
   <string name="upload_dialog_error_connection_retry">Bandyti dar kartą</string>
   <string name="upload_dialog_error_connection_ok">Gerai</string>
   <string name="upload_dialog_error_unknown_title">Nežinoma Klaida</string>
-  <string name="upload_dialog_error_unknown_message">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
   <string name="upload_dialog_error_unknown_retry">Bandyti dar kartą</string>
   <string name="upload_dialog_error_unknown_ok">Atšaukti</string>
-  <string name="upload_dialog_process_title">Nuotrauka keliama</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Nuotrauka keliama</string>
   <string name="upload_dialog_process_message">Prašome palaukti...</string>
   <string name="upload_dialog_success_title">Įkelti Pavyko</string>
   <string name="upload_dialog_success_message">Nuotrauka sėkmingai įkelta!</string>

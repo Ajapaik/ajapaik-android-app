@@ -52,14 +52,14 @@
   <string name="user_already_exists">Uzantnomo jam ekzistas</string>
   <string name="upload_title">Konfirmi Refotadon</string>
   <string name="upload_dialog_error_connection_title">Konekta Eraro</string>
-  <string name="upload_dialog_error_connection_message">Ne povis alŝuti foton. Ĉu reprovi?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Ne povis alŝuti foton. Ĉu reprovi?</string>
   <string name="upload_dialog_error_connection_retry">Reprovi</string>
   <string name="upload_dialog_error_connection_ok">Bone</string>
   <string name="upload_dialog_error_unknown_title">Nekonata eraro</string>
-  <string name="upload_dialog_error_unknown_message">Ne povis alŝuti foton. Ĉu reprovi?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Ne povis alŝuti foton. Ĉu reprovi?</string>
   <string name="upload_dialog_error_unknown_retry">Reprovi</string>
   <string name="upload_dialog_error_unknown_ok">Nuligi</string>
-  <string name="upload_dialog_process_title">Alŝutanta foton</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Alŝutanta foton</string>
   <string name="upload_dialog_process_message">Bonvolu atendi...</string>
   <string name="upload_dialog_success_title">Sukcese Alŝutis</string>
   <string name="upload_dialog_success_message">Sukcese alŝutis la foton!</string>

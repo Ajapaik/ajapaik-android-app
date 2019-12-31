@@ -34,7 +34,7 @@
   <string name="upload_dialog_error_unknown_title">Белгисиз янгылыш</string>
   <string name="upload_dialog_error_unknown_retry">Такрарламакъ</string>
   <string name="upload_dialog_error_unknown_ok">Гери алыв</string>
-  <string name="upload_dialog_process_title">Сурат юклев</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Сурат юклев</string>
   <string name="upload_dialog_process_message">Токъта дагъы…</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>

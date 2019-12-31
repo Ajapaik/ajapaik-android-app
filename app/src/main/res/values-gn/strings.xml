@@ -50,10 +50,10 @@
   <string name="upload_dialog_error_connection_retry">Jey</string>
   <string name="upload_dialog_error_connection_ok">Oĩma</string>
   <string name="upload_dialog_error_unknown_title">Jejavy ojeikuaa\'ỹva</string>
-  <string name="upload_dialog_error_unknown_message">Ndaikatúi ojejupi ko ta\'anga. Reha\'ãse jeýpa?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Ndaikatúi ojejupi ko ta\'anga. Reha\'ãse jeýpa?</string>
   <string name="upload_dialog_error_unknown_retry">Jey</string>
   <string name="upload_dialog_error_unknown_ok">Tojeheja</string>
-  <string name="upload_dialog_process_title">Ojehupi hína ko ta\'anga</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Ojehupi hína ko ta\'anga</string>
   <string name="upload_dialog_process_message">Eha\'arõmíkena...</string>
   <string name="upload_dialog_success_title">Ojehupipáma</string>
   <string name="upload_dialog_success_message">Ta\'anga ojehupipa hekopeteǃ</string>

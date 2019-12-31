@@ -49,14 +49,14 @@
   <string name="user_already_exists">Gebruikersnaam besteit al</string>
   <string name="upload_title">Bevestig Rephoto</string>
   <string name="upload_dialog_error_connection_title">Verbinjingsfout</string>
-  <string name="upload_dialog_error_connection_message">Kan de foto neet opslaon. Perbeer oppernuuj?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Kan de foto neet opslaon. Perbeer oppernuuj?</string>
   <string name="upload_dialog_error_connection_retry">Perbeer oppernuuj</string>
   <string name="upload_dialog_error_connection_ok">Klaor</string>
   <string name="upload_dialog_error_unknown_title">Ónbekènde fout</string>
-  <string name="upload_dialog_error_unknown_message">Kan de foto neet opslaon. Perbeer oppernuuj?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Kan de foto neet opslaon. Perbeer oppernuuj?</string>
   <string name="upload_dialog_error_unknown_retry">Perbeer oppernuuj</string>
   <string name="upload_dialog_error_unknown_ok">Braek aaf</string>
-  <string name="upload_dialog_process_title">Foto op \'nt slaon</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Foto op \'nt slaon</string>
   <string name="upload_dialog_process_message">Wach estebleef...</string>
   <string name="upload_dialog_success_title">Upload gelök</string>
   <string name="upload_dialog_success_message">De foto is mit succès opgeslage!</string>

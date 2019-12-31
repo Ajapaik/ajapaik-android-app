@@ -52,14 +52,14 @@
   <string name="user_already_exists">Корисничко име већ постоји</string>
   <string name="upload_title">Потврди рефотографисање</string>
   <string name="upload_dialog_error_connection_title">Грешка у вези</string>
-  <string name="upload_dialog_error_connection_message">Није могуће отпремити фотографију. Покушати поново?</string>
+  <string name="upload_dialog_error_connection_message">Није могуће отпремити фотографију.</string>
   <string name="upload_dialog_error_connection_retry">Покушај поново</string>
   <string name="upload_dialog_error_connection_ok">У реду</string>
   <string name="upload_dialog_error_unknown_title">Непозната грешка</string>
-  <string name="upload_dialog_error_unknown_message">Није могуће отпремити фотографију. Покушати поново?</string>
+  <string name="upload_dialog_error_unknown_message">Није могуће отпремити фотографију.</string>
   <string name="upload_dialog_error_unknown_retry">Покушај поново</string>
   <string name="upload_dialog_error_unknown_ok">Откажи</string>
-  <string name="upload_dialog_process_title">Отпремам фотографију</string>
+  <string name="upload_dialog_process_title">Отпремање фотографије у позадини</string>
   <string name="upload_dialog_process_message">Сачекајте…</string>
   <string name="upload_dialog_success_title">Успешно отпремање</string>
   <string name="upload_dialog_success_message">Фотографија је успешно отпремљена.</string>

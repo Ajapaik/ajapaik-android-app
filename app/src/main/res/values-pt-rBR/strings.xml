@@ -56,14 +56,14 @@
   <string name="user_already_exists">O nome de usuário já existe</string>
   <string name="upload_title">Confirmar a refotografia</string>
   <string name="upload_dialog_error_connection_title">Erro de conexão</string>
-  <string name="upload_dialog_error_connection_message">Não foi possível carregar a fotografia. Deseja tentar novamente?</string>
+  <string name="upload_dialog_error_connection_message">Não foi possível carregar a fotografia.</string>
   <string name="upload_dialog_error_connection_retry">Tentar novamente</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Erro desconhecido</string>
-  <string name="upload_dialog_error_unknown_message">Não foi possível carregar a fotografia. Tentar novamente?</string>
+  <string name="upload_dialog_error_unknown_message">Não foi possível carregar a fotografia.</string>
   <string name="upload_dialog_error_unknown_retry">Tentar novamente</string>
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
-  <string name="upload_dialog_process_title">carregando a fotografia</string>
+  <string name="upload_dialog_process_title">Fazendo carregamento da foto em segundo plano</string>
   <string name="upload_dialog_process_message">Aguarde…</string>
   <string name="upload_dialog_success_title">O envio foi realizado com sucesso</string>
   <string name="upload_dialog_success_message">A fotografia foi carregada com sucesso!</string>
@@ -74,6 +74,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Eu concordo em publicar as refotografias nos termos da licença CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Sim!</string>
   <string name="upload_dialog_decline_terms">Não</string>
+  <string name="upload_notification_title">Carregando refoto. Pode levar algum tempo</string>
+  <string name="upload_notification_success">Refoto carregada com sucesso</string>
+  <string name="upload_notification_failure">O carregamento de refoto falhou</string>
   <string name="acra_dialog_title">Houve um problema com a \'refotografia Ajapaik\'</string>
   <string name="acra_dialog_text">Ocorreu um erro inesperado ao forçar a aplicação a parar. Ajude-nos a corrigir isto, por favor, enviando-nos os dados de erros. Tudo o que precisa fazer é clicar em Aceitar (OK).</string>
   <string name="acra_dialog_comment_prompt">Pode acrescentar os seus comentários sobre o problema abaixo:</string>

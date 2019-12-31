@@ -42,14 +42,14 @@
   <string name="registration_title">Registracija</string>
   <string name="user_already_exists">Korisnik već postoji!</string>
   <string name="upload_dialog_error_connection_title">Greška konekcije</string>
-  <string name="upload_dialog_error_connection_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
   <string name="upload_dialog_error_connection_retry">Pokušajte ponovo</string>
   <string name="upload_dialog_error_connection_ok">U redu</string>
   <string name="upload_dialog_error_unknown_title">Nepoznata greška</string>
-  <string name="upload_dialog_error_unknown_message">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nije moguće učitati fotografiju. Pokušajte ponovo?</string>
   <string name="upload_dialog_error_unknown_retry">Pokušajte ponovo</string>
   <string name="upload_dialog_error_unknown_ok">Otkaži</string>
-  <string name="upload_dialog_process_title">Učitavam fotografiju</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Učitavam fotografiju</string>
   <string name="upload_dialog_process_message">Molimo pričekajte ...</string>
   <string name="upload_dialog_success_title">Postavljanje uspješno</string>
   <string name="upload_dialog_success_ok">U redu</string>

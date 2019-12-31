@@ -43,14 +43,14 @@
   <string name="registration_title">Đăng ký</string>
   <string name="user_already_exists">Tên người dùng đã tồn tại</string>
   <string name="upload_dialog_error_connection_title">Lỗi kết nối</string>
-  <string name="upload_dialog_error_connection_message">Không thể tải lên hình. Thử lại?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Không thể tải lên hình. Thử lại?</string>
   <string name="upload_dialog_error_connection_retry">Thử lại</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Lỗi không xác định</string>
-  <string name="upload_dialog_error_unknown_message">Không thể tải lên hình. Thử lại?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Không thể tải lên hình. Thử lại?</string>
   <string name="upload_dialog_error_unknown_retry">Thử lại</string>
   <string name="upload_dialog_error_unknown_ok">Huỷ</string>
-  <string name="upload_dialog_process_title">Đang tải lên hình</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Đang tải lên hình</string>
   <string name="upload_dialog_process_message">Vui lòng chờ…</string>
   <string name="upload_dialog_success_title">Tải lên thành công</string>
   <string name="upload_dialog_success_message">Hình đã được tải lên thành công!</string>

@@ -46,14 +46,14 @@
   <string name="registration_title">Makarya akun</string>
   <string name="user_already_exists">Wastan sang sané nganggé sampun kaanggén</string>
   <string name="upload_title">Mastiang potrekan ané lénan</string>
-  <string name="upload_dialog_error_connection_message">Nénten prasida ngunggahang gambar. Indayang malih?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Nénten prasida ngunggahang gambar. Indayang malih?</string>
   <string name="upload_dialog_error_connection_retry">Indayang malih</string>
   <string name="upload_dialog_error_connection_ok">Becik!</string>
   <string name="upload_dialog_error_unknown_title">Iwang sané durung kauningin</string>
-  <string name="upload_dialog_error_unknown_message">Nénten prasida ngunggahang gambar. Indayang malih?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nénten prasida ngunggahang gambar. Indayang malih?</string>
   <string name="upload_dialog_error_unknown_retry">Indayang malih</string>
   <string name="upload_dialog_error_unknown_ok">Buungan</string>
-  <string name="upload_dialog_process_title">Gambar kantun kaunggahang</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Gambar kantun kaunggahang</string>
   <string name="upload_dialog_process_message">Jantos dumun...</string>
   <string name="upload_dialog_success_title">Munggahan sampun puput</string>
   <string name="upload_dialog_success_message">Potoné sampun prasida kaunggah</string>

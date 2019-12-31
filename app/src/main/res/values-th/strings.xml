@@ -55,14 +55,14 @@
   <string name="user_already_exists">ชื่อผู้ใช้นี้มีอยู่แล้ว</string>
   <string name="upload_title">ยืนยัน Rephoto</string>
   <string name="upload_dialog_error_connection_title">เกิดข้อผิดพลาดในการเชื่อมต่อ</string>
-  <string name="upload_dialog_error_connection_message">ไม่สามารถอัปโหลดรูปภาพได้ ต้องการลองใหม่หรือไม่?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">ไม่สามารถอัปโหลดรูปภาพได้ ต้องการลองใหม่หรือไม่?</string>
   <string name="upload_dialog_error_connection_retry">ลองใหม่</string>
   <string name="upload_dialog_error_connection_ok">ตกลง</string>
   <string name="upload_dialog_error_unknown_title">ข้อผิดพลาดไม่ทราบสาเหตุ</string>
-  <string name="upload_dialog_error_unknown_message">ไม่สามารถอัปโหลดรูปภาพได้ ต้องการลองใหม่หรือไม่?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">ไม่สามารถอัปโหลดรูปภาพได้ ต้องการลองใหม่หรือไม่?</string>
   <string name="upload_dialog_error_unknown_retry">ลองใหม่</string>
   <string name="upload_dialog_error_unknown_ok">ยกเลิก</string>
-  <string name="upload_dialog_process_title">กำลังอัปโหลดรูปภาพ</string>
+  <string name="upload_dialog_process_title" fuzzy="true">กำลังอัปโหลดรูปภาพ</string>
   <string name="upload_dialog_process_message">กรุณารอสักครู่…</string>
   <string name="upload_dialog_success_title">อัปโหลดสำเร็จ</string>
   <string name="upload_dialog_success_message">อัปโหลดรูปภาพสำเร็จแล้ว!</string>

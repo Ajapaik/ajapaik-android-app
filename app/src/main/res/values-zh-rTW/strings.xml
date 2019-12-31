@@ -55,14 +55,14 @@
   <string name="user_already_exists">使用者名稱已存在</string>
   <string name="upload_title">確認翻拍的照片</string>
   <string name="upload_dialog_error_connection_title">連接錯誤</string>
-  <string name="upload_dialog_error_connection_message">無法上傳照片，再試一次看看？</string>
+  <string name="upload_dialog_error_connection_message">無法上傳照片。</string>
   <string name="upload_dialog_error_connection_retry">重試</string>
   <string name="upload_dialog_error_connection_ok">確認</string>
   <string name="upload_dialog_error_unknown_title">不明錯誤</string>
-  <string name="upload_dialog_error_unknown_message">無法上傳照片，再試一次看看？</string>
+  <string name="upload_dialog_error_unknown_message">無法上傳照片。</string>
   <string name="upload_dialog_error_unknown_retry">重試</string>
   <string name="upload_dialog_error_unknown_ok">取消</string>
-  <string name="upload_dialog_process_title">上傳照片中</string>
+  <string name="upload_dialog_process_title">背景正在運作上傳照片</string>
   <string name="upload_dialog_process_message">請稍候…</string>
   <string name="upload_dialog_success_title">上傳成功</string>
   <string name="upload_dialog_success_message">照片上傳成功！</string>
@@ -73,6 +73,9 @@
   <string name="upload_dialog_not_agreed_to_terms">我同意以姓名標示 4.0 國際（CC BY 4.0）授權來發佈翻拍的照片。</string>
   <string name="upload_dialog_agree_to_terms">是！</string>
   <string name="upload_dialog_decline_terms">否</string>
+  <string name="upload_notification_title">正在上傳翻拍照片中，這會花上一些時間</string>
+  <string name="upload_notification_success">翻拍照片上傳成功</string>
+  <string name="upload_notification_failure">翻拍照片上傳失敗</string>
   <string name="acra_dialog_title">「Ajapaik rephoto」發生毀損</string>
   <string name="acra_dialog_text">因發生預期外的錯誤，導致應用程式被強制停止。請透過發送錯誤資料給我們，來協助我們修正此問題，您所要做的只需要按下「確認」即可。</string>
   <string name="acra_dialog_comment_prompt">您可以在下方添加有關問題的意見：</string>

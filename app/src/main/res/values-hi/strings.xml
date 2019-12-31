@@ -51,14 +51,14 @@
   <string name="user_already_exists">सदस्य नाम पहले से मौजूद</string>
   <string name="upload_title">दोबारा छवि की पुष्टि करें</string>
   <string name="upload_dialog_error_connection_title">संपर्क त्रुटि</string>
-  <string name="upload_dialog_error_connection_message">तसवीर अपलोड करने में असफल। पुन: प्रयास करें?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">तसवीर अपलोड करने में असफल। पुन: प्रयास करें?</string>
   <string name="upload_dialog_error_connection_retry">पुनः प्रयास करें</string>
   <string name="upload_dialog_error_connection_ok">ठीक है</string>
   <string name="upload_dialog_error_unknown_title">अज्ञात त्रुटि</string>
-  <string name="upload_dialog_error_unknown_message">फोटो अपलोड करने में असमर्थ। पुनः प्रयास करें?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">फोटो अपलोड करने में असमर्थ। पुनः प्रयास करें?</string>
   <string name="upload_dialog_error_unknown_retry">पुनः प्रयास करें</string>
   <string name="upload_dialog_error_unknown_ok">रद्द करें</string>
-  <string name="upload_dialog_process_title">छवि अपलोड हो रही</string>
+  <string name="upload_dialog_process_title" fuzzy="true">छवि अपलोड हो रही</string>
   <string name="upload_dialog_process_message">कृपया प्रतीक्षा करें...</string>
   <string name="upload_dialog_success_title">अपलोड सफल</string>
   <string name="upload_dialog_success_message">छवि को सफलतापूर्वक अपलोड कर दिया गया था!</string>

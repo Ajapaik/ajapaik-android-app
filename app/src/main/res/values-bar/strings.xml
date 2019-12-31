@@ -50,14 +50,14 @@
   <string name="user_already_exists">Den Nutzanam gibts leida scho</string>
   <string name="upload_title">Refoto bestäting</string>
   <string name="upload_dialog_error_connection_title">Vabindungsfaila</string>
-  <string name="upload_dialog_error_connection_message">As Affelodn vo de Refotots wor ned megli. Wiedahoin?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">As Affelodn vo de Refotots wor ned megli. Wiedahoin?</string>
   <string name="upload_dialog_error_connection_retry">Noamoi vasuacha</string>
   <string name="upload_dialog_error_connection_ok">Basst</string>
   <string name="upload_dialog_error_unknown_title">Unbekannta Faila</string>
-  <string name="upload_dialog_error_unknown_message">As Affelodn wor ned megli. No amoi vasuacha?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">As Affelodn wor ned megli. No amoi vasuacha?</string>
   <string name="upload_dialog_error_unknown_retry">Noamoi vasuacha</string>
   <string name="upload_dialog_error_unknown_ok">Owbrecha</string>
-  <string name="upload_dialog_process_title">Affelodn vo deim Foto</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Affelodn vo deim Foto</string>
   <string name="upload_dialog_process_message">Biddschee woartn …</string>
   <string name="upload_dialog_success_title">As Affelodn hod basst</string>
   <string name="upload_dialog_success_message">Affelodn hod basst!</string>

@@ -54,14 +54,14 @@
   <string name="user_already_exists">کاتي جو نالو اڳئي موجود آهي</string>
   <string name="upload_title">نئين تصوير جي پڪ ڪريو</string>
   <string name="upload_dialog_error_connection_title">ڪنيڪشن ۾ مسئلو</string>
-  <string name="upload_dialog_error_connection_message">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
   <string name="upload_dialog_error_connection_retry">ٻيهر ڪوشش ڪريو</string>
   <string name="upload_dialog_error_connection_ok">ٺيڪ</string>
   <string name="upload_dialog_error_unknown_title">اڻڄاتل چُڪَ</string>
-  <string name="upload_dialog_error_unknown_message">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
   <string name="upload_dialog_error_unknown_retry">ٻيهر ڪوشش ڪريو</string>
   <string name="upload_dialog_error_unknown_ok">رد</string>
-  <string name="upload_dialog_process_title">تصوير اپلوڊ ٿي رهي آهي</string>
+  <string name="upload_dialog_process_title" fuzzy="true">تصوير اپلوڊ ٿي رهي آهي</string>
   <string name="upload_dialog_process_message">مھرباني ڪري انتظار ڪريو…</string>
   <string name="upload_dialog_success_title">ڪاميابيءَ اپلوڊ ٿي ويو</string>
   <string name="upload_dialog_success_message">تصوير ڪاميابيءَ سان اپلوڊ ٿي وئي!</string>

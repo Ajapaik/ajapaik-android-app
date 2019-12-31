@@ -59,14 +59,14 @@
   <string name="user_already_exists">Le nom d’utilisateur existe déjà</string>
   <string name="upload_title">Confirmer la rephoto</string>
   <string name="upload_dialog_error_connection_title">Erreur de connexion</string>
-  <string name="upload_dialog_error_connection_message">Impossible de télécharger la photo. Réessayer ?</string>
+  <string name="upload_dialog_error_connection_message">Impossible de télécharger la photo.</string>
   <string name="upload_dialog_error_connection_retry">Réessayer</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Erreur inconnue</string>
-  <string name="upload_dialog_error_unknown_message">Impossible de téléverser la photo. Réessayer ?</string>
+  <string name="upload_dialog_error_unknown_message">Impossible de téléverser la photo.</string>
   <string name="upload_dialog_error_unknown_retry">Réessayer</string>
   <string name="upload_dialog_error_unknown_ok">Annuler</string>
-  <string name="upload_dialog_process_title">Téléversement de la photo</string>
+  <string name="upload_dialog_process_title">Téléversement de la photo en tâche de fond</string>
   <string name="upload_dialog_process_message">Veuillez patienter...</string>
   <string name="upload_dialog_success_title">Téléversement réussi</string>
   <string name="upload_dialog_success_message">La photo a bien été téléversée !</string>
@@ -77,6 +77,9 @@
   <string name="upload_dialog_not_agreed_to_terms">J’accepte de publier les rephotographies sous la licence CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Oui !</string>
   <string name="upload_dialog_decline_terms">Non</string>
+  <string name="upload_notification_title">Téléchargement de la rephoto. Cela peut prendre du temps</string>
+  <string name="upload_notification_success">Téléchargement de la rephoto réussi</string>
+  <string name="upload_notification_failure">Échec du téléchargement de la rephoto</string>
   <string name="acra_dialog_title">« Ajapaik rephotographie » s’est planté</string>
   <string name="acra_dialog_text">Une erreur inattendue s’est produite, forçant l’application à s’arrêter. Veuillez nous aider à corriger cela en nous en envoyant les données de l’erreur, tout ce que vous avez à faire est de cliquer sur OK.</string>
   <string name="acra_dialog_comment_prompt">Vous pouvez ajouter vos commentaires sur le problème ci-dessous :</string>

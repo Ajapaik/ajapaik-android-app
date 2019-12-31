@@ -50,14 +50,14 @@
   <string name="user_already_exists">A felhasználó már létezik.</string>
   <string name="upload_title">Refotó jóváhagyása</string>
   <string name="upload_dialog_error_connection_title">Csatlakozási hiba</string>
-  <string name="upload_dialog_error_connection_message">Nem sikerült fénykép feltöltése. Megpróbálod újra?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Nem sikerült fénykép feltöltése. Megpróbálod újra?</string>
   <string name="upload_dialog_error_connection_retry">Újra</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Ismeretlen hiba</string>
-  <string name="upload_dialog_error_unknown_message">Nem sikerült fénykép feltöltése. Megpróbálod újra?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nem sikerült fénykép feltöltése. Megpróbálod újra?</string>
   <string name="upload_dialog_error_unknown_retry">Újra</string>
   <string name="upload_dialog_error_unknown_ok">Mégse</string>
-  <string name="upload_dialog_process_title">Fénykép feltöltése</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Fénykép feltöltése</string>
   <string name="upload_dialog_process_message">Kérlek várj…</string>
   <string name="upload_dialog_success_title">Sikeres feltöltés</string>
   <string name="upload_dialog_success_message">A fénykép sikeresen feltöltve!</string>

@@ -51,14 +51,14 @@
   <string name="user_already_exists">El nome d\'usuariu yá esiste</string>
   <string name="upload_title">Confirmar la refoto</string>
   <string name="upload_dialog_error_connection_title">Error de conexón</string>
-  <string name="upload_dialog_error_connection_message">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
   <string name="upload_dialog_error_connection_retry">Tentar nuevamente</string>
   <string name="upload_dialog_error_connection_ok">Aceutar</string>
   <string name="upload_dialog_error_unknown_title">Error desconocíu</string>
-  <string name="upload_dialog_error_unknown_message">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
   <string name="upload_dialog_error_unknown_retry">Tentar nuevamente</string>
   <string name="upload_dialog_error_unknown_ok">Encaboxar</string>
-  <string name="upload_dialog_process_title">Cargando la semeya</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Cargando la semeya</string>
   <string name="upload_dialog_process_message">Espera…</string>
   <string name="upload_dialog_success_title">Carga correuta</string>
   <string name="upload_dialog_success_message">La foto xubióse correutamente</string>

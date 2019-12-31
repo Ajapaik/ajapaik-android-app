@@ -52,14 +52,14 @@
   <string name="user_already_exists">Uživatel „$1“ už existuje</string>
   <string name="upload_title">Potvrďte refotografie</string>
   <string name="upload_dialog_error_connection_title">Chyba připojení</string>
-  <string name="upload_dialog_error_connection_message">Fotografie se nepodařila nahrát. Zkusit znovu?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Fotografie se nepodařila nahrát. Zkusit znovu?</string>
   <string name="upload_dialog_error_connection_retry">Zkusit znovu</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Neznámá chyba</string>
-  <string name="upload_dialog_error_unknown_message">Fotografie se nepodařila nahrát. Zkusit znovu?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Fotografie se nepodařila nahrát. Zkusit znovu?</string>
   <string name="upload_dialog_error_unknown_retry">Zkusit znovu</string>
   <string name="upload_dialog_error_unknown_ok">Zrušit</string>
-  <string name="upload_dialog_process_title">Nahráváni fotografie</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Nahráváni fotografie</string>
   <string name="upload_dialog_process_message">Čekejte prosím…</string>
   <string name="upload_dialog_success_title">Úspěšně nahráno</string>
   <string name="upload_dialog_success_message">Fotografie byla úspěšně nahrána!</string>

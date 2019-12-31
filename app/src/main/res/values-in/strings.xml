@@ -52,14 +52,14 @@
   <string name="user_already_exists">Nama pengguna sudah digunakan</string>
   <string name="upload_title">Konfirmasi Foto ulang</string>
   <string name="upload_dialog_error_connection_title">Jaringan Galat</string>
-  <string name="upload_dialog_error_connection_message">Tidak dapat mengunggah foto. Coba lagi?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Tidak dapat mengunggah foto. Coba lagi?</string>
   <string name="upload_dialog_error_connection_retry">Coba lagi</string>
   <string name="upload_dialog_error_connection_ok">Oke</string>
   <string name="upload_dialog_error_unknown_title">Kesalahan yang tidak diketahui</string>
-  <string name="upload_dialog_error_unknown_message">Tidak dapat mengunggah foto. Coba lagi?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Tidak dapat mengunggah foto. Coba lagi?</string>
   <string name="upload_dialog_error_unknown_retry">Coba lagi</string>
   <string name="upload_dialog_error_unknown_ok">Batalkan</string>
-  <string name="upload_dialog_process_title">Mengunggah foto</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Mengunggah foto</string>
   <string name="upload_dialog_process_message">Silakan tunggu…</string>
   <string name="upload_dialog_success_title">Pengunggahan Berhasil</string>
   <string name="upload_dialog_success_message">Foto telah berhasil diunggah!</string>

@@ -31,7 +31,7 @@
   <string name="registration_title">Ğeydiyot</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
   <string name="upload_dialog_error_unknown_ok">Ləğv</string>
-  <string name="upload_dialog_process_title">Şəkl əlovəkə</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Şəkl əlovəkə</string>
   <string name="upload_dialog_process_message">Zəhmət nıbu, çəş bıkan...</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>

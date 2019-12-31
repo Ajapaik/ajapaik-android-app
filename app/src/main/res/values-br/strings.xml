@@ -51,14 +51,14 @@
   <string name="user_already_exists">An anv implijer zo anezhañ dija.</string>
   <string name="upload_title">Kadarnaat al liestennañ</string>
   <string name="upload_dialog_error_connection_title">Fazi kevreañ</string>
-  <string name="upload_dialog_error_connection_message">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
   <string name="upload_dialog_error_connection_retry">Klask en-dro</string>
   <string name="upload_dialog_error_connection_ok">Mat eo</string>
   <string name="upload_dialog_error_unknown_title">Fazi dianav</string>
-  <string name="upload_dialog_error_unknown_message">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
   <string name="upload_dialog_error_unknown_retry">Klask en-dro</string>
   <string name="upload_dialog_error_unknown_ok">Nullañ</string>
-  <string name="upload_dialog_process_title">Pellgargañ al luc\'hskeudenn</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Pellgargañ al luc\'hskeudenn</string>
   <string name="upload_dialog_process_message">Gortozit mar plij…</string>
   <string name="upload_dialog_success_title">Pellgarget gant berzh</string>
   <string name="upload_dialog_success_message">Pellgarget mat eo bet al luc\'hskeudenn !</string>

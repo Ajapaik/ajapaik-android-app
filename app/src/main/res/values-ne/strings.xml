@@ -45,14 +45,14 @@
   <string name="registration_title">दर्ता गर्नुहोस्</string>
   <string name="user_already_exists">यो प्रयोगकर्तानाम पहिले देखि समावेस छ।</string>
   <string name="upload_dialog_error_connection_title">जडान त्रुटि</string>
-  <string name="upload_dialog_error_connection_message">फोटो अपलोड गर्न असक्षम पुन: प्रयास गर्ने?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">फोटो अपलोड गर्न असक्षम पुन: प्रयास गर्ने?</string>
   <string name="upload_dialog_error_connection_retry">पुनः प्रयास गर्नुहोस्</string>
   <string name="upload_dialog_error_connection_ok">ठीक छ</string>
   <string name="upload_dialog_error_unknown_title">अज्ञात त्रुटि</string>
-  <string name="upload_dialog_error_unknown_message">फोटो अपलोड गर्न असक्षम पुन: प्रयास गर्ने?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">फोटो अपलोड गर्न असक्षम पुन: प्रयास गर्ने?</string>
   <string name="upload_dialog_error_unknown_retry">पुनः प्रयास गर्नुहोस्</string>
   <string name="upload_dialog_error_unknown_ok">रद्द गर्नुहोस्</string>
-  <string name="upload_dialog_process_title">फोटो अपलोड गर्दै</string>
+  <string name="upload_dialog_process_title" fuzzy="true">फोटो अपलोड गर्दै</string>
   <string name="upload_dialog_process_message">कृपया प्रतिक्षा गर्नुहोस्…</string>
   <string name="upload_dialog_success_title">अपलोड सफल</string>
   <string name="upload_dialog_success_message">फोटो सफलतापूर्वक अपलोड भयो!</string>

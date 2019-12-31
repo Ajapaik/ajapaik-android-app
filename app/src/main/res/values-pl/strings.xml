@@ -50,14 +50,14 @@
   <string name="user_already_exists">Nazwa użytkownika już istnieje</string>
   <string name="upload_title">Zatwierdź fotografię</string>
   <string name="upload_dialog_error_connection_title">Błąd połączenia</string>
-  <string name="upload_dialog_error_connection_message">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
   <string name="upload_dialog_error_connection_retry">Ponów</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Nieznany błąd</string>
-  <string name="upload_dialog_error_unknown_message">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
   <string name="upload_dialog_error_unknown_retry">Ponów</string>
   <string name="upload_dialog_error_unknown_ok">Anuluj</string>
-  <string name="upload_dialog_process_title">Przesyłanie zdjęcia</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Przesyłanie zdjęcia</string>
   <string name="upload_dialog_process_message">Proszę czekać…</string>
   <string name="upload_dialog_success_title">Przesyłanie zakończone sukcesem</string>
   <string name="upload_dialog_success_message">Zdjęcie zostało przesłane pomyślnie!</string>

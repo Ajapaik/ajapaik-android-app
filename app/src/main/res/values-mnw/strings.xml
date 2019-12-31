@@ -49,14 +49,14 @@
   <string name="user_already_exists">ယၟုမသုင်စောဲဂှ် နွံဒၟံင် တုဲတုဲ</string>
   <string name="upload_title">သ္ပဒတန် ရဳဝှဝ်တဝ်</string>
   <string name="upload_dialog_error_connection_title">ပရေင်ဆက်စၠောအ် ဗၠေတ်ဒၟံင်</string>
-  <string name="upload_dialog_error_connection_message">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
   <string name="upload_dialog_error_connection_retry">ကလေင်ကၠောန်</string>
   <string name="upload_dialog_error_connection_ok">ခိုဟ်</string>
   <string name="upload_dialog_error_unknown_title">ဟွံတီ ဗီုလဵုဗၠေတ်</string>
-  <string name="upload_dialog_error_unknown_message">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
   <string name="upload_dialog_error_unknown_retry">ကလေင်ကၠောန်</string>
   <string name="upload_dialog_error_unknown_ok">တးပဲါ</string>
-  <string name="upload_dialog_process_title">ပတိုန်ပၠောပ်ဒၟံင် ဗီုရုပ်ဂှ်</string>
+  <string name="upload_dialog_process_title" fuzzy="true">ပတိုန်ပၠောပ်ဒၟံင် ဗီုရုပ်ဂှ်</string>
   <string name="upload_dialog_process_message">ပဂုန်တုဲ မင်မွဲလစုတ်...</string>
   <string name="upload_dialog_success_title">ပၠောပ်ပတိုန် အံင်ဇၞးပေင်င်</string>
   <string name="upload_dialog_success_message">ဗီုရုပ်ဂှ် ပတိုန်ပၠောပ်ဂွံ ဗွဲမအံင်ဇၞး!</string>

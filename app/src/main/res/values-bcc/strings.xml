@@ -44,14 +44,14 @@
   <string name="user_already_exists">È kàrzuroki nàm pèsar à ha</string>
   <string name="upload_title">Aks ťagal dayag bit</string>
   <string name="upload_dialog_error_connection_title">Ťac na bit</string>
-  <string name="upload_dialog_error_connection_message">Aks sargèjag(Àplod) na bit,pad à kòšest a kan ae?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Aks sargèjag(Àplod) na bit,pad à kòšest a kan ae?</string>
   <string name="upload_dialog_error_connection_retry">Kòšest</string>
   <string name="upload_dialog_error_connection_ok">Ša!</string>
   <string name="upload_dialog_error_unknown_title">Nàbezàntèn Haràbi</string>
-  <string name="upload_dialog_error_unknown_message">Aks sargèjag(Àplod) na bit,pad Aà kòšest a kan ae?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Aks sargèjag(Àplod) na bit,pad Aà kòšest a kan ae?</string>
   <string name="upload_dialog_error_unknown_retry">Kòšest</string>
   <string name="upload_dialog_error_unknown_ok">Bajjag</string>
-  <string name="upload_dialog_process_title">Aks sargèjag biyagaen</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Aks sargèjag biyagaen</string>
   <string name="upload_dialog_process_message">Sabr kan...</string>
   <string name="upload_dialog_success_title">Sargèjag bi</string>
   <string name="upload_dialog_success_message">Aks sargèjag bit</string>

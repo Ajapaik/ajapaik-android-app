@@ -47,14 +47,14 @@
   <string name="user_already_exists">ಬಳಕೆದಾರೆರೆನ ಪುದರ್ ದುಂಬೆ ಉಂಡು</string>
   <string name="upload_title">ಪಟೊನು ನಾನೊರೊ ದ್ರುಡೊ ಮಲ್ಪುಲೆ</string>
   <string name="upload_dialog_error_connection_title">ತಾಗುನ ದೋಸೊ</string>
-  <string name="upload_dialog_error_connection_message">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
   <string name="upload_dialog_error_connection_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
   <string name="upload_dialog_error_connection_ok">ಅವು</string>
   <string name="upload_dialog_error_unknown_title">ಗೊತ್ತಿಜ್ಜಂದಿನ ದೋಸೊ</string>
-  <string name="upload_dialog_error_unknown_message">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
   <string name="upload_dialog_error_unknown_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
   <string name="upload_dialog_error_unknown_ok">ದೆಪ್ಪುಲೆ</string>
-  <string name="upload_dialog_process_title">ಪಟೊನು ಅಪ್ಲೋಡು ಮಲ್ಪುಂಡು</string>
+  <string name="upload_dialog_process_title" fuzzy="true">ಪಟೊನು ಅಪ್ಲೋಡು ಮಲ್ಪುಂಡು</string>
   <string name="upload_dialog_process_message">ದಯಮಲ್ತ್ ಕಾಪುಲೆ</string>
   <string name="upload_dialog_success_title">ಅಪ್ಲೋಡ್ ಸರಿಯಾತ್ಂಡ್</string>
   <string name="upload_dialog_success_message">ಪಟೊ ಅಪ್ಲೋಡ್ ಸರಿಯಾದ್ ಆತ್ಂಡ್!</string>

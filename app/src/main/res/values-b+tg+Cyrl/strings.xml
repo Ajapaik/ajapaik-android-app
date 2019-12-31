@@ -48,7 +48,7 @@
   <string name="upload_dialog_error_unknown_title">Хатогии ношинос</string>
   <string name="upload_dialog_error_unknown_retry">Дубора саъй кунед</string>
   <string name="upload_dialog_error_unknown_ok">Тамом кардан</string>
-  <string name="upload_dialog_process_title">Боркунии акс</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Боркунии акс</string>
   <string name="upload_dialog_success_title">Боркунии муваффақон</string>
   <string name="upload_dialog_success_ok">Таъйид</string>
   <string name="upload_dialog_not_authenticated_ok">Таъйид</string>

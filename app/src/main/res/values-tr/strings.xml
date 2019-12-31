@@ -56,14 +56,14 @@
   <string name="user_already_exists">Kullanıcı adı zaten mevcut</string>
   <string name="upload_title">Yeniden Fotoğraflamayı Onayla</string>
   <string name="upload_dialog_error_connection_title">Bağlantı Hatası</string>
-  <string name="upload_dialog_error_connection_message">Fotoğraf yüklenemedi. Tekrar denemek ister misiniz?</string>
+  <string name="upload_dialog_error_connection_message">Fotoğraf yüklenemedi.</string>
   <string name="upload_dialog_error_connection_retry">Tekrar Deneyin</string>
   <string name="upload_dialog_error_connection_ok">Tamam</string>
   <string name="upload_dialog_error_unknown_title">Bilinmeyen Hata</string>
-  <string name="upload_dialog_error_unknown_message">Fotoğraf yüklenemedi. Tekrar denemek ister misiniz?</string>
+  <string name="upload_dialog_error_unknown_message">Fotoğraf yüklenemedi.</string>
   <string name="upload_dialog_error_unknown_retry">Tekrar Deneyin</string>
   <string name="upload_dialog_error_unknown_ok">İptal</string>
-  <string name="upload_dialog_process_title">Fotoğraf yükleniyor</string>
+  <string name="upload_dialog_process_title">Fotoğrafı arka planda yükleniyor</string>
   <string name="upload_dialog_process_message">Lütfen bekleyin...</string>
   <string name="upload_dialog_success_title">Yükleme Başarılı</string>
   <string name="upload_dialog_success_message">Fotoğraf başarıyla yüklendi!</string>
@@ -74,6 +74,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Yeniden fotoğraflamayı, CC BY 4.0 lisansı altında yayınlamayı kabul ediyorum.</string>
   <string name="upload_dialog_agree_to_terms">Evet!</string>
   <string name="upload_dialog_decline_terms">Hayır</string>
+  <string name="upload_notification_title">Yeniden fotoğraf yükleniyor. Biraz zaman alabilir</string>
+  <string name="upload_notification_success">Yeniden fotoğraf başarıyla yüklendi</string>
+  <string name="upload_notification_failure">Yeniden fotoğraf başarısız oldu</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' çöktü</string>
   <string name="acra_dialog_text">Uygulamayı durmaya zorlayan beklenmedik bir hata oluştu. Lütfen bize hata verilerini göndererek düzeltmemize yardımcı olun, yapmanız gereken tek şey Tamam\'a tıklamaktır.</string>
   <string name="acra_dialog_comment_prompt">Aşağıdaki sorun hakkında yorumlarınızı ekleyebilirsiniz:</string>

@@ -46,7 +46,7 @@
   <string name="upload_dialog_error_unknown_title">ⵜⴰⵣⴳⴰⵍⵜ ⵓⵔ ⵉⵜⵜⵡⴰⵙⵙⵏⴻⵏ</string>
   <string name="upload_dialog_error_unknown_retry">ⴰⵔⵎ ⴷⴰⵖ</string>
   <string name="upload_dialog_error_unknown_ok">ⵙⵔ</string>
-  <string name="upload_dialog_process_title">ⵙⵙⴽⵜⵔ ⵜⴰⵡⵍⴰⴼⵜ</string>
+  <string name="upload_dialog_process_title" fuzzy="true">ⵙⵙⴽⵜⵔ ⵜⴰⵡⵍⴰⴼⵜ</string>
   <string name="upload_dialog_process_message">ⴰⵎⵓⵔ ⵏⵏⴽ ⵙⴰⴳⵎ...</string>
   <string name="upload_dialog_success_title">ⵉⵎⵓⵔⵙ ⵓⵙⴽⵜⵔ</string>
   <string name="upload_dialog_success_message">ⵜⴻⵜⵜⵓⵙⴽⵜⵔ ⵜⵡⵍⴰⴼⵜ ⵙ ⵓⵎⵓⵔⵙ!</string>

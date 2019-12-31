@@ -56,14 +56,14 @@
   <string name="user_already_exists">Nameyê karberi xora esto</string>
   <string name="upload_title">Refotoyi qebul ke</string>
   <string name="upload_dialog_error_connection_title">Xetaya Gırêdayışi</string>
-  <string name="upload_dialog_error_connection_message">Fotraf bar nêbiyo. Reyna bıcerrebnê?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Fotraf bar nêbiyo. Reyna bıcerrebnê?</string>
   <string name="upload_dialog_error_connection_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
   <string name="upload_dialog_error_unknown_title">Xetaya nêzanıtiye</string>
-  <string name="upload_dialog_error_unknown_message">Fotraf bar nêbiyo. Reyna bıcerrebnê?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Fotraf bar nêbiyo. Reyna bıcerrebnê?</string>
   <string name="upload_dialog_error_unknown_retry">Anciya bıcerrebne</string>
   <string name="upload_dialog_error_unknown_ok">Bıtexelne</string>
-  <string name="upload_dialog_process_title">Resım bar beno</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Resım bar beno</string>
   <string name="upload_dialog_process_message">Kerem kerên, bıpawên...</string>
   <string name="upload_dialog_success_title">Barkerdış Serfirazo</string>
   <string name="upload_dialog_success_message">Fotraf serkewte bar biyo!</string>

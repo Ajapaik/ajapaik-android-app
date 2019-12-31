@@ -48,14 +48,14 @@
   <string name="user_already_exists">Brukernavnet finnes allerede</string>
   <string name="upload_title">Bekreft refoto</string>
   <string name="upload_dialog_error_connection_title">Tilkoblingsfeil</string>
-  <string name="upload_dialog_error_connection_message">Kunne ikke laste opp bildet. Prøve igjen?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Kunne ikke laste opp bildet. Prøve igjen?</string>
   <string name="upload_dialog_error_connection_retry">Prøv igjen</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Ukjent feil</string>
-  <string name="upload_dialog_error_unknown_message">Kunne ikke laste opp bildet. Prøve igjen?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Kunne ikke laste opp bildet. Prøve igjen?</string>
   <string name="upload_dialog_error_unknown_retry">Prøv igjen</string>
   <string name="upload_dialog_error_unknown_ok">Avbryt</string>
-  <string name="upload_dialog_process_title">Laster opp bildet</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Laster opp bildet</string>
   <string name="upload_dialog_process_message">Vent litt …</string>
   <string name="upload_dialog_success_title">Opplastingen lyktes</string>
   <string name="upload_dialog_success_message">Bildet ble lastet opp!</string>

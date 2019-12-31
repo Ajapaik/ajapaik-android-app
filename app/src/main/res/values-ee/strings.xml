@@ -51,14 +51,14 @@
   <string name="user_already_exists">Ezãŋkɔa li xoxo</string>
   <string name="upload_title">Ɖo Kpe Fotogbugbɔɖea Dzi</string>
   <string name="upload_dialog_error_connection_title">Kadodoa Mewɔ Dɔ O</string>
-  <string name="upload_dialog_error_connection_message">Mete ŋu da fotoa ɖi o. Àgatee kpɔa?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Mete ŋu da fotoa ɖi o. Àgatee kpɔa?</string>
   <string name="upload_dialog_error_connection_retry">Gatee Kpɔ</string>
   <string name="upload_dialog_error_connection_ok">YOO</string>
   <string name="upload_dialog_error_unknown_title">Kuxi Manya Aɖe</string>
-  <string name="upload_dialog_error_unknown_message">Mete ŋu da fotoa ɖi o. Àgatee kpɔa?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Mete ŋu da fotoa ɖi o. Àgatee kpɔa?</string>
   <string name="upload_dialog_error_unknown_retry">Gatee Kpɔ</string>
   <string name="upload_dialog_error_unknown_ok">Netasii</string>
-  <string name="upload_dialog_process_title">Ele fotoa dam ɖi</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Ele fotoa dam ɖi</string>
   <string name="upload_dialog_process_message">Taflatsɛ lala…</string>
   <string name="upload_dialog_success_title">Edae Ɖi Vɔ</string>
   <string name="upload_dialog_success_message">Eda fotoa ɖi vɔ!</string>

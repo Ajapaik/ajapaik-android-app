@@ -51,14 +51,14 @@
   <string name="user_already_exists">ꯁꯤꯖꯤꯟꯅꯕꯥ ꯃꯃꯤꯡ ꯍꯥꯟꯅꯗꯒꯤ ꯂꯩꯔꯦ</string>
   <string name="upload_title">ꯑꯃꯨꯛꯍꯟꯕꯥ ꯃꯤꯔꯦꯜ ꯁꯛꯈꯪꯕꯥ</string>
   <string name="upload_dialog_error_connection_title">ꯁꯝꯅꯥꯐꯝ ꯑꯁꯣꯏꯕꯥ ꯂꯩꯔꯦ</string>
-  <string name="upload_dialog_error_connection_message">ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯇꯧꯔꯣ, ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯄꯥ ꯉꯝꯗꯔꯦ</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯇꯧꯔꯣ, ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯄꯥ ꯉꯝꯗꯔꯦ</string>
   <string name="upload_dialog_error_connection_retry">ꯑꯃꯨꯧꯍꯟꯅꯥ</string>
   <string name="upload_dialog_error_connection_ok">ꯌꯥꯔꯦ</string>
   <string name="upload_dialog_error_unknown_title">ꯁꯛꯈꯪꯗꯕꯥ ꯑꯔꯥꯟꯕꯥ</string>
-  <string name="upload_dialog_error_unknown_message">ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯇꯧꯔꯣ, ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯄꯥ ꯉꯝꯗꯔꯦ</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯇꯧꯔꯣ, ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯄꯥ ꯉꯝꯗꯔꯦ</string>
   <string name="upload_dialog_error_unknown_retry">ꯑꯃꯨꯛꯍꯟꯅꯥ ꯇꯧꯔꯣ</string>
   <string name="upload_dialog_error_unknown_ok">ꯀꯛꯊꯠꯄꯥ</string>
-  <string name="upload_dialog_process_title">ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯂꯤ</string>
+  <string name="upload_dialog_process_title" fuzzy="true">ꯃꯤꯔꯦꯜ ꯊꯥꯒꯠꯂꯤ</string>
   <string name="upload_dialog_process_message">ꯉꯥꯏꯒꯥꯛꯇꯪ ꯉꯥꯏꯕꯤꯈꯣ</string>
   <string name="upload_dialog_success_title">ꯃꯥꯏꯄꯥꯅꯥ ꯊꯥꯒꯠꯂꯦ</string>
   <string name="upload_dialog_success_message">ꯃꯤꯔꯦꯜ ꯑꯗꯨ ꯃꯥꯏꯄꯥꯛꯅꯥ ꯊꯥꯒꯠꯂꯦ</string>

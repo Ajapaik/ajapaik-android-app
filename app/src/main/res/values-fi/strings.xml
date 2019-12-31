@@ -57,14 +57,14 @@
   <string name="user_already_exists">Pyydetty käyttäjänimi on jo olemassa</string>
   <string name="upload_title">Hyväksy kuva</string>
   <string name="upload_dialog_error_connection_title">Yhteysvirhe</string>
-  <string name="upload_dialog_error_connection_message">Virhe kuvan latauksessa. Yritä uudestaan?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Virhe kuvan latauksessa. Yritä uudestaan?</string>
   <string name="upload_dialog_error_connection_retry">Yritä uudestaan</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Tapahtui tuntematon virhe</string>
-  <string name="upload_dialog_error_unknown_message">Virhe kuvan latauksessa. Yritä uudestaan?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Virhe kuvan latauksessa. Yritä uudestaan?</string>
   <string name="upload_dialog_error_unknown_retry">Yritä uudestaan</string>
   <string name="upload_dialog_error_unknown_ok">Peruuta</string>
-  <string name="upload_dialog_process_title">Lähetetään kuvaa</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Lähetetään kuvaa</string>
   <string name="upload_dialog_process_message">Odota…</string>
   <string name="upload_dialog_success_title">Lähetys onnistui</string>
   <string name="upload_dialog_success_message">Kuvan lähetys onnistui</string>

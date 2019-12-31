@@ -57,14 +57,14 @@
   <string name="user_already_exists">Gebruikersnaam bestaat al</string>
   <string name="upload_title">Bevestig de nieuwe foto</string>
   <string name="upload_dialog_error_connection_title">Verbindingsfout</string>
-  <string name="upload_dialog_error_connection_message">Kan de foto niet uploaden. Opnieuw proberen?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Kan de foto niet uploaden. Opnieuw proberen?</string>
   <string name="upload_dialog_error_connection_retry">Opnieuw</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Onbekende fout</string>
-  <string name="upload_dialog_error_unknown_message">Kan de foto niet uploaden. Opnieuw proberen?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Kan de foto niet uploaden. Opnieuw proberen?</string>
   <string name="upload_dialog_error_unknown_retry">Opnieuw</string>
   <string name="upload_dialog_error_unknown_ok">Annuleren</string>
-  <string name="upload_dialog_process_title">Foto uploaden</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Foto uploaden</string>
   <string name="upload_dialog_process_message">Een ogenblik geduld…</string>
   <string name="upload_dialog_success_title">Uploaden afgerond</string>
   <string name="upload_dialog_success_message">De foto is met succes geupload!</string>

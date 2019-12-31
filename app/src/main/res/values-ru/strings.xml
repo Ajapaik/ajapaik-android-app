@@ -57,14 +57,14 @@
   <string name="user_already_exists">Такое имя уже занято</string>
   <string name="upload_title">Подтвердить рефото</string>
   <string name="upload_dialog_error_connection_title">Ошибка соединения</string>
-  <string name="upload_dialog_error_connection_message">Невозможно загрузить фото. Попробовать снова?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Невозможно загрузить фото. Попробовать снова?</string>
   <string name="upload_dialog_error_connection_retry">Повторить</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
   <string name="upload_dialog_error_unknown_title">Неизвестная ошибка</string>
-  <string name="upload_dialog_error_unknown_message">Невозможно загрузить фото. Попробовать снова?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Невозможно загрузить фото. Попробовать снова?</string>
   <string name="upload_dialog_error_unknown_retry">Повторить</string>
   <string name="upload_dialog_error_unknown_ok">Отмена</string>
-  <string name="upload_dialog_process_title">Загрузка фото</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Загрузка фото</string>
   <string name="upload_dialog_process_message">Пожалуйста, подождите...</string>
   <string name="upload_dialog_success_title">Успешно загружено</string>
   <string name="upload_dialog_success_message">Фото успешно загружено!</string>

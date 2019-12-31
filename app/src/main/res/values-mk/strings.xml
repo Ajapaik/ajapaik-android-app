@@ -55,14 +55,14 @@
   <string name="user_already_exists">Корисничкото име веќе постои</string>
   <string name="upload_title">Потврди спор. слика</string>
   <string name="upload_dialog_error_connection_title">Грешка при поврзувањето</string>
-  <string name="upload_dialog_error_connection_message">Не можев да ја подигнам сликата. Да пробам повторно?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Не можев да ја подигнам сликата. Да пробам повторно?</string>
   <string name="upload_dialog_error_connection_retry">Пробај пак</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
   <string name="upload_dialog_error_unknown_title">Непозната грешка</string>
-  <string name="upload_dialog_error_unknown_message">Не можев да ја подигнам сликата. Да пробам повторно?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Не можев да ја подигнам сликата. Да пробам повторно?</string>
   <string name="upload_dialog_error_unknown_retry">Пробај пак</string>
   <string name="upload_dialog_error_unknown_ok">Откажи</string>
-  <string name="upload_dialog_process_title">Подигање на сликата</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Подигање на сликата</string>
   <string name="upload_dialog_process_message">Почекајте...</string>
   <string name="upload_dialog_success_title">Подигањето успеа</string>
   <string name="upload_dialog_success_message">Сликата е успешно подигната!</string>

@@ -58,14 +58,14 @@
   <string name="user_already_exists">اسم المستخدم موجود بالفعل</string>
   <string name="upload_title">تأكيد الصورة المجدَّدة</string>
   <string name="upload_dialog_error_connection_title">خطأ في الاتصال</string>
-  <string name="upload_dialog_error_connection_message">غير قادر على تحميل الصورة، حاول مرة أخرى؟</string>
+  <string name="upload_dialog_error_connection_message">غير قادر على تحميل الصورة.</string>
   <string name="upload_dialog_error_connection_retry">حاول مرة أخرى</string>
   <string name="upload_dialog_error_connection_ok">حسنا</string>
   <string name="upload_dialog_error_unknown_title">خطأ غير معروف</string>
-  <string name="upload_dialog_error_unknown_message">لا يمكن رفع الصورة. حاول مرة أخرى؟</string>
+  <string name="upload_dialog_error_unknown_message">لا يمكن رفع الصورة.</string>
   <string name="upload_dialog_error_unknown_retry">إعادة المحاولة</string>
   <string name="upload_dialog_error_unknown_ok">إلغاء</string>
-  <string name="upload_dialog_process_title">رفع الصورة</string>
+  <string name="upload_dialog_process_title">رفع الصورة في الخلفية</string>
   <string name="upload_dialog_process_message">الرجاء الانتظار…</string>
   <string name="upload_dialog_success_title">رفع ناجح</string>
   <string name="upload_dialog_success_message">تم رفع الصورة بنجاح!</string>
@@ -76,6 +76,9 @@
   <string name="upload_dialog_not_agreed_to_terms">أنا أوافق على نشر الصور المجدَّدة تحت رخصة CC BY 4.0</string>
   <string name="upload_dialog_agree_to_terms">نعم!</string>
   <string name="upload_dialog_decline_terms">لا</string>
+  <string name="upload_notification_title">جارٍ رفع إعادة الصورة، قد يستغرق الأمر بعض الوقت</string>
+  <string name="upload_notification_success">تم رفع إعادة الصورة بنجاح!</string>
+  <string name="upload_notification_failure">فشل رفع إعادة الصورة</string>
   <string name="acra_dialog_title">لقد تحطم \'أجابيك لإعادة التصوير\'</string>
   <string name="acra_dialog_text">حدث خطأ غير متوقع يجبر التطبيق على التوقف، الرجاء مساعدتنا في إصلاح ذلك عن طريق إرسال بيانات الخطأ إلينا، وكل ما عليك فعله هو النقر على موافق.</string>
   <string name="acra_dialog_comment_prompt">يمكنك إضافة تعليقاتك حول المشكلة أدناه:</string>

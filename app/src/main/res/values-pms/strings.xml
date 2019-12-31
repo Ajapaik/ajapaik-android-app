@@ -54,14 +54,14 @@
   <string name="user_already_exists">Së stranòm a esist già</string>
   <string name="upload_title">Confirmé ël dobion dla fòto</string>
   <string name="upload_dialog_error_connection_title">Eror ëd conession</string>
-  <string name="upload_dialog_error_connection_message">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Impossìbil carié la fòto. Prové torna?</string>
   <string name="upload_dialog_error_connection_retry">Prové torna</string>
   <string name="upload_dialog_error_connection_ok">Va bin</string>
   <string name="upload_dialog_error_unknown_title">Eror nen conossù</string>
-  <string name="upload_dialog_error_unknown_message">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Impossìbil carié la fòto. Prové torna?</string>
   <string name="upload_dialog_error_unknown_retry">Prové torna</string>
   <string name="upload_dialog_error_unknown_ok">Anulé</string>
-  <string name="upload_dialog_process_title">Cariament ëd la fòto</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Cariament ëd la fòto</string>
   <string name="upload_dialog_process_message">Ch\'a l\'abia passiensa…</string>
   <string name="upload_dialog_success_title">Cariament riussì</string>
   <string name="upload_dialog_success_message">La fòto a l\'é stàita carià për da bin!</string>

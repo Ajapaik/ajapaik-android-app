@@ -54,14 +54,14 @@
   <string name="user_already_exists">\'U nome de l\'utende già esiste</string>
   <string name="upload_title">Conferme \'a refote</string>
   <string name="upload_dialog_error_connection_title">Errore de connessione</string>
-  <string name="upload_dialog_error_connection_message">Non ge pozze carecà \'a fote. Pruève arrete?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Non ge pozze carecà \'a fote. Pruève arrete?</string>
   <string name="upload_dialog_error_connection_retry">Pruève arrete</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Errore scanusciute</string>
-  <string name="upload_dialog_error_unknown_message">Non ge pozze carecà \'a fote. Pruève arrete?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Non ge pozze carecà \'a fote. Pruève arrete?</string>
   <string name="upload_dialog_error_unknown_retry">Pruève arrete</string>
   <string name="upload_dialog_error_unknown_ok">Annulle</string>
-  <string name="upload_dialog_process_title">Stoche a careche \'a fote</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Stoche a careche \'a fote</string>
   <string name="upload_dialog_process_message">Aspitte...</string>
   <string name="upload_dialog_success_title">Carecamende assute</string>
   <string name="upload_dialog_success_message">\'A fote ha state carecate!</string>

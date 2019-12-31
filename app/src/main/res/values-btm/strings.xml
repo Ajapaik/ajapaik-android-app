@@ -50,14 +50,14 @@
   <string name="user_already_exists">Gorar pangguna madung adong</string>
   <string name="upload_title">Konfirmasion Rephoto</string>
   <string name="upload_dialog_error_connection_title">Jaringan Sega</string>
-  <string name="upload_dialog_error_connection_message">Inda bisa mangaplod poto. Kajo mulak?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Inda bisa mangaplod poto. Kajo mulak?</string>
   <string name="upload_dialog_error_connection_retry">Mangkajo mulak</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Indabinoto segana</string>
-  <string name="upload_dialog_error_unknown_message">Inda bisa mangaplod poto. Kajo mulak?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Inda bisa mangaplod poto. Kajo mulak?</string>
   <string name="upload_dialog_error_unknown_retry">Mangkajo mulak</string>
   <string name="upload_dialog_error_unknown_ok">Antai</string>
-  <string name="upload_dialog_process_title">Mangaplod gambar</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Mangaplod gambar</string>
   <string name="upload_dialog_process_message">Painte tongkin...</string>
   <string name="upload_dialog_success_title">Aplod marhasil</string>
   <string name="upload_dialog_success_message">Gambar madung marhasil iaplod</string>

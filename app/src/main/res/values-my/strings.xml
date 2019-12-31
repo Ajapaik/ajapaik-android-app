@@ -41,14 +41,14 @@
   <string name="registration_title">မှတ်ပုံတင်ရန်</string>
   <string name="user_already_exists">အသုံးပြုသူအမည် ရှိနေပြီးသားဖြစ်သည်</string>
   <string name="upload_dialog_error_connection_title">ဆက်သွယ်မှု အမှား</string>
-  <string name="upload_dialog_error_connection_message">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
   <string name="upload_dialog_error_connection_retry">ပြန်လုပ်</string>
   <string name="upload_dialog_error_connection_ok">အိုကေ</string>
   <string name="upload_dialog_error_unknown_title">အမည်မသိအမှား</string>
-  <string name="upload_dialog_error_unknown_message">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">ရုပ်ပုံတင်၍ မရနိုင်ပါ၊ ထပ်မံကြိုးစားမည်လော။</string>
   <string name="upload_dialog_error_unknown_retry">ပြန်လုပ်</string>
   <string name="upload_dialog_error_unknown_ok">မလုပ်တော့ပါ</string>
-  <string name="upload_dialog_process_title">ရုပ်ပုံ ဆွဲတင်နေသည်</string>
+  <string name="upload_dialog_process_title" fuzzy="true">ရုပ်ပုံ ဆွဲတင်နေသည်</string>
   <string name="upload_dialog_process_message">ကျေးဇူးပြု၍ ခဏစောင့်ပါ...</string>
   <string name="upload_dialog_success_title">ဆွဲတင်ခြင်း အောင်မြင်သည်</string>
   <string name="upload_dialog_success_message">ရုပ်ပုံ အောင်မြင်စွာ တင်လိုက်ပါပြီ</string>

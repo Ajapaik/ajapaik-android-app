@@ -51,14 +51,14 @@
   <string name="user_already_exists">Erabiltzailea jadanik existitzen da</string>
   <string name="upload_title">Berargazkia Baieztatu</string>
   <string name="upload_dialog_error_connection_title">Konektatzeko Errorea</string>
-  <string name="upload_dialog_error_connection_message">Ezin izan da argazkia igo. Berriz saiatu?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Ezin izan da argazkia igo. Berriz saiatu?</string>
   <string name="upload_dialog_error_connection_retry">Saiatu berriro</string>
   <string name="upload_dialog_error_connection_ok">Ados</string>
   <string name="upload_dialog_error_unknown_title">Errore ezezaguna</string>
-  <string name="upload_dialog_error_unknown_message">Ezin izan da argazkia igo. Berriz saiatu?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Ezin izan da argazkia igo. Berriz saiatu?</string>
   <string name="upload_dialog_error_unknown_retry">Saiatu berriro</string>
   <string name="upload_dialog_error_unknown_ok">Utzi</string>
-  <string name="upload_dialog_process_title">Argazkia igotzen</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Argazkia igotzen</string>
   <string name="upload_dialog_process_message">Mesedez itxaron…</string>
   <string name="upload_dialog_success_title">Ondo igo da</string>
   <string name="upload_dialog_success_message">Argazkia arrakastaz igo da!</string>

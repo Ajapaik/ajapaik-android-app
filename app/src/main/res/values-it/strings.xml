@@ -37,7 +37,7 @@
   <string name="upload_dialog_error_connection_retry">Riprova</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Errore sconosciuto</string>
-  <string name="upload_dialog_error_unknown_message">Impossibile caricare la foto. Riprovare?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Impossibile caricare la foto. Riprovare?</string>
   <string name="upload_dialog_error_unknown_retry">Riprova</string>
   <string name="upload_dialog_error_unknown_ok">Annulla</string>
   <string name="upload_dialog_success_title">Caricamento riuscito</string>

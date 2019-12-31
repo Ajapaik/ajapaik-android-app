@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Geraki
 * KATRINE1993
 * Nikosgranturismogt
 -->
@@ -52,14 +53,14 @@
   <string name="user_already_exists">Το όνομα χρήστη υπάρχει ήδη</string>
   <string name="upload_title">Επιβεβαίωση επαναφωτογραφίας</string>
   <string name="upload_dialog_error_connection_title">Σφάλμα σύνδεσης</string>
-  <string name="upload_dialog_error_connection_message">Αποτυχία στο ανέβασμα της φωτογραφίας. Να ξαναπροσπαθήσουμε;</string>
+  <string name="upload_dialog_error_connection_message">Αποτυχία στο ανέβασμα της φωτογραφίας.</string>
   <string name="upload_dialog_error_connection_retry">Ξαναπροσπαθήστε</string>
   <string name="upload_dialog_error_connection_ok">Εντάξει</string>
   <string name="upload_dialog_error_unknown_title">Άγνωστο σφάλμα</string>
-  <string name="upload_dialog_error_unknown_message">Αποτυχία στο ανέβασμα της φωτογραφίας. Να ξαναπροσπαθήσουμε;</string>
+  <string name="upload_dialog_error_unknown_message">Αποτυχία στο ανέβασμα της φωτογραφίας.</string>
   <string name="upload_dialog_error_unknown_retry">Ξαναπροσπαθήστε</string>
   <string name="upload_dialog_error_unknown_ok">Ακύρωση</string>
-  <string name="upload_dialog_process_title">Φόρτωση φωτογραφίας</string>
+  <string name="upload_dialog_process_title">Ανέβασμα της φωτογραφίας στο παρασκήνιο</string>
   <string name="upload_dialog_process_message">Παρακαλούμε περιμένετε…</string>
   <string name="upload_dialog_success_title">Η μεταφόρτωση ήταν επιτυχής</string>
   <string name="upload_dialog_success_message">Η φωτογραφία ανέβηκε επιτυχώς!</string>

@@ -57,14 +57,14 @@
   <string name="user_already_exists">Der Benutzername ist bereits vorhanden.</string>
   <string name="upload_title">Refoto bestätigen</string>
   <string name="upload_dialog_error_connection_title">Verbindungsfehler</string>
-  <string name="upload_dialog_error_connection_message">Das Hochladen des Refotos war nicht erfolgreich. Wiederholen?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Das Hochladen des Refotos war nicht erfolgreich. Wiederholen?</string>
   <string name="upload_dialog_error_connection_retry">Nochmal</string>
   <string name="upload_dialog_error_connection_ok">Okay</string>
   <string name="upload_dialog_error_unknown_title">Unbekannter Fehler</string>
-  <string name="upload_dialog_error_unknown_message">Hochladen nicht erfolgreich. Erneut versuchen?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Hochladen nicht erfolgreich. Erneut versuchen?</string>
   <string name="upload_dialog_error_unknown_retry">Nochmal</string>
   <string name="upload_dialog_error_unknown_ok">Abbrechen</string>
-  <string name="upload_dialog_process_title">Hochladen deines Fotos</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Hochladen deines Fotos</string>
   <string name="upload_dialog_process_message">Bitte warten …</string>
   <string name="upload_dialog_success_title">Hochladen erfolgreich</string>
   <string name="upload_dialog_success_message">Hochladen erfolgreich!</string>

@@ -51,14 +51,14 @@
   <string name="user_already_exists">Utilizatorul există deja.</string>
   <string name="upload_title">Confirmați Rephoto</string>
   <string name="upload_dialog_error_connection_title">Eroare de conexiune</string>
-  <string name="upload_dialog_error_connection_message">Imposibil de încărcat fotografia. Încearcă din nou?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Imposibil de încărcat fotografia. Încearcă din nou?</string>
   <string name="upload_dialog_error_connection_retry">Reîncercare</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Eroare Necunoscută</string>
-  <string name="upload_dialog_error_unknown_message">Imposibil de încărcat fotografia. Încearcă din nou?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Imposibil de încărcat fotografia. Încearcă din nou?</string>
   <string name="upload_dialog_error_unknown_retry">Reîncercare</string>
   <string name="upload_dialog_error_unknown_ok">Anulare</string>
-  <string name="upload_dialog_process_title">Încărcarea fotografiei</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Încărcarea fotografiei</string>
   <string name="upload_dialog_process_message">Vă rugăm să așteptați ...</string>
   <string name="upload_dialog_success_title">Încărcată cu succes</string>
   <string name="upload_dialog_success_message">Fotografia a fost încărcată cu succes!</string>

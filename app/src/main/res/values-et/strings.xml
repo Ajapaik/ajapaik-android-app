@@ -55,14 +55,14 @@
   <string name="user_already_exists">Kasutajanimi juba kasutusel</string>
   <string name="upload_title">Kinnita ülepildistus</string>
   <string name="upload_dialog_error_connection_title">Ühenduse viga</string>
-  <string name="upload_dialog_error_connection_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
   <string name="upload_dialog_error_connection_retry">Uuesti</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Tundmatu viga</string>
-  <string name="upload_dialog_error_unknown_message">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Pildi üleslaadimine ebaõnnestus. Proovi uuesti?</string>
   <string name="upload_dialog_error_unknown_retry">Uuesti</string>
   <string name="upload_dialog_error_unknown_ok">Tühista</string>
-  <string name="upload_dialog_process_title">Pildi laadimine taustal. See võib võtta mõne hetke</string>
+  <string name="upload_dialog_process_title" fuzzy="true">Pildi laadimine taustal. See võib võtta mõne hetke</string>
   <string name="upload_dialog_process_message">Palun oota…</string>
   <string name="upload_dialog_success_title">Üleslaadimine õnnestus</string>
   <string name="upload_dialog_success_message">Pildi üles laadimine läks korda!</string>

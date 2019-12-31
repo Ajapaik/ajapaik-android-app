@@ -56,14 +56,14 @@
   <string name="user_already_exists">O nome de utilizador já existe</string>
   <string name="upload_title">Confirmar a refotografia</string>
   <string name="upload_dialog_error_connection_title">Erro de ligação</string>
-  <string name="upload_dialog_error_connection_message">Não foi possível carregar a fotografia. Deseja tentar novamente?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Não foi possível carregar a fotografia. Deseja tentar novamente?</string>
   <string name="upload_dialog_error_connection_retry">Tentar novamente</string>
   <string name="upload_dialog_error_connection_ok">Aceitar</string>
   <string name="upload_dialog_error_unknown_title">Erro desconhecido</string>
-  <string name="upload_dialog_error_unknown_message">Não foi possível carregar a fotografia. Tentar novamente?</string>
+  <string name="upload_dialog_error_unknown_message" fuzzy="true">Não foi possível carregar a fotografia. Tentar novamente?</string>
   <string name="upload_dialog_error_unknown_retry">Tentar novamente</string>
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
-  <string name="upload_dialog_process_title">A enviar a fotografia</string>
+  <string name="upload_dialog_process_title" fuzzy="true">A enviar a fotografia</string>
   <string name="upload_dialog_process_message">Aguarde, por favor…</string>
   <string name="upload_dialog_success_title">O envio foi realizado</string>
   <string name="upload_dialog_success_message">A fotografia foi carregada!</string>

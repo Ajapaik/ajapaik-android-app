@@ -50,7 +50,7 @@
   <string name="user_already_exists">Igwa nang arog kaining pangaran-nin-paragamit</string>
   <string name="upload_title">Kumpirmahon an Pagsasaladawan</string>
   <string name="upload_dialog_error_connection_title">Error sa Koneksyon</string>
-  <string name="upload_dialog_error_connection_message">Dae ma-upload an ladawan. Utruhon?</string>
+  <string name="upload_dialog_error_connection_message" fuzzy="true">Dae ma-upload an ladawan. Utruhon?</string>
   <string name="upload_dialog_error_connection_retry">Uliton</string>
   <string name="upload_dialog_error_connection_ok">Sige</string>
   <string name="upload_dialog_error_unknown_title">Bakong bistadong sala</string>
