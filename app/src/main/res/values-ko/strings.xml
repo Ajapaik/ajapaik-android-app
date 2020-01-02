@@ -49,7 +49,7 @@
   <string name="upload_dialog_error_unknown_message">사진을 올릴 수 없습니다.</string>
   <string name="upload_dialog_error_unknown_retry">다시 시도</string>
   <string name="upload_dialog_error_unknown_ok">취소</string>
-  <string name="upload_dialog_process_title" fuzzy="true">사진을 올리는 중</string>
+  <string name="upload_dialog_process_title">백그라운드 상태로 사진을 올리는 중</string>
   <string name="upload_dialog_process_message">기다려 주세요...</string>
   <string name="upload_dialog_success_title">올리기 성공</string>
   <string name="upload_dialog_success_message">사진을 성공적으로 올렸습니다!</string>

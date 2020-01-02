@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * BaRaN6161 TURK
+* Elisa3626
 * Grkn gll
 * Hedda
 -->
 <resources>
   <string name="app_name">Ajapaik yeniden fotoğraflama</string>
-  <string name="processing_image">Görüntü işleniyor</string>
-  <string name="please_wait">Lütfen bekleyin…</string>
-  <string name="something_went_wrong">Bir şeyler yanlış gitti</string>
-  <string name="notification_channel">Genel Bildirimler</string>
-  <string name="notification_upload_title">Yeniden fotoğraf yükleniyor</string>
-  <string name="notification_upload_text">Lütfen bekleyin...</string>
-  <string name="action_albums">Albümler</string>
-  <string name="action_flip">Çevir</string>
-  <string name="action_login">Giriş Yap</string>
-  <string name="action_register">Kaydol</string>
-  <string name="action_logout">Çıkış</string>
-  <string name="action_profile">Profil</string>
-  <string name="action_refresh">Yenile</string>
+  <string name="processing_image">\nGörüntü işleniyor</string>
+  <string name="please_wait">\nLütfen bekleyin…</string>
+  <string name="something_went_wrong">\nBir şeyler yanlış gitti</string>
+  <string name="notification_channel">\nGenel Bildirimler</string>
+  <string name="notification_upload_title">\nYeniden fotoğraf yükleniyor</string>
+  <string name="notification_upload_text">\nLütfen bekleyin...</string>
+  <string name="action_albums">\nAlbümler</string>
+  <string name="action_flip">\nÇevir</string>
+  <string name="action_login">\nGiriş</string>
+  <string name="action_register">\nKaydol</string>
+  <string name="action_logout">\nÇıkış</string>
+  <string name="action_profile">\nProfil</string>
+  <string name="action_refresh">\nYenile</string>
   <string name="action_settings">Ayarlar</string>
-  <string name="nearest_title">Yakındaki fotoğraflar</string>
-  <string name="finna_title">Yakındaki fotoğraflar (Finna)</string>
-  <string name="finna1918_title">Signe Brander</string>
-  <string name="albums_label_no_data">Albüm Yok</string>
-  <string name="albums_title">Albümler</string>
-  <string name="album_title">Albüm</string>
-  <string name="nearest_dialog_error_location_disabled_title">Konum Devre Dışı</string>
-  <string name="nearest_dialog_error_location_disabled_message">Mevcut konum alınamadı. Konumu etkinleştirmek ister misiniz?</string>
+  <string name="nearest_title">\nYakındaki fotoğraflar</string>
+  <string name="finna_title">\n\nYakındaki fotoğraflar (Finna)</string>
+  <string name="finna1918_title">\nSigne Brander</string>
+  <string name="albums_label_no_data">\nAlbüm Yok</string>
+  <string name="albums_title">\nAlbümler</string>
+  <string name="album_title">\nAlbüm</string>
+  <string name="nearest_dialog_error_location_disabled_title">\nKonum Devre Dışı</string>
+  <string name="nearest_dialog_error_location_disabled_message">\nMevcut konum alınamadı. Konumu etkinleştirmek ister misiniz?</string>
   <string name="nearest_dialog_error_location_disabled_close">Kapat</string>
-  <string name="nearest_dialog_error_location_disabled_open">Ayarları aç</string>
-  <string name="nearest_label_no_data">Yakınlarda hiç fotoğraf yok</string>
-  <string name="nearest_label_no_data_button">Tüm görsellere göz atmak için albümlere bakın</string>
-  <string name="photo_title">Fotoğraf Detayları</string>
-  <string name="camera_title">Kamera</string>
+  <string name="nearest_dialog_error_location_disabled_open">\nAyarları Aç</string>
+  <string name="nearest_label_no_data">\nYakınlarda hiç fotoğraf yok</string>
+  <string name="nearest_label_no_data_button">\nTüm görsellere göz atmak için albümlere bakın</string>
+  <string name="photo_title">\nFotoğraf Detayları</string>
+  <string name="camera_title">\nKamera</string>
   <string name="profile_title">Profil</string>
-  <string name="profile_facebook_login">Facebook ile giriş yap</string>
-  <string name="profile_google_login">Google ile giriş yap</string>
-  <string name="profile_logout">Çıkış</string>
-  <string name="profile_login">Giriş</string>
-  <string name="profile_register">Hesap oluştur</string>
-  <string name="input_username_hint">E-posta</string>
-  <string name="input_password_hint">Parola</string>
-  <string name="input_firstname_hint">İsim</string>
-  <string name="input_lastname_hint">Soyisim</string>
+  <string name="profile_facebook_login">\n\n\nFacebook ile giriş yap</string>
+  <string name="profile_google_login">\nGoogle ile giriş yap</string>
+  <string name="profile_logout">\nÇıkış</string>
+  <string name="profile_login">\nGiriş</string>
+  <string name="profile_register">\nHesap oluştur</string>
+  <string name="input_username_hint">\nE-posta</string>
+  <string name="input_password_hint">\nParola</string>
+  <string name="input_firstname_hint">Ad</string>
+  <string name="input_lastname_hint">Soyad</string>
   <plurals name="profile_rephotos">
     <item quantity="zero">Henüz yeniden fotoğraflamanız yok</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; yeniden fotoğraflama</item>
@@ -89,7 +90,7 @@
   <string name="navigation_drawer_close">Çekmeceyi kapayın</string>
   <string name="settings_show_tutorial">Yeniden fotoğraflama modunda eğiticiyi göster</string>
   <string name="settings_show_map_by_default">Haritayı varsayılan olarak göster</string>
-  <string name="settings_agree_to_license_terms">Refotoğrafları, CC-4.0 lisansı altında Ajapaik.ee üzerinde yayınlamayı kabul ediyorum.</string>
+  <string name="settings_agree_to_license_terms">Yeniden fotografikleri, CC-4.0 lisansı altında Ajapaik.ee üzerinde yayınlamayı kabul ediyorum.</string>
   <string name="tutorial_hide_show_flip">Resmi gizlemek/göstermek için dokunun.\nEski resmi çevirmek için sağ üst köşedeki çevirme simgesini kullanın.</string>
   <string name="tutorial_opacity_zoom">Eski resmin saydamlığını ayarlamak için kaydırın.\nEski resmi yakınlaştırmak için yakınlaştırma yapın.</string>
   <string name="tutorial_take_picture">Yeniden fotoğraflama çekmek için deklanşöre basın veya ekranda herhangi bir yere uzunca dokunun.</string>
@@ -104,8 +105,8 @@
   <string name="storage_not_permitted_message">Bu uygulamanın depolama alanını kullanmasına izin vermemek, bazı özelliklere erişmenizi, örneğin yeniden resim çekmeyi ve yüklemeyi durdurmanızı engeller. Lütfen depolama alanı kullanımına izin vermeyi düşünün</string>
   <string name="storage_not_permitted_cancel">İptal</string>
   <string name="storage_not_permitted_open_settings">Ayarları aç</string>
-  <string name="my_rephotos">Yeniden fotoğraflandırdıklarım</string>
-  <string name="rephotos_label_not_logged_in_text">Yeniden fotoğraflandırdıklarınızı görmek için lütfen giriş yapın</string>
+  <string name="my_rephotos">Yeniden fotoğraflarım</string>
+  <string name="rephotos_label_not_logged_in_text">Yeniden fotoğraflarınızı görmek için lütfen giriş yapın</string>
   <string name="action_search">Ara</string>
   <string name="favorites">Favorilerim</string>
   <string name="no_favorites">Favori yok</string>

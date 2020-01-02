@@ -54,14 +54,14 @@
   <string name="user_already_exists">Së stranòm a esist già</string>
   <string name="upload_title">Confirmé ël dobion dla fòto</string>
   <string name="upload_dialog_error_connection_title">Eror ëd conession</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_connection_message">Impossìbil carié la fòto.</string>
   <string name="upload_dialog_error_connection_retry">Prové torna</string>
   <string name="upload_dialog_error_connection_ok">Va bin</string>
   <string name="upload_dialog_error_unknown_title">Eror nen conossù</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Impossìbil carié la fòto. Prové torna?</string>
+  <string name="upload_dialog_error_unknown_message">Impossìbil carié la fòto.</string>
   <string name="upload_dialog_error_unknown_retry">Prové torna</string>
   <string name="upload_dialog_error_unknown_ok">Anulé</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Cariament ëd la fòto</string>
+  <string name="upload_dialog_process_title">Cariament ëd la fòto an slë sfond</string>
   <string name="upload_dialog_process_message">Ch\'a l\'abia passiensa…</string>
   <string name="upload_dialog_success_title">Cariament riussì</string>
   <string name="upload_dialog_success_message">La fòto a l\'é stàita carià për da bin!</string>
@@ -72,6 +72,9 @@
   <string name="upload_dialog_not_agreed_to_terms">I son d\'acòrd a publiché ij dobion dle fòto sota la licensa CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Bò!</string>
   <string name="upload_dialog_decline_terms">Nò</string>
+  <string name="upload_notification_title">Cariament ëd la fòto. A peul andeje dël temp</string>
+  <string name="upload_notification_success">Arprodussion fotogràfica carià për da bin</string>
+  <string name="upload_notification_failure">Cariament ëd l\'arprodussion fotogràfica falì</string>
   <string name="acra_dialog_title">\'Ajapaik fòto dobion\' a l\'é piantasse</string>
   <string name="acra_dialog_text">A-i é rivaje n\'eror nen ëspetà an forsand l\'aplicassion a saresse. Për piasì, ch\'an giuta a corege sòn an mandand-ne ij dàit ëd l\'eror, tut lòn ch\'a l\'ha da fé a l\'é dë sgnaché su Va bin.</string>
   <string name="acra_dialog_comment_prompt">A peul gionté ij sò coment an sël problema sì-sota:</string>

@@ -63,7 +63,7 @@
   <string name="upload_dialog_error_unknown_message" fuzzy="true">Kunde inte ladda upp fotot. Försök igen?</string>
   <string name="upload_dialog_error_unknown_retry">Försök igen</string>
   <string name="upload_dialog_error_unknown_ok">Avbryt</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Laddar upp fotot</string>
+  <string name="upload_dialog_process_title">Laddar upp fotot i bakgrunden</string>
   <string name="upload_dialog_process_message">Var god vänta…</string>
   <string name="upload_dialog_success_title">Uppladdningen slutfördes</string>
   <string name="upload_dialog_success_message">Fotot laddades upp!</string>
