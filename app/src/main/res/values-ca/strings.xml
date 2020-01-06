@@ -25,6 +25,7 @@
   <string name="input_firstname_hint">Nom</string>
   <string name="input_lastname_hint">Cognoms</string>
   <string name="user_already_exists">El nom d’usuari ja existeix</string>
+  <string name="upload_dialog_error_connection_message">No s’ha pogut pujar la fotografia.</string>
   <string name="upload_dialog_error_connection_retry">Torna a provar</string>
   <string name="upload_dialog_error_connection_ok">D’acord</string>
   <string name="upload_dialog_error_unknown_retry">Torna a provar</string>

@@ -56,11 +56,11 @@
   <string name="user_already_exists">Användarnamnet finns redan</string>
   <string name="upload_title">Bekräfta foto</string>
   <string name="upload_dialog_error_connection_title">Anslutningsfel</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Kunde inte ladda upp fotot. Försök igen?</string>
+  <string name="upload_dialog_error_connection_message">Kunde inte ladda upp fotot.</string>
   <string name="upload_dialog_error_connection_retry">Försök igen</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Okänt fel</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Kunde inte ladda upp fotot. Försök igen?</string>
+  <string name="upload_dialog_error_unknown_message">Kunde inte ladda upp fotot.</string>
   <string name="upload_dialog_error_unknown_retry">Försök igen</string>
   <string name="upload_dialog_error_unknown_ok">Avbryt</string>
   <string name="upload_dialog_process_title">Laddar upp fotot i bakgrunden</string>

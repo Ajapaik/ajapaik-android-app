@@ -43,14 +43,14 @@
   <string name="registration_title">নিবন্ধন করুন</string>
   <string name="user_already_exists">ব্যবহারকারী নাম ইতিমধ্যে বিদ্যমান আছে</string>
   <string name="upload_dialog_error_connection_title">সংযোগ ত্রুটি</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">ছবি আপলোড করতে অক্ষম। আবার চেষ্টা করবেন?</string>
+  <string name="upload_dialog_error_connection_message">ছবি আপলোড করতে অক্ষম।</string>
   <string name="upload_dialog_error_connection_retry">পুনঃচেষ্টা করুন</string>
   <string name="upload_dialog_error_connection_ok">ঠিক আছে</string>
   <string name="upload_dialog_error_unknown_title">অজানা ত্রুটি</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">ছবিটি অাপলোড করতে অক্ষম। পুনঃচেষ্টা করবেন?</string>
+  <string name="upload_dialog_error_unknown_message">ছবিটি আপলোড করতে অক্ষম।</string>
   <string name="upload_dialog_error_unknown_retry">পুনঃচেষ্টা করুন</string>
   <string name="upload_dialog_error_unknown_ok">বাতিল</string>
-  <string name="upload_dialog_process_title" fuzzy="true">ছবিটি আপলোড করা হচ্ছে</string>
+  <string name="upload_dialog_process_title">পটভূমিতে ছবিটি আপলোড করা হচ্ছে</string>
   <string name="upload_dialog_process_message">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="upload_dialog_success_title">অাপলোড সফল হয়েছে</string>
   <string name="upload_dialog_success_ok">ঠিক আছে</string>
