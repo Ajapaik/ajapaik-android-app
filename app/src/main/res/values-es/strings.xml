@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Canaan9801
+* DannyS712
 * Fitoschido
 * Harvest
 * LittlePuppers
@@ -60,11 +61,11 @@
   <string name="user_already_exists">El nombre de usuario ya existe</string>
   <string name="upload_title">Confirma Rephoto</string>
   <string name="upload_dialog_error_connection_title">Error de conexión</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">No se pudo cargar la foto. ¿Quieres volver a intentarlo?</string>
+  <string name="upload_dialog_error_connection_message">No se pudo cargar la foto.</string>
   <string name="upload_dialog_error_connection_retry">Intentar de nuevo</string>
   <string name="upload_dialog_error_connection_ok">Aceptar</string>
   <string name="upload_dialog_error_unknown_title">Error desconocido</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">No se pudo cargar la foto. ¿Quieres volver a intentarlo?</string>
+  <string name="upload_dialog_error_unknown_message">No se pudo cargar la foto.</string>
   <string name="upload_dialog_error_unknown_retry">Intentar de nuevo</string>
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
   <string name="upload_dialog_process_title" fuzzy="true">Cargando la foto</string>
