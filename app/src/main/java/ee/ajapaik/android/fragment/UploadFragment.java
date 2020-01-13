@@ -134,6 +134,10 @@ public class UploadFragment extends WebFragment implements DialogInterface {
         for (Upload upload : m_uploads) {
             Bitmap scaledRephoto = scaleRephoto(upload);
             uploadByRephotoBitmap.put(scaledRephoto, upload);
+            if (((UploadActivity)getActivity()).isFromCameraActivity()) {
+                getActivity().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(
+                        new File(upload.getPath()))));
+            }
         }
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         UploadPagerAdapter adapter = new UploadPagerAdapter(getActivity(), new ArrayList<>(uploadByRephotoBitmap.keySet()));
@@ -165,6 +169,7 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             }
         });
 
+
         if (((UploadActivity)getActivity()).isFromCameraActivity()) {
             getSaveButton().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -180,7 +185,6 @@ public class UploadFragment extends WebFragment implements DialogInterface {
             @Override
             public void onClick(View view) {
                 new File(uploadByRephotoBitmap.get(currentRephoto).getPath()).delete();
-                removePhotoFromDeviceGallery();
                 closePreviewAndGoBack();
             }
         });

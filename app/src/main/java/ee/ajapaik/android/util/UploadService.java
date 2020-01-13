@@ -20,9 +20,11 @@ import ee.ajapaik.android.data.util.Status;
 
 import static ee.ajapaik.android.util.ExifService.USER_COMMENT;
 import static ee.ajapaik.android.util.NotificationChannel.NOTIFICATION_CHANNEL;
+import android.util.Log;
+
 
 public class UploadService extends Service {
-
+    private static final String TAG = "UploadService";
     public static final String UPLOAD_KEY = "upload";
 
     private static final int NOTIFICATION_ID = 1000;
@@ -42,10 +44,17 @@ public class UploadService extends Service {
     }
 
     private void showNotification(String title, Photo photo, Intent startIntent) {
+        String photoTitle = "";
+        String photoIdentifier="none";
+        if (photo!=null) {
+            photoTitle=photo.getTitle();
+            photoIdentifier=photo.getIdentifier();
+        }
+
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL.name())
                 .setSmallIcon(R.drawable.ic_add_to_photos_white_36dp)
                 .setContentTitle(title)
-                .setContentText(photo.getTitle())
+                .setContentText(photoTitle)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
@@ -60,7 +69,7 @@ public class UploadService extends Service {
                     new Intent[]{launcherIntent, startIntent},
                     PendingIntent.FLAG_UPDATE_CURRENT));
         }
-        NotificationManagerCompat.from(this).notify(photo.getIdentifier(), NOTIFICATION_ID, notificationBuilder.build());
+        NotificationManagerCompat.from(this).notify(photoIdentifier, NOTIFICATION_ID, notificationBuilder.build());
     }
 
     private void uploadPhoto(Intent intent) {
@@ -70,19 +79,28 @@ public class UploadService extends Service {
         }
         showNotification(getString(R.string.upload_notification_title), upload.getPhoto(), null);
         WebAction<UploadResponse> action = Upload.createAction(getApplicationContext(), upload);
+        Log.d(TAG, upload.toString());
+
 
         m_connection.enqueue(getApplicationContext(), action, new WebAction.ResultHandler<UploadResponse>() {
             @Override
             public void onActionResult(Status status, UploadResponse uploadResponse) {
-                Photo photo = uploadResponse.getPhoto();
-                if (status.isGood()) {
-                    ExifService.deleteField(upload.getPath(), USER_COMMENT);
-                    Intent startIntent = PhotoActivity.getStartIntent(UploadService.this, photo, null);
-                    showNotification(getString(R.string.upload_dialog_success_title), photo, startIntent);
-                    stopSelf();
-                } else {
+                if (uploadResponse != null) {
+                    Photo photo = uploadResponse.getPhoto();
+                    if (status.isGood()) {
+                        ExifService.deleteField(upload.getPath(), USER_COMMENT);
+                        Intent startIntent = PhotoActivity.getStartIntent(UploadService.this, photo, null);
+                        showNotification(getString(R.string.upload_dialog_success_title), photo, startIntent);
+                        stopSelf();
+                    } else {
+                        Intent startIntent = new Intent(UploadService.this, RephotoDraftsActivity.class);
+                        showNotification(getString(R.string.upload_notification_failure), photo, startIntent);
+                    }
+                }
+                else {
+                    // uploadResponse is null when no original photo can be found
                     Intent startIntent = new Intent(UploadService.this, RephotoDraftsActivity.class);
-                    showNotification(getString(R.string.upload_notification_failure), photo, startIntent);
+                    showNotification(getString(R.string.upload_notification_failure), null, startIntent);
                 }
             }
         });
