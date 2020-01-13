@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Geraki
+* GhotuoIncubator
 * KATRINE1993
 * Nikosgranturismogt
 -->
@@ -9,6 +10,9 @@
   <string name="processing_image">Επεξεργασία εικόνας</string>
   <string name="please_wait">Παρακαλούμε περιμένετε…</string>
   <string name="something_went_wrong">Κάτι πήγε στραβά</string>
+  <string name="notification_channel">Γενικές ειδοποιήσεις</string>
+  <string name="notification_upload_title">Μεταφόρτωση επαναφοτωγράφησης</string>
+  <string name="notification_upload_text">Παρακαλώ περιμένετε ...</string>
   <string name="action_albums">Άλμπουμ</string>
   <string name="action_flip">Αναστροφή</string>
   <string name="action_login">Είσοδος</string>
