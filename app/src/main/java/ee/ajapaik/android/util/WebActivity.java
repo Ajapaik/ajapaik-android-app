@@ -123,7 +123,7 @@ public class WebActivity extends AppCompatActivity implements DialogInterface, G
                 }
             });
         }
-        LoginManager.getInstance().logInWithReadPermissions(this, asList("public_profile", "user_friends"));
+        LoginManager.getInstance().logInWithReadPermissions(this, asList("public_profile"));
     }
 
     private void handleLoginFail(Status status) {
