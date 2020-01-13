@@ -40,7 +40,7 @@
   <string name="profile_login">Најава</string>
   <string name="profile_register">Направи сметка</string>
   <string name="input_username_hint">Е-пошта</string>
-  <string name="input_password_hint">Лозинка</string>
+  <string name="input_password_hint">Јавка</string>
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
   <plurals name="profile_rephotos">
@@ -50,7 +50,7 @@
   </plurals>
   <string name="login_title">Најава</string>
   <string name="login_failed">Најавата не успеа</string>
-  <string name="wrong_password">Погрешна лозинка!</string>
+  <string name="wrong_password">Погрешна јавка!</string>
   <string name="registration_title">Регистрација</string>
   <string name="user_already_exists">Корисничкото име веќе постои</string>
   <string name="upload_title">Потврди спор. слика</string>
