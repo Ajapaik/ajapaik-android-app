@@ -47,6 +47,10 @@ public class ImagePagerAdapter extends PagerAdapter {
     }
 
     public Rephoto getRephoto(int position) {
-        return m_images.get(position);
+        try {
+            return m_images.get(position);
+        } catch (IndexOutOfBoundsException error) {
+            return null;
+        }
     }
 }

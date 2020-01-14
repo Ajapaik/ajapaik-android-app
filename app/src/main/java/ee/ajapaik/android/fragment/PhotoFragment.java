@@ -367,7 +367,9 @@ public class PhotoFragment extends ImageFragment {
         getViewPager().post(new Runnable() {
             @Override
             public void run() {
-                pageChangeListener.onPageSelected(0);
+                if (m_photo.getRephotosCount()>0) {
+                    pageChangeListener.onPageSelected(0);
+                }
             }
         });
     }
