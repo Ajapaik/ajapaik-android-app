@@ -76,7 +76,7 @@
   <string name="upload_dialog_agree_to_terms">Jah!</string>
   <string name="upload_dialog_decline_terms">Ei</string>
   <string name="upload_notification_title">Ülepildistuse üleslaadimine. See võib võtta mõne aja</string>
-  <string name="upload_notification_success">Ülepildistamine edukalt üles laetud</string>
+  <string name="upload_notification_success">Refoto edukalt üles laetud</string>
   <string name="upload_notification_failure">Ülepildistuse üleslaadimine ebaõnnestus</string>
   <string name="acra_dialog_title">\'Ajapaik – enne ja nüüd\' jooksis kokku</string>
   <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama \'OK\'.</string>
@@ -102,7 +102,7 @@
   <string name="rephoto_drafts">Ülepildistuste mustandid</string>
   <string name="no_rephotos">Ülepildistusi pole</string>
   <string name="storage_not_permitted_title">Ligipääs mäluruumile keelatud</string>
-  <string name="storage_not_permitted_message">Selle rakendusele mäluruumi kasutamise keelamine jätab Sind ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemine ja üleslaadimine. Palun kaalu mäluruumi kasutamise lubamist</string>
+  <string name="storage_not_permitted_message">Kui Sa ei luba sellel rakendusel mäluruumi kasutada, siis jääd ilma mitmetest funktsioonidest, näiteks ülepildistuste tegemisest ja üleslaadimisest. Palun kaalu mäluruumi kasutamise lubamist</string>
   <string name="storage_not_permitted_cancel">Loobu</string>
   <string name="storage_not_permitted_open_settings">Ava seaded</string>
   <string name="my_rephotos">Minu ülepildistused</string>
@@ -111,9 +111,9 @@
   <string name="favorites">Minu lemmikud</string>
   <string name="no_favorites">Lemmikud puuduvad</string>
   <string name="action_favorite">Lisa lemmikuks</string>
-  <string name="favorites_label_not_logged_in_button">Sisse logima</string>
+  <string name="favorites_label_not_logged_in_button">Logi sisse</string>
   <string name="favorites_label_not_logged_in_text">Lemmikute nägemiseks palun logi sisse</string>
-  <string name="no_search_result">Tulemused puuduvad</string>
+  <string name="no_search_result">Otsitulemusi pole</string>
   <string name="album_no_data">Pildid puuduvad</string>
   <string name="start_taking_rephoto">Alusta ülepildistamist</string>
   <string name="show_photo_details">Näita foto infot</string>
