@@ -6,6 +6,8 @@
   <string name="processing_image">Paveikslėlis apdorojamas</string>
   <string name="please_wait">Prašome palaukti...</string>
   <string name="something_went_wrong">Kažkas nutiko ne taip</string>
+  <string name="notification_channel">Bendri Pranešimai</string>
+  <string name="notification_upload_text">Prašome palaukti...</string>
   <string name="action_albums">Albumai</string>
   <string name="action_flip">Apversti</string>
   <string name="action_login">Prisijungti</string>
@@ -42,14 +44,14 @@
   <string name="registration_title">Registruotis</string>
   <string name="user_already_exists">Vartotojas jau egzistuoja</string>
   <string name="upload_dialog_error_connection_title">Ryšio Klaida</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
+  <string name="upload_dialog_error_connection_message">Nepavyko įkelti nuotraukos.</string>
   <string name="upload_dialog_error_connection_retry">Bandyti dar kartą</string>
   <string name="upload_dialog_error_connection_ok">Gerai</string>
   <string name="upload_dialog_error_unknown_title">Nežinoma Klaida</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nepavyko įkelti nuotraukos. Bandyti dar kartą?</string>
+  <string name="upload_dialog_error_unknown_message">Nepavyko įkelti nuotraukos.</string>
   <string name="upload_dialog_error_unknown_retry">Bandyti dar kartą</string>
   <string name="upload_dialog_error_unknown_ok">Atšaukti</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Nuotrauka keliama</string>
+  <string name="upload_dialog_process_title">Nuotrauka keliama fone</string>
   <string name="upload_dialog_process_message">Prašome palaukti...</string>
   <string name="upload_dialog_success_title">Įkelti Pavyko</string>
   <string name="upload_dialog_success_message">Nuotrauka sėkmingai įkelta!</string>
@@ -68,6 +70,7 @@
   <string name="privacy_policy">Privatumas</string>
   <string name="navigation_drawer_open">Atidaryti stalčių</string>
   <string name="navigation_drawer_close">Uždaryti stalčių</string>
+  <string name="settings_show_map_by_default">Rodyti žemėlapį kaip numatytąjį</string>
   <string name="tutorial_dismiss">Gerai!</string>
   <string name="tutorial_dialog_show_again_title">Rodyti pamoką dar kartą?</string>
   <string name="tutorial_dialog_show_again_message">Vėliau galite įjungti pamoką dar kartą nustatymuose</string>

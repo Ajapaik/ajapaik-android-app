@@ -10,6 +10,7 @@
   <string name="processing_image">Apstrādā attēlu</string>
   <string name="please_wait">Lūdzu uzgaidiet…</string>
   <string name="something_went_wrong">Notika kļūda</string>
+  <string name="notification_channel">Vispārīgi paziņojumi</string>
   <string name="action_albums">Albumi</string>
   <string name="action_flip">Apvērst</string>
   <string name="action_login">Autorizēties</string>

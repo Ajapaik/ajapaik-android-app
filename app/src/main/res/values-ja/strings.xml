@@ -2,6 +2,7 @@
 <!-- Authors:
 * Abijeet Patro
 * Aefgh39622
+* Buntschann
 * Omotecho
 * Shirayuki
 * 沈澄心
@@ -59,14 +60,14 @@
   <string name="user_already_exists">既に存在する利用者名です</string>
   <string name="upload_title">Rephotoを確認</string>
   <string name="upload_dialog_error_connection_title">接続エラーが発生しました</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">写真をアップロードできませんでした。もう一度やり直しますか？</string>
+  <string name="upload_dialog_error_connection_message">写真をアップロードできませんでした。</string>
   <string name="upload_dialog_error_connection_retry">やり直す</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">不明なエラー</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">写真をアップロードできませんでした。もう一度やり直しますか？</string>
+  <string name="upload_dialog_error_unknown_message">写真をアップロードできませんでした。</string>
   <string name="upload_dialog_error_unknown_retry">やり直す</string>
   <string name="upload_dialog_error_unknown_ok">キャンセル</string>
-  <string name="upload_dialog_process_title" fuzzy="true">写真をアップロード中です</string>
+  <string name="upload_dialog_process_title">バックグラウンドで写真をアップロード中です。</string>
   <string name="upload_dialog_process_message">お待ちください...</string>
   <string name="upload_dialog_success_title">アップロードしました</string>
   <string name="upload_dialog_success_message">写真のアップロードに成功しました</string>

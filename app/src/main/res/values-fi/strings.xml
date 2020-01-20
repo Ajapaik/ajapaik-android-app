@@ -16,7 +16,7 @@
   <string name="notification_upload_text">Odota…</string>
   <string name="action_albums">Albumit</string>
   <string name="action_flip">Käännä</string>
-  <string name="action_login">Kirjaudu</string>
+  <string name="action_login">Kirjaudu sisään</string>
   <string name="action_register">Rekisteröidy</string>
   <string name="action_logout">Kirjaudu ulos</string>
   <string name="action_profile">Profiili</string>

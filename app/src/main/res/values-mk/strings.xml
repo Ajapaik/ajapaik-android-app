@@ -14,7 +14,7 @@
   <string name="action_albums">Албуми</string>
   <string name="action_flip">Преврти</string>
   <string name="action_login">Најава</string>
-  <string name="action_register">Регистрација</string>
+  <string name="action_register">Зачленување</string>
   <string name="action_logout">Одјава</string>
   <string name="action_profile">Профил</string>
   <string name="action_refresh">Превчитај</string>
@@ -51,7 +51,7 @@
   <string name="login_title">Најава</string>
   <string name="login_failed">Најавата не успеа</string>
   <string name="wrong_password">Погрешна јавка!</string>
-  <string name="registration_title">Регистрација</string>
+  <string name="registration_title">Зачленување</string>
   <string name="user_already_exists">Корисничкото име веќе постои</string>
   <string name="upload_title">Потврди спор. слика</string>
   <string name="upload_dialog_error_connection_title">Грешка при поврзувањето</string>
