@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* BaRaN6161 TURK
 * Liuxinyu970226
 * McDutchie
 * Omotecho
@@ -10,11 +11,12 @@
 <resources>
   <string name="app_name">Name of the app (how it is displayed in the apps listing, etc.).\n\nThe original Estonian name translates as \"Ajapaik – then and now\" and some languages (Finnish, Swedish) have translated that instead of \"rephoto(graphy)\" in the name. Translators should consider which version fits best with their language.</string>
   <string name="processing_image">Message when rephotograph has been captured and is being processed (cropped according to old image zoom etc)</string>
-  <string name="please_wait">Second part of message when rephotograph is processed</string>
-  <string name="something_went_wrong">Generic error message</string>
-  <string name="action_albums">Menu item for displaying the list of public albums (and albums created by the current user that are invisible for other users)</string>
-  <string name="action_flip">Alt message (not shown in user interface) for flip icon that flips image horizontally (needed when the historic image happens to be horizontally mirrored).</string>
-  <string name="action_login">Generic login</string>
+  <string name="please_wait">Second part of message when rephotograph is processed.\n{{Identical|Please wait}}</string>
+  <string name="something_went_wrong">Generic error message.\n{{Identical|Something went wrong}}</string>
+  <string name="notification_upload_text">{{Identical|Please wait}}</string>
+  <string name="action_albums">{{Identical|Album}}\nMenu item for displaying the list of public albums (and albums created by the current user that are invisible for other users)</string>
+  <string name="action_flip">Alt message (not shown in user interface) for flip icon that flips image horizontally (needed when the historic image happens to be horizontally mirrored).\n{{Identical|Flip}}</string>
+  <string name="action_login">Generic login.\n{{Identical|Login}}</string>
   <string name="action_register">Creating your account</string>
   <string name="action_profile">{{Identical|Profile}}</string>
   <string name="action_refresh">{{Identical|Refresh}}</string>
@@ -22,6 +24,7 @@
   <string name="nearest_title">Menu section opened by default that displays nearest geotagged images to user\'s location. NB! only geotagged images are displayed – when opening an album from albums menu all pictures inside the album are displayed that is also those not geotagged.</string>
   <string name="finna_title">Menu item for querying images from Finnish central GLAMs repository. NB! These images are live queried and are not yet on Ajapaik platform.</string>
   <string name="albums_label_no_data">Error message when no albums can be displayed (basically hypothetical).</string>
+  <string name="albums_title">{{Identical|Album}}</string>
   <string name="album_title">{{Identical|Album}}</string>
   <string name="nearest_dialog_error_location_disabled_title">Error message when user does not allow the app to access the device\'s location</string>
   <string name="nearest_dialog_error_location_disabled_close">{{Identical|Close}}</string>

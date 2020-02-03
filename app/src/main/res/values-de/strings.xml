@@ -5,15 +5,16 @@
 * MidnightRaver
 * Runun
 * Sushi
+* Tiin
 -->
 <resources>
   <string name="app_name">Ajapaik Refoto</string>
   <string name="processing_image">Verarbeite Bild</string>
   <string name="please_wait">Bitte warten …</string>
   <string name="something_went_wrong">Etwas ist schief gelaufen</string>
-  <string name="notification_channel">Generelle Benachrichtigung</string>
-  <string name="notification_upload_title">Hochladen deines Fotos</string>
-  <string name="notification_upload_text">Bitte warten …</string>
+  <string name="notification_channel">Allgemeine Benachrichtigungen</string>
+  <string name="notification_upload_title">Refoto hochladen</string>
+  <string name="notification_upload_text">Bitte warten…</string>
   <string name="action_albums">Alben</string>
   <string name="action_flip">Kippen</string>
   <string name="action_login">Anmelden</string>
@@ -31,7 +32,7 @@
   <string name="nearest_dialog_error_location_disabled_title">Geolokalisierung deaktiviert</string>
   <string name="nearest_dialog_error_location_disabled_message">Geolokalisierung nicht erfolgreich. Willst du es aktivieren?</string>
   <string name="nearest_dialog_error_location_disabled_close">Schließen</string>
-  <string name="nearest_dialog_error_location_disabled_open">Benutzereinstellungen</string>
+  <string name="nearest_dialog_error_location_disabled_open">Einstellungen öffnen</string>
   <string name="nearest_label_no_data">Keine Fotos in der Nähe</string>
   <string name="nearest_label_no_data_button">Alben ansehen, um alle Bilder zu durchsuchen</string>
   <string name="photo_title">Foto-Einzelheiten</string>
@@ -68,7 +69,7 @@
   <string name="upload_dialog_process_title">Hochladen des Fotos im Hintergrund</string>
   <string name="upload_dialog_process_message">Bitte warten …</string>
   <string name="upload_dialog_success_title">Hochladen erfolgreich</string>
-  <string name="upload_dialog_success_message">Hochladen erfolgreich!</string>
+  <string name="upload_dialog_success_message">Das Foto wurde erfolgreich hochgeladen!</string>
   <string name="upload_dialog_success_ok">Okay</string>
   <string name="upload_dialog_not_authenticated_title">Du musst dich anmelden, um Fotos hochzuladen.</string>
   <string name="upload_dialog_not_authenticated_message">Umleiten zum Profil</string>
@@ -76,6 +77,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Ich stimme zu, meine Fotos unter der Lizenz CC BY 4.0 zu veröffentlichen.</string>
   <string name="upload_dialog_agree_to_terms">Ja!</string>
   <string name="upload_dialog_decline_terms">Nein</string>
+  <string name="upload_notification_title">Refoto wird hochgeladen. Das kann eine Weile dauern</string>
+  <string name="upload_notification_success">Refoto erfolgreich hochgeladen</string>
+  <string name="upload_notification_failure">Hochladen des Refotos fehlgeschlagen</string>
   <string name="acra_dialog_title">„Ajapaik Refoto“ ist abgestürzt</string>
   <string name="acra_dialog_text">Ein unerwarteter Fehler zwingt die Anwendung zum Stoppen. Bitte hilf uns, ihn zu beheben, indem du uns Fehlerdaten sendest. Alles, was du tun musst, ist „Okay“ anzuklicken.</string>
   <string name="acra_dialog_comment_prompt">Du kannst das Problem unten beschreiben:</string>
@@ -87,6 +91,7 @@
   <string name="navigation_drawer_open">Schublade öffnen</string>
   <string name="navigation_drawer_close">Schublade schließen</string>
   <string name="settings_show_tutorial">Anleitung im Refoto-Modus anzeigen</string>
+  <string name="settings_show_map_by_default">Karte standardmäßig anzeigen</string>
   <string name="settings_agree_to_license_terms">Ich stimme der Veröffentlichung der Refotos auf Ajapaik.ee unter der Lizenz CC BY 4.0 zu.</string>
   <string name="tutorial_hide_show_flip">Zum Verstecken/Anzeigen des Bildes tippen.\nBenutze das Kippen-Symbol in der obigen rechten Ecke, um das alte Bild zu kippen.</string>
   <string name="tutorial_opacity_zoom">Schiebe zur Anpassung der Transparenz des alten Bildes.\nPinche, um das alte Bild zu vergrößern.</string>

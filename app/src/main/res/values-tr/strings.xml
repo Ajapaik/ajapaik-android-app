@@ -12,12 +12,12 @@
   <string name="something_went_wrong">Bir şeyler yanlış gitti</string>
   <string name="notification_channel">Genel Bildirimler</string>
   <string name="notification_upload_title">Yeniden fotoğraf yükleniyor</string>
-  <string name="notification_upload_text">Lütfen bekleyin...</string>
+  <string name="notification_upload_text">Lütfen bekleyin…</string>
   <string name="action_albums">Albümler</string>
   <string name="action_flip">Çevir</string>
-  <string name="action_login">Giriş</string>
+  <string name="action_login">Oturum aç</string>
   <string name="action_register">Kaydol</string>
-  <string name="action_logout">Çıkış</string>
+  <string name="action_logout">Oturumu kapat</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Yenile</string>
   <string name="action_settings">Ayarlar</string>
@@ -37,8 +37,8 @@
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
   <string name="profile_facebook_login">Facebook ile giriş yap</string>
-  <string name="profile_google_login">Google ile giriş yap</string>
-  <string name="profile_logout">Çıkış</string>
+  <string name="profile_google_login">Google ile oturum aç</string>
+  <string name="profile_logout">Oturumu kapat</string>
   <string name="profile_login">Oturum aç</string>
   <string name="profile_register">Hesap oluştur</string>
   <string name="input_username_hint">E-posta</string>
@@ -50,7 +50,7 @@
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; yeniden fotoğraflama</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; yeniden fotoğraflama</item>
   </plurals>
-  <string name="login_title">Giriş</string>
+  <string name="login_title">Oturum aç</string>
   <string name="login_failed">Giriş başarısız</string>
   <string name="wrong_password">Yanlış parola!</string>
   <string name="registration_title">Kaydol</string>
@@ -58,14 +58,14 @@
   <string name="upload_title">Yeniden Fotoğraflamayı Onayla</string>
   <string name="upload_dialog_error_connection_title">Bağlantı Hatası</string>
   <string name="upload_dialog_error_connection_message">Fotoğraf yüklenemedi.</string>
-  <string name="upload_dialog_error_connection_retry">Tekrar Deneyin</string>
+  <string name="upload_dialog_error_connection_retry">Tekrar dene</string>
   <string name="upload_dialog_error_connection_ok">Tamam</string>
   <string name="upload_dialog_error_unknown_title">Bilinmeyen Hata</string>
   <string name="upload_dialog_error_unknown_message">Fotoğraf yüklenemedi.</string>
-  <string name="upload_dialog_error_unknown_retry">Tekrar Deneyin</string>
+  <string name="upload_dialog_error_unknown_retry">Tekrar dene</string>
   <string name="upload_dialog_error_unknown_ok">İptal</string>
   <string name="upload_dialog_process_title">Fotoğrafı arka planda yükleniyor</string>
-  <string name="upload_dialog_process_message">Lütfen bekleyin...</string>
+  <string name="upload_dialog_process_message">Lütfen bekleyin…</string>
   <string name="upload_dialog_success_title">Yükleme Başarılı</string>
   <string name="upload_dialog_success_message">Fotoğraf başarıyla yüklendi!</string>
   <string name="upload_dialog_success_ok">Tamam</string>
@@ -111,7 +111,7 @@
   <string name="favorites">Favorilerim</string>
   <string name="no_favorites">Favori yok</string>
   <string name="action_favorite">Favori</string>
-  <string name="favorites_label_not_logged_in_button">Giriş</string>
+  <string name="favorites_label_not_logged_in_button">Oturum aç</string>
   <string name="favorites_label_not_logged_in_text">Favorilerinizi görmek için lütfen giriş yapın</string>
   <string name="no_search_result">Arama sonucu bulunamadı</string>
   <string name="album_no_data">Fotoğraf yok</string>

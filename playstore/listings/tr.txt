@@ -1,8 +1,9 @@
 # Messages for Turkish (Türkçe)
 # Exported from translatewiki.net
+# Author: BaRaN6161 TURK
 # Author: Hedda
 
-title=Ajapaik yeniden fotoğraflama
+title=Ajapaik rephoto
 short-description=Tarihi resimlerin bakış açısına bakın ve yeniden fotoğraflamaları gözden geçirin!
 description.paragraph.1=Ajapaik yeniden fotoğraflama uygulaması size yakınınızda çekilen tarihi görüntüleri görüntüler ve aynı görüntülerin yeniden fotoğraflarını çekmenin kolay bir yolunu sunar.
 description.accuracy.title=Yeniden fotoğraflamayı daha kullanışlı hale getirmek için
