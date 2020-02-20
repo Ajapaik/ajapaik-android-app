@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * सरोज कुमार ढकाल
+* हिमाल सुबेदी
 -->
 <resources>
   <string name="unit_km">कि.मि.km</string>
@@ -10,7 +11,7 @@
   <string name="something_went_wrong">केही खराबी भयो</string>
   <string name="action_albums">एल्बमहरू</string>
   <string name="action_flip">पल्टाउनुहोस्</string>
-  <string name="action_login">लग इन</string>
+  <string name="action_login">प्रवेश</string>
   <string name="action_register">दर्ता गर्नुहोस्</string>
   <string name="action_logout">लगआउट गर्नुहोस्</string>
   <string name="action_profile">प्रोफाइल</string>
@@ -33,13 +34,13 @@
   <string name="profile_facebook_login">फेसबुक प्रयोग गरेर प्रवेश गर्नुहोस्</string>
   <string name="profile_google_login">गुगल प्रयोग गरेर प्रवेश गर्नुहोस्</string>
   <string name="profile_logout">लगआउट गर्नुहोस्</string>
-  <string name="profile_login">साइन इन</string>
+  <string name="profile_login">प्रवेश</string>
   <string name="profile_register">खाता सिर्जना गर्नुहोस्</string>
   <string name="input_username_hint">इमेलEmail</string>
   <string name="input_password_hint">पासवर्ड</string>
   <string name="input_firstname_hint">नाम</string>
   <string name="input_lastname_hint">थर</string>
-  <string name="login_title">लग इन</string>
+  <string name="login_title">प्रवेश</string>
   <string name="login_failed">प्रवेश असफल</string>
   <string name="wrong_password">गलत पासवर्ड!</string>
   <string name="registration_title">दर्ता गर्नुहोस्</string>
@@ -77,5 +78,5 @@
   <string name="favorites">मेरो रूचीहरू</string>
   <string name="no_favorites">कुनै रूचीहरू छैनन्</string>
   <string name="action_favorite">रूचीहरू</string>
-  <string name="favorites_label_not_logged_in_button">साइन इन</string>
+  <string name="favorites_label_not_logged_in_button">प्रवेश</string>
 </resources>

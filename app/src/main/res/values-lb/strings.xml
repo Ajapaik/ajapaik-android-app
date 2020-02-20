@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Robby
+* Soued031
 -->
 <resources>
   <string name="processing_image">Bild gëtt verschafft</string>
-  <string name="please_wait">Waart w.e.g. ...</string>
+  <string name="please_wait">Waart wgl. ...</string>
   <string name="something_went_wrong">Et ass eppes schif gaangen</string>
-  <string name="notification_upload_text">Waart w.e.g. ...</string>
+  <string name="notification_upload_text">Waart wgl. ...</string>
   <string name="action_albums">Albumen</string>
   <string name="action_flip">Kippen</string>
   <string name="action_login">Aloggen</string>
@@ -45,7 +46,7 @@
   <string name="upload_dialog_error_unknown_retry">Nach eng Kéier probéieren</string>
   <string name="upload_dialog_error_unknown_ok">Ofbriechen</string>
   <string name="upload_dialog_process_title" fuzzy="true">Eropluede vun der Foto</string>
-  <string name="upload_dialog_process_message">Waart w.e.g. ...</string>
+  <string name="upload_dialog_process_message">Waart wgl. ...</string>
   <string name="upload_dialog_success_title">Mat Succès eropgelueden</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_title">Dir musst ageloggt si fir eppes eropzelueden</string>
