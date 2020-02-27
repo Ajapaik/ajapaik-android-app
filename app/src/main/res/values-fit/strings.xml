@@ -7,7 +7,7 @@
   <string name="action_login">Lokkaa sisäle</string>
   <string name="action_logout">Lokkaa ulos</string>
   <string name="action_settings">Inställninkit</string>
-  <string name="nearest_dialog_error_location_disabled_open">Avaa inställninkit</string>
+  <string name="nearest_dialog_error_location_disabled_open">Aukase inställninkit</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_facebook_login">Lokkaa sisäle Feispukilla</string>
   <string name="profile_google_login">Lokkaa sisäle Googlella</string>
