@@ -1,0 +1,9 @@
+# Messages for Italian (italiano)
+# Exported from translatewiki.net
+# Author: Albe Albe460
+
+title=Ajapaik rephoto
+short-description=Cerca i punti panoramici delle immagini storiche e ri-fotografa i panorami!
+description.paragraph.1=L'applicazione rephoto Ajapaik mostra immagini storiche prese vicino a te e offre un modo semplice per riprendere le riprese delle stesse viste.
+description.accuracy.title=Al fine di rendere la ri-fotografia più conveniente
+description.accuracy.bullet.2=* pizzica per ingrandire l'immagine storica
