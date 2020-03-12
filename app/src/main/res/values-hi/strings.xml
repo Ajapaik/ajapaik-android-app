@@ -9,6 +9,7 @@
   <string name="processing_image">छवि का प्रसंस्करण हो रहा</string>
   <string name="please_wait">कृपया प्रतीक्षा करें...</string>
   <string name="something_went_wrong">कुछ गलत हुअा है</string>
+  <string name="notification_upload_text">कृपया प्रतीक्षा करें...</string>
   <string name="action_albums">एल्बम</string>
   <string name="action_flip">पलटें</string>
   <string name="action_login">प्रवेश</string>
