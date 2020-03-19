@@ -39,7 +39,7 @@
   <string name="input_password_hint">Contrasigno</string>
   <string name="input_firstname_hint">Prenomine</string>
   <string name="input_lastname_hint">Nomine de familia</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="zero">Tu non ha ancora facite rephotos</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>

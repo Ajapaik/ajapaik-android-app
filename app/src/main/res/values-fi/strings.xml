@@ -46,7 +46,7 @@
   <string name="input_password_hint">Salasana</string>
   <string name="input_firstname_hint">Etunimi</string>
   <string name="input_lastname_hint">Sukunimi</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="zero">Et ole vielä ottanut yhtään valokuvaa</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; valokuva</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; valokuvaa</item>

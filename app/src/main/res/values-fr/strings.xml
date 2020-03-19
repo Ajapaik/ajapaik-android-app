@@ -47,7 +47,7 @@
   <string name="input_password_hint">Mot de passe</string>
   <string name="input_firstname_hint">Prénom</string>
   <string name="input_lastname_hint">Nom de famille</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="zero">Vous n’avez encore fait aucune rephoto</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>

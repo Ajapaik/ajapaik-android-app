@@ -37,4 +37,7 @@
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Bəle!</string>
   <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="version">Versiyə</string>
+  <string name="tutorial_dialog_show_again_no">Ne</string>
+  <string name="tutorial_dialog_show_again_yes">Bəle</string>
 </resources>

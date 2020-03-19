@@ -40,7 +40,7 @@
   <string name="input_password_hint">पासवर्ड</string>
   <string name="input_firstname_hint">प्रथम नाम</string>
   <string name="input_lastname_hint">अंतिम नाम</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="zero">You haven\'t made any rephotos yet</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
