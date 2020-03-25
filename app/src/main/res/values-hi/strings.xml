@@ -41,10 +41,10 @@
   <string name="input_firstname_hint">प्रथम नाम</string>
   <string name="input_lastname_hint">अंतिम नाम</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">You haven\'t made any rephotos yet</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">You haven\'t made any rephotos yet</string>
   <string name="login_title">प्रवेश</string>
   <string name="login_failed">लॉगिन असफल रहा</string>
   <string name="wrong_password">गलत पासवर्ड!</string>

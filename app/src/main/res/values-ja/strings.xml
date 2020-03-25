@@ -49,10 +49,10 @@
   <string name="input_firstname_hint">名</string>
   <string name="input_lastname_hint">姓</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">rephotoをまだ1回も実行していません</item>
     <item quantity="one">rephoto&lt;b&gt;1&lt;/b&gt;回 </item>
     <item quantity="other">rephoto&lt;b&gt;%1$d&lt;/b&gt;回</item>
   </plurals>
+  <string name="profile_no_rephotos">rephotoをまだ1回も実行していません</string>
   <string name="login_title">ログイン</string>
   <string name="login_failed">ログインできませんでした</string>
   <string name="wrong_password">パスワードが間違っています。</string>

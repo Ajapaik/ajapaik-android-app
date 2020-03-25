@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Nome</string>
   <string name="input_lastname_hint">Apellíu</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Inda nun ficisti nenguna refoto</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotos</item>
   </plurals>
+  <string name="profile_no_rephotos">Inda nun ficisti nenguna refoto</string>
   <string name="login_title">Aniciar sesión</string>
   <string name="login_failed">Aniciu de sesión correutu</string>
   <string name="wrong_password">La contraseña ye incorreuta.</string>

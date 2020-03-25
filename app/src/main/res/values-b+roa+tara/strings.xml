@@ -43,10 +43,10 @@
   <string name="input_firstname_hint">Prime nome</string>
   <string name="input_lastname_hint">Urteme nome</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Non g\'è fatte manghe \'na refote</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refote</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refote</item>
   </plurals>
+  <string name="profile_no_rephotos">Non g\'è fatte manghe \'na refote</string>
   <string name="login_title">Tràse</string>
   <string name="login_failed">Non g\'è trasute</string>
   <string name="wrong_password">Passuord sbagliate!</string>

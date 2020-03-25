@@ -39,10 +39,10 @@
   <string name="input_firstname_hint">Voanam</string>
   <string name="input_lastname_hint">Nochnam</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Du host no koane Rfotos gmocht</item>
     <item quantity="one">&lt;b&gt;Ein&lt;/b&gt; Refótó</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; Refótós</item>
   </plurals>
+  <string name="profile_no_rephotos">Du host no koane Rfotos gmocht</string>
   <string name="login_title">Omejdn</string>
   <string name="login_failed">Omejdung ned afoigreich</string>
   <string name="wrong_password">Foisches Passwoat!</string>

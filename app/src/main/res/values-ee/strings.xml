@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Ŋkɔ gbãtɔ</string>
   <string name="input_lastname_hint">Tɔgbuiŋkɔ</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Mèkpɔ da foto aɖeke ɖi o</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; gbugbɔfoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; gbugbɔfotowo</item>
   </plurals>
+  <string name="profile_no_rephotos">Mèkpɔ da foto aɖeke ɖi o</string>
   <string name="login_title">Geɖeme</string>
   <string name="login_failed">Mete ŋu ge ɖe eme o</string>
   <string name="wrong_password">Mɔʋunya mede o!</string>

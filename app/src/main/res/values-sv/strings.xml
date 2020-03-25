@@ -45,10 +45,10 @@
   <string name="input_firstname_hint">Förnamn</string>
   <string name="input_lastname_hint">Efternamn</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Du har ännu inte tagit några foton</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; foto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; foton</item>
   </plurals>
+  <string name="profile_no_rephotos">Du har ännu inte tagit några foton</string>
   <string name="login_title">Logga in</string>
   <string name="login_failed">Innlogging misslyckades</string>
   <string name="wrong_password">Fel lösenord!</string>

@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Anv-bihan</string>
   <string name="input_lastname_hint">Anv-familh</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">N\'ho peus ket eiladet luc\'hskeudennoù c\'hoazh</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt;luc\'kskeudenn</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt;luc\'hskeudennoù</item>
   </plurals>
+  <string name="profile_no_rephotos">N\'ho peus ket eiladet luc\'hskeudennoù c\'hoazh</string>
   <string name="login_title">Kevreañ</string>
   <string name="login_failed">Kevreadur c\'hwitet</string>
   <string name="wrong_password">Ger-tremen faziek!</string>

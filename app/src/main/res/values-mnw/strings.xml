@@ -38,10 +38,10 @@
   <string name="input_firstname_hint">ယၟု ပထမ</string>
   <string name="input_lastname_hint">ယၟု လက္ကရဴ</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">မၞး ဟွံဂွံ ကၠောန် ရဳဝှဝ်တဝ် မွဲမွဲ ဏီ</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">မၞး ဟွံဂွံ ကၠောန် ရဳဝှဝ်တဝ် မွဲမွဲ ဏီ</string>
   <string name="login_title">လုပ်လံက်အေန်</string>
   <string name="login_failed">လုပ်လံက်အေန် ဗွဲမအံင်ဇၞး</string>
   <string name="wrong_password">မလိက်ပၞုက် ဗၠေတ်!</string>

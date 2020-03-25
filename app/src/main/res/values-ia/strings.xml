@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Prenomine</string>
   <string name="input_lastname_hint">Nomine de familia</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Tu non ha ancora facite rephotos</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">Tu non ha ancora facite rephotos</string>
   <string name="login_title">Aperir session</string>
   <string name="login_failed">Apertura de session fallite</string>
   <string name="wrong_password">Contrasigno incorrecte</string>

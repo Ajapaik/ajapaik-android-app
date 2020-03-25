@@ -38,10 +38,10 @@
   <string name="input_firstname_hint">Veurnaam</string>
   <string name="input_lastname_hint">Achternaam</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Doe höbs nag gein rephoto\'s gemaak</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephoto\'s</item>
   </plurals>
+  <string name="profile_no_rephotos">Doe höbs nag gein rephoto\'s gemaak</string>
   <string name="login_title">Melj dich aan</string>
   <string name="login_failed">Aanmelje mislök</string>
   <string name="wrong_password">Verkierd wachwaord!</string>

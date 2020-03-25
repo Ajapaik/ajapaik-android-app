@@ -44,10 +44,10 @@
   <string name="input_firstname_hint">Vārds</string>
   <string name="input_lastname_hint">Uzvārds</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Jums vēl nav savu refotogrāfiju</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotogrāfjia</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotogrāfijas</item>
   </plurals>
+  <string name="profile_no_rephotos">Jums vēl nav savu refotogrāfiju</string>
   <string name="login_title">Autorizācija</string>
   <string name="login_failed">Neveiksmīga autorizācija</string>
   <string name="wrong_password">Nepareiza parole!</string>

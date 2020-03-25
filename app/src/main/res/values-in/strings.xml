@@ -41,10 +41,10 @@
   <string name="input_firstname_hint">Nama Depan</string>
   <string name="input_lastname_hint">Nama Belakang</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Anda masih belum melakukan foto ulang</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; foto ulang</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; foto ulang</item>
   </plurals>
+  <string name="profile_no_rephotos">Anda masih belum melakukan foto ulang</string>
   <string name="login_title">Masuk log</string>
   <string name="login_failed">Masuk log gagal</string>
   <string name="wrong_password">Kata sandi salah!</string>

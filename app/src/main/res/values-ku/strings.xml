@@ -43,10 +43,10 @@
   <string name="input_firstname_hint">Pêşnav</string>
   <string name="input_lastname_hint">Paşnav</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Te hêj fotografê ti wêneyê dîsa çênekiriye</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; wêneyê dîsa fotografkirî</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; wêneyên dîsa fotografkirî</item>
   </plurals>
+  <string name="profile_no_rephotos">Te hêj fotografê ti wêneyê dîsa çênekiriye</string>
   <string name="login_title">Têkeve</string>
   <string name="login_failed">Têketin serkevtî bû.</string>
   <string name="wrong_password">Şîfreya nerast!</string>

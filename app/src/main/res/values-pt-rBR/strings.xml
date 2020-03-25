@@ -45,10 +45,10 @@
   <string name="input_firstname_hint">Primeiro nome</string>
   <string name="input_lastname_hint">Último Nome</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Ainda não realizou nenhuma refotografia</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotografia</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotografias</item>
   </plurals>
+  <string name="profile_no_rephotos">Ainda não realizou nenhuma refotografia</string>
   <string name="login_title">Entrar</string>
   <string name="login_failed">Falha ao iniciar sessão</string>
   <string name="wrong_password">A senha está errada!</string>

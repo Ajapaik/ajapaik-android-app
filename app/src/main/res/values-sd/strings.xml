@@ -44,9 +44,9 @@
   <string name="input_firstname_hint">پهريون نالو</string>
   <string name="input_lastname_hint">ذات</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">اوهان اڃان تائين نئين تصوير نه ڪڍي آهي.</item>
     <item quantity="other">هڪ=&lt;b&gt;1&lt;/b&gt; نئين تصوير</item>
   </plurals>
+  <string name="profile_no_rephotos">اوهان اڃان تائين نئين تصوير نه ڪڍي آهي.</string>
   <string name="login_title">داخل ٿيو</string>
   <string name="login_failed">داخل نه ٿي سگھيو</string>
   <string name="wrong_password">غلط پاسورڊ</string>

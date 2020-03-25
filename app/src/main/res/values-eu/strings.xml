@@ -41,9 +41,9 @@
   <string name="input_firstname_hint">Izena</string>
   <string name="input_lastname_hint">Abizena</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Oraindik ez duzu berrargazkirik egin</item>
     <item quantity="other">berrargazki bat=&lt;b&gt;1&lt;/b&gt; </item>
   </plurals>
+  <string name="profile_no_rephotos">Oraindik ez duzu berrargazkirik egin</string>
   <string name="login_title">Hasi saioa</string>
   <string name="login_failed">Saio hasiera ezin izan da egin</string>
   <string name="wrong_password">Pasahitz okerra!</string>

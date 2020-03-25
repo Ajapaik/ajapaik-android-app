@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Prenume</string>
   <string name="input_lastname_hint">Numele de familie</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Nu ați făcut încă nicio fotografie replică</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">Nu ați făcut încă nicio fotografie replică</string>
   <string name="login_title">Autentificare</string>
   <string name="login_failed">Autentificare reușită.</string>
   <string name="wrong_password">Parola greșită!</string>

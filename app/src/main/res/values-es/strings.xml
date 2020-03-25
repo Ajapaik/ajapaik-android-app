@@ -50,10 +50,10 @@
   <string name="input_firstname_hint">Nombres</string>
   <string name="input_lastname_hint">Apellidos</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">no has hecho cualquier rephotos aún así</item>
     <item quantity="one">1 rephoto</item>
     <item quantity="other">%1$d rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">no has hecho cualquier rephotos aún así</string>
   <string name="login_title">Acceder</string>
   <string name="login_failed">No se pudo acceder</string>
   <string name="wrong_password">La contraseña es incorrecta.</string>

@@ -46,10 +46,10 @@
   <string name="input_firstname_hint">Ad</string>
   <string name="input_lastname_hint">Soyad</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Henüz yeniden fotoğraflamanız yok</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; yeniden fotoğraflama</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; yeniden fotoğraflama</item>
   </plurals>
+  <string name="profile_no_rephotos">Henüz yeniden fotoğraflamanız yok</string>
   <string name="login_title">Oturum aç</string>
   <string name="login_failed">Giriş başarısız</string>
   <string name="wrong_password">Yanlış parola!</string>

@@ -47,10 +47,10 @@
   <string name="input_firstname_hint">Voornaam</string>
   <string name="input_lastname_hint">Achternaam</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Je hebt nog geen nieuwe foto\'s genomen</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; nieuwe foto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; nieuwe foto\'s</item>
   </plurals>
+  <string name="profile_no_rephotos">Je hebt nog geen nieuwe foto\'s genomen</string>
   <string name="login_title">Aanmelden</string>
   <string name="login_failed">Aanmelding mislukt</string>
   <string name="wrong_password">Wachtwoord onjuist!</string>

@@ -39,10 +39,10 @@
   <string name="input_firstname_hint">Enot na pangaran</string>
   <string name="input_lastname_hint">Panhuring pangaran</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Dae ka pa nakagibo nin anumang mga pagsasaladawan</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; Pagsasaladawan</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; mga pagsasaladawan</item>
   </plurals>
+  <string name="profile_no_rephotos">Dae ka pa nakagibo nin anumang mga pagsasaladawan</string>
   <string name="login_title">Maglaog</string>
   <string name="login_failed">Dae matagumpay an pag-laog</string>
   <string name="wrong_password">Salang Pasa-taramon!</string>

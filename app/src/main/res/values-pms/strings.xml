@@ -43,10 +43,10 @@
   <string name="input_firstname_hint">Nòm</string>
   <string name="input_lastname_hint">Cognòm</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">A l\'ha ancor nen fàit ëd duplicà ëd fòto</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; duplicà ëd fòto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; duplicà ëd fòto</item>
   </plurals>
+  <string name="profile_no_rephotos">A l\'ha ancor nen fàit ëd duplicà ëd fòto</string>
   <string name="login_title">Rintré ant ël sistema</string>
   <string name="login_failed">Conession nen riussìa</string>
   <string name="wrong_password">Ciav nen bon-a!</string>

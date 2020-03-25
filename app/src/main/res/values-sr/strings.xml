@@ -41,10 +41,10 @@
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Још нисте направили ниједно рефотографисање</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефотографисање</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; рефотографисања</item>
   </plurals>
+  <string name="profile_no_rephotos">Још нисте направили ниједно рефотографисање</string>
   <string name="login_title">Пријава</string>
   <string name="login_failed">Неуспешна пријава</string>
   <string name="wrong_password">Погрешна лозинка.</string>

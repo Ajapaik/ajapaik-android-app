@@ -46,10 +46,10 @@
   <string name="input_firstname_hint">Eesnimi</string>
   <string name="input_lastname_hint">Perekonnanimi</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Sa ei ole veel refotosid teinud</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotot</item>
   </plurals>
+  <string name="profile_no_rephotos">Sa ei ole veel refotosid teinud</string>
   <string name="login_title">Logi sisse</string>
   <string name="login_failed">Sisselogimine ebaõnnestus</string>
   <string name="wrong_password">Vale salasõna!</string>

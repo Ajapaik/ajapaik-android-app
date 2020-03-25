@@ -44,10 +44,10 @@
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Засега немате направено ниедна споредбена слика</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; споредбена слика</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; споредбени слики</item>
   </plurals>
+  <string name="profile_no_rephotos">Засега немате направено ниедна споредбена слика</string>
   <string name="login_title">Најава</string>
   <string name="login_failed">Најавата не успеа</string>
   <string name="wrong_password">Погрешна лозинка!</string>

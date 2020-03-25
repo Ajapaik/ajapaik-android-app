@@ -46,10 +46,10 @@
   <string name="input_firstname_hint">Όνομα</string>
   <string name="input_lastname_hint">Επώνυμο</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Δεν έχετε κάνει κάποια επαναφωτογραφία ακόμα</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; επαναφωτογραφία</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; επαναφωτογραφίες</item>
   </plurals>
+  <string name="profile_no_rephotos">Δεν έχετε κάνει κάποια επαναφωτογραφία ακόμα</string>
   <string name="login_title">Είσοδος</string>
   <string name="login_failed">Αποτυχής σύνδεση</string>
   <string name="wrong_password">Λάθος κωδικός!</string>

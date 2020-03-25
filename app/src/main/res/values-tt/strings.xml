@@ -40,10 +40,10 @@
   <string name="input_firstname_hint">Исем</string>
   <string name="input_lastname_hint">Фамилия</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Сез әле бер рефотоны да ясамадыгыз</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефото</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
   </plurals>
+  <string name="profile_no_rephotos">Сез әле бер рефотоны да ясамадыгыз</string>
   <string name="login_title">Керү</string>
   <string name="login_failed">Кереп булмады</string>
   <string name="wrong_password">Ялгыш серсүз!</string>

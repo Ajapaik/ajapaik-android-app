@@ -41,10 +41,10 @@
   <string name="input_firstname_hint">Antaŭnomo</string>
   <string name="input_lastname_hint">Familinomo</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="zero">Vi ankoraŭ ne refotis</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotoj</item>
   </plurals>
+  <string name="profile_no_rephotos">Vi ankoraŭ ne refotis</string>
   <string name="login_title">Ensaluti</string>
   <string name="login_failed">Ensalutado malsukcesis</string>
   <string name="wrong_password">Malĝusta pasvorto!</string>

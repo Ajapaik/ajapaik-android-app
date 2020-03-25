@@ -66,10 +66,10 @@
     <string name="input_firstname_hint">First name</string>
     <string name="input_lastname_hint">Last name</string>
     <plurals name="profile_rephotos">
-        <item quantity="zero">You haven\'t made any rephotos yet</item>
         <item quantity="one">&lt;b>1&lt;/b> rephoto</item>
         <item quantity="other">&lt;b>%1$d&lt;/b> rephotos</item>
     </plurals>
+    <string name="profile_no_rephotos">You haven\'t made any rephotos yet</string>
 
     <!-- Login -->
     <string name="login_title">Login</string>

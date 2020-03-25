@@ -39,10 +39,10 @@
   <string name="input_firstname_hint">Gorar parjolo</string>
   <string name="input_lastname_hint">Gorar satorusna</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">You haven\'t made any rephotos yet</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
+  <string name="profile_no_rephotos">You haven\'t made any rephotos yet</string>
   <string name="login_title">Masuk log</string>
   <string name="login_failed">Masuk inda bisa</string>
   <string name="wrong_password">Hata kunci sala</string>

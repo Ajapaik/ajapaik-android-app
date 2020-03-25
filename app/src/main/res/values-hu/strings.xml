@@ -39,10 +39,10 @@
   <string name="input_firstname_hint">Keresztnév</string>
   <string name="input_lastname_hint">Vezetéknév</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">Még egy refotód sincs</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotó</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotó</item>
   </plurals>
+  <string name="profile_no_rephotos">Még egy refotód sincs</string>
   <string name="login_title">Bejelentkezés</string>
   <string name="login_failed">Sikertelen bejelentkezés</string>
   <string name="wrong_password">Rossz jelszó!</string>

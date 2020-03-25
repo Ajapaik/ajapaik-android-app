@@ -45,10 +45,10 @@
   <string name="input_firstname_hint">名</string>
   <string name="input_lastname_hint">姓</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">您尚无任何照片重制</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt;张照片重制</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt;张照片重制</item>
   </plurals>
+  <string name="profile_no_rephotos">您尚无任何照片重制</string>
   <string name="login_title">登录</string>
   <string name="login_failed">登录未成功</string>
   <string name="wrong_password">密码有误！</string>

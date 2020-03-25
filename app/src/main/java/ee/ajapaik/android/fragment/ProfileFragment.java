@@ -141,8 +141,10 @@ public class ProfileFragment extends WebFragment {
             if(m_profile != null) {
                 if (!getSettings().getAuthorization().isAnonymous()) {
                     Hyperlink link = m_profile.getLink();
-                    String summary = context.getResources().getQuantityString(R.plurals.profile_rephotos, m_profile.getRephotosCount(), m_profile.getRephotosCount());
-
+                    int rephotosCount = m_profile.getRephotosCount();
+                    String summary = rephotosCount > 0 ?
+                            context.getResources().getQuantityString(R.plurals.profile_rephotos, rephotosCount, rephotosCount) :
+                            context.getResources().getString(R.string.profile_no_rephotos);
                     getNameView().setText((m_profile.getName() != null) ? m_profile.getName() : "");
 
                     getTitleView().setText(Html.fromHtml(summary));

@@ -44,10 +44,10 @@
   <string name="input_firstname_hint">名</string>
   <string name="input_lastname_hint">姓</string>
   <plurals name="profile_rephotos">
-    <item quantity="zero">您尚未弄出任何翻拍照片</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; 張翻拍照片</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; 張翻拍照片</item>
   </plurals>
+  <string name="profile_no_rephotos">您尚未弄出任何翻拍照片</string>
   <string name="login_title">登入</string>
   <string name="login_failed">登入成功</string>
   <string name="wrong_password">密碼錯誤！</string>
