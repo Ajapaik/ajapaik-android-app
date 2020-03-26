@@ -35,7 +35,7 @@
   <string name="input_password_hint">Ñe\'ẽpe\'aha</string>
   <string name="input_firstname_hint">Téra</string>
   <string name="input_lastname_hint">Terajoapy</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; ta\'anga</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ta\'anga</item>
   </plurals>

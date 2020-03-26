@@ -43,7 +43,7 @@
   <string name="input_password_hint">รหัสผ่าน</string>
   <string name="input_firstname_hint">ชื่อ</string>
   <string name="input_lastname_hint">นามสกุล</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>

@@ -38,7 +38,7 @@
   <string name="input_password_hint">Passwoat:</string>
   <string name="input_firstname_hint">Voanam</string>
   <string name="input_lastname_hint">Nochnam</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;Ein&lt;/b&gt; Refótó</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; Refótós</item>
   </plurals>

@@ -44,7 +44,7 @@
   <string name="input_password_hint">Lösenord</string>
   <string name="input_firstname_hint">Förnamn</string>
   <string name="input_lastname_hint">Efternamn</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; foto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; foton</item>
   </plurals>

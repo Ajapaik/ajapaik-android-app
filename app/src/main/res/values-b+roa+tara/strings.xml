@@ -42,7 +42,7 @@
   <string name="input_password_hint">Passuord</string>
   <string name="input_firstname_hint">Prime nome</string>
   <string name="input_lastname_hint">Urteme nome</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refote</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refote</item>
   </plurals>

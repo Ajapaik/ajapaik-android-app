@@ -38,7 +38,7 @@
   <string name="input_password_hint">Jelszó</string>
   <string name="input_firstname_hint">Keresztnév</string>
   <string name="input_lastname_hint">Vezetéknév</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotó</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotó</item>
   </plurals>

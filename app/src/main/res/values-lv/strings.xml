@@ -43,7 +43,7 @@
   <string name="input_password_hint">Parole</string>
   <string name="input_firstname_hint">Vārds</string>
   <string name="input_lastname_hint">Uzvārds</string>
-  <plurals name="profile_rephotos">
+  <plurals name="profile_rephotos" fuzzy="true">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotogrāfjia</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotogrāfijas</item>
   </plurals>

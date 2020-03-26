@@ -6,6 +6,7 @@
 <resources>
   <string name="app_name">Ajapaik rephoto</string>
   <string name="please_wait">Zəhmət nıbu, çəş bıkan...</string>
+  <string name="notification_upload_text">Zəhmət nıbu, çəş bıkan...</string>
   <string name="action_albums">Albomon</string>
   <string name="action_login">Дәшәҹо</string>
   <string name="action_register">Ğeydiyot</string>
@@ -29,7 +30,9 @@
   <string name="login_title">Дәшәҹо</string>
   <string name="wrong_password">Рост ныбә парол!</string>
   <string name="registration_title">Ğeydiyot</string>
+  <string name="upload_dialog_error_connection_retry">Təkror</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
+  <string name="upload_dialog_error_unknown_retry">Təkror</string>
   <string name="upload_dialog_error_unknown_ok">Ləğv</string>
   <string name="upload_dialog_process_title" fuzzy="true">Şəkl əlovəkə</string>
   <string name="upload_dialog_process_message">Zəhmət nıbu, çəş bıkan...</string>
@@ -37,7 +40,10 @@
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Bəle!</string>
   <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="about_title">Həxədə</string>
   <string name="version">Versiyə</string>
+  <string name="contact">Əloğə</string>
+  <string name="privacy_policy">Məxfi</string>
   <string name="tutorial_dialog_show_again_no">Ne</string>
   <string name="tutorial_dialog_show_again_yes">Bəle</string>
 </resources>

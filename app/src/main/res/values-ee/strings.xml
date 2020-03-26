@@ -39,7 +39,7 @@
   <string name="input_password_hint">Mɔʋunya</string>
   <string name="input_firstname_hint">Ŋkɔ gbãtɔ</string>
   <string name="input_lastname_hint">Tɔgbuiŋkɔ</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; gbugbɔfoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; gbugbɔfotowo</item>
   </plurals>
