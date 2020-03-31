@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Fierodelveneto
+-->
+<resources>
+  <string name="please_wait">Speta on fià...</string>
+  <string name="something_went_wrong">Calcosa el xé ndà roverso.</string>
+  <string name="notification_channel">Notifeghe xenerałi</string>
+  <string name="notification_upload_title">Cargamento rephoto</string>
+  <string name="notification_upload_text">Speta on fià...</string>
+  <string name="action_albums">Album</string>
+  <string name="action_flip">Flip</string>
+  <string name="action_login">Va drento</string>
+  <string name="action_register">Rejistrate</string>
+  <string name="action_logout">Va fora</string>
+  <string name="action_profile">Profiło</string>
+  <string name="action_refresh">Ajorna</string>
+  <string name="action_settings">Inpostasion</string>
+  <string name="albums_label_no_data">Nisun album</string>
+  <string name="albums_title">Album</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Locałixasion dixabiłitada</string>
+  <string name="nearest_dialog_error_location_disabled_message">Inposibiłe torse ła locałixasion. Vuto abiłitarla?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Sara</string>
+  <string name="nearest_dialog_error_location_disabled_open">Versi inpostasion</string>
+  <string name="profile_logout">Va fora</string>
+  <string name="profile_login">Va drento</string>
+  <string name="profile_register">Crea utensa</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Ciave</string>
+  <string name="input_firstname_hint">Nome de bateximo</string>
+  <string name="input_lastname_hint">Cognome</string>
+  <plurals name="profile_rephotos" fuzzy="true">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
+  </plurals>
+  <string name="login_title">Va drento</string>
+  <string name="login_failed">Entrada fałìa</string>
+  <string name="wrong_password">Ciave erada!</string>
+  <string name="registration_title">Rejistrate</string>
+  <string name="user_already_exists">Nome utente xà doparà</string>
+  <string name="upload_title">Conferma rephoto</string>
+  <string name="upload_dialog_error_connection_retry">Riproa</string>
+  <string name="upload_dialog_error_connection_ok">Conferma</string>
+  <string name="upload_dialog_error_unknown_title">Eror sconosùo</string>
+  <string name="upload_dialog_error_unknown_message">No se połe cargar ła foto.</string>
+  <string name="upload_dialog_error_unknown_retry">Riproa</string>
+  <string name="upload_dialog_error_unknown_ok">Łasa star</string>
+  <string name="upload_dialog_process_message">Speta on fià...</string>
+  <string name="upload_dialog_success_title">Cargamento riusìo</string>
+  <string name="upload_dialog_success_ok">Bona!</string>
+  <string name="upload_dialog_not_authenticated_ok">Bona!</string>
+  <string name="upload_dialog_agree_to_terms">Sì</string>
+  <string name="upload_dialog_decline_terms">No</string>
+  <string name="acra_dialog_ok_toast">Grasie!</string>
+  <string name="about_title">Informasion</string>
+  <string name="version">Version</string>
+  <string name="contact">Contato</string>
+  <string name="privacy_policy">Privacy</string>
+  <string name="tutorial_dismiss">Capìo!</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="tutorial_dialog_show_again_yes">Sì</string>
+  <string name="storage_not_permitted_cancel">Łasa star</string>
+  <string name="storage_not_permitted_open_settings">Inpostasion de l\'aplicasion</string>
+  <string name="action_search">Çerca</string>
+  <string name="favorites_label_not_logged_in_button">Va drento</string>
+  <string name="album_no_data">Nisuna foto</string>
+</resources>

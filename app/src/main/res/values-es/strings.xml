@@ -16,6 +16,7 @@
   <string name="please_wait">Espera…</string>
   <string name="something_went_wrong">Se produjo un error</string>
   <string name="notification_channel">Notificaciones generales</string>
+  <string name="notification_upload_title">Cargando foto réplica</string>
   <string name="notification_upload_text">Un momento…</string>
   <string name="action_albums">Álbumes</string>
   <string name="action_flip">Reflejar</string>
@@ -49,17 +50,17 @@
   <string name="input_password_hint">Contraseña</string>
   <string name="input_firstname_hint">Nombres</string>
   <string name="input_lastname_hint">Apellidos</string>
-  <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="one">1 rephoto</item>
-    <item quantity="other">%1$d rephotos</item>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; foto réplica</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; fotos réplica</item>
   </plurals>
-  <string name="profile_no_rephotos">no has hecho cualquier rephotos aún así</string>
+  <string name="profile_no_rephotos">Aún no se ha creado ninguna foto réplica</string>
   <string name="login_title">Acceder</string>
   <string name="login_failed">No se pudo acceder</string>
   <string name="wrong_password">La contraseña es incorrecta.</string>
   <string name="registration_title">Registro</string>
   <string name="user_already_exists">El nombre de usuario ya existe</string>
-  <string name="upload_title">Confirma Rephoto</string>
+  <string name="upload_title">Confirmar foto réplica</string>
   <string name="upload_dialog_error_connection_title">Error de conexión</string>
   <string name="upload_dialog_error_connection_message">No se pudo cargar la foto.</string>
   <string name="upload_dialog_error_connection_retry">Intentar de nuevo</string>
@@ -68,17 +69,20 @@
   <string name="upload_dialog_error_unknown_message">No se pudo cargar la foto.</string>
   <string name="upload_dialog_error_unknown_retry">Intentar de nuevo</string>
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Cargando la foto</string>
+  <string name="upload_dialog_process_title">Cargando la foto en segundo plano</string>
   <string name="upload_dialog_process_message">Espera…</string>
   <string name="upload_dialog_success_title">Carga correcta</string>
   <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
   <string name="upload_dialog_success_ok">Aceptar</string>
-  <string name="upload_dialog_not_authenticated_title">Tiene que iniciar sesion para cargar</string>
+  <string name="upload_dialog_not_authenticated_title">Debe accederse a una cuenta para cargar</string>
   <string name="upload_dialog_not_authenticated_message">Redirigir a la página del perfil</string>
   <string name="upload_dialog_not_authenticated_ok">Aceptar</string>
   <string name="upload_dialog_not_agreed_to_terms">Apalabro publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="upload_dialog_agree_to_terms">Sí!</string>
   <string name="upload_dialog_decline_terms">No</string>
+  <string name="upload_notification_title">Cargando la foto réplica. Esto puede demorar</string>
+  <string name="upload_notification_success">Se cargó la foto réplica correctamente</string>
+  <string name="upload_notification_failure">Falló la carga de la foto réplica</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' se ha cerrado repentínamente.</string>
   <string name="acra_dialog_text">Ocurrió un error inesperado y la aplicación tuvo que cerrarse. Por favor ayudanos a solucionalo mandándonos la información del error, todo lo que tienes que hacer es tocar OK.</string>
   <string name="acra_dialog_comment_prompt">Podrías añadir tus comentarios sobre el problema :</string>
@@ -89,7 +93,7 @@
   <string name="privacy_policy">Privacidad</string>
   <string name="navigation_drawer_open">Abrir cajón</string>
   <string name="navigation_drawer_close">Cerrar cajón</string>
-  <string name="settings_show_tutorial">Enseñar el tutorial de el modo rephoto</string>
+  <string name="settings_show_tutorial">Mostrar tutorial en modo de replicación</string>
   <string name="settings_show_map_by_default">Mostrar mapa de manera predeterminada</string>
   <string name="settings_agree_to_license_terms">Acepto publicar rephotographs bajo el CC POR 4.0 licencia.</string>
   <string name="tutorial_hide_show_flip">Pulsa para mostrar/esconder la imagen.\nUsa el icono en la esquina derecha para rotar la imagen.</string>
@@ -106,7 +110,7 @@
   <string name="storage_not_permitted_message">No permitir que esta aplicación use memoria te impide de acceder a algunas funciones, por ejemplo tomar y subir rephotos. Por favor considera permitir el uso de memoria.</string>
   <string name="storage_not_permitted_cancel">Cancelar</string>
   <string name="storage_not_permitted_open_settings">Abrir configuración</string>
-  <string name="my_rephotos">Mis refotos</string>
+  <string name="my_rephotos">Mis fotos réplica</string>
   <string name="rephotos_label_not_logged_in_text">Inicia sesión para ver tus refotos</string>
   <string name="action_search">Buscar</string>
   <string name="favorites">Mis favoritas</string>
@@ -116,7 +120,7 @@
   <string name="favorites_label_not_logged_in_text">Accede a tu cuenta para ver tus favoritas</string>
   <string name="no_search_result">Ningún resultado de búsqueda</string>
   <string name="album_no_data">No hay fotos</string>
-  <string name="start_taking_rephoto">Tomar refoto</string>
+  <string name="start_taking_rephoto">Comenzar foto réplica</string>
   <string name="show_photo_details">Mostrar detalles de foto</string>
   <string name="show_rephotos">Mostrar las fotos</string>
 </resources>
