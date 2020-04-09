@@ -44,7 +44,7 @@
   <string name="upload_dialog_error_unknown_title">Eror sconosùo</string>
   <string name="upload_dialog_error_unknown_message">No se połe cargar ła foto.</string>
   <string name="upload_dialog_error_unknown_retry">Riproa</string>
-  <string name="upload_dialog_error_unknown_ok">Łasa star</string>
+  <string name="upload_dialog_error_unknown_ok">Descançełare</string>
   <string name="upload_dialog_process_message">Speta on fià...</string>
   <string name="upload_dialog_success_title">Cargamento riusìo</string>
   <string name="upload_dialog_success_ok">Bona!</string>
@@ -59,7 +59,7 @@
   <string name="tutorial_dismiss">Capìo!</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sì</string>
-  <string name="storage_not_permitted_cancel">Łasa star</string>
+  <string name="storage_not_permitted_cancel">Descançełare</string>
   <string name="storage_not_permitted_open_settings">Inpostasion de l\'aplicasion</string>
   <string name="action_search">Çerca</string>
   <string name="favorites_label_not_logged_in_button">Va drento</string>

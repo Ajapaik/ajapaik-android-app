@@ -39,7 +39,7 @@
   <string name="input_password_hint">Contrasigno</string>
   <string name="input_firstname_hint">Prenomine</string>
   <string name="input_lastname_hint">Nomine de familia</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
@@ -51,14 +51,14 @@
   <string name="user_already_exists">Le nomine de usator jam existe</string>
   <string name="upload_title">Confirmar le rephoto</string>
   <string name="upload_dialog_error_connection_title">Error de connexion</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Impossibile incargar le photo. Probar de novo?</string>
+  <string name="upload_dialog_error_connection_message">Impossibile incargar le photo.</string>
   <string name="upload_dialog_error_connection_retry">Reprobar</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Error incognite</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Impossibile incargar le photo. Probar de novo?</string>
+  <string name="upload_dialog_error_unknown_message">Impossibile incargar le photo.</string>
   <string name="upload_dialog_error_unknown_retry">Reprobar</string>
   <string name="upload_dialog_error_unknown_ok">Cancellar</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Incargamento in curso</string>
+  <string name="upload_dialog_process_title">Le photo se incarga in secunde plano</string>
   <string name="upload_dialog_process_message">Un momento…</string>
   <string name="upload_dialog_success_title">Incargamento succedite</string>
   <string name="upload_dialog_success_message">Le photo ha essite incargate con successo.</string>

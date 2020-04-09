@@ -8,6 +8,9 @@
   <string name="processing_image">Tretañ ar skeudennoù war ober</string>
   <string name="please_wait">Gortozit mar plij…</string>
   <string name="something_went_wrong">Un dra bennak a-dreuz a zo bet</string>
+  <string name="notification_channel">Kemennadennoù hollek</string>
+  <string name="notification_upload_title">Enporzhiañ an adskeudenn</string>
+  <string name="notification_upload_text">Gortozit mar plij…</string>
   <string name="action_albums">Albomoù</string>
   <string name="action_flip">Eilpennañ</string>
   <string name="action_login">Kevreañ</string>
@@ -41,8 +44,8 @@
   <string name="input_firstname_hint">Anv-bihan</string>
   <string name="input_lastname_hint">Anv-familh</string>
   <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="one">&lt;b&gt;1&lt;/b&gt;adluc\'kskeudenn</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt;adluc\'hskeudenn</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt;adskeudenn</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt;adskeudenn</item>
   </plurals>
   <string name="profile_no_rephotos">N\'hoc\'h eus ket graet adluc\'hskeudenn ebet c\'hoazh</string>
   <string name="login_title">Kevreañ</string>
@@ -52,14 +55,14 @@
   <string name="user_already_exists">An anv implijer zo anezhañ dija.</string>
   <string name="upload_title">Kadarnaat al liestennañ</string>
   <string name="upload_dialog_error_connection_title">Fazi kevreañ</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_connection_message">Ne c\'haller ket enporzhiañ ar skeudenn.</string>
   <string name="upload_dialog_error_connection_retry">Klask en-dro</string>
   <string name="upload_dialog_error_connection_ok">Mat eo</string>
   <string name="upload_dialog_error_unknown_title">Fazi dianav</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Ne c\'haller ket pellgargañ al luc\'hskeudenn ? Klaskit en-dro ?</string>
+  <string name="upload_dialog_error_unknown_message">Ne c\'haller ket enporzhiañ ar skeudenn.</string>
   <string name="upload_dialog_error_unknown_retry">Klask en-dro</string>
   <string name="upload_dialog_error_unknown_ok">Nullañ</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Pellgargañ al luc\'hskeudenn</string>
+  <string name="upload_dialog_process_title">Enporzhiañ ar skeudenn en drekleur</string>
   <string name="upload_dialog_process_message">Gortozit mar plij…</string>
   <string name="upload_dialog_success_title">Pellgarget gant berzh</string>
   <string name="upload_dialog_success_message">Pellgarget mat eo bet al luc\'hskeudenn !</string>
@@ -70,6 +73,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Asantiñ a ran embann al luc\'hskeudennoù adeilet dindan an aotre-implijout CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ya !</string>
   <string name="upload_dialog_decline_terms">Ket</string>
+  <string name="upload_notification_title">Enporhziañ an adskeudenn. Un tamm amzer a c\'hall mont gant se.</string>
+  <string name="upload_notification_success">Enporzhiet eo bet an adkseudenn ervat.</string>
+  <string name="upload_notification_failure">N\'eus ket bet gallet enporzhiañ an adskeudenn</string>
   <string name="acra_dialog_title">\'Ajapaik liestennañ\' zo sac\'het</string>
   <string name="acra_dialog_text">Ur fazi dic\'hortoz zo bet ha rediet eo bet an arload da baouez. Sikourit ac\'hanomp da reizhañ an dra-se en ur gas roadennoù ar fazi deomp. An dra nemetañ ho peus d\'ober eo klikañ war Kas.</string>
   <string name="acra_dialog_comment_prompt">Gallout a rit ouzhpennañ hoc\'h evezhiadennoù diwar-benn ar gudenn amañ dindan :</string>
@@ -81,6 +87,7 @@
   <string name="navigation_drawer_open">Digeriñ an diretenn</string>
   <string name="navigation_drawer_close">Serriñ an diretenn</string>
   <string name="settings_show_tutorial">Diskwel an tutorial er mod adluc\'hskeudenniñ</string>
+  <string name="settings_show_map_by_default">Diskouez ar gartenn dre ziouer</string>
   <string name="settings_agree_to_license_terms">Asantiñ a ran embann al luc\'hskeudennoù adeilet dindan an aotre-implijout CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Pouezañ evit kuzhat/diskwel ar skeudenn.\nImplijout an arlun distreiñ er c\'horn en nec\'h a-zehoù evit distreiñ d\'ar skeudenn gozh.</string>
   <string name="tutorial_opacity_zoom">Lakaat da riklañ evit spisaat treuzwelusted ar skeudenn gozh.\nPiñsat ar zoum evit zoumañ war ar skeudenn gozh.</string>
@@ -93,6 +100,7 @@
   <string name="rephoto_drafts">Brouilloñsoù luc\'hskeudennoù adeilet</string>
   <string name="no_rephotos">Luc\'hskeudenn adeilet ebet</string>
   <string name="storage_not_permitted_title">N\'eo ket aotreet stokañ</string>
+  <string name="storage_not_permitted_message">Dre m\'eo berzet ouzh an arload-mañ implijout memor ne c\'hallit ket ober ho mad eus arc\'hwelioù zo, da skouer ne c\'hallit ket kemer pe enporzhiañ skuedennoù. En em soñjit war aotre implij ar memor.</string>
   <string name="storage_not_permitted_cancel">Nullañ</string>
   <string name="storage_not_permitted_open_settings">Digeriñ ar c\'hefluniadur</string>
   <string name="my_rephotos">Ma luc\'hskeudennoù adeilet</string>
