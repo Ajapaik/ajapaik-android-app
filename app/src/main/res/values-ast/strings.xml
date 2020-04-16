@@ -7,6 +7,9 @@
   <string name="processing_image">Procesando la imaxe</string>
   <string name="please_wait">Espera…</string>
   <string name="something_went_wrong">Daqué funcionó mal</string>
+  <string name="notification_channel">Avisos xenerales</string>
+  <string name="notification_upload_title">Xubiendo refoto</string>
+  <string name="notification_upload_text">Espera…</string>
   <string name="action_albums">Álbumes</string>
   <string name="action_flip">Voltiar</string>
   <string name="action_login">Aniciar sesión</string>
@@ -39,7 +42,7 @@
   <string name="input_password_hint">Contraseña</string>
   <string name="input_firstname_hint">Nome</string>
   <string name="input_lastname_hint">Apellíu</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotos</item>
   </plurals>
@@ -51,14 +54,14 @@
   <string name="user_already_exists">El nome d\'usuariu yá esiste</string>
   <string name="upload_title">Confirmar la refoto</string>
   <string name="upload_dialog_error_connection_title">Error de conexón</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
+  <string name="upload_dialog_error_connection_message">Nun pudo cargase la semeya.</string>
   <string name="upload_dialog_error_connection_retry">Tentar nuevamente</string>
   <string name="upload_dialog_error_connection_ok">Aceutar</string>
   <string name="upload_dialog_error_unknown_title">Error desconocíu</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Nun pudo cargase la semeya. ¿Volver a tentalo?</string>
+  <string name="upload_dialog_error_unknown_message">Nun pudo cargase la semeya.</string>
   <string name="upload_dialog_error_unknown_retry">Tentar nuevamente</string>
   <string name="upload_dialog_error_unknown_ok">Encaboxar</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Cargando la semeya</string>
+  <string name="upload_dialog_process_title">Cargando la semeya en segundu planu</string>
   <string name="upload_dialog_process_message">Espera…</string>
   <string name="upload_dialog_success_title">Carga correuta</string>
   <string name="upload_dialog_success_message">La foto xubióse correutamente</string>
@@ -69,6 +72,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Aceuto publicar les refotografíes baxo la llicencia CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Sí</string>
   <string name="upload_dialog_decline_terms">Non</string>
+  <string name="upload_notification_title">Cargando la refoto. Esto pue tardar un poco</string>
+  <string name="upload_notification_success">La refoto xubióse correutamente</string>
+  <string name="upload_notification_failure">Falló la carga de la refoto</string>
   <string name="acra_dialog_title">Colgóse \'Ajapaik rephoto\'</string>
   <string name="acra_dialog_text">Asocedió un error inesperáu al forzar la parada de l\'aplicación. Por favor, ayúdanos a igualo unviándonos los datos del error, tolo qu\'hai que facer ye pulsiar n\'Aceutar.</string>
   <string name="acra_dialog_comment_prompt">De siguío puedes amestar comentarios rellacionaos col problema:</string>
@@ -80,6 +86,7 @@
   <string name="navigation_drawer_open">Abrir caxón</string>
   <string name="navigation_drawer_close">Zarrar caxón</string>
   <string name="settings_show_tutorial">Ver tutorial en mou refoto</string>
+  <string name="settings_show_map_by_default">Amosar el mapa de mou predetermináu</string>
   <string name="settings_agree_to_license_terms">Aceuto publicar les refotografíes en Ajapaik.ee baxo la llicencia CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Toca p\'anubrir/amosar imaxe.\nUsa l\'iconu voltiar de la esquina superior izquierda pa voltiar la imaxe antigua.</string>
   <string name="tutorial_opacity_zoom">Esnidiar p\'axustar la tresparencia de la imaxe antigua.\nPlizcar nel zoom p\'ampliar la imaxe antigua.</string>

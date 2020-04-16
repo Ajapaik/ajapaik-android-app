@@ -8,12 +8,16 @@
 * Mil
 * Ooswesthoesbes
 * Patio
+* PonkoSasuke
 -->
 <resources>
   <string name="app_name">Ajapaik – toen en nu</string>
   <string name="processing_image">Afbeelding wordt verwerkt</string>
   <string name="please_wait">Een ogenblik geduld…</string>
   <string name="something_went_wrong">Er is iets misgegaan</string>
+  <string name="notification_channel">Algemene meldingen</string>
+  <string name="notification_upload_title">Rephoto aan het uploaden</string>
+  <string name="notification_upload_text">Een ogenblik geduld…</string>
   <string name="action_albums">Albums</string>
   <string name="action_flip">Spiegelen</string>
   <string name="action_login">Aanmelden</string>
@@ -58,14 +62,14 @@
   <string name="user_already_exists">Gebruikersnaam bestaat al</string>
   <string name="upload_title">Bevestig de nieuwe foto</string>
   <string name="upload_dialog_error_connection_title">Verbindingsfout</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Kan de foto niet uploaden. Opnieuw proberen?</string>
+  <string name="upload_dialog_error_connection_message">Kan de foto niet uploaden.</string>
   <string name="upload_dialog_error_connection_retry">Opnieuw</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Onbekende fout</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Kan de foto niet uploaden. Opnieuw proberen?</string>
+  <string name="upload_dialog_error_unknown_message">Kan de foto niet uploaden.</string>
   <string name="upload_dialog_error_unknown_retry">Opnieuw</string>
   <string name="upload_dialog_error_unknown_ok">Annuleren</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Foto uploaden</string>
+  <string name="upload_dialog_process_title">Foto uploaden op de achtergrond</string>
   <string name="upload_dialog_process_message">Een ogenblik geduld…</string>
   <string name="upload_dialog_success_title">Uploaden afgerond</string>
   <string name="upload_dialog_success_message">De foto is met succes geupload!</string>
@@ -76,6 +80,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Ik ga akkoord met de publicatie van mijn nieuwe foto\'s onder licentie CC BY-SA 4.0</string>
   <string name="upload_dialog_agree_to_terms">Ja!</string>
   <string name="upload_dialog_decline_terms">Nee</string>
+  <string name="upload_notification_title">Rephoto aan het uploaden. Het kan even duren</string>
+  <string name="upload_notification_success">Rephoto met succes geüpload!</string>
+  <string name="upload_notification_failure">Rephoto upload gefaald</string>
   <string name="acra_dialog_title">\'Ajapaik – toen en nu\' is gecrasht</string>
   <string name="acra_dialog_text">Er is een onverwachte fout opgetreden, waardoor de applicatie moest stoppen. Wil je ons helpen dit op te lossen door ons de foutgegevens te sturen? Je hoeft alleen maar op OK te drukken.</string>
   <string name="acra_dialog_comment_prompt">Je kunt opmerkingen over het probleem hieronder toevoegen:</string>
@@ -87,6 +94,7 @@
   <string name="navigation_drawer_open">Open lade</string>
   <string name="navigation_drawer_close">Sluit lade</string>
   <string name="settings_show_tutorial">Toon de gids in modus nieuwe foto</string>
+  <string name="settings_show_map_by_default">Toon kaart standaard</string>
   <string name="settings_agree_to_license_terms">Ik ga ermee akkoord dat mijn nieuwe foto\'s op Ajapaik.ee onder licentie CC BY-SA 4.0 worden gepubliceerd.</string>
   <string name="tutorial_hide_show_flip">Druk om afbeelding te verbergen/tonen.\nGebruik het spiegelicoon rechtsboven om de oude afbeelding te spiegelen.</string>
   <string name="tutorial_opacity_zoom">Schuif om de transparantie van de oude afbeelding bij te stellen.\nKnijp het zoom-icoon om op de oude afbeelding in te zoomen.</string>

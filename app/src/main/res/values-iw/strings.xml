@@ -8,6 +8,7 @@
 * דגש חזק
 -->
 <resources>
+  <string name="app_name">איאפאיק צילום חוזר</string>
   <string name="processing_image">התמונה בעיבוד</string>
   <string name="please_wait">נא להמתין…</string>
   <string name="something_went_wrong">משהו השתבש</string>
@@ -69,6 +70,7 @@
   <string name="upload_dialog_not_authenticated_ok">אישור</string>
   <string name="upload_dialog_agree_to_terms">כן!</string>
   <string name="upload_dialog_decline_terms">לא</string>
+  <string name="acra_dialog_title">יישום איאפאיק צילום חוזר קרס</string>
   <string name="acra_dialog_ok_toast">תודה לך!</string>
   <string name="about_title">על אודות</string>
   <string name="version">גרסה</string>
@@ -76,6 +78,7 @@
   <string name="privacy_policy">פרטיות</string>
   <string name="navigation_drawer_open">פתיחת מגירה</string>
   <string name="navigation_drawer_close">סגירת מגירה</string>
+  <string name="settings_agree_to_license_terms">אני מסכים לפרסם צילומים חוזרים באתר Ajapaik.ee ברישיון CC BY 4.0.</string>
   <string name="tutorial_dismiss">הבנתי!</string>
   <string name="tutorial_dialog_show_again_title">להציג את המדריך שוב?</string>
   <string name="tutorial_dialog_show_again_message">ניתן להפעיל שוב את המדריך מההגדרות אחר כך</string>

@@ -41,9 +41,10 @@
   <string name="input_password_hint">Heslo</string>
   <string name="input_firstname_hint">Křestní jméno</string>
   <string name="input_lastname_hint">Příjmení</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotka</item>
     <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; refotky</item>
+    <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; refotek</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotek</item>
   </plurals>
   <string name="profile_no_rephotos">Nevytvořili jste žádné refotky</string>
