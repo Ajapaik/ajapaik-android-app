@@ -12,7 +12,7 @@
   <string name="nearest_dialog_error_location_disabled_close">ዕጸው</string>
   <string name="camera_title">ካመራ</string>
   <string name="profile_logout">ብመንነት ውጻእ</string>
-  <string name="input_username_hint">ኢመይል</string>
+  <string name="input_username_hint">ኢሜይል</string>
   <string name="input_password_hint">ቃለ-ምስጢር</string>
   <string name="input_firstname_hint">መጀመርያ ስም</string>
   <string name="login_title">ብመንነት እተው</string>

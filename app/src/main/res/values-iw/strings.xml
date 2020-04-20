@@ -53,14 +53,14 @@
   <string name="registration_title">הרשמה</string>
   <string name="user_already_exists">שם המשתמש כבר תפוס</string>
   <string name="upload_dialog_error_connection_title">שגיאת חיבור</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">לא ניתן להעלות את התמונה. לנסות שוב?</string>
+  <string name="upload_dialog_error_connection_message">לא ניתן להעלות את התמונה.</string>
   <string name="upload_dialog_error_connection_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_connection_ok">אישור</string>
   <string name="upload_dialog_error_unknown_title">שגיאה בלתי־ידועה.</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">לא ניתן להעלות את התמונה. לנסות שוב?</string>
+  <string name="upload_dialog_error_unknown_message">לא ניתן להעלות את התמונה.</string>
   <string name="upload_dialog_error_unknown_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_unknown_ok">ביטול</string>
-  <string name="upload_dialog_process_title" fuzzy="true">התמונה נשלחת</string>
+  <string name="upload_dialog_process_title">התמונה נשלחת ברקע</string>
   <string name="upload_dialog_process_message">נא להמתין…</string>
   <string name="upload_dialog_success_title">ההעלאה הצליחה</string>
   <string name="upload_dialog_success_message">התמונה הועלתה בהצלחה</string>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Amirsara
+* FarsiNevis
 -->
 <resources>
   <string name="please_wait">لطفاً صبر کنید...</string>
@@ -29,7 +30,7 @@
   <string name="input_firstname_hint">نام</string>
   <string name="input_lastname_hint">نام خانوادگی</string>
   <string name="registration_title">ثبت‌نام</string>
-  <string name="user_already_exists">نام کاربری درحال حاضر وجود دارد</string>
+  <string name="user_already_exists">نام کاربری در حال حاضر وجود دارد</string>
   <string name="upload_dialog_error_connection_retry">سعی مجدد</string>
   <string name="upload_dialog_error_connection_ok">تأیید</string>
   <string name="upload_dialog_error_unknown_title">خطای ناشناخته</string>
