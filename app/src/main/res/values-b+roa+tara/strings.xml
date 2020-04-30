@@ -42,7 +42,8 @@
   <string name="input_password_hint">Passuord</string>
   <string name="input_firstname_hint">Prime nome</string>
   <string name="input_lastname_hint">Urteme nome</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
+    <item quantity="zero">Non g\'è fatte angore refote</item>
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refote</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refote</item>
   </plurals>
@@ -54,14 +55,14 @@
   <string name="user_already_exists">\'U nome de l\'utende già esiste</string>
   <string name="upload_title">Conferme \'a refote</string>
   <string name="upload_dialog_error_connection_title">Errore de connessione</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Non ge pozze carecà \'a fote. Pruève arrete?</string>
+  <string name="upload_dialog_error_connection_message">Non ge pozze carecà \'a fote.</string>
   <string name="upload_dialog_error_connection_retry">Pruève arrete</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Errore scanusciute</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Non ge pozze carecà \'a fote. Pruève arrete?</string>
+  <string name="upload_dialog_error_unknown_message">Non ge pozze carecà \'a fote.</string>
   <string name="upload_dialog_error_unknown_retry">Pruève arrete</string>
   <string name="upload_dialog_error_unknown_ok">Annulle</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Stoche a careche \'a fote</string>
+  <string name="upload_dialog_process_title">Stoche a careche \'a fote da sotte</string>
   <string name="upload_dialog_process_message">Aspitte...</string>
   <string name="upload_dialog_success_title">Carecamende assute</string>
   <string name="upload_dialog_success_message">\'A fote ha state carecate!</string>
@@ -72,6 +73,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Accette de pubblecà le refote sotte \'a licenze CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Sìne!</string>
   <string name="upload_dialog_decline_terms">None</string>
+  <string name="upload_notification_title">Stoche a careche \'a refote. Pò pigghià \'nu picche de tiembe</string>
+  <string name="upload_notification_success">\'A refote ha state carecate!</string>
+  <string name="upload_notification_failure">\'U carecamende d\'a refote ave fallite</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' ave sckattate</string>
   <string name="acra_dialog_text">Ha assute \'n\'errore inaspettate forzanne \'u ferme de l\'applecaizone. Pe piacere danne \'na màne a correggere mannanne l\'errore, tutte quidde ca è fatte e cazzanne OK.</string>
   <string name="acra_dialog_comment_prompt">Puè aggiungere le commende tune sus a \'u probbleme aqquà sotte:</string>
