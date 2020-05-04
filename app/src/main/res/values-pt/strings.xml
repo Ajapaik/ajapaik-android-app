@@ -10,13 +10,13 @@
   <string name="please_wait">Aguarde, por favor…</string>
   <string name="something_went_wrong">Algo correu mal</string>
   <string name="notification_channel">Notificações Gerais</string>
-  <string name="notification_upload_title">A carregar a refotografia</string>
+  <string name="notification_upload_title">A enviar refotografia</string>
   <string name="notification_upload_text">Aguarde, por favor...</string>
   <string name="action_albums">Álbuns</string>
-  <string name="action_flip">Retornar</string>
+  <string name="action_flip">Espelhar</string>
   <string name="action_login">Iniciar sessão</string>
   <string name="action_register">Registar</string>
-  <string name="action_logout">Sair</string>
+  <string name="action_logout">Terminar sessão</string>
   <string name="action_profile">Perfil</string>
   <string name="action_refresh">Atualizar</string>
   <string name="action_settings">Configurações</string>
@@ -44,7 +44,7 @@
   <string name="input_password_hint">Palavra-passe</string>
   <string name="input_firstname_hint">Nome</string>
   <string name="input_lastname_hint">Apelido</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; refotografia</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotografias</item>
   </plurals>
@@ -74,6 +74,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Eu concordo em publicar as refotografias nos termos da licença CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Sim!</string>
   <string name="upload_dialog_decline_terms">Não</string>
+  <string name="upload_notification_title">A enviar refotografia. Isto pode demorar algum tempo</string>
+  <string name="upload_notification_success">Refotografia enviada com sucesso</string>
+  <string name="upload_notification_failure">O envio da refotigrafia falhou</string>
   <string name="acra_dialog_title">Houve um problema com a \'refotografia Ajapaik\'</string>
   <string name="acra_dialog_text">Ocorreu um erro inesperado ao forçar a aplicação a parar. Ajude-nos a corrigir isto, por favor, enviando-nos os dados de erros. Tudo o que precisa fazer é clicar em Aceitar (OK).</string>
   <string name="acra_dialog_comment_prompt">Pode acrescentar os seus comentários sobre o problema abaixo:</string>

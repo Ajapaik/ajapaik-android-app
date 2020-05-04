@@ -14,7 +14,7 @@
   <string name="profile_logout">ብመንነት ውጻእ</string>
   <string name="input_username_hint">ኢሜይል</string>
   <string name="input_password_hint">ቃለ-ምስጢር</string>
-  <string name="input_firstname_hint">መጀመርያ ስም</string>
+  <string name="input_firstname_hint">መጀመርያ ሽም</string>
   <string name="login_title">ብመንነት እተው</string>
   <string name="upload_dialog_error_connection_retry">እንደገና ፈትን</string>
   <string name="upload_dialog_error_connection_ok">ሕራይ</string>

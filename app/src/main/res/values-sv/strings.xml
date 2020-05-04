@@ -5,7 +5,7 @@
 * WikiPhoenix
 -->
 <resources>
-  <string name="app_name">Ajapaik då och nu</string>
+  <string name="app_name">Ajapaik – då och nu</string>
   <string name="processing_image">Bearbetar bild</string>
   <string name="please_wait">Var god vänta…</string>
   <string name="something_went_wrong">Något gick fel</string>
