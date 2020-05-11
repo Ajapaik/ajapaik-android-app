@@ -11,7 +11,7 @@
   <string name="action_albums">Album</string>
   <string name="action_flip">Flip</string>
   <string name="action_login">Va drento</string>
-  <string name="action_register">Rejistrate</string>
+  <string name="action_register">Nòtate</string>
   <string name="action_logout">Va fora</string>
   <string name="action_profile">Profiło</string>
   <string name="action_refresh">Ajorna</string>
@@ -37,7 +37,7 @@
   <string name="login_title">Va drento</string>
   <string name="login_failed">Entrada fałìa</string>
   <string name="wrong_password">Ciave erada!</string>
-  <string name="registration_title">Rejistrate</string>
+  <string name="registration_title">Nòtate</string>
   <string name="user_already_exists">Nome utente xà doparà</string>
   <string name="upload_title">Conferma rephoto</string>
   <string name="upload_dialog_error_connection_retry">Riproa</string>
