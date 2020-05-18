@@ -2,10 +2,15 @@
 <!-- Authors:
 * Amirsara
 * FarsiNevis
+* Jeeputer
+* Reza1615
 -->
 <resources>
+  <string name="processing_image">در حال پردازش تصویر</string>
   <string name="please_wait">لطفاً صبر کنید...</string>
   <string name="something_went_wrong">مشکلی وجود دارد</string>
+  <string name="notification_channel">اعلان‌های اصلی</string>
+  <string name="notification_upload_text">لطفاً صبر کنید...</string>
   <string name="action_albums">آلبوم ها</string>
   <string name="action_login">ورود</string>
   <string name="action_register">ثبت نام</string>
@@ -16,8 +21,11 @@
   <string name="albums_label_no_data">بدون آلبوم</string>
   <string name="albums_title">آلبوم ها</string>
   <string name="album_title">آلبوم</string>
+  <string name="nearest_dialog_error_location_disabled_title">مختصات‌یابی غیرفعال است</string>
+  <string name="nearest_dialog_error_location_disabled_message">دریافت موقعیت کنونی مقدور نیست. آیا می‌خواهید آن را فعال کنید؟</string>
   <string name="nearest_dialog_error_location_disabled_close">بستن</string>
   <string name="nearest_dialog_error_location_disabled_open">تنظیمات را باز کن</string>
+  <string name="photo_title">جزئیات عکس</string>
   <string name="camera_title">دوربین</string>
   <string name="profile_title">نمایه</string>
   <string name="profile_facebook_login">با فیس بوک وارد شوید</string>
@@ -29,21 +37,50 @@
   <string name="input_password_hint">گذرواژه</string>
   <string name="input_firstname_hint">نام</string>
   <string name="input_lastname_hint">نام خانوادگی</string>
+  <string name="login_title">ورود به سامانه</string>
+  <string name="login_failed">ورود ناموفق</string>
+  <string name="wrong_password">رمز عبور اشتباه است!</string>
   <string name="registration_title">ثبت‌نام</string>
   <string name="user_already_exists">نام کاربری در حال حاضر وجود دارد</string>
+  <string name="upload_dialog_error_connection_title">خطا در برقراری ارتباط</string>
+  <string name="upload_dialog_error_connection_message">بارگزاری عکس مقدور نیست.</string>
   <string name="upload_dialog_error_connection_retry">سعی مجدد</string>
   <string name="upload_dialog_error_connection_ok">تأیید</string>
   <string name="upload_dialog_error_unknown_title">خطای ناشناخته</string>
+  <string name="upload_dialog_error_unknown_message">بارگزاری عکس مقدور نیست.</string>
   <string name="upload_dialog_error_unknown_retry">سعی مجدد</string>
   <string name="upload_dialog_error_unknown_ok">لغو</string>
+  <string name="upload_dialog_process_title">در حال بارگزاری عکس در پس‌زمینه</string>
   <string name="upload_dialog_process_message">لطفاً صبر کنید...</string>
+  <string name="upload_dialog_success_title">بارگزاری موفق</string>
+  <string name="upload_dialog_success_message">عکس با موفقیت بارگزاری شد!</string>
   <string name="upload_dialog_success_ok">تأیید</string>
+  <string name="upload_dialog_not_authenticated_title">برای بارگزاری باید وارد سامانه شوید</string>
   <string name="upload_dialog_not_authenticated_ok">تأیید</string>
   <string name="upload_dialog_agree_to_terms">بله</string>
   <string name="upload_dialog_decline_terms">خیر</string>
+  <string name="acra_dialog_text">یک خطای غیرمنتظره باعث شد که برنامه متوقف شود. لطفاً با ارسال داده‌های خطا، به ما در رفع این مشکل کمک کنید. تنها لازم است تا بر روی OK کلیک کنید.</string>
+  <string name="acra_dialog_comment_prompt">می‌توانید نظرات خود در مورد این مشکل را در زیر اضافه کنید:</string>
   <string name="acra_dialog_ok_toast">سپاس!</string>
   <string name="about_title">درباره</string>
   <string name="version">نسخه</string>
+  <string name="contact">تماس</string>
+  <string name="privacy_policy">حریم شخصی</string>
+  <string name="settings_show_map_by_default">نمایش نقشه به‌طور پیش‌فرض</string>
+  <string name="tutorial_dismiss">فهمیدم!</string>
+  <string name="tutorial_dialog_show_again_title">نمایش دوبارهٔ خودآموز؟</string>
+  <string name="tutorial_dialog_show_again_message">بعداً می‌توانید خودآموز را از بخش تنظیمات دوباره روشن کنید</string>
+  <string name="tutorial_dialog_show_again_no">خیر</string>
+  <string name="tutorial_dialog_show_again_yes">بله</string>
   <string name="storage_not_permitted_cancel">لغو</string>
+  <string name="storage_not_permitted_open_settings">تنظیمات را باز کن</string>
   <string name="action_search">جستجو</string>
+  <string name="favorites">علاقه‌مندی‌های من</string>
+  <string name="no_favorites">علاقه‌مندی موجود نیست</string>
+  <string name="action_favorite">علاقه‌مندی‌ها</string>
+  <string name="favorites_label_not_logged_in_button">ورود</string>
+  <string name="favorites_label_not_logged_in_text">لطفاً برای دیدن علاقه‌مندی‌های خود به سامانه وارد شوید</string>
+  <string name="no_search_result">جستجو نتیجه‌ای در بر نداشت</string>
+  <string name="album_no_data">عکسی موجود نیست</string>
+  <string name="show_photo_details">نمایش جزئیات عکس</string>
 </resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Shahriar dehghani
+-->
+<resources>
+  <string name="please_wait">لطفا صبر کنیت</string>
+  <string name="something_went_wrong">یه چی اشتباه وابیده</string>
+  <string name="action_profile">پروفایل</string>
+  <string name="action_refresh">نو کردن</string>
+  <string name="action_settings">تأنظیمل</string>
+  <string name="albums_label_no_data">آلبوم نیسی</string>
+  <string name="albums_title">آلبومَل</string>
+  <string name="album_title">آلبوم</string>
+  <string name="nearest_dialog_error_location_disabled_message">دسترسی و موقعیت مکانی ایشا غیر ممکن هه . ایخیت دسترسی پیدا کنیت ؟</string>
+  <string name="nearest_dialog_error_location_disabled_close">بسن</string>
+  <string name="nearest_dialog_error_location_disabled_open">تنظیمَل وا کردن</string>
+  <string name="camera_title">دوربین</string>
+  <string name="profile_google_login">داخل وابیدن بی حساب گوگل</string>
+  <string name="profile_logout">ودر رحتن</string>
+  <string name="profile_login">داخل وابیدن</string>
+  <string name="profile_register">دُرُس کِردن حساب</string>
+  <string name="input_username_hint">ایمیل</string>
+  <string name="input_password_hint">رمز:</string>
+  <string name="input_firstname_hint">نوم</string>
+  <string name="input_lastname_hint">فامیل</string>
+  <string name="upload_dialog_error_connection_retry">دوباره</string>
+  <string name="upload_dialog_error_connection_ok">خووه</string>
+  <string name="upload_dialog_error_unknown_title">خطای ناشناخته</string>
+  <string name="upload_dialog_error_unknown_retry">دوباره</string>
+  <string name="upload_dialog_error_unknown_ok">لغو</string>
+  <string name="upload_dialog_success_ok">باش</string>
+  <string name="upload_dialog_not_authenticated_ok">باش</string>
+  <string name="upload_dialog_agree_to_terms">ها</string>
+  <string name="upload_dialog_decline_terms">نه</string>
+  <string name="version">نسخه</string>
+  <string name="tutorial_dialog_show_again_no">نه</string>
+  <string name="tutorial_dialog_show_again_yes">ها</string>
+  <string name="action_search">جُستن</string>
+  <string name="favorites">موردعلاقئل مو</string>
+  <string name="favorites_label_not_logged_in_button">داخل وابیدن</string>
+  <string name="favorites_label_not_logged_in_text">لطفا سی دیدن چییل مورد علاقتو داخل وابید</string>
+  <string name="album_no_data">هیچ عکسی نیسی</string>
+  <string name="show_photo_details">نشون دادن جزئیات عکس</string>
+</resources>
