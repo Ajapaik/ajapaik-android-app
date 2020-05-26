@@ -44,7 +44,7 @@
   <string name="upload_dialog_error_unknown_title">Неизвестна грешка</string>
   <string name="upload_dialog_error_unknown_retry">Опитайте отново</string>
   <string name="upload_dialog_error_unknown_ok">Отказ</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Качване на картината</string>
+  <string name="upload_dialog_process_title">Качване на картината във фонов режим</string>
   <string name="upload_dialog_process_message">Изчакайте…</string>
   <string name="upload_dialog_success_title">Успешно качване</string>
   <string name="upload_dialog_success_message">Снимката е успешно качена!</string>

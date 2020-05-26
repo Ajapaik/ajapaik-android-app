@@ -12,6 +12,7 @@
   <string name="action_refresh">Թարմացնել</string>
   <string name="action_settings">Կարգավորումներ</string>
   <string name="albums_label_no_data">Ալբոմներ չկան</string>
+  <string name="albums_title">Ալբոմներ</string>
   <string name="album_title">Ալբոմ</string>
   <string name="nearest_dialog_error_location_disabled_close">Փակել</string>
   <string name="profile_facebook_login">Մուտք գործել Ֆեյսբուքի միջոցով</string>
@@ -21,9 +22,13 @@
   <string name="input_password_hint">Գաղտնաբառ</string>
   <string name="input_firstname_hint">Անուն</string>
   <string name="input_lastname_hint">Ազգանուն</string>
+  <string name="login_title">Մուտք</string>
+  <string name="upload_dialog_error_connection_retry">Կրկնել</string>
   <string name="upload_dialog_error_connection_ok">Լավ</string>
+  <string name="upload_dialog_error_unknown_title">Անհայտ սխալ</string>
   <string name="upload_dialog_error_unknown_retry">Կրկին փորձել</string>
   <string name="upload_dialog_error_unknown_ok">Չեղարկել</string>
+  <string name="upload_dialog_process_message">Խնդրում ենք սպասել...</string>
   <string name="upload_dialog_success_ok">Լավ</string>
   <string name="upload_dialog_not_authenticated_ok">Լավ</string>
   <string name="upload_dialog_agree_to_terms">Այյո</string>

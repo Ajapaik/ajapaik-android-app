@@ -95,7 +95,7 @@
   <string name="settings_show_map_by_default">Показывать карту по умолчанию</string>
   <string name="settings_agree_to_license_terms">Я согласен опубликовать рефото на сайте Ajapaik.ee под лицензией CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Нажмите, чтобы скрыть/показать изображение.\nИспользуйте иконку в верхнем правом углу, чтобы отразить исходное изображение.</string>
-  <string name="tutorial_opacity_zoom">Прозрачность меняется движением влево\вправо.\nМасштаб меняется при одновременном сведении\разведении двух пальцев.</string>
+  <string name="tutorial_opacity_zoom">Прозрачность меняется движением влево\\вправо.\nМасштаб меняется при одновременном сведении\\разведении двух пальцев.</string>
   <string name="tutorial_take_picture">Нажмите кнопку спуска затвора или задержите касание в любом месте экрана, чтобы сделать рефото.</string>
   <string name="tutorial_dismiss">Понятно!</string>
   <string name="tutorial_dialog_show_again_title">Показать руководство заново?</string>
