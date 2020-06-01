@@ -35,6 +35,7 @@
   <string name="upload_dialog_decline_terms">Ոչ</string>
   <string name="acra_dialog_ok_toast">Շնորհակալություն</string>
   <string name="version">Տարբերակ</string>
+  <string name="tutorial_dismiss">Հասկանալի է</string>
   <string name="tutorial_dialog_show_again_no">Ոչ</string>
   <string name="tutorial_dialog_show_again_yes">Այո</string>
   <string name="storage_not_permitted_cancel">Չեղարկել</string>
