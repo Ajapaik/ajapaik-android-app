@@ -4,6 +4,7 @@
 * GhotuoIncubator
 * KATRINE1993
 * Nikosgranturismogt
+* Norhorn
 -->
 <resources>
   <string name="app_name">επαναφωτογραφία Ajapaik</string>
@@ -12,7 +13,7 @@
   <string name="something_went_wrong">Κάτι πήγε στραβά</string>
   <string name="notification_channel">Γενικές ειδοποιήσεις</string>
   <string name="notification_upload_title">Μεταφόρτωση επαναφοτωγράφησης</string>
-  <string name="notification_upload_text">Παρακαλώ περιμένετε ...</string>
+  <string name="notification_upload_text">Παρακαλούμε περιμένετε…</string>
   <string name="action_albums">Άλμπουμ</string>
   <string name="action_flip">Αναστροφή</string>
   <string name="action_login">Είσοδος</string>
