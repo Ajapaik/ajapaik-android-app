@@ -5,6 +5,7 @@
 * Buntschann
 * Omotecho
 * Shirayuki
+* Tmv
 * 沈澄心
 * 神樂坂秀吉
 -->
@@ -77,6 +78,7 @@
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">はい</string>
   <string name="upload_dialog_decline_terms">いいえ</string>
+  <string name="upload_notification_failure">リフォトのアップロードに失敗しました</string>
   <string name="acra_dialog_title">「Ajapaik rephoto」がクラッシュしました</string>
   <string name="acra_dialog_text">アプリの強制終了中にエラーが発生しました。OKをクリックしてエラーのデータを送信し、この問題の修正にご協力ください。</string>
   <string name="acra_dialog_comment_prompt">以下に問題に関するコメントを書き込めます（オプション）</string>
@@ -88,6 +90,7 @@
   <string name="navigation_drawer_open">画像を開く</string>
   <string name="navigation_drawer_close">画像を閉じる</string>
   <string name="settings_show_tutorial">rephotoモードでチュートリアルを表示</string>
+  <string name="settings_show_map_by_default">デフォルトで地図を表示</string>
   <string name="tutorial_take_picture">写真を複写するにはシャッターボタンを押すか、画面を長押しします。</string>
   <string name="tutorial_dismiss">了解!</string>
   <string name="tutorial_dialog_show_again_title">チュートリアルを再表示しますか？</string>

@@ -76,6 +76,8 @@
   <string name="upload_dialog_not_agreed_to_terms">Συμφωνώ στην δημοσίευση επαναφωτογραφιών υπό την άδεια CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ναι!</string>
   <string name="upload_dialog_decline_terms">Όχι</string>
+  <string name="upload_notification_title">Η αποστολή των αρχείων φωτογραφιών που αναπαράχθηκαν, μπορεί να διαρκέσει λίγο</string>
+  <string name="upload_notification_success">Το αρχείο αναπαραγωγής φωτογραφίας εστάλη με επιτυχία</string>
   <string name="acra_dialog_title">Η \'επαναφωτογράφιση Ajapaik\' έχει κρασάρει</string>
   <string name="acra_dialog_text">Συνέβη ένα απροσδόκητο σφάλμα αναγκάζοντας την εφαρμογή να σταματήσει. Παρακαλώ βοηθήστε μας να το επισκευάσουμε στέλνοντάς μας δεδομένα σφάλματος, και το μόνο που έχετε να κάνετε είναι να πατήσετε OK.</string>
   <string name="acra_dialog_comment_prompt">Μπορείτε να προσθέσετε τα σχόλια σας για το πρόβλημα παρακάτω:</string>
@@ -87,6 +89,7 @@
   <string name="navigation_drawer_open">Άνοιγμα ζωγραφιστή</string>
   <string name="navigation_drawer_close">Κλείσιμο ζωγραφιστή</string>
   <string name="settings_show_tutorial">Εμφάνιση της οδηγίας εισαγωγής σε λειτουργία επαναφωτογραφίας</string>
+  <string name="settings_show_map_by_default">Προβολή χάρτη επιλεκτικά</string>
   <string name="settings_agree_to_license_terms">Συμφωνώ στην δημοσίευση επαναφωτογραφιών στο Ajapaik.ee υπό την άδεια CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Πατήστε για να κρύψετε/εμφανίσετε την εικόνα. \nΧρησιμοποίηστε το αναστροφή εικόνας στο άνω δεξιό μέρος για να αναστρέψετε την παλιά εικόνα.</string>
   <string name="tutorial_opacity_zoom">Κάντε κλικ για να προσαρμόσετε την διαφάνεια της παλιάς εικόνας.\nΚάντε κλικ στο μεγέθυνση για να μεγεθύνετε την παλιά εικόνα.</string>
