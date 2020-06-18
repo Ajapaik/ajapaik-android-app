@@ -78,6 +78,7 @@
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">はい</string>
   <string name="upload_dialog_decline_terms">いいえ</string>
+  <string name="upload_notification_title">新しい写真のアップロード。時間がかかるかもしれません。</string>
   <string name="upload_notification_failure">リフォトのアップロードに失敗しました</string>
   <string name="acra_dialog_title">「Ajapaik rephoto」がクラッシュしました</string>
   <string name="acra_dialog_text">アプリの強制終了中にエラーが発生しました。OKをクリックしてエラーのデータを送信し、この問題の修正にご協力ください。</string>
