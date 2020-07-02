@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Red Winged Duck
+* Renessaince
+-->
+<resources>
+  <string name="app_name">Ajapaik</string>
+  <string name="processing_image">Апрацоўка выявы</string>
+  <string name="please_wait">Калі ласка, пачакайце…</string>
+  <string name="something_went_wrong">Нешта пайшло ня так</string>
+  <string name="notification_channel">Агульныя паведамленьні</string>
+  <string name="notification_upload_text">Калі ласка, пачакайце…</string>
+  <string name="action_albums">Альбомы</string>
+  <string name="action_flip">Адлюстраваць</string>
+  <string name="action_login">Увайсьці</string>
+  <string name="action_register">Рэгістрацыя</string>
+  <string name="action_logout">Выйсьці</string>
+  <string name="action_profile">Профіль</string>
+  <string name="action_refresh">Абнавіць</string>
+  <string name="action_settings">Налады</string>
+  <string name="nearest_title">Фота паблізу</string>
+  <string name="albums_label_no_data">Няма альбомаў</string>
+  <string name="albums_title">Альбомы</string>
+  <string name="album_title">Альбом</string>
+  <string name="nearest_dialog_error_location_disabled_title">Месцазнаходжаньне адключанае</string>
+  <string name="profile_facebook_login">Увайсьці праз Facebook</string>
+  <string name="profile_google_login">Увайсьці праз Google</string>
+  <string name="profile_logout">Выйсьці</string>
+  <string name="profile_login">Увайсьці</string>
+  <string name="profile_register">Стварыць рахунак</string>
+  <string name="input_username_hint">Электронная пошта</string>
+  <string name="input_password_hint">Пароль</string>
+  <string name="input_firstname_hint">Імя</string>
+  <string name="input_lastname_hint">Прозьвішча</string>
+  <string name="login_title">Увайсьці</string>
+  <string name="login_failed">Няўдалы ўваход</string>
+  <string name="wrong_password">Памылковы пароль!</string>
+  <string name="registration_title">Рэгістрацыя</string>
+  <string name="user_already_exists">Імя ўдзельніка ўжо існуе</string>
+</resources>
