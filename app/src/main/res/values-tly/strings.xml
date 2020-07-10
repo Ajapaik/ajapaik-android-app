@@ -8,7 +8,7 @@
   <string name="please_wait">Zəhmət nıbu, çəş bıkan...</string>
   <string name="notification_upload_text">Zəhmət nıbu, çəş bıkan...</string>
   <string name="action_albums">Albomon</string>
-  <string name="action_login">Dəşey</string>
+  <string name="action_login">Dəşi</string>
   <string name="action_register">Ğeydiyot</string>
   <string name="action_logout">Bəşey</string>
   <string name="action_profile">Profil</string>
@@ -34,6 +34,7 @@
   <string name="registration_title">Ğeydiyot</string>
   <string name="upload_dialog_error_connection_retry">Təkror</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
+  <string name="upload_dialog_error_unknown_title">Noməlumə səhv</string>
   <string name="upload_dialog_error_unknown_retry">Təkror</string>
   <string name="upload_dialog_error_unknown_ok">Ləğv karde</string>
   <string name="upload_dialog_process_title">Şəkl əlovəkə</string>
@@ -49,6 +50,7 @@
   <string name="privacy_policy">Məxfi</string>
   <string name="tutorial_dialog_show_again_no">Ne</string>
   <string name="tutorial_dialog_show_again_yes">Ha</string>
+  <string name="no_rephotos">Ni reşəkl</string>
   <string name="storage_not_permitted_cancel">Ləğv karde</string>
   <string name="action_search">Bınəv</string>
   <string name="album_no_data">Şəkl ni</string>
