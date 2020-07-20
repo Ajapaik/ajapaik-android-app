@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Leducthn
+* Nguyễn Mạnh An
 -->
 <resources>
   <string name="processing_image">Đang xử lí hình</string>
   <string name="please_wait">Vui lòng chờ…</string>
   <string name="something_went_wrong">Có gì đó bị lỗi</string>
+  <string name="notification_channel">Thông báo chung</string>
+  <string name="notification_upload_title">Đang tải lên</string>
+  <string name="notification_upload_text">Vui lòng chờ…</string>
   <string name="action_albums">Album</string>
+  <string name="action_flip">Lật</string>
   <string name="action_login">Đăng nhập</string>
   <string name="action_register">Đăng ký</string>
   <string name="action_logout">Đăng xuất</string>
@@ -37,6 +42,7 @@
   <string name="input_password_hint">Mật khẩu</string>
   <string name="input_firstname_hint">Tên</string>
   <string name="input_lastname_hint">Họ</string>
+  <string name="profile_no_rephotos">Bạn chưa thực hiện bất kỳ hình ảnh nào</string>
   <string name="login_title">Đăng nhập</string>
   <string name="login_failed">Đăng nhập không thành công</string>
   <string name="wrong_password">Sai mật khẩu!</string>

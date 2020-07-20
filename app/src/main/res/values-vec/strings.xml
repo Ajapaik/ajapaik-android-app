@@ -12,7 +12,7 @@
   <string name="action_flip">Flip</string>
   <string name="action_login">Va drento</string>
   <string name="action_register">Nòtate</string>
-  <string name="action_logout">Va fora</string>
+  <string name="action_logout">Deslòghite</string>
   <string name="action_profile">Profiło</string>
   <string name="action_refresh">Ajorna</string>
   <string name="action_settings">Inpostasion</string>
@@ -23,7 +23,7 @@
   <string name="nearest_dialog_error_location_disabled_message">Inposibiłe torse ła locałixasion. Vuto abiłitarla?</string>
   <string name="nearest_dialog_error_location_disabled_close">Sara</string>
   <string name="nearest_dialog_error_location_disabled_open">Versi inpostasion</string>
-  <string name="profile_logout">Va fora</string>
+  <string name="profile_logout">Deslòghite</string>
   <string name="profile_login">Va drento</string>
   <string name="profile_register">Crea utensa</string>
   <string name="input_username_hint">Email</string>
