@@ -10,7 +10,7 @@
   <string name="notification_upload_text">Speta on fià...</string>
   <string name="action_albums">Album</string>
   <string name="action_flip">Flip</string>
-  <string name="action_login">Va drento</string>
+  <string name="action_login">Lòghite</string>
   <string name="action_register">Nòtate</string>
   <string name="action_logout">Deslòghite</string>
   <string name="action_profile">Profiło</string>
@@ -24,7 +24,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Sara</string>
   <string name="nearest_dialog_error_location_disabled_open">Versi inpostasion</string>
   <string name="profile_logout">Deslòghite</string>
-  <string name="profile_login">Va drento</string>
+  <string name="profile_login">Lòghite</string>
   <string name="profile_register">Crea utensa</string>
   <string name="input_username_hint">Email</string>
   <string name="input_password_hint">Ciave</string>
@@ -34,7 +34,7 @@
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
   </plurals>
-  <string name="login_title">Va drento</string>
+  <string name="login_title">Lòghite</string>
   <string name="login_failed">Entrada fałìa</string>
   <string name="wrong_password">Ciave erada!</string>
   <string name="registration_title">Nòtate</string>
@@ -63,6 +63,6 @@
   <string name="storage_not_permitted_cancel">Descançełare</string>
   <string name="storage_not_permitted_open_settings">Inpostasion de l\'aplicasion</string>
   <string name="action_search">Çerca</string>
-  <string name="favorites_label_not_logged_in_button">Va drento</string>
+  <string name="favorites_label_not_logged_in_button">Lòghite</string>
   <string name="album_no_data">Nisuna foto</string>
 </resources>
