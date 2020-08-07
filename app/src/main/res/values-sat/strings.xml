@@ -3,9 +3,22 @@
 * Rocky 734
 -->
 <resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">ᱪᱤᱛᱟᱹᱨ ᱠᱟᱹᱢᱤᱦᱚᱪᱚᱜ ᱠᱟᱱᱟ</string>
   <string name="please_wait">ᱫᱟᱭᱟᱠᱟᱛᱮ ᱛᱟᱺᱜᱤᱢᱮ ...</string>
+  <string name="something_went_wrong">ᱡᱟᱦᱟᱱᱟᱜ ᱠᱚ ᱵᱷᱩᱞ ᱪᱟᱞᱟᱣ ᱮᱱᱟ</string>
+  <string name="notification_channel">ᱥᱟᱱᱟᱢ ᱤᱛᱞᱟᱹᱭ ᱠᱚ</string>
+  <string name="notification_upload_title">rephoto ᱪᱮᱛᱟᱱ ᱥᱮᱱ ᱞᱟᱫᱮᱜ ᱠᱟᱱᱟ</string>
+  <string name="notification_upload_text">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱛᱟᱸᱜᱤ ᱯᱮ...</string>
+  <string name="action_albums">ᱟᱞᱵᱟᱹᱢ ᱠᱚ</string>
+  <string name="action_flip">ᱴᱟᱴᱠᱟ</string>
+  <string name="action_login">ᱵᱚᱞᱚᱜ ᱢᱮ</string>
+  <string name="action_register">ᱧᱩᱛᱩᱢ ᱚᱞ ᱦᱚᱪᱚ</string>
+  <string name="action_logout">ᱩᱰᱩᱠᱚᱜ ᱢᱮ</string>
+  <string name="action_profile">ᱢᱚᱦᱲᱟ</string>
   <string name="action_refresh">ᱯᱷᱟᱹᱲᱣᱟᱹᱣ</string>
   <string name="action_settings">ᱥᱟᱡᱟᱣᱠᱚ</string>
+  <string name="nearest_title">ᱥᱩᱨᱡᱚᱨᱮᱭᱟᱜ ᱪᱤᱛᱟᱹᱨ</string>
   <string name="nearest_dialog_error_location_disabled_close">ᱥᱤᱧ</string>
   <string name="profile_logout">ᱩᱰᱩᱜᱚᱜᱢᱮ</string>
   <string name="profile_login">ᱵᱚᱞᱚᱜ ᱢᱮ</string>

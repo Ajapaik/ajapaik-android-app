@@ -10,7 +10,7 @@
   <string name="action_albums">Albomon</string>
   <string name="action_login">Dəşi</string>
   <string name="action_register">Ğeydiyot</string>
-  <string name="action_logout">Bəşey</string>
+  <string name="action_logout">Beşi</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Tojə karde</string>
   <string name="action_settings">Nizamon</string>
@@ -23,7 +23,7 @@
   <string name="photo_title">Şəkli Barədə</string>
   <string name="camera_title">Kəmerə</string>
   <string name="profile_title">Profil</string>
-  <string name="profile_logout">Bəşey</string>
+  <string name="profile_logout">Beşi</string>
   <string name="profile_login">Дәше</string>
   <string name="input_username_hint">E-nomə</string>
   <string name="input_password_hint">Pərol</string>
