@@ -2,14 +2,15 @@
 <!-- Authors:
 * Abbe98
 * Haxpett
+* Sabelöga
 * WikiPhoenix
 -->
 <resources>
   <string name="app_name">Ajapaik – då och nu</string>
   <string name="processing_image">Bearbetar bild</string>
   <string name="please_wait">Var god vänta…</string>
-  <string name="something_went_wrong">Något gick fel</string>
-  <string name="notification_channel">Generella notiser</string>
+  <string name="something_went_wrong">Något blev fel</string>
+  <string name="notification_channel">Allmänna notiser</string>
   <string name="notification_upload_title">Laddar upp fotot</string>
   <string name="notification_upload_text">Var god vänta…</string>
   <string name="action_albums">Album</string>
@@ -50,7 +51,7 @@
   </plurals>
   <string name="profile_no_rephotos">Du har ännu inte tagit några foton</string>
   <string name="login_title">Logga in</string>
-  <string name="login_failed">Innlogging misslyckades</string>
+  <string name="login_failed">Inlogging misslyckades</string>
   <string name="wrong_password">Fel lösenord!</string>
   <string name="registration_title">Registrera</string>
   <string name="user_already_exists">Användarnamnet finns redan</string>
@@ -74,6 +75,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Jag samtycker till att publicera fotografier under licensen CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Ja!</string>
   <string name="upload_dialog_decline_terms">Nej</string>
+  <string name="upload_notification_title">Laddar upp foto. Det kan ta en stund</string>
+  <string name="upload_notification_success">Fotot laddades upp</string>
+  <string name="upload_notification_failure">Fotot kunde inte laddas upp</string>
   <string name="acra_dialog_title">\"Ajapaik då och nu\" kraschade</string>
   <string name="acra_dialog_text">Ett oväntat fel uppstod som fick appen att sluta fungera. Var god hjälp oss att fixa detta genom att skicka feldata till oss, allt du behöver göra är att klicka på OK.</string>
   <string name="acra_dialog_comment_prompt">Du kan lägga till en kommentar om problemet nedan:</string>
