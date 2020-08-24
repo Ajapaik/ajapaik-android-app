@@ -29,7 +29,7 @@
   <string name="input_password_hint">Pərol</string>
   <string name="input_firstname_hint">Nüm</string>
   <string name="input_lastname_hint">Soynüm</string>
-  <string name="login_title">Dəşey</string>
+  <string name="login_title">Dəşi</string>
   <string name="wrong_password">Рост ныбә парол!</string>
   <string name="registration_title">Ğeydiyot</string>
   <string name="upload_dialog_error_connection_retry">Təkror</string>
