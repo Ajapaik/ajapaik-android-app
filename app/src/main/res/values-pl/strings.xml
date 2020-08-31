@@ -11,6 +11,7 @@
   <string name="please_wait">Proszę czekać…</string>
   <string name="something_went_wrong">Coś poszło nie tak</string>
   <string name="notification_channel">Ogólne powiadomienia</string>
+  <string name="notification_upload_title">Przesyłanie rephoto</string>
   <string name="notification_upload_text">Proszę czekać…</string>
   <string name="action_albums">Albumy</string>
   <string name="action_flip">Odwróć</string>
@@ -50,14 +51,14 @@
   <string name="user_already_exists">Nazwa użytkownika już istnieje</string>
   <string name="upload_title">Zatwierdź fotografię</string>
   <string name="upload_dialog_error_connection_title">Błąd połączenia</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
+  <string name="upload_dialog_error_connection_message">Nie można przesłać zdjęcia.</string>
   <string name="upload_dialog_error_connection_retry">Ponów</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Nieznany błąd</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Przesyłanie zdjęcia nie powiodło się. Załadować ponownie?</string>
+  <string name="upload_dialog_error_unknown_message">Nie można przesłać zdjęcia.</string>
   <string name="upload_dialog_error_unknown_retry">Ponów</string>
   <string name="upload_dialog_error_unknown_ok">Anuluj</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Przesyłanie zdjęcia</string>
+  <string name="upload_dialog_process_title">Przesyłanie zdjęcia w tle</string>
   <string name="upload_dialog_process_message">Proszę czekać…</string>
   <string name="upload_dialog_success_title">Przesyłanie zakończone sukcesem</string>
   <string name="upload_dialog_success_message">Zdjęcie zostało przesłane pomyślnie!</string>
@@ -68,6 +69,7 @@
   <string name="upload_dialog_not_agreed_to_terms">Zgadzam się na publikowanie fotografii na licencji CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Tak!</string>
   <string name="upload_dialog_decline_terms">Nie</string>
+  <string name="upload_notification_title">Przesyłanie rephoto. Może upłynąć trochę czasu</string>
   <string name="acra_dialog_title">„Ajapaik rephoto” został zatrzymany</string>
   <string name="acra_dialog_text">Wystąpił nieoczekiwany błąd wymuszający zatrzymanie aplikacji. Pomóż nam to naprawić, przesyłając nam dane o błędzie. Wystarczy, że klikniesz OK.</string>
   <string name="acra_dialog_comment_prompt">Poniżej możesz dodać swój komentarz dotyczący błędu:</string>
@@ -78,6 +80,7 @@
   <string name="privacy_policy">Prywatność</string>
   <string name="navigation_drawer_open">Otwórz szkicownik</string>
   <string name="navigation_drawer_close">Zamknij szkicownik</string>
+  <string name="settings_show_map_by_default">Pokaż mapę domyślnie</string>
   <string name="settings_agree_to_license_terms">Zgadzam się na publikowanie fotografii na Ajapaik.ee na licencji CC BY 4.0.</string>
   <string name="tutorial_opacity_zoom">Przesuń, aby dostosować przezroczystość starego obrazu.\nPowiększ zdjęcie, aby zmienić wymiary starego obrazu.</string>
   <string name="tutorial_dismiss">Wszystko jasne!</string>
@@ -87,6 +90,7 @@
   <string name="tutorial_dialog_show_again_yes">Tak</string>
   <string name="rephoto_drafts">Szkice fotografii</string>
   <string name="no_rephotos">Brak fotografii</string>
+  <string name="storage_not_permitted_title">Przechowywanie nie jest dozwolone</string>
   <string name="storage_not_permitted_cancel">Anuluj</string>
   <string name="storage_not_permitted_open_settings">Otwórz ustawienia</string>
   <string name="my_rephotos">Moje fotografie</string>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Armeniki
+* Շահէն
 -->
 <resources>
   <string name="please_wait">Հաճեցէք սպասել....</string>
+  <string name="notification_upload_text">Հաճեցէք սպասել...</string>
   <string name="action_login">Մուտք գործել</string>
+  <string name="action_register">Արձանագրուիլ</string>
   <string name="action_logout">Դուրս գալ</string>
   <string name="action_refresh">Թարմացնել</string>
   <string name="action_settings">Կարգաւորումներ</string>
@@ -12,16 +15,21 @@
   <string name="nearest_dialog_error_location_disabled_open">Կարգաւորումները բանալ</string>
   <string name="profile_logout">Դուրս գալ</string>
   <string name="profile_login">Մուտք գործել</string>
+  <string name="profile_register">Հաշիւ ստեղծել</string>
   <string name="input_password_hint">Գաղտնաբառ</string>
   <string name="input_firstname_hint">Անուն</string>
   <string name="input_lastname_hint">Մականուն</string>
   <string name="login_title">Մուտք գործել</string>
+  <string name="wrong_password">Սխալ անցաբառ</string>
+  <string name="registration_title">Արձանագրուիլ</string>
   <string name="upload_dialog_error_connection_retry">Նորէն փորձել</string>
   <string name="upload_dialog_error_connection_ok">ԼԱՒ</string>
   <string name="upload_dialog_error_unknown_title">Անյայտ սխալ</string>
   <string name="upload_dialog_error_unknown_retry">Նորէն փորձել</string>
   <string name="upload_dialog_error_unknown_ok">Չեղարկել</string>
   <string name="upload_dialog_process_message">Հաճեցէք սպասել....</string>
+  <string name="upload_dialog_success_title">Յաջող վերբեռնում</string>
+  <string name="upload_dialog_success_message">Այս պատկերը վերբեռնուա՛ծ է</string>
   <string name="upload_dialog_success_ok">ԼԱՒ</string>
   <string name="upload_dialog_not_authenticated_ok">ԼԱՒ</string>
   <string name="upload_dialog_agree_to_terms">Այո՜</string>
@@ -35,8 +43,9 @@
   <string name="storage_not_permitted_cancel">Չեղարկել</string>
   <string name="action_search">Որոնել</string>
   <string name="favorites_label_not_logged_in_button">Մուտք գործել</string>
+  <string name="no_search_result">Որոնման արդիւնքներ չկան</string>
   <string name="album_no_data">Լուսանկար չկայ</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
+  <string name="show_photo_details">Ցոյց տուր պատկերին մանրամասնութիւնները</string>
   <string name="show_rephotos" fuzzy="true">Show rephotos</string>
 </resources>
