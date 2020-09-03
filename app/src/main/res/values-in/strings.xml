@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Akmaie Ajam
 * Bagas Chrisara
 * Joseagush
 -->
@@ -8,6 +9,9 @@
   <string name="processing_image">Memproses gambar</string>
   <string name="please_wait">Silahkan tunggu...</string>
   <string name="something_went_wrong">Ada kesalahan</string>
+  <string name="notification_channel">Notifikasi Umum</string>
+  <string name="notification_upload_title">Mengunggah foto</string>
+  <string name="notification_upload_text">Harap tunggu...</string>
   <string name="action_albums">Album</string>
   <string name="action_flip">Balik</string>
   <string name="action_login">Masuk log</string>
