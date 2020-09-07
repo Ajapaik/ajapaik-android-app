@@ -2,12 +2,14 @@
 <!-- Authors:
 * Aftabuzzaman
 * Rasal Lia
+* Titodutta
 * আফতাবুজ্জামান
 -->
 <resources>
   <string name="processing_image">চিত্র প্রক্রিয়াকরণ হচ্ছে</string>
   <string name="please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="something_went_wrong">কোন একটা ভুল ছিল</string>
+  <string name="notification_upload_text">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="action_albums">এ্যালবাম</string>
   <string name="action_login">প্রবেশ করুন</string>
   <string name="action_register">নিবন্ধন করুন</string>
