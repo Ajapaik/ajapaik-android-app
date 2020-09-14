@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Aslmad mohamed belarhzali
+* Hakim1bal
 -->
 <resources>
   <string name="please_wait">ⴰⵎⵓⵔ ⵏⵏⴽ ⵙⴰⴳⵎ...</string>
@@ -46,7 +47,7 @@
   <string name="upload_dialog_error_unknown_title">ⵜⴰⵣⴳⴰⵍⵜ ⵓⵔ ⵉⵜⵜⵡⴰⵙⵙⵏⴻⵏ</string>
   <string name="upload_dialog_error_unknown_retry">ⴰⵔⵎ ⴷⴰⵖ</string>
   <string name="upload_dialog_error_unknown_ok">ⵙⵔ</string>
-  <string name="upload_dialog_process_title" fuzzy="true">ⵙⵙⴽⵜⵔ ⵜⴰⵡⵍⴰⴼⵜ</string>
+  <string name="upload_dialog_process_title">ⴰⵙⴽⵜⵔ ⵜⴰⵡⵍⴰⴼⵜ ⴳ ⵜⵖⵔⴷⵉⵏ ⵏ ⵓⵙⵓⵍⴼ</string>
   <string name="upload_dialog_process_message">ⴰⵎⵓⵔ ⵏⵏⴽ ⵙⴰⴳⵎ...</string>
   <string name="upload_dialog_success_title">ⵉⵎⵓⵔⵙ ⵓⵙⴽⵜⵔ</string>
   <string name="upload_dialog_success_message">ⵜⴻⵜⵜⵓⵙⴽⵜⵔ ⵜⵡⵍⴰⴼⵜ ⵙ ⵓⵎⵓⵔⵙ!</string>
@@ -54,7 +55,7 @@
   <string name="upload_dialog_not_authenticated_title">ⵉⴼⵓⴽⴽ ⴰⴷ ⵜⴽⵛⵎⴷ ⵎⴽ ⵜⵔⵉⴷ ⴰⴷ ⵜⵙⵙⴽⵜⵔⴷ</string>
   <string name="upload_dialog_not_authenticated_message">ⵙⵡⴰⵍⴰ ⵖⵔ ⵜⴰⵙⵏⴰ ⵏ ⵢⵉⴼⵔⵙ</string>
   <string name="upload_dialog_not_authenticated_ok">ⵡⴰⵅⵅⴰ</string>
-  <string name="upload_dialog_agree_to_terms">ⴰⵀ!</string>
+  <string name="upload_dialog_agree_to_terms">ⵢⴰⵀ!</string>
   <string name="upload_dialog_decline_terms">ⵓⵀⵓ</string>
   <string name="acra_dialog_ok_toast">ⵜⴰⵏⵎⵎⵉⵔⵜ!</string>
   <string name="about_title">ⵅⴼ</string>
@@ -64,9 +65,10 @@
   <string name="navigation_drawer_close">ⵔⴳⵍ ⴰⴽⴰⴼⵓ</string>
   <string name="tutorial_dismiss">ⵉⵥⵉⵍ!</string>
   <string name="tutorial_dialog_show_again_no">ⵓⵀⵓ</string>
-  <string name="tutorial_dialog_show_again_yes">ⴰⵀ</string>
+  <string name="tutorial_dialog_show_again_yes">ⵢⴰⵀ</string>
   <string name="storage_not_permitted_cancel">ⵙⵔ</string>
   <string name="storage_not_permitted_open_settings">ⵔⵥⵎ ⵜⵉⵙⵖⴰⵍ</string>
+  <string name="action_search">ⵔⵣⵓ</string>
   <string name="favorites">ⵜⵓⴼⵓⵜⵉⵏ ⵉⵏⵓ</string>
   <string name="no_favorites">ⵓⵔ ⵍⵍⵉⵏⵜ ⵜⵓⴼⵓⵜⵉⵏ</string>
   <string name="action_favorite">ⵜⵓⴼⵓⵜ</string>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Şeyx Şamil
+-->
+<resources>
+  <string name="action_login">Daxil ol</string>
+  <string name="action_register">Qeydiyyatdan keç</string>
+  <string name="action_logout">Çıxış</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Yenilə</string>
+  <string name="action_settings">Nizamlamalar</string>
+  <string name="albums_label_no_data">Albom yoxdur</string>
+  <string name="albums_title">Albomlar</string>
+  <string name="album_title">Albom</string>
+  <string name="nearest_dialog_error_location_disabled_close">Bağla</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Facebook-la daxil ol</string>
+  <string name="profile_google_login">Google-la daxil ol</string>
+  <string name="profile_logout">Çıxış</string>
+  <string name="profile_login">Daxil ol</string>
+  <string name="profile_register">Hesab yarat</string>
+  <string name="input_username_hint">E-poçt</string>
+  <string name="input_password_hint">Parol</string>
+  <string name="input_firstname_hint">Adı</string>
+  <string name="input_lastname_hint">Soyadı</string>
+  <string name="login_title">Daxil ol</string>
+  <string name="login_failed">Daxil olma uğursuzdur</string>
+  <string name="wrong_password">Səhv parol</string>
+  <string name="registration_title">Qeydiyyatdan keç</string>
+  <string name="user_already_exists">İstifadəçi adı artıq mövcuddur</string>
+  <string name="upload_dialog_error_connection_retry">Yenidən cəhd edin</string>
+  <string name="upload_dialog_error_unknown_title">Naməlum xəta</string>
+  <string name="tutorial_dialog_show_again_no">Xeyr</string>
+  <string name="tutorial_dialog_show_again_yes">Bəli</string>
+</resources>
