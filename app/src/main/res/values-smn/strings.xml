@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Yupik
+-->
+<resources>
+  <string name="action_login">Čäälit jieijâd siisâ</string>
+  <string name="action_register">Registerist</string>
+  <string name="action_logout">Čäälit jieijâd olgos</string>
+  <string name="action_settings">Asâttâsah</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="nearest_dialog_error_location_disabled_title">Sajadâh ij lah kiävtust</string>
+  <string name="photo_title">Kovetiäđuh</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_logout">Čäälit jieijâd olgos</string>
+  <string name="profile_login">Čäälit jieijâd siisâ</string>
+  <string name="profile_register">Räähti tubdâlduv</string>
+  <string name="input_username_hint">Šleđgâpostâ</string>
+  <string name="input_password_hint">Syelisääni</string>
+  <string name="input_firstname_hint">Ovdânommâ</string>
+  <string name="input_lastname_hint">Suhânommâ</string>
+  <string name="login_title">Čäälit jieijâd siisâ</string>
+  <string name="wrong_password">Feilâlâš syelisääni!</string>
+  <string name="registration_title">Registerist</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_ok">Jooskâ</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="acra_dialog_ok_toast">Takkâ!</string>
+  <string name="about_title">Tiäđuh</string>
+  <string name="version">Versio</string>
+  <string name="contact">Ohtâvuotâtiäđuh</string>
+  <string name="storage_not_permitted_cancel">Jooskâ</string>
+  <string name="action_search">Uuccâm</string>
+  <string name="favorites_label_not_logged_in_button">Čäälit jieijâd siisâ</string>
+  <string name="no_search_result">Iä lah uccâmpuátuseh</string>
+  <string name="album_no_data">Iä lah koveh</string>
+  <string name="show_photo_details">Čääiti kovetiäđuid</string>
+  <string name="show_rephotos">Čääiti kuuvijd</string>
+</resources>
