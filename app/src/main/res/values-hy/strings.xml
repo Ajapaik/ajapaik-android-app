@@ -9,6 +9,7 @@
   <string name="something_went_wrong">Ինչ-որ սխալ է տեղի ունեցել</string>
   <string name="action_albums">Ալբոմներ</string>
   <string name="action_register">Գրանցում</string>
+  <string name="action_logout">Դուրս գալ</string>
   <string name="action_refresh">Թարմացնել</string>
   <string name="action_settings">Կարգավորումներ</string>
   <string name="albums_label_no_data">Ալբոմներ չկան</string>

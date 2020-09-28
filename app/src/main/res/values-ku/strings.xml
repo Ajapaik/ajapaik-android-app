@@ -54,14 +54,14 @@
   <string name="user_already_exists">Navê bikarheneriyê jixwe heye</string>
   <string name="upload_title">Dîsa fotografkirin</string>
   <string name="upload_dialog_error_connection_title">Çewtiya girêdanê</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Wêne nekarî bihatiya barkirin. Dîsa dixwazî bicerribînî?</string>
+  <string name="upload_dialog_error_connection_message">Wêne nekare were barkirin.</string>
   <string name="upload_dialog_error_connection_retry">Dîsa bicerribîne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
   <string name="upload_dialog_error_unknown_title">Çewtiyek nenas</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Wêne nekarî bihatiya barkirin. Dîsa dixwazî bicerribînî?</string>
+  <string name="upload_dialog_error_unknown_message">Wêne nekarî bihatiya barkirin.</string>
   <string name="upload_dialog_error_unknown_retry">Dîsa hewl bide</string>
   <string name="upload_dialog_error_unknown_ok">Betal bike</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Wêne tê barkirin</string>
+  <string name="upload_dialog_process_title">Wêne tê barkirin li piştxanê</string>
   <string name="upload_dialog_process_message">Xêra xwe hinek bisekine...</string>
   <string name="upload_dialog_success_title">Barkirin bi ser ket</string>
   <string name="upload_dialog_success_message">Wêne bi serkeftî hate barkirin!</string>
@@ -101,7 +101,7 @@
   <string name="favorites_label_not_logged_in_text">Ji bo ku favoriyên xwe bibînî xêra xwe têkeve</string>
   <string name="no_search_result">Encamên lêgerînê tine ne</string>
   <string name="album_no_data">Wêne tine</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
+  <string name="start_taking_rephoto">Dest bi girtina jinûvefotokirinê bike</string>
+  <string name="show_photo_details">Detayên wêneyê nîşan bide</string>
   <string name="show_rephotos">Dîsa-fotokirinan bibîne</string>
 </resources>
