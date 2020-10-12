@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Батыр Комдошев
 * Кудайкул
 -->
 <resources>
@@ -93,4 +94,6 @@
   <string name="tutorial_take_picture">Рефото эдип аларга чактырманыҥ топчызына базып беригер эмезе экранныҥ кандый да јеринде сабар тийеризин токтодып салыгар.</string>
   <string name="tutorial_dismiss">Јарт!</string>
   <string name="tutorial_dialog_show_again_title">Катап ла башкарыныкты кӧргӱзип ийер бе?</string>
+  <string name="tutorial_dialog_show_again_no">Јок</string>
+  <string name="tutorial_dialog_show_again_yes">Эйе</string>
 </resources>
