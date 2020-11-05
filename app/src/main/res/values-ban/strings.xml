@@ -36,7 +36,7 @@
   <string name="profile_logout">Medal</string>
   <string name="profile_login">Makarya akun</string>
   <string name="profile_register">Makarya akun anyar</string>
-  <string name="input_username_hint">Surél</string>
+  <string name="input_username_hint">Rerepél</string>
   <string name="input_password_hint">Kruna sereg</string>
   <string name="input_firstname_hint">Wastan Kapertama</string>
   <string name="input_lastname_hint">Wastan ping kalih</string>

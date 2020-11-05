@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Умар
+-->
+<resources>
+  <string name="action_albums">Альбомаш</string>
+  <string name="action_flip">ДӀаерзае</string>
+  <string name="action_login">ЧугӀо</string>
+  <string name="action_register">ДӀаяздар</string>
+  <string name="action_logout">Болх дӀаберзор</string>
+  <string name="action_profile">Профиль</string>
+  <string name="action_refresh">Карлаяккха</string>
+  <string name="action_settings">Параметраш</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Альбомаш яц</string>
+  <string name="albums_title">Альбомаш</string>
+  <string name="album_title">Альбом</string>
+  <string name="nearest_dialog_error_location_disabled_close">ДӀачӀагӀа</string>
+  <string name="camera_title">Камера</string>
+  <string name="profile_title">Профиль</string>
+  <string name="profile_login">ЧугӀо</string>
+  <string name="profile_register">Кхолла аккаунт</string>
+  <string name="input_username_hint">Электронан пошт</string>
+  <string name="input_password_hint">Пароль</string>
+  <string name="input_firstname_hint">ЦӀе</string>
+  <string name="input_lastname_hint">Фамили</string>
+  <string name="login_title">ЧугӀо</string>
+  <string name="registration_title">ДӀаяздар</string>
+  <string name="upload_dialog_error_connection_retry">ЮхагӀорта</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_retry">ЮхагӀорта</string>
+  <string name="upload_dialog_error_unknown_ok">Юхаяккха</string>
+  <string name="upload_dialog_success_ok">ОК</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">ХӀаъ!</string>
+  <string name="upload_dialog_decline_terms">ХӀан-хӀа</string>
+  <string name="about_title">Программех лаьцна</string>
+  <string name="version">Верси</string>
+  <string name="contact">Контакташ</string>
+  <string name="privacy_policy">Къайлаха</string>
+  <string name="navigation_drawer_open">Схьаелла редактор</string>
+  <string name="navigation_drawer_close">ДӀачӀаьгӀна редактор</string>
+  <string name="tutorial_dismiss">Кхетта!</string>
+  <string name="tutorial_dialog_show_again_no">ХӀан-хӀа</string>
+  <string name="tutorial_dialog_show_again_yes">ХӀаъ</string>
+  <string name="storage_not_permitted_cancel">Юхаяккхар</string>
+  <string name="favorites_label_not_logged_in_button">ЧугӀо</string>
+  <string name="album_no_data">Сурт дац</string>
+</resources>
