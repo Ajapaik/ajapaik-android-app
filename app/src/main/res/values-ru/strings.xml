@@ -4,6 +4,7 @@
 * Happy13241
 * MaxBioHazard
 * Movses
+* MuratTheTurkish
 * Roman
 * Shaleych
 * Vlad5250
@@ -48,9 +49,11 @@
   <string name="input_password_hint">Пароль</string>
   <string name="input_firstname_hint">Имя</string>
   <string name="input_lastname_hint">Фамилия</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефото</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+    <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+    <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+    <item quantity="other"/>
   </plurals>
   <string name="profile_no_rephotos">Вы ещё не сделали ни одного рефото</string>
   <string name="login_title">Вход</string>
