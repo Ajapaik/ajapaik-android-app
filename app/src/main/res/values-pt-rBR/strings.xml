@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Eduardo Addad de Oliveira
+* Yeltsinxyz
 -->
 <resources>
   <string name="app_name">Refotografia Ajapaik</string>
   <string name="unit_km">km</string>
   <string name="unit_m">m</string>
-  <string name="processing_image">processando a imagem</string>
+  <string name="processing_image">Processando a imagem</string>
   <string name="please_wait">Aguarde…</string>
   <string name="something_went_wrong">Algo deu errado</string>
-  <string name="notification_channel">Notificações gerais</string>
+  <string name="notification_channel">Notificações Gerais</string>
   <string name="notification_upload_title">Carregar refoto</string>
   <string name="notification_upload_text">Aguarde…</string>
   <string name="action_albums">Álbuns</string>
