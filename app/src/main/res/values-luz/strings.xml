@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Shahriar dehghani
+* Shahryar dehghani
 -->
 <resources>
   <string name="please_wait">لطفا صبر کنیت</string>
@@ -15,6 +16,8 @@
   <string name="nearest_dialog_error_location_disabled_close">بسن</string>
   <string name="nearest_dialog_error_location_disabled_open">تنظیمَل وا کردن</string>
   <string name="camera_title">دوربین</string>
+  <string name="profile_title">پروفایل</string>
+  <string name="profile_facebook_login">بی فیسبوک وار وابید</string>
   <string name="profile_google_login">داخل وابیدن بی حساب گوگل</string>
   <string name="profile_logout">ودر رحتن</string>
   <string name="profile_login">داخل وابیدن</string>
@@ -23,22 +26,39 @@
   <string name="input_password_hint">رمز:</string>
   <string name="input_firstname_hint">نوم</string>
   <string name="input_lastname_hint">فامیل</string>
+  <string name="login_title">داخل وابیدن</string>
+  <string name="login_failed">داخل وابیدن ناموفق</string>
+  <string name="wrong_password">رمز غلطه !</string>
+  <string name="registration_title">ثبت ‌نام</string>
+  <string name="user_already_exists">ای نوم درحال حاضر وجود داره</string>
+  <string name="upload_dialog_error_connection_title">خطا من وصل وابیدن</string>
+  <string name="upload_dialog_error_connection_message">عکس اپلود وانیبو</string>
   <string name="upload_dialog_error_connection_retry">دوباره</string>
   <string name="upload_dialog_error_connection_ok">خووه</string>
   <string name="upload_dialog_error_unknown_title">خطای ناشناخته</string>
   <string name="upload_dialog_error_unknown_retry">دوباره</string>
   <string name="upload_dialog_error_unknown_ok">لغو</string>
+  <string name="upload_dialog_process_message">لطفا صبر کنیت</string>
+  <string name="upload_dialog_success_title">اپلود موفق بی</string>
+  <string name="upload_dialog_success_message">عکس بی موفقیت اپلود وابی</string>
   <string name="upload_dialog_success_ok">باش</string>
+  <string name="upload_dialog_not_authenticated_title">سی اپلود کردن باس داخل وابید</string>
   <string name="upload_dialog_not_authenticated_ok">باش</string>
   <string name="upload_dialog_agree_to_terms">ها</string>
   <string name="upload_dialog_decline_terms">نه</string>
+  <string name="about_title">درباره</string>
   <string name="version">نسخه</string>
+  <string name="privacy_policy">خلوت</string>
+  <string name="tutorial_dismiss">متوجه وابیدم!</string>
   <string name="tutorial_dialog_show_again_no">نه</string>
   <string name="tutorial_dialog_show_again_yes">ها</string>
   <string name="action_search">جُستن</string>
   <string name="favorites">موردعلاقئل مو</string>
+  <string name="no_favorites">موردعلاقه‌ای وجود نداره</string>
+  <string name="action_favorite">موردعلاقه</string>
   <string name="favorites_label_not_logged_in_button">داخل وابیدن</string>
   <string name="favorites_label_not_logged_in_text">لطفا سی دیدن چییل مورد علاقتو داخل وابید</string>
+  <string name="no_search_result">جستن بی نتیجه بی</string>
   <string name="album_no_data">هیچ عکسی نیسی</string>
   <string name="show_photo_details">نشون دادن جزئیات عکس</string>
 </resources>
