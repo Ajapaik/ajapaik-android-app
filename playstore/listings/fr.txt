@@ -8,10 +8,10 @@
 title=Ajapaik rephoto
 short-description=Regardez le point de vue des images historiques et rephotographiez les vues !
 description.paragraph.1=L’application de rephoto Ajapaik affiche des images historiques prises près de vous et offre une manière simple de prendre de nouveaux clichés des mêmes vues.
-description.accuracy.title=Afin de rendre la rephotographie plus commode
-description.accuracy.bullet.1=* vous pouvez modifier la transparence de l’image historique sur le flux de votre appareil photo en glissant le long de l’écran
-description.accuracy.bullet.2=*pincer pour zoomer sur l’image historique
+description.accuracy.title=Afin de rendre la rephotographie plus commode,
+description.accuracy.bullet.1=* vous pouvez modifier la transparence de l’image historique sur le flux de votre appareil photo en glissant le long de l’écran,
+description.accuracy.bullet.2=*pincer pour zoomer sur l’image historique.
 description.paragraph.2=Dans la nouvelle version (2018), vous pouvez aussi naviguer et chercher dans les albums, rechercher une image particulière, voir les rephotos faites par vous-même ou d’autres utilisateurs.
-description.paragraph.3=Maintenant, les brouillons de rephotos peuvent être enregistrés, affichés et téléversés ultérieurement vers Apajaik.ee (par wifi, par exemple).
-description.paragraph.4=Afin de téléverser une rephotographie, vous devez vous authentifier avec un compte Google ou Facebook ou un compte basé sur une adresse de messagerie.
+description.paragraph.3=Maintenant, les brouillons de rephotos peuvent être enregistrés, affichés et téléversés ultérieurement vers Apajaik.ee (via une connexion wifi, par exemple).
+description.paragraph.4=Afin de téléverser une rephotographie, vous devez vous authentifier avec un compte Google ou Facebook ou un compte basé sur une adresse de courriel.
 description.paragraph.5=En téléversant des rephotos dans Ajapaik, vous acceptez de les mettre sous la licence Creative Commons Attribution (CC BY).

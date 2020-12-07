@@ -1,6 +1,7 @@
 # Messages for Greek (Ελληνικά)
 # Exported from translatewiki.net
 # Author: KATRINE1993
+# Author: NikosLikomitros
 # Author: Nikosgranturismogt
 
 title=επαναφωτογραφία Ajapaik
