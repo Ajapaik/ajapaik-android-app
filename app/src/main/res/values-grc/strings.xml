@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Michael5iLVEr
+-->
+<resources>
+  <string name="please_wait">Περίμενε...</string>
+  <string name="something_went_wrong">Κακῶς τι γέγονεν</string>
+  <string name="notification_upload_text">Περίμενε...</string>
+  <string name="action_albums">Λευκώματα</string>
+  <string name="action_login">Συνδεῖσθαι</string>
+  <string name="action_logout">Ἀποσυνδεῖσθαι</string>
+  <string name="action_refresh">Ἀνανεοῦν</string>
+  <string name="action_settings">Ῥυθμίσεις</string>
+  <string name="nearest_title">Φωτογραφίαι ἐγγύς</string>
+  <string name="albums_label_no_data">Οὐδὲν λεύκωμα</string>
+  <string name="albums_title">Λευκώματα</string>
+  <string name="album_title">Λεύκωμα</string>
+  <string name="nearest_dialog_error_location_disabled_close">Κλῄειν</string>
+  <string name="upload_dialog_error_connection_ok">Εἶεν</string>
+  <string name="upload_dialog_error_unknown_ok">Ἀκυροῦν</string>
+  <string name="upload_dialog_process_message">Περίμενε...</string>
+  <string name="upload_dialog_success_ok">Εἶεν</string>
+  <string name="upload_dialog_not_authenticated_ok">Εἶεν</string>
+  <string name="upload_dialog_agree_to_terms">Ναί!</string>
+  <string name="upload_dialog_decline_terms">Οὐχί</string>
+  <string name="acra_dialog_ok_toast">Χάριν σοι ἔχομεν!</string>
+  <string name="about_title">Περί</string>
+  <string name="version">Ἔκδοσις</string>
+  <string name="privacy_policy">Ἴδιον</string>
+  <string name="tutorial_dismiss">Συνίημι!</string>
+  <string name="tutorial_dialog_show_again_no">Οὐχί</string>
+  <string name="tutorial_dialog_show_again_yes">Ναί</string>
+  <string name="storage_not_permitted_cancel">Ἀκυροῦν</string>
+  <string name="album_no_data">Οὐδεμία φωτογραφία</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Girmitya
+-->
+<resources>
+  <string name="please_wait">Meharbaani kar ke wait karo</string>
+  <string name="action_login">Login karo</string>
+  <string name="action_logout">Logout karo</string>
+  <string name="action_refresh">Refresh karo</string>
+  <string name="albums_label_no_data">Koi album nai hai</string>
+  <string name="nearest_dialog_error_location_disabled_close">Band karo</string>
+  <string name="nearest_label_no_data">Nachdiik me koi chaapa nai hai</string>
+  <string name="photo_title">Chaapa ke baare me jaankari</string>
+  <string name="profile_facebook_login">Facebook se log in karo</string>
+  <string name="profile_google_login">Google se log in karo</string>
+  <string name="profile_logout">Logout karo</string>
+  <string name="profile_login">Sign in karo</string>
+  <string name="profile_register">Account banao</string>
+  <string name="input_firstname_hint">Pahila naam</string>
+  <string name="input_lastname_hint">Aakhri naam</string>
+  <plurals name="profile_rephotos">
+    <item quantity="other">ek=&lt;b&gt;1&lt;/b&gt; fir se photo</item>
+  </plurals>
+  <string name="login_title">Login karo</string>
+  <string name="login_failed">Login nai hoe sakaa</string>
+  <string name="wrong_password">Galat password</string>
+  <string name="registration_title">Register karo</string>
+  <string name="user_already_exists">Ii username abhi hai</string>
+  <string name="upload_dialog_error_connection_message">Chaapa ke upload nai kare sakaa hai</string>
+  <string name="upload_dialog_error_connection_retry">Fir se kosis karo</string>
+  <string name="upload_dialog_error_connection_ok">Thik hai</string>
+  <string name="upload_dialog_error_unknown_title">Pata nahi kaisan galti hai</string>
+  <string name="upload_dialog_error_unknown_message">Chaapa ke upload nai kare sakaa hai</string>
+  <string name="upload_dialog_error_unknown_retry">Fir se kosis karo</string>
+  <string name="upload_dialog_error_unknown_ok">Nai karo</string>
+  <string name="upload_dialog_process_message">Meharbaani kar ke sabur karo...</string>
+  <string name="upload_dialog_not_authenticated_title">Upload kare ke khatir log in hoe ke chaahi</string>
+  <string name="upload_dialog_not_authenticated_ok">Thik hai</string>
+  <string name="upload_dialog_agree_to_terms">Haan!</string>
+  <string name="upload_dialog_decline_terms">Nai</string>
+  <string name="acra_dialog_ok_toast">Dhanbaad!</string>
+  <string name="about_title">Baare me</string>
+  <string name="version">Badlao</string>
+  <string name="privacy_policy">ekaant</string>
+  <string name="navigation_drawer_open">Drawer ke kholo</string>
+  <string name="navigation_drawer_close">Drawer ke band karo</string>
+  <string name="tutorial_dismiss">Samajh gaya</string>
+  <string name="tutorial_dialog_show_again_no">Nai</string>
+  <string name="tutorial_dialog_show_again_yes">Haan</string>
+  <string name="action_search">Khojo</string>
+  <string name="favorites_label_not_logged_in_button">Sign in karo</string>
+  <string name="album_no_data">Koi chaapa nai hai</string>
+  <string name="start_taking_rephoto">Chaapa le ke suruu karo</string>
+</resources>
