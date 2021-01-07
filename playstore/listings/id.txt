@@ -1,0 +1,15 @@
+# Messages for Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+# Author: Bagas Chrisara
+# Author: Slaia
+
+title=Foto ulang Ajapaik
+short-description=Cari sudut pandang bagus dalam gambar bersejarah dan ambil foto terbaru dari sudut tsb!
+description.paragraph.1=Aplikasi Ajapaik rephoto menampilkan gambar historis di sekitar Anda dan memungkinkan mengambil foto terbaru dari gambar yang sama.
+description.accuracy.title=Untuk membuat pengambilan foto baru lebih nyaman
+description.accuracy.bullet.1=* Anda bisa mengubah transparensi gambar historis dalam kamera dengan menggeserkan jari di layar
+description.accuracy.bullet.2=* perbesar gambar dengan menggeser dua jari
+description.paragraph.2=Di versi baru (2018) Anda juga bisa menelusuri dan mencari album, mencari gambar tertentu, melihat foto terbaru yang Anda ambil atau pengguna lain.
+description.paragraph.3=Sekarang draft rephoto dapat disimpan, ditelusuri dan kemudian diunggah ke Ajapaik.ee (kalau ada wifi misalnya).
+description.paragraph.4=Agar dapat mengunggah refoto Anda harus login dulu entah dengan akun Google, Facebook atau email.
+description.paragraph.5=Dengan mengunggah foto ke Ajapaik Anda setuju melepaskan foto tsb. di bawah lisensi Creative Commons Attribution (CC BY).
