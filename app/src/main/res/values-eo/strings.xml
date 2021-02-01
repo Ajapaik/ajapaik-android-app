@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Jakub Fabijan
 * Mirin
 * Robin van der Vliet
 -->
@@ -8,6 +9,8 @@
   <string name="processing_image">Traktante bildon</string>
   <string name="please_wait">Bonvolu atendi...</string>
   <string name="something_went_wrong">Io misfunkciis</string>
+  <string name="notification_channel">Ĝeneralaj Sciigoj</string>
+  <string name="notification_upload_text">Bonvolu atendi...</string>
   <string name="action_albums">Albumoj</string>
   <string name="action_flip">Inversigi</string>
   <string name="action_login">Ensaluti</string>
