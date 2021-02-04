@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * A Retired User
+* Moon0319
 * 予弦
 * 神樂坂秀吉
 -->
 <resources>
   <string name="action_logout">簽走</string>
-  <string name="action_settings">設定</string>
+  <string name="action_settings">自定喜好</string>
   <string name="nearest_dialog_error_location_disabled_close">閂</string>
   <string name="profile_logout">簽走</string>
   <string name="profile_login">簽到</string>
