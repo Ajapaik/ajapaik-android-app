@@ -1,6 +1,7 @@
 # Messages for Brazilian Portuguese (português do Brasil)
 # Exported from translatewiki.net
 # Author: Eduardo Addad de Oliveira
+# Author: Eduardoaddad
 
 title=Refotografia Ajapaik
 short-description=Olhe para as posições estratégicas das imagens históricas e refotografe as vistas!

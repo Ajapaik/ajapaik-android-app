@@ -2,7 +2,9 @@
 # Exported from translatewiki.net
 # Author: Revi
 # Author: Ykhwong
+# Author: 그냥기여자
 
+title=Ajapaik rephoto
 description.accuracy.bullet.1=* 화면을 따라 슬라이드함으로써 카메라 스트림의 역사적 이미지의 투명도를 변경할 수 있습니다
 description.accuracy.bullet.2=* 두 손가락을 이용하여 역사적 이미지를 확대하거나 축소하세요
 description.paragraph.2=2018년 새 버전에서 앨범을 보고 검색할 수 있으며 특정한 사진을 검색할 수 있고 당신이나 다른 사람이 한 리포토를 볼 수 있습니다.
