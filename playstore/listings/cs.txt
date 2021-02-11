@@ -1,6 +1,7 @@
 # Messages for Czech (čeština)
 # Exported from translatewiki.net
 # Author: Patriccck
+# Author: Patrik L.
 
 title=Ajapaik refotka
 short-description=Podívejte se na historii obrázku a refotografujte zhlédnutí!
