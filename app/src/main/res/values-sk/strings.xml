@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Nykta 1917
+* Yardom78
 -->
 <resources>
-  <string name="app_name">Ajapaik rephoto</string>
+  <string name="app_name">Ajapaik - vtedy a dnes</string>
   <string name="processing_image">Spracovanie obrázku</string>
   <string name="please_wait">Prosím čakajte...</string>
   <string name="something_went_wrong">Niečo sa pokazilo</string>
   <string name="notification_channel">Všeobecné oznámenia</string>
-  <string name="notification_upload_title">Nahrávanie refotky</string>
+  <string name="notification_upload_title">Nahrávanie fotky</string>
   <string name="notification_upload_text">Prosím čakajte...</string>
   <string name="action_albums">Albumy</string>
   <string name="action_flip">Otočiť</string>
-  <string name="action_login">Prihlásiť sa</string>
-  <string name="action_register">Zaregistrovať sa</string>
-  <string name="action_logout">Odhlásiť sa</string>
+  <string name="action_login">Prihlásenie</string>
+  <string name="action_register">Registrácia</string>
+  <string name="action_logout">Odhlásenie</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Obnoviť</string>
   <string name="action_settings">Nastavenia</string>
