@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Htawmonzel
+* 咽頭べさ
 -->
 <resources>
   <string name="app_name">အဇပေက် ရဳဝှဝ်တဝ်</string>
   <string name="processing_image">ဗီုရုပ် အဃောမကၠောန်ဒၟံင်</string>
   <string name="please_wait">ပဂုန်တုဲ မင်မွဲလစုတ်</string>
   <string name="something_went_wrong">ဗၠေတ်ဒၟံင် မွဲမွဲသာ်</string>
+  <string name="notification_channel">မုလိက်ကဵုသတိသီုဖအိုတ်</string>
+  <string name="notification_upload_title">ပတိုန်ပၠောပ်ဒၟံင် ရေဝ်ဖိုတို</string>
+  <string name="notification_upload_text">သ္ပဂုဏ်တဲု မင်ကဵုမွဲလစုတ်ညိအဴ…</string>
   <string name="action_albums">ထိုင်ကၞပ်အလ်ဗုမ်</string>
   <string name="action_flip">ပံက်</string>
   <string name="action_login">လုပ်လံက်အေန်</string>
@@ -16,6 +20,7 @@
   <string name="action_refresh">ကလေင်မၚုဟ်</string>
   <string name="action_settings">ဖျေဟ်ဒၞာဲ</string>
   <string name="nearest_title">ဗီုရုပ် ဗဒဲါဇကု</string>
+  <string name="finna_title">ဗီုရုပ်ဆိုက်ညန်ဂမၠိုင်(ဖဳနာ)</string>
   <string name="albums_label_no_data">ဗီုရုပ်အလ်ဗုမ် ဟွံမွဲ</string>
   <string name="albums_title">ဗီုရုပ်အလ်ဗုမ်ဂမၠိုင်</string>
   <string name="album_title">ဗီုရုပ်အလ်ဗုမ်</string>
@@ -37,9 +42,8 @@
   <string name="input_password_hint">မအက္ခရ်ဓလုက်</string>
   <string name="input_firstname_hint">ယၟု ပထမ</string>
   <string name="input_lastname_hint">ယၟု လက္ကရဴ</string>
-  <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
+  <plurals name="profile_rephotos">
+    <item quantity="other">မွဲ=&lt;b&gt;1&lt;/b&gt; ရေဝ်ဖိုတို</item>
   </plurals>
   <string name="profile_no_rephotos">မၞး ဟွံဂွံ ကၠောန် ရဳဝှဝ်တဝ် မွဲမွဲ ဏီ</string>
   <string name="login_title">လုပ်လံက်အေန်</string>
@@ -49,14 +53,14 @@
   <string name="user_already_exists">ယၟုမသုင်စောဲဂှ် နွံဒၟံင် တုဲတုဲ</string>
   <string name="upload_title">သ္ပဒတန် ရဳဝှဝ်တဝ်</string>
   <string name="upload_dialog_error_connection_title">ပရေင်ဆက်စၠောအ် ဗၠေတ်ဒၟံင်</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
+  <string name="upload_dialog_error_connection_message">ပတိုန်ပၠောပ် ဗီုရုပ်</string>
   <string name="upload_dialog_error_connection_retry">ကလေင်ကၠောန်</string>
   <string name="upload_dialog_error_connection_ok">ခိုဟ်</string>
   <string name="upload_dialog_error_unknown_title">ဟွံတီ ဗီုလဵုဗၠေတ်</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">ဟွံသၟဟ်အစောံ သွက်ဂွံ ပတိုန်ပၠောပ် ရုပ်ဂှ်၊၊ ဂစာန် မွဲဝါပၠန်ဟာ？</string>
+  <string name="upload_dialog_error_unknown_message">ပတိုန်ပၠောပ် ဗီုရုပ်</string>
   <string name="upload_dialog_error_unknown_retry">ကလေင်ကၠောန်</string>
   <string name="upload_dialog_error_unknown_ok">တးပဲါ</string>
-  <string name="upload_dialog_process_title" fuzzy="true">ပတိုန်ပၠောပ်ဒၟံင် ဗီုရုပ်ဂှ်</string>
+  <string name="upload_dialog_process_title">ပတိုန်ပၠောပ်ဒၟံင် ဗီုရုပ်ဂှ်</string>
   <string name="upload_dialog_process_message">ပဂုန်တုဲ မင်မွဲလစုတ်...</string>
   <string name="upload_dialog_success_title">ပၠောပ်ပတိုန် အံင်ဇၞးပေင်င်</string>
   <string name="upload_dialog_success_message">ဗီုရုပ်ဂှ် ပတိုန်ပၠောပ်ဂွံ ဗွဲမအံင်ဇၞး!</string>
@@ -67,6 +71,9 @@
   <string name="upload_dialog_not_agreed_to_terms">အဲ တုပ်စိုတ် သွက်ဂွံပတိတ် ကလေင်ဗီုရုပ်ဂမၠိုင် အတိုင် သၞောဝ်လာင်ဇြေန် CC BY 4.0၊၊</string>
   <string name="upload_dialog_agree_to_terms">ယွံ!</string>
   <string name="upload_dialog_decline_terms">ဟအှ်ေ</string>
+  <string name="upload_notification_title">ပတိုန်ပၠောပ် ဗီုရုပ်ရေဝ်ဖိုတိုဒးသုင်စောဲအခိၚ်</string>
+  <string name="upload_notification_success">ပတိုန်ပၠောပ် ဗီုရုပ်ရေဝ်ဖိုတိုတုဲအာရ</string>
+  <string name="upload_notification_failure">ပတိုန်ပၠောပ် ဗီုရုပ်လီုလာဲအာ</string>
   <string name="acra_dialog_title">\'အဇပေက် ရဳဝှဝ်တဝ်\' ထကးထောအ်</string>
   <string name="acra_dialog_text">အရာမဗၠေတ် သီုဟွံစၟဳမွဲ မံက်ကၠုင်တုဲ အရာမပတိုန်ဂှ် ဒေါအ်အာ၊၊ ပဂုန်တုဲ ရီုပိုယ် နကဵုမပလံင်ဏာ တင်ဂၞင် မဗၠေတ်ဏအ်၊ မၞးဒးကၠောန်ပ သီုဖအိုတ်ဂှ် ဍဵု ဒၞာဲ OK.</string>
   <string name="acra_dialog_comment_prompt">မၞး သ္ဒးစုတ် ပရူပရာမဗၠေတ် ဗွဲသၟဝ်ဏအ်ရောင် -</string>
@@ -103,7 +110,7 @@
   <string name="favorites_label_not_logged_in_text">ပဂုန်တုဲ လုပ်လံက်အေန် သွက်ဂွံ ဗဵု ရဳဝှဝ်တဝ် မၞး</string>
   <string name="no_search_result">အရာမဂၠာဲဂှ် ဟွံမွဲ</string>
   <string name="album_no_data">ဗီု ဟွံမွဲ</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">တက်ကေတ်ဗီုရုပ်</string>
+  <string name="show_photo_details">ထ္ၜးကဵုဗီုရုပ်နမူနာ</string>
+  <string name="show_rephotos">ဆက်ထ္ၜးရဳဝှဝ်တဝ်</string>
 </resources>
