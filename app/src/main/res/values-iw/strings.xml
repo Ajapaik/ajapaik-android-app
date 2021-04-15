@@ -98,4 +98,5 @@
   <string name="no_search_result">אין תוצאות חיפוש</string>
   <string name="album_no_data">אין תמונות</string>
   <string name="show_photo_details">הצגת פרטי התמונה</string>
+  <string name="show_rephotos">הצגת צילומים חוזרים</string>
 </resources>
