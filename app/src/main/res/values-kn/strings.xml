@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ
+-->
+<resources>
+  <string name="please_wait">ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ…</string>
+  <string name="notification_upload_text">ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ…</string>
+  <string name="action_login">ಲಾಗಿನ್</string>
+  <string name="action_register">ನೊಂದಾಯಿಸಿರಿ</string>
+  <string name="action_logout">ಲಾಗೌಟ್</string>
+  <string name="action_settings">ವ್ಯವಸ್ಥೆಗಳು</string>
+  <string name="profile_logout">ಲಾಗೌಟ್</string>
+  <string name="profile_login">ಸೈನ್ ಇನ್</string>
+  <string name="input_username_hint">ಇ-ಅಂಚೆ</string>
+  <string name="input_password_hint">ಪ್ರವೇಶಪದ</string>
+  <string name="input_firstname_hint">ಮೊದಲ ಹೆಸರು</string>
+  <string name="input_lastname_hint">ಕೊನೆಯ ಹೆಸರು</string>
+  <string name="login_title">ಲಾಗಿನ್</string>
+  <string name="wrong_password">ತಪ್ಪಾದ ಪ್ರವೇಶಪದ!</string>
+  <string name="registration_title">ನೊಂದಾಯಿಸಿರಿ</string>
+  <string name="user_already_exists">ಬಳಕೆದಾರ ಹೆಸರು ಆಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ</string>
+  <string name="upload_dialog_error_connection_retry">ಪುನಃ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="upload_dialog_error_connection_ok">ಸರಿ</string>
+  <string name="upload_dialog_error_unknown_retry">ಪುನಃ ಪ್ರಯತ್ನಿಸಿ</string>
+  <string name="upload_dialog_error_unknown_ok">ರದ್ದುಮಾಡಿ</string>
+  <string name="upload_dialog_process_message">ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ…</string>
+  <string name="upload_dialog_success_ok">ಸರಿ</string>
+  <string name="upload_dialog_not_authenticated_ok">ಸರಿ</string>
+  <string name="upload_dialog_agree_to_terms">ಹೌದು!</string>
+  <string name="upload_dialog_decline_terms">ಇಲ್ಲ</string>
+  <string name="acra_dialog_ok_toast">ಧನ್ಯವಾದಗಳು!</string>
+  <string name="about_title">ಕುರಿತು</string>
+  <string name="version">ಆವೃತ್ತಿ</string>
+  <string name="contact">ಸಂಪರ್ಕ</string>
+  <string name="privacy_policy">ಗೋಪ್ಯತೆ</string>
+  <string name="tutorial_dialog_show_again_no">ಇಲ್ಲ</string>
+  <string name="tutorial_dialog_show_again_yes">ಹೌದು</string>
+  <string name="storage_not_permitted_cancel">ರದ್ದುಮಾಡಿ</string>
+  <string name="favorites_label_not_logged_in_button">ಸೈನ್ ಇನ್</string>
+</resources>
