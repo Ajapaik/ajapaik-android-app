@@ -9,10 +9,10 @@
   <string name="action_register">ДӀаяздар</string>
   <string name="action_logout">Болх дӀаберзор</string>
   <string name="action_profile">Профиль</string>
-  <string name="action_refresh">Карлаяккха</string>
+  <string name="action_refresh">Карлайаккха</string>
   <string name="action_settings">Параметраш</string>
   <string name="finna1918_title">Signe Brander</string>
-  <string name="albums_label_no_data">Альбомаш яц</string>
+  <string name="albums_label_no_data">Альбомаш йац</string>
   <string name="albums_title">Альбомаш</string>
   <string name="album_title">Альбом</string>
   <string name="nearest_dialog_error_location_disabled_close">ДӀачӀагӀа</string>
