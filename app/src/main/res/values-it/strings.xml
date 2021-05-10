@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Ajeje Brazorf
 * Beta16
 * SilviaF
 -->
@@ -40,17 +41,22 @@
   <string name="upload_dialog_error_unknown_message">Impossibile caricare la foto.</string>
   <string name="upload_dialog_error_unknown_retry">Riprova</string>
   <string name="upload_dialog_error_unknown_ok">Annulla</string>
+  <string name="upload_dialog_process_message">Attendere prego...</string>
   <string name="upload_dialog_success_title">Caricamento riuscito</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Sì!</string>
   <string name="upload_dialog_decline_terms">No</string>
   <string name="acra_dialog_ok_toast">Grazie!</string>
+  <string name="about_title">Informazioni</string>
   <string name="version">Versione</string>
+  <string name="contact">Contatti</string>
+  <string name="privacy_policy">Privacy</string>
   <string name="tutorial_dismiss">Capito!</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sì</string>
   <string name="storage_not_permitted_cancel">Annulla</string>
+  <string name="action_search">Ricerca</string>
   <string name="favorites_label_not_logged_in_button">Entra</string>
   <string name="album_no_data">Nessuna foto</string>
   <string name="start_taking_rephoto">Inizia a fare una refoto</string>

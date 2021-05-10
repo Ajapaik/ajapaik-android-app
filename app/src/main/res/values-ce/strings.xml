@@ -6,7 +6,7 @@
   <string name="action_albums">Альбомаш</string>
   <string name="action_flip">ДӀаерзае</string>
   <string name="action_login">ЧугӀо</string>
-  <string name="action_register">ДӀаяздар</string>
+  <string name="action_register">ДӀайаздар</string>
   <string name="action_logout">Болх дӀаберзор</string>
   <string name="action_profile">Профиль</string>
   <string name="action_refresh">Карлайаккха</string>
@@ -25,11 +25,11 @@
   <string name="input_firstname_hint">ЦӀе</string>
   <string name="input_lastname_hint">Фамили</string>
   <string name="login_title">ЧугӀо</string>
-  <string name="registration_title">ДӀаяздар</string>
-  <string name="upload_dialog_error_connection_retry">ЮхагӀорта</string>
+  <string name="registration_title">ДӀайаздар</string>
+  <string name="upload_dialog_error_connection_retry">ЙухагӀорта</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
-  <string name="upload_dialog_error_unknown_retry">ЮхагӀорта</string>
-  <string name="upload_dialog_error_unknown_ok">Юхаяккха</string>
+  <string name="upload_dialog_error_unknown_retry">ЙухагӀорта</string>
+  <string name="upload_dialog_error_unknown_ok">Йухайаккха</string>
   <string name="upload_dialog_success_ok">ОК</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">ХӀаъ!</string>
@@ -43,7 +43,7 @@
   <string name="tutorial_dismiss">Кхетта!</string>
   <string name="tutorial_dialog_show_again_no">ХӀан-хӀа</string>
   <string name="tutorial_dialog_show_again_yes">ХӀаъ</string>
-  <string name="storage_not_permitted_cancel">Юхаяккхар</string>
+  <string name="storage_not_permitted_cancel">Йухайаккхар</string>
   <string name="favorites_label_not_logged_in_button">ЧугӀо</string>
   <string name="album_no_data">Сурт дац</string>
 </resources>
