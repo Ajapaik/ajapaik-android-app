@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Abdulq
+* ArticleEditor404
 -->
 <resources>
+  <string name="app_name">Ajapaik ریپوٹو</string>
+  <string name="processing_image">پروسیسنگ کی تصویر</string>
   <string name="please_wait">براہ مہربانی کچھ دیر انتظار کریں۔۔۔</string>
   <string name="something_went_wrong">کچھ غلط ہو گیا ہے</string>
+  <string name="notification_channel">عمومی اطلاعات</string>
+  <string name="notification_upload_title">ریپوٹو اپ لوڈ ہو رہا ہے</string>
+  <string name="notification_upload_text">برائے مہربانی انتظار کریں…</string>
   <string name="action_albums">البم</string>
+  <string name="action_flip">پلٹائیں</string>
+  <string name="action_login">لاگ ان کریں</string>
   <string name="action_register">اندراج کریں</string>
   <string name="action_logout">کھاتہ سے باہر آئیں (لاگ آؤٹ)</string>
   <string name="action_profile">جایزہ</string>
   <string name="action_refresh">ریفریش کریں</string>
   <string name="action_settings">ترتیبات</string>
+  <string name="nearest_title">قریب کی تصاویر</string>
   <string name="albums_label_no_data">کوئی البم نہیں</string>
   <string name="albums_title">کافی البم</string>
   <string name="nearest_dialog_error_location_disabled_close">بند کریں</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Joquliina
 * Nike
 * Pyscowicz
 * Zache
@@ -93,7 +94,7 @@
   <string name="settings_show_map_by_default">Näytä kartta vakiona</string>
   <string name="settings_agree_to_license_terms">Hyväksyn valokuvieni julkaisemisen Ajapaik.ee:ssä CC BY 4.0 -lisenssillä.</string>
   <string name="tutorial_hide_show_flip">Vanhan kuvan saa pois näkyviltä ja takaisin klikkaamalla ruutua.\nKuvan saa peilikuvaksi oikean ylänurkan käännä-kuvakkeella.</string>
-  <string name="tutorial_opacity_zoom">Sormen liuttaminen kuvan päällä säätää kuvan läpinäkyvyyttä.\nKahdella sormella nipistäminen lähentää tai loitontaa kuvaa.</string>
+  <string name="tutorial_opacity_zoom">Sormen liu\'uttaminen kuvan päällä säätää kuvan läpinäkyvyyttä.\nKahdella sormella nipistäminen lähentää tai loitontaa kuvaa.</string>
   <string name="tutorial_take_picture">Laukaisimen painaminen tai pitkä klikkaus ottaa valokuvan.</string>
   <string name="tutorial_dismiss">Selvä!</string>
   <string name="tutorial_dialog_show_again_title">Näytä opastus uudestaan?</string>
