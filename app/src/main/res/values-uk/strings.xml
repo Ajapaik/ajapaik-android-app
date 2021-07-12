@@ -63,7 +63,7 @@
   <string name="upload_dialog_error_unknown_title">Невідома помилка</string>
   <string name="upload_dialog_error_unknown_message">Неможливо завантажити світлину</string>
   <string name="upload_dialog_error_unknown_retry">Повторити</string>
-  <string name="upload_dialog_error_unknown_ok">Відмінити</string>
+  <string name="upload_dialog_error_unknown_ok">Скасувати</string>
   <string name="upload_dialog_process_title">Завантаження фотографії у фоновому режимі</string>
   <string name="upload_dialog_process_message">Будь ласка, зачекайте…</string>
   <string name="upload_dialog_success_title">Завантаження успішне</string>

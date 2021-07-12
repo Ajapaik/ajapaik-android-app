@@ -1,9 +1,10 @@
 # Messages for Ukrainian (українська)
 # Exported from translatewiki.net
 # Author: Base
+# Author: DDPAT
 # Author: Dimon2711
 
-title=Ajapaik rephoto
+title=Фотографія Ajapaik
 short-description=Перегляньте та поділіться враженнями щодо історичних образів і фоторепродукцій!
 description.paragraph.1=Додаток Ajapaik rephoto показує історичні знімки, зроблені поруч із вами, і пропонує простий спосіб зробити фоторепродукцію (перезнімок) із того ж місця.
 description.accuracy.title=Щоб зробити фоторепродукції зручнішими

@@ -5,6 +5,7 @@
 -->
 <resources>
   <string name="please_wait">Vyerdi...</string>
+  <string name="notification_channel">Almoliih almottâsah</string>
   <string name="notification_upload_text">Vyerdi...</string>
   <string name="action_login">Čäälit jieijâd siisâ</string>
   <string name="action_register">Registerist</string>
