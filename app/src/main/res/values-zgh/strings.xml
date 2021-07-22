@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Aslmad mohamed belarhzali
+* Brahim-essaidi
 * Hakim1bal
 -->
 <resources>
-  <string name="please_wait">ⴰⵎⵓⵔ ⵏⵏⴽ ⵙⴰⴳⵎ...</string>
+  <string name="please_wait">ⵎⴽ ⵜⵓⴼⵉⴷ ⵙⴰⴳⴳⵯⵎ...</string>
   <string name="something_went_wrong">ⵉⵍⵍⴰ ⴽⵔⴰ ⵏ ⵓⵎⵓⴽⵔⵉⵙ</string>
   <string name="action_albums">ⴰⵍⴱⵓⵎⵏ</string>
   <string name="action_flip">ⵓⵖⵓⵍ</string>
   <string name="action_login">ⴽⵛⵎ</string>
   <string name="action_register">ⵣⵎⵎⴻⵎ</string>
   <string name="action_logout">ⴼⴼⵖ</string>
-  <string name="action_profile">ⴰⴼⵔⵉⵙ</string>
+  <string name="action_profile">ⵉⴼⵔⵙ</string>
   <string name="action_refresh">ⵙⵙⵜⵔⴻⵔ</string>
   <string name="action_settings">ⵜⵉⵙⵖⴰⵍ</string>
   <string name="nearest_title">ⵜⵉⵡⵍⴰⴼⵉⵏ ⵏ ⵓⵏⵎⵉⵍⴰ</string>
@@ -20,35 +21,35 @@
   <string name="album_title">ⴰⵍⴱⵓⵎ</string>
   <string name="nearest_dialog_error_location_disabled_title">ⴰⴷⵖⴰⵔ ⴰⴷ ⵉⵜⵜⵓⵙⵏⵙⴰ</string>
   <string name="nearest_dialog_error_location_disabled_close">ⵔⴳⵍ</string>
-  <string name="nearest_dialog_error_location_disabled_open">ⵔⵥⵎ ⵜⵉⵙⵖⴰⵍ</string>
+  <string name="nearest_dialog_error_location_disabled_open">ⵕⵥⵎ ⵜⵉⵙⵖⴰⵍ</string>
   <string name="nearest_label_no_data">ⵓⵔ ⵍⵍⵉⵏⵜ ⵜⵡⵍⴰⴼⵉⵏ ⵏ ⵓⵏⵎⵉⵍⴰ</string>
-  <string name="nearest_label_no_data_button">ⵥⵔ ⴰⵍⴱⵓⵎⵏ ⴰⴽⴽ ⴼⴰⵔ ⴰⴷ ⵜⵣⵣⵔⵉⴷ ⵜⵉⵡⵍⴰⴼⵉⵏ ⴰⴽⴽ</string>
+  <string name="nearest_label_no_data_button">ⵥⵕ ⴰⵍⴱⵓⵎⵏ ⴼⴰⴷ ⴰⴷ ⵜⵣⵣⵔⵉⴷ ⵜⵉⵡⵍⴰⴼⵉⵏ ⴰⴽⴽⵯ</string>
   <string name="photo_title">ⵉⵛⵎⵓⵎⵎⴰ ⵏ ⵜⵡⵍⴰⴼⵜ</string>
-  <string name="camera_title">ⴰⴽⴰⵎⵉⵔⴰ</string>
+  <string name="camera_title">ⵜⴰⴽⴰⵎⵉⵕⴰⵜ</string>
   <string name="profile_title">ⵉⴼⵔⵙ</string>
   <string name="profile_facebook_login">ⴽⵛⵎ ⵙ ⵓⵙⵙⵎⵔⵙ ⵏ ⴼⵉⵙⴱⵓⴽ</string>
   <string name="profile_google_login">ⴽⵛⵎ ⵙ ⵓⵙⵙⵎⵔⵙ ⵏ ⴳⵓⴳⵍ</string>
   <string name="profile_logout">ⴼⴼⵖ</string>
   <string name="profile_login">ⴽⵛⵎ</string>
-  <string name="profile_register">ⵙⴽⵔ ⴰⵎⵉⴹⴰⵏ</string>
+  <string name="profile_register">ⵙⵏⴼⵍⵓⵍ ⴰⵎⵉⴹⴰⵏ</string>
   <string name="input_username_hint">ⵉⵎⴰⵢⵍ</string>
   <string name="input_password_hint">ⵜⴰⴳⵓⵔⵉ ⵏ ⵓⵣⵔⴰⵢ</string>
   <string name="input_firstname_hint">ⵉⵙⵎ</string>
-  <string name="input_lastname_hint">ⵉⵏⴹⴼⵔ ⵉⵙⵎ</string>
+  <string name="input_lastname_hint">ⵉⵙⵎ ⵏ ⵜⴰⵡⵊⴰ</string>
   <string name="login_title">ⴽⵛⵎ</string>
   <string name="login_failed">ⵓⵔ ⵉⵎⵓⵔⵉⵙ ⵓⴽⵛⵛⵓⵎ</string>
   <string name="wrong_password">ⵜⵣⴳⵍ ⵜⴳⵓⵔⵉ ⵏ ⵓⵣⵔⴰⵢ!</string>
   <string name="registration_title">ⵣⵎⵎⴻⵎ</string>
-  <string name="user_already_exists">ⵉⵍⵍⴰ ⵢⴰⴷ ⵢⵉⵙⵎ ⴰⴷ ⵏ ⵏⵙⵙⵎⵔⵙ</string>
+  <string name="user_already_exists">ⵉⵍⵍⴰ ⵢⴰⴷ ⵢⵉⵙⵎ ⴰⴷ ⵏ ⵓⵏⵙⵙⵎⵔⵙ</string>
   <string name="upload_title">ⵙⵙⵍⴽⵏ ⵜⴰⵡⵍⴰⴼⵜ ⵜⴰⵎⴰⵢⵏⵓⵜ</string>
   <string name="upload_dialog_error_connection_title">ⵉⵣⴳⵍ ⵓⵣⴷⴰⵢ</string>
   <string name="upload_dialog_error_connection_retry">ⴰⵔⵎ ⴷⴰⵖ</string>
   <string name="upload_dialog_error_connection_ok">ⵡⴰⵅⵅⴰ</string>
-  <string name="upload_dialog_error_unknown_title">ⵜⴰⵣⴳⴰⵍⵜ ⵓⵔ ⵉⵜⵜⵡⴰⵙⵙⵏⴻⵏ</string>
+  <string name="upload_dialog_error_unknown_title">ⵜⴰⵣⴳⴰⵍⵜ ⵓⵔ ⵉⵜⵜⵢⴰⵡⵙⵙⴰⵏⵏ</string>
   <string name="upload_dialog_error_unknown_retry">ⴰⵔⵎ ⴷⴰⵖ</string>
   <string name="upload_dialog_error_unknown_ok">ⵙⵔ</string>
-  <string name="upload_dialog_process_title">ⴰⵙⴽⵜⵔ ⵜⴰⵡⵍⴰⴼⵜ ⴳ ⵜⵖⵔⴷⵉⵏ ⵏ ⵓⵙⵓⵍⴼ</string>
-  <string name="upload_dialog_process_message">ⴰⵎⵓⵔ ⵏⵏⴽ ⵙⴰⴳⵎ...</string>
+  <string name="upload_dialog_process_title">ⴰⵙⴽⵜⵔ ⵏ ⵜⵡⵍⴰⴼⵜ ⴳ ⵜⵖⵔⴷⵉⵏ ⵏ ⵓⵙⵓⵍⴼ</string>
+  <string name="upload_dialog_process_message">ⵎⴽ ⵜⵓⴼⵉⴷ ⵙⴰⴳⴳⵯⵎ...</string>
   <string name="upload_dialog_success_title">ⵉⵎⵓⵔⵙ ⵓⵙⴽⵜⵔ</string>
   <string name="upload_dialog_success_message">ⵜⴻⵜⵜⵓⵙⴽⵜⵔ ⵜⵡⵍⴰⴼⵜ ⵙ ⵓⵎⵓⵔⵙ!</string>
   <string name="upload_dialog_success_ok">ⵡⴰⵅⵅⴰ</string>
@@ -59,21 +60,21 @@
   <string name="upload_dialog_decline_terms">ⵓⵀⵓ</string>
   <string name="acra_dialog_ok_toast">ⵜⴰⵏⵎⵎⵉⵔⵜ!</string>
   <string name="about_title">ⵖⴼ</string>
-  <string name="version">ⵜⵓⵏⵖⵉⵍⵜ</string>
+  <string name="version">ⵜⴰⵍⵇⵇⵎⵜ</string>
   <string name="contact">ⴰⵏⵢⴰⵍⴽⴰⵎ</string>
-  <string name="navigation_drawer_open">ⵔⵥⵎ ⴰⴽⴰⴼⵓ</string>
+  <string name="navigation_drawer_open">ⵕⵥⵎ ⴰⴽⴰⴼⵓ</string>
   <string name="navigation_drawer_close">ⵔⴳⵍ ⴰⴽⴰⴼⵓ</string>
   <string name="tutorial_dismiss">ⵉⵥⵉⵍ!</string>
   <string name="tutorial_dialog_show_again_no">ⵓⵀⵓ</string>
   <string name="tutorial_dialog_show_again_yes">ⵢⴰⵀ</string>
   <string name="storage_not_permitted_cancel">ⵙⵔ</string>
-  <string name="storage_not_permitted_open_settings">ⵔⵥⵎ ⵜⵉⵙⵖⴰⵍ</string>
+  <string name="storage_not_permitted_open_settings">ⵕⵥⵎ ⵜⵉⵙⵖⴰⵍ</string>
   <string name="action_search">ⵔⵣⵓ</string>
   <string name="favorites">ⵜⵓⴼⵓⵜⵉⵏ ⵉⵏⵓ</string>
   <string name="no_favorites">ⵓⵔ ⵍⵍⵉⵏⵜ ⵜⵓⴼⵓⵜⵉⵏ</string>
   <string name="action_favorite">ⵜⵓⴼⵓⵜ</string>
   <string name="favorites_label_not_logged_in_button">ⴽⵛⵎ</string>
-  <string name="favorites_label_not_logged_in_text">ⴰⵎⵓⵔ ⵏⵏⴽ ⴽⵛⵎ ⴼⴰⴷ ⴰⴷ ⵜⵥⵔⴷ ⵜⵓⴼⵓⵜⵉⵏ ⵏⵏⴽ/ⵏⵏⵎ</string>
+  <string name="favorites_label_not_logged_in_text">ⵎⴽ ⵜⵓⴼⵉⴷ ⴽⵛⵎ ⴰⴼⴰⴷ ⴰⴷ ⵜⵥⵕⴷ ⵜⵓⴼⵓⵜⵉⵏ ⵏⵏⴽ/ⵏⵏⵎ</string>
   <string name="no_search_result">ⵓⵔ ⵜⵍⵍⵉ ⴰⵡⴷ ⵢⴰⵜ ⵜⵢⴰⴼⵓⵜ ⵏ ⵓⵔⵣⵣⵓ</string>
   <string name="album_no_data">ⵓⵔ ⵍⵍⵉⵏⵜ ⵜⵡⵍⴰⴼⵉⵏ</string>
 </resources>
