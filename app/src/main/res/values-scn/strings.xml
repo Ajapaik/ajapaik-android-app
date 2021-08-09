@@ -9,6 +9,7 @@
   <string name="action_logout">Nesci</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_close">Chiudi</string>
   <string name="camera_title">futucàmira</string>
   <string name="profile_facebook_login">Trasi cu Facebook</string>
   <string name="profile_google_login">Trasi cu Google</string>
