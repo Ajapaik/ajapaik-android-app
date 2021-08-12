@@ -2,9 +2,12 @@
 <!-- Authors:
 * DDPAT
 * Vlnt
+* Ата
 -->
 <resources>
   <string name="app_name">Рефото Ajapaik</string>
+  <string name="unit_km">км</string>
+  <string name="unit_m">м</string>
   <string name="processing_image">Обробка зображення</string>
   <string name="please_wait">Будь ласка, зачекайте...</string>
   <string name="something_went_wrong">Щось пішло не так</string>
