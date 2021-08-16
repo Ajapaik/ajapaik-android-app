@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Chidananda Kampa
 * Vishwanatha Badikana
 -->
 <resources>
   <string name="please_wait">ದಯಮಲ್ತ್ ಕಾಪುಲೆ</string>
+  <string name="notification_upload_text">ದಯಮಲ್ತ್ ಕಾಪುಲೆ...</string>
   <string name="action_albums">ಆಲ್ಬಮ್‍ಲು</string>
   <string name="action_flip">ಮೀಟ್‍ಲೆ</string>
   <string name="action_login">ಲಾಗಿನ್ ಆಲೆ</string>
@@ -29,7 +31,7 @@
   <string name="profile_facebook_login">ಅಬಿಪ್ರಾಯೊದೊಟ್ಟುಗು ಸಹಿ ಪಾಡ್ಲೆ</string>
   <string name="profile_google_login">ಗೂಗುಲ್ದೊಟ್ಟುಗು ಸಹಿ</string>
   <string name="profile_logout">ಪಿದಯಿ ಪೋಲೆ</string>
-  <string name="profile_login">ಸಹಿ ಮಲ್ಪುಲೆ</string>
+  <string name="profile_login">ಸೈನ್ ಇನ್</string>
   <string name="profile_register">ಪೊಸ ಕಾತೆ ಸುರು ಮಲ್ಪುಲೆ</string>
   <string name="input_username_hint">ಇ-ಮೈಲ್</string>
   <string name="input_password_hint">ಪ್ರವೇಸೊಪದೊ</string>
@@ -51,11 +53,11 @@
   <string name="upload_dialog_error_connection_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
   <string name="upload_dialog_error_connection_ok">ಅವು</string>
   <string name="upload_dialog_error_unknown_title">ಗೊತ್ತಿಜ್ಜಂದಿನ ದೋಸೊ</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿದ್ದಿ.  ನಾನೊರ ಪ್ರಯತ್ನಿಸಲೆ</string>
+  <string name="upload_dialog_error_unknown_message">ಪಟೊನು ಅಪ್ಲೋಡ್ ಮಲ್ಪೆರೆ ಆವೊಂದಿಜ್ಜಿ.</string>
   <string name="upload_dialog_error_unknown_retry">ನನೊರ ಪ್ರಯತ್ನ ಮಾನ್ಪುಲೇ</string>
   <string name="upload_dialog_error_unknown_ok">ದೆಪ್ಪುಲೆ</string>
-  <string name="upload_dialog_process_title" fuzzy="true">ಪಟೊನು ಅಪ್ಲೋಡು ಮಲ್ಪುಂಡು</string>
-  <string name="upload_dialog_process_message">ದಯಮಲ್ತ್ ಕಾಪುಲೆ</string>
+  <string name="upload_dialog_process_title">ಪಟೊ ಅಪ್ಲೋಡು ಅವೊಂದುಂಡ್</string>
+  <string name="upload_dialog_process_message">ದಯಮಲ್ತ್ ಕಾಪುಲೆ...</string>
   <string name="upload_dialog_success_title">ಅಪ್ಲೋಡ್ ಸರಿಯಾತ್ಂಡ್</string>
   <string name="upload_dialog_success_message">ಪಟೊ ಅಪ್ಲೋಡ್ ಸರಿಯಾದ್ ಆತ್ಂಡ್!</string>
   <string name="upload_dialog_success_ok">ಅವು</string>
@@ -63,6 +65,7 @@
   <string name="upload_dialog_not_authenticated_message">ವಿವರೊ ಪುಟೊನು ಪಿರ ಕಡಪುಡ್ಲೆ</string>
   <string name="upload_dialog_not_authenticated_ok">ಅವು</string>
   <string name="upload_dialog_not_agreed_to_terms">ಸಿಸಿ ಬಿವೈ 4.0 ಪರವಾನಗಿದ ಅಡಿಟ್ ಪಟೊಲೆನ್ ಪಿರ ಪ್ರಕಟಿಸಯೆರ ಯಾನ್ ಒಪ್ಪುದೆ.</string>
-  <string name="upload_dialog_agree_to_terms">ಅಂದ್</string>
+  <string name="upload_dialog_agree_to_terms">ಅಂದ್!</string>
   <string name="upload_dialog_decline_terms">ಅತ್ತ್</string>
+  <string name="acra_dialog_ok_toast">ಸೊಲ್ಮೆಲೋ!</string>
 </resources>
