@@ -3,10 +3,13 @@
 * Cgmbo
 -->
 <resources>
+  <string name="app_name">Rephoto Ajapaik</string>
+  <string name="processing_image">Kuyidika kifwanisu</string>
   <string name="please_wait">Vingila fioti</string>
   <string name="something_went_wrong">Kima mosi me kwendila ve mbote</string>
   <string name="notification_channel">Bansangu Yonso</string>
   <string name="notification_upload_title">Kutula rephoto</string>
+  <string name="notification_upload_text">Vingila fioti...</string>
   <string name="action_albums">Ba-album</string>
   <string name="action_flip">Balusa</string>
   <string name="action_login">Kota</string>
@@ -89,6 +92,7 @@
   <string name="tutorial_dialog_show_again_no">Ve</string>
   <string name="tutorial_dialog_show_again_yes">Ee</string>
   <string name="no_rephotos">Rephoto kele ve</string>
+  <string name="storage_not_permitted_title">Nswa ya kubumba kele ve</string>
   <string name="storage_not_permitted_cancel">Katula</string>
   <string name="storage_not_permitted_open_settings">Kangula parametre</string>
   <string name="my_rephotos">Ba rephoto na mono</string>
