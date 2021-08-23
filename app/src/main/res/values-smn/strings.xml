@@ -26,6 +26,7 @@
   <string name="wrong_password">Feilâlâš syelisääni!</string>
   <string name="registration_title">Registerist</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Tubdâmettum feilâ</string>
   <string name="upload_dialog_error_unknown_ok">Jooskâ</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>

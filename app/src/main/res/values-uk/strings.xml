@@ -82,7 +82,7 @@
   <string name="upload_notification_success">Рефото успішно завантажено!</string>
   <string name="upload_notification_failure">Не вдалося завантажити рефото</string>
   <string name="acra_dialog_title">Додаток \'Ajapaik\' впало</string>
-  <string name="acra_dialog_text">Непередбачувана помилка при спробі зупинити додаток. Будь-ласка, допоможіть нам виправити її, відправивши інформацію про помилку; усе, що потрібно зробити - натиснути на \"Готово\".</string>
+  <string name="acra_dialog_text">Непередбачувана помилка при спробі зупинити додаток. Будь-ласка, допоможіть нам виправити її, відправивши інформацію про помилку; усе, що потрібно зробити — натиснути на «Готово».</string>
   <string name="acra_dialog_comment_prompt">Ви можете додати свої коментарі про проблему нижче:</string>
   <string name="acra_dialog_ok_toast">Дякую!</string>
   <string name="about_title">Про програму</string>
