@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Natalilake
 * Papuass
 * Silraks
 -->
@@ -11,6 +12,7 @@
   <string name="please_wait">Lūdzu uzgaidiet…</string>
   <string name="something_went_wrong">Notika kļūda</string>
   <string name="notification_channel">Vispārīgi paziņojumi</string>
+  <string name="notification_upload_text">Lūdzu, uzgaidiet...</string>
   <string name="action_albums">Albumi</string>
   <string name="action_flip">Apvērst</string>
   <string name="action_login">Autorizēties</string>
