@@ -7,6 +7,7 @@
   <string name="action_login">Trasi</string>
   <string name="action_register">Riggistra</string>
   <string name="action_logout">Nesci</string>
+  <string name="action_settings">Mpustazzioni</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_close">Chiudi</string>
