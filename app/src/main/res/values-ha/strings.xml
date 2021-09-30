@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Gwanki
+-->
+<resources>
+  <string name="app_name">Rahoton Ajapaik</string>
+  <string name="processing_image">Ana lada hoto</string>
+  <string name="please_wait">Ɗan jira</string>
+  <string name="something_went_wrong">Akwai wata matsala</string>
+  <string name="notification_channel">Sanarwar bai ɗaya</string>
+  <string name="notification_upload_title">Sake Ɗora hoto</string>
+  <string name="notification_upload_text">Ɗan jira</string>
+  <string name="action_albums">Kundin hoto</string>
+  <string name="action_flip">Yanki</string>
+  <string name="action_login">Shiga</string>
+  <string name="action_register">Rijista</string>
+  <string name="action_logout">Fita</string>
+  <string name="action_profile">Farfajiya</string>
+  <string name="action_refresh">Wattsakar</string>
+  <string name="action_settings">Saituttuka</string>
+  <string name="nearest_title">Hoton kusa</string>
+  <string name="finna_title">Hoton kusa (Finna)</string>
+  <string name="albums_label_no_data">Babu kundaye</string>
+  <string name="albums_title">Kundaye</string>
+  <string name="album_title">Kundi</string>
+  <string name="nearest_dialog_error_location_disabled_title">Wajen ya ɓata</string>
+  <string name="nearest_dialog_error_location_disabled_message">Bazai yiwu a samo wajen ba a yanzu. Kana so ka buɗe shi?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Rufe</string>
+  <string name="nearest_dialog_error_location_disabled_open">Buɗe Saituttuka</string>
+  <string name="nearest_label_no_data">Babu hoto a kusa</string>
+  <string name="nearest_label_no_data_button">Duba Kundaye domin buɗe dukkan hotunan</string>
+  <string name="photo_title">Bayanin Hoto</string>
+  <string name="camera_title">Kyamara</string>
+  <string name="profile_title">Farfajiya</string>
+  <string name="profile_facebook_login">Shiga da Facebook</string>
+  <string name="profile_google_login">Shiga da Google</string>
+  <string name="profile_logout">Fita</string>
+  <string name="profile_login">Shiga</string>
+  <string name="profile_register">Ƙirƙiri Asusu</string>
+  <string name="input_username_hint">Imail</string>
+  <string name="input_firstname_hint">Sunan Farko</string>
+  <string name="input_lastname_hint">Sunan Ƙarshe</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; rephoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; rephotos</item>
+  </plurals>
+  <string name="profile_no_rephotos">Har yanzu bakayi rephotos ba</string>
+  <string name="login_title">Shiga</string>
+  <string name="login_failed">Ba ayi nasarar shiga ba</string>
+  <string name="wrong_password">Anyi kuskure a Kalmar Sirri</string>
+  <string name="registration_title">Rijista</string>
+  <string name="user_already_exists">Kwai wannan sunan</string>
+  <string name="upload_title">Tabbatar da Rephoto</string>
+  <string name="upload_dialog_error_connection_title">Kuskuren mahaɗa</string>
+  <string name="upload_dialog_error_unknown_message">Hoto bazai ɗoru ba.</string>
+  <string name="upload_dialog_error_unknown_retry">Sake jarrabawa</string>
+  <string name="upload_dialog_error_unknown_ok">Yanke</string>
+  <string name="upload_dialog_process_title">Ɗora hoto a ta baya</string>
+  <string name="upload_dialog_process_message">Ɗan jira...</string>
+  <string name="upload_dialog_success_title">Anyi nasarar Ɗorawa</string>
+  <string name="upload_dialog_success_message">Anyi nasarar ɗora hoton!</string>
+  <string name="upload_dialog_success_ok">Yayi</string>
+  <string name="upload_dialog_not_authenticated_title">Dole ka shiga domin ɗorawa</string>
+  <string name="upload_dialog_not_authenticated_message">Koma ga shafin Farfajiya</string>
+  <string name="upload_dialog_not_authenticated_ok">Yayi</string>
+  <string name="upload_dialog_not_agreed_to_terms">An yarda da wallafawar rephotographs a ƙarƙashin lasisi CC BY 4.0</string>
+  <string name="upload_dialog_agree_to_terms">E</string>
+  <string name="upload_dialog_decline_terms">A\'a</string>
+  <string name="upload_notification_title">Ɗora hoto ka iya ɗaukar wasu lokuta</string>
+  <string name="upload_notification_success">Anyi nasarar ɗora Rephoto</string>
+  <string name="upload_notification_failure">Ba ayi nasarar ɗora Rephoto ba</string>
+  <string name="acra_dialog_title">An yanke \'Ajapaik rephoto\'</string>
+  <string name="acra_dialog_text">Matsalar da ba ayi tsammani ba faru inda ta tilasta tsayawar Manhaja. Daure ka taimaka mana wajen gyarawa ta hanyar aika mana da kuskuren data, abin da zakayi shine ka danna YAYI.</string>
+  <string name="acra_dialog_comment_prompt">Kana iya saka martani game da matsalar a ƙasa:</string>
+  <string name="acra_dialog_ok_toast">Mun gode</string>
+  <string name="about_title">A game da</string>
+  <string name="version">Samfuri</string>
+  <string name="contact">Tuntuɓa</string>
+  <string name="privacy_policy">Sirri</string>
+  <string name="navigation_drawer_open">Buɗe durowa</string>
+  <string name="navigation_drawer_close">Kulle durowa</string>
+  <string name="settings_show_tutorial">Nuna yadda za\'ayi a Rephoto</string>
+  <string name="settings_show_map_by_default">Nuna taswira ta asali</string>
+  <string name="settings_agree_to_license_terms">Na yarda da ɗora hotuna. Akan Ajapaik. ee ƙarƙashin lasisin CC 4.0</string>
+</resources>
