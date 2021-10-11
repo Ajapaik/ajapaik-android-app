@@ -3,29 +3,42 @@
 * Girmitya
 -->
 <resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">Foto ke process karaa jaawe hai</string>
   <string name="please_wait">Meharbaani kar ke wait karo</string>
+  <string name="something_went_wrong">Koi chij karrbarraae gais hai</string>
+  <string name="notification_channel">General Jaankaari</string>
+  <string name="notification_upload_title">Rephoto ke upload karaa jaawe hai</string>
+  <string name="notification_upload_text">Meharbaani kar ke wait karo...</string>
+  <string name="action_albums">Albums</string>
+  <string name="action_flip">Flip karo</string>
   <string name="action_login">Login karo</string>
+  <string name="action_register">Register karo</string>
   <string name="action_logout">Logout karo</string>
   <string name="action_refresh">Refresh karo</string>
   <string name="albums_label_no_data">Koi album nai hai</string>
   <string name="nearest_dialog_error_location_disabled_close">Band karo</string>
   <string name="nearest_label_no_data">Nachdiik me koi chaapa nai hai</string>
   <string name="photo_title">Chaapa ke baare me jaankari</string>
+  <string name="camera_title">Camera</string>
   <string name="profile_facebook_login">Facebook se log in karo</string>
   <string name="profile_google_login">Google se log in karo</string>
   <string name="profile_logout">Logout karo</string>
   <string name="profile_login">Sign in karo</string>
   <string name="profile_register">Account banao</string>
+  <string name="input_username_hint">E-mail</string>
+  <string name="input_password_hint">Aapan password ke likho</string>
   <string name="input_firstname_hint">Pahila naam</string>
   <string name="input_lastname_hint">Aakhri naam</string>
   <plurals name="profile_rephotos">
     <item quantity="other">ek=&lt;b&gt;1&lt;/b&gt; fir se photo</item>
   </plurals>
+  <string name="profile_no_rephotos">Aap abhi talak koi rephotos ke upload nai karaa hai</string>
   <string name="login_title">Login karo</string>
   <string name="login_failed">Login nai hoe sakaa</string>
   <string name="wrong_password">Galat password</string>
   <string name="registration_title">Register karo</string>
-  <string name="user_already_exists">Ii username abhi hai</string>
+  <string name="user_already_exists">Ii username aur koi ke hai</string>
   <string name="upload_dialog_error_connection_message">Chaapa ke upload nai kare sakaa hai</string>
   <string name="upload_dialog_error_connection_retry">Fir se kosis karo</string>
   <string name="upload_dialog_error_connection_ok">Thik hai</string>
@@ -33,9 +46,15 @@
   <string name="upload_dialog_error_unknown_message">Chaapa ke upload nai kare sakaa hai</string>
   <string name="upload_dialog_error_unknown_retry">Fir se kosis karo</string>
   <string name="upload_dialog_error_unknown_ok">Nai karo</string>
-  <string name="upload_dialog_process_message">Meharbaani kar ke sabur karo...</string>
-  <string name="upload_dialog_not_authenticated_title">Upload kare ke khatir log in hoe ke chaahi</string>
-  <string name="upload_dialog_not_authenticated_ok">Thik hai</string>
+  <string name="upload_dialog_process_title">Background me  foto ke upload karaa jaawe hai</string>
+  <string name="upload_dialog_process_message">Meharbaani kar ke wait karo...</string>
+  <string name="upload_dialog_success_title">Upload successful rahaa</string>
+  <string name="upload_dialog_success_message">Foto achchhaa se upload hoe gais hai</string>
+  <string name="upload_dialog_success_ok">Thik hae</string>
+  <string name="upload_dialog_not_authenticated_title">Upload kare ke khatir login hoe ke chaahi</string>
+  <string name="upload_dialog_not_authenticated_message">Profile panna pe jaao</string>
+  <string name="upload_dialog_not_authenticated_ok">Thik hae</string>
+  <string name="upload_dialog_not_agreed_to_terms">Ham CC BY 4.0 ke niche rephotographs publish kare ke agree kartaa hai.</string>
   <string name="upload_dialog_agree_to_terms">Haan!</string>
   <string name="upload_dialog_decline_terms">Nai</string>
   <string name="acra_dialog_ok_toast">Dhanbaad!</string>
