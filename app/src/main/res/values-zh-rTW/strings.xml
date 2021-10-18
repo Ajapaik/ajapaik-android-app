@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Kly
+* Weather Top Wizard
 * 和平至上
 -->
 <resources>
@@ -49,7 +50,7 @@
   </plurals>
   <string name="profile_no_rephotos">您尚未弄出任何翻拍照片</string>
   <string name="login_title">登入</string>
-  <string name="login_failed">登入成功</string>
+  <string name="login_failed">登入未成功</string>
   <string name="wrong_password">密碼錯誤！</string>
   <string name="registration_title">註冊</string>
   <string name="user_already_exists">使用者名稱已存在</string>
