@@ -3,15 +3,20 @@
 * Ajeje Brazorf
 -->
 <resources>
+  <string name="please_wait">Aspittari pregu...</string>
+  <string name="notification_upload_text">Aspittari pregu …</string>
   <string name="action_albums">Album</string>
   <string name="action_login">Trasi</string>
   <string name="action_register">Riggistra</string>
   <string name="action_logout">Nesci</string>
+  <string name="action_profile">Prufilu</string>
   <string name="action_settings">Mpustazzioni</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_close">Chiudi</string>
+  <string name="photo_title">Dittagghî dâ fotu</string>
   <string name="camera_title">futucàmira</string>
+  <string name="profile_title">Prufilu</string>
   <string name="profile_facebook_login">Trasi cu Facebook</string>
   <string name="profile_google_login">Trasi cu Google</string>
   <string name="profile_logout">Nesci</string>
@@ -22,9 +27,11 @@
   <string name="input_firstname_hint">Nomu</string>
   <string name="input_lastname_hint">Cugnomu</string>
   <string name="login_title">Trasi</string>
+  <string name="wrong_password">Password sbagghiata!</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">erruri scanusciutu</string>
   <string name="upload_dialog_error_unknown_ok">Annulla</string>
+  <string name="upload_dialog_process_message">Aspittari pregu...</string>
   <string name="upload_dialog_success_ok">OK</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Sì!</string>
@@ -32,6 +39,7 @@
   <string name="acra_dialog_ok_toast">Grazzi!</string>
   <string name="about_title">Nfurmazzioni</string>
   <string name="version">Virsioni</string>
+  <string name="contact">Cuntatti</string>
   <string name="privacy_policy">Cunfidinzialitati</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sì</string>
