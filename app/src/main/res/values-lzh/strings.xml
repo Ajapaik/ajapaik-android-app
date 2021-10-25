@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * A Retired User
+* Ericliu1912
 * 予弦
+* 列维劳德
 * 神樂坂秀吉
 -->
 <resources>
@@ -10,8 +12,8 @@
   <string name="action_settings">簿註</string>
   <string name="nearest_dialog_error_location_disabled_close">閉</string>
   <string name="profile_logout">出籍</string>
-  <string name="profile_login">登簿</string>
-  <string name="profile_register">增簿</string>
+  <string name="profile_login">籍名</string>
+  <string name="profile_register">立籍</string>
   <string name="input_username_hint">郵</string>
   <string name="input_password_hint">符節</string>
   <string name="input_firstname_hint">名</string>
@@ -31,5 +33,5 @@
   <string name="tutorial_dialog_show_again_yes">是</string>
   <string name="storage_not_permitted_cancel">棄</string>
   <string name="action_search">尋</string>
-  <string name="favorites_label_not_logged_in_button">登簿</string>
+  <string name="favorites_label_not_logged_in_button">籍名</string>
 </resources>

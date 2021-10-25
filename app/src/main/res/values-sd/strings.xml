@@ -88,8 +88,8 @@
   <string name="tutorial_opacity_zoom">پراڻي تصوير کي شفاف بنائڻ لاءِ ڇڪيو.\nڇڪيو پراڻي تصوير کي زوم ڪرڻ لاءِ.</string>
   <string name="tutorial_take_picture">فوٽو واري بٽڻ يا اسڪرين تي ڪٿي به زور ڏئي ٻيهر تصوير ڪڍو.</string>
   <string name="tutorial_dismiss">سمجهي ويس!</string>
-  <string name="tutorial_dialog_show_again_title">سبق ٻيهر ڏيکاريون؟</string>
-  <string name="tutorial_dialog_show_again_message">اوهان سبق کي ترجيحات مان ٻيهر کولي سگھو ٿا</string>
+  <string name="tutorial_dialog_show_again_title">سکيانامو ٻيھر ڏيکاريون؟</string>
+  <string name="tutorial_dialog_show_again_message">اوهان سکيانامي کي ترجيحن مان ٻيھر کولي سگهو ٿا</string>
   <string name="tutorial_dialog_show_again_no">نه</string>
   <string name="tutorial_dialog_show_again_yes">ها</string>
   <string name="rephoto_drafts">بيهر تصويرن وارو ڊرافٽ</string>
