@@ -16,8 +16,8 @@
   <string name="profile_register">立籍</string>
   <string name="input_username_hint">郵</string>
   <string name="input_password_hint">符節</string>
-  <string name="input_firstname_hint">名</string>
-  <string name="input_lastname_hint">姓</string>
+  <string name="input_firstname_hint">前名</string>
+  <string name="input_lastname_hint">後名</string>
   <string name="login_title">籍名</string>
   <string name="upload_dialog_error_connection_ok">可</string>
   <string name="upload_dialog_error_unknown_title">未知之誤</string>
