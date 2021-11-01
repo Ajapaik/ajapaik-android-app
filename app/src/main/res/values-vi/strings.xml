@@ -2,6 +2,7 @@
 <!-- Authors:
 * Leducthn
 * Nguyễn Mạnh An
+* Thingofme
 -->
 <resources>
   <string name="processing_image">Đang xử lí hình</string>
@@ -72,6 +73,8 @@
   <string name="version">Phiên bản</string>
   <string name="contact">Liên hệ</string>
   <string name="privacy_policy">Riêng tư</string>
+  <string name="navigation_drawer_open">Mở ngăn lưu trữ</string>
+  <string name="navigation_drawer_close">Xóa ngăn lưu trữ</string>
   <string name="tutorial_dismiss">Hiểu rồi!</string>
   <string name="tutorial_dialog_show_again_message">Bạn có thể bật hiện hướng dẫn lại trong Cài đặt</string>
   <string name="tutorial_dialog_show_again_no">Không</string>
