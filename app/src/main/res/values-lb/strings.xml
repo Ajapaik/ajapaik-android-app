@@ -4,6 +4,7 @@
 * Soued031
 -->
 <resources>
+  <string name="app_name">Ajapaik Refoto</string>
   <string name="processing_image">Bild gëtt verschafft</string>
   <string name="please_wait">Waart wgl. ...</string>
   <string name="something_went_wrong">Et ass eppes schif gaangen</string>
@@ -25,6 +26,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Zoumaachen</string>
   <string name="nearest_dialog_error_location_disabled_open">Astellungen opmaachen</string>
   <string name="nearest_label_no_data">Keng Fotoen aus der Noperschaft</string>
+  <string name="photo_title">Detailer Foto</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
   <string name="profile_facebook_login">Mat Facebook aloggen</string>

@@ -9,6 +9,7 @@
   <string name="please_wait">Калі ласка, пачакайце…</string>
   <string name="something_went_wrong">Нешта пайшло ня так</string>
   <string name="notification_channel">Агульныя паведамленьні</string>
+  <string name="notification_upload_title">Загрузка пераздымку</string>
   <string name="notification_upload_text">Калі ласка, пачакайце…</string>
   <string name="action_albums">Альбомы</string>
   <string name="action_flip">Адлюстраваць</string>
@@ -19,6 +20,7 @@
   <string name="action_refresh">Абнавіць</string>
   <string name="action_settings">Налады</string>
   <string name="nearest_title">Фота паблізу</string>
+  <string name="finna_title">Фатаздымкі паблізу (Finna)</string>
   <string name="albums_label_no_data">Няма альбомаў</string>
   <string name="albums_title">Альбомы</string>
   <string name="album_title">Альбом</string>
@@ -32,6 +34,13 @@
   <string name="input_password_hint">Пароль</string>
   <string name="input_firstname_hint">Імя</string>
   <string name="input_lastname_hint">Прозьвішча</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; пераздымак</item>
+    <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; пераздымкі</item>
+    <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; пераздымкаў</item>
+    <item quantity="other"/>
+  </plurals>
+  <string name="profile_no_rephotos">Вы яшчэ не зрабілі ніводнага пераздымку</string>
   <string name="login_title">Увайсьці</string>
   <string name="login_failed">Няўдалы ўваход</string>
   <string name="wrong_password">Памылковы пароль!</string>
