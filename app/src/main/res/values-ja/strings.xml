@@ -5,6 +5,7 @@
 * Omotecho
 * Shirayuki
 * Tmv
+* Weather Top Wizard
 * 沈澄心
 * 神樂坂秀吉
 -->
@@ -44,7 +45,7 @@
   <string name="profile_logout">ログアウト</string>
   <string name="profile_login">サインイン</string>
   <string name="profile_register">アカウントを作成</string>
-  <string name="input_username_hint">メールアドレス</string>
+  <string name="input_username_hint">メール</string>
   <string name="input_password_hint">パスワード</string>
   <string name="input_firstname_hint">名</string>
   <string name="input_lastname_hint">姓</string>
@@ -78,7 +79,8 @@
   <string name="upload_dialog_agree_to_terms">はい</string>
   <string name="upload_dialog_decline_terms">いいえ</string>
   <string name="upload_notification_title">新しい写真のアップロード。時間がかかるかもしれません。</string>
-  <string name="upload_notification_failure">リフォトのアップロードに失敗しました</string>
+  <string name="upload_notification_success">リフォトのアップロードに成功しました</string>
+  <string name="upload_notification_failure">Rephotoのアップロードに失敗しました</string>
   <string name="acra_dialog_title">「Ajapaik rephoto」がクラッシュしました</string>
   <string name="acra_dialog_text">アプリの強制終了中にエラーが発生しました。OKをクリックしてエラーのデータを送信し、この問題の修正にご協力ください。</string>
   <string name="acra_dialog_comment_prompt">以下に問題に関するコメントを書き込めます（オプション）</string>
