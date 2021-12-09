@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Ajeje Brazorf
 * BaRaN6161 TURK
 * Liuxinyu970226
 * McDutchie
@@ -58,7 +59,7 @@
   <string name="tutorial_hide_show_flip">First screen in rephotography mode tutorial explaining the rephoto user interface</string>
   <string name="tutorial_opacity_zoom">Second screen in rephotography mode tutorial explaining the rephoto user interface</string>
   <string name="tutorial_take_picture">Third screen in rephotography mode tutorial explaining the rephoto user interface</string>
-  <string name="tutorial_dismiss">User needs to tap the \"Got it!\" messages in the rephotography tutorial to get rid of the 3 tutorial screens</string>
+  <string name="tutorial_dismiss">User needs to tap the \"Got it!\" messages in the rephotography tutorial to get rid of the 3 tutorial screens\n\n{{Identical|Got it}}</string>
   <string name="tutorial_dialog_show_again_title">Dialogue message that pops up when the user opens the rephotography view for the second time</string>
   <string name="tutorial_dialog_show_again_message">Note next to the \"Show tutorial again?\" dialogue explaining the user that tutorial can be also activated later on in the settings</string>
   <string name="tutorial_dialog_show_again_no">{{Identical|No}}</string>

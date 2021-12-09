@@ -4,6 +4,7 @@
 -->
 <resources>
   <string name="please_wait">Aspittari pregu...</string>
+  <string name="notification_channel">Nutìfichi ginirali</string>
   <string name="notification_upload_text">Aspittari pregu …</string>
   <string name="action_albums">Album</string>
   <string name="action_login">Trasi</string>
@@ -11,9 +12,11 @@
   <string name="action_logout">Nesci</string>
   <string name="action_profile">Prufilu</string>
   <string name="action_settings">Mpustazzioni</string>
+  <string name="albums_label_no_data">Nuddu album</string>
   <string name="albums_title">Album</string>
   <string name="album_title">Album</string>
   <string name="nearest_dialog_error_location_disabled_close">Chiudi</string>
+  <string name="nearest_dialog_error_location_disabled_open">Apri li mpustazzioni</string>
   <string name="photo_title">Dittagghî dâ fotu</string>
   <string name="camera_title">futucàmira</string>
   <string name="profile_title">Prufilu</string>
@@ -28,11 +31,13 @@
   <string name="input_lastname_hint">Cugnomu</string>
   <string name="login_title">Trasi</string>
   <string name="wrong_password">Password sbagghiata!</string>
+  <string name="user_already_exists">Lu nomu utenti già esisti</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Erruri scanusciutu</string>
   <string name="upload_dialog_error_unknown_ok">Annulla</string>
   <string name="upload_dialog_process_message">Aspittari pregu...</string>
   <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_message">Rimannu â pàggina di prufilu</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Sì!</string>
   <string name="upload_dialog_decline_terms">No</string>
@@ -41,9 +46,15 @@
   <string name="version">Virsioni</string>
   <string name="contact">Cuntatti</string>
   <string name="privacy_policy">Cunfidinzialitati</string>
+  <string name="navigation_drawer_open">Apri lu casciuni</string>
+  <string name="navigation_drawer_close">Chiudi lu casciuni</string>
+  <string name="tutorial_dismiss">Caputu!</string>
   <string name="tutorial_dialog_show_again_no">No</string>
   <string name="tutorial_dialog_show_again_yes">Sì</string>
   <string name="storage_not_permitted_cancel">Annulla</string>
+  <string name="storage_not_permitted_open_settings">Apri li mpustazzioni</string>
   <string name="action_search">Arricerca</string>
   <string name="favorites_label_not_logged_in_button">Trasi</string>
+  <string name="album_no_data">Nudda fotu</string>
+  <string name="show_photo_details">Ammustra li dittagghî dâ fotu</string>
 </resources>
