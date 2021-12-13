@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Omarov M.
+-->
+<resources>
+  <string name="app_name">Ajapaik: рефото</string>
+  <string name="processing_image">Сураталъул процессинг</string>
+  <string name="please_wait">Лъалхъе...</string>
+  <string name="something_went_wrong">Цо жо мекъса ана</string>
+  <string name="notification_channel">ГӀаммал лъазариял</string>
+  <string name="notification_upload_title">Рефото жанибе реххи</string>
+  <string name="notification_upload_text">Лъалхъе...</string>
+  <string name="action_albums">Альбумал</string>
+  <string name="action_flip">ТӀабихьизабизе</string>
+  <string name="action_login">Жанире лӀугьин</string>
+  <string name="action_register">Регистрация</string>
+  <string name="action_logout">КъватӀире ин</string>
+  <string name="action_profile">Профиль</string>
+  <string name="action_refresh">ЦӀигьабизе</string>
+  <string name="action_settings">Рекъезариял</string>
+  <string name="nearest_title">ГӀагарлъухъ фотоял</string>
+  <string name="finna_title">ГӀагарлъухъ фотоял (Finna)</string>
+  <string name="finna1918_title">Сигне Брандер</string>
+  <string name="albums_label_no_data">Альбумал гьечӀо</string>
+  <string name="albums_title">Альбумал</string>
+  <string name="album_title">Альбум</string>
+  <string name="nearest_dialog_error_location_disabled_title">Локация свинабун буго</string>
+  <string name="nearest_dialog_error_location_disabled_message">ГьабсагӀатаб локация лъазабизе бажарулеб гьечӀо. Локация биччазе бокьилищ?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Къазе</string>
+  <string name="nearest_dialog_error_location_disabled_open">Рекъезариял рагьизе</string>
+  <string name="nearest_label_no_data">ГӀагарлъухъ фотоял гьечӀо</string>
+  <string name="nearest_label_no_data_button">Киналго суратазухъ ралагьизе Альбомазде ракке</string>
+  <string name="photo_title">Фотоялъул хӀакъалъулӀ информация</string>
+  <string name="camera_title">Камера</string>
+  <string name="profile_title">Профиль</string>
+  <string name="profile_facebook_login">Facebook-алдалъун жанире лӀугьине</string>
+  <string name="profile_google_login">Google-алдалъун жанире лӀугьине</string>
+  <string name="profile_logout">КъватӀире ине</string>
+  <string name="profile_login">Жанире лӀугьине</string>
+  <string name="profile_register">Аккаунт гьабизе</string>
+  <string name="input_username_hint">Электронияб поч</string>
+  <string name="input_password_hint">Пароль</string>
+  <string name="input_firstname_hint">ЦӀар</string>
+  <string name="input_lastname_hint">Фамилия</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; рефото</item>
+    <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+    <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; рефото</item>
+    <item quantity="other"/>
+  </plurals>
+  <string name="profile_no_rephotos">Нужеца жеги цониги рефото гьабичӀо</string>
+  <string name="login_title">Жанире лӀугьин</string>
+  <string name="login_failed">Авторизациялъул гъалатӀ</string>
+  <string name="wrong_password">Мекъаб пароль!</string>
+  <string name="registration_title">Регистрация</string>
+  <string name="user_already_exists">Гьединаб хӀалтӀизабунцӀар ккун буго</string>
+  <string name="upload_title">Рефото тасдикъ гьабизе</string>
+  <string name="upload_dialog_error_connection_title">Цолъизабиялъул гъалатӀ</string>
+  <string name="upload_dialog_error_connection_message">Фото жанибе реххизе бажарулеб гьечӀо</string>
+  <string name="upload_dialog_error_connection_retry">Такрар гьабизе</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Лъалареб гъалатӀ</string>
+  <string name="upload_dialog_error_unknown_message">Фото жанибе реххизе бажарулеб гьечӀо.</string>
+  <string name="upload_dialog_error_unknown_retry">Такрар гьабизе</string>
+  <string name="upload_dialog_error_unknown_ok">НахъчӀвазе</string>
+  <string name="upload_dialog_process_title">Фото фоналъулаб режималда жанибе рехи</string>
+  <string name="upload_dialog_process_message">Лъалхъе...</string>
+  <string name="upload_dialog_success_title">Жанибе реххи битӀа-бишун ккана</string>
+  <string name="upload_dialog_success_message">Фото битӀа-бишун жанибе реххана!</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_title">Сиситемаялде жанире лӀугьа фото жанибе реххизе</string>
+  <string name="upload_dialog_not_authenticated_message">Профилалъул гьумералде буссинаби</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+</resources>

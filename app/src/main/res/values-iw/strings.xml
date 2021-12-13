@@ -11,11 +11,11 @@
 <resources>
   <string name="app_name">איאפאיק צילום חוזר</string>
   <string name="processing_image">התמונה בעיבוד</string>
-  <string name="please_wait">נא להמתין…</string>
+  <string name="please_wait">נא להמתין...</string>
   <string name="something_went_wrong">משהו השתבש</string>
   <string name="notification_channel">התראות כלליות</string>
   <string name="notification_upload_title">מעלה את הצילום מחדש</string>
-  <string name="notification_upload_text">אנא המתן</string>
+  <string name="notification_upload_text">נא להמתין...</string>
   <string name="action_albums">אלבומים</string>
   <string name="action_flip">היפוך</string>
   <string name="action_login">כניסה</string>
@@ -62,7 +62,7 @@
   <string name="upload_dialog_error_unknown_retry">ניסיון חוזר</string>
   <string name="upload_dialog_error_unknown_ok">ביטול</string>
   <string name="upload_dialog_process_title">התמונה נשלחת ברקע</string>
-  <string name="upload_dialog_process_message">נא להמתין…</string>
+  <string name="upload_dialog_process_message">נא להמתין...</string>
   <string name="upload_dialog_success_title">ההעלאה הצליחה</string>
   <string name="upload_dialog_success_message">התמונה הועלתה בהצלחה</string>
   <string name="upload_dialog_success_ok">אישור</string>
