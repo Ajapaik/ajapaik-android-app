@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Bello Na'im
 * Gwanki
 -->
 <resources>
@@ -32,8 +33,8 @@
   <string name="photo_title">Bayanin Hoto</string>
   <string name="camera_title">Kyamara</string>
   <string name="profile_title">Farfajiya</string>
-  <string name="profile_facebook_login">Shiga da Facebook</string>
-  <string name="profile_google_login">Shiga da Google</string>
+  <string name="profile_facebook_login">Shiga ta Facebook</string>
+  <string name="profile_google_login">Shiga ta Google</string>
   <string name="profile_logout">Fita</string>
   <string name="profile_login">Shiga</string>
   <string name="profile_register">Ƙirƙiri Asusu</string>

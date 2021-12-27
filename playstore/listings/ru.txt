@@ -3,8 +3,9 @@
 # Author: Happy13241
 # Author: Movses
 # Author: Roman
+# Author: YuliaVo
 
-title=Ajapaik рефото
+title=Ajapaik: пересъемка
 short-description=Просматривайте исторические изображения и переснимайте их с тех же точек съёмки, создавая рефото!
 description.paragraph.1=Приложение Ajapaik показывает исторические снимки, сделанные рядом с вами, и предлагает простой способ сделать рефото (пересъёмки) с того же места.
 description.accuracy.title=Чтобы сделать рефото более удобным

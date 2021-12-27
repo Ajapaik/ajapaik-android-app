@@ -18,20 +18,20 @@
   <string name="albums_label_no_data">Albomon nin</string>
   <string name="albums_title">Albomon</string>
   <string name="album_title">Albom</string>
-  <string name="nearest_dialog_error_location_disabled_close" fuzzy="true">Жәј</string>
-  <string name="nearest_dialog_error_location_disabled_open" fuzzy="true">Сәбәро окардеј</string>
+  <string name="nearest_dialog_error_location_disabled_close">Jəy</string>
+  <string name="nearest_dialog_error_location_disabled_open">Səbəro Okardey</string>
   <string name="nearest_label_no_data">Nezədə şəklon nin</string>
   <string name="photo_title">Şəkli Barədə</string>
   <string name="camera_title">Kəmerə</string>
   <string name="profile_title">Profil</string>
   <string name="profile_logout">Beşi</string>
-  <string name="profile_login" fuzzy="true">Дәше</string>
+  <string name="profile_login">Dəşe</string>
   <string name="input_username_hint">E-nomə</string>
   <string name="input_password_hint">Pərol</string>
   <string name="input_firstname_hint">Nüm</string>
   <string name="input_lastname_hint">Soynüm</string>
   <string name="login_title">Dəşi</string>
-  <string name="wrong_password" fuzzy="true">Рост ныбә парол!</string>
+  <string name="wrong_password">Rost nıbə parol!</string>
   <string name="registration_title">Ğeydiyot</string>
   <string name="upload_dialog_error_connection_retry">Təkror</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>

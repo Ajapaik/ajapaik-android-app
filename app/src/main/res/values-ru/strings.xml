@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* DDPAT
 * Eleferen
 * Happy13241
 * MaxBioHazard
@@ -19,7 +20,7 @@
   <string name="notification_upload_title">Загрузка переснимка</string>
   <string name="notification_upload_text">Подождите…</string>
   <string name="action_albums">Альбомы</string>
-  <string name="action_flip">Отразить</string>
+  <string name="action_flip">Отразить зеркально</string>
   <string name="action_login">Вход</string>
   <string name="action_register">Регистрация</string>
   <string name="action_logout">Выход</string>
@@ -37,7 +38,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Закрыть</string>
   <string name="nearest_dialog_error_location_disabled_open">Открыть настройки</string>
   <string name="nearest_label_no_data">Поблизости фото отсутствуют</string>
-  <string name="nearest_label_no_data_button">Для просмотра всех изображений перейдите в \"Альбомы\"</string>
+  <string name="nearest_label_no_data_button">Для просмотра всех изображений перейдите в «Альбомы»</string>
   <string name="photo_title">Информация о фото</string>
   <string name="camera_title">Камера</string>
   <string name="profile_title">Профиль</string>
@@ -85,7 +86,7 @@
   <string name="upload_notification_title">Переснимок загружается. Это может занять некоторое время</string>
   <string name="upload_notification_success">Загрузка переснимка прошла успешно</string>
   <string name="upload_notification_failure">Неудачная попытка загрузки переснимка</string>
-  <string name="acra_dialog_title">В работе приложения \"Ajapaik: пересъемка\" возник сбой</string>
+  <string name="acra_dialog_title">В работе приложения «Ajapaik: пересъемка» возник сбой</string>
   <string name="acra_dialog_text">Непредвиденная ошибка привела к остановке приложения. Чтобы помочь нам исправить её, отправьте информацию об ошибке, нажав ОК.</string>
   <string name="acra_dialog_comment_prompt">Далее вы можете добавить свои комментарии о проблеме:</string>
   <string name="acra_dialog_ok_toast">Спасибо!</string>

@@ -71,4 +71,16 @@
   <string name="upload_dialog_not_authenticated_title">Сиситемаялде жанире лӀугьа фото жанибе реххизе</string>
   <string name="upload_dialog_not_authenticated_message">Профилалъул гьумералде буссинаби</string>
   <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_not_agreed_to_terms">Дун рази вуго CC BY 4.0 лицензиялда рекъон рефотоял басма гьариялъул шартӀалгун.</string>
+  <string name="upload_dialog_agree_to_terms">У!</string>
+  <string name="upload_dialog_decline_terms">Гуро</string>
+  <string name="upload_notification_title">Рефото жанибе реххулеб буго. Гьелъ цо заман базе бегьула</string>
+  <string name="upload_notification_success">Рефото жанибе реххи битӀа-бишун ккана</string>
+  <string name="acra_dialog_ok_toast">Баркала!</string>
+  <string name="about_title">Программаялъул хӀакъалъулӀ</string>
+  <string name="version">Версия</string>
+  <string name="contact">Контакт</string>
+  <string name="privacy_policy">Конфиденциаллъи</string>
+  <string name="navigation_drawer_open">Редактор рагьизе</string>
+  <string name="navigation_drawer_close">Редактор къазе</string>
 </resources>
