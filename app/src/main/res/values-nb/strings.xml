@@ -5,10 +5,12 @@
 * Jon Harald Søby
 -->
 <resources>
-  <string name="app_name">Ajapaik da og nå</string>
+  <string name="app_name">Ajapaik – da og nå</string>
   <string name="processing_image">Prosesser bilde</string>
   <string name="please_wait">Vent litt …</string>
   <string name="something_went_wrong">Noe gikk galt</string>
+  <string name="notification_channel">Generelle varsler</string>
+  <string name="notification_upload_text">Vent litt …</string>
   <string name="action_albums">Album</string>
   <string name="action_flip">Snu</string>
   <string name="action_login">Logg inn</string>
