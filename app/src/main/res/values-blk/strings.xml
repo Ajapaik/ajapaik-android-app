@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* လွိုင်ႏအာထင်ႏထိုထဲင်း
+* 咽頭べさ
+-->
+<resources>
+  <string name="please_wait">အိုင်ပွေားဆောင်းတဆင်ႏသြ...</string>
+  <string name="something_went_wrong">ထွာထိုꩻလဲဉ်း အမာႏတဗာႏဗာႏ</string>
+  <string name="notification_channel">ဖေႏသေချက် အစွိုးစွိုးဖိုင်ႏ</string>
+  <string name="notification_upload_text">အိုင်ပွေားဆောင်းတဆင်ႏသြ...</string>
+  <string name="action_login">နွို့အကောက်</string>
+  <string name="action_register">ဒင်ႏမတ်ပိုင်တိဉ်</string>
+  <string name="action_logout">ထန်ႏအကောက်</string>
+  <string name="action_profile">ပရိုဖုဲင်</string>
+  <string name="action_refresh">ထိုမ်ႏစဲစ်ချာယင်း</string>
+  <string name="action_settings">အဖျင်အဆင်ဖုံႏ</string>
+  <string name="nearest_dialog_error_location_disabled_close">ပေ့ꩻထိုꩻ</string>
+  <string name="nearest_dialog_error_location_disabled_open">ဗွောင် အပွိုင်အဆင်</string>
+  <string name="camera_title">ကဉ်မရာ</string>
+  <string name="profile_title">ပရိုဖုဲင်</string>
+  <string name="profile_facebook_login">နွို့တောမ်ႏဖေ့ဗိုတ်</string>
+  <string name="profile_google_login">နွို့တောမ်ႏဂူဂဲ</string>
+  <string name="profile_logout">ထန်ႏအကောက်</string>
+  <string name="profile_login">နွို့အကောက်</string>
+  <string name="profile_register">ဖန်ဆင်ꩻအကောက်</string>
+  <string name="input_username_hint">အီးမေး</string>
+  <string name="input_password_hint">ငဝ်းဗိဥ်ႏပလို့ꩻ</string>
+  <string name="login_title">နွို့အကောက်</string>
+  <string name="registration_title">ဒင်ႏမတ်ပိုင်တိဉ်</string>
+  <string name="upload_dialog_error_connection_ok">မွေးသွူ</string>
+  <string name="upload_dialog_error_unknown_ok">မာꩻတဝ်းဒွုမ်</string>
+  <string name="upload_dialog_success_ok">မွေးသွူ</string>
+  <string name="upload_dialog_not_authenticated_ok">မွေးသွူ</string>
+  <string name="upload_dialog_agree_to_terms">မွေး!</string>
+  <string name="upload_dialog_decline_terms">မွေးတဝ်း</string>
+  <string name="acra_dialog_ok_toast">ကေꩻဇူꩻတင်ႏငါႏဩ!</string>
+  <string name="about_title">အကျောင်ꩻ</string>
+  <string name="tutorial_dialog_show_again_no">မွေးတဝ်း</string>
+  <string name="tutorial_dialog_show_again_yes">မွေး</string>
+  <string name="storage_not_permitted_cancel">မာꩻတဝ်းဒွုမ်</string>
+  <string name="action_search">ထိုမ်ႏ</string>
+  <string name="favorites_label_not_logged_in_button">နွို့အကောက်</string>
+</resources>

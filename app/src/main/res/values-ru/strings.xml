@@ -53,7 +53,7 @@
   <string name="input_lastname_hint">Фамилия</string>
   <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; переснимок</item>
-    <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; переснимков</item>
+    <item quantity="few">&lt;b&gt;%1$d&lt;/b&gt; переснимка</item>
     <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; переснимков</item>
     <item quantity="other"/>
   </plurals>

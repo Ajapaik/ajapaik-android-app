@@ -78,6 +78,7 @@
   <string name="privacy_policy">Personvern</string>
   <string name="navigation_drawer_open">Åpne skuff</string>
   <string name="navigation_drawer_close">Lukk skuff</string>
+  <string name="settings_show_map_by_default">Vis kart som standard</string>
   <string name="settings_agree_to_license_terms">Jeg samtykker til å publisere fotografier på Ajapaik.ee under lisensen CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Trykk for å skjule/vise bilde.\nBruk snu-ikonet i øvre høyre hjørne for å snu det gamle bildet.</string>
   <string name="tutorial_opacity_zoom">Dra for å stille inn gjennomsiktigheten til det gamle bildet.\nKnip for å zoome inn på det gamle bildet.</string>
