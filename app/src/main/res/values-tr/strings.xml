@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * BaRaN6161 TURK
+* Can
 * Elisa3626
 * Grkn gll
 * Hedda
@@ -78,7 +79,7 @@
   <string name="upload_dialog_decline_terms">Hayır</string>
   <string name="upload_notification_title">Yeniden fotoğraf yükleniyor. Biraz zaman alabilir</string>
   <string name="upload_notification_success">Yeniden fotoğraf başarıyla yüklendi</string>
-  <string name="upload_notification_failure">Yeniden fotoğraf başarısız oldu</string>
+  <string name="upload_notification_failure">Yeniden fotoğraf yüklemesi başarısız oldu</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' çöktü</string>
   <string name="acra_dialog_text">Uygulamayı durmaya zorlayan beklenmedik bir hata oluştu. Lütfen bize hata verilerini göndererek düzeltmemize yardımcı olun, yapmanız gereken tek şey Tamam\'a tıklamaktır.</string>
   <string name="acra_dialog_comment_prompt">Aşağıdaki sorun hakkında yorumlarınızı ekleyebilirsiniz:</string>
