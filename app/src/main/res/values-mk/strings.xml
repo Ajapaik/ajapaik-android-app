@@ -10,6 +10,8 @@
   <string name="processing_image">Ја обработувам сликата</string>
   <string name="please_wait">Почекајте...</string>
   <string name="something_went_wrong">Нешто не е во ред</string>
+  <string name="notification_channel">Општи известувања</string>
+  <string name="notification_upload_title">Подигање на споредбена слика</string>
   <string name="notification_upload_text">Почекајте…</string>
   <string name="action_albums">Албуми</string>
   <string name="action_flip">Преврти</string>
@@ -43,7 +45,7 @@
   <string name="input_password_hint">Лозинка</string>
   <string name="input_firstname_hint">Име</string>
   <string name="input_lastname_hint">Презиме</string>
-  <plurals name="profile_rephotos" fuzzy="true">
+  <plurals name="profile_rephotos">
     <item quantity="one">&lt;b&gt;1&lt;/b&gt; споредбена слика</item>
     <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; споредбени слики</item>
   </plurals>
@@ -55,14 +57,14 @@
   <string name="user_already_exists">Корисничкото име веќе постои</string>
   <string name="upload_title">Потврди спор. слика</string>
   <string name="upload_dialog_error_connection_title">Грешка при поврзувањето</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Не можев да ја подигнам сликата. Да пробам повторно?</string>
+  <string name="upload_dialog_error_connection_message">Не можев да ја подигнам сликата. Да пробам повторно?</string>
   <string name="upload_dialog_error_connection_retry">Пробај пак</string>
   <string name="upload_dialog_error_connection_ok">ОК</string>
   <string name="upload_dialog_error_unknown_title">Непозната грешка</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Не можев да ја подигнам сликата. Да пробам повторно?</string>
+  <string name="upload_dialog_error_unknown_message">Не можев да ја подигнам сликата.</string>
   <string name="upload_dialog_error_unknown_retry">Пробај пак</string>
   <string name="upload_dialog_error_unknown_ok">Откажи</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Подигање на сликата</string>
+  <string name="upload_dialog_process_title">Подигање на сликата во позадина</string>
   <string name="upload_dialog_process_message">Почекајте...</string>
   <string name="upload_dialog_success_title">Подигањето успеа</string>
   <string name="upload_dialog_success_message">Сликата е успешно подигната!</string>
@@ -73,6 +75,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Се согласувам да ги објавам споредбените слики под лиценцата CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Да!</string>
   <string name="upload_dialog_decline_terms">Не</string>
+  <string name="upload_notification_title">Ја подигам споредбената слика. Ова може да потрае</string>
+  <string name="upload_notification_success">Споредбената слика е успешно подигната</string>
+  <string name="upload_notification_failure">Подигањето на споредбената слика не успеа</string>
   <string name="acra_dialog_title">„Споредбен сликач Ajapaik“ се урна</string>
   <string name="acra_dialog_text">Се јави неочекувана грешка при наметнатото сопирање на прилогот. Испратете ни податоци за грешката и со тоа помогнете ни да го решиме проблемот. Ваше е само да стиснете на „ОК“.</string>
   <string name="acra_dialog_comment_prompt">Подолу можете да внесете белешка за проблемот:</string>
@@ -84,6 +89,7 @@
   <string name="navigation_drawer_open">Отвори фиока</string>
   <string name="navigation_drawer_close">Затвори фиока</string>
   <string name="settings_show_tutorial">Прикажи упатство во споредбен режим</string>
+  <string name="settings_show_map_by_default">Прикажи карта по основно</string>
   <string name="settings_agree_to_license_terms">Се согласувам да ги објавам споредбените слики на Ajapaik.ee под лиценцата CC BY 4.0.</string>
   <string name="tutorial_hide_show_flip">Допрете за да скриете/покажете слика.\nНа иконата во горниот десен агол можете да превртите стара слика.</string>
   <string name="tutorial_opacity_zoom">Повелечете за да ја прилагодите проѕирноста на старата слика.\nОдете на доближувањето за да ја доближите.</string>
