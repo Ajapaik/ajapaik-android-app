@@ -3,6 +3,7 @@
 # Author: Base
 # Author: DDPAT
 # Author: Dimon2711
+# Author: Ice bulldog
 
 title=Фотографія Ajapaik
 short-description=Перегляньте та поділіться враженнями щодо історичних образів і фоторепродукцій!

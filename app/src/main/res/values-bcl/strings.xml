@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Brazal.dang
+* Daramlagon
 * ShimunUfesoj
 -->
 <resources>
@@ -8,6 +9,9 @@
   <string name="processing_image">Pigpoproseso an ladawan</string>
   <string name="please_wait">Pakihalat tabi…</string>
   <string name="something_went_wrong">Igwang nagkasalá</string>
+  <string name="notification_channel">Pankagabsan na mga Notipikasyon</string>
+  <string name="notification_upload_title">Ina-upload na an rephoto</string>
+  <string name="notification_upload_text">Halat sana tabi...</string>
   <string name="action_albums">Mga album</string>
   <string name="action_flip">Paltik</string>
   <string name="action_login">Maglaog</string>
@@ -17,6 +21,8 @@
   <string name="action_refresh">Preskohon otro</string>
   <string name="action_settings">Mga Panuytoy</string>
   <string name="nearest_title">Hararaning mga ladawan</string>
+  <string name="finna_title">Mga litrato sa harani (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">Mayong mga album</string>
   <string name="albums_title">Mga album</string>
   <string name="album_title">Album</string>
@@ -50,17 +56,29 @@
   <string name="user_already_exists">Igwa nang arog kaining pangaran-nin-paragamit</string>
   <string name="upload_title">Kumpirmahon an Pagsasaladawan</string>
   <string name="upload_dialog_error_connection_title">Error sa Koneksyon</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Dae ma-upload an ladawan. Utruhon?</string>
+  <string name="upload_dialog_error_connection_message">Dai ma-upload an ladawan.</string>
   <string name="upload_dialog_error_connection_retry">Uliton</string>
   <string name="upload_dialog_error_connection_ok">Sige</string>
   <string name="upload_dialog_error_unknown_title">Bakong bistadong sala</string>
+  <string name="upload_dialog_error_unknown_message">Unable to upload the photo.</string>
   <string name="upload_dialog_error_unknown_retry">Uliton</string>
   <string name="upload_dialog_error_unknown_ok">Kanselaron</string>
+  <string name="upload_dialog_process_title">Ina-upload na an ladawan</string>
   <string name="upload_dialog_process_message">Pakihalat tabi…</string>
+  <string name="upload_dialog_success_title">Na-upload Na</string>
+  <string name="upload_dialog_success_message">Na-upload na an ladawan!</string>
   <string name="upload_dialog_success_ok">Sige</string>
+  <string name="upload_dialog_not_authenticated_title">Naka-log in dapat para maka-upload</string>
+  <string name="upload_dialog_not_authenticated_message">Mag-redirect sa profile page</string>
   <string name="upload_dialog_not_authenticated_ok">Sige</string>
+  <string name="upload_dialog_not_agreed_to_terms">Nagtutugot ako sa pagpublikar kan rephotographs sa irarom kan CC BY 4.0 license.</string>
   <string name="upload_dialog_agree_to_terms">Iyo!</string>
   <string name="upload_dialog_decline_terms">Dae</string>
+  <string name="upload_notification_title">Ina-upload na an rephoto. Baad ini mahaluyan</string>
+  <string name="upload_notification_success">Na-upload na an ladawan</string>
+  <string name="upload_notification_failure">Dai na-upload</string>
+  <string name="acra_dialog_title">Nag-crash an \'Ajapaik rephoto\'</string>
+  <string name="acra_dialog_ok_toast">Mabalos!</string>
   <string name="start_taking_rephoto">Magpoon nang magkua nin ladawan</string>
   <string name="show_photo_details">Ipahiling an detalye kan ladawan</string>
   <string name="show_rephotos">Ipahiling an mga bagong litrato</string>
