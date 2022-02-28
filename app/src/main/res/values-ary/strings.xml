@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Anass Sedrati
+* Ideophagous
 * SADI9I
 -->
 <resources>
@@ -13,7 +14,7 @@
   <string name="action_login">تكونيكطا</string>
   <string name="action_register">تقيًد</string>
   <string name="action_logout">خرج</string>
-  <string name="action_profile">الملف الشخصي</string>
+  <string name="action_profile">پروفيل</string>
   <string name="action_refresh">تحديث</string>
   <string name="action_settings">إعدادات</string>
   <string name="nearest_title">تصاور قريبة</string>
