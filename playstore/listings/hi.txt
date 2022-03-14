@@ -1,0 +1,8 @@
+# Messages for Hindi (हिन्दी)
+# Exported from translatewiki.net
+# Author: Abijeet Patro
+# Author: AnupamM
+
+title=अजापैक दोबारा फोटो
+short-description=ऐतिहासिक तस्वीरों के प्रेक्षण-स्थलों को देखें और नज़ारों की पुनः तस्वीर लें!
+description.accuracy.title=दोबारा फोटोहग्र्फि असान करने के लिये,
