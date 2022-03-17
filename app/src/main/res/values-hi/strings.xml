@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Abijeet Patro
+* AnupamM
 * Sachinkatiyar
 * Saurmandal
 * Shypoetess
@@ -10,7 +11,7 @@
 <resources>
   <string name="app_name">Ajapaik पुनःचित्र</string>
   <string name="processing_image">चित्र को प्रोसेस किया जा रहा है</string>
-  <string name="please_wait">कृपया इंतज़ार करें…</string>
+  <string name="please_wait">कृपया प्रतीक्षा करें...</string>
   <string name="something_went_wrong">कोई त्रुटि आई</string>
   <string name="notification_channel">साधारण सूचनाएँ</string>
   <string name="notification_upload_title">पुनःचित्र को अपलोड करें</string>
@@ -21,7 +22,7 @@
   <string name="action_register">खाता बनाएँ</string>
   <string name="action_logout">लॉगआउट  करें</string>
   <string name="action_profile">प्रोफ़ाइल</string>
-  <string name="action_refresh">ताज़ा करें</string>
+  <string name="action_refresh">रिफ़्रेश करें</string>
   <string name="action_settings">सेटिंग्स</string>
   <string name="nearest_title">आस-पास के चित्र</string>
   <string name="finna_title">आस-पास के चित्र (Finna)</string>
@@ -60,16 +61,16 @@
   <string name="upload_title">दोबारा चित्र को निश्चित करें</string>
   <string name="upload_dialog_error_connection_title">संपर्क त्रुटि</string>
   <string name="upload_dialog_error_connection_message">चित्र को अपलोड न किया जा सका।</string>
-  <string name="upload_dialog_error_connection_retry">दोबारा प्रयास करें</string>
+  <string name="upload_dialog_error_connection_retry">पुनः प्रयास करें</string>
   <string name="upload_dialog_error_connection_ok">ठीक है</string>
   <string name="upload_dialog_error_unknown_title">अज्ञात त्रुटि</string>
   <string name="upload_dialog_error_unknown_message">चित्र को अपलोड न किया जा सका।</string>
-  <string name="upload_dialog_error_unknown_retry">दोबारा प्रयास करें</string>
+  <string name="upload_dialog_error_unknown_retry">पुनः प्रयास करें</string>
   <string name="upload_dialog_error_unknown_ok">रद्द करें</string>
   <string name="upload_dialog_process_title">चित्र को बैकग्राउंड में अपलोड किया जा रहा है</string>
-  <string name="upload_dialog_process_message">कृपया इंतज़ार करें…</string>
+  <string name="upload_dialog_process_message">कृपया प्रतीक्षा करें...</string>
   <string name="upload_dialog_success_title">अपलोड सफल</string>
-  <string name="upload_dialog_success_message">चित्र को सफलतापूर्वक अपलोड कर दिया गया है!</string>
+  <string name="upload_dialog_success_message">तस्वीर को सफलतापूर्वक अपलोड कर दिया गया है!</string>
   <string name="upload_dialog_success_ok">ठीक है</string>
   <string name="upload_dialog_not_authenticated_title">अपलोड करने के लिए लॉगिन होना ज़रूरी है</string>
   <string name="upload_dialog_not_authenticated_message">प्रोफ़ाइल पृष्ठ पर अनुप्रेषित करें</string>
