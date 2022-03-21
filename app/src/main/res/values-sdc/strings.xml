@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* F Samaritani
+-->
+<resources>
+  <string name="please_wait">Attindi prigo</string>
+  <string name="action_albums">Album</string>
+  <string name="action_login">Intra</string>
+  <string name="action_register">Rigisthra</string>
+  <string name="action_logout">Iscidda</string>
+  <string name="action_profile">Profiru</string>
+  <string name="action_refresh">Attuarizà</string>
+  <string name="action_settings">Prifirènzi</string>
+  <string name="albums_label_no_data">nisciunu album</string>
+  <string name="albums_title">Album</string>
+  <string name="album_title">Album</string>
+  <string name="camera_title">Fotocamera</string>
+  <string name="profile_title">Profiru</string>
+  <string name="profile_facebook_login">Intra cùn Facebook</string>
+  <string name="profile_google_login">Intra cùn Google</string>
+  <string name="profile_logout">Iscidda</string>
+  <string name="profile_login">Intra</string>
+  <string name="profile_register">Crea una noba registhrazioni</string>
+  <string name="input_username_hint">Indirizzu di postha erettrònica</string>
+  <string name="input_password_hint">Paràura d\'órdhini</string>
+  <string name="input_firstname_hint">Nummi</string>
+  <string name="input_lastname_hint">Cugnommini</string>
+  <string name="login_title">Intra</string>
+  <string name="login_failed">Intradda nùn ridiscidda</string>
+  <string name="wrong_password">Password ibagliadda!</string>
+  <string name="registration_title">Rigisthra</string>
+  <string name="upload_dialog_error_connection_retry">Ribrubà</string>
+  <string name="upload_dialog_error_connection_ok">EMMU</string>
+  <string name="upload_dialog_error_unknown_title">Errori ischunisciddu</string>
+  <string name="upload_dialog_error_unknown_retry">Ribrubà</string>
+  <string name="upload_dialog_error_unknown_ok">Canzillà</string>
+  <string name="upload_dialog_process_message">Attindi prigo</string>
+  <string name="upload_dialog_success_ok">EMMU</string>
+  <string name="upload_dialog_not_authenticated_ok">Cunfèimma</string>
+  <string name="upload_dialog_agree_to_terms">Éia</string>
+  <string name="upload_dialog_decline_terms">No</string>
+  <string name="acra_dialog_ok_toast">Gratzie!</string>
+  <string name="about_title">Infuimmazioni</string>
+  <string name="version">Versioni</string>
+  <string name="contact">Cuntattu</string>
+  <string name="privacy_policy">Privacy</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="storage_not_permitted_cancel">Canzilla</string>
+  <string name="action_search">Zercha</string>
+  <string name="favorites_label_not_logged_in_button">Intra</string>
+  <string name="no_search_result">Nisciunu risulthaddi di la zercha</string>
+  <string name="album_no_data">Nisciuna foto</string>
+</resources>
