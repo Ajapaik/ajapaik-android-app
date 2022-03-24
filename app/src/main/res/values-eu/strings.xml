@@ -3,6 +3,7 @@
 * An13sa
 * Asierog
 * EukeneFL
+* Josuert
 * Mikel Ibaiba
 -->
 <resources>
@@ -10,6 +11,7 @@
   <string name="processing_image">Argazkia prozesatzen</string>
   <string name="please_wait">Mesedez itxaron…</string>
   <string name="something_went_wrong">Zerbaitek huts egin du</string>
+  <string name="notification_channel">Notifikazio generalak</string>
   <string name="action_albums">Albumak</string>
   <string name="action_flip">Buelta eman</string>
   <string name="action_login">Hasi saioa</string>

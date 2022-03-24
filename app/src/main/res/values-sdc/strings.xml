@@ -4,6 +4,8 @@
 -->
 <resources>
   <string name="please_wait">Attindi prigo</string>
+  <string name="notification_channel">Nutìfighi giniràri</string>
+  <string name="notification_upload_text">Attindi prigo...</string>
   <string name="action_albums">Album</string>
   <string name="action_login">Intra</string>
   <string name="action_register">Rigisthra</string>

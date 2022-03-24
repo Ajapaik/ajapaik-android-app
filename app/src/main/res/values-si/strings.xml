@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Dulkith
+-->
+<resources>
+  <string name="processing_image">පින්තූරය සකසමින්....</string>
+  <string name="please_wait">කරුණාකර රැදෙන්න...</string>
+  <string name="something_went_wrong">යමක් වැරදී ඇත</string>
+  <string name="notification_channel">සාමාන්‍ය දැනුම්දීම්</string>
+  <string name="notification_upload_text">කරුණාකර රැදෙන්න...</string>
+  <string name="action_albums">ඇල්බම</string>
+  <string name="action_flip">පෙරළීම</string>
+  <string name="action_login">ප්‍රවේශ වන්න</string>
+  <string name="action_register">ලියාපදිංචි වන්න</string>
+  <string name="action_logout">පිටවන්න</string>
+  <string name="action_profile">පැතිකඩ</string>
+  <string name="action_refresh">නැවත පූරණය</string>
+  <string name="action_settings">සැකසීම්</string>
+  <string name="albums_label_no_data">ඇල්බම නැත</string>
+  <string name="albums_title">ඇල්බම</string>
+  <string name="album_title">ඇල්බම</string>
+  <string name="nearest_dialog_error_location_disabled_title">ස්ථානය සක්‍රීය නැත</string>
+  <string name="nearest_dialog_error_location_disabled_message">වත්මන් ස්ථානය ලබා ගැනීමට නොහැකි විය. ඔබ එය සබල කිරීමට කැමතිද?</string>
+  <string name="nearest_dialog_error_location_disabled_close">වසන්න</string>
+  <string name="nearest_dialog_error_location_disabled_open">සැකසීම් විවෘත කරන්න</string>
+  <string name="photo_title">අනුරූ තොරතුරු</string>
+  <string name="camera_title">කැමරාව</string>
+  <string name="profile_title">පැතිකඩ</string>
+  <string name="profile_facebook_login">Facebook වෙතින් ප්‍රවේශ වන්න</string>
+  <string name="profile_google_login">Google වෙතින් ප්‍රවේශ වන්න</string>
+  <string name="profile_logout">පිටවන්න</string>
+  <string name="profile_login">ප්‍රවේශ වන්න</string>
+  <string name="profile_register">ගිණුමක් සාදන්න</string>
+  <string name="input_username_hint">විද්‍යුත් තැපෑල</string>
+  <string name="input_password_hint">මුරපදය</string>
+  <string name="input_firstname_hint">පළමු නම</string>
+  <string name="input_lastname_hint">අවසන් නම</string>
+  <string name="login_title">ප්‍රවේශ වන්න</string>
+  <string name="login_failed">ප්ප්‍රවේශය අසාර්ථකයි</string>
+  <string name="wrong_password">වැරදි මුරපදයකි!</string>
+  <string name="registration_title">ලියාපදිංචි වන්න</string>
+  <string name="upload_dialog_error_connection_title">සම්බන්ධතා දෝෂය</string>
+  <string name="upload_dialog_error_connection_message">පින්තූරය උඩුගත කළ නොහැක.</string>
+  <string name="upload_dialog_error_connection_ok">හරි</string>
+  <string name="upload_dialog_error_unknown_title">හඳුනා නොගත් දෝෂය</string>
+  <string name="upload_dialog_error_unknown_message">පින්තූරය උඩුගත කළ නොහැක.</string>
+  <string name="upload_dialog_error_unknown_ok">අවලංගු කරන්න</string>
+  <string name="upload_dialog_process_message">කරුණාකර රැදෙන්න</string>
+  <string name="upload_dialog_success_title">උඩුගත කිරීම සාර්ථකයි</string>
+</resources>
