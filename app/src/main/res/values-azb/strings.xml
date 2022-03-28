@@ -46,7 +46,7 @@
   <string name="storage_not_permitted_open_settings">تنظیماتی آچ</string>
   <string name="action_search">آختار</string>
   <string name="favorites_label_not_logged_in_button">گیریش</string>
-  <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
-  <string name="show_photo_details" fuzzy="true">Show photo details</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="start_taking_rephoto">یئنیدن عکس چکمیه باشلایین</string>
+  <string name="show_photo_details">عکس جوزئیاتین گؤسترمک</string>
+  <string name="show_rephotos">یئنیدن چکیلن عکسلری گؤسترمک</string>
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Amirsara
+* Beginneruser
 * FarsiNevis
 * Jeeputer
 * Reza1615
@@ -32,7 +33,7 @@
   <string name="profile_google_login">ورود با گوگل</string>
   <string name="profile_logout">خروج</string>
   <string name="profile_login">ورود</string>
-  <string name="profile_register">ایجاد حساب کاربری</string>
+  <string name="profile_register">ایجاد حساب</string>
   <string name="input_username_hint">ایمیل</string>
   <string name="input_password_hint">گذرواژه</string>
   <string name="input_firstname_hint">نام</string>
