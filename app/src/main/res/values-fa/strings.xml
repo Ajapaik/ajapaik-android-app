@@ -10,7 +10,7 @@
   <string name="processing_image">در حال پردازش تصویر</string>
   <string name="please_wait">لطفاً صبر کنید...</string>
   <string name="something_went_wrong">مشکلی وجود دارد</string>
-  <string name="notification_channel">اعلان‌های اصلی</string>
+  <string name="notification_channel">آگاه‌سازی‌های اصلی</string>
   <string name="notification_upload_text">لطفاً صبر کنید...</string>
   <string name="action_albums">آلبوم ها</string>
   <string name="action_login">ورود</string>
@@ -35,7 +35,7 @@
   <string name="profile_login">ورود</string>
   <string name="profile_register">ایجاد حساب</string>
   <string name="input_username_hint">ایمیل</string>
-  <string name="input_password_hint">گذرواژه</string>
+  <string name="input_password_hint">رمز عبور</string>
   <string name="input_firstname_hint">نام</string>
   <string name="input_lastname_hint">نام خانوادگی</string>
   <string name="login_title">ورود به سامانه</string>
