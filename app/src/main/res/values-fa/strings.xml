@@ -4,13 +4,14 @@
 * Beginneruser
 * FarsiNevis
 * Jeeputer
+* Mohammad ebz
 * Reza1615
 -->
 <resources>
   <string name="processing_image">در حال پردازش تصویر</string>
   <string name="please_wait">لطفاً صبر کنید...</string>
   <string name="something_went_wrong">مشکلی وجود دارد</string>
-  <string name="notification_channel">آگاه‌سازی‌های اصلی</string>
+  <string name="notification_channel">اعلان‌های عمومی</string>
   <string name="notification_upload_text">لطفاً صبر کنید...</string>
   <string name="action_albums">آلبوم ها</string>
   <string name="action_login">ورود</string>
