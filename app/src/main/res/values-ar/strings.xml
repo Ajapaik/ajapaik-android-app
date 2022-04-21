@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* FiberAhmed
 * Meno25
 * ديفيد
 * عبد الإله صديقي
@@ -41,7 +42,7 @@
   <string name="profile_google_login">قم بتسجيل الدخول باستخدام جوجل</string>
   <string name="profile_logout">خروج</string>
   <string name="profile_login">تسجيل الدخول</string>
-  <string name="profile_register">أنشئ حسابا</string>
+  <string name="profile_register">أنشئ حسابًا</string>
   <string name="input_username_hint">بريد إلكتروني</string>
   <string name="input_password_hint">كلمة السر</string>
   <string name="input_firstname_hint">الاسم الأول</string>
@@ -60,7 +61,7 @@
   <string name="upload_dialog_error_connection_title">خطأ في الاتصال</string>
   <string name="upload_dialog_error_connection_message">غير قادر على تحميل الصورة.</string>
   <string name="upload_dialog_error_connection_retry">حاول مرة أخرى</string>
-  <string name="upload_dialog_error_connection_ok">حسنا</string>
+  <string name="upload_dialog_error_connection_ok">حسنًا</string>
   <string name="upload_dialog_error_unknown_title">خطأ غير معروف</string>
   <string name="upload_dialog_error_unknown_message">لا يمكن رفع الصورة.</string>
   <string name="upload_dialog_error_unknown_retry">إعادة المحاولة</string>
@@ -72,7 +73,7 @@
   <string name="upload_dialog_success_ok">حسنا</string>
   <string name="upload_dialog_not_authenticated_title">يجب أن تكون مسجلا الدخول للرفع</string>
   <string name="upload_dialog_not_authenticated_message">إعادة توجيه إلى صفحة الملف الشخصي</string>
-  <string name="upload_dialog_not_authenticated_ok">حسنا</string>
+  <string name="upload_dialog_not_authenticated_ok">حسنًا</string>
   <string name="upload_dialog_not_agreed_to_terms">أنا أوافق على نشر الصور المجدَّدة تحت رخصة CC BY 4.0</string>
   <string name="upload_dialog_agree_to_terms">نعم!</string>
   <string name="upload_dialog_decline_terms">لا</string>
@@ -82,7 +83,7 @@
   <string name="acra_dialog_title">لقد تحطم \'أجابيك لإعادة التصوير\'</string>
   <string name="acra_dialog_text">حدث خطأ غير متوقع يجبر التطبيق على التوقف، الرجاء مساعدتنا في إصلاح ذلك عن طريق إرسال بيانات الخطأ إلينا، وكل ما عليك فعله هو النقر على موافق.</string>
   <string name="acra_dialog_comment_prompt">يمكنك إضافة تعليقاتك حول المشكلة أدناه:</string>
-  <string name="acra_dialog_ok_toast">شكرا لك!</string>
+  <string name="acra_dialog_ok_toast">شكرًا لك!</string>
   <string name="about_title">حول</string>
   <string name="version">الإصدار</string>
   <string name="contact">تواصل</string>
@@ -95,9 +96,9 @@
   <string name="tutorial_hide_show_flip">انقر لإخفاء/إظهار الصورة.\nاستخدم رمز الوجه في الزاوية اليمنى العليا لقلب الصورة القديمة.</string>
   <string name="tutorial_opacity_zoom">حرك لضبط شفافية الصورة القديمة.\nاضبط التكبير لتكبير الصورة القديمة.</string>
   <string name="tutorial_take_picture">اضغط على زر الغالق أو اضغط في أي مكان على الشاشة لالتقاط إعادة الصورة.</string>
-  <string name="tutorial_dismiss">حسنا!</string>
+  <string name="tutorial_dismiss">حسنًا!</string>
   <string name="tutorial_dialog_show_again_title">عرض البرنامج التعليمي مرة أخرى؟</string>
-  <string name="tutorial_dialog_show_again_message">يمكنك تشغيل البرنامج التعليمي مرة أخرى من الإعدادات لاحقا</string>
+  <string name="tutorial_dialog_show_again_message">يمكنك تشغيل البرنامج التعليمي مرة أخرى من الإعدادات لاحقًا</string>
   <string name="tutorial_dialog_show_again_no">لا</string>
   <string name="tutorial_dialog_show_again_yes">نعم</string>
   <string name="rephoto_drafts">مسودات إعادة التصوير</string>
