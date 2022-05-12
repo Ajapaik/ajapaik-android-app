@@ -1,0 +1,16 @@
+# Messages for Polish (polski)
+# Exported from translatewiki.net
+# Author: Rail
+# Author: Rainbow P
+# Author: Strebski
+
+title=Ajapaik rephoto
+short-description=Spójrz na punkty widokowe historycznych obrazów i ponownie sfotografuj widoki!
+description.paragraph.1=Aplikacja ponownej fotografii Ajapaik wyświetla historyczne zdjęcia zrobione blisko Ciebie i oferuje łatwy sposób na zrobienie powtórnych zdjęć tych samych widoków.
+description.accuracy.title=Aby refotografia była wygodniejsza
+description.accuracy.bullet.1=* możesz zmienić przezroczystość historycznego obrazu w strumieniu kamery, przesuwając po ekranie
+description.accuracy.bullet.2=* szczypnij powiększenie historycznego obrazu
+description.paragraph.2=W nowej (2018) wersji możesz także przeglądać i przeszukiwać albumy, wyszukiwać konkretne zdjęcia, przeglądać zdjęcia wykonane przez siebie lub innych użytkowników.
+description.paragraph.3=Teraz wersje robocze ponownego zdjęcia można zapisywać, przeglądać i przesyłać do Ajapaik.ee później (na przykład przez wi-fi).
+description.paragraph.4=Aby przesłać refotografię, musisz uwierzytelnić się za pomocą konta Google, Facebook lub konta e-mail.
+description.paragraph.5=Przesyłając fotografie do aplikacji Ajapaik zgadzasz się na publikowanie ich na licencji Creative Commons Attribution (CC BY).

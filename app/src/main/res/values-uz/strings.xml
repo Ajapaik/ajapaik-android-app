@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Malikxan
+-->
+<resources>
+  <string name="please_wait">Iltimos, kuting...</string>
+  <string name="something_went_wrong">Nimadir xato ketdi</string>
+  <string name="notification_channel">Umumiy bildirishnomalar</string>
+  <string name="notification_upload_text">Iltimos, kuting...</string>
+  <string name="action_albums">Albomlar</string>
+  <string name="action_login">Kirish</string>
+  <string name="action_register">Roʻyxatdan oʻtish</string>
+  <string name="action_logout">Chiqish</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Yangilash</string>
+  <string name="action_settings">Sozlamalar</string>
+  <string name="albums_label_no_data">Albomlar yoʻq</string>
+  <string name="albums_title">Albomlar</string>
+  <string name="album_title">Albom</string>
+  <string name="nearest_dialog_error_location_disabled_title">Joylashuv oʻchirilgan</string>
+  <string name="nearest_dialog_error_location_disabled_close">Yopish</string>
+  <string name="nearest_dialog_error_location_disabled_open">Sozlamalarni ochish</string>
+  <string name="photo_title">Foto tafsilotlari</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Facebook hisobi yordamida kirish</string>
+  <string name="profile_google_login">Google hisobi yordamida kirish</string>
+  <string name="profile_logout">Chiqish</string>
+  <string name="profile_login">Kirish</string>
+  <string name="profile_register">Hisob yaratish</string>
+  <string name="input_username_hint">E-pochta</string>
+  <string name="input_password_hint">Maxfiy soʻz</string>
+  <string name="input_firstname_hint">Ism</string>
+  <string name="input_lastname_hint">Familiya</string>
+  <string name="login_title">Kirish</string>
+  <string name="registration_title">Roʻyxatdan oʻtish</string>
+  <string name="upload_dialog_error_connection_retry">Qaytadan</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Nomaʼlum xato</string>
+  <string name="upload_dialog_error_unknown_retry">Qaytadan</string>
+  <string name="upload_dialog_error_unknown_ok">Bekor qilish</string>
+  <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_not_authenticated_ok">OK</string>
+  <string name="upload_dialog_agree_to_terms">Ha!</string>
+  <string name="upload_dialog_decline_terms">Yoʻq</string>
+  <string name="acra_dialog_ok_toast">Rahmat!</string>
+  <string name="about_title">Haqida</string>
+  <string name="version">Versiya</string>
+  <string name="contact">Aloqa</string>
+  <string name="privacy_policy">Maxfiylik</string>
+  <string name="tutorial_dismiss">Tushunarli!</string>
+  <string name="tutorial_dialog_show_again_no">Yoʻq</string>
+  <string name="tutorial_dialog_show_again_yes">Ha</string>
+  <string name="storage_not_permitted_cancel">Bekor qilish</string>
+  <string name="storage_not_permitted_open_settings">Sozlamalarni ochish</string>
+  <string name="action_search">Qidiruv</string>
+  <string name="favorites_label_not_logged_in_button">Kirish</string>
+  <string name="no_search_result">Qidiruv natijalari topilmadi</string>
+  <string name="album_no_data">Fotolar yoʻq</string>
+</resources>
