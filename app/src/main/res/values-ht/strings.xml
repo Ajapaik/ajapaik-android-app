@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* NR Deblocked
+-->
+<resources>
+  <string name="app_name">Ajapaik rephoto</string>
+  <string name="processing_image">Traitement imaj</string>
+  <string name="please_wait">Souple tann…</string>
+  <string name="something_went_wrong">Yon bagay ale mal</string>
+  <string name="notification_channel">Notifikasyon Jeneral</string>
+  <string name="notification_upload_title">Téléchargement rephoto</string>
+  <string name="notification_upload_text">Souple tann…</string>
+  <string name="action_albums">Albòm</string>
+  <string name="action_flip">Flip</string>
+  <string name="action_login">Ouvri sesyon an</string>
+  <string name="action_register">Enskri</string>
+  <string name="action_logout">Dekonekte</string>
+  <string name="action_profile">Profile</string>
+  <string name="action_refresh">Rafrechi</string>
+  <string name="action_settings">Anviwònman</string>
+  <string name="nearest_title">Foto ki tou pre</string>
+  <string name="finna_title">Foto ki tou pre (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Pa gen albòm</string>
+  <string name="albums_title">Albòm</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Kote andikape</string>
+  <string name="nearest_dialog_error_location_disabled_message">Pa kapab jwenn kote aktyèl la. Èske ou ta renmen pèmèt li?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Fèmen</string>
+  <string name="nearest_dialog_error_location_disabled_open">Louvri Anviwònman</string>
+  <string name="nearest_label_no_data">Pa gen foto ki tou pre</string>
+  <string name="nearest_label_no_data_button">Gade albòm pou browse tout imaj</string>
+  <string name="photo_title">Detay foto</string>
+  <string name="camera_title">Kamera</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* NR Deblocked
+-->
+<resources>
+  <string name="app_name">пѣрѣфотографiрование Ажпакъ</string>
+  <string name="please_wait">подождiтѣ...</string>
+  <string name="something_went_wrong">поїти нѣ так нѣкое ѥсть.</string>
+  <string name="notification_channel">главнiѣ сообщѣнiꙗ</string>
+  <string name="notification_upload_title">загроузка пѣрѣфото</string>
+  <string name="notification_upload_text">подождiтѣ....</string>
+  <string name="action_albums">копмьютѣрнъ образовъ собраниѣ</string>
+  <string name="action_login">въниди</string>
+  <string name="action_register">учѭтн запись сотворенѥ</string>
+  <string name="action_logout">вꙑходъ</string>
+  <string name="action_profile">профiль</string>
+  <string name="action_refresh">пѣрѣзагроузка</string>
+  <string name="action_settings">строи</string>
+  <string name="nearest_title">новꙑ компьютѣрны ѿбразꙑ</string>
+  <string name="finna_title">новꙑ компьютѣрны ѿбразꙑ (финн)</string>
+  <string name="albums_label_no_data">сѿбраний компьютѣрнꙑхъ ѿбразовъ нѣт.</string>
+  <string name="albums_title">сѿбраниꙗ компьютѣрнꙑхъ ѿбразовъ</string>
+  <string name="album_title">сѿбраниѥ компьютѣрнꙑхъ ѿбразовъ</string>
+  <string name="nearest_dialog_error_location_disabled_close">ꙁакрꙑи</string>
+  <string name="nearest_dialog_error_location_disabled_open">открыи строи</string>
+  <string name="nearest_label_no_data">Нѣтъ блиꙁнихъ компьютѣрнꙑхъ ѿбразовъ</string>
+  <string name="upload_dialog_success_message">Компьютѣрнъ ѿбразъ прiнꙗт!</string>
+  <string name="upload_dialog_success_ok">окъ</string>
+  <string name="upload_dialog_not_authenticated_title">въїди длꙗ пѣрѣдачи</string>
+  <string name="upload_dialog_not_authenticated_message">пѣрѣпослꙑлъ на Польꙃєватєлꙗ члѣн</string>
+  <string name="upload_dialog_not_authenticated_ok">окъ</string>
+  <string name="upload_dialog_not_agreed_to_terms">Аꙁь согласѣнъ на дѿступъ по условиꙗм CC BY 4.0./Ⰰꙁⱐ ⱄⱁⰳⰾⰰⱄѣⱀⱏ ⱀⰰ ⰴѿⱄⱅⱆⱂⱏ ⱂⱁ ⱆⱄⰾⱁⰲⰺꙗⰿ CC BY 4.0.</string>
+  <string name="upload_dialog_agree_to_terms">Да!</string>
+  <string name="upload_dialog_decline_terms">Нѣтъ</string>
+  <string name="about_title">О</string>
+  <string name="version">Номѣр ѿбраза программꙑ</string>
+  <string name="contact">Свꙗꙁь</string>
+</resources>
