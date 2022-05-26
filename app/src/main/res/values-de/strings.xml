@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Brettchenweber
 * Killarnee
 * ManuelFranz
 * Metalhead64
@@ -64,7 +65,7 @@
   <string name="upload_dialog_error_connection_retry">Nochmal</string>
   <string name="upload_dialog_error_connection_ok">Okay</string>
   <string name="upload_dialog_error_unknown_title">Unbekannter Fehler</string>
-  <string name="upload_dialog_error_unknown_message">Hochladen nicht erfolgreich.</string>
+  <string name="upload_dialog_error_unknown_message">Hochladen des Fotos nicht erfolgreich.</string>
   <string name="upload_dialog_error_unknown_retry">Nochmal</string>
   <string name="upload_dialog_error_unknown_ok">Abbrechen</string>
   <string name="upload_dialog_process_title">Hochladen des Fotos im Hintergrund</string>
