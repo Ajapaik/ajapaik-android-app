@@ -45,10 +45,10 @@
   <string name="input_firstname_hint">Nameyo sıfteyên</string>
   <string name="input_lastname_hint">Nameyo peyên</string>
   <plurals name="profile_rephotos">
-    <item quantity="one">&lt;b&gt;1&lt;/b&gt; reyna fotoğraf</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; reyna fotoğrafi</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; reyna fotrafkerdış</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; reyna fotrafkerdış</item>
   </plurals>
-  <string name="profile_no_rephotos">Hewna refotoyê şıma çıniyo</string>
+  <string name="profile_no_rephotos">Hewna reyna fotrafkerdışê şıma çıniyo</string>
   <string name="login_title">Cıkewtış</string>
   <string name="login_failed">Cıkewtış hewl bi</string>
   <string name="wrong_password">Parolaya ğelete!</string>
