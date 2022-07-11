@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Yupik
+-->
+<resources>
+  <string name="please_wait">Vueʹrddsââʹst...</string>
+  <string name="notification_upload_text">Vueʹrddsââʹst...</string>
+  <string name="action_login">Ǩeeʹrjtõõđ sizz</string>
+  <string name="action_logout">Ǩeeʹrjtõõđ åålǥas</string>
+  <string name="action_settings">Asetõõzz</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="nearest_dialog_error_location_disabled_open">Ääʹved asetõõzzid</string>
+  <string name="camera_title">Sniimmâm-mašina</string>
+  <string name="profile_facebook_login">Ǩeeʹrjtõõđ sizz Facebookin</string>
+  <string name="profile_logout">Ǩeeʹrjtõõđ åålǥas</string>
+  <string name="profile_login">Ǩeeʹrjtõõđ sizz</string>
+  <string name="profile_register">Raaj tobdldõõǥǥ</string>
+  <string name="input_username_hint">E-pååʹšt</string>
+  <string name="input_password_hint">Peittsääʹnn</string>
+  <string name="input_firstname_hint">Risttnõmm</string>
+  <string name="input_lastname_hint">Sokknõmm</string>
+  <string name="login_title">Ǩeeʹrjtõõđ sizz</string>
+  <string name="upload_dialog_process_message">Vueʹrddsââʹst...</string>
+  <string name="acra_dialog_title">\'Ajapaik\' lij kåmman</string>
+  <string name="acra_dialog_ok_toast">Späʹsseb!</string>
+  <string name="about_title">Teâđ</string>
+  <string name="version">Versio</string>
+  <string name="contact">Õhttvuõđteâđ</string>
+  <string name="privacy_policy">Teâttsuejjčiõʹlǧǧõs</string>
+  <string name="storage_not_permitted_open_settings">Ääʹved asetõõzzid</string>
+  <string name="action_search">Ooccmõš</string>
+  <string name="favorites_label_not_logged_in_button">Ǩeeʹrjtõõđ sizz</string>
+  <string name="no_search_result">Ni mâiʹd ij käunnʼjam</string>
+</resources>
