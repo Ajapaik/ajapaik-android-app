@@ -14,11 +14,14 @@
   <string name="action_logout">Դուրս գալ</string>
   <string name="action_refresh">Թարմացնել</string>
   <string name="action_settings">Կարգավորումներ</string>
+  <string name="nearest_title">Լուսանկարները մոտակայքում</string>
+  <string name="finna_title">Լուսանկարներ մոտակայքում (Ֆիննա)</string>
   <string name="albums_label_no_data">Ալբոմներ չկան</string>
   <string name="albums_title">Ալբոմներ</string>
   <string name="album_title">Ալբոմ</string>
   <string name="nearest_dialog_error_location_disabled_close">Փակել</string>
   <string name="nearest_dialog_error_location_disabled_open">Բացել կարգավորումները</string>
+  <string name="camera_title">Տեսախցիկ</string>
   <string name="profile_facebook_login">Մուտք գործել Ֆեյսբուքի միջոցով</string>
   <string name="profile_google_login">Մուտք գործել Գուգլի միջոցով</string>
   <string name="profile_logout">Դուրս գալ</string>
@@ -29,6 +32,7 @@
   <string name="input_firstname_hint">Անուն</string>
   <string name="input_lastname_hint">Ազգանուն</string>
   <string name="login_title">Մուտք</string>
+  <string name="login_failed">Մուտքն անհաջող է</string>
   <string name="registration_title">Գրանցում</string>
   <string name="upload_dialog_error_connection_retry">Կրկնել</string>
   <string name="upload_dialog_error_connection_ok">Լավ</string>
