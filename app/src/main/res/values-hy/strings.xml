@@ -21,6 +21,8 @@
   <string name="album_title">Ալբոմ</string>
   <string name="nearest_dialog_error_location_disabled_close">Փակել</string>
   <string name="nearest_dialog_error_location_disabled_open">Բացել կարգավորումները</string>
+  <string name="nearest_label_no_data">Մոտակայքում լուսանկարներ չկան</string>
+  <string name="photo_title">Լուսանկարի մանրամասները</string>
   <string name="camera_title">Տեսախցիկ</string>
   <string name="profile_facebook_login">Մուտք գործել Ֆեյսբուքի միջոցով</string>
   <string name="profile_google_login">Մուտք գործել Գուգլի միջոցով</string>
@@ -34,9 +36,12 @@
   <string name="login_title">Մուտք</string>
   <string name="login_failed">Մուտքն անհաջող է</string>
   <string name="registration_title">Գրանցում</string>
+  <string name="upload_dialog_error_connection_title">Միացման սխալ</string>
+  <string name="upload_dialog_error_connection_message">Չհաջողվեց վերբեռնել լուսանկարը։</string>
   <string name="upload_dialog_error_connection_retry">Կրկնել</string>
   <string name="upload_dialog_error_connection_ok">Լավ</string>
   <string name="upload_dialog_error_unknown_title">Անհայտ սխալ</string>
+  <string name="upload_dialog_error_unknown_message">Չհաջողվեց վերբեռնել լուսանկարը։</string>
   <string name="upload_dialog_error_unknown_retry">Կրկին փորձել</string>
   <string name="upload_dialog_error_unknown_ok">Չեղարկել</string>
   <string name="upload_dialog_process_message">Խնդրում ենք սպասել...</string>
@@ -45,7 +50,9 @@
   <string name="upload_dialog_agree_to_terms">Այյո</string>
   <string name="upload_dialog_decline_terms">Ոչ</string>
   <string name="acra_dialog_ok_toast">Շնորհակալություն</string>
+  <string name="about_title">Նախագծի մասին</string>
   <string name="version">Տարբերակ</string>
+  <string name="contact">Հետադարձ կապ</string>
   <string name="privacy_policy">Գաղտնիություն</string>
   <string name="tutorial_dismiss">Հասկանալի է</string>
   <string name="tutorial_dialog_show_again_no">Ոչ</string>
