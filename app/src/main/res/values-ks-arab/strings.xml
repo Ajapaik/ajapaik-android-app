@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Tajamul9
+-->
+<resources>
+  <string name="app_name">آجاپیک رِفوٹو</string>
+  <string name="processing_image">در عمل تصویٖر</string>
+  <string name="please_wait">مہربٲنی کرتھ کٕریٚو صبر...</string>
+  <string name="something_went_wrong">کیٚنٛہہ تام گو غَلط</string>
+  <string name="notification_channel">عمومی اطلاعات</string>
+  <string name="notification_upload_title">ریپوٹو چھ اپلوڈ گژھان</string>
+  <string name="notification_upload_text">مہربٲنی کرتھ کٕریٚو صبر...</string>
+  <string name="action_albums">البم</string>
+  <string name="action_flip">پلٹاو</string>
+  <string name="action_login">دٲخل گژھن</string>
+  <string name="action_register">ریٚجسٹر</string>
+  <string name="action_logout">کھاتہٕ منٛز نؠبر نیرُن</string>
+  <string name="action_profile">پروفائل</string>
+  <string name="action_refresh">تازٕ کٕرو</string>
+  <string name="action_settings">طَرٕز</string>
+  <string name="nearest_title">نزدیٖکی تصویٖرٕ</string>
+  <string name="finna_title">نزدیٖکی تصویٖرٕ (فِنٛنا)</string>
+  <string name="finna1918_title">سِغنی برینٛڈر</string>
+  <string name="albums_label_no_data">کٕہیٲنتہِ اؠلبم نہٕ</string>
+  <string name="albums_title">البم</string>
+  <string name="album_title">البم</string>
+  <string name="nearest_dialog_error_location_disabled_close">بَنٛد</string>
+  <string name="nearest_dialog_error_location_disabled_open">طرٕز کھوٗلیٚو</string>
+  <string name="camera_title">کیمرا</string>
+  <string name="profile_title">پروفائل</string>
+  <string name="profile_facebook_login">فیس بُکس منٛز گژھِیٚو دٲخل</string>
+  <string name="profile_google_login">گوٗگٕلس منٛز گژھِیٚو دٲخل</string>
+  <string name="profile_logout">کھاتہٕ منٛز نؠبر نیرُن</string>
+  <string name="profile_login">نوو دٲخل گژھن</string>
+  <string name="profile_register">کھاتہٕ بَنٲیو</string>
+  <string name="input_username_hint">برقی خط</string>
+  <string name="input_password_hint">پاسوٲڈ</string>
+  <string name="input_firstname_hint">گوٚڈٕنیوٚک ناو</string>
+  <string name="input_lastname_hint">ٲخری ناو</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; رِفوٹو</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/br رِفوٹوز</item>
+  </plurals>
+  <string name="profile_no_rephotos">توۆہِہ چُھونہٕ وُنہِ رِفوٹوز بنٲوِمٕتی کِہینتہٕ</string>
+  <string name="login_title">دٲخل گژھن</string>
+  <string name="login_failed">داخلہٕ ناکام۔</string>
+  <string name="wrong_password">غلط پاسوأرڈ!</string>
+  <string name="registration_title">ریٚجسٹر</string>
+</resources>
