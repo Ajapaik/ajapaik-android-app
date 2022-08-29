@@ -2,6 +2,7 @@
 <!-- Authors:
 * Fulup
 * Gwenn-Ael
+* Huñvreüs
 -->
 <resources>
   <string name="app_name">Ajapaik liestennañ</string>
@@ -74,7 +75,7 @@
   <string name="upload_dialog_agree_to_terms">Ya !</string>
   <string name="upload_dialog_decline_terms">Ket</string>
   <string name="upload_notification_title">Enporhziañ an adskeudenn. Un tamm amzer a c\'hall mont gant se.</string>
-  <string name="upload_notification_success">Enporzhiet eo bet an adkseudenn ervat.</string>
+  <string name="upload_notification_success">Pellgaset eo bet an adkseudenn ervat.</string>
   <string name="upload_notification_failure">N\'eus ket bet gallet enporzhiañ an adskeudenn</string>
   <string name="acra_dialog_title">\'Ajapaik liestennañ\' zo sac\'het</string>
   <string name="acra_dialog_text">Ur fazi dic\'hortoz zo bet ha rediet eo bet an arload da baouez. Sikourit ac\'hanomp da reizhañ an dra-se en ur gas roadennoù ar fazi deomp. An dra nemetañ ho peus d\'ober eo klikañ war Kas.</string>

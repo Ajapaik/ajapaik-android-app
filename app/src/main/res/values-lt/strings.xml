@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Eitvys200
+* Pavel1513
 -->
 <resources>
+  <string name="app_name">Ajapaik rephoto</string>
   <string name="processing_image">Paveikslėlis apdorojamas</string>
   <string name="please_wait">Prašome palaukti...</string>
   <string name="something_went_wrong">Kažkas nutiko ne taip</string>
   <string name="notification_channel">Bendri Pranešimai</string>
+  <string name="notification_upload_title">Atsisiųsti \"rephoto\"</string>
   <string name="notification_upload_text">Prašome palaukti...</string>
   <string name="action_albums">Albumai</string>
   <string name="action_flip">Apversti</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Bada Kaji
 * सरोज कुमार ढकाल
 * हिमाल सुबेदी
 -->
@@ -16,7 +17,7 @@
   <string name="action_logout">लगआउट गर्नुहोस्</string>
   <string name="action_profile">प्रोफाइल</string>
   <string name="action_refresh">ताजा गर्नुहोस्</string>
-  <string name="action_settings">सेटिङहरू</string>
+  <string name="action_settings">मेरो अभिरुचिहरू</string>
   <string name="nearest_title">नजिकैका फोटोहरू</string>
   <string name="finna_title">नजिकैका फोटोहरू (Finna)</string>
   <string name="finna1918_title" fuzzy="true">नजिकैका फोटोहरू (1918)</string>
