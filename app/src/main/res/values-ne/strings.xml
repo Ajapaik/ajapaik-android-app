@@ -28,7 +28,7 @@
   <string name="nearest_dialog_error_location_disabled_title">स्थान अक्षम पारिएको</string>
   <string name="nearest_dialog_error_location_disabled_message">हालको स्थान प्राप्त गर्न असक्षम । के यसलाई सक्षम पार्न चाहनुहुन्छ?</string>
   <string name="nearest_dialog_error_location_disabled_close">बन्द गर्ने</string>
-  <string name="nearest_dialog_error_location_disabled_open">सेटिङ्गहरू खोल्नुहोस्</string>
+  <string name="nearest_dialog_error_location_disabled_open">अभिरुचिहरू खोल्नुहोस्</string>
   <string name="nearest_label_no_data">नजिकैका फोटोहरू छैनन्</string>
   <string name="photo_title">फोटो विवरण</string>
   <string name="camera_title">क्यामेरा</string>
