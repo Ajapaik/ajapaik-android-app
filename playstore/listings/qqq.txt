@@ -3,6 +3,7 @@
 # Author: Amire80
 # Author: Awangba Mangang
 # Author: McDutchie
+# Author: Mirzali
 # Author: Puik
 
 title=Name of the app in Google Play Store.\nShould be the same as {{msg-ajapaik|strings-app name}}.
