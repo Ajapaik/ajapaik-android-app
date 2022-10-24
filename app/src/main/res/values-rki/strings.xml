@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Cakkaparla
 * Tejoebāsa
+* YaThaWinTha
 -->
 <resources>
   <string name="app_name">Ajapaik ဓာတ်ပုံ</string>
   <string name="processing_image">လုပ်ဆောင်နီရေပုံ</string>
-  <string name="please_wait">ကျေးဇူးပြီးပြီကေ စောင့်ပါ...</string>
+  <string name="please_wait">ကျေးဇူးပြုလို့ တနားချေစောင့်ပါ...</string>
   <string name="something_went_wrong">တစ်ခုခုမှားလားရေ</string>
   <string name="notification_channel">အထွေထွေသတိပီးချက်တိ</string>
   <string name="notification_upload_title">ဓာတ်ပုံကို အပ်လုဒ်လုပ်နီရေ</string>
   <string name="notification_upload_text">ကျေးဇူးပြုပြီး‌ကေတနား‌ချေစောင့်ပါ…</string>
   <string name="action_albums">အယ်လ်ဘမ်တိ</string>
-  <string name="action_flip">လှန်ပါ။</string>
+  <string name="action_flip">လှန်ပါ</string>
   <string name="action_login">လော့ဂ်အင်</string>
-  <string name="action_register">မှတ်ပုံတင်ပါ။</string>
-  <string name="action_logout">ထွက်လိုက်ပါ။</string>
+  <string name="action_register">မှတ်ပုံတင်ရဖို့</string>
+  <string name="action_logout">ထွက်ပလိုက်ပါ</string>
   <string name="action_profile">ကိုယ်ရေးအကျဉ်း</string>
   <string name="action_refresh">ပြန်ပြီး‌ကေစတင်ပါ။</string>
   <string name="action_settings">ဆက်တင်တိ</string>
@@ -39,37 +41,37 @@
   <string name="profile_login">၀င်ရောက်ပါ</string>
   <string name="profile_register">အကောင့် ဖန်တီးပါ</string>
   <string name="input_username_hint">အီးမေးလ်</string>
-  <string name="input_password_hint">ပစဝါး</string>
+  <string name="input_password_hint">စကားဝှက်တိ</string>
   <string name="input_firstname_hint">ပထမနာမည်</string>
   <string name="input_lastname_hint">နောက်ဆုံးနာမည်</string>
   <string name="profile_rephotos">{{PLURAL|one=&lt;b&gt;1&lt;/b&gt; rephoto|&lt;b&gt;%1$d&lt;/b&gt; rephotos}</string>
-  <string name="profile_no_rephotos">သင်သည် ပြန်လည်ဓာတ်ပုတိ မပြုလုပ်ရသ်ိပါ</string>
+  <string name="profile_no_rephotos">မင်းစွာ ပြန်လို့ဓာတ်တ်ပုံတိ မလုပ်ရသ်ိပါ</string>
   <string name="login_title">လောဂ်အင်</string>
-  <string name="login_failed">အကောင့်ဝင်စော် မအောင်မြင်ပါ။</string>
+  <string name="login_failed">အကောင့်ဝင်စာ မအောင်မြင်ပါ</string>
   <string name="wrong_password">ပစဝါး မှားရေ</string>
-  <string name="registration_title">မှတ်ပုံတင်ပါ။</string>
+  <string name="registration_title">မှတ်ပုံတင်ရဖို့</string>
   <string name="user_already_exists">အသုံးပြုသူနာမည် ဟိမ့်နီပြီးဖြစ်တေ</string>
-  <string name="upload_title">ဓာတ်ပုံကို အတည်ပြုပါ။</string>
+  <string name="upload_title">ဓာတ်ပုံတိကို အတီပြုပါ</string>
   <string name="upload_dialog_error_connection_title">ချိတ်ဆက်မှုအမှား</string>
   <string name="upload_dialog_error_connection_message">ဓာတ်ပုံကို အပ်လုဒ်လုပ်လို့မရပါ။</string>
   <string name="upload_dialog_error_connection_retry">ပြန်ပြီးကေကြိုးစားပါ</string>
-  <string name="upload_dialog_error_connection_ok">အဆင်ပြေရေ</string>
+  <string name="upload_dialog_error_connection_ok">အိုခေ</string>
   <string name="upload_dialog_error_unknown_title">နာမည်မသိ အမှား</string>
   <string name="upload_dialog_error_unknown_message">ဓာတ်ပုံကို အပ်လုဒ်လုပ်လို့မရပါ။</string>
   <string name="upload_dialog_error_unknown_retry">ပြန်ပြီးကေကြိုးစားပါ</string>
-  <string name="upload_dialog_error_unknown_ok">ပယ်ဖျက်ပါ</string>
-  <string name="upload_dialog_process_title">ဓာတ်ပုံကို နောက်ခံတွင် တင်ခြင်း။</string>
+  <string name="upload_dialog_error_unknown_ok">မလုပ်ယာ</string>
+  <string name="upload_dialog_process_title">ဓာတ်ပုံကို နောက်ခံမှာ တင်ခြင်း</string>
   <string name="upload_dialog_process_message">ကျေးဇူးပြုပြီးကေ တနားချေစောင့်ပါ...</string>
   <string name="upload_dialog_success_title">အပ်လုဒ် အောင်မြင်ပါဗျာလ်</string>
   <string name="upload_dialog_success_message">ဓာတ်ပုံကို အောင်မြင်စွာ အပ်လုဒ်တင်ပြီးပါဗျာလ်။</string>
-  <string name="upload_dialog_success_ok">အဆင်ပြေရေ</string>
+  <string name="upload_dialog_success_ok">အိုခေ</string>
   <string name="upload_dialog_not_authenticated_title">အပ်လုဒ်လုပ်ဖို့ လော့ဂ်အင်ဝင်ရပါဖို့</string>
   <string name="upload_dialog_not_authenticated_message">ပရိုဖိုင်စာမျက်နှာပသို့ ပြန်ညွှန်းပါ။</string>
-  <string name="upload_dialog_not_authenticated_ok">အဆင်ပြေရေ</string>
-  <string name="upload_dialog_not_agreed_to_terms">CC BY 4.0 လိုင်စင်အရ ပြန်လည်ဓာတ်ပုံတိ ထုတ်ဝီဖို့ သဘောတူပါသည်။</string>
-  <string name="upload_dialog_agree_to_terms">ဟုတ်တေ။</string>
+  <string name="upload_dialog_not_authenticated_ok">အိုခေ</string>
+  <string name="upload_dialog_not_agreed_to_terms">CC BY 4.0 လိုင်စင်အရ ပြန်လို့ဓာတ်ပုံတိကို ထုတ်ဝီဖို့ သဘောတူပါရေ။</string>
+  <string name="upload_dialog_agree_to_terms">ဟုတ်ပါရေ</string>
   <string name="upload_dialog_decline_terms">မဟုတ်</string>
-  <string name="upload_notification_title">ဓာတ်ပုံကို အပ်လုဒ်လုပ်နီပါ‌ရေ။  အချိန်စကေ့ချေ ကြာနိုင်ပါရေ။</string>
+  <string name="upload_notification_title">ဓာတ်ပုံကို အပ်လုဒ်လုပ်နီပါ‌ရေ။  အချိန်တဖေ့ ကြာနိုင်ပါရေ</string>
   <string name="upload_notification_success">ဓာတ်ပုံကို အောင်မြင်စွာ အပ်လုဒ်တင်ပြီးပါဗျာလ်</string>
   <string name="upload_notification_failure">ပြန်လည်ဓာတ်ပုံတင်ခြင်း မအောင်မြင်ပါ</string>
   <string name="acra_dialog_title">\'Ajapaik ပြန်လည်ဓာတ်ပုံ\' ပျက်လားရေ</string>
