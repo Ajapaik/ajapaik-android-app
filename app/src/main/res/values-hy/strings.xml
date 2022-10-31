@@ -3,6 +3,7 @@
 * GeoO
 * Kareyac
 * Դավիթ Սարոյան
+* Սերգեյ Սաֆարյան
 -->
 <resources>
   <string name="please_wait">Խնդրում ենք սպասել...</string>
@@ -58,6 +59,7 @@
   <string name="tutorial_dialog_show_again_no">Ոչ</string>
   <string name="tutorial_dialog_show_again_yes">Այո</string>
   <string name="storage_not_permitted_cancel">Չեղարկել</string>
+  <string name="storage_not_permitted_open_settings">Բացել կարգավորումները</string>
   <string name="action_search">Որոնել</string>
   <string name="favorites_label_not_logged_in_button">Մտնել</string>
 </resources>
