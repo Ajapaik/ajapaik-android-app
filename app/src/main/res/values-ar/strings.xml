@@ -48,7 +48,14 @@
   <string name="input_password_hint">كلمة السر</string>
   <string name="input_firstname_hint">الاسم الأول</string>
   <string name="input_lastname_hint">الاسم الأخير</string>
-  <string name="profile_rephotos" fuzzy="true">{{PLURAL | &lt;b&gt;واحد&lt;/b&gt; = صورة واحدة | &lt;b&gt;%1$d&lt;/b&gt; rephotos}}</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">لا ريبوتو</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; ريبوتو</item>
+    <item quantity="two">ريبوتان</item>
+    <item quantity="few">ريبوتو</item>
+    <item quantity="many">ريبوتو</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ريبوتو</item>
+  </plurals>
   <string name="profile_no_rephotos">لم تقم بإنشاء أية إعادة صور بعد</string>
   <string name="login_title">دخول</string>
   <string name="login_failed">دخول غير ناجح</string>

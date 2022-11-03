@@ -42,7 +42,7 @@
   <string name="profile_register">အကောင့် ဖန်တီးပါ</string>
   <string name="input_username_hint">အီးမေးလ်</string>
   <string name="input_password_hint">စကားဝှက်တိ</string>
-  <string name="input_firstname_hint">ပထမနာမည်</string>
+  <string name="input_firstname_hint">ပထမနာမေ</string>
   <string name="input_lastname_hint">နောက်ဆုံးနာမည်</string>
   <string name="profile_rephotos">{{PLURAL|one=&lt;b&gt;1&lt;/b&gt; rephoto|&lt;b&gt;%1$d&lt;/b&gt; rephotos}</string>
   <string name="profile_no_rephotos">မင်းစွာ ပြန်လို့ဓာတ်တ်ပုံတိ မလုပ်ရသ်ိပါ</string>
@@ -50,7 +50,7 @@
   <string name="login_failed">အကောင့်ဝင်စာ မအောင်မြင်ပါ</string>
   <string name="wrong_password">ပစဝါး မှားရေ</string>
   <string name="registration_title">မှတ်ပုံတင်ရဖို့</string>
-  <string name="user_already_exists">အသုံးပြုသူနာမည် ဟိမ့်နီပြီးဖြစ်တေ</string>
+  <string name="user_already_exists">အသုံးပြုလူနာမည် ဟိမ့်နီပြီးဖြစ်တေ</string>
   <string name="upload_title">ဓာတ်ပုံတိကို အတီပြုပါ</string>
   <string name="upload_dialog_error_connection_title">ချိတ်ဆက်မှုအမှား</string>
   <string name="upload_dialog_error_connection_message">ဓာတ်ပုံကို အပ်လုဒ်လုပ်လို့မရပါ။</string>
@@ -75,7 +75,7 @@
   <string name="upload_notification_success">ဓာတ်ပုံကို အောင်မြင်စွာ အပ်လုဒ်တင်ပြီးပါဗျာလ်</string>
   <string name="upload_notification_failure">ပြန်လည်ဓာတ်ပုံတင်ခြင်း မအောင်မြင်ပါ</string>
   <string name="acra_dialog_title">\'Ajapaik ပြန်လည်ဓာတ်ပုံ\' ပျက်လားရေ</string>
-  <string name="acra_dialog_text">အပလီကေးရှင်းကို ရပ်ခိုင်းဖို့ မျှော်လင့်မထားရေ အမှားတစ်ခု ဖြစ်လခပါရေ။  ကျေးဇူးပြုပြီးကေ ငရို့တိကို အမှားအယွင်းဒေတာ ပီးပို့ခြင်းနန့် ငရို့တိကို ကူညီဖြေရှင်းပီးပါ၊ သင်လုပ်ဆောင်ဖို့ OK ကိုနှိပ်ပါ။</string>
+  <string name="acra_dialog_text">အပလီကေးရှင်းကို ရပ်ခိုင်းဖို့ မျှော်လင့်မထားရေ အမှားတစ်ခု ဖြစ်လခပါရေ။  ကျေးဇူးပြုပြီးကေ ငါရို့တိကို အမှားအယွင်းဒေတာ ပီးပို့ခြင်းနန့် ငါရို့တိကို ကူညီဖြေရှင်းပီးပါ၊ သင်လုပ်ဆောင်ဖို့ OK ကိုနှိပ်ပါ။</string>
   <string name="acra_dialog_comment_prompt">ပြဿနာနန့် ပတ်သက်လို့ သင့်မှတ်ချက်တိကို အောက်တွင် ထည့်သွင်းနိုင်ပါ‌ရေ-</string>
   <string name="acra_dialog_ok_toast">ကျေးဇူးတင်ပါရေ</string>
   <string name="about_title">အကြောင်း</string>
