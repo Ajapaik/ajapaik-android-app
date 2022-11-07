@@ -79,7 +79,7 @@
   <string name="acra_dialog_text">Къошакъны тохтатыуда сакъламанмагъан халат. Аны тюзетиуде бизге болушур ючюн, халатны юсюнден билгилени, ОК тиекге басыб ийигиз.</string>
   <string name="acra_dialog_comment_prompt">Тюбюндеги проблеманы юсюнден оюмларыгъызны къошаргъа боллукъсуз:</string>
   <string name="acra_dialog_ok_toast">Сау бол!</string>
-  <string name="about_title">Ачыкълау</string>
+  <string name="about_title">Юсюнден</string>
   <string name="version">Версия</string>
   <string name="contact">Контакт информация</string>
   <string name="privacy_policy">Конфиденциаллыкъ</string>
