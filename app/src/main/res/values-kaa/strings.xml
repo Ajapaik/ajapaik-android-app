@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Inabat Allanova
+-->
+<resources>
+  <string name="app_name">Ajapaik refoto</string>
+  <string name="processing_image">Súwretke islew beriw</string>
+  <string name="please_wait">Iltimas, kútiń...</string>
+  <string name="something_went_wrong">Qanday da bir zat qáte orınlandı</string>
+  <string name="notification_channel">Ulıwmalıq Eskertpeler</string>
+  <string name="notification_upload_title">Refoto júklenbekte</string>
+  <string name="notification_upload_text">Iltimas, kútiń...</string>
+  <string name="action_albums">Albomlar</string>
+  <string name="action_flip">Flip</string>
+  <string name="action_login">Kiriw</string>
+  <string name="action_register">Dizimnen ótiw</string>
+  <string name="action_logout">Shıǵıw</string>
+  <string name="action_profile">Profil</string>
+  <string name="action_refresh">Jańalaw</string>
+  <string name="action_settings">Sazlamalar</string>
+  <string name="nearest_title">Jaqınındaǵı súwretler</string>
+  <string name="finna_title">Jaqınındaǵı súwretler (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Albomlar joq</string>
+  <string name="albums_title">Albomlar</string>
+  <string name="album_title">Albom</string>
+  <string name="nearest_dialog_error_location_disabled_title">Ornalasıw óshirilgen</string>
+  <string name="nearest_dialog_error_location_disabled_message">Házirgi ornalasıwdı alıw imkansız. Onı iske túsirmekshimisiz?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Jabıw</string>
+  <string name="nearest_dialog_error_location_disabled_open">Sazlamalardı ashıw</string>
+  <string name="nearest_label_no_data">Jaqınında heshqanday súwret joq</string>
+  <string name="nearest_label_no_data_button">Hámme súwretlerdi kórip shıǵıwıńız ushın albomlardı kóriń</string>
+  <string name="photo_title">Súwret maǵlıwmatları</string>
+  <string name="camera_title">Kamera</string>
+  <string name="profile_title">Profil</string>
+  <string name="profile_facebook_login">Facebook esabı arqalı kiriw</string>
+  <string name="profile_google_login">Google esabı arqalı kiriw</string>
+  <string name="profile_logout">Shıǵıw</string>
+  <string name="profile_login">Kiriw</string>
+  <string name="profile_register">Esap betin jaratıw</string>
+  <string name="input_username_hint">E-pochta</string>
+  <string name="input_password_hint">Jasırın sóz</string>
+  <string name="input_firstname_hint">Atı</string>
+  <string name="input_lastname_hint">Familiya</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotolar</item>
+  </plurals>
+  <string name="profile_no_rephotos">Siz ele hesh súwretke túspegensiz</string>
+  <string name="login_title">Kiriw</string>
+  <string name="login_failed">Kiriw ámelge aspadı</string>
+  <string name="wrong_password">Parol qáte!</string>
+  <string name="registration_title">Dizimnen ótiw</string>
+</resources>

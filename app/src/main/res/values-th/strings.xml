@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Aefgh39622
+* Kaoavi
 * Patsagorn Y.
 * Thas Tayapongsak
 * TrisT7
@@ -75,6 +76,9 @@
   <string name="upload_dialog_not_agreed_to_terms">ฉันยินยอมที่จะเผยแพร่รูปภาพที่ปรับแก้ไขใหม่ภายใต้สัญญาอนุญาต CC BY 4.0</string>
   <string name="upload_dialog_agree_to_terms">ใช่!</string>
   <string name="upload_dialog_decline_terms">ไม่</string>
+  <string name="upload_notification_title">กำลังอัปโหลดรูปภาพใหม่ อาจใช้เวลาสักครู่</string>
+  <string name="upload_notification_success">อัปโหลดรูปภาพสำเร็จแล้ว!</string>
+  <string name="upload_notification_failure">อัปโหลดภาพซ้ำไม่สำเร็จ</string>
   <string name="acra_dialog_title">\'Ajapaik rephoto\' ขัดข้อง</string>
   <string name="acra_dialog_text">เกิดข้อผิดพลาดที่ทำให้แอปพลิเคชันต้องหยุดทำงาน กรุณาช่วยเราแก้ปัญหานี้โดยคลิก ตกลง เพื่อส่งข้อมูลความผิดพลาด</string>
   <string name="acra_dialog_comment_prompt">คุณอาจเขียนคำอธิบายเกี่ยวกับปัญหานี้ของคุณหรือไม่ก็ได้ด้านล่างนี้:</string>
@@ -86,6 +90,7 @@
   <string name="navigation_drawer_open">เปิดรูปภาพ</string>
   <string name="navigation_drawer_close">ปิดรูปภาพ</string>
   <string name="settings_show_tutorial">แสดงบทช่วยสอนในโหมด rephoto</string>
+  <string name="settings_show_map_by_default">แสดงแผนที่โดยค่าเริ่มต้น</string>
   <string name="settings_agree_to_license_terms">ฉันยินยอมที่จะเผยแพร่รูปภาพที่ปรับแก้ไขใหม่บน Ajapaik.ee ภายใต้สัญญาอนุญาต CC BY 4.0</string>
   <string name="tutorial_hide_show_flip">แตะเพื่อซ่อน/แสดงรูปภาพ\nแตะไอคอนพลิกที่อยู่มุมขวาบนเพื่อพลิกรูปภาพเก่า</string>
   <string name="tutorial_opacity_zoom">เลื่อนเพื่อปรับความโปร่งใสของรูปภาพเก่า\nจีบนิ้วเพื่อซูมรูปภาพเก่า</string>
