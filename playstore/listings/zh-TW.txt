@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Author: Kly
 # Author: Weather Top Wizard
+# Author: 捍粵者
 
 title=Ajapaik rephoto
 short-description=觀看歷史性圖片的精彩內容並翻拍！
@@ -10,6 +11,6 @@ description.accuracy.title=讓翻拍照片更方便
 description.accuracy.bullet.1=* 您可以透過沿著螢幕滑動，來更改在您相機串流裡歷史性圖片的透明度
 description.accuracy.bullet.2=* 兩指觸控來縮放歷史性圖片
 description.paragraph.2=在（2018）新版本中，您可以瀏覽並搜尋相簿、搜尋特定圖片，以及檢視透過您或其他人所作出的翻拍照片。
-description.paragraph.3=翻拍照片草稿現可於事後來儲存、瀏覽，以及上傳到 Ajapaik.ee 裡（例如透過 wi-fi）。
+description.paragraph.3=翻拍照片草稿現可於事後儲存、瀏覽，以及上載到Ajapaik.ee（例如以wifi上載）。
 description.paragraph.4=要上傳的翻拍照片，您必須以電子郵件為名的帳號、或是 Google、Facebook 的帳號來驗證。
 description.paragraph.5=依據上傳翻拍內容至 Ajapaik 的行為，表示您同意以創用 CC 姓名標示（CC BY）授權條款來釋出圖片。
