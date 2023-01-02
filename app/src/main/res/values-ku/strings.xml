@@ -2,6 +2,7 @@
 <!-- Authors:
 * Bikarhêner
 * Ghybu
+* Guherto
 * Mirzali
 -->
 <resources>
@@ -55,7 +56,7 @@
   <string name="upload_title">Dîsa fotografkirin</string>
   <string name="upload_dialog_error_connection_title">Çewtiya girêdanê</string>
   <string name="upload_dialog_error_connection_message">Wêne nekare were barkirin.</string>
-  <string name="upload_dialog_error_connection_retry">Dîsa bicerribîne</string>
+  <string name="upload_dialog_error_connection_retry">Dîsa biceribîne</string>
   <string name="upload_dialog_error_connection_ok">TEMAM</string>
   <string name="upload_dialog_error_unknown_title">Çewtiyek nenas</string>
   <string name="upload_dialog_error_unknown_message">Wêne nekarî bihatiya barkirin.</string>

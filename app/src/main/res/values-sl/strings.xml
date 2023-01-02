@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Eleassar
+-->
+<resources>
+  <string name="processing_image">Obdelovanje slike</string>
+  <string name="please_wait">Prosimo, počakajte ...</string>
+  <string name="something_went_wrong">Nekaj je šlo narobe</string>
+  <string name="notification_upload_text">Prosimo, počakajte ...</string>
+  <string name="action_login">Prijava</string>
+  <string name="action_refresh">Osveži</string>
+  <string name="action_settings">Nastavitve</string>
+  <string name="nearest_dialog_error_location_disabled_title">Lokacija onemogočena</string>
+  <string name="nearest_dialog_error_location_disabled_close">Zapri</string>
+  <string name="profile_logout">Odjava</string>
+  <string name="profile_register">Ustvari račun</string>
+  <string name="input_password_hint">Geslo</string>
+  <string name="upload_dialog_error_connection_title">Napaka povezave</string>
+  <string name="upload_dialog_error_connection_ok">V redu</string>
+  <string name="upload_dialog_error_unknown_title">Neznana napaka</string>
+  <string name="upload_dialog_error_unknown_ok">Prekliči</string>
+  <string name="upload_dialog_process_message">Prosimo, počakajte ...</string>
+  <string name="upload_dialog_not_authenticated_title">Za nalaganje morate biti prijavljeni.</string>
+  <string name="upload_dialog_not_authenticated_ok">V redu</string>
+  <string name="upload_dialog_agree_to_terms">Da!</string>
+  <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="acra_dialog_ok_toast">Hvala!</string>
+  <string name="version">Različica</string>
+  <string name="contact">Stik</string>
+  <string name="privacy_policy">Zasebnost</string>
+  <string name="tutorial_dismiss">Razumem!</string>
+  <string name="tutorial_dialog_show_again_no">Ne</string>
+  <string name="tutorial_dialog_show_again_yes">Da</string>
+  <string name="storage_not_permitted_cancel">Prekliči</string>
+  <string name="action_search">Išči</string>
+</resources>
