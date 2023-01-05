@@ -1,0 +1,14 @@
+# Messages for Slovenian (slovenščina)
+# Exported from translatewiki.net
+# Author: Eleassar
+
+title=Ajapaik rephoto
+short-description=Oglejte si gledišča zgodovinskih slik in znova fotografirajte poglede!
+description.paragraph.1=Aplikacija Ajapaik rephoto prikazuje zgodovinske slike, posnete v vaši bliži, in vam ponuja preprosto možnost za ponovni posnetek istih pogledov.
+description.accuracy.title=Za lažje refotografiranje
+description.accuracy.bullet.1=* Na toku vašega fotoaparata lahko z drsenjem vzdolž zaslona spreminjate prosojnost zgodovinske slike.
+description.accuracy.bullet.2=* S približanjem prstov lahko zgodovinsko sliko povečate.
+description.paragraph.2=V novi različic (2018) lahko tudi brskate po albumih in jih pregledujete, iščete posamezno sliko ter si ogledujete lastne refotografije in refotografije drugih.
+description.paragraph.3=Zdaj lahko osnutke refotografij shranite in brskate po njih ter jih pozneje naložite na Ajapaik.ee (npr. prek Wi-Fi-ja).
+description.paragraph.4=Za nalaganje refotografij se morate avtenticirati z Googlom ali Facebookom ali računom s potrjenim e-poštnim naslovom.
+description.paragraph.5=Z nalaganjem refotografij v Ajapaik soglašate z objavo slik pod licenco Creative Commons Pripis avtorstva (CC BY).
