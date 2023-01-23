@@ -11,7 +11,7 @@
   <string name="something_went_wrong">Tayê çi ğelet şi</string>
   <string name="notification_channel">Pêhesnayışê Umumiyi</string>
   <string name="notification_upload_title">Resım reyna bar beno</string>
-  <string name="notification_upload_text">Kerem kerên, bıpawên...</string>
+  <string name="notification_upload_text">Kerem ke, bıpawe...</string>
   <string name="action_albums">Albumi</string>
   <string name="action_flip">Bıçarne</string>
   <string name="action_login">Cıkewtış</string>
@@ -35,7 +35,7 @@
   <string name="photo_title">Melumatê fotrafi</string>
   <string name="camera_title">Kamera</string>
   <string name="profile_title">Profil</string>
-  <string name="profile_facebook_login">Ebe Facebook ra cıkewê</string>
+  <string name="profile_facebook_login">Ebe Facebook ra cıkewe</string>
   <string name="profile_google_login">Ebe Google ra cıkewe</string>
   <string name="profile_logout">Veciyayış</string>
   <string name="profile_login">Cı kewe</string>
