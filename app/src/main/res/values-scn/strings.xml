@@ -33,8 +33,10 @@
   <string name="login_title">Trasi</string>
   <string name="wrong_password">Password sbagghiata!</string>
   <string name="user_already_exists">Lu nomu utenti già esisti</string>
+  <string name="upload_dialog_error_connection_retry">Ripruva</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
   <string name="upload_dialog_error_unknown_title">Erruri scanusciutu</string>
+  <string name="upload_dialog_error_unknown_retry">Ripruva</string>
   <string name="upload_dialog_error_unknown_ok">Annulla</string>
   <string name="upload_dialog_process_message">Aspittari pregu...</string>
   <string name="upload_dialog_success_ok">OK</string>

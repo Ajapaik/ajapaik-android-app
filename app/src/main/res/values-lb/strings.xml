@@ -2,6 +2,7 @@
 <!-- Authors:
 * Robby
 * Soued031
+* Volvox
 -->
 <resources>
   <string name="app_name">Ajapaik Refoto</string>
@@ -9,6 +10,7 @@
   <string name="please_wait">Waart wgl. ...</string>
   <string name="something_went_wrong">Et ass eppes schif gaangen</string>
   <string name="notification_channel">Allgemeng Notifikatiounen</string>
+  <string name="notification_upload_title">Refoto eroplueden</string>
   <string name="notification_upload_text">Waart wgl. ...</string>
   <string name="action_albums">Albumen</string>
   <string name="action_flip">Kippen</string>
@@ -38,11 +40,13 @@
   <string name="input_password_hint">Passwuert</string>
   <string name="input_firstname_hint">Virnumm</string>
   <string name="input_lastname_hint">Familljennumm</string>
+  <string name="profile_no_rephotos">Dir hutt nach keng Refotoe gemaach</string>
   <string name="login_title">Aloggen</string>
   <string name="login_failed">Aloggen huet net funktionéiert</string>
   <string name="wrong_password">Falscht Passwuert</string>
   <string name="registration_title">Registréieren</string>
   <string name="user_already_exists">Benotzernumm gëtt et schonn</string>
+  <string name="upload_title">Refoto bestätegen</string>
   <string name="upload_dialog_error_connection_title">Verbindungsfeeler</string>
   <string name="upload_dialog_error_connection_message">D\'Foto konnt net eropgeluede ginn.</string>
   <string name="upload_dialog_error_connection_retry">Nach eng Kéier probéieren</string>
@@ -60,6 +64,10 @@
   <string name="upload_dialog_not_authenticated_ok">OK</string>
   <string name="upload_dialog_agree_to_terms">Jo!</string>
   <string name="upload_dialog_decline_terms">Neen</string>
+  <string name="upload_notification_title">Refoto gëtt eropgelueden. Dat kann eng Zäitchen daueren</string>
+  <string name="upload_notification_success">Refoto erfollegräich eropgelueden</string>
+  <string name="upload_notification_failure">Eropluede vun der Refoto feelgeschloen</string>
+  <string name="acra_dialog_title">\'Ajapaik Refoto\' ass ofgestierzt</string>
   <string name="acra_dialog_ok_toast">Merci!</string>
   <string name="about_title">Iwwer</string>
   <string name="version">Versioun</string>
@@ -71,13 +79,17 @@
   <string name="tutorial_dismiss">Verstanen!</string>
   <string name="tutorial_dialog_show_again_no">Neen</string>
   <string name="tutorial_dialog_show_again_yes">Jo</string>
+  <string name="no_rephotos">Keng Refotoen</string>
   <string name="storage_not_permitted_cancel">Ofbriechen</string>
   <string name="storage_not_permitted_open_settings">Astellungen opmaachen</string>
+  <string name="my_rephotos">Meng Refotoen</string>
+  <string name="rephotos_label_not_logged_in_text">Mellt Iech wgl. u fir Är Refotoen ze gesinn</string>
   <string name="action_search">Sichen</string>
   <string name="favorites">Meng Favoritten</string>
   <string name="no_favorites">Keng Favoritten</string>
   <string name="action_favorite">Favorit</string>
   <string name="favorites_label_not_logged_in_button">Umellen</string>
+  <string name="favorites_label_not_logged_in_text">Mellt Iech wgl. u fir Är Favoritten ze gesinn</string>
   <string name="no_search_result">Näischt fonnt</string>
   <string name="album_no_data">Keng Fotoen</string>
   <string name="start_taking_rephoto">Ufänken eng Re-Foto ze maachen</string>
