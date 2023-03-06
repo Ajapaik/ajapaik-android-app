@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Iflaq
 * Tajamul9
 -->
 <resources>
   <string name="app_name">آجاپیک رِفوٹو</string>
   <string name="processing_image">در عمل تصویٖر</string>
-  <string name="please_wait">مہربٲنی کرتھ کٕریٚو صبر...</string>
+  <string name="please_wait">مہربٲنی کرتھ کٔرِو صبر...</string>
   <string name="something_went_wrong">کیٚنٛہہ تام گو غَلط</string>
   <string name="notification_channel">عمومی اطلاعات</string>
   <string name="notification_upload_title">ریپوٹو چھ اپلوڈ گژھان</string>
-  <string name="notification_upload_text">مہربٲنی کرتھ کٕریٚو صبر...</string>
+  <string name="notification_upload_text">مہربٲنی کرتھ کٔرِو صبر...</string>
   <string name="action_albums">البم</string>
   <string name="action_flip">پلٹاو</string>
   <string name="action_login">دٲخل گژھن</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Eldarado
 * Şeyx Şamil
 -->
 <resources>
@@ -31,6 +32,7 @@
   <string name="user_already_exists">İstifadəçi adı artıq mövcuddur</string>
   <string name="upload_dialog_error_connection_retry">Yenidən cəhd edin</string>
   <string name="upload_dialog_error_unknown_title">Naməlum xəta</string>
+  <string name="contact">Əlaqə</string>
   <string name="tutorial_dialog_show_again_no">Xeyr</string>
   <string name="tutorial_dialog_show_again_yes">Bəli</string>
 </resources>
