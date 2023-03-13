@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* JSantos
+* Joao Xavier
+-->
+<resources>
+  <string name="app_name">Ajapaik – fotografuro ante, e nun</string>
+  <string name="processing_image">Traktanta imajo</string>
+  <string name="please_wait">Voluntez vartar...</string>
+  <string name="something_went_wrong">Ulu faliis</string>
+  <string name="notification_channel">Ordinara avizi</string>
+  <string name="notification_upload_title">Sendanta nova fotografuro</string>
+  <string name="notification_upload_text">Voluntez vartar...</string>
+  <string name="action_albums">Albumi</string>
+  <string name="action_flip">Inversigez</string>
+  <string name="action_login">Eniro</string>
+  <string name="action_register">Enrejistrez</string>
+  <string name="action_logout">Ekirar</string>
+  <string name="action_profile">Profilo</string>
+  <string name="action_refresh">Rinovigar</string>
+  <string name="action_settings">Preferaji</string>
+  <string name="nearest_title">Fotografuri proxima</string>
+  <string name="finna_title">Fotografuri proxima (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Nula albumi</string>
+  <string name="albums_title">Albumi</string>
+  <string name="album_title">Albumo</string>
+  <string name="nearest_dialog_error_location_disabled_close">Klozez</string>
+  <string name="profile_title">Profilo</string>
+  <string name="profile_register">Krear konto</string>
+  <string name="upload_dialog_error_unknown_ok">Nuligar</string>
+  <string name="upload_dialog_process_message">Voluntez vartar...</string>
+  <string name="upload_dialog_success_ok">O.K.</string>
+  <string name="upload_dialog_not_authenticated_title">Mustas facar \'\'log in\'\' por sendar</string>
+  <string name="upload_dialog_not_authenticated_message">Irar a profilo-pagino</string>
+  <string name="upload_dialog_not_authenticated_ok">O.K.</string>
+  <string name="upload_dialog_not_agreed_to_terms">Me aceptas publikigar nova fotografuri sub licenco CC BY 4.0.</string>
+  <string name="upload_dialog_agree_to_terms">Yesǃ</string>
+  <string name="upload_dialog_decline_terms">No</string>
+  <string name="upload_notification_title">Sendanta nova fotografuro. Povas tardigar kelke</string>
+  <string name="upload_notification_success">Suceso pri sendar nova fotografuro</string>
+  <string name="acra_dialog_ok_toast">Danko!</string>
+  <string name="about_title">Pri</string>
+  <string name="version">Versiono</string>
+  <string name="contact">Kontakto</string>
+  <string name="privacy_policy">Privateso</string>
+  <string name="tutorial_dismiss">Me komprenis!</string>
+  <string name="tutorial_dialog_show_again_title">Montrez itere *tutorialo?</string>
+  <string name="tutorial_dialog_show_again_no">No</string>
+  <string name="tutorial_dialog_show_again_yes">Yes</string>
+  <string name="storage_not_permitted_cancel">Nuligar</string>
+  <string name="action_search">Serchez</string>
+  <string name="album_no_data">Nula fotografuro</string>
+  <string name="start_taking_rephoto">Komencez facanta nova fotografuro</string>
+  <string name="show_photo_details">Montrez detali de la fotografuro</string>
+  <string name="show_rephotos">Montrez nova fotografuri</string>
+</resources>
