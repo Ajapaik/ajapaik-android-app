@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* MRidhaAJ
+-->
+<resources>
+  <string name="app_name">أجابيك لإعادة التصوير</string>
+  <string name="processing_image">معالجة الصورة</string>
+  <string name="please_wait">تاني شوية...</string>
+  <string name="something_went_wrong">صار شي غلط</string>
+  <string name="notification_channel">إشعارات عامة</string>
+  <string name="notification_upload_text">تاني شوية...</string>
+  <string name="action_albums">ألبومات</string>
+  <string name="action_flip">گلب</string>
+  <string name="action_login">إفتح حساب</string>
+  <string name="action_register">سجل حساب</string>
+  <string name="action_logout">سد الحساب</string>
+  <string name="action_profile">حساب</string>
+  <string name="action_refresh">حدث</string>
+  <string name="action_settings">الإعدادات</string>
+  <string name="nearest_title">صور من قريب</string>
+  <string name="albums_label_no_data">ماكو ألبومات</string>
+  <string name="albums_title">ألبومات</string>
+  <string name="album_title">ألبوم</string>
+  <string name="nearest_dialog_error_location_disabled_title">الموقع طافي</string>
+  <string name="nearest_dialog_error_location_disabled_message">ما يكدر ياخذ موقعك حالياً، تريد تشغله؟</string>
+  <string name="nearest_dialog_error_location_disabled_close">سد</string>
+  <string name="nearest_dialog_error_location_disabled_open">افتح الإعدادات</string>
+  <string name="nearest_label_no_data">ماكو صور من قريب</string>
+  <string name="nearest_label_no_data_button">شوف الألبومات علمود تشوف كل الصور</string>
+  <string name="photo_title">تفاصيل الصورة</string>
+  <string name="camera_title">كامرة</string>
+  <string name="profile_title">حساب</string>
+  <string name="profile_facebook_login">إفتح حساب بالفيسبوك</string>
+  <string name="profile_google_login">إفتح حساب بالجوجل</string>
+  <string name="profile_logout">سد الحساب</string>
+  <string name="profile_login">إفتح حساب</string>
+  <string name="profile_register">سوي حساب</string>
+  <string name="input_username_hint">إيميل</string>
+  <string name="input_password_hint">باسورد</string>
+  <string name="input_firstname_hint">أول إسم</string>
+  <string name="input_lastname_hint">أخير إسم</string>
+  <plurals name="profile_rephotos">
+    <item quantity="zero">لا ريبوتو</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; ريبوتو</item>
+    <item quantity="two">ريبوتان</item>
+    <item quantity="few">ريبوتو</item>
+    <item quantity="many">ريبوتو</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ريبوتو</item>
+  </plurals>
+  <string name="profile_no_rephotos">ما صممت صورة أصلاً</string>
+  <string name="login_title">إفتح حساب</string>
+  <string name="login_failed">ما كدرت تفتح حساب</string>
+  <string name="wrong_password">باسورد غلط!</string>
+  <string name="registration_title">سجل حساب</string>
+  <string name="user_already_exists">اليوزر نيم موجود</string>
+  <string name="upload_title">أكد التصميم</string>
+  <string name="upload_dialog_error_connection_title">النت ضعيف</string>
+  <string name="upload_dialog_error_connection_message">ما كدرت تحمل الصورة</string>
+  <string name="upload_dialog_error_connection_retry">عيدها</string>
+  <string name="upload_dialog_error_connection_ok">اوك</string>
+  <string name="upload_dialog_error_unknown_title">خطأ بس ما نعرفه</string>
+  <string name="upload_dialog_error_unknown_message">ما كدرت تحمل الصورة</string>
+  <string name="upload_dialog_error_unknown_retry">عيدها</string>
+  <string name="upload_dialog_error_unknown_ok">إلغيها</string>
+  <string name="upload_dialog_process_title">رفع الصورة في الخلفية</string>
+  <string name="upload_dialog_process_message">تاني شوية...</string>
+  <string name="upload_dialog_success_title">رفعتها</string>
+  <string name="upload_dialog_success_message">رفعنا الصورة</string>
+  <string name="upload_dialog_success_ok">اوك</string>
+  <string name="upload_dialog_not_authenticated_title">لازم تفتح حساب يله تحمل</string>
+  <string name="upload_dialog_not_authenticated_message">إرجع للحساب</string>
+  <string name="upload_dialog_not_authenticated_ok">أوك</string>
+  <string name="upload_dialog_not_agreed_to_terms">أنا أوافق على نشر الصور المجدَّدة تحت رخصة CC BY 4.0</string>
+  <string name="upload_dialog_agree_to_terms">اي!</string>
+  <string name="upload_dialog_decline_terms">لا</string>
+  <string name="upload_notification_title">راح نرفع الفوتوشوب</string>
+  <string name="upload_notification_success">رفعنا الصورة</string>
+</resources>
