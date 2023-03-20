@@ -46,6 +46,7 @@
   <string name="upload_dialog_error_unknown_retry">Կրկին փորձել</string>
   <string name="upload_dialog_error_unknown_ok">Չեղարկել</string>
   <string name="upload_dialog_process_message">Խնդրում ենք սպասել...</string>
+  <string name="upload_dialog_success_title">Վերբեռնումը հաջողվեց</string>
   <string name="upload_dialog_success_ok">Լավ</string>
   <string name="upload_dialog_not_authenticated_ok">Լավ</string>
   <string name="upload_dialog_agree_to_terms">Այյո</string>
