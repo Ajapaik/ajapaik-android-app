@@ -28,6 +28,7 @@
   <string name="nearest_dialog_error_location_disabled_close">Klozez</string>
   <string name="profile_title">Profilo</string>
   <string name="profile_register">Krear konto</string>
+  <string name="input_password_hint">Pasovorto</string>
   <string name="upload_dialog_error_unknown_ok">Nuligar</string>
   <string name="upload_dialog_process_message">Voluntez vartar...</string>
   <string name="upload_dialog_success_ok">O.K.</string>
