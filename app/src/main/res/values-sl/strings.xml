@@ -3,7 +3,7 @@
 * Eleassar
 -->
 <resources>
-  <string name="app_name">Ajapaik rephoto</string>
+  <string name="app_name">Refotografija Ajapaik</string>
   <string name="processing_image">Obdelovanje slike</string>
   <string name="please_wait">Prosimo, počakajte ...</string>
   <string name="something_went_wrong">Nekaj je šlo narobe</string>

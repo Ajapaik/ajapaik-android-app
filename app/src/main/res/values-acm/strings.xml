@@ -18,6 +18,8 @@
   <string name="action_refresh">حدث</string>
   <string name="action_settings">الإعدادات</string>
   <string name="nearest_title">صور من قريب</string>
+  <string name="finna_title">صور قريبة (فينا)</string>
+  <string name="finna1918_title">ساين براندر</string>
   <string name="albums_label_no_data">ماكو ألبومات</string>
   <string name="albums_title">ألبومات</string>
   <string name="album_title">ألبوم</string>
@@ -75,4 +77,11 @@
   <string name="upload_dialog_decline_terms">لا</string>
   <string name="upload_notification_title">راح نرفع الفوتوشوب</string>
   <string name="upload_notification_success">رفعنا الصورة</string>
+  <string name="acra_dialog_title">تفلش \"أجابيك لإعادة التصوير\"</string>
+  <string name="acra_dialog_comment_prompt">تكدر تحط تعليقاتك على هاي المشكلة اللي جوا:</string>
+  <string name="acra_dialog_ok_toast">مشكورين!</string>
+  <string name="about_title">على</string>
+  <string name="version">الإصدار</string>
+  <string name="contact">تواصل</string>
+  <string name="privacy_policy">الخصوصية</string>
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Aftabuzzaman
+* Al Riaz Uddin Ripon
 * Rasal Lia
 * Titodutta
 * আফতাবুজ্জামান
@@ -9,6 +10,8 @@
   <string name="processing_image">চিত্র প্রক্রিয়াকরণ হচ্ছে</string>
   <string name="please_wait">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="something_went_wrong">কোন একটা ভুল ছিল</string>
+  <string name="notification_channel">সাধারণ বিজ্ঞপ্তি</string>
+  <string name="notification_upload_title">পুনরায় ফটো আপলোড করা হচ্ছে</string>
   <string name="notification_upload_text">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="action_albums">এ্যালবাম</string>
   <string name="action_login">প্রবেশ করুন</string>
@@ -18,6 +21,7 @@
   <string name="action_refresh">পুনঃসতেজ</string>
   <string name="action_settings">সেটিংস</string>
   <string name="nearest_title">কাছাকাছির ছবি</string>
+  <string name="finna_title">কাছাকাছি ফটো (ফিন্না)</string>
   <string name="albums_label_no_data">কোন এ্যালবাম নেই</string>
   <string name="albums_title">অ্যালবামগুলি</string>
   <string name="album_title">অ্যালবাম</string>
@@ -55,7 +59,10 @@
   <string name="upload_dialog_process_title">পটভূমিতে ছবিটি আপলোড করা হচ্ছে</string>
   <string name="upload_dialog_process_message">অনুগ্রহ করে অপেক্ষা করুন...</string>
   <string name="upload_dialog_success_title">অাপলোড সফল হয়েছে</string>
+  <string name="upload_dialog_success_message">ছবিটি সফলভাবে আপলোড করা হয়েছে!</string>
   <string name="upload_dialog_success_ok">ঠিক আছে</string>
+  <string name="upload_dialog_not_authenticated_title">আপলোড করতে অবশ্যই প্রবেশ করতে হবে</string>
+  <string name="upload_dialog_not_authenticated_message">প্রোফাইল পাতায় পুনর্নির্দেশ করুন</string>
   <string name="upload_dialog_not_authenticated_ok">ঠিক অাছে</string>
   <string name="upload_dialog_agree_to_terms">হ্যাঁ!</string>
   <string name="upload_dialog_decline_terms">না</string>
@@ -69,11 +76,15 @@
   <string name="tutorial_dialog_show_again_title">পদ্ধতি পুনরায় দেখবেন?</string>
   <string name="tutorial_dialog_show_again_no">না</string>
   <string name="tutorial_dialog_show_again_yes">হ্যাঁ</string>
+  <string name="storage_not_permitted_title">স্টোরেজ অনুমোদিত নয়</string>
   <string name="storage_not_permitted_cancel">বাতিল</string>
+  <string name="storage_not_permitted_open_settings">সেটিংস খুলুন</string>
   <string name="action_search">অনুসন্ধান</string>
   <string name="favorites">আমার পছন্দ</string>
   <string name="no_favorites">কোন পছন্দ নেই</string>
+  <string name="action_favorite">পছন্দসমূহ</string>
   <string name="favorites_label_not_logged_in_button">প্রবেশ</string>
+  <string name="favorites_label_not_logged_in_text">আপনার পছন্দসমূহ দেখতে লগ ইন করুন</string>
   <string name="no_search_result">অনুসন্ধানের ফলাফল নেই</string>
   <string name="album_no_data">কোন ছবি নেই</string>
   <string name="start_taking_rephoto" fuzzy="true">Start taking rephoto</string>
