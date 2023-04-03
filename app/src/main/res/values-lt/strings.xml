@@ -20,6 +20,7 @@
   <string name="action_refresh">Atnaujinti</string>
   <string name="action_settings">Nustatymai</string>
   <string name="nearest_title">Nuotraukos šalia</string>
+  <string name="finna_title">Artimiausios nuotraukos (Finna)</string>
   <string name="albums_label_no_data">Nėra Albumų</string>
   <string name="albums_title">Albumai</string>
   <string name="album_title">Albumas</string>
