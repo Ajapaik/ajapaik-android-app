@@ -21,6 +21,7 @@
   <string name="action_settings">Nustatymai</string>
   <string name="nearest_title">Nuotraukos šalia</string>
   <string name="finna_title">Artimiausios nuotraukos (Finna)</string>
+  <string name="finna1918_title">Signė Brander</string>
   <string name="albums_label_no_data">Nėra Albumų</string>
   <string name="albums_title">Albumai</string>
   <string name="album_title">Albumas</string>
@@ -42,11 +43,17 @@
   <string name="input_password_hint">Slaptažodis</string>
   <string name="input_firstname_hint">Vardas</string>
   <string name="input_lastname_hint">Pavardė</string>
+  <plurals name="profile_rephotos" fuzzy="true">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; pakartotinė nuotrauka</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; pakartotinės nuotraukos</item>
+  </plurals>
+  <string name="profile_no_rephotos">Dar nepadarėte jokių pakartotinių nuotraukų</string>
   <string name="login_title">Prisijungti</string>
   <string name="login_failed">Prisijungimas sėkmingas</string>
   <string name="wrong_password">Neteisingas slaptažodis!</string>
   <string name="registration_title">Registruotis</string>
   <string name="user_already_exists">Vartotojas jau egzistuoja</string>
+  <string name="upload_title">Patvirtinti pakartotinę nuotrauką</string>
   <string name="upload_dialog_error_connection_title">Ryšio Klaida</string>
   <string name="upload_dialog_error_connection_message">Nepavyko įkelti nuotraukos.</string>
   <string name="upload_dialog_error_connection_retry">Bandyti dar kartą</string>
@@ -63,8 +70,13 @@
   <string name="upload_dialog_not_authenticated_title">Turite būti prisijungę, kad galėtumėte įkelti</string>
   <string name="upload_dialog_not_authenticated_message">Nukreipti į profilio puslapį</string>
   <string name="upload_dialog_not_authenticated_ok">Gerai</string>
+  <string name="upload_dialog_not_agreed_to_terms">Aš sutinku publikuoti pakartotines nuotraukas pagal CC BY 4.0 licenciją.</string>
   <string name="upload_dialog_agree_to_terms">Taip!</string>
   <string name="upload_dialog_decline_terms">Ne</string>
+  <string name="upload_notification_title">Pakartotinė nuotrauka įkeliama. Tai gali užtrukti</string>
+  <string name="upload_notification_success">Pakartotinė nuotrauka įkelta sėkmingai</string>
+  <string name="upload_notification_failure">Pakartotinės nuotraukos įkėlimas nepavyko</string>
+  <string name="acra_dialog_title">„Ajapaik rephoto“ išsijungė</string>
   <string name="acra_dialog_text">Įvyko nežinoma klaida dėl kurios programa sustojo. Prašome padėti mums ištaisyti klaidą atsiunčiant duomenis, jums tiesiog reikia paspausti Gerai.</string>
   <string name="acra_dialog_comment_prompt">Galite pridėti savo komentarą apie problemą žemiau:</string>
   <string name="acra_dialog_ok_toast">Ačiū!</string>
@@ -74,15 +86,25 @@
   <string name="privacy_policy">Privatumas</string>
   <string name="navigation_drawer_open">Atidaryti stalčių</string>
   <string name="navigation_drawer_close">Uždaryti stalčių</string>
+  <string name="settings_show_tutorial">Rodyti pamoką pakartotinės nuotraukos rėžime</string>
   <string name="settings_show_map_by_default">Rodyti žemėlapį kaip numatytąjį</string>
+  <string name="settings_agree_to_license_terms">Aš sutinku publikuoti pakartotines nuotraukas Ajapaik\n.ee pagal CC BY 4.0 licenciją.</string>
+  <string name="tutorial_hide_show_flip">Paspauskite, kad slėptumėte/rodytumėte paveikslėlius.\nNaudokite apvertimo ikoną viršutiniame dešiniame kampe, kad apvertumėte seną paveikslėlį.</string>
+  <string name="tutorial_opacity_zoom">Slinkite, kad reguliuotumėte seno paveikslėlio skaidrumą.\nSuspauskite mastelį, kad padidintumėte seną paveikslėlį.</string>
+  <string name="tutorial_take_picture">Paspauskite fotografavimo mygtuką arba ilgai bakstelėkite bet kur ant ekrano, kad padarytumėte pakartotinę nuotrauką.</string>
   <string name="tutorial_dismiss">Gerai!</string>
   <string name="tutorial_dialog_show_again_title">Rodyti pamoką dar kartą?</string>
   <string name="tutorial_dialog_show_again_message">Vėliau galite įjungti pamoką dar kartą nustatymuose</string>
   <string name="tutorial_dialog_show_again_no">Ne</string>
   <string name="tutorial_dialog_show_again_yes">Taip</string>
+  <string name="rephoto_drafts">Pakartotinių nuotraukų juodraščiai</string>
+  <string name="no_rephotos">Nėra pakartotinių nuotraukų</string>
   <string name="storage_not_permitted_title">Talpinimas neleidžiamas</string>
+  <string name="storage_not_permitted_message">Neleidžiant šiai programėlei naudoti saugyklos jums neleis naudotis kai kuriomis funkcijomis, pvz., daryti pakartotines nuotraukas ir jas įkelti. Prašome apsvarstyti galimybę leisti naudoti saugyklą</string>
   <string name="storage_not_permitted_cancel">Atšaukti</string>
   <string name="storage_not_permitted_open_settings">Atidaryti nustatymus</string>
+  <string name="my_rephotos">Mano pakartotinės nuotraukos</string>
+  <string name="rephotos_label_not_logged_in_text">Prašome prisijukti, kad matytumėte savo pakartotines nuotraukas</string>
   <string name="action_search">Paieška</string>
   <string name="favorites">Mano mėgstamiausi</string>
   <string name="no_favorites">Nėra mėgstamiausių</string>
@@ -91,5 +113,7 @@
   <string name="favorites_label_not_logged_in_text">Prisijunkite, kad matytumėte savo mėgstamiausius</string>
   <string name="no_search_result">Nėra paieškos rezultatų</string>
   <string name="album_no_data">Nėra nuotraukų</string>
+  <string name="start_taking_rephoto">Daryti pakartotinę nuotrauką</string>
   <string name="show_photo_details">Rodyti nuotraukos informaciją</string>
+  <string name="show_rephotos">Rodyti pakartotines nuotraukas</string>
 </resources>

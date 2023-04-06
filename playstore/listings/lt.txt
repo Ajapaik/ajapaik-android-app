@@ -1,0 +1,14 @@
+# Messages for Lithuanian (lietuvių)
+# Exported from translatewiki.net
+# Author: Eitvys200
+
+title=Ajapaik pakartotinė nuotrauka
+short-description=Peržiūrėkite istorines nuotraukas ir darykite pakartotines vaizdų nuotraukas!
+description.paragraph.1=Ajapaik pakartotinių nuotraukų programėlė rodo istorines nuotraukas šalia jūsų ir sudaro galimybę lengvai iš naujo nufotografuoti tuos pačius vaizdus.
+description.accuracy.title=Kam būtų patogiau fotografuoti pakartotinai
+description.accuracy.bullet.1=* Galite pakeisti istorinio vaizdo skaidrumą savo fotoaparato sraute slinkdami ekrane
+description.accuracy.bullet.2=* priartinkite istorinę nuotrauką
+description.paragraph.2=Naujoje (2018 m.) versijoje taip pat galite naršyti ir ieškoti albumuose, ieškoti konkrečios nuotraukos, peržiūrėti savo ar kitų naudotojų darytas nuotraukas.
+description.paragraph.3=Dabar pakartotinių nuotraukų juodraščius galima išsaugoti, naršyti ir vėliau įkelti į Ajapaik.ee (pvz., per „Wi-Fi“).
+description.paragraph.4=Norėdami įkelti pakartotinę nuotrauką, turite patvirtinti savo tapatybę naudodami Google arba Facebook paskyrą, arba el. pašto paskyrą.
+description.paragraph.5=Įkeldami pakartotines nuotraukas į Ajapaik sutinkate pateikti nuotraukas pagal Creative Commons Attribution (CC BY) licenciją.
