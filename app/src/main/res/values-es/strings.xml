@@ -7,13 +7,14 @@
 * LittlePuppers
 * Marcelo9987
 * Racha
+* Raos10
 * Ryo567
 * Zarisi
 -->
 <resources>
   <string name="app_name">Refotografía Ajapaik</string>
   <string name="processing_image">Procesando la imagen</string>
-  <string name="please_wait">Espera…</string>
+  <string name="please_wait">Un momento…</string>
   <string name="something_went_wrong">Se produjo un error</string>
   <string name="notification_channel">Notificaciones generales</string>
   <string name="notification_upload_title">Cargando foto réplica</string>
@@ -70,7 +71,7 @@
   <string name="upload_dialog_error_unknown_retry">Intentar de nuevo</string>
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
   <string name="upload_dialog_process_title">Cargando la foto en segundo plano</string>
-  <string name="upload_dialog_process_message">Espera…</string>
+  <string name="upload_dialog_process_message">Un momento…</string>
   <string name="upload_dialog_success_title">Carga correcta</string>
   <string name="upload_dialog_success_message">Se cargó la foto correctamente.</string>
   <string name="upload_dialog_success_ok">Aceptar</string>

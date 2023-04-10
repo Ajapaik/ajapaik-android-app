@@ -1,6 +1,7 @@
 # Messages for Lithuanian (lietuvių)
 # Exported from translatewiki.net
 # Author: Eitvys200
+# Author: Nokeoo
 
 title=Ajapaik pakartotinė nuotrauka
 short-description=Peržiūrėkite istorines nuotraukas ir darykite pakartotines vaizdų nuotraukas!
