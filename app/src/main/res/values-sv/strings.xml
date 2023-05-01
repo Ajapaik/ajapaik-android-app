@@ -2,6 +2,7 @@
 <!-- Authors:
 * Abbe98
 * Haxpett
+* Jopparn
 * Sabelöga
 * WikiPhoenix
 -->
@@ -78,7 +79,7 @@
   <string name="upload_notification_title">Laddar upp foto. Det kan ta en stund</string>
   <string name="upload_notification_success">Fotot laddades upp</string>
   <string name="upload_notification_failure">Fotot kunde inte laddas upp</string>
-  <string name="acra_dialog_title">\"Ajapaik då och nu\" kraschade</string>
+  <string name="acra_dialog_title">\"Ajapaik – då och nu\" kraschade</string>
   <string name="acra_dialog_text">Ett oväntat fel uppstod som fick appen att sluta fungera. Var god hjälp oss att fixa detta genom att skicka feldata till oss, allt du behöver göra är att klicka på OK.</string>
   <string name="acra_dialog_comment_prompt">Du kan lägga till en kommentar om problemet nedan:</string>
   <string name="acra_dialog_ok_toast">Tack!</string>

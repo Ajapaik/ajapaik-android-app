@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Ajiniyaz Nurniyazov
 * Inabat Allanova
 -->
 <resources>
@@ -17,7 +18,7 @@
   <string name="action_logout">Shıǵıw</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Jańalaw</string>
-  <string name="action_settings">Sazlamalar</string>
+  <string name="action_settings">Sazlawlar</string>
   <string name="nearest_title">Jaqınındaǵı súwretler</string>
   <string name="finna_title">Jaqınındaǵı súwretler (Finna)</string>
   <string name="finna1918_title">Signe Brander</string>
