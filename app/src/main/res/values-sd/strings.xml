@@ -11,6 +11,9 @@
   <string name="processing_image">تصوير تياري هيٺ</string>
   <string name="please_wait">مھرباني ڪري انتظار ڪريو…</string>
   <string name="something_went_wrong">ڪا غلطي ٿي آهي</string>
+  <string name="notification_channel">عام اطلاع</string>
+  <string name="notification_upload_title">ري ڦوٽو چاڙھيندي</string>
+  <string name="notification_upload_text">مھرباني ڪري انتظار ڪندا…</string>
   <string name="action_albums">آلبمَ</string>
   <string name="action_flip">وارايو</string>
   <string name="action_login">داخل ٿيو</string>
@@ -21,7 +24,7 @@
   <string name="action_settings">ترتيبون</string>
   <string name="nearest_title">ويجهيون تصويرون</string>
   <string name="finna_title">ويجها ڦوٽو (Finna)</string>
-  <string name="finna1918_title" fuzzy="true">ويجھا ڦوٽو (1918)</string>
+  <string name="finna1918_title">Signe Brander</string>
   <string name="albums_label_no_data">ايلبم ناهي</string>
   <string name="albums_title">آلبمَ</string>
   <string name="album_title">آلبم</string>
@@ -43,8 +46,9 @@
   <string name="input_password_hint">پاسورڊ</string>
   <string name="input_firstname_hint">پهريون نالو</string>
   <string name="input_lastname_hint">ذات</string>
-  <plurals name="profile_rephotos" fuzzy="true">
-    <item quantity="other">هڪ=&lt;b&gt;1&lt;/b&gt; نئين تصوير</item>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; ري ڦوٽو</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ري ڦوٽو</item>
   </plurals>
   <string name="profile_no_rephotos">اوهان اڃان تائين نئين تصوير نه ڪڍي آهي.</string>
   <string name="login_title">داخل ٿيو</string>
@@ -54,14 +58,14 @@
   <string name="user_already_exists">کاتي جو نالو اڳئي موجود آهي</string>
   <string name="upload_title">نئين تصوير جي پڪ ڪريو</string>
   <string name="upload_dialog_error_connection_title">ڪنيڪشن ۾ مسئلو</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_connection_message">ڦوٽو چاڙھڻ ۾ ناڪام.</string>
   <string name="upload_dialog_error_connection_retry">ٻيهر ڪوشش ڪريو</string>
   <string name="upload_dialog_error_connection_ok">ٺيڪ</string>
   <string name="upload_dialog_error_unknown_title">اڻڄاتل چُڪَ</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">تصوير اپلوڊ نه ٿي. وري ڪوشش ڪيون؟</string>
+  <string name="upload_dialog_error_unknown_message">ڦوٽو چاڙھڻ ۾ ناڪام.</string>
   <string name="upload_dialog_error_unknown_retry">ٻيهر ڪوشش ڪريو</string>
   <string name="upload_dialog_error_unknown_ok">رد</string>
-  <string name="upload_dialog_process_title" fuzzy="true">تصوير اپلوڊ ٿي رهي آهي</string>
+  <string name="upload_dialog_process_title">ڦوٽو پسمنظر ۾ چڙھي رھيو آھي</string>
   <string name="upload_dialog_process_message">مھرباني ڪري انتظار ڪريو…</string>
   <string name="upload_dialog_success_title">ڪاميابيءَ اپلوڊ ٿي ويو</string>
   <string name="upload_dialog_success_message">تصوير ڪاميابيءَ سان اپلوڊ ٿي وئي!</string>
@@ -72,6 +76,9 @@
   <string name="upload_dialog_not_agreed_to_terms">آئون سيسي بي.واءِ 4.0 اجازتنامي ھيٺ ڦوٽوگراف ڇاپڻ لاءِ راضي ٿيان ٿو.</string>
   <string name="upload_dialog_agree_to_terms">ها!</string>
   <string name="upload_dialog_decline_terms">نه</string>
+  <string name="upload_notification_title">ري ڦوٽو کي چاڙھيندي. ان ۾ ڪجهہ وقت لڳي سگهي ٿو</string>
+  <string name="upload_notification_success">ري ڦوٽو ڪاميابيءَ سان چڙھي ويو</string>
+  <string name="upload_notification_failure">ري ڦوٽو چاڙھڻ ۾ ناڪامي ٿي</string>
   <string name="acra_dialog_title">\'اجاپيڪ نئين تصوير\' ختم ٿي وئي</string>
   <string name="acra_dialog_text">ڪنهن اَڻڄاتل چُڪ سبب پروگرام بند ٿي ويو. مهرباني ڪري چُڪ جي ڊيٽااسان ڏي موڪلي مدد ڪيو، اوهان کي صرف ٺيڪ کي دٻائڻو آهي.</string>
   <string name="acra_dialog_comment_prompt">اوهان مسئلي جي باري ۾ هيٺ رايو ڏئي سگھو ٿا:</string>
@@ -83,6 +90,7 @@
   <string name="navigation_drawer_open">ڪٻٽ کوليو</string>
   <string name="navigation_drawer_close">ڪٻٽ بند ڪيو</string>
   <string name="settings_show_tutorial">نئين تصوير واري موڊ ۾ سبق ڏيکاريو</string>
+  <string name="settings_show_map_by_default">نقشو پاڻمرادو ڏيکاريو</string>
   <string name="settings_agree_to_license_terms">آئون سيسي بي.واءِ 4.0 اجازتنامي ھيٺ Ajapaik.ee تي ڦوٽوگراف ڇاپڻ لاءِ راضي آھيان.</string>
   <string name="tutorial_hide_show_flip">تصوير گم ڪرڻ/ڏيکارڻ لاءِ دٻايو.\nمٿي کاٻي طرف موڙيو نشاني کي دٻائي پراڻين تصويرن ڏي وڃي سگهو ٿا.</string>
   <string name="tutorial_opacity_zoom">پراڻي تصوير کي شفاف بنائڻ لاءِ ڇڪيو.\nڇڪيو پراڻي تصوير کي زوم ڪرڻ لاءِ.</string>
@@ -95,6 +103,7 @@
   <string name="rephoto_drafts">بيهر تصويرن وارو ڊرافٽ</string>
   <string name="no_rephotos">ٻهير ڪڍيل تصويرون ناهن</string>
   <string name="storage_not_permitted_title">اسٽورج اجازت نه ڏني</string>
+  <string name="storage_not_permitted_message">ھن ايپ کي اسٽوريج استعمال ڪرڻ جي اجازت نہ ڏيڻ توھان کي ڪجهہ خصوصيتن تائين پھچڻ کان روڪي ٿو، مثال طور ڦوٽو ڪڍڻ ۽ اپ چاڙھڻ. مھرباني ڪري اسٽوريج جي استعمال جي اجازت ڏيڻ تي غور ڪريو</string>
   <string name="storage_not_permitted_cancel">رد</string>
   <string name="storage_not_permitted_open_settings">ترتيبون کوليو</string>
   <string name="my_rephotos">منهنجون ٻيهر ڪڍيل تصويرون</string>
@@ -109,5 +118,5 @@
   <string name="album_no_data">تصويرون ناهن</string>
   <string name="start_taking_rephoto">ٻيھر-ڦوٽو ڪڍڻ شروع ڪريو</string>
   <string name="show_photo_details">ڦوٽو جا تفصيل ڏيکاريو</string>
-  <string name="show_rephotos" fuzzy="true">Show rephotos</string>
+  <string name="show_rephotos">ري ڦوٽو ڏيکاريو</string>
 </resources>
