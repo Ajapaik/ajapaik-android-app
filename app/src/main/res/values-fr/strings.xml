@@ -98,7 +98,7 @@
   <string name="tutorial_hide_show_flip">Taper pour masquer / afficher l’image.\nUtiliser l’icône de retournement dans le coin en haut à droite pour renverser l’ancienne image.</string>
   <string name="tutorial_opacity_zoom">Faire glisser pour ajuster la transparence de l’ancienne image.\nPincer le zoom pour zoomer sur l’ancienne image.</string>
   <string name="tutorial_take_picture">Appuyer sur le bouton de l’obturateur ou taper longuement n’importe où à l’écran pour prendre une rephoto.</string>
-  <string name="tutorial_dismiss">C’est bon !</string>
+  <string name="tutorial_dismiss">Compris !</string>
   <string name="tutorial_dialog_show_again_title">Réafficher le tutoriel ?</string>
   <string name="tutorial_dialog_show_again_message">Vous pouvez activer à nouveau ultérieurement le tutoriel depuis les paramètres</string>
   <string name="tutorial_dialog_show_again_no">Non</string>

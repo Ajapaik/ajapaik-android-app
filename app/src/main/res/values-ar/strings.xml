@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Alshamiri1
 * FiberAhmed
 * Meno25
 * أَحمد
@@ -89,7 +90,7 @@
   <string name="acra_dialog_text">حدث خطأ غير متوقع يجبر التطبيق على التوقف، الرجاء مساعدتنا في إصلاح ذلك عن طريق إرسال بيانات الخطأ إلينا، وكل ما عليك فعله هو النقر على موافق.</string>
   <string name="acra_dialog_comment_prompt">يمكنك إضافة تعليقاتك حول المشكلة أدناه:</string>
   <string name="acra_dialog_ok_toast">شكرًا لك!</string>
-  <string name="about_title">حول</string>
+  <string name="about_title">Ǎحول</string>
   <string name="version">الإصدار</string>
   <string name="contact">تواصل</string>
   <string name="privacy_policy">الخصوصية</string>
