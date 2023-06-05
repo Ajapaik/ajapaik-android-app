@@ -39,7 +39,7 @@
   <string name="profile_logout">Shıǵıw</string>
   <string name="profile_login">Kiriw</string>
   <string name="profile_register">Esap betin jaratıw</string>
-  <string name="input_username_hint">E-pochta</string>
+  <string name="input_username_hint">Elektron pochta</string>
   <string name="input_password_hint">Jasırın sóz</string>
   <string name="input_firstname_hint">Atı</string>
   <string name="input_lastname_hint">Familiya</string>
