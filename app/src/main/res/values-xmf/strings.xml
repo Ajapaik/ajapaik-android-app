@@ -85,4 +85,13 @@
   <string name="tutorial_dismiss">გასაგები რე!</string>
   <string name="tutorial_dialog_show_again_no">ვარი</string>
   <string name="tutorial_dialog_show_again_yes">ქო</string>
+  <string name="action_search">გორუა</string>
+  <string name="favorites">ჩქიმი გიშნაგორეფი</string>
+  <string name="no_favorites">ვა გიშნაგორეფი</string>
+  <string name="action_favorite">გიშნაგორა</string>
+  <string name="favorites_label_not_logged_in_button">მიშულა</string>
+  <string name="favorites_label_not_logged_in_text">ქორთხინთ, გენშართით ანგარიშიშა, თქვანი გიშნაგორეფიშ ოძირაფალო</string>
+  <string name="no_search_result">ვა რე მუთუნნერი გორუაშ მოღალობა</string>
+  <string name="album_no_data">ვა რე სურათეფი</string>
+  <string name="show_photo_details">სურათიშ დეტალეფიშ ძირაფა</string>
 </resources>
