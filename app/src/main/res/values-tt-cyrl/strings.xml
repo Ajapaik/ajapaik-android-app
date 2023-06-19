@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Blackisnewyellow
 * Ерней
 -->
 <resources>
@@ -21,7 +22,7 @@
   <string name="albums_label_no_data">Альбомнар юк</string>
   <string name="albums_title">Альбомнар</string>
   <string name="album_title">Альбом</string>
-  <string name="nearest_dialog_error_location_disabled_title">Урынны билгеләү өзелгән</string>
+  <string name="nearest_dialog_error_location_disabled_title">Урынны билгеләү сүндерелгән</string>
   <string name="nearest_dialog_error_location_disabled_message">Хәзерге урнашкан урынны билгеләү мөмкин түгел. Билгеләүне кабызасыгыз киләме?</string>
   <string name="nearest_dialog_error_location_disabled_close">Ябу</string>
   <string name="nearest_dialog_error_location_disabled_open">Көйләнмәләрне ачу</string>
@@ -30,10 +31,10 @@
   <string name="photo_title">Фото мәгълүматлары</string>
   <string name="camera_title">Камера</string>
   <string name="profile_title">Профиль</string>
-  <string name="profile_facebook_login">Facebook аша язылу</string>
-  <string name="profile_google_login">Google аша язылу</string>
+  <string name="profile_facebook_login">Facebook аша керү</string>
+  <string name="profile_google_login">Google аша керү</string>
   <string name="profile_logout">Чыгу</string>
-  <string name="profile_login">Язылу (керү)</string>
+  <string name="profile_login">Керү (язылу)</string>
   <string name="profile_register">Хисап язмасын төзү</string>
   <string name="input_username_hint">Электрон почта</string>
   <string name="input_password_hint">Серсүз</string>
@@ -86,11 +87,11 @@
   <string name="favorites">Сайлаганнарым</string>
   <string name="no_favorites">Сайланганнар юк</string>
   <string name="action_favorite">Сайланма</string>
-  <string name="favorites_label_not_logged_in_button">Язылу (керү)</string>
+  <string name="favorites_label_not_logged_in_button">Керү (язылу)</string>
   <string name="favorites_label_not_logged_in_text">Сайлаганнарыгызны күрү өчен керегез әле</string>
   <string name="no_search_result">Берни дә табылмады</string>
   <string name="album_no_data">Фото юк</string>
-  <string name="start_taking_rephoto">Рефотога төшерергә башлау</string>
+  <string name="start_taking_rephoto">Рефотога төшерүне башлау</string>
   <string name="show_photo_details">Фото мәгълүматларын күрсәтү</string>
   <string name="show_rephotos">Рефото күрсәтү</string>
 </resources>
