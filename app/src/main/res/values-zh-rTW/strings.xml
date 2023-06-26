@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* HellojoeAoPS
 * Kly
 * Weather Top Wizard
 * 和平至上
 -->
 <resources>
-  <string name="app_name">Ajapaik rephoto</string>
+  <string name="app_name">Ajapaik 翻拍照片</string>
   <string name="processing_image">圖片處理中</string>
   <string name="please_wait">請稍候…</string>
   <string name="something_went_wrong">發生不明錯誤</string>
