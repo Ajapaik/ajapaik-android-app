@@ -2,6 +2,7 @@
 <!-- Authors:
 * MR973
 * Айсар
+* З. ӘЙЛЕ
 -->
 <resources>
   <string name="app_name">рефото Ajapaik</string>
@@ -91,18 +92,18 @@
   <string name="settings_show_tutorial">Рефото режимын ҡулланғанда инструкцияны күрһәтергә</string>
   <string name="settings_show_map_by_default">Картаны үҙенән-үҙе күрһәтелә</string>
   <string name="settings_agree_to_license_terms">Рефотоны CC BY 4.0 лицензияһы аҫтында Ajapaik.ee сайтында баҫтырып сығарыуға мин риза.</string>
-  <string name="tutorial_hide_show_flip">Һүрәтте йәшереү/күрһәтеү өсөн баҫығыҙ.\nТәүге күренеште ҡарарға уң яҡ мөйөштәге билдәне файҙаланығыҙ.</string>
+  <string name="tutorial_hide_show_flip">Һүрәтте йәшереү/күрһәтеү өсөн баҫығыҙ.\nТәүге күренеште әйләндереү өсөн уң яҡ мөйөштәге \"Әйләндереү\" билдәһен файҙаланығыҙ.</string>
   <string name="tutorial_opacity_zoom">Асыҡлыҡ һулға\\уңға хәрәкәт менән үҙгәртелә.\nМасштаб ике бармаҡты бер үк ваҡытта бер-береһенә яҡынайтҡанда\\айырғанда үҙгәрә.</string>
   <string name="tutorial_dismiss">Аңлашыла!</string>
-  <string name="tutorial_dialog_show_again_title">Ҡулланманы яңынан күрһәтергә?</string>
+  <string name="tutorial_dialog_show_again_title">Ҡулланманы яңынан күрһәтергәме?</string>
   <string name="tutorial_dialog_show_again_message">Ҡулланманы һуңыраҡ көйләүҙәрҙә аса алаһығыҙ</string>
   <string name="tutorial_dialog_show_again_no">Юҡ</string>
   <string name="tutorial_dialog_show_again_yes">Эйе</string>
-  <string name="rephoto_drafts">Ҡайтанан төшөрөлгәндәрҙең ҡараламалары</string>
-  <string name="no_rephotos">Ҡайтанан төшөрөлгәндәр юҡ</string>
+  <string name="rephoto_drafts">Ҡайтанан төшөрөлгән фотоларҙың ҡараламалары</string>
+  <string name="no_rephotos">Ҡайтанан төшөрөлгән фотолар юҡ</string>
   <string name="storage_not_permitted_title">Һаҡлау рөхсәт ителмәй</string>
-  <string name="storage_not_permitted_message">Был ҡушымтаға ҡоролмағыҙҙа мәғлүмәттәрҙе  һаҡлауҙы тыйһағыҙ, һеҙ камераларҙы яңынан төшөрөү өсөн ҡулланыу һәм ҡайтанан төшөрөлгәнде тейәү кеүек функцияларҙы ҡуллана алмайһығыҙ. Һаҡлағысты файҙаланырға рөхсәт итеү кәрәклеген иҫтә тотоғоҙ.</string>
+  <string name="storage_not_permitted_message">Был ҡушымтаға ҡоролмағыҙҙа мәғлүмәттәрҙе  һаҡлауҙы рөхсәт итмәһәгеҙ, камераларҙы яңынан төшөрөү өсөн ҡулланыу һәм ҡайтанан төшөрөлгәнде тейәү кеүек функцияларҙы ҡуллана алмайһығыҙ. Һаҡлағысты файҙаланырға рөхсәт итеү кәрәклеген иҫәпкә алығыҙ.</string>
   <string name="storage_not_permitted_cancel">Кире алырға</string>
-  <string name="storage_not_permitted_open_settings">Көйләүҙәрҙе асыу</string>
-  <string name="my_rephotos">Минең ҡайтанан төшөрөлгәндәрем</string>
+  <string name="storage_not_permitted_open_settings">Көйләүҙәрҙе асырға</string>
+  <string name="my_rephotos">Минең ҡайтанан төшөрөлгән фотографияларым</string>
 </resources>
