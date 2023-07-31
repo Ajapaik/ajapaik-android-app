@@ -3,6 +3,7 @@
 * Banjo
 * Elisardojm
 * Iváns
+* Toliño
 -->
 <resources>
   <string name="please_wait">Agarde por favor...</string>
@@ -45,7 +46,7 @@
   <string name="upload_dialog_error_unknown_ok">Cancelar</string>
   <string name="upload_dialog_process_message">Agarde por favor...</string>
   <string name="upload_dialog_success_ok">Feito</string>
-  <string name="upload_dialog_not_authenticated_title">Debe iniciar sesión pra carregar datos</string>
+  <string name="upload_dialog_not_authenticated_title">Debe iniciar sesión para subir</string>
   <string name="upload_dialog_not_authenticated_ok">Feito</string>
   <string name="upload_dialog_agree_to_terms">Si!</string>
   <string name="upload_dialog_decline_terms">Non</string>

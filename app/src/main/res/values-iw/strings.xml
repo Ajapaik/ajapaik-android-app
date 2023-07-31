@@ -48,11 +48,19 @@
   <string name="input_password_hint">סיסמה</string>
   <string name="input_firstname_hint">שם פרטי</string>
   <string name="input_lastname_hint">שם משפחה</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">צילום חוזר אחד</item>
+    <item quantity="two">&lt;b&gt;%1$d&lt;/b&gt; צילומים חוזרים</item>
+    <item quantity="many">&lt;b&gt;%1$d&lt;/b&gt; צילומים חוזרים</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; צילומים חוזרים</item>
+  </plurals>
+  <string name="profile_no_rephotos">לא לא עשית צילומים חוזרים</string>
   <string name="login_title">כניסה</string>
   <string name="login_failed">הכניסה נכשלה</string>
   <string name="wrong_password">סיסמה שגויה!</string>
   <string name="registration_title">הרשמה</string>
   <string name="user_already_exists">שם המשתמש כבר תפוס</string>
+  <string name="upload_title">אישור צילום חוזר</string>
   <string name="upload_dialog_error_connection_title">שגיאת חיבור</string>
   <string name="upload_dialog_error_connection_message">לא ניתן להעלות את התמונה.</string>
   <string name="upload_dialog_error_connection_retry">ניסיון חוזר</string>
@@ -69,9 +77,15 @@
   <string name="upload_dialog_not_authenticated_title">עליך להיכנס כדי להעלות</string>
   <string name="upload_dialog_not_authenticated_message">הפניה לעמוד פרופיל</string>
   <string name="upload_dialog_not_authenticated_ok">אישור</string>
+  <string name="upload_dialog_not_agreed_to_terms">אני מסכים לפרסם צילומים חוזרים לפי תנאי רישיון CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">כן!</string>
   <string name="upload_dialog_decline_terms">לא</string>
+  <string name="upload_notification_title">העלאת צילום חוזר. זה יכול לקחת כמה זמן</string>
+  <string name="upload_notification_success">צילום חוזר הועלתה בהצלחה</string>
+  <string name="upload_notification_failure">העלאת הצילום החוזר נכשלה</string>
   <string name="acra_dialog_title">יישום איאפאיק צילום חוזר קרס</string>
+  <string name="acra_dialog_text">אירעה שגיאה בלתי־צפויה שאילצה את היישום לעצור. נא לעזור לנו לתקן את זה על־ידי שליחת נתוני השגיאה, כל מה שצריך לעשות הוא ללחוץ אישור.</string>
+  <string name="acra_dialog_comment_prompt">אפשר להוסיף את ההערות שלך על הבעיה למטה:</string>
   <string name="acra_dialog_ok_toast">תודה לך!</string>
   <string name="about_title">על אודות</string>
   <string name="version">גרסה</string>
@@ -79,13 +93,21 @@
   <string name="privacy_policy">פרטיות</string>
   <string name="navigation_drawer_open">פתיחת מגירה</string>
   <string name="navigation_drawer_close">סגירת מגירה</string>
+  <string name="settings_show_tutorial">הצגת הדרכה במצב צילום חוזר</string>
+  <string name="settings_show_map_by_default">להציג את המפה מהתחלה</string>
   <string name="settings_agree_to_license_terms">אני מסכים לפרסם צילומים חוזרים באתר Ajapaik.ee ברישיון CC BY 4.0.</string>
+  <string name="tutorial_hide_show_flip">יש להקיש כדי להסתיר או להציג תמונה.\nאפשר להשתמש בסמל ההיפוך בפינה הימנית העליונה כדי להפוך תמונה ישנה.</string>
+  <string name="tutorial_opacity_zoom">אפשר להחליק כדי לתקן את השקיפות של תמונה ישנה.\nאפשר לקרב באצבעות על־ידי להתקרב לתמונה ישנה.</string>
+  <string name="tutorial_take_picture">אפשר ללחוץ על כפתור הצילום או ללחוץ בכל מקום על המסך כדי לעשות צילום חוזר.</string>
   <string name="tutorial_dismiss">הבנתי!</string>
   <string name="tutorial_dialog_show_again_title">להציג את המדריך שוב?</string>
   <string name="tutorial_dialog_show_again_message">ניתן להפעיל שוב את המדריך מההגדרות אחר כך</string>
   <string name="tutorial_dialog_show_again_no">לא</string>
   <string name="tutorial_dialog_show_again_yes">כן</string>
+  <string name="rephoto_drafts">טיוטות צילומים חוזרים</string>
+  <string name="no_rephotos">אין צילומים חוזרים</string>
   <string name="storage_not_permitted_title">אין הרשאה לאחסון</string>
+  <string name="storage_not_permitted_message">אי־מתן אישור ליישום להשתמש באחסון מונע ממך לגשת לכמה תכונות, למשל יצירת צילומים חוזרים והעלאתם. נא לשקול לאשפר שימוש באחסון</string>
   <string name="storage_not_permitted_cancel">ביטול</string>
   <string name="storage_not_permitted_open_settings">פתיחת ההגדרות</string>
   <string name="my_rephotos">התמונות החוזרות שלי</string>
@@ -98,6 +120,7 @@
   <string name="favorites_label_not_logged_in_text">יש להתחבר כדי לראות את המועדפים שלך</string>
   <string name="no_search_result">אין תוצאות חיפוש</string>
   <string name="album_no_data">אין תמונות</string>
+  <string name="start_taking_rephoto">להתחיל לעשות צילום חוזר</string>
   <string name="show_photo_details">הצגת פרטי התמונה</string>
   <string name="show_rephotos">הצגת צילומים חוזרים</string>
 </resources>
