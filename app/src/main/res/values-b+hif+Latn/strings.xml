@@ -15,7 +15,9 @@
   <string name="action_login">Login karo</string>
   <string name="action_register">Register karo</string>
   <string name="action_logout">Logout karo</string>
+  <string name="action_profile">Profile</string>
   <string name="action_refresh">Refresh karo</string>
+  <string name="action_settings">Settings</string>
   <string name="albums_label_no_data">Koi album nai hai</string>
   <string name="nearest_dialog_error_location_disabled_close">Band karo</string>
   <string name="nearest_label_no_data">Nachdiik me koi chaapa nai hai</string>
