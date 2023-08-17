@@ -57,11 +57,11 @@
   <string name="user_already_exists">Lietotāja vārds jau aizņemts</string>
   <string name="upload_title">Apstiprināt refotogrāfiju</string>
   <string name="upload_dialog_error_connection_title">Kļūda, veidojot savienojumu</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
+  <string name="upload_dialog_error_connection_message">Neizdevās augšupielādēt attēlu.</string>
   <string name="upload_dialog_error_connection_retry">Atkārtot</string>
   <string name="upload_dialog_error_connection_ok">Labi</string>
   <string name="upload_dialog_error_unknown_title">Nezināma kļūda</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Neizdevās augšuplādēt attēlu. Vai atkārtot?</string>
+  <string name="upload_dialog_error_unknown_message">Neizdevās augšupielādēt attēlu.</string>
   <string name="upload_dialog_error_unknown_retry">Atkārtot</string>
   <string name="upload_dialog_error_unknown_ok">Atcelt</string>
   <string name="upload_dialog_process_title" fuzzy="true">Notiek attēla augšupielāde</string>

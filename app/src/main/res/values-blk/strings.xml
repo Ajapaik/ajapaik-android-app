@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* ခွန်ဖန်ဒွဲ့
 * လွိုင်ႏအာထင်ႏထိုထဲင်း
 * 咽頭べさ
 -->
@@ -27,14 +28,24 @@
   <string name="input_password_hint">ငဝ်းဗိဥ်ႏပလို့ꩻ</string>
   <string name="login_title">နွို့အကောက်</string>
   <string name="registration_title">ဒင်ႏမတ်ပိုင်တိဉ်</string>
+  <string name="upload_dialog_error_connection_retry">မာꩻချာယင်းဟုဲင်း</string>
   <string name="upload_dialog_error_connection_ok">မွေးသွူ</string>
+  <string name="upload_dialog_error_unknown_title">သေတဝ်း အမာႏ</string>
+  <string name="upload_dialog_error_unknown_retry">မာꩻချာယင်းဟုဲင်း</string>
   <string name="upload_dialog_error_unknown_ok">မာꩻတဝ်းဒွုမ်</string>
+  <string name="upload_dialog_process_message">အိုင်ပွေားဆောင်းတဆင်ႏသြ...</string>
+  <string name="upload_dialog_success_title">ဒင်ႏထင်ႏ တွိုႏဗꩻလဲဉ်း</string>
   <string name="upload_dialog_success_ok">မွေးသွူ</string>
   <string name="upload_dialog_not_authenticated_ok">မွေးသွူ</string>
   <string name="upload_dialog_agree_to_terms">မွေး!</string>
   <string name="upload_dialog_decline_terms">မွေးတဝ်း</string>
   <string name="acra_dialog_ok_toast">ကေꩻဇူꩻတင်ႏငါႏဩ!</string>
   <string name="about_title">အကျောင်ꩻ</string>
+  <string name="contact">သွုပ်ဆွိုက်တာႏ</string>
+  <string name="privacy_policy">နမ်းတာႏမူဝါဒ</string>
+  <string name="navigation_drawer_open">ဗွောင်တဲမ်းထွို့ꩻ</string>
+  <string name="navigation_drawer_close">ဒို့ꩻပေ့ꩻတဲမ်းထွို့ꩻ</string>
+  <string name="tutorial_dismiss">သေဖြောင်လဲဉ်း!</string>
   <string name="tutorial_dialog_show_again_no">မွေးတဝ်း</string>
   <string name="tutorial_dialog_show_again_yes">မွေး</string>
   <string name="storage_not_permitted_cancel">မာꩻတဝ်းဒွုမ်</string>
