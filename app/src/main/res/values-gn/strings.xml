@@ -32,7 +32,7 @@
   <string name="profile_login">Teraguapy</string>
   <string name="profile_register">Nde Kuatiarã</string>
   <string name="input_username_hint">Pareha (e-mail)</string>
-  <string name="input_password_hint">Ñe\'ẽpe\'aha</string>
+  <string name="input_password_hint">Ñe\'ẽñemi</string>
   <string name="input_firstname_hint">Téra</string>
   <string name="input_lastname_hint">Terajoapy</string>
   <plurals name="profile_rephotos" fuzzy="true">
