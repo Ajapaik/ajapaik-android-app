@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Moshtank
 * Sultanselim baloch
 -->
 <resources>
+  <string name="app_name">آجاپئیکءِ اکس پدا</string>
   <string name="processing_image">Aks à àragæn</string>
   <string name="please_wait">Sabr Kan...</string>
   <string name="something_went_wrong">Cizè Haràb ent</string>
+  <string name="notification_channel">لَس سرپدی</string>
+  <string name="notification_upload_title">پدا اکسا سرگݔجَگئن</string>
+  <string name="notification_upload_text">کمے بہ دار...</string>
   <string name="action_albums">Àlbumàn</string>
   <string name="action_flip">Ťeling</string>
   <string name="action_login">Màn biyag</string>
@@ -21,6 +26,7 @@
   <string name="albums_title">Àlbumàn</string>
   <string name="album_title">Àlbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Jàh dasras à næn</string>
+  <string name="nearest_dialog_error_location_disabled_message">ھنیگݔن جاھسۏج گرگءَ نہ بیت، لۏٹ اِت جاھسۏجءِ گرَگا چالو بہ کن اِت؟</string>
   <string name="nearest_dialog_error_location_disabled_close">Bandag</string>
   <string name="nearest_dialog_error_location_disabled_open">Redànkàn e Pac kanag</string>
   <string name="nearest_label_no_data">Nazzikèn Aksè Nè</string>
@@ -37,6 +43,7 @@
   <string name="input_password_hint">Gàlguaz</string>
   <string name="input_firstname_hint">Nàm</string>
   <string name="input_lastname_hint">Bon Nàm</string>
+  <string name="profile_no_rephotos">شما ھنگت نۏکݔن اکسے نہ بَنݔنتَگ؟</string>
   <string name="login_title">Màn Biyag</string>
   <string name="login_failed">Màn biyag na bit</string>
   <string name="wrong_password">Gàlguaz Eši Naen</string>
@@ -44,22 +51,30 @@
   <string name="user_already_exists">È kàrzuroki nàm pèsar à ha</string>
   <string name="upload_title">Aks ťagal dayag bit</string>
   <string name="upload_dialog_error_connection_title">Ťac na bit</string>
-  <string name="upload_dialog_error_connection_message" fuzzy="true">Aks sargèjag(Àplod) na bit,pad à kòšest a kan ae?</string>
+  <string name="upload_dialog_error_connection_message">اکس سرگݔجَگءَ نہ بیت۔</string>
   <string name="upload_dialog_error_connection_retry">Kòšest</string>
   <string name="upload_dialog_error_connection_ok">Ša!</string>
   <string name="upload_dialog_error_unknown_title">Nàbezàntèn Haràbi</string>
-  <string name="upload_dialog_error_unknown_message" fuzzy="true">Aks sargèjag(Àplod) na bit,pad Aà kòšest a kan ae?</string>
+  <string name="upload_dialog_error_unknown_message">اکس سرگݔجگءَ نہ بیت</string>
   <string name="upload_dialog_error_unknown_retry">Kòšest</string>
   <string name="upload_dialog_error_unknown_ok">Bajjag</string>
-  <string name="upload_dialog_process_title" fuzzy="true">Aks sargèjag biyagaen</string>
+  <string name="upload_dialog_process_title">اکس بکگرانڈءِ سرا سرگݔجگ بییگئن</string>
   <string name="upload_dialog_process_message">Sabr kan...</string>
   <string name="upload_dialog_success_title">Sargèjag bi</string>
   <string name="upload_dialog_success_message">Aks sargèjag bit</string>
   <string name="upload_dialog_success_ok">Ša</string>
   <string name="upload_dialog_not_authenticated_title">Pa sargèjag à bàyad ent ka màn be bae</string>
+  <string name="upload_dialog_not_authenticated_message">سرا بندی پہ پروپایلءِ تاکا</string>
   <string name="upload_dialog_not_authenticated_ok">Ša</string>
+  <string name="upload_dialog_not_agreed_to_terms">منءَ مَننون کہ اے گپتگݔن اکس 4.0 ءِ لایسنسءِ سرا شِنگ بہ بیت۔</string>
   <string name="upload_dialog_agree_to_terms">Hà!</string>
   <string name="upload_dialog_decline_terms">Nan</string>
+  <string name="upload_notification_title">پداگپتگݔن اکس سرگݔجگ بییگئن، اشی بلکݔن کموکے ٹݔم بہ بارت۔</string>
+  <string name="upload_notification_success">پداگپتگݔن اکس سرگݔجگ بیت</string>
+  <string name="upload_notification_failure">پداگپتگݔن اکس سرگݔجگ نہ بیت</string>
+  <string name="acra_dialog_title">\'آجاپئیکءِ پداگپتگݔن اکس\' ھراب بیت</string>
+  <string name="acra_dialog_text">یک ناپججارݔن مشتِکے دݔما آتک ءُ کار اۏشتات، دستبندیءَ بیت مِشتِکءِ داتگݔنان پہ ما دݔم بہ دئ اِت تݔوکا پہ اے کارءِ واستا OK سرا مݔن بہ دئ اِت۔</string>
+  <string name="acra_dialog_comment_prompt">بلکݔن ھن شما وتی گݔشترݔن ھبران اے مِشتِکءِ بارہ ئا چݔرا بہ لِکک اِت:</string>
   <string name="acra_dialog_ok_toast">Dast et dard ma kan!</string>
   <string name="about_title">Bàrawà</string>
   <string name="version">Weržen</string>
@@ -67,6 +82,10 @@
   <string name="privacy_policy">وتیگی</string>
   <string name="navigation_drawer_open">درئیورء پچ کنگ</string>
   <string name="navigation_drawer_close">درئیورء بندگ</string>
+  <string name="settings_show_tutorial">پھکݔن چیزان پداگپتگݔن اکسءِ ڈؤلءِ سرا سۏج دئ</string>
+  <string name="settings_show_map_by_default">نکشانکا پݔسری ڈؤلا سۏج دئ</string>
+  <string name="settings_agree_to_license_terms">منءَ مننون کہ اے پداگپتگݔن اکش آجاپئیکءِ سرا گۏن 4.0ءِ لایسنسءِ سرا شِنگ بہ بیت۔</string>
+  <string name="tutorial_hide_show_flip">مݔن دئ پہ زاھر کنگ ءُ اندݔم کنگا اکسئی۔\nسرۏشتادیءِ نمادءِ سرا کہ سرا راستݔن سریکا اِنت مݔن بہ دئ اِت پہ وھدی اکسا</string>
   <string name="tutorial_dismiss">برو!</string>
   <string name="tutorial_dialog_show_again_no">نں</string>
   <string name="tutorial_dialog_show_again_yes">ھؤ</string>

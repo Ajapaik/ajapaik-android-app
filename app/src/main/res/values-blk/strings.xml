@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Khun Chit Phuu
 * ခွန်ဖန်ဒွဲ့
 * လွိုင်ႏအာထင်ႏထိုထဲင်း
 * 咽頭べさ
 -->
 <resources>
+  <string name="processing_image">ရုက်ပွုံႏအဝ်ႏလွဉ်နေကျာꩻ</string>
   <string name="please_wait">အိုင်ပွေားဆောင်းတဆင်ႏသြ...</string>
   <string name="something_went_wrong">ထွာထိုꩻလဲဉ်း အမာႏတဗာႏဗာႏ</string>
   <string name="notification_channel">ဖေႏသေချက် အစွိုးစွိုးဖိုင်ႏ</string>
   <string name="notification_upload_text">အိုင်ပွေားဆောင်းတဆင်ႏသြ...</string>
+  <string name="action_albums">အစုအဗူႏ</string>
+  <string name="action_flip">ချာႏ</string>
   <string name="action_login">နွို့အကောက်</string>
   <string name="action_register">ဒင်ႏမတ်ပိုင်တိဉ်</string>
   <string name="action_logout">ထန်ႏအကောက်</string>
   <string name="action_profile">ပရိုဖုဲင်</string>
   <string name="action_refresh">ထိုမ်ႏစဲစ်ချာယင်း</string>
   <string name="action_settings">အဖျင်အဆင်ဖုံႏ</string>
+  <string name="nearest_title">ကအဝ်ႏဗော့ꩻဒါႏရုက်ပွုံႏဖုံႏ</string>
+  <string name="finna_title">ရုပ်ပွုံႏဖုံႏကအဝ်ႏဗော့ꩻဒါႏယို (Finna)</string>
+  <string name="finna1918_title">တံႏဆိက် (ဗရန်ဒါ)</string>
+  <string name="albums_label_no_data">အစုဗူႏအဲဉ်ထဝ်း</string>
+  <string name="albums_title">အစုဗူႏဖုံႏ</string>
+  <string name="album_title">အစုꩻဗူႏ</string>
+  <string name="nearest_dialog_error_location_disabled_title">ပေ့ꩻခါꩻထွူလဲဉ်းအွဉ်ႏနယ်ခင်ႏလမ်း</string>
+  <string name="nearest_dialog_error_location_disabled_message">တထီႏလꩻတဝ်းနာꩻကအဝ်ႏဒါႏခင်ႏလမ်းယိုခါသွူ။ ဖေႏနေးကထီႏလꩻ နာꩻမဲဉ်ဗွောင်နေ?</string>
   <string name="nearest_dialog_error_location_disabled_close">ပေ့ꩻထိုꩻ</string>
   <string name="nearest_dialog_error_location_disabled_open">ဗွောင် အပွိုင်အဆင်</string>
+  <string name="nearest_label_no_data">အသောင်အရင်ꩻယိုကိုနဝ်ꩻ ရုပ်ပွုံႏအဝ်ႏတဝ်း</string>
+  <string name="nearest_label_no_data_button">မီႏမဲဉ်ထီႏလို့ရုပ်ပွုံႏကားကအဝ်ႏနဝ်ꩻ ထွားသွော့ꩻအစုဗူႏ(အယ်လ်ဘမ်)ကိုလုဲင်း</string>
+  <string name="photo_title">ရုပ်ပွုံႏခရာႏကားကအဝ်ႏ</string>
   <string name="camera_title">ကဉ်မရာ</string>
   <string name="profile_title">ပရိုဖုဲင်</string>
   <string name="profile_facebook_login">နွို့တောမ်ႏဖေ့ဗိုတ်</string>
@@ -26,8 +41,15 @@
   <string name="profile_register">ဖန်ဆင်ꩻအကောက်</string>
   <string name="input_username_hint">အီးမေး</string>
   <string name="input_password_hint">ငဝ်းဗိဥ်ႏပလို့ꩻ</string>
+  <string name="input_firstname_hint">မိဉ်ꩻပထမဖြုံႏ</string>
+  <string name="input_lastname_hint">မိဉ်ꩻဒုတိယဖြုံႏ</string>
   <string name="login_title">နွို့အကောက်</string>
+  <string name="login_failed">နွို့လော့အဉ် အောင်ႏတဝ်းသွူ</string>
+  <string name="wrong_password">ငဝ်းဗိဉ်ႏပလို့ꩻ အမာႏ</string>
   <string name="registration_title">ဒင်ႏမတ်ပိုင်တိဉ်</string>
+  <string name="user_already_exists">ကောသွုံꩻသားမိဉ်ꩻ အဝ်ႏထွူလဲဉ်း</string>
+  <string name="upload_dialog_error_connection_title">ဆွိုက်သွုပ်မုꩻ အမာႏ</string>
+  <string name="upload_dialog_error_connection_message">ဒင်ႏတဝ်းဒွုမ်ရုပ်ပွုံႏ</string>
   <string name="upload_dialog_error_connection_retry">မာꩻချာယင်းဟုဲင်း</string>
   <string name="upload_dialog_error_connection_ok">မွေးသွူ</string>
   <string name="upload_dialog_error_unknown_title">သေတဝ်း အမာႏ</string>
