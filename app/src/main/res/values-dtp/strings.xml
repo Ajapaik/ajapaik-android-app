@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* CorrelMoris38
+* Jilorisa
+-->
+<resources>
+  <string name="app_name">Maganu kawagu gambal Ajapaik</string>
+  <string name="processing_image">Momproses gambal</string>
+  <string name="please_wait">Andado...</string>
+  <string name="something_went_wrong">Haro kobolingkahangan</string>
+  <string name="notification_channel">Pononsunudan general</string>
+  <string name="notification_upload_title">Poposuang ginambal kawagu</string>
+  <string name="notification_upload_text">Andado...</string>
+  <string name="action_albums">Album</string>
+  <string name="action_flip">Flip</string>
+  <string name="action_login">Sumuang log</string>
+  <string name="action_register">Dumopitar</string>
+  <string name="action_logout">Sumoliwan</string>
+  <string name="action_profile">Profail</string>
+  <string name="action_refresh">Muat kawagu</string>
+  <string name="action_settings">Tetapan</string>
+  <string name="nearest_title">Gambal miinsomok</string>
+  <string name="finna_title">Gambal miinsomok (Finna)</string>
+  <string name="finna1918_title">Signe Brander</string>
+  <string name="albums_label_no_data">Aiso album</string>
+  <string name="albums_title">Album</string>
+  <string name="album_title">Album</string>
+  <string name="nearest_dialog_error_location_disabled_title">Tinutupan kinoyonon</string>
+  <string name="nearest_dialog_error_location_disabled_message">Au milo maganu kinoyonon dinondo. Orohian ko mongukab kawagu?</string>
+  <string name="nearest_dialog_error_location_disabled_close">Tutupai</string>
+  <string name="nearest_dialog_error_location_disabled_open">Ukabai tetapan</string>
+  <string name="nearest_label_no_data">Aiso gambal miinsomok</string>
+  <string name="nearest_label_no_data_button">Intangai album montok mogintong toinsanan gambal</string>
+  <string name="photo_title">Lobi moklumat kokomoi gambal</string>
+  <string name="camera_title">Komira</string>
+  <string name="profile_title">Profail</string>
+  <string name="profile_facebook_login">Dumopitar miampai Facebook</string>
+  <string name="profile_google_login">Dumopitar momoguno Google</string>
+  <string name="profile_logout">Sumoliwan</string>
+  <string name="profile_login">Dumopitar</string>
+  <string name="profile_register">Momonsoi akaun</string>
+  <string name="input_username_hint">E-mel</string>
+  <string name="input_password_hint">Borospalapus</string>
+  <string name="input_firstname_hint">Ngaran gulu</string>
+  <string name="input_lastname_hint">Ngaran tohuri</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; maganu kawagu gambal</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; maganu kawagu gambal</item>
+  </plurals>
+  <string name="profile_no_rephotos">Au ko po nokopomonsoi maganu gambal kawagu</string>
+  <string name="login_title">Sumuang log</string>
+  <string name="login_failed">Sumuang log au nakalantoi</string>
+  <string name="wrong_password">Nakasala borospalapus!</string>
+  <string name="registration_title">Dumopitar</string>
+  <string name="user_already_exists">Ngarangunoon haro no</string>
+  <string name="upload_title">Pasaaho gumambal kawagu</string>
+  <string name="upload_dialog_error_connection_retry">Umbalai kawagu</string>
+  <string name="upload_dialog_error_connection_ok">OK</string>
+  <string name="upload_dialog_error_unknown_title">Au noilaan o ralat</string>
+  <string name="upload_dialog_error_unknown_retry">Umbalai kawagu</string>
+  <string name="upload_dialog_process_message">Andado po...</string>
+  <string name="upload_dialog_success_ok">OK</string>
+</resources>

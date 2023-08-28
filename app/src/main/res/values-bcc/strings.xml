@@ -17,7 +17,7 @@
   <string name="action_register">Hòr biyag</string>
   <string name="action_logout">Dar Àyag</string>
   <string name="action_profile">Propàyl</string>
-  <string name="action_refresh">Padàr</string>
+  <string name="action_refresh">نۏک کنگ</string>
   <string name="action_settings">Redànkàn</string>
   <string name="nearest_title">Nazikèn Aksàn</string>
   <string name="finna_title">Nazzikèn Aksàn(Finna)</string>
@@ -27,7 +27,7 @@
   <string name="album_title">Àlbum</string>
   <string name="nearest_dialog_error_location_disabled_title">Jàh dasras à næn</string>
   <string name="nearest_dialog_error_location_disabled_message">ھنیگݔن جاھسۏج گرگءَ نہ بیت، لۏٹ اِت جاھسۏجءِ گرَگا چالو بہ کن اِت؟</string>
-  <string name="nearest_dialog_error_location_disabled_close">Bandag</string>
+  <string name="nearest_dialog_error_location_disabled_close">بندگ</string>
   <string name="nearest_dialog_error_location_disabled_open">Redànkàn e Pac kanag</string>
   <string name="nearest_label_no_data">Nazzikèn Aksè Nè</string>
   <string name="nearest_label_no_data_button">Àlbumàn be càr pa aksàn e paròc kanag à</string>
@@ -76,7 +76,7 @@
   <string name="acra_dialog_text">یک ناپججارݔن مشتِکے دݔما آتک ءُ کار اۏشتات، دستبندیءَ بیت مِشتِکءِ داتگݔنان پہ ما دݔم بہ دئ اِت تݔوکا پہ اے کارءِ واستا OK سرا مݔن بہ دئ اِت۔</string>
   <string name="acra_dialog_comment_prompt">بلکݔن ھن شما وتی گݔشترݔن ھبران اے مِشتِکءِ بارہ ئا چݔرا بہ لِکک اِت:</string>
   <string name="acra_dialog_ok_toast">Dast et dard ma kan!</string>
-  <string name="about_title">Bàrawà</string>
+  <string name="about_title">بارہ‌ئا</string>
   <string name="version">Weržen</string>
   <string name="contact">رابتہ</string>
   <string name="privacy_policy">وتیگی</string>
