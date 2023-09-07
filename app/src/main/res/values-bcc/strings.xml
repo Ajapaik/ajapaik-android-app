@@ -38,9 +38,9 @@
   <string name="profile_google_login">Màn biyag gò Gugel</string>
   <string name="profile_logout">Dar Àyag</string>
   <string name="profile_login">Hòr Biyag</string>
-  <string name="profile_register">Sàbè Jòďènag</string>
+  <string name="profile_register">سابے بنݔنَگ</string>
   <string name="input_username_hint">Email</string>
-  <string name="input_password_hint">Gàlguaz</string>
+  <string name="input_password_hint">گالگوَز/پسورد</string>
   <string name="input_firstname_hint">Nàm</string>
   <string name="input_lastname_hint">Bon Nàm</string>
   <string name="profile_no_rephotos">شما ھنگت نۏکݔن اکسے نہ بَنݔنتَگ؟</string>
@@ -52,12 +52,12 @@
   <string name="upload_title">Aks ťagal dayag bit</string>
   <string name="upload_dialog_error_connection_title">Ťac na bit</string>
   <string name="upload_dialog_error_connection_message">اکس سرگݔجَگءَ نہ بیت۔</string>
-  <string name="upload_dialog_error_connection_retry">Kòšest</string>
+  <string name="upload_dialog_error_connection_retry">پدا کۏشست</string>
   <string name="upload_dialog_error_connection_ok">Ša!</string>
   <string name="upload_dialog_error_unknown_title">Nàbezàntèn Haràbi</string>
   <string name="upload_dialog_error_unknown_message">اکس سرگݔجگءَ نہ بیت</string>
-  <string name="upload_dialog_error_unknown_retry">Kòšest</string>
-  <string name="upload_dialog_error_unknown_ok">Bajjag</string>
+  <string name="upload_dialog_error_unknown_retry">پدا کۏشست</string>
+  <string name="upload_dialog_error_unknown_ok">بججگ</string>
   <string name="upload_dialog_process_title">اکس بکگرانڈءِ سرا سرگݔجگ بییگئن</string>
   <string name="upload_dialog_process_message">Sabr kan...</string>
   <string name="upload_dialog_success_title">Sargèjag bi</string>
