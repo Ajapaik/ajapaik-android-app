@@ -2,6 +2,7 @@
 <!-- Authors:
 * An13sa
 * Asierog
+* Atzerritik
 * EukeneFL
 * Josuert
 * Mikel Ibaiba
@@ -11,7 +12,8 @@
   <string name="processing_image">Argazkia prozesatzen</string>
   <string name="please_wait">Mesedez itxaron…</string>
   <string name="something_went_wrong">Zerbaitek huts egin du</string>
-  <string name="notification_channel">Notifikazio generalak</string>
+  <string name="notification_channel">Jakinarazpen orokorrak</string>
+  <string name="notification_upload_text">Mesedez itxaron…</string>
   <string name="action_albums">Albumak</string>
   <string name="action_flip">Buelta eman</string>
   <string name="action_login">Hasi saioa</string>
@@ -21,6 +23,7 @@
   <string name="action_refresh">Eguneratu</string>
   <string name="action_settings">Ezarpenak</string>
   <string name="nearest_title">Gertuko argazkiak</string>
+  <string name="finna_title">Inguruko argazkiak (Finna)</string>
   <string name="albums_label_no_data">Albumik ez</string>
   <string name="albums_title">Albumak</string>
   <string name="album_title">Albuma</string>

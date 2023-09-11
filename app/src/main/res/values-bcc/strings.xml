@@ -6,7 +6,7 @@
 <resources>
   <string name="app_name">آجاپئیکءِ اکس پدا</string>
   <string name="processing_image">Aks à àragæn</string>
-  <string name="please_wait">Sabr Kan...</string>
+  <string name="please_wait">کمے بہ دار...</string>
   <string name="something_went_wrong">Cizè Haràb ent</string>
   <string name="notification_channel">لَس سرپدی</string>
   <string name="notification_upload_title">پدا اکسا سرگݔجَگئن</string>
@@ -18,7 +18,7 @@
   <string name="action_logout">Dar Àyag</string>
   <string name="action_profile">Propàyl</string>
   <string name="action_refresh">نۏک کنگ</string>
-  <string name="action_settings">Redànkàn</string>
+  <string name="action_settings">ردانکان</string>
   <string name="nearest_title">Nazikèn Aksàn</string>
   <string name="finna_title">Nazzikèn Aksàn(Finna)</string>
   <string name="finna1918_title">Signe Brander</string>
@@ -59,7 +59,7 @@
   <string name="upload_dialog_error_unknown_retry">پدا کۏشست</string>
   <string name="upload_dialog_error_unknown_ok">بججگ</string>
   <string name="upload_dialog_process_title">اکس بکگرانڈءِ سرا سرگݔجگ بییگئن</string>
-  <string name="upload_dialog_process_message">Sabr kan...</string>
+  <string name="upload_dialog_process_message">کمے بہ دار...</string>
   <string name="upload_dialog_success_title">Sargèjag bi</string>
   <string name="upload_dialog_success_message">Aks sargèjag bit</string>
   <string name="upload_dialog_success_ok">Ša</string>
@@ -77,7 +77,7 @@
   <string name="acra_dialog_comment_prompt">بلکݔن ھن شما وتی گݔشترݔن ھبران اے مِشتِکءِ بارہ ئا چݔرا بہ لِکک اِت:</string>
   <string name="acra_dialog_ok_toast">Dast et dard ma kan!</string>
   <string name="about_title">بارہ‌ئا</string>
-  <string name="version">Weržen</string>
+  <string name="version">ورژن</string>
   <string name="contact">رابتہ</string>
   <string name="privacy_policy">وتیگی</string>
   <string name="navigation_drawer_open">درئیورء پچ کنگ</string>
