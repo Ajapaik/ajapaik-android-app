@@ -2,6 +2,7 @@
 <!-- Authors:
 * BadDog
 * Kizule
+* Milicevic01
 * Zoranzoki21
 -->
 <resources>
@@ -9,6 +10,9 @@
   <string name="processing_image">Обрађујем слику</string>
   <string name="please_wait">Сачекајте…</string>
   <string name="something_went_wrong">Нешто није у реду</string>
+  <string name="notification_channel">Општа обавештења</string>
+  <string name="notification_upload_title">Отпремање рефотографије</string>
+  <string name="notification_upload_text">Молимо сачекајте...</string>
   <string name="action_albums">Албуми</string>
   <string name="action_flip">Окрени</string>
   <string name="action_login">Пријави ме</string>
@@ -71,6 +75,9 @@
   <string name="upload_dialog_not_agreed_to_terms">Прихватам да објавим рефотографисања под лиценцом CC BY 4.0.</string>
   <string name="upload_dialog_agree_to_terms">Да</string>
   <string name="upload_dialog_decline_terms">Не</string>
+  <string name="upload_notification_title">Отпремање рефотографије. Можда ће бити потребно неко време</string>
+  <string name="upload_notification_success">Рефотографија је успешно отпремљена</string>
+  <string name="upload_notification_failure">Отпремање рефотографије није успело</string>
   <string name="acra_dialog_title">Апликација „Ајапајк рефотографисање” је отказала</string>
   <string name="acra_dialog_text">Дошло је до неочекиване грешке која је приморала апликацију да се заустави. Помозите нам да ово поправимо слањем података о грешци, све што треба да урадите је да кликнете на дугме OK.</string>
   <string name="acra_dialog_comment_prompt">Можете да додајете своје коментаре о проблему испод:</string>
