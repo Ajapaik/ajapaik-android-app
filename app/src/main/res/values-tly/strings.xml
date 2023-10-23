@@ -28,7 +28,7 @@
   <string name="profile_logout">Beşi</string>
   <string name="profile_login">Dəşe</string>
   <string name="input_username_hint">E-nomə</string>
-  <string name="input_password_hint">Pərol</string>
+  <string name="input_password_hint">Parol</string>
   <string name="input_firstname_hint">Nüm</string>
   <string name="input_lastname_hint">Soynüm</string>
   <string name="login_title">Dəşi</string>
@@ -49,7 +49,7 @@
   <string name="about_title">Həxədə</string>
   <string name="version">Versiya</string>
   <string name="contact">Əloğə</string>
-  <string name="privacy_policy">Məxfi</string>
+  <string name="privacy_policy">Xysusijət</string>
   <string name="tutorial_dialog_show_again_no">Ne</string>
   <string name="tutorial_dialog_show_again_yes">Ha</string>
   <string name="no_rephotos">Ni reşəkl</string>
