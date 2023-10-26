@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * Xuacu
+* YoaR
 -->
 <resources>
   <string name="app_name">Refoto Ajapaik</string>
@@ -60,7 +61,7 @@
   <string name="upload_dialog_error_unknown_title">Error desconocíu</string>
   <string name="upload_dialog_error_unknown_message">Nun pudo cargase la semeya.</string>
   <string name="upload_dialog_error_unknown_retry">Tentar nuevamente</string>
-  <string name="upload_dialog_error_unknown_ok">Encaboxar</string>
+  <string name="upload_dialog_error_unknown_ok">Zarrar</string>
   <string name="upload_dialog_process_title">Cargando la semeya en segundu planu</string>
   <string name="upload_dialog_process_message">Espera…</string>
   <string name="upload_dialog_success_title">Carga correuta</string>
@@ -100,7 +101,7 @@
   <string name="no_rephotos">Nun hai refotos</string>
   <string name="storage_not_permitted_title">Nun se permite l\'almacenamientu</string>
   <string name="storage_not_permitted_message">Nun permitir qu\'esta app use l\'almacenamientu torgaráte l\'accesu a delles carauterístiques; por casu, tomar y xubir refotos. Considera permitir l\'usu del almacenamientu</string>
-  <string name="storage_not_permitted_cancel">Encaboxar</string>
+  <string name="storage_not_permitted_cancel">Zarrar</string>
   <string name="storage_not_permitted_open_settings">Abrir configuración</string>
   <string name="my_rephotos">Les mios refotos</string>
   <string name="rephotos_label_not_logged_in_text">Anicia sesión pa ver les tos refotos</string>
