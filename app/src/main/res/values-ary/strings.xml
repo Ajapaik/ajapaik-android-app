@@ -38,7 +38,7 @@
   <string name="tutorial_dialog_show_again_no">لا</string>
   <string name="tutorial_dialog_show_again_yes">آه</string>
   <string name="action_search">قلّب</string>
-  <string name="start_taking_rephoto">بدا فعملية إعادة التصوير</string>
+  <string name="start_taking_rephoto">بدا ف عملية لمعاودة د التصوير</string>
   <string name="show_photo_details">شوف تفاصيل التصاور</string>
-  <string name="show_rephotos">شوف إعادة التصوير</string>
+  <string name="show_rephotos">شوف لمعاودة د التصوير</string>
 </resources>
