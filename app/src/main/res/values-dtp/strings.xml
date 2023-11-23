@@ -60,4 +60,10 @@
   <string name="upload_dialog_error_unknown_retry">Umbalai kawagu</string>
   <string name="upload_dialog_process_message">Andado po...</string>
   <string name="upload_dialog_success_ok">OK</string>
+  <string name="upload_dialog_decline_terms">Au</string>
+  <string name="acra_dialog_ok_toast">Kotoluadan!</string>
+  <string name="about_title">Kokomoi</string>
+  <string name="version">Versi</string>
+  <string name="privacy_policy">Privasi</string>
+  <string name="album_no_data">Also gambar</string>
 </resources>
