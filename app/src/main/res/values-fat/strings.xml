@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Authors:
+* Gregorynelsonmensah1
+-->
+<resources>
+  <string name="app_name">Ajapaik mfonyin fofor</string>
+  <string name="processing_image">Yeridzi wo mfonyin no ho dwuma</string>
+  <string name="please_wait">Yɛpa wo kyɛw tweɔn...</string>
+  <string name="something_went_wrong">Biribi ankɔ yie</string>
+  <string name="notification_channel">Asotsir ahorow</string>
+  <string name="notification_upload_title">Yɛdze wo mfonyin fofor no rogu do</string>
+  <string name="notification_upload_text">Yɛpa wo kyɛw tweɔn...</string>
+  <string name="action_albums">Albɔm ahorow</string>
+  <string name="action_flip">Kyea</string>
+  <string name="action_login">Kɔ mu</string>
+  <string name="action_logout">Fi mu</string>
+  <string name="action_profile">Dza ɔfa wo ho</string>
+  <string name="action_settings">Bea a ɛtoto wo ndzɛmba</string>
+  <string name="nearest_title">Mfonyin ahorow a ɔbɛn ha</string>
+  <string name="finna_title">Mfonyin ahorow a ɔbɛn ha (Finna)</string>
+  <string name="albums_label_no_data">Albɔm ahorow nnyi ha</string>
+  <string name="albums_title">Albɔm ahorow</string>
+  <string name="album_title">Albɔm</string>
+  <string name="nearest_dialog_error_location_disabled_title">Edum bea a ɛwɔ no</string>
+  <string name="nearest_dialog_error_location_disabled_message">Yenntum annya beebi a ɛwɔ no. Ɛpɛ dɛ ɛsɔ si do anaa?</string>
+  <string name="nearest_dialog_error_location_disabled_close">To mu</string>
+  <string name="nearest_dialog_error_location_disabled_open">Buei bea a ɛtoto wo ndzɛmba</string>
+  <string name="nearest_label_no_data">Mfonyin ahorow biara mbɛn ha</string>
+  <string name="nearest_label_no_data_button">Hwɛ albɔm ahorow na eetum ahwehwɛ mfonyin no nyinara mu</string>
+  <string name="photo_title">Mfonyin no ho nsɛm</string>
+  <string name="profile_title">Dza ɔfa wo ho</string>
+  <string name="profile_facebook_login">Fa Facebook do wura mu</string>
+  <string name="profile_google_login">Fa Google do wura mu</string>
+  <string name="profile_logout">Fi mu</string>
+  <string name="profile_login">Wura mu</string>
+  <string name="profile_register">Yɛ account fofor</string>
+  <string name="input_username_hint">Email</string>
+  <string name="input_password_hint">Kokoa mu ahyɛnsewdze</string>
+  <string name="input_firstname_hint">Wo dzin a odzi kan</string>
+  <string name="input_lastname_hint">Wo dzin a otwa tun</string>
+  <plurals name="profile_rephotos">
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; mfonyin fofor</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; mfonyin fofor ahorow</item>
+  </plurals>
+  <string name="profile_no_rephotos">Ɛnnyɛɛ mfonyin fofor biara</string>
+  <string name="login_title">Kɔ mu</string>
+  <string name="login_failed">Wo nkɔr mu no annyɛ yie</string>
+  <string name="wrong_password">Etsi wo kokoa mu ahyɛnsewdze no</string>
+  <string name="user_already_exists">Dwumadinyi dzin yi wɔ ha dedaw</string>
+  <string name="upload_title">Foa mfonyin fofor no do</string>
+  <string name="upload_dialog_error_connection_title">Yenntum enntwa wo anto mu</string>
+  <string name="upload_dialog_error_connection_message">Yenntum amfa wo mfonyin no enngu do.</string>
+  <string name="upload_dialog_error_connection_retry">Yɛ no bio</string>
+  <string name="upload_dialog_error_connection_ok">Yoo</string>
+  <string name="upload_dialog_error_unknown_title">Yennyim dza wɔesi</string>
+  <string name="upload_dialog_error_unknown_message">Yenntum amfa wo mfonyin no enngu do</string>
+  <string name="upload_dialog_error_unknown_retry">Yɛ no bio</string>
+  <string name="upload_dialog_error_unknown_ok">Twa mu</string>
+  <string name="upload_dialog_process_title">Yɛdze mfonyin no rugu do wɔ background</string>
+  <string name="upload_dialog_process_message">Yɛserɛ wo tweɔn...</string>
+  <string name="upload_dialog_success_title">Yɛdze egu do ewie</string>
+  <string name="upload_dialog_success_message">Yɛdze wo mfonyin no egu do ewie</string>
+  <string name="upload_dialog_success_ok">Yoo</string>
+  <string name="upload_dialog_not_authenticated_title">Ɔwɔ dɛ ɛkɔ mu ansaana yɛdze egu do</string>
+  <string name="upload_dialog_not_authenticated_message">San kɔ dza ɔfa wo ho kratafa hɔ</string>
+  <string name="upload_dialog_not_authenticated_ok">Yoo</string>
+  <string name="upload_dialog_agree_to_terms">Nyew!</string>
+  <string name="upload_dialog_decline_terms">Oho</string>
+  <string name="upload_notification_title">Yɛdze mfonyin fofor no rugu do. Obedzi mber kakra</string>
+  <string name="upload_notification_success">Yɛdze mfonyin fofor no egu do ewie</string>
+  <string name="upload_notification_failure">Yenntum annfa mfonyin fofor no enngu do</string>
+  <string name="acra_dialog_title">\'Ajapaik rephoto\' no asɛe</string>
+  <string name="acra_dialog_comment_prompt">Ebotum dze wo haw ho nsɛm egu ase ha:</string>
+  <string name="acra_dialog_ok_toast">Yɛda wo ase!</string>
+  <string name="about_title">Dza ɔfa ho</string>
+  <string name="contact">Dzi nkitsaho</string>
+  <string name="privacy_policy">Kokoamu</string>
+  <string name="navigation_drawer_open">Buei drawer no</string>
+  <string name="navigation_drawer_close">To drawer no mu</string>
+  <string name="settings_show_tutorial">Da wo mfatoho ɔwɔ mfonyin fofor bea hɔ no edzi</string>
+  <string name="settings_agree_to_license_terms">Megye to mu dɛ metsintsim mfonyin afofor egu Ajapaik.ee wɔ CC BY 4.0 licence mbra no ase.</string>
+</resources>
