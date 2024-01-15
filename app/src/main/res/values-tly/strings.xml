@@ -11,7 +11,7 @@
   <string name="notification_upload_text">Zəhmət nıbu, çəş bıkan...</string>
   <string name="action_albums">Albomon</string>
   <string name="action_login">Dəşi</string>
-  <string name="action_register">Ğeydiyot</string>
+  <string name="action_register">Ǧejdijot</string>
   <string name="action_logout">Beşi</string>
   <string name="action_profile">Profil</string>
   <string name="action_refresh">Tojə karde</string>
@@ -33,7 +33,7 @@
   <string name="input_lastname_hint">Soynüm</string>
   <string name="login_title">Dəşi</string>
   <string name="wrong_password">Rost nıbə parol!</string>
-  <string name="registration_title">Ğeydiyot</string>
+  <string name="registration_title">Ǧejdijot</string>
   <string name="upload_dialog_error_connection_retry">Təkror</string>
   <string name="upload_dialog_error_connection_ok">COK</string>
   <string name="upload_dialog_error_unknown_title">Noməlumə səhv</string>
