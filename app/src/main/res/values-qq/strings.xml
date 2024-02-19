@@ -8,10 +8,11 @@
 * Puik
 * Robby
 * Rocky 734
+* Urhixidur
 -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="all">
   <string name="app_name">Name of the app (how it is displayed in the apps listing, etc.).\n\nThe original Estonian name translates as \"Ajapaik – then and now\" and some languages (Finnish, Swedish) have translated that instead of \"rephoto(graphy)\" in the name. Translators should consider which version fits best with their language.</string>
-  <string name="processing_image">Message when rephotograph has been captured and is being processed (cropped according to old image zoom etc)</string>
+  <string name="processing_image">Message when rephotograph has been captured and is being processed (cropped according to old image zoom, etc.)</string>
   <string name="please_wait">Second part of message when rephotograph is processed.\n{{Identical|Please wait}}</string>
   <string name="something_went_wrong">Generic error message.\n{{Identical|Something went wrong}}</string>
   <string name="notification_upload_text">{{Identical|Please wait}}</string>
