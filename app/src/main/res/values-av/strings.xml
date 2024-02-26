@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
+* Augustus A C
 * Omarov M.
 -->
 <resources>
@@ -10,20 +11,20 @@
   <string name="notification_channel">ГӀаммал лъазариял</string>
   <string name="notification_upload_title">Рефото жанибе реххи</string>
   <string name="notification_upload_text">Лъалхъе...</string>
-  <string name="action_albums">Альбумал</string>
-  <string name="action_flip">ТӀабихьизабизе</string>
+  <string name="action_albums">Албумал</string>
+  <string name="action_flip">МатӀизе</string>
   <string name="action_login">Жанире лӀугьин</string>
   <string name="action_register">Регистрация</string>
   <string name="action_logout">КъватӀире ин</string>
-  <string name="action_profile">Профиль</string>
+  <string name="action_profile">Профил</string>
   <string name="action_refresh">ЦӀигьабизе</string>
   <string name="action_settings">Рекъезариял</string>
   <string name="nearest_title">ГӀагарлъухъ фотоял</string>
   <string name="finna_title">ГӀагарлъухъ фотоял (Finna)</string>
   <string name="finna1918_title">Сигне Брандер</string>
-  <string name="albums_label_no_data">Альбумал гьечӀо</string>
-  <string name="albums_title">Альбумал</string>
-  <string name="album_title">Альбум</string>
+  <string name="albums_label_no_data">Албумал гьечӀо</string>
+  <string name="albums_title">Албумал</string>
+  <string name="album_title">Албум</string>
   <string name="nearest_dialog_error_location_disabled_title">Локация свинабун буго</string>
   <string name="nearest_dialog_error_location_disabled_message">ГьабсагӀатаб локация лъазабизе бажарулеб гьечӀо. Локация биччазе бокьилищ?</string>
   <string name="nearest_dialog_error_location_disabled_close">Къазе</string>
@@ -32,14 +33,14 @@
   <string name="nearest_label_no_data_button">Киналго суратазухъ ралагьизе Альбомазде ракке</string>
   <string name="photo_title">Фотоялъул хӀакъалъулӀ информация</string>
   <string name="camera_title">Камера</string>
-  <string name="profile_title">Профиль</string>
+  <string name="profile_title">Профил</string>
   <string name="profile_facebook_login">Facebook-алдалъун жанире лӀугьине</string>
   <string name="profile_google_login">Google-алдалъун жанире лӀугьине</string>
   <string name="profile_logout">КъватӀире ине</string>
   <string name="profile_login">Жанире лӀугьине</string>
   <string name="profile_register">Аккаунт гьабизе</string>
   <string name="input_username_hint">Электронияб поч</string>
-  <string name="input_password_hint">Пароль</string>
+  <string name="input_password_hint">Парол</string>
   <string name="input_firstname_hint">ЦӀар</string>
   <string name="input_lastname_hint">Фамилия</string>
   <plurals name="profile_rephotos">
@@ -51,11 +52,11 @@
   <string name="profile_no_rephotos">Нужеца жеги цониги рефото гьабичӀо</string>
   <string name="login_title">Жанире лӀугьин</string>
   <string name="login_failed">Авторизациялъул гъалатӀ</string>
-  <string name="wrong_password">Мекъаб пароль!</string>
+  <string name="wrong_password">Мекъаб парол!</string>
   <string name="registration_title">Регистрация</string>
   <string name="user_already_exists">Гьединаб хӀалтӀизабунцӀар ккун буго</string>
   <string name="upload_title">Рефото тасдикъ гьабизе</string>
-  <string name="upload_dialog_error_connection_title">Цолъизабиялъул гъалатӀ</string>
+  <string name="upload_dialog_error_connection_title">Рухьул гъалатӀ</string>
   <string name="upload_dialog_error_connection_message">Фото жанибе реххизе бажарулеб гьечӀо</string>
   <string name="upload_dialog_error_connection_retry">Такрар гьабизе</string>
   <string name="upload_dialog_error_connection_ok">OK</string>
@@ -77,7 +78,7 @@
   <string name="upload_notification_title">Рефото жанибе реххулеб буго. Гьелъ цо заман базе бегьула</string>
   <string name="upload_notification_success">Рефото жанибе реххи битӀа-бишун ккана</string>
   <string name="acra_dialog_ok_toast">Баркала!</string>
-  <string name="about_title">Программаялъул хӀакъалъулӀ</string>
+  <string name="about_title">Программалъул рахъалӀ</string>
   <string name="version">Версия</string>
   <string name="contact">Контакт</string>
   <string name="privacy_policy">Конфиденциаллъи</string>
