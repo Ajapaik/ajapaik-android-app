@@ -37,7 +37,7 @@
   <string name="profile_google_login">Google бла кир</string>
   <string name="profile_logout">Чыгъыу</string>
   <string name="profile_login">Кириу</string>
-  <string name="profile_register">Аккаунт къурау</string>
+  <string name="profile_register">Хыйсаб къура</string>
   <string name="input_username_hint">E-mail</string>
   <string name="input_password_hint">Пароль</string>
   <string name="input_firstname_hint">Аты</string>
