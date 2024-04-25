@@ -24,7 +24,7 @@
   <string name="albums_label_no_data">Альбом джокъду</string>
   <string name="albums_title">Альбомла</string>
   <string name="album_title">Альбом</string>
-  <string name="nearest_dialog_error_location_disabled_title">Тургъан джерни белгилеу джукъланыбды</string>
+  <string name="nearest_dialog_error_location_disabled_title">Локация Джукъланыбды</string>
   <string name="nearest_dialog_error_location_disabled_message">Бусагъатдагъы тургъан джерни кескин тюзелтирча тюлдю. Тургъан джерни белгилеуню джандырыргъа излеймисиз?</string>
   <string name="nearest_dialog_error_location_disabled_close">Джаб</string>
   <string name="nearest_dialog_error_location_disabled_open">Джараштырыуланы ач</string>
