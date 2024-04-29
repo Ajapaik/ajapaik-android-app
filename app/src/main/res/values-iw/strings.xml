@@ -30,7 +30,7 @@
   <string name="albums_label_no_data">אין אלבומים</string>
   <string name="albums_title">אלבומים</string>
   <string name="album_title">אלבום</string>
-  <string name="nearest_dialog_error_location_disabled_title">המיקום מושבת</string>
+  <string name="nearest_dialog_error_location_disabled_title">המיקום כבוי</string>
   <string name="nearest_dialog_error_location_disabled_message">לא ניתן לקבל את המיקום הנוכחי. להפעיל אותו?</string>
   <string name="nearest_dialog_error_location_disabled_close">סגירה</string>
   <string name="nearest_dialog_error_location_disabled_open">פתיחת ההגדרות</string>

@@ -14,7 +14,7 @@
   <string name="action_flip">Баш тюбюне айландыр</string>
   <string name="action_login">Кириу</string>
   <string name="action_register">Регистрация эт</string>
-  <string name="action_logout">Чыгъыу</string>
+  <string name="action_logout">Чыкъ</string>
   <string name="action_profile">Профиль</string>
   <string name="action_refresh">Джангырт</string>
   <string name="action_settings">Джарашдырыўла</string>
@@ -35,7 +35,7 @@
   <string name="profile_title">Профиль</string>
   <string name="profile_facebook_login">Facebook бла кир</string>
   <string name="profile_google_login">Google бла кир</string>
-  <string name="profile_logout">Чыгъыу</string>
+  <string name="profile_logout">Чыкъ</string>
   <string name="profile_login">Кириу</string>
   <string name="profile_register">Хыйсаб къура</string>
   <string name="input_username_hint">E-mail</string>
