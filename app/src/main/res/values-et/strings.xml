@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Authors:
 * H2kks
+* Jrttrw
 * Puik
 -->
 <resources>
@@ -11,7 +12,7 @@
   <string name="please_wait">Palun oota…</string>
   <string name="something_went_wrong">Midagi läks valesti</string>
   <string name="notification_channel">Üldised teavitused</string>
-  <string name="notification_upload_title">Refotot laetakse ülesse</string>
+  <string name="notification_upload_title">Laadime ülepildistust üles</string>
   <string name="notification_upload_text">Palun oota…</string>
   <string name="action_albums">Albumid</string>
   <string name="action_flip">Peegelpilti</string>
@@ -46,10 +47,10 @@
   <string name="input_firstname_hint">Eesnimi</string>
   <string name="input_lastname_hint">Perekonnanimi</string>
   <plurals name="profile_rephotos">
-    <item quantity="one">&lt;b&gt;1&lt;/b&gt; refoto</item>
-    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; refotot</item>
+    <item quantity="one">&lt;b&gt;1&lt;/b&gt; ülepildistus</item>
+    <item quantity="other">&lt;b&gt;%1$d&lt;/b&gt; ülepildistust</item>
   </plurals>
-  <string name="profile_no_rephotos">Sa ei ole veel refotosid teinud</string>
+  <string name="profile_no_rephotos">Sa ei ole veel ülepildistusi teinud</string>
   <string name="login_title">Logi sisse</string>
   <string name="login_failed">Sisselogimine ebaõnnestus</string>
   <string name="wrong_password">Vale salasõna!</string>
@@ -76,7 +77,7 @@
   <string name="upload_dialog_agree_to_terms">Jah!</string>
   <string name="upload_dialog_decline_terms">Ei</string>
   <string name="upload_notification_title">Ülepildistuse üleslaadimine. See võib võtta mõne aja</string>
-  <string name="upload_notification_success">Refoto edukalt üles laetud</string>
+  <string name="upload_notification_success">Ülepildistus edukalt üles laaditud</string>
   <string name="upload_notification_failure">Ülepildistuse üleslaadimine ebaõnnestus</string>
   <string name="acra_dialog_title">\'Ajapaik – enne ja nüüd\' jooksis kokku</string>
   <string name="acra_dialog_text">Rakenduse sulgemisel tekkis ootamatu viga. Aidake meil viga parandada, saates vea kohta infot, peate vaid vajutama \'OK\'.</string>
@@ -88,7 +89,7 @@
   <string name="privacy_policy">Privaatsus</string>
   <string name="navigation_drawer_open">Ava menüü</string>
   <string name="navigation_drawer_close">Sulge menüü</string>
-  <string name="settings_show_tutorial">Näita pildistamisvaates juhendit</string>
+  <string name="settings_show_tutorial">Näita ülepildistamisvaates juhendit</string>
   <string name="settings_show_map_by_default">Näita kaarti vaikimisi</string>
   <string name="settings_agree_to_license_terms">Nõustun ülepildistuste avaldamisega Ajapaik.ee lehel CC BY 4.0 litsentsi all.</string>
   <string name="tutorial_hide_show_flip">Puuduta ekraani, et peita/näidata pilti.\nKasuta nuppu üleval paremal nurgas, et keerata vana pilt peegelpilti.</string>
